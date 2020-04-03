@@ -99,6 +99,7 @@
     <Compile Include="TMSForms\Register\FormMotoristas.Designer.cs">
       <DependentUpon>FormMotoristas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Util\Estados.cs" />
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
