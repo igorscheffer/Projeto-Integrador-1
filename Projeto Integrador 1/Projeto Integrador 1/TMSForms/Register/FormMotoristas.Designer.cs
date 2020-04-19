@@ -32,7 +32,6 @@
             this.textCPF = new Guna.UI.WinForms.GunaLineTextBox();
             this.textRG = new Guna.UI.WinForms.GunaLineTextBox();
             this.combStatus = new Guna.UI.WinForms.GunaComboBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -147,14 +146,6 @@
             this.combStatus.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combStatus.Size = new System.Drawing.Size(215, 35);
             this.combStatus.TabIndex = 9;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(573, 206);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(0, 0);
-            this.metroLabel1.TabIndex = 10;
             // 
             // label1
             // 
@@ -734,7 +725,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 582);
+            this.ClientSize = new System.Drawing.Size(999, 591);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.combEstados);
@@ -775,7 +766,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.combStatus);
             this.Controls.Add(this.textRG);
             this.Controls.Add(this.textCPF);
@@ -792,7 +782,6 @@
         private Guna.UI.WinForms.GunaLineTextBox textCPF;
         private Guna.UI.WinForms.GunaLineTextBox textRG;
         private Guna.UI.WinForms.GunaComboBox combStatus;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

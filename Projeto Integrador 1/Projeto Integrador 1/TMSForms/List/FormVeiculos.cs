@@ -12,9 +12,18 @@ namespace Projeto_Integrador_1.TMSForms.List
 {
     public partial class FormVeiculos : Form
     {
-        public FormVeiculos(Form Principal)
+
+        FormPrincipal fmPrincipal;
+
+        public FormVeiculos(FormPrincipal Principal)
         {
             InitializeComponent();
+            fmPrincipal = Principal;
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            fmPrincipal.AtivarForm(new TMSForms.Register.FormVeiculos());
         }
     }
 }

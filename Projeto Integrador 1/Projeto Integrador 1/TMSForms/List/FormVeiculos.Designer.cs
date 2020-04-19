@@ -29,27 +29,46 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVeiculos));
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCadastrar = new FontAwesome.Sharp.IconButton();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // metroLabel1
+            // panel1
             // 
-            resources.ApplyResources(this.metroLabel1, "metroLabel1");
-            this.metroLabel1.Name = "metroLabel1";
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Controls.Add(this.btnCadastrar);
+            this.panel1.Name = "panel1";
+            // 
+            // btnCadastrar
+            // 
+            resources.ApplyResources(this.btnCadastrar, "btnCadastrar");
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(152)))), ((int)(((byte)(204)))));
+            this.btnCadastrar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnCadastrar.IconColor = System.Drawing.Color.White;
+            this.btnCadastrar.IconSize = 20;
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Rotation = 0D;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // FormVeiculos
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.panel1);
             this.Name = "FormVeiculos";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton btnCadastrar;
     }
 }
