@@ -12,9 +12,28 @@ namespace Projeto_Integrador_1.TMSForms
 {
     public partial class FormHome : Form
     {
-        public FormHome()
+
+        FormPrincipal fmPrincipal;
+
+        public FormHome(FormPrincipal Principal)
         {
             InitializeComponent();
+            fmPrincipal = Principal;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fmPrincipal.AtivarForm(new TMSForms.Register.FormMotoristas());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            fmPrincipal.AtivarForm(new TMSForms.Register.FormVeiculos());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            fmPrincipal.AtivarForm(new TMSForms.Register.FormClientes());
         }
     }
 }

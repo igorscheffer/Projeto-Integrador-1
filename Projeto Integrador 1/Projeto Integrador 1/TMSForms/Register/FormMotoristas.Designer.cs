@@ -725,7 +725,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(999, 591);
+            this.ClientSize = new System.Drawing.Size(1005, 591);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.combEstados);
@@ -770,6 +770,7 @@
             this.Controls.Add(this.textRG);
             this.Controls.Add(this.textCPF);
             this.Controls.Add(this.textNomeCompleto);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMotoristas";
             this.Text = "Cadastrar Motorista";
             this.ResumeLayout(false);

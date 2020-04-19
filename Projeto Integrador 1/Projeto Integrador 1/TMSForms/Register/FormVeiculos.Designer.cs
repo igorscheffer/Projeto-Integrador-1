@@ -486,16 +486,6 @@
             this.combCategoria.FormattingEnabled = true;
             this.combCategoria.IntegralHeight = false;
             this.combCategoria.ItemHeight = 29;
-            this.combCategoria.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "AB",
-            "AC",
-            "AD",
-            "AE"});
             this.combCategoria.Location = new System.Drawing.Point(316, 91);
             this.combCategoria.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.combCategoria.Name = "combCategoria";
@@ -518,16 +508,6 @@
             this.gunaComboBox1.FormattingEnabled = true;
             this.gunaComboBox1.IntegralHeight = false;
             this.gunaComboBox1.ItemHeight = 29;
-            this.gunaComboBox1.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "AB",
-            "AC",
-            "AD",
-            "AE"});
             this.gunaComboBox1.Location = new System.Drawing.Point(546, 91);
             this.gunaComboBox1.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.gunaComboBox1.Name = "gunaComboBox1";
@@ -550,16 +530,6 @@
             this.gunaComboBox2.FormattingEnabled = true;
             this.gunaComboBox2.IntegralHeight = false;
             this.gunaComboBox2.ItemHeight = 29;
-            this.gunaComboBox2.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "AB",
-            "AC",
-            "AD",
-            "AE"});
             this.gunaComboBox2.Location = new System.Drawing.Point(776, 91);
             this.gunaComboBox2.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.gunaComboBox2.Name = "gunaComboBox2";
@@ -582,16 +552,6 @@
             this.gunaComboBox3.FormattingEnabled = true;
             this.gunaComboBox3.IntegralHeight = false;
             this.gunaComboBox3.ItemHeight = 29;
-            this.gunaComboBox3.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "AB",
-            "AC",
-            "AD",
-            "AE"});
             this.gunaComboBox3.Location = new System.Drawing.Point(292, 169);
             this.gunaComboBox3.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.gunaComboBox3.Name = "gunaComboBox3";
@@ -614,16 +574,6 @@
             this.gunaComboBox4.FormattingEnabled = true;
             this.gunaComboBox4.IntegralHeight = false;
             this.gunaComboBox4.ItemHeight = 29;
-            this.gunaComboBox4.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "AB",
-            "AC",
-            "AD",
-            "AE"});
             this.gunaComboBox4.Location = new System.Drawing.Point(502, 169);
             this.gunaComboBox4.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.gunaComboBox4.Name = "gunaComboBox4";
@@ -646,16 +596,6 @@
             this.gunaComboBox5.FormattingEnabled = true;
             this.gunaComboBox5.IntegralHeight = false;
             this.gunaComboBox5.ItemHeight = 29;
-            this.gunaComboBox5.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "AB",
-            "AC",
-            "AD",
-            "AE"});
             this.gunaComboBox5.Location = new System.Drawing.Point(552, 247);
             this.gunaComboBox5.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.gunaComboBox5.Name = "gunaComboBox5";
@@ -678,16 +618,6 @@
             this.gunaComboBox6.FormattingEnabled = true;
             this.gunaComboBox6.IntegralHeight = false;
             this.gunaComboBox6.ItemHeight = 29;
-            this.gunaComboBox6.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "AB",
-            "AC",
-            "AD",
-            "AE"});
             this.gunaComboBox6.Location = new System.Drawing.Point(702, 247);
             this.gunaComboBox6.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.gunaComboBox6.Name = "gunaComboBox6";
@@ -710,16 +640,6 @@
             this.gunaComboBox7.FormattingEnabled = true;
             this.gunaComboBox7.IntegralHeight = false;
             this.gunaComboBox7.ItemHeight = 29;
-            this.gunaComboBox7.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "AB",
-            "AC",
-            "AD",
-            "AE"});
             this.gunaComboBox7.Location = new System.Drawing.Point(850, 247);
             this.gunaComboBox7.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.gunaComboBox7.Name = "gunaComboBox7";
@@ -732,7 +652,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(999, 591);
+            this.ClientSize = new System.Drawing.Size(1000, 600);
             this.ControlBox = false;
             this.Controls.Add(this.gunaComboBox7);
             this.Controls.Add(this.gunaComboBox6);

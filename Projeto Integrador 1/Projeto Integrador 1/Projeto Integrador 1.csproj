@@ -80,6 +80,12 @@
     <Compile Include="TMSForms\List\FormVeiculos.Designer.cs">
       <DependentUpon>FormVeiculos.cs</DependentUpon>
     </Compile>
+    <Compile Include="TMSForms\Register\FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMSForms\Register\FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="TMSForms\Register\FormMotoristas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\List\FormVeiculos.resx">
       <DependentUpon>FormVeiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\Register\FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\Register\FormMotoristas.resx">
       <DependentUpon>FormMotoristas.cs</DependentUpon>

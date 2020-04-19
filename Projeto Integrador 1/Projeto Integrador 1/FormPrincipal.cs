@@ -23,6 +23,7 @@ namespace Projeto_Integrador_1
         public FormPrincipal()
         {
             InitializeComponent();
+            AtivarForm(new TMSForms.FormHome(this));
         }
 
         private void HiddenMenu()
@@ -122,7 +123,7 @@ namespace Projeto_Integrador_1
         private void btnHome_Click(object sender, EventArgs e)
         {
             AtivarBotao(sender);
-            AtivarForm(new TMSForms.FormHome());
+            AtivarForm(new TMSForms.FormHome(this));
         }
 
         private void btnMotoristas_Click(object sender, EventArgs e)
