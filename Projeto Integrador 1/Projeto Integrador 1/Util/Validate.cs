@@ -35,6 +35,20 @@ namespace Projeto_Integrador_1.Util
             }
         }
 
+        private void ValidateRegExp(string name, string value, string rule)
+        {
+            if (value.Trim() != "") {
+                var regexp = rule;
+                var match = System.Text.RegularExpressions.Regex.Match(value, regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+                if (!match.Success)
+                {
+                    Errors.Add(name + " não está em um formato valido.");
+                    this.CountErrors++;
+                }
+            }
+        }
+
         private void validateRequired(string name, string value) {
             if (value.Trim() == "") {
                 Errors.Add(name + " deve ser preenchido.");
@@ -58,6 +72,9 @@ namespace Projeto_Integrador_1.Util
                             case "max":
                                 this.validateMax(this.Rules[i][1], this.Rules[i][2], Int16.Parse(rule[1]));
                                 break;
+                            case "regExp":
+                                this.ValidateRegExp(this.Rules[i][1], this.Rules[i][2], rule[1]);
+                                break;
                         }
                     }
                     //else if (divideRule.Contains(",")) { }
@@ -76,6 +93,7 @@ namespace Projeto_Integrador_1.Util
         }
 
         public void ShowErrors() {
+            Console.Clear();
             Console.WriteLine("Total de Erros: " + this.CountErrors);
             foreach (string erro in this.Errors) {
                 Console.WriteLine(erro);

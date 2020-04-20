@@ -21,8 +21,8 @@ namespace Projeto_Integrador_1.TMSForms.Register
         {
             var Validate = new Util.Validate();
 
-            Validate.addRule("int", "Frota", "F", "required|min:20|max:100");
-            Validate.addRule("int", "Placa", "GDV-1280", "required|max:100");
+            Validate.addRule("int", "Frota", textFrota.Text, "required|min:20|max:100");
+            Validate.addRule("int", "Placa", textPlaca.Text, @"required|max:100|regExp:^([A-Z]{3})(\-\d\w\d{2})$");
 
             Validate.Validation();
 
