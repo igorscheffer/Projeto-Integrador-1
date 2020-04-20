@@ -21,24 +21,24 @@ namespace Projeto_Integrador_1.TMSForms.Register
         {
             var Validate = new Util.Validate();
 
-            Validate.addRule("", "Frota", textFrota.Text, "min:20");
-            Validate.addRule("", "Placa", textPlaca.Text, @"required|regExp:^([A-Z]{3})(\-\d\w\d{2})$");
-            Validate.addRule("", "Categoria", combCategoria.Text, "required|max:50");
-            Validate.addRule("", "Marca", combMarca.Text, "required|max:50");
-            Validate.addRule("", "Carroceria", combCarroceria.Text, "required|max:50");
-            Validate.addRule("", "Modelo", textModelo.Text, "required|max:50");
-            Validate.addRule("", "Cor", combCor.Text, "required|max:20");
-            Validate.addRule("", "Combustivel", combCombustivel.Text, "required|max:20");
-            Validate.addRule("", "Motorizacao", textMotorizacao.Text, "max:30");
-            Validate.addRule("", "Renavam", textRenavam.Text, "max:30");
-            Validate.addRule("", "Chassi", textRenavam.Text, "required|max:30");
-            Validate.addRule("", "Ano Fabricação", combAnoFabricacao.Text, "required|date:yyyy");
-            Validate.addRule("", "Ano Modelo", combAnoModelo.Text, "required|date:yyyy");
-            Validate.addRule("", "Status", combStatus.Text, "required");
-            Validate.addRule("", "Tara", textTara.Text, "max:20");
-            Validate.addRule("", "Lotação", textLotacao.Text, "max:20");
-            Validate.addRule("", "Peso Bruto Total", textPesoBrutoTotal.Text, "max:20");
-            Validate.addRule("", "Capacidade M³", textCapacidade.Text, "max:20");
+            Validate.addRule(textFrota, "Frota", "min:20");
+            Validate.addRule(textPlaca, "Placa", @"required|regExp:^([A-Z]{3})(\-\d\w\d{2})$");
+            Validate.addRule(combCategoria, "Categoria", "required|max:50");
+            Validate.addRule(combMarca, "Marca", "required|max:50");
+            Validate.addRule(combCarroceria, "Carroceria", "required|max:50");
+            Validate.addRule(textModelo, "Modelo", "required|max:50");
+            Validate.addRule(combCor, "Cor", "required|max:20");
+            Validate.addRule(combCombustivel, "Combustivel", "required|max:20");
+            Validate.addRule(textMotorizacao, "Motorizacao", "max:30");
+            Validate.addRule(textRenavam, "Renavam", "numeric|max:30");
+            Validate.addRule(textChassi, "Chassi", "required|max:30");
+            Validate.addRule(combAnoFabricacao, "Ano Fabricação", "required|date:yyyy");
+            Validate.addRule(combAnoModelo, "Ano Modelo", "required|date:yyyy");
+            Validate.addRule(combStatus, "Status", "required");
+            Validate.addRule(textTara, "Tara", "max:20");
+            Validate.addRule(textLotacao, "Lotação", "max:20");
+            Validate.addRule(textPesoBrutoTotal, "Peso Bruto Total", "max:20");
+            Validate.addRule(textCapacidade, "Capacidade M³", "max:20");
 
 
             Validate.Validation();

@@ -3,47 +3,48 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Projeto_Integrador_1.Util
 {
     class Validate {
         private int contar = 0;
 
-        public string[][] Rules = new string[50][];
+        public dynamic[][] Rules = new dynamic[50][];
         private List<string> Errors = new List<string>();
         private int CountErrors = 0;
 
-        public void addRule(string type, string name, string value, string rule) {
+        public void addRule(Control component, string name, string rule) {
     
-            this.Rules[this.contar] = new string[] { type, name, value, rule };
+            this.Rules[this.contar] = new dynamic[] { component, name, rule };
 
             this.contar++;
         }
 
-        private void validateMin(string name, string value, int rule, string rules)
+        private void validateMin(Control component, string name, int rule, string rules)
         {
-            if (rules.Contains("required") && value.Trim() != "") {
-                if (value.Length < rule) {
+            if (rules.Contains("required") || component.Text.Trim().Length > 0) {
+                if (component.Text.Length < rule) {
                     Errors.Add(name + " deve conter no minimo " + rule + " caracteres.");
                     this.CountErrors++;
                 }
             }
         }
 
-        private void validateMax(string name, string value, int rule) {
-            if (value.Length > rule) {
+        private void validateMax(Control component, string name, int rule) {
+            if (component.Text.Length > rule) {
                 Errors.Add(name + " deve conter no maximo " + rule + " caracteres.");
                 this.CountErrors++;
             }
         }
 
-        private void validateDate(string name, string value, string rule, string rules)
+        private void validateDate(Control component, string name, string rule, string rules)
         {
-            if (rules.Contains("required") && value.Trim() != "")
+            if (rules.Contains("required") || component.Text.Trim().Length > 0)
             {
                 DateTime date;
 
-                bool validate = DateTime.TryParseExact(value, rule, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out date);
+                bool validate = DateTime.TryParseExact(component.Text, rule, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out date);
 
                 if (!validate)
                 {
@@ -53,11 +54,11 @@ namespace Projeto_Integrador_1.Util
             }
         }
 
-        private void ValidateRegExp(string name, string value, string rule, string rules)
+        private void ValidateRegExp(Control component, string name, string rule, string rules)
         {
-            if (rules.Contains("required") && value.Trim() != "") {
+            if (rules.Contains("required") || component.Text.Trim().Length > 0) {
                 var regexp = rule;
-                var match = System.Text.RegularExpressions.Regex.Match(value, regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var match = System.Text.RegularExpressions.Regex.Match(component.Text, regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
 
                 if (!match.Success)
                 {
@@ -67,17 +68,31 @@ namespace Projeto_Integrador_1.Util
             }
         }
 
-        private void validateRequired(string name, string value) {
-            if (value.Trim() == "") {
+        private void validateRequired(Control component, string name) {
+            if (component.Text.Trim() == "") {
                 Errors.Add(name + " deve ser preenchido.");
                 this.CountErrors++;
             }
         }
 
+        private void validateNumeric(Control component, string name, string rules)
+        {
+            if (rules.Contains("required") || component.Text.Trim().Length > 0) {
+                var regexp = @"([0-9])";
+                var match = System.Text.RegularExpressions.Regex.Match(component.Text, regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+                if (!match.Success) {
+                    Errors.Add(name + " deve ser numerico.");
+                    this.CountErrors++;
+                }
+            }
+        }
+
         public void Validation() {
+            //Console.Clear();
             for (var i = 0; i < this.contar; i++) {
                 Console.WriteLine(string.Join(", ", this.Rules[i])); // 3
-                string[] rules = this.Rules[i][3].Split('|');
+                string[] rules = this.Rules[i][2].Split('|');
 
                 foreach (var divideRule in rules) {
                     if (divideRule.Contains(":")){
@@ -85,16 +100,16 @@ namespace Projeto_Integrador_1.Util
 
                         switch (rule[0]) {
                             case "min":
-                                this.validateMin(this.Rules[i][1], this.Rules[i][2], Int16.Parse(rule[1]), this.Rules[i][3]);
+                                this.validateMin(this.Rules[i][0], this.Rules[i][1], Int16.Parse(rule[1]), this.Rules[i][2]);
                                 break;
                             case "max":
-                                this.validateMax(this.Rules[i][1], this.Rules[i][2], Int16.Parse(rule[1]));
+                                this.validateMax(this.Rules[i][0], this.Rules[i][1], Int16.Parse(rule[1]));
                                 break;
                             case "regExp":
-                                this.ValidateRegExp(this.Rules[i][1], this.Rules[i][2], rule[1], this.Rules[i][3]);
+                                this.ValidateRegExp(this.Rules[i][0], this.Rules[i][1], rule[1], this.Rules[i][2]);
                                 break;
                             case "date":
-                                this.validateDate(this.Rules[i][1], this.Rules[i][2], rule[1], this.Rules[i][3]);
+                                this.validateDate(this.Rules[i][0], this.Rules[i][1], rule[1], this.Rules[i][2]);
                                 break;
                         }
                     }
@@ -102,8 +117,11 @@ namespace Projeto_Integrador_1.Util
                     else {
                         switch (divideRule) {
                             case "required":
-                                this.validateRequired(this.Rules[i][1], this.Rules[i][2]);
+                                this.validateRequired(this.Rules[i][0], this.Rules[i][1]);
                                 break;
+                            case "numeric":
+                                this.validateNumeric(this.Rules[i][0], this.Rules[i][1], this.Rules[i][2]);
+                                    break;
                             default:
                                 Console.WriteLine("NO VALID > " + divideRule);
                                 break;
@@ -114,7 +132,7 @@ namespace Projeto_Integrador_1.Util
         }
 
         public void ShowErrors() {
-            Console.Clear();
+            //Console.Clear();
             Console.WriteLine("Total de Erros: " + this.CountErrors);
             foreach (string erro in this.Errors) {
                 Console.WriteLine(erro);
