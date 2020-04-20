@@ -50,24 +50,25 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textNomeCompleto = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLineTextBox1 = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLineTextBox2 = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLineTextBox3 = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLineTextBox4 = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLineTextBox5 = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLineTextBox6 = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLineTextBox7 = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLineTextBox8 = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLineTextBox9 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textFrota = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textPlaca = new Guna.UI.WinForms.GunaLineTextBox();
+            this.texModelo = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textTara = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textLotacao = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textPesoBrutoTotal = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textCapacidade = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textRenavam = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textChassi = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textMotorizacao = new Guna.UI.WinForms.GunaLineTextBox();
             this.combCategoria = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaComboBox2 = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaComboBox3 = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaComboBox4 = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaComboBox5 = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaComboBox6 = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaComboBox7 = new Guna.UI.WinForms.GunaComboBox();
+            this.combMarca = new Guna.UI.WinForms.GunaComboBox();
+            this.combCarroceria = new Guna.UI.WinForms.GunaComboBox();
+            this.combCor = new Guna.UI.WinForms.GunaComboBox();
+            this.combCombustivel = new Guna.UI.WinForms.GunaComboBox();
+            this.combAnoFabricacao = new Guna.UI.WinForms.GunaComboBox();
+            this.combAnoModelo = new Guna.UI.WinForms.GunaComboBox();
+            this.combStatus = new Guna.UI.WinForms.GunaComboBox();
+            this.btnEnviar = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // panel1
@@ -312,165 +313,165 @@
             this.label20.TabIndex = 64;
             this.label20.Text = "CAPACIDADE M³";
             // 
-            // textNomeCompleto
+            // textFrota
             // 
-            this.textNomeCompleto.BackColor = System.Drawing.Color.White;
-            this.textNomeCompleto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textNomeCompleto.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textNomeCompleto.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.textNomeCompleto.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textNomeCompleto.LineColor = System.Drawing.Color.Gainsboro;
-            this.textNomeCompleto.LineSize = 1;
-            this.textNomeCompleto.Location = new System.Drawing.Point(12, 91);
-            this.textNomeCompleto.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textNomeCompleto.Name = "textNomeCompleto";
-            this.textNomeCompleto.PasswordChar = '\0';
-            this.textNomeCompleto.Size = new System.Drawing.Size(134, 35);
-            this.textNomeCompleto.TabIndex = 65;
+            this.textFrota.BackColor = System.Drawing.Color.White;
+            this.textFrota.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textFrota.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textFrota.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textFrota.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textFrota.LineColor = System.Drawing.Color.Gainsboro;
+            this.textFrota.LineSize = 1;
+            this.textFrota.Location = new System.Drawing.Point(12, 91);
+            this.textFrota.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textFrota.Name = "textFrota";
+            this.textFrota.PasswordChar = '\0';
+            this.textFrota.Size = new System.Drawing.Size(134, 35);
+            this.textFrota.TabIndex = 65;
             // 
-            // gunaLineTextBox1
+            // textPlaca
             // 
-            this.gunaLineTextBox1.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox1.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox1.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaLineTextBox1.LineSize = 1;
-            this.gunaLineTextBox1.Location = new System.Drawing.Point(166, 91);
-            this.gunaLineTextBox1.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox1.Name = "gunaLineTextBox1";
-            this.gunaLineTextBox1.PasswordChar = '\0';
-            this.gunaLineTextBox1.Size = new System.Drawing.Size(130, 35);
-            this.gunaLineTextBox1.TabIndex = 66;
+            this.textPlaca.BackColor = System.Drawing.Color.White;
+            this.textPlaca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textPlaca.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textPlaca.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textPlaca.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textPlaca.LineColor = System.Drawing.Color.Gainsboro;
+            this.textPlaca.LineSize = 1;
+            this.textPlaca.Location = new System.Drawing.Point(166, 91);
+            this.textPlaca.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textPlaca.Name = "textPlaca";
+            this.textPlaca.PasswordChar = '\0';
+            this.textPlaca.Size = new System.Drawing.Size(130, 35);
+            this.textPlaca.TabIndex = 66;
             // 
-            // gunaLineTextBox2
+            // texModelo
             // 
-            this.gunaLineTextBox2.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox2.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox2.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaLineTextBox2.LineSize = 1;
-            this.gunaLineTextBox2.Location = new System.Drawing.Point(12, 169);
-            this.gunaLineTextBox2.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox2.Name = "gunaLineTextBox2";
-            this.gunaLineTextBox2.PasswordChar = '\0';
-            this.gunaLineTextBox2.Size = new System.Drawing.Size(260, 35);
-            this.gunaLineTextBox2.TabIndex = 67;
+            this.texModelo.BackColor = System.Drawing.Color.White;
+            this.texModelo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.texModelo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.texModelo.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.texModelo.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.texModelo.LineColor = System.Drawing.Color.Gainsboro;
+            this.texModelo.LineSize = 1;
+            this.texModelo.Location = new System.Drawing.Point(12, 169);
+            this.texModelo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.texModelo.Name = "texModelo";
+            this.texModelo.PasswordChar = '\0';
+            this.texModelo.Size = new System.Drawing.Size(260, 35);
+            this.texModelo.TabIndex = 67;
             // 
-            // gunaLineTextBox3
+            // textTara
             // 
-            this.gunaLineTextBox3.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox3.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox3.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaLineTextBox3.LineSize = 1;
-            this.gunaLineTextBox3.Location = new System.Drawing.Point(12, 380);
-            this.gunaLineTextBox3.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox3.Name = "gunaLineTextBox3";
-            this.gunaLineTextBox3.PasswordChar = '\0';
-            this.gunaLineTextBox3.Size = new System.Drawing.Size(230, 35);
-            this.gunaLineTextBox3.TabIndex = 68;
+            this.textTara.BackColor = System.Drawing.Color.White;
+            this.textTara.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textTara.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textTara.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textTara.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textTara.LineColor = System.Drawing.Color.Gainsboro;
+            this.textTara.LineSize = 1;
+            this.textTara.Location = new System.Drawing.Point(12, 380);
+            this.textTara.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textTara.Name = "textTara";
+            this.textTara.PasswordChar = '\0';
+            this.textTara.Size = new System.Drawing.Size(230, 35);
+            this.textTara.TabIndex = 68;
             // 
-            // gunaLineTextBox4
+            // textLotacao
             // 
-            this.gunaLineTextBox4.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox4.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox4.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaLineTextBox4.LineSize = 1;
-            this.gunaLineTextBox4.Location = new System.Drawing.Point(262, 380);
-            this.gunaLineTextBox4.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox4.Name = "gunaLineTextBox4";
-            this.gunaLineTextBox4.PasswordChar = '\0';
-            this.gunaLineTextBox4.Size = new System.Drawing.Size(231, 35);
-            this.gunaLineTextBox4.TabIndex = 69;
+            this.textLotacao.BackColor = System.Drawing.Color.White;
+            this.textLotacao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textLotacao.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textLotacao.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textLotacao.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textLotacao.LineColor = System.Drawing.Color.Gainsboro;
+            this.textLotacao.LineSize = 1;
+            this.textLotacao.Location = new System.Drawing.Point(262, 380);
+            this.textLotacao.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textLotacao.Name = "textLotacao";
+            this.textLotacao.PasswordChar = '\0';
+            this.textLotacao.Size = new System.Drawing.Size(231, 35);
+            this.textLotacao.TabIndex = 69;
             // 
-            // gunaLineTextBox5
+            // textPesoBrutoTotal
             // 
-            this.gunaLineTextBox5.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox5.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox5.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaLineTextBox5.LineSize = 1;
-            this.gunaLineTextBox5.Location = new System.Drawing.Point(513, 380);
-            this.gunaLineTextBox5.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox5.Name = "gunaLineTextBox5";
-            this.gunaLineTextBox5.PasswordChar = '\0';
-            this.gunaLineTextBox5.Size = new System.Drawing.Size(229, 35);
-            this.gunaLineTextBox5.TabIndex = 70;
+            this.textPesoBrutoTotal.BackColor = System.Drawing.Color.White;
+            this.textPesoBrutoTotal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textPesoBrutoTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textPesoBrutoTotal.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textPesoBrutoTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textPesoBrutoTotal.LineColor = System.Drawing.Color.Gainsboro;
+            this.textPesoBrutoTotal.LineSize = 1;
+            this.textPesoBrutoTotal.Location = new System.Drawing.Point(513, 380);
+            this.textPesoBrutoTotal.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textPesoBrutoTotal.Name = "textPesoBrutoTotal";
+            this.textPesoBrutoTotal.PasswordChar = '\0';
+            this.textPesoBrutoTotal.Size = new System.Drawing.Size(229, 35);
+            this.textPesoBrutoTotal.TabIndex = 70;
             // 
-            // gunaLineTextBox6
+            // textCapacidade
             // 
-            this.gunaLineTextBox6.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox6.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox6.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaLineTextBox6.LineSize = 1;
-            this.gunaLineTextBox6.Location = new System.Drawing.Point(762, 380);
-            this.gunaLineTextBox6.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox6.Name = "gunaLineTextBox6";
-            this.gunaLineTextBox6.PasswordChar = '\0';
-            this.gunaLineTextBox6.Size = new System.Drawing.Size(229, 35);
-            this.gunaLineTextBox6.TabIndex = 71;
+            this.textCapacidade.BackColor = System.Drawing.Color.White;
+            this.textCapacidade.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textCapacidade.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textCapacidade.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textCapacidade.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textCapacidade.LineColor = System.Drawing.Color.Gainsboro;
+            this.textCapacidade.LineSize = 1;
+            this.textCapacidade.Location = new System.Drawing.Point(762, 380);
+            this.textCapacidade.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textCapacidade.Name = "textCapacidade";
+            this.textCapacidade.PasswordChar = '\0';
+            this.textCapacidade.Size = new System.Drawing.Size(229, 35);
+            this.textCapacidade.TabIndex = 71;
             // 
-            // gunaLineTextBox7
+            // textRenavam
             // 
-            this.gunaLineTextBox7.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox7.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox7.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaLineTextBox7.LineSize = 1;
-            this.gunaLineTextBox7.Location = new System.Drawing.Point(12, 247);
-            this.gunaLineTextBox7.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox7.Name = "gunaLineTextBox7";
-            this.gunaLineTextBox7.PasswordChar = '\0';
-            this.gunaLineTextBox7.Size = new System.Drawing.Size(250, 35);
-            this.gunaLineTextBox7.TabIndex = 72;
+            this.textRenavam.BackColor = System.Drawing.Color.White;
+            this.textRenavam.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textRenavam.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textRenavam.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textRenavam.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textRenavam.LineColor = System.Drawing.Color.Gainsboro;
+            this.textRenavam.LineSize = 1;
+            this.textRenavam.Location = new System.Drawing.Point(12, 247);
+            this.textRenavam.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textRenavam.Name = "textRenavam";
+            this.textRenavam.PasswordChar = '\0';
+            this.textRenavam.Size = new System.Drawing.Size(250, 35);
+            this.textRenavam.TabIndex = 72;
             // 
-            // gunaLineTextBox8
+            // textChassi
             // 
-            this.gunaLineTextBox8.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox8.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox8.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox8.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaLineTextBox8.LineSize = 1;
-            this.gunaLineTextBox8.Location = new System.Drawing.Point(282, 247);
-            this.gunaLineTextBox8.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox8.Name = "gunaLineTextBox8";
-            this.gunaLineTextBox8.PasswordChar = '\0';
-            this.gunaLineTextBox8.Size = new System.Drawing.Size(250, 35);
-            this.gunaLineTextBox8.TabIndex = 73;
+            this.textChassi.BackColor = System.Drawing.Color.White;
+            this.textChassi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textChassi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textChassi.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textChassi.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textChassi.LineColor = System.Drawing.Color.Gainsboro;
+            this.textChassi.LineSize = 1;
+            this.textChassi.Location = new System.Drawing.Point(282, 247);
+            this.textChassi.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textChassi.Name = "textChassi";
+            this.textChassi.PasswordChar = '\0';
+            this.textChassi.Size = new System.Drawing.Size(250, 35);
+            this.textChassi.TabIndex = 73;
             // 
-            // gunaLineTextBox9
+            // textMotorizacao
             // 
-            this.gunaLineTextBox9.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox9.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox9.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox9.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaLineTextBox9.LineSize = 1;
-            this.gunaLineTextBox9.Location = new System.Drawing.Point(712, 169);
-            this.gunaLineTextBox9.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox9.Name = "gunaLineTextBox9";
-            this.gunaLineTextBox9.PasswordChar = '\0';
-            this.gunaLineTextBox9.Size = new System.Drawing.Size(279, 35);
-            this.gunaLineTextBox9.TabIndex = 74;
+            this.textMotorizacao.BackColor = System.Drawing.Color.White;
+            this.textMotorizacao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textMotorizacao.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textMotorizacao.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textMotorizacao.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textMotorizacao.LineColor = System.Drawing.Color.Gainsboro;
+            this.textMotorizacao.LineSize = 1;
+            this.textMotorizacao.Location = new System.Drawing.Point(712, 169);
+            this.textMotorizacao.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textMotorizacao.Name = "textMotorizacao";
+            this.textMotorizacao.PasswordChar = '\0';
+            this.textMotorizacao.Size = new System.Drawing.Size(279, 35);
+            this.textMotorizacao.TabIndex = 74;
             // 
             // combCategoria
             // 
@@ -494,159 +495,176 @@
             this.combCategoria.Size = new System.Drawing.Size(210, 35);
             this.combCategoria.TabIndex = 75;
             // 
-            // gunaComboBox1
+            // combMarca
             // 
-            this.gunaComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox1.BorderSize = 1;
-            this.gunaComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox1.FormattingEnabled = true;
-            this.gunaComboBox1.IntegralHeight = false;
-            this.gunaComboBox1.ItemHeight = 29;
-            this.gunaComboBox1.Location = new System.Drawing.Point(546, 91);
-            this.gunaComboBox1.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaComboBox1.Name = "gunaComboBox1";
-            this.gunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaComboBox1.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox1.Size = new System.Drawing.Size(210, 35);
-            this.gunaComboBox1.TabIndex = 76;
+            this.combMarca.BackColor = System.Drawing.Color.Transparent;
+            this.combMarca.BaseColor = System.Drawing.Color.White;
+            this.combMarca.BorderColor = System.Drawing.Color.Silver;
+            this.combMarca.BorderSize = 1;
+            this.combMarca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combMarca.FocusedColor = System.Drawing.Color.Empty;
+            this.combMarca.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.combMarca.ForeColor = System.Drawing.Color.Black;
+            this.combMarca.FormattingEnabled = true;
+            this.combMarca.IntegralHeight = false;
+            this.combMarca.ItemHeight = 29;
+            this.combMarca.Location = new System.Drawing.Point(546, 91);
+            this.combMarca.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combMarca.Name = "combMarca";
+            this.combMarca.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.combMarca.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.combMarca.Size = new System.Drawing.Size(210, 35);
+            this.combMarca.TabIndex = 76;
             // 
-            // gunaComboBox2
+            // combCarroceria
             // 
-            this.gunaComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox2.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox2.BorderSize = 1;
-            this.gunaComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox2.FormattingEnabled = true;
-            this.gunaComboBox2.IntegralHeight = false;
-            this.gunaComboBox2.ItemHeight = 29;
-            this.gunaComboBox2.Location = new System.Drawing.Point(776, 91);
-            this.gunaComboBox2.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaComboBox2.Name = "gunaComboBox2";
-            this.gunaComboBox2.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaComboBox2.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox2.Size = new System.Drawing.Size(215, 35);
-            this.gunaComboBox2.TabIndex = 77;
+            this.combCarroceria.BackColor = System.Drawing.Color.Transparent;
+            this.combCarroceria.BaseColor = System.Drawing.Color.White;
+            this.combCarroceria.BorderColor = System.Drawing.Color.Silver;
+            this.combCarroceria.BorderSize = 1;
+            this.combCarroceria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combCarroceria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combCarroceria.FocusedColor = System.Drawing.Color.Empty;
+            this.combCarroceria.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.combCarroceria.ForeColor = System.Drawing.Color.Black;
+            this.combCarroceria.FormattingEnabled = true;
+            this.combCarroceria.IntegralHeight = false;
+            this.combCarroceria.ItemHeight = 29;
+            this.combCarroceria.Location = new System.Drawing.Point(776, 91);
+            this.combCarroceria.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combCarroceria.Name = "combCarroceria";
+            this.combCarroceria.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.combCarroceria.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.combCarroceria.Size = new System.Drawing.Size(215, 35);
+            this.combCarroceria.TabIndex = 77;
             // 
-            // gunaComboBox3
+            // combCor
             // 
-            this.gunaComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox3.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox3.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox3.BorderSize = 1;
-            this.gunaComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox3.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaComboBox3.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox3.FormattingEnabled = true;
-            this.gunaComboBox3.IntegralHeight = false;
-            this.gunaComboBox3.ItemHeight = 29;
-            this.gunaComboBox3.Location = new System.Drawing.Point(292, 169);
-            this.gunaComboBox3.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaComboBox3.Name = "gunaComboBox3";
-            this.gunaComboBox3.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaComboBox3.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox3.Size = new System.Drawing.Size(190, 35);
-            this.gunaComboBox3.TabIndex = 78;
+            this.combCor.BackColor = System.Drawing.Color.Transparent;
+            this.combCor.BaseColor = System.Drawing.Color.White;
+            this.combCor.BorderColor = System.Drawing.Color.Silver;
+            this.combCor.BorderSize = 1;
+            this.combCor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combCor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combCor.FocusedColor = System.Drawing.Color.Empty;
+            this.combCor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.combCor.ForeColor = System.Drawing.Color.Black;
+            this.combCor.FormattingEnabled = true;
+            this.combCor.IntegralHeight = false;
+            this.combCor.ItemHeight = 29;
+            this.combCor.Location = new System.Drawing.Point(292, 169);
+            this.combCor.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combCor.Name = "combCor";
+            this.combCor.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.combCor.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.combCor.Size = new System.Drawing.Size(190, 35);
+            this.combCor.TabIndex = 78;
             // 
-            // gunaComboBox4
+            // combCombustivel
             // 
-            this.gunaComboBox4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox4.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox4.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox4.BorderSize = 1;
-            this.gunaComboBox4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox4.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaComboBox4.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox4.FormattingEnabled = true;
-            this.gunaComboBox4.IntegralHeight = false;
-            this.gunaComboBox4.ItemHeight = 29;
-            this.gunaComboBox4.Location = new System.Drawing.Point(502, 169);
-            this.gunaComboBox4.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaComboBox4.Name = "gunaComboBox4";
-            this.gunaComboBox4.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaComboBox4.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox4.Size = new System.Drawing.Size(190, 35);
-            this.gunaComboBox4.TabIndex = 79;
+            this.combCombustivel.BackColor = System.Drawing.Color.Transparent;
+            this.combCombustivel.BaseColor = System.Drawing.Color.White;
+            this.combCombustivel.BorderColor = System.Drawing.Color.Silver;
+            this.combCombustivel.BorderSize = 1;
+            this.combCombustivel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combCombustivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combCombustivel.FocusedColor = System.Drawing.Color.Empty;
+            this.combCombustivel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.combCombustivel.ForeColor = System.Drawing.Color.Black;
+            this.combCombustivel.FormattingEnabled = true;
+            this.combCombustivel.IntegralHeight = false;
+            this.combCombustivel.ItemHeight = 29;
+            this.combCombustivel.Location = new System.Drawing.Point(502, 169);
+            this.combCombustivel.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combCombustivel.Name = "combCombustivel";
+            this.combCombustivel.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.combCombustivel.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.combCombustivel.Size = new System.Drawing.Size(190, 35);
+            this.combCombustivel.TabIndex = 79;
             // 
-            // gunaComboBox5
+            // combAnoFabricacao
             // 
-            this.gunaComboBox5.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox5.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox5.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox5.BorderSize = 1;
-            this.gunaComboBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox5.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaComboBox5.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox5.FormattingEnabled = true;
-            this.gunaComboBox5.IntegralHeight = false;
-            this.gunaComboBox5.ItemHeight = 29;
-            this.gunaComboBox5.Location = new System.Drawing.Point(552, 247);
-            this.gunaComboBox5.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaComboBox5.Name = "gunaComboBox5";
-            this.gunaComboBox5.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaComboBox5.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox5.Size = new System.Drawing.Size(130, 35);
-            this.gunaComboBox5.TabIndex = 80;
+            this.combAnoFabricacao.BackColor = System.Drawing.Color.Transparent;
+            this.combAnoFabricacao.BaseColor = System.Drawing.Color.White;
+            this.combAnoFabricacao.BorderColor = System.Drawing.Color.Silver;
+            this.combAnoFabricacao.BorderSize = 1;
+            this.combAnoFabricacao.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combAnoFabricacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combAnoFabricacao.FocusedColor = System.Drawing.Color.Empty;
+            this.combAnoFabricacao.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.combAnoFabricacao.ForeColor = System.Drawing.Color.Black;
+            this.combAnoFabricacao.FormattingEnabled = true;
+            this.combAnoFabricacao.IntegralHeight = false;
+            this.combAnoFabricacao.ItemHeight = 29;
+            this.combAnoFabricacao.Location = new System.Drawing.Point(552, 247);
+            this.combAnoFabricacao.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combAnoFabricacao.Name = "combAnoFabricacao";
+            this.combAnoFabricacao.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.combAnoFabricacao.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.combAnoFabricacao.Size = new System.Drawing.Size(130, 35);
+            this.combAnoFabricacao.TabIndex = 80;
             // 
-            // gunaComboBox6
+            // combAnoModelo
             // 
-            this.gunaComboBox6.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox6.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox6.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox6.BorderSize = 1;
-            this.gunaComboBox6.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox6.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaComboBox6.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox6.FormattingEnabled = true;
-            this.gunaComboBox6.IntegralHeight = false;
-            this.gunaComboBox6.ItemHeight = 29;
-            this.gunaComboBox6.Location = new System.Drawing.Point(702, 247);
-            this.gunaComboBox6.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaComboBox6.Name = "gunaComboBox6";
-            this.gunaComboBox6.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaComboBox6.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox6.Size = new System.Drawing.Size(128, 35);
-            this.gunaComboBox6.TabIndex = 81;
+            this.combAnoModelo.BackColor = System.Drawing.Color.Transparent;
+            this.combAnoModelo.BaseColor = System.Drawing.Color.White;
+            this.combAnoModelo.BorderColor = System.Drawing.Color.Silver;
+            this.combAnoModelo.BorderSize = 1;
+            this.combAnoModelo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combAnoModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combAnoModelo.FocusedColor = System.Drawing.Color.Empty;
+            this.combAnoModelo.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.combAnoModelo.ForeColor = System.Drawing.Color.Black;
+            this.combAnoModelo.FormattingEnabled = true;
+            this.combAnoModelo.IntegralHeight = false;
+            this.combAnoModelo.ItemHeight = 29;
+            this.combAnoModelo.Location = new System.Drawing.Point(702, 247);
+            this.combAnoModelo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combAnoModelo.Name = "combAnoModelo";
+            this.combAnoModelo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.combAnoModelo.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.combAnoModelo.Size = new System.Drawing.Size(128, 35);
+            this.combAnoModelo.TabIndex = 81;
             // 
-            // gunaComboBox7
+            // combStatus
             // 
-            this.gunaComboBox7.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox7.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox7.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox7.BorderSize = 1;
-            this.gunaComboBox7.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox7.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaComboBox7.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox7.FormattingEnabled = true;
-            this.gunaComboBox7.IntegralHeight = false;
-            this.gunaComboBox7.ItemHeight = 29;
-            this.gunaComboBox7.Location = new System.Drawing.Point(850, 247);
-            this.gunaComboBox7.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaComboBox7.Name = "gunaComboBox7";
-            this.gunaComboBox7.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaComboBox7.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox7.Size = new System.Drawing.Size(141, 35);
-            this.gunaComboBox7.TabIndex = 82;
+            this.combStatus.BackColor = System.Drawing.Color.Transparent;
+            this.combStatus.BaseColor = System.Drawing.Color.White;
+            this.combStatus.BorderColor = System.Drawing.Color.Silver;
+            this.combStatus.BorderSize = 1;
+            this.combStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combStatus.FocusedColor = System.Drawing.Color.Empty;
+            this.combStatus.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.combStatus.ForeColor = System.Drawing.Color.Black;
+            this.combStatus.FormattingEnabled = true;
+            this.combStatus.IntegralHeight = false;
+            this.combStatus.ItemHeight = 29;
+            this.combStatus.Location = new System.Drawing.Point(850, 247);
+            this.combStatus.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combStatus.Name = "combStatus";
+            this.combStatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.combStatus.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.combStatus.Size = new System.Drawing.Size(141, 35);
+            this.combStatus.TabIndex = 82;
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnEnviar.IconChar = FontAwesome.Sharp.IconChar.PaperPlane;
+            this.btnEnviar.IconColor = System.Drawing.Color.Black;
+            this.btnEnviar.IconSize = 16;
+            this.btnEnviar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEnviar.Location = new System.Drawing.Point(868, 433);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Rotation = 0D;
+            this.btnEnviar.Size = new System.Drawing.Size(120, 40);
+            this.btnEnviar.TabIndex = 83;
+            this.btnEnviar.Text = "CADASTRAR";
+            this.btnEnviar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.onEnviar);
             // 
             // FormVeiculos
             // 
@@ -654,24 +672,25 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 600);
             this.ControlBox = false;
-            this.Controls.Add(this.gunaComboBox7);
-            this.Controls.Add(this.gunaComboBox6);
-            this.Controls.Add(this.gunaComboBox5);
-            this.Controls.Add(this.gunaComboBox4);
-            this.Controls.Add(this.gunaComboBox3);
-            this.Controls.Add(this.gunaComboBox2);
-            this.Controls.Add(this.gunaComboBox1);
+            this.Controls.Add(this.btnEnviar);
+            this.Controls.Add(this.combStatus);
+            this.Controls.Add(this.combAnoModelo);
+            this.Controls.Add(this.combAnoFabricacao);
+            this.Controls.Add(this.combCombustivel);
+            this.Controls.Add(this.combCor);
+            this.Controls.Add(this.combCarroceria);
+            this.Controls.Add(this.combMarca);
             this.Controls.Add(this.combCategoria);
-            this.Controls.Add(this.gunaLineTextBox9);
-            this.Controls.Add(this.gunaLineTextBox8);
-            this.Controls.Add(this.gunaLineTextBox7);
-            this.Controls.Add(this.gunaLineTextBox6);
-            this.Controls.Add(this.gunaLineTextBox5);
-            this.Controls.Add(this.gunaLineTextBox4);
-            this.Controls.Add(this.gunaLineTextBox3);
-            this.Controls.Add(this.gunaLineTextBox2);
-            this.Controls.Add(this.gunaLineTextBox1);
-            this.Controls.Add(this.textNomeCompleto);
+            this.Controls.Add(this.textMotorizacao);
+            this.Controls.Add(this.textChassi);
+            this.Controls.Add(this.textRenavam);
+            this.Controls.Add(this.textCapacidade);
+            this.Controls.Add(this.textPesoBrutoTotal);
+            this.Controls.Add(this.textLotacao);
+            this.Controls.Add(this.textTara);
+            this.Controls.Add(this.texModelo);
+            this.Controls.Add(this.textPlaca);
+            this.Controls.Add(this.textFrota);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -726,23 +745,24 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private Guna.UI.WinForms.GunaLineTextBox textNomeCompleto;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox1;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox2;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox3;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox4;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox5;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox6;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox7;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox8;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox9;
+        private Guna.UI.WinForms.GunaLineTextBox textFrota;
+        private Guna.UI.WinForms.GunaLineTextBox textPlaca;
+        private Guna.UI.WinForms.GunaLineTextBox texModelo;
+        private Guna.UI.WinForms.GunaLineTextBox textTara;
+        private Guna.UI.WinForms.GunaLineTextBox textLotacao;
+        private Guna.UI.WinForms.GunaLineTextBox textPesoBrutoTotal;
+        private Guna.UI.WinForms.GunaLineTextBox textCapacidade;
+        private Guna.UI.WinForms.GunaLineTextBox textRenavam;
+        private Guna.UI.WinForms.GunaLineTextBox textChassi;
+        private Guna.UI.WinForms.GunaLineTextBox textMotorizacao;
         private Guna.UI.WinForms.GunaComboBox combCategoria;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox1;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox2;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox3;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox4;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox5;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox6;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox7;
+        private Guna.UI.WinForms.GunaComboBox combMarca;
+        private Guna.UI.WinForms.GunaComboBox combCarroceria;
+        private Guna.UI.WinForms.GunaComboBox combCor;
+        private Guna.UI.WinForms.GunaComboBox combCombustivel;
+        private Guna.UI.WinForms.GunaComboBox combAnoFabricacao;
+        private Guna.UI.WinForms.GunaComboBox combAnoModelo;
+        private Guna.UI.WinForms.GunaComboBox combStatus;
+        private FontAwesome.Sharp.IconButton btnEnviar;
     }
 }

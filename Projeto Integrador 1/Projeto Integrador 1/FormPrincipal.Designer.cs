@@ -30,14 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.painelMenu = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.painelLogo = new System.Windows.Forms.Panel();
-            this.txtLogo = new System.Windows.Forms.Label();
-            this.painelHeader = new System.Windows.Forms.Panel();
-            this.txtHeader = new System.Windows.Forms.Label();
-            this.painelSeparador = new System.Windows.Forms.Panel();
-            this.painelForm = new System.Windows.Forms.Panel();
-            this.btnHiddenMenu = new FontAwesome.Sharp.IconButton();
             this.btnFinanceiro = new FontAwesome.Sharp.IconButton();
             this.btnMultas = new FontAwesome.Sharp.IconButton();
             this.btnAbastecimentos = new FontAwesome.Sharp.IconButton();
@@ -47,11 +39,19 @@
             this.btnVeiculos = new FontAwesome.Sharp.IconButton();
             this.btnMotoristas = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.painelLogo = new System.Windows.Forms.Panel();
+            this.txtLogo = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
+            this.painelHeader = new System.Windows.Forms.Panel();
+            this.txtHeader = new System.Windows.Forms.Label();
+            this.painelSeparador = new System.Windows.Forms.Panel();
+            this.btnHiddenMenu = new FontAwesome.Sharp.IconButton();
+            this.painelForm = new System.Windows.Forms.Panel();
             this.painelMenu.SuspendLayout();
             this.painelLogo.SuspendLayout();
-            this.painelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.painelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // painelMenu
@@ -74,103 +74,6 @@
             this.painelMenu.Name = "painelMenu";
             this.painelMenu.Size = new System.Drawing.Size(220, 681);
             this.painelMenu.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 60);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(220, 14);
-            this.panel4.TabIndex = 1;
-            // 
-            // painelLogo
-            // 
-            this.painelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
-            this.painelLogo.Controls.Add(this.txtLogo);
-            this.painelLogo.Controls.Add(this.picLogo);
-            this.painelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.painelLogo.Location = new System.Drawing.Point(0, 0);
-            this.painelLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.painelLogo.Name = "painelLogo";
-            this.painelLogo.Size = new System.Drawing.Size(220, 60);
-            this.painelLogo.TabIndex = 0;
-            // 
-            // txtLogo
-            // 
-            this.txtLogo.Font = new System.Drawing.Font("SansSerif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogo.ForeColor = System.Drawing.Color.White;
-            this.txtLogo.Location = new System.Drawing.Point(60, 0);
-            this.txtLogo.Margin = new System.Windows.Forms.Padding(0);
-            this.txtLogo.Name = "txtLogo";
-            this.txtLogo.Size = new System.Drawing.Size(160, 60);
-            this.txtLogo.TabIndex = 3;
-            this.txtLogo.Text = "UNIFEB";
-            this.txtLogo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // painelHeader
-            // 
-            this.painelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
-            this.painelHeader.Controls.Add(this.txtHeader);
-            this.painelHeader.Controls.Add(this.painelSeparador);
-            this.painelHeader.Controls.Add(this.btnHiddenMenu);
-            this.painelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.painelHeader.Location = new System.Drawing.Point(220, 0);
-            this.painelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.painelHeader.Name = "painelHeader";
-            this.painelHeader.Size = new System.Drawing.Size(1044, 60);
-            this.painelHeader.TabIndex = 1;
-            // 
-            // txtHeader
-            // 
-            this.txtHeader.Font = new System.Drawing.Font("SansSerif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHeader.ForeColor = System.Drawing.Color.White;
-            this.txtHeader.Location = new System.Drawing.Point(60, 0);
-            this.txtHeader.Margin = new System.Windows.Forms.Padding(0);
-            this.txtHeader.Name = "txtHeader";
-            this.txtHeader.Size = new System.Drawing.Size(395, 60);
-            this.txtHeader.TabIndex = 3;
-            this.txtHeader.Text = "Inicio";
-            this.txtHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // painelSeparador
-            // 
-            this.painelSeparador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(132)))), ((int)(((byte)(184)))));
-            this.painelSeparador.Location = new System.Drawing.Point(0, 10);
-            this.painelSeparador.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.painelSeparador.Name = "painelSeparador";
-            this.painelSeparador.Size = new System.Drawing.Size(1, 40);
-            this.painelSeparador.TabIndex = 2;
-            // 
-            // painelForm
-            // 
-            this.painelForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.painelForm.Location = new System.Drawing.Point(220, 60);
-            this.painelForm.Name = "painelForm";
-            this.painelForm.Size = new System.Drawing.Size(1044, 621);
-            this.painelForm.TabIndex = 2;
-            // 
-            // btnHiddenMenu
-            // 
-            this.btnHiddenMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
-            this.btnHiddenMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnHiddenMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnHiddenMenu.FlatAppearance.BorderSize = 0;
-            this.btnHiddenMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHiddenMenu.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnHiddenMenu.ForeColor = System.Drawing.Color.White;
-            this.btnHiddenMenu.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.btnHiddenMenu.IconColor = System.Drawing.Color.White;
-            this.btnHiddenMenu.IconSize = 30;
-            this.btnHiddenMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnHiddenMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnHiddenMenu.Name = "btnHiddenMenu";
-            this.btnHiddenMenu.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
-            this.btnHiddenMenu.Rotation = 0D;
-            this.btnHiddenMenu.Size = new System.Drawing.Size(60, 60);
-            this.btnHiddenMenu.TabIndex = 1;
-            this.btnHiddenMenu.UseVisualStyleBackColor = false;
-            this.btnHiddenMenu.Click += new System.EventHandler(this.btnHiddenMenu_Click);
             // 
             // btnFinanceiro
             // 
@@ -415,6 +318,39 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 60);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(220, 14);
+            this.panel4.TabIndex = 1;
+            // 
+            // painelLogo
+            // 
+            this.painelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
+            this.painelLogo.Controls.Add(this.txtLogo);
+            this.painelLogo.Controls.Add(this.picLogo);
+            this.painelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.painelLogo.Location = new System.Drawing.Point(0, 0);
+            this.painelLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.painelLogo.Name = "painelLogo";
+            this.painelLogo.Size = new System.Drawing.Size(220, 60);
+            this.painelLogo.TabIndex = 0;
+            // 
+            // txtLogo
+            // 
+            this.txtLogo.Font = new System.Drawing.Font("SansSerif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogo.ForeColor = System.Drawing.Color.White;
+            this.txtLogo.Location = new System.Drawing.Point(60, 0);
+            this.txtLogo.Margin = new System.Windows.Forms.Padding(0);
+            this.txtLogo.Name = "txtLogo";
+            this.txtLogo.Size = new System.Drawing.Size(160, 60);
+            this.txtLogo.TabIndex = 3;
+            this.txtLogo.Text = "UNIFEB";
+            this.txtLogo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // picLogo
             // 
             this.picLogo.BackgroundImage = global::Projeto_Integrador_1.Properties.Resources.logo;
@@ -425,6 +361,70 @@
             this.picLogo.Size = new System.Drawing.Size(50, 50);
             this.picLogo.TabIndex = 2;
             this.picLogo.TabStop = false;
+            // 
+            // painelHeader
+            // 
+            this.painelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
+            this.painelHeader.Controls.Add(this.txtHeader);
+            this.painelHeader.Controls.Add(this.painelSeparador);
+            this.painelHeader.Controls.Add(this.btnHiddenMenu);
+            this.painelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.painelHeader.Location = new System.Drawing.Point(220, 0);
+            this.painelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.painelHeader.Name = "painelHeader";
+            this.painelHeader.Size = new System.Drawing.Size(1044, 60);
+            this.painelHeader.TabIndex = 1;
+            // 
+            // txtHeader
+            // 
+            this.txtHeader.Font = new System.Drawing.Font("SansSerif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHeader.ForeColor = System.Drawing.Color.White;
+            this.txtHeader.Location = new System.Drawing.Point(60, 0);
+            this.txtHeader.Margin = new System.Windows.Forms.Padding(0);
+            this.txtHeader.Name = "txtHeader";
+            this.txtHeader.Size = new System.Drawing.Size(395, 60);
+            this.txtHeader.TabIndex = 3;
+            this.txtHeader.Text = "Inicio";
+            this.txtHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // painelSeparador
+            // 
+            this.painelSeparador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(132)))), ((int)(((byte)(184)))));
+            this.painelSeparador.Location = new System.Drawing.Point(0, 10);
+            this.painelSeparador.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.painelSeparador.Name = "painelSeparador";
+            this.painelSeparador.Size = new System.Drawing.Size(1, 40);
+            this.painelSeparador.TabIndex = 2;
+            // 
+            // btnHiddenMenu
+            // 
+            this.btnHiddenMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
+            this.btnHiddenMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnHiddenMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnHiddenMenu.FlatAppearance.BorderSize = 0;
+            this.btnHiddenMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHiddenMenu.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnHiddenMenu.ForeColor = System.Drawing.Color.White;
+            this.btnHiddenMenu.IconChar = FontAwesome.Sharp.IconChar.Bars;
+            this.btnHiddenMenu.IconColor = System.Drawing.Color.White;
+            this.btnHiddenMenu.IconSize = 30;
+            this.btnHiddenMenu.Location = new System.Drawing.Point(0, 0);
+            this.btnHiddenMenu.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHiddenMenu.Name = "btnHiddenMenu";
+            this.btnHiddenMenu.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
+            this.btnHiddenMenu.Rotation = 0D;
+            this.btnHiddenMenu.Size = new System.Drawing.Size(60, 60);
+            this.btnHiddenMenu.TabIndex = 1;
+            this.btnHiddenMenu.UseVisualStyleBackColor = false;
+            this.btnHiddenMenu.Click += new System.EventHandler(this.btnHiddenMenu_Click);
+            // 
+            // painelForm
+            // 
+            this.painelForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.painelForm.Location = new System.Drawing.Point(220, 60);
+            this.painelForm.Name = "painelForm";
+            this.painelForm.Size = new System.Drawing.Size(1044, 621);
+            this.painelForm.TabIndex = 2;
             // 
             // FormPrincipal
             // 
@@ -439,11 +439,12 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(1080, 660);
             this.Name = "FormPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PROJETO INTEGRADOR";
             this.painelMenu.ResumeLayout(false);
             this.painelLogo.ResumeLayout(false);
-            this.painelHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.painelHeader.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -96,6 +96,8 @@ namespace Projeto_Integrador_1
 
         public void AtivarForm(Form formSender)
         {
+            Console.WriteLine(formSender);
+
             if(currentForm != null)
             {
                 currentForm.Close();
