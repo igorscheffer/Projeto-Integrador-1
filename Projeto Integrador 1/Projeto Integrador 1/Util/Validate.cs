@@ -10,8 +10,8 @@ namespace Projeto_Integrador_1.Util
     class Validate {
         private int contar = 0;
 
-        public dynamic[][] Rules = new dynamic[50][];
-        private List<string> Errors = new List<string>();
+        private dynamic[][] Rules = new dynamic[50][];
+        private List<dynamic> Errors = new List<dynamic>();
         private int CountErrors = 0;
 
         public void addRule(Control component, string name, string rule) {
@@ -25,7 +25,7 @@ namespace Projeto_Integrador_1.Util
         {
             if (rules.Contains("required") || component.Text.Trim().Length > 0) {
                 if (component.Text.Length < rule) {
-                    Errors.Add(name + " deve conter no minimo " + rule + " caracteres.");
+                    Errors.Add(new {Component = component, Message = name + " deve conter no minimo " + rule + " caracteres." });
                     this.CountErrors++;
                 }
             }
@@ -33,7 +33,7 @@ namespace Projeto_Integrador_1.Util
 
         private void validateMax(Control component, string name, int rule) {
             if (component.Text.Length > rule) {
-                Errors.Add(name + " deve conter no maximo " + rule + " caracteres.");
+                Errors.Add(new { Component = component, Message = name + " deve conter no maximo " + rule + " caracteres." });
                 this.CountErrors++;
             }
         }
@@ -48,7 +48,7 @@ namespace Projeto_Integrador_1.Util
 
                 if (!validate)
                 {
-                    Errors.Add(name + " não é um fomato de data valido.");
+                    Errors.Add(new { Component = component, Message = name + " não é um fomato de data valido." });
                     this.CountErrors++;
                 }
             }
@@ -62,7 +62,7 @@ namespace Projeto_Integrador_1.Util
 
                 if (!match.Success)
                 {
-                    Errors.Add(name + " não está em um formato valido.");
+                    Errors.Add(new { Component = component, Message = name + " não está em um formato valido." });
                     this.CountErrors++;
                 }
             }
@@ -70,7 +70,7 @@ namespace Projeto_Integrador_1.Util
 
         private void validateRequired(Control component, string name) {
             if (component.Text.Trim() == "") {
-                Errors.Add(name + " deve ser preenchido.");
+                Errors.Add(new { Component = component, Message = name + " deve ser preenchido." });
                 this.CountErrors++;
             }
         }
@@ -82,14 +82,13 @@ namespace Projeto_Integrador_1.Util
                 var match = System.Text.RegularExpressions.Regex.Match(component.Text, regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
-                    Errors.Add(name + " deve ser numerico.");
+                    Errors.Add(new { Component = component, Message = name + " deve ser numerico." });
                     this.CountErrors++;
                 }
             }
         }
 
         public void Validation() {
-            //Console.Clear();
             for (var i = 0; i < this.contar; i++) {
                 Console.WriteLine(string.Join(", ", this.Rules[i])); // 3
                 string[] rules = this.Rules[i][2].Split('|');
@@ -113,7 +112,6 @@ namespace Projeto_Integrador_1.Util
                                 break;
                         }
                     }
-                    //else if (divideRule.Contains(",")) { }
                     else {
                         switch (divideRule) {
                             case "required":
@@ -131,12 +129,13 @@ namespace Projeto_Integrador_1.Util
             }
         }
 
-        public void ShowErrors() {
-            //Console.Clear();
-            Console.WriteLine("Total de Erros: " + this.CountErrors);
-            foreach (string erro in this.Errors) {
-                Console.WriteLine(erro);
-            }
+        public bool IsValid() {
+            if (this.CountErrors == 0 && this.Errors.Count == 0) { return true; }
+            else { return false; }
+        }
+
+        public List<dynamic> getErrors() {
+            return this.Errors;
         }
     }
 }
