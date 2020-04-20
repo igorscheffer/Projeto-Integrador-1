@@ -9,7 +9,7 @@ namespace Projeto_Integrador_1.Util
     class Validate {
         private int contar = 0;
 
-        public string[][] Rules = new string[20][];
+        public string[][] Rules = new string[50][];
         private List<string> Errors = new List<string>();
         private int CountErrors = 0;
 
@@ -20,11 +20,13 @@ namespace Projeto_Integrador_1.Util
             this.contar++;
         }
 
-        private void validateMin(string name, string value, int rule)
+        private void validateMin(string name, string value, int rule, string rules)
         {
-            if (value.Length < rule){
-                Errors.Add(name + " deve conter no maximo " + rule + " caracteres.");
-                this.CountErrors++;
+            if (rules.Contains("required") && value.Trim() != "") {
+                if (value.Length < rule) {
+                    Errors.Add(name + " deve conter no minimo " + rule + " caracteres.");
+                    this.CountErrors++;
+                }
             }
         }
 
@@ -35,9 +37,25 @@ namespace Projeto_Integrador_1.Util
             }
         }
 
-        private void ValidateRegExp(string name, string value, string rule)
+        private void validateDate(string name, string value, string rule, string rules)
         {
-            if (value.Trim() != "") {
+            if (rules.Contains("required") && value.Trim() != "")
+            {
+                DateTime date;
+
+                bool validate = DateTime.TryParseExact(value, rule, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out date);
+
+                if (!validate)
+                {
+                    Errors.Add(name + " não é um fomato de data valido.");
+                    this.CountErrors++;
+                }
+            }
+        }
+
+        private void ValidateRegExp(string name, string value, string rule, string rules)
+        {
+            if (rules.Contains("required") && value.Trim() != "") {
                 var regexp = rule;
                 var match = System.Text.RegularExpressions.Regex.Match(value, regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
 
@@ -67,13 +85,16 @@ namespace Projeto_Integrador_1.Util
 
                         switch (rule[0]) {
                             case "min":
-                                this.validateMin(this.Rules[i][1], this.Rules[i][2], Int16.Parse(rule[1]));
+                                this.validateMin(this.Rules[i][1], this.Rules[i][2], Int16.Parse(rule[1]), this.Rules[i][3]);
                                 break;
                             case "max":
                                 this.validateMax(this.Rules[i][1], this.Rules[i][2], Int16.Parse(rule[1]));
                                 break;
                             case "regExp":
-                                this.ValidateRegExp(this.Rules[i][1], this.Rules[i][2], rule[1]);
+                                this.ValidateRegExp(this.Rules[i][1], this.Rules[i][2], rule[1], this.Rules[i][3]);
+                                break;
+                            case "date":
+                                this.validateDate(this.Rules[i][1], this.Rules[i][2], rule[1], this.Rules[i][3]);
                                 break;
                         }
                     }

@@ -52,7 +52,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.textFrota = new Guna.UI.WinForms.GunaLineTextBox();
             this.textPlaca = new Guna.UI.WinForms.GunaLineTextBox();
-            this.texModelo = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textModelo = new Guna.UI.WinForms.GunaLineTextBox();
             this.textTara = new Guna.UI.WinForms.GunaLineTextBox();
             this.textLotacao = new Guna.UI.WinForms.GunaLineTextBox();
             this.textPesoBrutoTotal = new Guna.UI.WinForms.GunaLineTextBox();
@@ -345,21 +345,21 @@
             this.textPlaca.Size = new System.Drawing.Size(130, 35);
             this.textPlaca.TabIndex = 66;
             // 
-            // texModelo
+            // textModelo
             // 
-            this.texModelo.BackColor = System.Drawing.Color.White;
-            this.texModelo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.texModelo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.texModelo.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.texModelo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.texModelo.LineColor = System.Drawing.Color.Gainsboro;
-            this.texModelo.LineSize = 1;
-            this.texModelo.Location = new System.Drawing.Point(12, 169);
-            this.texModelo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.texModelo.Name = "texModelo";
-            this.texModelo.PasswordChar = '\0';
-            this.texModelo.Size = new System.Drawing.Size(260, 35);
-            this.texModelo.TabIndex = 67;
+            this.textModelo.BackColor = System.Drawing.Color.White;
+            this.textModelo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textModelo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textModelo.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textModelo.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textModelo.LineColor = System.Drawing.Color.Gainsboro;
+            this.textModelo.LineSize = 1;
+            this.textModelo.Location = new System.Drawing.Point(12, 169);
+            this.textModelo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textModelo.Name = "textModelo";
+            this.textModelo.PasswordChar = '\0';
+            this.textModelo.Size = new System.Drawing.Size(260, 35);
+            this.textModelo.TabIndex = 67;
             // 
             // textTara
             // 
@@ -688,7 +688,7 @@
             this.Controls.Add(this.textPesoBrutoTotal);
             this.Controls.Add(this.textLotacao);
             this.Controls.Add(this.textTara);
-            this.Controls.Add(this.texModelo);
+            this.Controls.Add(this.textModelo);
             this.Controls.Add(this.textPlaca);
             this.Controls.Add(this.textFrota);
             this.Controls.Add(this.label20);
@@ -747,7 +747,7 @@
         private System.Windows.Forms.Label label20;
         private Guna.UI.WinForms.GunaLineTextBox textFrota;
         private Guna.UI.WinForms.GunaLineTextBox textPlaca;
-        private Guna.UI.WinForms.GunaLineTextBox texModelo;
+        private Guna.UI.WinForms.GunaLineTextBox textModelo;
         private Guna.UI.WinForms.GunaLineTextBox textTara;
         private Guna.UI.WinForms.GunaLineTextBox textLotacao;
         private Guna.UI.WinForms.GunaLineTextBox textPesoBrutoTotal;
