@@ -1,4 +1,5 @@
-﻿using Projeto_Integrador_1.Util;
+﻿using Projeto_Integrador_1.Connection;
+using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,10 +55,16 @@ namespace Projeto_Integrador_1.TMSForms.Register
 
         private void onEnviar(object sender, EventArgs e)
         {
+            Veiculos teste = new Connection.Veiculos();
+
+            foreach(var test in teste.getAll()){
+                Console.WriteLine(test.Id + " | " + test.Text);
+            }
+
             var Validate = new Util.Validate();
 
             Validate.addRule(textFrota,             "Frota",                "min:20");
-            Validate.addRule(textPlaca,             "Placa",                @"required|exact:8|regExp:^([A-Z]{3})(\-\d\w\d{2})$");
+            Validate.addRule(textPlaca,             "Placa",                @"required|regExp:^([A-Z]{3})(\-\d\w\d{2})$");
             Validate.addRule(combCategoria,         "Categoria",            "required|numeric|max:2");
             Validate.addRule(combMarca,             "Marca",                "required|numeric|max:2");
             Validate.addRule(combCarroceria,        "Carroceria",           "required|numeric|max:2");
