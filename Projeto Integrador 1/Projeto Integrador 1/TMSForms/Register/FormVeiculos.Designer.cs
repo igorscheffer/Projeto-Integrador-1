@@ -30,26 +30,26 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblFrota = new System.Windows.Forms.Label();
+            this.lblPlaca = new System.Windows.Forms.Label();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.lblMarca = new System.Windows.Forms.Label();
+            this.lblCarroceria = new System.Windows.Forms.Label();
+            this.lblModelo = new System.Windows.Forms.Label();
+            this.lblCor = new System.Windows.Forms.Label();
+            this.lblCombustivel = new System.Windows.Forms.Label();
+            this.lblMotorizacao = new System.Windows.Forms.Label();
+            this.lblRenavam = new System.Windows.Forms.Label();
+            this.lblChassi = new System.Windows.Forms.Label();
+            this.lblAnoFabricacao = new System.Windows.Forms.Label();
+            this.lblAnoModelo = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblTara = new System.Windows.Forms.Label();
+            this.lblLotacao = new System.Windows.Forms.Label();
+            this.lblPesoBrutoTotal = new System.Windows.Forms.Label();
+            this.lblCapacidade = new System.Windows.Forms.Label();
             this.textFrota = new Guna.UI.WinForms.GunaTextBox();
             this.textPlaca = new Guna.UI.WinForms.GunaTextBox();
             this.textModelo = new Guna.UI.WinForms.GunaTextBox();
@@ -93,159 +93,159 @@
             this.label10.TabIndex = 27;
             this.label10.Text = "INFORMAÇÕES BASICAS";
             // 
-            // label1
+            // lblFrota
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(13, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 18);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "FROTA";
+            this.lblFrota.AutoSize = true;
+            this.lblFrota.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFrota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblFrota.Location = new System.Drawing.Point(13, 68);
+            this.lblFrota.Name = "lblFrota";
+            this.lblFrota.Size = new System.Drawing.Size(58, 18);
+            this.lblFrota.TabIndex = 30;
+            this.lblFrota.Text = "FROTA";
             // 
-            // label2
+            // lblPlaca
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(163, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 18);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "PLACA";
+            this.lblPlaca.AutoSize = true;
+            this.lblPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlaca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblPlaca.Location = new System.Drawing.Point(163, 68);
+            this.lblPlaca.Name = "lblPlaca";
+            this.lblPlaca.Size = new System.Drawing.Size(55, 18);
+            this.lblPlaca.TabIndex = 32;
+            this.lblPlaca.Text = "PLACA";
             // 
-            // label3
+            // lblCategoria
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(313, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 18);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "CATEGORIA";
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblCategoria.Location = new System.Drawing.Point(313, 68);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(94, 18);
+            this.lblCategoria.TabIndex = 34;
+            this.lblCategoria.Text = "CATEGORIA";
             // 
-            // label4
+            // lblMarca
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(543, 68);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 18);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "MARCA";
+            this.lblMarca.AutoSize = true;
+            this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblMarca.Location = new System.Drawing.Point(543, 68);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Size = new System.Drawing.Size(61, 18);
+            this.lblMarca.TabIndex = 36;
+            this.lblMarca.Text = "MARCA";
             // 
-            // label5
+            // lblCarroceria
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(773, 68);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 18);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "CARROCERIA";
+            this.lblCarroceria.AutoSize = true;
+            this.lblCarroceria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarroceria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblCarroceria.Location = new System.Drawing.Point(773, 68);
+            this.lblCarroceria.Name = "lblCarroceria";
+            this.lblCarroceria.Size = new System.Drawing.Size(106, 18);
+            this.lblCarroceria.TabIndex = 38;
+            this.lblCarroceria.Text = "CARROCERIA";
             // 
-            // label6
+            // lblModelo
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(9, 146);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 18);
-            this.label6.TabIndex = 40;
-            this.label6.Text = "MODELO";
+            this.lblModelo.AutoSize = true;
+            this.lblModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblModelo.Location = new System.Drawing.Point(9, 146);
+            this.lblModelo.Name = "lblModelo";
+            this.lblModelo.Size = new System.Drawing.Size(74, 18);
+            this.lblModelo.TabIndex = 40;
+            this.lblModelo.Text = "MODELO";
             // 
-            // label7
+            // lblCor
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(289, 146);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 18);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "COR";
+            this.lblCor.AutoSize = true;
+            this.lblCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblCor.Location = new System.Drawing.Point(289, 146);
+            this.lblCor.Name = "lblCor";
+            this.lblCor.Size = new System.Drawing.Size(42, 18);
+            this.lblCor.TabIndex = 42;
+            this.lblCor.Text = "COR";
             // 
-            // label8
+            // lblCombustivel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(499, 146);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 18);
-            this.label8.TabIndex = 44;
-            this.label8.Text = "COMBUSTIVEL";
+            this.lblCombustivel.AutoSize = true;
+            this.lblCombustivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCombustivel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblCombustivel.Location = new System.Drawing.Point(499, 146);
+            this.lblCombustivel.Name = "lblCombustivel";
+            this.lblCombustivel.Size = new System.Drawing.Size(114, 18);
+            this.lblCombustivel.TabIndex = 44;
+            this.lblCombustivel.Text = "COMBUSTIVEL";
             // 
-            // label9
+            // lblMotorizacao
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(709, 146);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 18);
-            this.label9.TabIndex = 46;
-            this.label9.Text = "MOTORIZAÇÃO";
+            this.lblMotorizacao.AutoSize = true;
+            this.lblMotorizacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMotorizacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblMotorizacao.Location = new System.Drawing.Point(709, 146);
+            this.lblMotorizacao.Name = "lblMotorizacao";
+            this.lblMotorizacao.Size = new System.Drawing.Size(118, 18);
+            this.lblMotorizacao.TabIndex = 46;
+            this.lblMotorizacao.Text = "MOTORIZAÇÃO";
             // 
-            // label11
+            // lblRenavam
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(9, 224);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 18);
-            this.label11.TabIndex = 48;
-            this.label11.Text = "RENAVAM";
+            this.lblRenavam.AutoSize = true;
+            this.lblRenavam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRenavam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblRenavam.Location = new System.Drawing.Point(9, 224);
+            this.lblRenavam.Name = "lblRenavam";
+            this.lblRenavam.Size = new System.Drawing.Size(80, 18);
+            this.lblRenavam.TabIndex = 48;
+            this.lblRenavam.Text = "RENAVAM";
             // 
-            // label12
+            // lblChassi
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(279, 224);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 18);
-            this.label12.TabIndex = 50;
-            this.label12.Text = "CHASSI";
+            this.lblChassi.AutoSize = true;
+            this.lblChassi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChassi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblChassi.Location = new System.Drawing.Point(279, 224);
+            this.lblChassi.Name = "lblChassi";
+            this.lblChassi.Size = new System.Drawing.Size(62, 18);
+            this.lblChassi.TabIndex = 50;
+            this.lblChassi.Text = "CHASSI";
             // 
-            // label13
+            // lblAnoFabricacao
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(549, 224);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(138, 18);
-            this.label13.TabIndex = 52;
-            this.label13.Text = "ANO FABRICAÇÃO";
+            this.lblAnoFabricacao.AutoSize = true;
+            this.lblAnoFabricacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnoFabricacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblAnoFabricacao.Location = new System.Drawing.Point(549, 224);
+            this.lblAnoFabricacao.Name = "lblAnoFabricacao";
+            this.lblAnoFabricacao.Size = new System.Drawing.Size(138, 18);
+            this.lblAnoFabricacao.TabIndex = 52;
+            this.lblAnoFabricacao.Text = "ANO FABRICAÇÃO";
             // 
-            // label14
+            // lblAnoModelo
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label14.Location = new System.Drawing.Point(699, 224);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(110, 18);
-            this.label14.TabIndex = 54;
-            this.label14.Text = "ANO MODELO";
+            this.lblAnoModelo.AutoSize = true;
+            this.lblAnoModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnoModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblAnoModelo.Location = new System.Drawing.Point(699, 224);
+            this.lblAnoModelo.Name = "lblAnoModelo";
+            this.lblAnoModelo.Size = new System.Drawing.Size(110, 18);
+            this.lblAnoModelo.TabIndex = 54;
+            this.lblAnoModelo.Text = "ANO MODELO";
             // 
-            // label15
+            // lblStatus
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(847, 224);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(66, 18);
-            this.label15.TabIndex = 56;
-            this.label15.Text = "STATUS";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblStatus.Location = new System.Drawing.Point(847, 224);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(66, 18);
+            this.lblStatus.TabIndex = 56;
+            this.lblStatus.Text = "STATUS";
             // 
             // panel2
             // 
@@ -269,53 +269,53 @@
             this.label16.TabIndex = 29;
             this.label16.Text = "INFORMAÇÕES DE PESO";
             // 
-            // label17
+            // lblTara
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label17.Location = new System.Drawing.Point(9, 357);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 18);
-            this.label17.TabIndex = 58;
-            this.label17.Text = "TARA";
+            this.lblTara.AutoSize = true;
+            this.lblTara.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblTara.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTara.Location = new System.Drawing.Point(9, 357);
+            this.lblTara.Name = "lblTara";
+            this.lblTara.Size = new System.Drawing.Size(46, 18);
+            this.lblTara.TabIndex = 58;
+            this.lblTara.Text = "TARA";
             // 
-            // label18
+            // lblLotacao
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label18.Location = new System.Drawing.Point(259, 357);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(78, 18);
-            this.label18.TabIndex = 60;
-            this.label18.Text = "LOTAÇÃO";
+            this.lblLotacao.AutoSize = true;
+            this.lblLotacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lblLotacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblLotacao.Location = new System.Drawing.Point(259, 357);
+            this.lblLotacao.Name = "lblLotacao";
+            this.lblLotacao.Size = new System.Drawing.Size(78, 18);
+            this.lblLotacao.TabIndex = 60;
+            this.lblLotacao.Text = "LOTAÇÃO";
             // 
-            // label19
+            // lblPesoBrutoTotal
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label19.Location = new System.Drawing.Point(509, 357);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(158, 18);
-            this.label19.TabIndex = 62;
-            this.label19.Text = "PESO BRUTO TOTAL";
+            this.lblPesoBrutoTotal.AutoSize = true;
+            this.lblPesoBrutoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPesoBrutoTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblPesoBrutoTotal.Location = new System.Drawing.Point(509, 357);
+            this.lblPesoBrutoTotal.Name = "lblPesoBrutoTotal";
+            this.lblPesoBrutoTotal.Size = new System.Drawing.Size(158, 18);
+            this.lblPesoBrutoTotal.TabIndex = 62;
+            this.lblPesoBrutoTotal.Text = "PESO BRUTO TOTAL";
             // 
-            // label20
+            // lblCapacidade
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label20.Location = new System.Drawing.Point(759, 357);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(124, 18);
-            this.label20.TabIndex = 64;
-            this.label20.Text = "CAPACIDADE M³";
+            this.lblCapacidade.AutoSize = true;
+            this.lblCapacidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCapacidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblCapacidade.Location = new System.Drawing.Point(759, 357);
+            this.lblCapacidade.Name = "lblCapacidade";
+            this.lblCapacidade.Size = new System.Drawing.Size(124, 18);
+            this.lblCapacidade.TabIndex = 64;
+            this.lblCapacidade.Text = "CAPACIDADE M³";
             // 
             // textFrota
             // 
-            this.textFrota.BackColor = System.Drawing.Color.White;
+            this.textFrota.BackColor = System.Drawing.Color.Transparent;
             this.textFrota.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textFrota.BaseColor = System.Drawing.Color.White;
             this.textFrota.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -327,10 +327,11 @@
             this.textFrota.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textFrota.Location = new System.Drawing.Point(12, 91);
             this.textFrota.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textFrota.MaxLength = 20;
             this.textFrota.Name = "textFrota";
             this.textFrota.PasswordChar = '\0';
             this.textFrota.Size = new System.Drawing.Size(134, 35);
-            this.textFrota.TabIndex = 65;
+            this.textFrota.TabIndex = 1;
             // 
             // textPlaca
             // 
@@ -346,10 +347,11 @@
             this.textPlaca.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textPlaca.Location = new System.Drawing.Point(166, 91);
             this.textPlaca.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textPlaca.MaxLength = 8;
             this.textPlaca.Name = "textPlaca";
             this.textPlaca.PasswordChar = '\0';
             this.textPlaca.Size = new System.Drawing.Size(130, 35);
-            this.textPlaca.TabIndex = 66;
+            this.textPlaca.TabIndex = 2;
             // 
             // textModelo
             // 
@@ -365,10 +367,11 @@
             this.textModelo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textModelo.Location = new System.Drawing.Point(12, 169);
             this.textModelo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textModelo.MaxLength = 50;
             this.textModelo.Name = "textModelo";
             this.textModelo.PasswordChar = '\0';
             this.textModelo.Size = new System.Drawing.Size(260, 35);
-            this.textModelo.TabIndex = 67;
+            this.textModelo.TabIndex = 6;
             // 
             // textTara
             // 
@@ -384,10 +387,11 @@
             this.textTara.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textTara.Location = new System.Drawing.Point(12, 380);
             this.textTara.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textTara.MaxLength = 20;
             this.textTara.Name = "textTara";
             this.textTara.PasswordChar = '\0';
             this.textTara.Size = new System.Drawing.Size(230, 35);
-            this.textTara.TabIndex = 68;
+            this.textTara.TabIndex = 15;
             // 
             // textLotacao
             // 
@@ -403,10 +407,11 @@
             this.textLotacao.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textLotacao.Location = new System.Drawing.Point(262, 380);
             this.textLotacao.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textLotacao.MaxLength = 20;
             this.textLotacao.Name = "textLotacao";
             this.textLotacao.PasswordChar = '\0';
             this.textLotacao.Size = new System.Drawing.Size(231, 35);
-            this.textLotacao.TabIndex = 69;
+            this.textLotacao.TabIndex = 16;
             // 
             // textPesoBrutoTotal
             // 
@@ -422,10 +427,11 @@
             this.textPesoBrutoTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textPesoBrutoTotal.Location = new System.Drawing.Point(513, 380);
             this.textPesoBrutoTotal.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textPesoBrutoTotal.MaxLength = 20;
             this.textPesoBrutoTotal.Name = "textPesoBrutoTotal";
             this.textPesoBrutoTotal.PasswordChar = '\0';
             this.textPesoBrutoTotal.Size = new System.Drawing.Size(229, 35);
-            this.textPesoBrutoTotal.TabIndex = 70;
+            this.textPesoBrutoTotal.TabIndex = 17;
             // 
             // textCapacidade
             // 
@@ -441,10 +447,11 @@
             this.textCapacidade.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textCapacidade.Location = new System.Drawing.Point(762, 380);
             this.textCapacidade.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textCapacidade.MaxLength = 20;
             this.textCapacidade.Name = "textCapacidade";
             this.textCapacidade.PasswordChar = '\0';
             this.textCapacidade.Size = new System.Drawing.Size(229, 35);
-            this.textCapacidade.TabIndex = 71;
+            this.textCapacidade.TabIndex = 18;
             // 
             // textRenavam
             // 
@@ -460,10 +467,11 @@
             this.textRenavam.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textRenavam.Location = new System.Drawing.Point(12, 247);
             this.textRenavam.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textRenavam.MaxLength = 30;
             this.textRenavam.Name = "textRenavam";
             this.textRenavam.PasswordChar = '\0';
             this.textRenavam.Size = new System.Drawing.Size(250, 35);
-            this.textRenavam.TabIndex = 72;
+            this.textRenavam.TabIndex = 10;
             // 
             // textChassi
             // 
@@ -479,10 +487,11 @@
             this.textChassi.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textChassi.Location = new System.Drawing.Point(282, 247);
             this.textChassi.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textChassi.MaxLength = 30;
             this.textChassi.Name = "textChassi";
             this.textChassi.PasswordChar = '\0';
             this.textChassi.Size = new System.Drawing.Size(250, 35);
-            this.textChassi.TabIndex = 73;
+            this.textChassi.TabIndex = 11;
             // 
             // textMotorizacao
             // 
@@ -498,10 +507,11 @@
             this.textMotorizacao.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textMotorizacao.Location = new System.Drawing.Point(712, 169);
             this.textMotorizacao.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textMotorizacao.MaxLength = 30;
             this.textMotorizacao.Name = "textMotorizacao";
             this.textMotorizacao.PasswordChar = '\0';
             this.textMotorizacao.Size = new System.Drawing.Size(279, 35);
-            this.textMotorizacao.TabIndex = 74;
+            this.textMotorizacao.TabIndex = 9;
             // 
             // combCategoria
             // 
@@ -524,7 +534,7 @@
             this.combCategoria.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combCategoria.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combCategoria.Size = new System.Drawing.Size(210, 35);
-            this.combCategoria.TabIndex = 75;
+            this.combCategoria.TabIndex = 3;
             // 
             // combMarca
             // 
@@ -546,7 +556,7 @@
             this.combMarca.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combMarca.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combMarca.Size = new System.Drawing.Size(210, 35);
-            this.combMarca.TabIndex = 76;
+            this.combMarca.TabIndex = 4;
             // 
             // combCarroceria
             // 
@@ -568,7 +578,7 @@
             this.combCarroceria.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combCarroceria.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combCarroceria.Size = new System.Drawing.Size(215, 35);
-            this.combCarroceria.TabIndex = 77;
+            this.combCarroceria.TabIndex = 5;
             // 
             // combCor
             // 
@@ -590,7 +600,7 @@
             this.combCor.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combCor.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combCor.Size = new System.Drawing.Size(190, 35);
-            this.combCor.TabIndex = 78;
+            this.combCor.TabIndex = 7;
             // 
             // combCombustivel
             // 
@@ -612,7 +622,7 @@
             this.combCombustivel.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combCombustivel.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combCombustivel.Size = new System.Drawing.Size(190, 35);
-            this.combCombustivel.TabIndex = 79;
+            this.combCombustivel.TabIndex = 8;
             // 
             // combAnoFabricacao
             // 
@@ -634,7 +644,7 @@
             this.combAnoFabricacao.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combAnoFabricacao.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combAnoFabricacao.Size = new System.Drawing.Size(130, 35);
-            this.combAnoFabricacao.TabIndex = 80;
+            this.combAnoFabricacao.TabIndex = 12;
             // 
             // combAnoModelo
             // 
@@ -656,7 +666,7 @@
             this.combAnoModelo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combAnoModelo.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combAnoModelo.Size = new System.Drawing.Size(128, 35);
-            this.combAnoModelo.TabIndex = 81;
+            this.combAnoModelo.TabIndex = 13;
             // 
             // combStatus
             // 
@@ -678,7 +688,7 @@
             this.combStatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combStatus.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combStatus.Size = new System.Drawing.Size(141, 35);
-            this.combStatus.TabIndex = 82;
+            this.combStatus.TabIndex = 14;
             // 
             // btnEnviar
             // 
@@ -697,7 +707,7 @@
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Rotation = 0D;
             this.btnEnviar.Size = new System.Drawing.Size(130, 35);
-            this.btnEnviar.TabIndex = 83;
+            this.btnEnviar.TabIndex = 19;
             this.btnEnviar.Text = "Salvar";
             this.btnEnviar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEnviar.UseVisualStyleBackColor = false;
@@ -729,26 +739,26 @@
             this.Controls.Add(this.textModelo);
             this.Controls.Add(this.textPlaca);
             this.Controls.Add(this.textFrota);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
+            this.Controls.Add(this.lblCapacidade);
+            this.Controls.Add(this.lblPesoBrutoTotal);
+            this.Controls.Add(this.lblLotacao);
+            this.Controls.Add(this.lblTara);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.lblAnoModelo);
+            this.Controls.Add(this.lblAnoFabricacao);
+            this.Controls.Add(this.lblChassi);
+            this.Controls.Add(this.lblRenavam);
+            this.Controls.Add(this.lblMotorizacao);
+            this.Controls.Add(this.lblCombustivel);
+            this.Controls.Add(this.lblCor);
+            this.Controls.Add(this.lblModelo);
+            this.Controls.Add(this.lblCarroceria);
+            this.Controls.Add(this.lblMarca);
+            this.Controls.Add(this.lblCategoria);
+            this.Controls.Add(this.lblPlaca);
+            this.Controls.Add(this.lblFrota);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -763,26 +773,26 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblFrota;
+        private System.Windows.Forms.Label lblPlaca;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.Label lblMarca;
+        private System.Windows.Forms.Label lblCarroceria;
+        private System.Windows.Forms.Label lblModelo;
+        private System.Windows.Forms.Label lblCor;
+        private System.Windows.Forms.Label lblCombustivel;
+        private System.Windows.Forms.Label lblMotorizacao;
+        private System.Windows.Forms.Label lblRenavam;
+        private System.Windows.Forms.Label lblChassi;
+        private System.Windows.Forms.Label lblAnoFabricacao;
+        private System.Windows.Forms.Label lblAnoModelo;
+        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblTara;
+        private System.Windows.Forms.Label lblLotacao;
+        private System.Windows.Forms.Label lblPesoBrutoTotal;
+        private System.Windows.Forms.Label lblCapacidade;
         private Guna.UI.WinForms.GunaTextBox textFrota;
         private Guna.UI.WinForms.GunaTextBox textPlaca;
         private Guna.UI.WinForms.GunaTextBox textModelo;

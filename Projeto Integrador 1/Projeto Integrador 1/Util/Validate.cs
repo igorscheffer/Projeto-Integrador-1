@@ -22,6 +22,10 @@ namespace Projeto_Integrador_1.Util
 
         private dynamic getValue(dynamic component) {
             if (component.GetType().BaseType.Name == "ComboBox") {
+                if (component.SelectedValue == null) {
+                    return "";
+                }
+
                 return component.SelectedValue;
             }
             else {
