@@ -36,40 +36,40 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gunaComboBox2 = new Guna.UI.WinForms.GunaComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.gunaLineTextBox1 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.gunaLineTextBox2 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.gunaLineTextBox3 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.gunaLineTextBox4 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox4 = new Guna.UI.WinForms.GunaTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.gunaLineTextBox5 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox5 = new Guna.UI.WinForms.GunaTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.gunaLineTextBox6 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox6 = new Guna.UI.WinForms.GunaTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.gunaLineTextBox7 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox7 = new Guna.UI.WinForms.GunaTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.gunaLineTextBox8 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox8 = new Guna.UI.WinForms.GunaTextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.gunaLineTextBox9 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox9 = new Guna.UI.WinForms.GunaTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.gunaLineTextBox11 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox11 = new Guna.UI.WinForms.GunaTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.gunaComboBox3 = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaLineTextBox12 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox12 = new Guna.UI.WinForms.GunaTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.gunaLineTextBox13 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox13 = new Guna.UI.WinForms.GunaTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.gunaLineTextBox14 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox14 = new Guna.UI.WinForms.GunaTextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.gunaLineTextBox15 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox15 = new Guna.UI.WinForms.GunaTextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.gunaLineTextBox16 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox16 = new Guna.UI.WinForms.GunaTextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.gunaLineTextBox17 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.GunaTextBox17 = new Guna.UI.WinForms.GunaTextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -125,7 +125,7 @@
             // 
             this.gunaComboBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaComboBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.gunaComboBox1.BorderSize = 1;
             this.gunaComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.gunaComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -158,7 +158,7 @@
             // 
             this.gunaComboBox2.BackColor = System.Drawing.Color.Transparent;
             this.gunaComboBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaComboBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.gunaComboBox2.BorderSize = 1;
             this.gunaComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.gunaComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -187,21 +187,24 @@
             this.label2.TabIndex = 129;
             this.label2.Text = "TIPO PESSOA";
             // 
-            // gunaLineTextBox1
+            // GunaTextBox1
             // 
-            this.gunaLineTextBox1.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox1.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox1.LineSize = 1;
-            this.gunaLineTextBox1.Location = new System.Drawing.Point(365, 72);
-            this.gunaLineTextBox1.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox1.Name = "gunaLineTextBox1";
-            this.gunaLineTextBox1.PasswordChar = '\0';
-            this.gunaLineTextBox1.Size = new System.Drawing.Size(220, 35);
-            this.gunaLineTextBox1.TabIndex = 132;
+            this.GunaTextBox1.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox1.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox1.BorderSize = 1;
+            this.GunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox1.Location = new System.Drawing.Point(365, 72);
+            this.GunaTextBox1.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox1.Name = "GunaTextBox1";
+            this.GunaTextBox1.PasswordChar = '\0';
+            this.GunaTextBox1.Size = new System.Drawing.Size(220, 35);
+            this.GunaTextBox1.TabIndex = 132;
             // 
             // label3
             // 
@@ -214,21 +217,24 @@
             this.label3.TabIndex = 131;
             this.label3.Text = "CNPJ";
             // 
-            // gunaLineTextBox2
+            // GunaTextBox2
             // 
-            this.gunaLineTextBox2.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox2.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox2.LineSize = 1;
-            this.gunaLineTextBox2.Location = new System.Drawing.Point(605, 72);
-            this.gunaLineTextBox2.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox2.Name = "gunaLineTextBox2";
-            this.gunaLineTextBox2.PasswordChar = '\0';
-            this.gunaLineTextBox2.Size = new System.Drawing.Size(386, 35);
-            this.gunaLineTextBox2.TabIndex = 134;
+            this.GunaTextBox2.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox2.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox2.BorderSize = 1;
+            this.GunaTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox2.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox2.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox2.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox2.Location = new System.Drawing.Point(605, 72);
+            this.GunaTextBox2.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox2.Name = "GunaTextBox2";
+            this.GunaTextBox2.PasswordChar = '\0';
+            this.GunaTextBox2.Size = new System.Drawing.Size(386, 35);
+            this.GunaTextBox2.TabIndex = 134;
             // 
             // label4
             // 
@@ -241,21 +247,24 @@
             this.label4.TabIndex = 133;
             this.label4.Text = "RAZÃO SOCIAL";
             // 
-            // gunaLineTextBox3
+            // GunaTextBox3
             // 
-            this.gunaLineTextBox3.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox3.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox3.LineSize = 1;
-            this.gunaLineTextBox3.Location = new System.Drawing.Point(16, 145);
-            this.gunaLineTextBox3.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox3.Name = "gunaLineTextBox3";
-            this.gunaLineTextBox3.PasswordChar = '\0';
-            this.gunaLineTextBox3.Size = new System.Drawing.Size(350, 35);
-            this.gunaLineTextBox3.TabIndex = 136;
+            this.GunaTextBox3.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox3.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox3.BorderSize = 1;
+            this.GunaTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox3.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox3.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox3.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox3.Location = new System.Drawing.Point(16, 145);
+            this.GunaTextBox3.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox3.Name = "GunaTextBox3";
+            this.GunaTextBox3.PasswordChar = '\0';
+            this.GunaTextBox3.Size = new System.Drawing.Size(350, 35);
+            this.GunaTextBox3.TabIndex = 136;
             // 
             // label5
             // 
@@ -268,21 +277,24 @@
             this.label5.TabIndex = 135;
             this.label5.Text = "NOME FANTASIA";
             // 
-            // gunaLineTextBox4
+            // GunaTextBox4
             // 
-            this.gunaLineTextBox4.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox4.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox4.LineSize = 1;
-            this.gunaLineTextBox4.Location = new System.Drawing.Point(386, 145);
-            this.gunaLineTextBox4.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox4.Name = "gunaLineTextBox4";
-            this.gunaLineTextBox4.PasswordChar = '\0';
-            this.gunaLineTextBox4.Size = new System.Drawing.Size(250, 35);
-            this.gunaLineTextBox4.TabIndex = 138;
+            this.GunaTextBox4.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox4.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox4.BorderSize = 1;
+            this.GunaTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox4.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox4.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox4.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox4.Location = new System.Drawing.Point(386, 145);
+            this.GunaTextBox4.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox4.Name = "GunaTextBox4";
+            this.GunaTextBox4.PasswordChar = '\0';
+            this.GunaTextBox4.Size = new System.Drawing.Size(250, 35);
+            this.GunaTextBox4.TabIndex = 138;
             // 
             // label6
             // 
@@ -295,21 +307,24 @@
             this.label6.TabIndex = 137;
             this.label6.Text = "INSCRIÇÃO MUNICIPAL";
             // 
-            // gunaLineTextBox5
+            // GunaTextBox5
             // 
-            this.gunaLineTextBox5.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox5.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox5.LineSize = 1;
-            this.gunaLineTextBox5.Location = new System.Drawing.Point(656, 145);
-            this.gunaLineTextBox5.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox5.Name = "gunaLineTextBox5";
-            this.gunaLineTextBox5.PasswordChar = '\0';
-            this.gunaLineTextBox5.Size = new System.Drawing.Size(242, 35);
-            this.gunaLineTextBox5.TabIndex = 140;
+            this.GunaTextBox5.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox5.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox5.BorderSize = 1;
+            this.GunaTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox5.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox5.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox5.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox5.Location = new System.Drawing.Point(656, 145);
+            this.GunaTextBox5.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox5.Name = "GunaTextBox5";
+            this.GunaTextBox5.PasswordChar = '\0';
+            this.GunaTextBox5.Size = new System.Drawing.Size(242, 35);
+            this.GunaTextBox5.TabIndex = 140;
             // 
             // label7
             // 
@@ -336,21 +351,24 @@
             this.checkBox1.Text = "ISENTO";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // gunaLineTextBox6
+            // GunaTextBox6
             // 
-            this.gunaLineTextBox6.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox6.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox6.LineSize = 1;
-            this.gunaLineTextBox6.Location = new System.Drawing.Point(15, 258);
-            this.gunaLineTextBox6.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox6.Name = "gunaLineTextBox6";
-            this.gunaLineTextBox6.PasswordChar = '\0';
-            this.gunaLineTextBox6.Size = new System.Drawing.Size(130, 35);
-            this.gunaLineTextBox6.TabIndex = 144;
+            this.GunaTextBox6.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox6.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox6.BorderSize = 1;
+            this.GunaTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox6.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox6.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox6.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox6.Location = new System.Drawing.Point(15, 258);
+            this.GunaTextBox6.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox6.Name = "GunaTextBox6";
+            this.GunaTextBox6.PasswordChar = '\0';
+            this.GunaTextBox6.Size = new System.Drawing.Size(130, 35);
+            this.GunaTextBox6.TabIndex = 144;
             // 
             // label8
             // 
@@ -363,21 +381,24 @@
             this.label8.TabIndex = 143;
             this.label8.Text = "CEP";
             // 
-            // gunaLineTextBox7
+            // GunaTextBox7
             // 
-            this.gunaLineTextBox7.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox7.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox7.LineSize = 1;
-            this.gunaLineTextBox7.Location = new System.Drawing.Point(165, 258);
-            this.gunaLineTextBox7.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox7.Name = "gunaLineTextBox7";
-            this.gunaLineTextBox7.PasswordChar = '\0';
-            this.gunaLineTextBox7.Size = new System.Drawing.Size(280, 35);
-            this.gunaLineTextBox7.TabIndex = 146;
+            this.GunaTextBox7.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox7.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox7.BorderSize = 1;
+            this.GunaTextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox7.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox7.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox7.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox7.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox7.Location = new System.Drawing.Point(165, 258);
+            this.GunaTextBox7.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox7.Name = "GunaTextBox7";
+            this.GunaTextBox7.PasswordChar = '\0';
+            this.GunaTextBox7.Size = new System.Drawing.Size(280, 35);
+            this.GunaTextBox7.TabIndex = 146;
             // 
             // label9
             // 
@@ -390,21 +411,24 @@
             this.label9.TabIndex = 145;
             this.label9.Text = "ENDEREÇO";
             // 
-            // gunaLineTextBox8
+            // GunaTextBox8
             // 
-            this.gunaLineTextBox8.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox8.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox8.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox8.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox8.LineSize = 1;
-            this.gunaLineTextBox8.Location = new System.Drawing.Point(465, 258);
-            this.gunaLineTextBox8.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox8.Name = "gunaLineTextBox8";
-            this.gunaLineTextBox8.PasswordChar = '\0';
-            this.gunaLineTextBox8.Size = new System.Drawing.Size(80, 35);
-            this.gunaLineTextBox8.TabIndex = 148;
+            this.GunaTextBox8.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox8.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox8.BorderSize = 1;
+            this.GunaTextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox8.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox8.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox8.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox8.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox8.Location = new System.Drawing.Point(465, 258);
+            this.GunaTextBox8.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox8.Name = "GunaTextBox8";
+            this.GunaTextBox8.PasswordChar = '\0';
+            this.GunaTextBox8.Size = new System.Drawing.Size(80, 35);
+            this.GunaTextBox8.TabIndex = 148;
             // 
             // label11
             // 
@@ -417,21 +441,24 @@
             this.label11.TabIndex = 147;
             this.label11.Text = "Nº";
             // 
-            // gunaLineTextBox9
+            // GunaTextBox9
             // 
-            this.gunaLineTextBox9.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox9.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox9.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox9.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox9.LineSize = 1;
-            this.gunaLineTextBox9.Location = new System.Drawing.Point(565, 258);
-            this.gunaLineTextBox9.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox9.Name = "gunaLineTextBox9";
-            this.gunaLineTextBox9.PasswordChar = '\0';
-            this.gunaLineTextBox9.Size = new System.Drawing.Size(180, 35);
-            this.gunaLineTextBox9.TabIndex = 150;
+            this.GunaTextBox9.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox9.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox9.BorderSize = 1;
+            this.GunaTextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox9.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox9.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox9.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox9.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox9.Location = new System.Drawing.Point(565, 258);
+            this.GunaTextBox9.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox9.Name = "GunaTextBox9";
+            this.GunaTextBox9.PasswordChar = '\0';
+            this.GunaTextBox9.Size = new System.Drawing.Size(180, 35);
+            this.GunaTextBox9.TabIndex = 150;
             // 
             // label12
             // 
@@ -444,21 +471,24 @@
             this.label12.TabIndex = 149;
             this.label12.Text = "BAIRRO";
             // 
-            // gunaLineTextBox11
+            // GunaTextBox11
             // 
-            this.gunaLineTextBox11.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox11.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox11.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox11.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox11.LineSize = 1;
-            this.gunaLineTextBox11.Location = new System.Drawing.Point(765, 258);
-            this.gunaLineTextBox11.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox11.Name = "gunaLineTextBox11";
-            this.gunaLineTextBox11.PasswordChar = '\0';
-            this.gunaLineTextBox11.Size = new System.Drawing.Size(226, 35);
-            this.gunaLineTextBox11.TabIndex = 152;
+            this.GunaTextBox11.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox11.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox11.BorderSize = 1;
+            this.GunaTextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox11.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox11.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox11.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox11.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox11.Location = new System.Drawing.Point(765, 258);
+            this.GunaTextBox11.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox11.Name = "GunaTextBox11";
+            this.GunaTextBox11.PasswordChar = '\0';
+            this.GunaTextBox11.Size = new System.Drawing.Size(226, 35);
+            this.GunaTextBox11.TabIndex = 152;
             // 
             // label13
             // 
@@ -475,7 +505,7 @@
             // 
             this.gunaComboBox3.BackColor = System.Drawing.Color.Transparent;
             this.gunaComboBox3.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaComboBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.gunaComboBox3.BorderSize = 1;
             this.gunaComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.gunaComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -493,21 +523,24 @@
             this.gunaComboBox3.Size = new System.Drawing.Size(200, 35);
             this.gunaComboBox3.TabIndex = 156;
             // 
-            // gunaLineTextBox12
+            // GunaTextBox12
             // 
-            this.gunaLineTextBox12.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox12.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox12.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox12.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox12.LineSize = 1;
-            this.gunaLineTextBox12.Location = new System.Drawing.Point(15, 331);
-            this.gunaLineTextBox12.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox12.Name = "gunaLineTextBox12";
-            this.gunaLineTextBox12.PasswordChar = '\0';
-            this.gunaLineTextBox12.Size = new System.Drawing.Size(180, 35);
-            this.gunaLineTextBox12.TabIndex = 155;
+            this.GunaTextBox12.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox12.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox12.BorderSize = 1;
+            this.GunaTextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox12.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox12.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox12.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox12.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox12.Location = new System.Drawing.Point(15, 331);
+            this.GunaTextBox12.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox12.Name = "GunaTextBox12";
+            this.GunaTextBox12.PasswordChar = '\0';
+            this.GunaTextBox12.Size = new System.Drawing.Size(180, 35);
+            this.GunaTextBox12.TabIndex = 155;
             // 
             // label14
             // 
@@ -531,21 +564,24 @@
             this.label15.TabIndex = 153;
             this.label15.Text = "CIDADE";
             // 
-            // gunaLineTextBox13
+            // GunaTextBox13
             // 
-            this.gunaLineTextBox13.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox13.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox13.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox13.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox13.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox13.LineSize = 1;
-            this.gunaLineTextBox13.Location = new System.Drawing.Point(15, 404);
-            this.gunaLineTextBox13.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox13.Name = "gunaLineTextBox13";
-            this.gunaLineTextBox13.PasswordChar = '\0';
-            this.gunaLineTextBox13.Size = new System.Drawing.Size(250, 35);
-            this.gunaLineTextBox13.TabIndex = 158;
+            this.GunaTextBox13.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox13.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox13.BorderSize = 1;
+            this.GunaTextBox13.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox13.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox13.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox13.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox13.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox13.Location = new System.Drawing.Point(15, 404);
+            this.GunaTextBox13.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox13.Name = "GunaTextBox13";
+            this.GunaTextBox13.PasswordChar = '\0';
+            this.GunaTextBox13.Size = new System.Drawing.Size(250, 35);
+            this.GunaTextBox13.TabIndex = 158;
             // 
             // label17
             // 
@@ -558,21 +594,24 @@
             this.label17.TabIndex = 157;
             this.label17.Text = "NOME";
             // 
-            // gunaLineTextBox14
+            // GunaTextBox14
             // 
-            this.gunaLineTextBox14.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox14.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox14.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox14.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox14.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox14.LineSize = 1;
-            this.gunaLineTextBox14.Location = new System.Drawing.Point(285, 404);
-            this.gunaLineTextBox14.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox14.Name = "gunaLineTextBox14";
-            this.gunaLineTextBox14.PasswordChar = '\0';
-            this.gunaLineTextBox14.Size = new System.Drawing.Size(150, 35);
-            this.gunaLineTextBox14.TabIndex = 160;
+            this.GunaTextBox14.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox14.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox14.BorderSize = 1;
+            this.GunaTextBox14.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox14.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox14.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox14.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox14.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox14.Location = new System.Drawing.Point(285, 404);
+            this.GunaTextBox14.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox14.Name = "GunaTextBox14";
+            this.GunaTextBox14.PasswordChar = '\0';
+            this.GunaTextBox14.Size = new System.Drawing.Size(150, 35);
+            this.GunaTextBox14.TabIndex = 160;
             // 
             // label18
             // 
@@ -585,21 +624,24 @@
             this.label18.TabIndex = 159;
             this.label18.Text = "TELEFONE";
             // 
-            // gunaLineTextBox15
+            // GunaTextBox15
             // 
-            this.gunaLineTextBox15.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox15.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox15.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox15.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox15.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox15.LineSize = 1;
-            this.gunaLineTextBox15.Location = new System.Drawing.Point(555, 404);
-            this.gunaLineTextBox15.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox15.Name = "gunaLineTextBox15";
-            this.gunaLineTextBox15.PasswordChar = '\0';
-            this.gunaLineTextBox15.Size = new System.Drawing.Size(150, 35);
-            this.gunaLineTextBox15.TabIndex = 162;
+            this.GunaTextBox15.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox15.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox15.BorderSize = 1;
+            this.GunaTextBox15.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox15.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox15.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox15.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox15.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox15.Location = new System.Drawing.Point(555, 404);
+            this.GunaTextBox15.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox15.Name = "GunaTextBox15";
+            this.GunaTextBox15.PasswordChar = '\0';
+            this.GunaTextBox15.Size = new System.Drawing.Size(150, 35);
+            this.GunaTextBox15.TabIndex = 162;
             // 
             // label19
             // 
@@ -612,21 +654,24 @@
             this.label19.TabIndex = 161;
             this.label19.Text = "CELULAR";
             // 
-            // gunaLineTextBox16
+            // GunaTextBox16
             // 
-            this.gunaLineTextBox16.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox16.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox16.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox16.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox16.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox16.LineSize = 1;
-            this.gunaLineTextBox16.Location = new System.Drawing.Point(725, 404);
-            this.gunaLineTextBox16.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox16.Name = "gunaLineTextBox16";
-            this.gunaLineTextBox16.PasswordChar = '\0';
-            this.gunaLineTextBox16.Size = new System.Drawing.Size(266, 35);
-            this.gunaLineTextBox16.TabIndex = 164;
+            this.GunaTextBox16.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox16.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox16.BorderSize = 1;
+            this.GunaTextBox16.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox16.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox16.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox16.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox16.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox16.Location = new System.Drawing.Point(725, 404);
+            this.GunaTextBox16.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox16.Name = "GunaTextBox16";
+            this.GunaTextBox16.PasswordChar = '\0';
+            this.GunaTextBox16.Size = new System.Drawing.Size(266, 35);
+            this.GunaTextBox16.TabIndex = 164;
             // 
             // label20
             // 
@@ -639,21 +684,24 @@
             this.label20.TabIndex = 163;
             this.label20.Text = "E-MAIL";
             // 
-            // gunaLineTextBox17
+            // GunaTextBox17
             // 
-            this.gunaLineTextBox17.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaLineTextBox17.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox17.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaLineTextBox17.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaLineTextBox17.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.gunaLineTextBox17.LineSize = 1;
-            this.gunaLineTextBox17.Location = new System.Drawing.Point(455, 404);
-            this.gunaLineTextBox17.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaLineTextBox17.Name = "gunaLineTextBox17";
-            this.gunaLineTextBox17.PasswordChar = '\0';
-            this.gunaLineTextBox17.Size = new System.Drawing.Size(80, 35);
-            this.gunaLineTextBox17.TabIndex = 166;
+            this.GunaTextBox17.BackColor = System.Drawing.Color.White;
+            this.GunaTextBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GunaTextBox17.BaseColor = System.Drawing.Color.White;
+            this.GunaTextBox17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.GunaTextBox17.BorderSize = 1;
+            this.GunaTextBox17.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.GunaTextBox17.FocusedBaseColor = System.Drawing.Color.White;
+            this.GunaTextBox17.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GunaTextBox17.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GunaTextBox17.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GunaTextBox17.Location = new System.Drawing.Point(455, 404);
+            this.GunaTextBox17.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.GunaTextBox17.Name = "GunaTextBox17";
+            this.GunaTextBox17.PasswordChar = '\0';
+            this.GunaTextBox17.Size = new System.Drawing.Size(80, 35);
+            this.GunaTextBox17.TabIndex = 166;
             // 
             // label23
             // 
@@ -681,7 +729,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.panel3.Controls.Add(this.richTextBox1);
             this.panel3.Location = new System.Drawing.Point(16, 477);
             this.panel3.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
@@ -709,40 +757,40 @@
             this.ControlBox = false;
             this.Controls.Add(this.label21);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.gunaLineTextBox17);
+            this.Controls.Add(this.GunaTextBox17);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.gunaLineTextBox16);
+            this.Controls.Add(this.GunaTextBox16);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.gunaLineTextBox15);
+            this.Controls.Add(this.GunaTextBox15);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.gunaLineTextBox14);
+            this.Controls.Add(this.GunaTextBox14);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.gunaLineTextBox13);
+            this.Controls.Add(this.GunaTextBox13);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.gunaComboBox3);
-            this.Controls.Add(this.gunaLineTextBox12);
+            this.Controls.Add(this.GunaTextBox12);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.gunaLineTextBox11);
+            this.Controls.Add(this.GunaTextBox11);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.gunaLineTextBox9);
+            this.Controls.Add(this.GunaTextBox9);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.gunaLineTextBox8);
+            this.Controls.Add(this.GunaTextBox8);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.gunaLineTextBox7);
+            this.Controls.Add(this.GunaTextBox7);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.gunaLineTextBox6);
+            this.Controls.Add(this.GunaTextBox6);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.gunaLineTextBox5);
+            this.Controls.Add(this.GunaTextBox5);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.gunaLineTextBox4);
+            this.Controls.Add(this.GunaTextBox4);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.gunaLineTextBox3);
+            this.Controls.Add(this.GunaTextBox3);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.gunaLineTextBox2);
+            this.Controls.Add(this.GunaTextBox2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.gunaLineTextBox1);
+            this.Controls.Add(this.GunaTextBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.gunaComboBox2);
             this.Controls.Add(this.label2);
@@ -755,7 +803,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormClientes";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "FormClientes";
+            this.Text = "Cadastrar Cliente";
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -771,40 +819,40 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaComboBox gunaComboBox2;
         private System.Windows.Forms.Label label2;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox1;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox1;
         private System.Windows.Forms.Label label3;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox2;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox2;
         private System.Windows.Forms.Label label4;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox3;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox3;
         private System.Windows.Forms.Label label5;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox4;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox4;
         private System.Windows.Forms.Label label6;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox5;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox checkBox1;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox6;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox6;
         private System.Windows.Forms.Label label8;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox7;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox7;
         private System.Windows.Forms.Label label9;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox8;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox8;
         private System.Windows.Forms.Label label11;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox9;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox9;
         private System.Windows.Forms.Label label12;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox11;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox11;
         private System.Windows.Forms.Label label13;
         private Guna.UI.WinForms.GunaComboBox gunaComboBox3;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox12;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox13;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox13;
         private System.Windows.Forms.Label label17;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox14;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox14;
         private System.Windows.Forms.Label label18;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox15;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox15;
         private System.Windows.Forms.Label label19;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox16;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox16;
         private System.Windows.Forms.Label label20;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox17;
+        private Guna.UI.WinForms.GunaTextBox GunaTextBox17;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Panel panel3;

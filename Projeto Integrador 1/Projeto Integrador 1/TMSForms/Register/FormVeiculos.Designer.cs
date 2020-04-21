@@ -763,7 +763,7 @@
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormVeiculos";
-            this.Text = "FormVeiculos";
+            this.Text = "Cadastrar Veiculo";
             this.ResumeLayout(false);
             this.PerformLayout();
 

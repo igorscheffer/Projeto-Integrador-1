@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textNomeCompleto = new Guna.UI.WinForms.GunaLineTextBox();
-            this.textCPF = new Guna.UI.WinForms.GunaLineTextBox();
-            this.textRG = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textNomeCompleto = new Guna.UI.WinForms.GunaTextBox();
+            this.textCPF = new Guna.UI.WinForms.GunaTextBox();
+            this.textRG = new Guna.UI.WinForms.GunaTextBox();
             this.combStatus = new Guna.UI.WinForms.GunaComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textCNH = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textCNH = new Guna.UI.WinForms.GunaTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textVencimentoCNH = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textVencimentoCNH = new Guna.UI.WinForms.GunaTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.combCategoria = new Guna.UI.WinForms.GunaComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,38 +51,41 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textCEP = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textCEP = new Guna.UI.WinForms.GunaTextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textEnderecos = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textEnderecos = new Guna.UI.WinForms.GunaTextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textN = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textN = new Guna.UI.WinForms.GunaTextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBairro = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textBairro = new Guna.UI.WinForms.GunaTextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textComplemento = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textComplemento = new Guna.UI.WinForms.GunaTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textTelefone = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textTelefone = new Guna.UI.WinForms.GunaTextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textCelular = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textCelular = new Guna.UI.WinForms.GunaTextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textEmail = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textEmail = new Guna.UI.WinForms.GunaTextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.combCargo = new Guna.UI.WinForms.GunaComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.combEstados = new Guna.UI.WinForms.GunaComboBox();
-            this.textCidade = new Guna.UI.WinForms.GunaLineTextBox();
+            this.textCidade = new Guna.UI.WinForms.GunaTextBox();
             this.SuspendLayout();
             // 
             // textNomeCompleto
             // 
             this.textNomeCompleto.BackColor = System.Drawing.Color.White;
             this.textNomeCompleto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textNomeCompleto.BaseColor = System.Drawing.Color.White;
+            this.textNomeCompleto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textNomeCompleto.BorderSize = 1;
             this.textNomeCompleto.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textNomeCompleto.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textNomeCompleto.FocusedBaseColor = System.Drawing.Color.White;
+            this.textNomeCompleto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textNomeCompleto.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textNomeCompleto.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textNomeCompleto.LineColor = System.Drawing.Color.Gainsboro;
-            this.textNomeCompleto.LineSize = 2;
             this.textNomeCompleto.Location = new System.Drawing.Point(24, 83);
             this.textNomeCompleto.Margin = new System.Windows.Forms.Padding(15);
             this.textNomeCompleto.Name = "textNomeCompleto";
@@ -94,11 +97,14 @@
             // 
             this.textCPF.BackColor = System.Drawing.Color.White;
             this.textCPF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textCPF.BaseColor = System.Drawing.Color.White;
+            this.textCPF.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textCPF.BorderSize = 1;
             this.textCPF.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCPF.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textCPF.FocusedBaseColor = System.Drawing.Color.White;
+            this.textCPF.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textCPF.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textCPF.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCPF.LineColor = System.Drawing.Color.Gainsboro;
-            this.textCPF.LineSize = 2;
             this.textCPF.Location = new System.Drawing.Point(269, 81);
             this.textCPF.Margin = new System.Windows.Forms.Padding(15);
             this.textCPF.Name = "textCPF";
@@ -110,11 +116,14 @@
             // 
             this.textRG.BackColor = System.Drawing.Color.White;
             this.textRG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textRG.BaseColor = System.Drawing.Color.White;
+            this.textRG.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textRG.BorderSize = 1;
             this.textRG.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textRG.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textRG.FocusedBaseColor = System.Drawing.Color.White;
+            this.textRG.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textRG.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textRG.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textRG.LineColor = System.Drawing.Color.Gainsboro;
-            this.textRG.LineSize = 2;
             this.textRG.Location = new System.Drawing.Point(514, 81);
             this.textRG.Margin = new System.Windows.Forms.Padding(15);
             this.textRG.Name = "textRG";
@@ -126,7 +135,7 @@
             // 
             this.combStatus.BackColor = System.Drawing.Color.Transparent;
             this.combStatus.BaseColor = System.Drawing.Color.White;
-            this.combStatus.BorderColor = System.Drawing.Color.Silver;
+            this.combStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combStatus.BorderSize = 1;
             this.combStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.combStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -206,11 +215,14 @@
             // 
             this.textCNH.BackColor = System.Drawing.Color.White;
             this.textCNH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textCNH.BaseColor = System.Drawing.Color.White;
+            this.textCNH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textCNH.BorderSize = 1;
             this.textCNH.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCNH.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textCNH.FocusedBaseColor = System.Drawing.Color.White;
+            this.textCNH.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textCNH.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textCNH.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCNH.LineColor = System.Drawing.Color.Gainsboro;
-            this.textCNH.LineSize = 2;
             this.textCNH.Location = new System.Drawing.Point(24, 168);
             this.textCNH.Margin = new System.Windows.Forms.Padding(15);
             this.textCNH.Name = "textCNH";
@@ -233,11 +245,14 @@
             // 
             this.textVencimentoCNH.BackColor = System.Drawing.Color.White;
             this.textVencimentoCNH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textVencimentoCNH.BaseColor = System.Drawing.Color.White;
+            this.textVencimentoCNH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textVencimentoCNH.BorderSize = 1;
             this.textVencimentoCNH.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textVencimentoCNH.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textVencimentoCNH.FocusedBaseColor = System.Drawing.Color.White;
+            this.textVencimentoCNH.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textVencimentoCNH.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textVencimentoCNH.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textVencimentoCNH.LineColor = System.Drawing.Color.Gainsboro;
-            this.textVencimentoCNH.LineSize = 2;
             this.textVencimentoCNH.Location = new System.Drawing.Point(269, 168);
             this.textVencimentoCNH.Margin = new System.Windows.Forms.Padding(15);
             this.textVencimentoCNH.Name = "textVencimentoCNH";
@@ -260,7 +275,7 @@
             // 
             this.combCategoria.BackColor = System.Drawing.Color.Transparent;
             this.combCategoria.BaseColor = System.Drawing.Color.White;
-            this.combCategoria.BorderColor = System.Drawing.Color.Silver;
+            this.combCategoria.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combCategoria.BorderSize = 1;
             this.combCategoria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.combCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -303,7 +318,7 @@
             // 
             this.combSexo.BackColor = System.Drawing.Color.Transparent;
             this.combSexo.BaseColor = System.Drawing.Color.White;
-            this.combSexo.BorderColor = System.Drawing.Color.Silver;
+            this.combSexo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combSexo.BorderSize = 1;
             this.combSexo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.combSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -339,7 +354,7 @@
             // 
             this.combEstadoCivil.BackColor = System.Drawing.Color.Transparent;
             this.combEstadoCivil.BaseColor = System.Drawing.Color.White;
-            this.combEstadoCivil.BorderColor = System.Drawing.Color.Silver;
+            this.combEstadoCivil.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combEstadoCivil.BorderSize = 1;
             this.combEstadoCivil.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.combEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -424,11 +439,14 @@
             // 
             this.textCEP.BackColor = System.Drawing.Color.White;
             this.textCEP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textCEP.BaseColor = System.Drawing.Color.White;
+            this.textCEP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textCEP.BorderSize = 1;
             this.textCEP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCEP.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textCEP.FocusedBaseColor = System.Drawing.Color.White;
+            this.textCEP.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textCEP.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textCEP.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCEP.LineColor = System.Drawing.Color.Gainsboro;
-            this.textCEP.LineSize = 2;
             this.textCEP.Location = new System.Drawing.Point(24, 342);
             this.textCEP.Margin = new System.Windows.Forms.Padding(15);
             this.textCEP.Name = "textCEP";
@@ -451,11 +469,14 @@
             // 
             this.textEnderecos.BackColor = System.Drawing.Color.White;
             this.textEnderecos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textEnderecos.BaseColor = System.Drawing.Color.White;
+            this.textEnderecos.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textEnderecos.BorderSize = 1;
             this.textEnderecos.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textEnderecos.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textEnderecos.FocusedBaseColor = System.Drawing.Color.White;
+            this.textEnderecos.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textEnderecos.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textEnderecos.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textEnderecos.LineColor = System.Drawing.Color.Gainsboro;
-            this.textEnderecos.LineSize = 2;
             this.textEnderecos.Location = new System.Drawing.Point(174, 342);
             this.textEnderecos.Margin = new System.Windows.Forms.Padding(15);
             this.textEnderecos.Name = "textEnderecos";
@@ -478,11 +499,14 @@
             // 
             this.textN.BackColor = System.Drawing.Color.White;
             this.textN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textN.BaseColor = System.Drawing.Color.White;
+            this.textN.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textN.BorderSize = 1;
             this.textN.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textN.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textN.FocusedBaseColor = System.Drawing.Color.White;
+            this.textN.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textN.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textN.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textN.LineColor = System.Drawing.Color.Gainsboro;
-            this.textN.LineSize = 2;
             this.textN.Location = new System.Drawing.Point(464, 342);
             this.textN.Margin = new System.Windows.Forms.Padding(15);
             this.textN.Name = "textN";
@@ -505,11 +529,14 @@
             // 
             this.textBairro.BackColor = System.Drawing.Color.White;
             this.textBairro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textBairro.BaseColor = System.Drawing.Color.White;
+            this.textBairro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textBairro.BorderSize = 1;
             this.textBairro.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBairro.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textBairro.FocusedBaseColor = System.Drawing.Color.White;
+            this.textBairro.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textBairro.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textBairro.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textBairro.LineColor = System.Drawing.Color.Gainsboro;
-            this.textBairro.LineSize = 2;
             this.textBairro.Location = new System.Drawing.Point(574, 342);
             this.textBairro.Margin = new System.Windows.Forms.Padding(15);
             this.textBairro.Name = "textBairro";
@@ -532,11 +559,14 @@
             // 
             this.textComplemento.BackColor = System.Drawing.Color.White;
             this.textComplemento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textComplemento.BaseColor = System.Drawing.Color.White;
+            this.textComplemento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textComplemento.BorderSize = 1;
             this.textComplemento.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textComplemento.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textComplemento.FocusedBaseColor = System.Drawing.Color.White;
+            this.textComplemento.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textComplemento.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textComplemento.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textComplemento.LineColor = System.Drawing.Color.Gainsboro;
-            this.textComplemento.LineSize = 2;
             this.textComplemento.Location = new System.Drawing.Point(764, 342);
             this.textComplemento.Margin = new System.Windows.Forms.Padding(15);
             this.textComplemento.Name = "textComplemento";
@@ -559,11 +589,14 @@
             // 
             this.textTelefone.BackColor = System.Drawing.Color.White;
             this.textTelefone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textTelefone.BaseColor = System.Drawing.Color.White;
+            this.textTelefone.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textTelefone.BorderSize = 1;
             this.textTelefone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textTelefone.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textTelefone.FocusedBaseColor = System.Drawing.Color.White;
+            this.textTelefone.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textTelefone.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textTelefone.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textTelefone.LineColor = System.Drawing.Color.Gainsboro;
-            this.textTelefone.LineSize = 2;
             this.textTelefone.Location = new System.Drawing.Point(204, 512);
             this.textTelefone.Margin = new System.Windows.Forms.Padding(15);
             this.textTelefone.Name = "textTelefone";
@@ -586,11 +619,14 @@
             // 
             this.textCelular.BackColor = System.Drawing.Color.White;
             this.textCelular.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textCelular.BaseColor = System.Drawing.Color.White;
+            this.textCelular.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textCelular.BorderSize = 1;
             this.textCelular.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCelular.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textCelular.FocusedBaseColor = System.Drawing.Color.White;
+            this.textCelular.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textCelular.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textCelular.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCelular.LineColor = System.Drawing.Color.Gainsboro;
-            this.textCelular.LineSize = 2;
             this.textCelular.Location = new System.Drawing.Point(394, 512);
             this.textCelular.Margin = new System.Windows.Forms.Padding(15);
             this.textCelular.Name = "textCelular";
@@ -613,11 +649,14 @@
             // 
             this.textEmail.BackColor = System.Drawing.Color.White;
             this.textEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textEmail.BaseColor = System.Drawing.Color.White;
+            this.textEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textEmail.BorderSize = 1;
             this.textEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textEmail.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textEmail.FocusedBaseColor = System.Drawing.Color.White;
+            this.textEmail.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textEmail.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textEmail.LineColor = System.Drawing.Color.Gainsboro;
-            this.textEmail.LineSize = 2;
             this.textEmail.Location = new System.Drawing.Point(584, 512);
             this.textEmail.Margin = new System.Windows.Forms.Padding(15);
             this.textEmail.Name = "textEmail";
@@ -640,7 +679,7 @@
             // 
             this.combCargo.BackColor = System.Drawing.Color.Transparent;
             this.combCargo.BaseColor = System.Drawing.Color.White;
-            this.combCargo.BorderColor = System.Drawing.Color.Silver;
+            this.combCargo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combCargo.BorderSize = 1;
             this.combCargo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.combCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -687,7 +726,7 @@
             // 
             this.combEstados.BackColor = System.Drawing.Color.Transparent;
             this.combEstados.BaseColor = System.Drawing.Color.White;
-            this.combEstados.BorderColor = System.Drawing.Color.Silver;
+            this.combEstados.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combEstados.BorderSize = 1;
             this.combEstados.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.combEstados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -709,11 +748,14 @@
             // 
             this.textCidade.BackColor = System.Drawing.Color.White;
             this.textCidade.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textCidade.BaseColor = System.Drawing.Color.White;
+            this.textCidade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textCidade.BorderSize = 1;
             this.textCidade.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCidade.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.textCidade.FocusedBaseColor = System.Drawing.Color.White;
+            this.textCidade.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textCidade.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textCidade.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCidade.LineColor = System.Drawing.Color.Gainsboro;
-            this.textCidade.LineSize = 2;
             this.textCidade.Location = new System.Drawing.Point(24, 427);
             this.textCidade.Margin = new System.Windows.Forms.Padding(15);
             this.textCidade.Name = "textCidade";
@@ -779,18 +821,18 @@
         }
 
         #endregion
-        private Guna.UI.WinForms.GunaLineTextBox textNomeCompleto;
-        private Guna.UI.WinForms.GunaLineTextBox textCPF;
-        private Guna.UI.WinForms.GunaLineTextBox textRG;
+        private Guna.UI.WinForms.GunaTextBox textNomeCompleto;
+        private Guna.UI.WinForms.GunaTextBox textCPF;
+        private Guna.UI.WinForms.GunaTextBox textRG;
         private Guna.UI.WinForms.GunaComboBox combStatus;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private Guna.UI.WinForms.GunaLineTextBox textCNH;
+        private Guna.UI.WinForms.GunaTextBox textCNH;
         private System.Windows.Forms.Label label6;
-        private Guna.UI.WinForms.GunaLineTextBox textVencimentoCNH;
+        private Guna.UI.WinForms.GunaTextBox textVencimentoCNH;
         private System.Windows.Forms.Label label7;
         private Guna.UI.WinForms.GunaComboBox combCategoria;
         private System.Windows.Forms.Label label8;
@@ -802,26 +844,26 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private Guna.UI.WinForms.GunaLineTextBox textCEP;
+        private Guna.UI.WinForms.GunaTextBox textCEP;
         private System.Windows.Forms.Label label13;
-        private Guna.UI.WinForms.GunaLineTextBox textEnderecos;
+        private Guna.UI.WinForms.GunaTextBox textEnderecos;
         private System.Windows.Forms.Label label14;
-        private Guna.UI.WinForms.GunaLineTextBox textN;
+        private Guna.UI.WinForms.GunaTextBox textN;
         private System.Windows.Forms.Label label15;
-        private Guna.UI.WinForms.GunaLineTextBox textBairro;
+        private Guna.UI.WinForms.GunaTextBox textBairro;
         private System.Windows.Forms.Label label16;
-        private Guna.UI.WinForms.GunaLineTextBox textComplemento;
+        private Guna.UI.WinForms.GunaTextBox textComplemento;
         private System.Windows.Forms.Label label17;
-        private Guna.UI.WinForms.GunaLineTextBox textTelefone;
+        private Guna.UI.WinForms.GunaTextBox textTelefone;
         private System.Windows.Forms.Label label18;
-        private Guna.UI.WinForms.GunaLineTextBox textCelular;
+        private Guna.UI.WinForms.GunaTextBox textCelular;
         private System.Windows.Forms.Label label19;
-        private Guna.UI.WinForms.GunaLineTextBox textEmail;
+        private Guna.UI.WinForms.GunaTextBox textEmail;
         private System.Windows.Forms.Label label20;
         private Guna.UI.WinForms.GunaComboBox combCargo;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private Guna.UI.WinForms.GunaComboBox combEstados;
-        private Guna.UI.WinForms.GunaLineTextBox textCidade;
+        private Guna.UI.WinForms.GunaTextBox textCidade;
     }
 }
