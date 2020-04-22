@@ -62,6 +62,37 @@ namespace Projeto_Integrador_1.Util
             }
         }
 
+        private void ValidateRegExp(dynamic component, string name, string rule, string rules)
+        {
+            dynamic value = this.getValue(component);
+            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            {
+                var regexp = rule;
+                var match = System.Text.RegularExpressions.Regex.Match(value, regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+                if (!match.Success)
+                {
+                    Errors.Add(new { Component = component, Message = name + " não está em um formato valido." });
+                    this.CountErrors++;
+                }
+            }
+        }
+
+        private void validateIn(dynamic component, string name, string rule, string rules)
+        {
+            dynamic value = this.getValue(component);
+            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            {
+                string[] inRules = rule.Split(',');
+
+                if (inRules.Contains(rule))
+                {
+                    Errors.Add(new { Component = component, Message = name + " não é um valor valido." });
+                    this.CountErrors++;
+                }
+            }
+        }
+
         private void validateDate(dynamic component, string name, string rule, string rules) {
             dynamic value = this.getValue(component);
             if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0) {
@@ -74,20 +105,7 @@ namespace Projeto_Integrador_1.Util
                     this.CountErrors++;
                 }
             }
-        }
-
-        private void ValidateRegExp(dynamic component, string name, string rule, string rules) {
-            dynamic value = this.getValue(component);
-            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0) {
-                var regexp = rule;
-                var match = System.Text.RegularExpressions.Regex.Match(value, regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-
-                if (!match.Success) {
-                    Errors.Add(new { Component = component, Message = name + " não está em um formato valido." });
-                    this.CountErrors++;
-                }
-            }
-        }
+        }        
 
         private void validateRequired(dynamic component, string name) {
             dynamic value = this.getValue(component);
@@ -147,6 +165,9 @@ namespace Projeto_Integrador_1.Util
                                 break;
                             case "regExp":
                                 this.ValidateRegExp(this.Rules[i][0], this.Rules[i][1], rule[1], this.Rules[i][2]);
+                                break;
+                            case "in":
+                                this.ValidateIn(this.Rules[i][0], this.Rules[i][1], rule[1], this.Rules[i][2]);
                                 break;
                             case "date":
                                 this.validateDate(this.Rules[i][0], this.Rules[i][1], rule[1], this.Rules[i][2]);
