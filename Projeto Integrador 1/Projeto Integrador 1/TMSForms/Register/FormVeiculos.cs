@@ -61,72 +61,79 @@ namespace Projeto_Integrador_1.TMSForms.Register
             combStatus.SelectedValue = -1;
         }
 
-        private void onEnviar(object sender, EventArgs e)
-        {
-            var Validate = new Util.Validate();
+        private void onEnviar(object sender, EventArgs e) {
+            try {
+                Validate Validate = new Util.Validate();
 
-            Validate.addRule(textFrota,             "Frota",                "min:20");
-            Validate.addRule(textPlaca,             "Placa",                @"required|regExp:^([A-Z]{3})(\-\d\w\d{2})$");
-            Validate.addRule(combCategoria,         "Categoria",            "required|numeric|max:2");
-            Validate.addRule(combMarca,             "Marca",                "required|numeric|max:2");
-            Validate.addRule(combCarroceria,        "Carroceria",           "required|numeric|max:2");
-            Validate.addRule(textModelo,            "Modelo",               "required|max:50");
-            Validate.addRule(combCor,               "Cor",                  "required|numeric|max:2");
-            Validate.addRule(combCombustivel,       "Combustivel",          "required|numeric|max:2");
-            Validate.addRule(textMotorizacao,       "Motorizacao",          "max:30");
-            Validate.addRule(textRenavam,           "Renavam",              "numeric|max:30");
-            Validate.addRule(textChassi,            "Chassi",               "required|max:30");
-            Validate.addRule(combAnoFabricacao,     "Ano Fabricação",       "required|numeric|date:yyyy");
-            Validate.addRule(combAnoModelo,         "Ano Modelo",           "required|numeric|date:yyyy");
-            Validate.addRule(combStatus,            "Status",               "required|numeric|max:2");
-            Validate.addRule(textTara,              "Tara",                 "max:20");
-            Validate.addRule(textLotacao,           "Lotação",              "max:20");
-            Validate.addRule(textPesoBrutoTotal,    "Peso Bruto Total",     "max:20");
-            Validate.addRule(textCapacidade,        "Capacidade M³",        "max:20");
+                Validate.addRule(textFrota, "Frota", "max:20");
+                Validate.addRule(textPlaca, "Placa", @"required|regExp:^([A-Z]{3})(\-\d\w\d{2})$");
+                Validate.addRule(combCategoria, "Categoria", "required|numeric|max:2");
+                Validate.addRule(combMarca, "Marca", "required|numeric|max:2");
+                Validate.addRule(combCarroceria, "Carroceria", "required|numeric|max:2");
+                Validate.addRule(textModelo, "Modelo", "required|max:50");
+                Validate.addRule(combCor, "Cor", "required|numeric|max:2");
+                Validate.addRule(combCombustivel, "Combustivel", "required|numeric|max:2");
+                Validate.addRule(textMotorizacao, "Motorizacao", "max:30");
+                Validate.addRule(textRenavam, "Renavam", "numeric|max:30");
+                Validate.addRule(textChassi, "Chassi", "required|max:30");
+                Validate.addRule(combAnoFabricacao, "Ano Fabricação", "required|numeric|date:yyyy");
+                Validate.addRule(combAnoModelo, "Ano Modelo", "required|numeric|date:yyyy");
+                Validate.addRule(combStatus, "Status", "required|numeric|max:2");
+                Validate.addRule(textTara, "Tara", "max:20");
+                Validate.addRule(textLotacao, "Lotação", "max:20");
+                Validate.addRule(textPesoBrutoTotal, "Peso Bruto Total", "max:20");
+                Validate.addRule(textCapacidade, "Capacidade M³", "max:20");
 
+                Validate.Validation();
 
-            Validate.Validation();
+                if (Validate.IsValid())
+                {
+                    Veiculos veiculos = new Veiculos();
 
-            if (Validate.IsValid())
-            {
-                Veiculos veiculos = new Connection.Veiculos();
+                    veiculos.Frota = textFrota.Text;
+                    veiculos.Placa = textPlaca.Text;
+                    veiculos.Categoria = combCategoria.SelectedValue.ToString();
+                    veiculos.Marca = combMarca.SelectedValue.ToString();
+                    veiculos.Carroceria = combCarroceria.SelectedValue.ToString();
+                    veiculos.Modelo = textModelo.Text;
+                    veiculos.Cor = combCor.SelectedValue.ToString();
+                    veiculos.Combustivel = combCombustivel.SelectedValue.ToString();
+                    veiculos.Motorizacao = textMotorizacao.Text;
+                    veiculos.Renavam = textRenavam.Text;
+                    veiculos.Chassi = textChassi.Text;
+                    veiculos.AnoFabricacao = combAnoFabricacao.SelectedValue.ToString();
+                    veiculos.AnoModelo = combAnoModelo.SelectedValue.ToString();
+                    veiculos.Status = combStatus.SelectedValue.ToString();
+                    veiculos.Tara = textTara.Text;
+                    veiculos.Lotacao = textLotacao.Text;
+                    veiculos.PesoBrutoTotal = textPesoBrutoTotal.Text;
+                    veiculos.Capacidade = textCapacidade.Text;
 
-                veiculos.Frota = textFrota.Text;
-                veiculos.Placa = textPlaca.Text;
-                veiculos.Categoria = combCategoria.SelectedValue.ToString();
-                veiculos.Marca = combMarca.SelectedValue.ToString();
-                veiculos.Carroceria = combCarroceria.SelectedValue.ToString();
-                veiculos.Modelo = textModelo.Text;
-                veiculos.Cor = combCor.SelectedValue.ToString();
-                veiculos.Combustivel = combCombustivel.SelectedValue.ToString();
-                veiculos.Motorizacao = textMotorizacao.Text;
-                veiculos.Renavam = textRenavam.Text;
-                veiculos.Chassi = textChassi.Text;
-                veiculos.AnoFabricacao = combAnoFabricacao.SelectedValue.ToString();
-                veiculos.AnoModelo = combAnoModelo.SelectedValue.ToString();
-                veiculos.Status = combStatus.SelectedValue.ToString();
-                veiculos.Tara = textTara.Text;
-                veiculos.Lotacao = textLotacao.Text;
-                veiculos.PesoBrutoTotal = textPesoBrutoTotal.Text;
-                veiculos.Capacidade = textCapacidade.Text;
+                    veiculos.Create();
 
-                dynamic create = veiculos.create();
-
-                if (create[0]) {
-                    MessageBox.Show(create[1]);
+                    if (veiculos.Success)
+                    {
+                        MessageBox.Show(veiculos.Message);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Houve um erro ao salvar o veiculo. (" + veiculos.Message + ")");
+                    }
                 }
-                else {
-                    MessageBox.Show("Houve um erro ao salvar o veiculo. (" + create[1] + ")");
+                else
+                {
+                    string ShowMessage = "";
+
+                    foreach (dynamic Erro in Validate.getErrors())
+                    {
+                        ShowMessage += Erro.Message + "\n";
+                    }
+
+                    MessageBox.Show(ShowMessage);
                 }
             }
-            else {
-                string ShowMessage = "";
-
-                foreach (dynamic Erro in Validate.getErrors()) {
-                    ShowMessage += Erro.Message + "\n";
-                }
-
-                MessageBox.Show(ShowMessage);
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
             }
         }
     }

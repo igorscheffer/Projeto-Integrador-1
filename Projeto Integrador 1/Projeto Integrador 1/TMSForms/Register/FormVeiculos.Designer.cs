@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.lblFrota = new System.Windows.Forms.Label();
             this.lblPlaca = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
@@ -44,8 +42,6 @@
             this.lblAnoFabricacao = new System.Windows.Forms.Label();
             this.lblAnoModelo = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
             this.lblTara = new System.Windows.Forms.Label();
             this.lblLotacao = new System.Windows.Forms.Label();
             this.lblPesoBrutoTotal = new System.Windows.Forms.Label();
@@ -69,36 +65,18 @@
             this.combAnoModelo = new Guna.UI.WinForms.GunaComboBox();
             this.combStatus = new Guna.UI.WinForms.GunaComboBox();
             this.btnEnviar = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.ForeColor = System.Drawing.Color.Silver;
-            this.panel1.Location = new System.Drawing.Point(15, 36);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(976, 2);
-            this.panel1.TabIndex = 28;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Silver;
-            this.label10.Location = new System.Drawing.Point(12, 13);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(203, 20);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "INFORMAÇÕES BASICAS";
             // 
             // lblFrota
             // 
             this.lblFrota.AutoSize = true;
             this.lblFrota.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFrota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblFrota.Location = new System.Drawing.Point(13, 68);
+            this.lblFrota.Location = new System.Drawing.Point(17, 53);
             this.lblFrota.Name = "lblFrota";
             this.lblFrota.Size = new System.Drawing.Size(58, 18);
             this.lblFrota.TabIndex = 30;
@@ -109,7 +87,7 @@
             this.lblPlaca.AutoSize = true;
             this.lblPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlaca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblPlaca.Location = new System.Drawing.Point(163, 68);
+            this.lblPlaca.Location = new System.Drawing.Point(177, 53);
             this.lblPlaca.Name = "lblPlaca";
             this.lblPlaca.Size = new System.Drawing.Size(55, 18);
             this.lblPlaca.TabIndex = 32;
@@ -120,7 +98,7 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCategoria.Location = new System.Drawing.Point(313, 68);
+            this.lblCategoria.Location = new System.Drawing.Point(337, 53);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(94, 18);
             this.lblCategoria.TabIndex = 34;
@@ -131,7 +109,7 @@
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblMarca.Location = new System.Drawing.Point(543, 68);
+            this.lblMarca.Location = new System.Drawing.Point(567, 53);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(61, 18);
             this.lblMarca.TabIndex = 36;
@@ -142,7 +120,7 @@
             this.lblCarroceria.AutoSize = true;
             this.lblCarroceria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarroceria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCarroceria.Location = new System.Drawing.Point(773, 68);
+            this.lblCarroceria.Location = new System.Drawing.Point(797, 53);
             this.lblCarroceria.Name = "lblCarroceria";
             this.lblCarroceria.Size = new System.Drawing.Size(106, 18);
             this.lblCarroceria.TabIndex = 38;
@@ -153,7 +131,7 @@
             this.lblModelo.AutoSize = true;
             this.lblModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblModelo.Location = new System.Drawing.Point(9, 146);
+            this.lblModelo.Location = new System.Drawing.Point(16, 126);
             this.lblModelo.Name = "lblModelo";
             this.lblModelo.Size = new System.Drawing.Size(74, 18);
             this.lblModelo.TabIndex = 40;
@@ -164,7 +142,7 @@
             this.lblCor.AutoSize = true;
             this.lblCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCor.Location = new System.Drawing.Point(289, 146);
+            this.lblCor.Location = new System.Drawing.Point(326, 126);
             this.lblCor.Name = "lblCor";
             this.lblCor.Size = new System.Drawing.Size(42, 18);
             this.lblCor.TabIndex = 42;
@@ -175,7 +153,7 @@
             this.lblCombustivel.AutoSize = true;
             this.lblCombustivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCombustivel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCombustivel.Location = new System.Drawing.Point(499, 146);
+            this.lblCombustivel.Location = new System.Drawing.Point(536, 126);
             this.lblCombustivel.Name = "lblCombustivel";
             this.lblCombustivel.Size = new System.Drawing.Size(114, 18);
             this.lblCombustivel.TabIndex = 44;
@@ -186,7 +164,7 @@
             this.lblMotorizacao.AutoSize = true;
             this.lblMotorizacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMotorizacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblMotorizacao.Location = new System.Drawing.Point(709, 146);
+            this.lblMotorizacao.Location = new System.Drawing.Point(746, 126);
             this.lblMotorizacao.Name = "lblMotorizacao";
             this.lblMotorizacao.Size = new System.Drawing.Size(118, 18);
             this.lblMotorizacao.TabIndex = 46;
@@ -197,7 +175,7 @@
             this.lblRenavam.AutoSize = true;
             this.lblRenavam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRenavam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblRenavam.Location = new System.Drawing.Point(9, 224);
+            this.lblRenavam.Location = new System.Drawing.Point(16, 199);
             this.lblRenavam.Name = "lblRenavam";
             this.lblRenavam.Size = new System.Drawing.Size(80, 18);
             this.lblRenavam.TabIndex = 48;
@@ -208,7 +186,7 @@
             this.lblChassi.AutoSize = true;
             this.lblChassi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChassi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblChassi.Location = new System.Drawing.Point(279, 224);
+            this.lblChassi.Location = new System.Drawing.Point(286, 199);
             this.lblChassi.Name = "lblChassi";
             this.lblChassi.Size = new System.Drawing.Size(62, 18);
             this.lblChassi.TabIndex = 50;
@@ -219,7 +197,7 @@
             this.lblAnoFabricacao.AutoSize = true;
             this.lblAnoFabricacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnoFabricacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblAnoFabricacao.Location = new System.Drawing.Point(549, 224);
+            this.lblAnoFabricacao.Location = new System.Drawing.Point(556, 199);
             this.lblAnoFabricacao.Name = "lblAnoFabricacao";
             this.lblAnoFabricacao.Size = new System.Drawing.Size(138, 18);
             this.lblAnoFabricacao.TabIndex = 52;
@@ -230,7 +208,7 @@
             this.lblAnoModelo.AutoSize = true;
             this.lblAnoModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnoModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblAnoModelo.Location = new System.Drawing.Point(699, 224);
+            this.lblAnoModelo.Location = new System.Drawing.Point(721, 199);
             this.lblAnoModelo.Name = "lblAnoModelo";
             this.lblAnoModelo.Size = new System.Drawing.Size(110, 18);
             this.lblAnoModelo.TabIndex = 54;
@@ -241,40 +219,18 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblStatus.Location = new System.Drawing.Point(847, 224);
+            this.lblStatus.Location = new System.Drawing.Point(886, 199);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(66, 18);
             this.lblStatus.TabIndex = 56;
             this.lblStatus.Text = "STATUS";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.ForeColor = System.Drawing.Color.Silver;
-            this.panel2.Location = new System.Drawing.Point(15, 325);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(976, 2);
-            this.panel2.TabIndex = 30;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Silver;
-            this.label16.Location = new System.Drawing.Point(15, 302);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(203, 20);
-            this.label16.TabIndex = 29;
-            this.label16.Text = "INFORMAÇÕES DE PESO";
             // 
             // lblTara
             // 
             this.lblTara.AutoSize = true;
             this.lblTara.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lblTara.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTara.Location = new System.Drawing.Point(9, 357);
+            this.lblTara.Location = new System.Drawing.Point(17, 318);
             this.lblTara.Name = "lblTara";
             this.lblTara.Size = new System.Drawing.Size(46, 18);
             this.lblTara.TabIndex = 58;
@@ -285,7 +241,7 @@
             this.lblLotacao.AutoSize = true;
             this.lblLotacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lblLotacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblLotacao.Location = new System.Drawing.Point(259, 357);
+            this.lblLotacao.Location = new System.Drawing.Point(277, 318);
             this.lblLotacao.Name = "lblLotacao";
             this.lblLotacao.Size = new System.Drawing.Size(78, 18);
             this.lblLotacao.TabIndex = 60;
@@ -296,7 +252,7 @@
             this.lblPesoBrutoTotal.AutoSize = true;
             this.lblPesoBrutoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPesoBrutoTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblPesoBrutoTotal.Location = new System.Drawing.Point(509, 357);
+            this.lblPesoBrutoTotal.Location = new System.Drawing.Point(536, 318);
             this.lblPesoBrutoTotal.Name = "lblPesoBrutoTotal";
             this.lblPesoBrutoTotal.Size = new System.Drawing.Size(158, 18);
             this.lblPesoBrutoTotal.TabIndex = 62;
@@ -307,7 +263,7 @@
             this.lblCapacidade.AutoSize = true;
             this.lblCapacidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCapacidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCapacidade.Location = new System.Drawing.Point(759, 357);
+            this.lblCapacidade.Location = new System.Drawing.Point(797, 318);
             this.lblCapacidade.Name = "lblCapacidade";
             this.lblCapacidade.Size = new System.Drawing.Size(124, 18);
             this.lblCapacidade.TabIndex = 64;
@@ -325,12 +281,12 @@
             this.textFrota.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textFrota.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textFrota.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textFrota.Location = new System.Drawing.Point(12, 91);
+            this.textFrota.Location = new System.Drawing.Point(20, 76);
             this.textFrota.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textFrota.MaxLength = 20;
             this.textFrota.Name = "textFrota";
             this.textFrota.PasswordChar = '\0';
-            this.textFrota.Size = new System.Drawing.Size(134, 35);
+            this.textFrota.Size = new System.Drawing.Size(140, 35);
             this.textFrota.TabIndex = 1;
             // 
             // textPlaca
@@ -345,12 +301,12 @@
             this.textPlaca.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textPlaca.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textPlaca.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textPlaca.Location = new System.Drawing.Point(166, 91);
+            this.textPlaca.Location = new System.Drawing.Point(180, 76);
             this.textPlaca.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textPlaca.MaxLength = 8;
             this.textPlaca.Name = "textPlaca";
             this.textPlaca.PasswordChar = '\0';
-            this.textPlaca.Size = new System.Drawing.Size(130, 35);
+            this.textPlaca.Size = new System.Drawing.Size(140, 35);
             this.textPlaca.TabIndex = 2;
             // 
             // textModelo
@@ -365,12 +321,12 @@
             this.textModelo.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textModelo.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textModelo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textModelo.Location = new System.Drawing.Point(12, 169);
+            this.textModelo.Location = new System.Drawing.Point(19, 149);
             this.textModelo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textModelo.MaxLength = 50;
             this.textModelo.Name = "textModelo";
             this.textModelo.PasswordChar = '\0';
-            this.textModelo.Size = new System.Drawing.Size(260, 35);
+            this.textModelo.Size = new System.Drawing.Size(290, 35);
             this.textModelo.TabIndex = 6;
             // 
             // textTara
@@ -385,12 +341,12 @@
             this.textTara.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textTara.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textTara.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textTara.Location = new System.Drawing.Point(12, 380);
+            this.textTara.Location = new System.Drawing.Point(20, 341);
             this.textTara.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textTara.MaxLength = 20;
             this.textTara.Name = "textTara";
             this.textTara.PasswordChar = '\0';
-            this.textTara.Size = new System.Drawing.Size(230, 35);
+            this.textTara.Size = new System.Drawing.Size(240, 35);
             this.textTara.TabIndex = 15;
             // 
             // textLotacao
@@ -405,12 +361,12 @@
             this.textLotacao.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textLotacao.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textLotacao.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textLotacao.Location = new System.Drawing.Point(262, 380);
+            this.textLotacao.Location = new System.Drawing.Point(280, 341);
             this.textLotacao.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textLotacao.MaxLength = 20;
             this.textLotacao.Name = "textLotacao";
             this.textLotacao.PasswordChar = '\0';
-            this.textLotacao.Size = new System.Drawing.Size(231, 35);
+            this.textLotacao.Size = new System.Drawing.Size(240, 35);
             this.textLotacao.TabIndex = 16;
             // 
             // textPesoBrutoTotal
@@ -425,12 +381,12 @@
             this.textPesoBrutoTotal.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textPesoBrutoTotal.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textPesoBrutoTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textPesoBrutoTotal.Location = new System.Drawing.Point(513, 380);
+            this.textPesoBrutoTotal.Location = new System.Drawing.Point(540, 341);
             this.textPesoBrutoTotal.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textPesoBrutoTotal.MaxLength = 20;
             this.textPesoBrutoTotal.Name = "textPesoBrutoTotal";
             this.textPesoBrutoTotal.PasswordChar = '\0';
-            this.textPesoBrutoTotal.Size = new System.Drawing.Size(229, 35);
+            this.textPesoBrutoTotal.Size = new System.Drawing.Size(240, 35);
             this.textPesoBrutoTotal.TabIndex = 17;
             // 
             // textCapacidade
@@ -445,12 +401,12 @@
             this.textCapacidade.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textCapacidade.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textCapacidade.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCapacidade.Location = new System.Drawing.Point(762, 380);
+            this.textCapacidade.Location = new System.Drawing.Point(800, 341);
             this.textCapacidade.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textCapacidade.MaxLength = 20;
             this.textCapacidade.Name = "textCapacidade";
             this.textCapacidade.PasswordChar = '\0';
-            this.textCapacidade.Size = new System.Drawing.Size(229, 35);
+            this.textCapacidade.Size = new System.Drawing.Size(225, 35);
             this.textCapacidade.TabIndex = 18;
             // 
             // textRenavam
@@ -465,7 +421,7 @@
             this.textRenavam.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textRenavam.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textRenavam.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textRenavam.Location = new System.Drawing.Point(12, 247);
+            this.textRenavam.Location = new System.Drawing.Point(19, 222);
             this.textRenavam.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textRenavam.MaxLength = 30;
             this.textRenavam.Name = "textRenavam";
@@ -485,7 +441,7 @@
             this.textChassi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textChassi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textChassi.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textChassi.Location = new System.Drawing.Point(282, 247);
+            this.textChassi.Location = new System.Drawing.Point(289, 222);
             this.textChassi.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textChassi.MaxLength = 30;
             this.textChassi.Name = "textChassi";
@@ -505,12 +461,12 @@
             this.textMotorizacao.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textMotorizacao.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textMotorizacao.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textMotorizacao.Location = new System.Drawing.Point(712, 169);
+            this.textMotorizacao.Location = new System.Drawing.Point(749, 149);
             this.textMotorizacao.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textMotorizacao.MaxLength = 30;
             this.textMotorizacao.Name = "textMotorizacao";
             this.textMotorizacao.PasswordChar = '\0';
-            this.textMotorizacao.Size = new System.Drawing.Size(279, 35);
+            this.textMotorizacao.Size = new System.Drawing.Size(276, 35);
             this.textMotorizacao.TabIndex = 9;
             // 
             // combCategoria
@@ -528,7 +484,7 @@
             this.combCategoria.FormattingEnabled = true;
             this.combCategoria.IntegralHeight = false;
             this.combCategoria.ItemHeight = 29;
-            this.combCategoria.Location = new System.Drawing.Point(316, 91);
+            this.combCategoria.Location = new System.Drawing.Point(340, 76);
             this.combCategoria.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.combCategoria.Name = "combCategoria";
             this.combCategoria.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
@@ -550,7 +506,7 @@
             this.combMarca.FormattingEnabled = true;
             this.combMarca.IntegralHeight = false;
             this.combMarca.ItemHeight = 29;
-            this.combMarca.Location = new System.Drawing.Point(546, 91);
+            this.combMarca.Location = new System.Drawing.Point(570, 76);
             this.combMarca.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.combMarca.Name = "combMarca";
             this.combMarca.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
@@ -572,12 +528,12 @@
             this.combCarroceria.FormattingEnabled = true;
             this.combCarroceria.IntegralHeight = false;
             this.combCarroceria.ItemHeight = 29;
-            this.combCarroceria.Location = new System.Drawing.Point(776, 91);
+            this.combCarroceria.Location = new System.Drawing.Point(800, 76);
             this.combCarroceria.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.combCarroceria.Name = "combCarroceria";
             this.combCarroceria.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combCarroceria.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combCarroceria.Size = new System.Drawing.Size(215, 35);
+            this.combCarroceria.Size = new System.Drawing.Size(225, 35);
             this.combCarroceria.TabIndex = 5;
             // 
             // combCor
@@ -594,7 +550,7 @@
             this.combCor.FormattingEnabled = true;
             this.combCor.IntegralHeight = false;
             this.combCor.ItemHeight = 29;
-            this.combCor.Location = new System.Drawing.Point(292, 169);
+            this.combCor.Location = new System.Drawing.Point(329, 149);
             this.combCor.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.combCor.Name = "combCor";
             this.combCor.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
@@ -616,7 +572,7 @@
             this.combCombustivel.FormattingEnabled = true;
             this.combCombustivel.IntegralHeight = false;
             this.combCombustivel.ItemHeight = 29;
-            this.combCombustivel.Location = new System.Drawing.Point(502, 169);
+            this.combCombustivel.Location = new System.Drawing.Point(539, 149);
             this.combCombustivel.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.combCombustivel.Name = "combCombustivel";
             this.combCombustivel.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
@@ -638,12 +594,12 @@
             this.combAnoFabricacao.FormattingEnabled = true;
             this.combAnoFabricacao.IntegralHeight = false;
             this.combAnoFabricacao.ItemHeight = 29;
-            this.combAnoFabricacao.Location = new System.Drawing.Point(552, 247);
+            this.combAnoFabricacao.Location = new System.Drawing.Point(559, 222);
             this.combAnoFabricacao.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.combAnoFabricacao.Name = "combAnoFabricacao";
             this.combAnoFabricacao.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combAnoFabricacao.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combAnoFabricacao.Size = new System.Drawing.Size(130, 35);
+            this.combAnoFabricacao.Size = new System.Drawing.Size(145, 35);
             this.combAnoFabricacao.TabIndex = 12;
             // 
             // combAnoModelo
@@ -660,12 +616,12 @@
             this.combAnoModelo.FormattingEnabled = true;
             this.combAnoModelo.IntegralHeight = false;
             this.combAnoModelo.ItemHeight = 29;
-            this.combAnoModelo.Location = new System.Drawing.Point(702, 247);
+            this.combAnoModelo.Location = new System.Drawing.Point(724, 222);
             this.combAnoModelo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.combAnoModelo.Name = "combAnoModelo";
             this.combAnoModelo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combAnoModelo.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combAnoModelo.Size = new System.Drawing.Size(128, 35);
+            this.combAnoModelo.Size = new System.Drawing.Size(145, 35);
             this.combAnoModelo.TabIndex = 13;
             // 
             // combStatus
@@ -682,16 +638,17 @@
             this.combStatus.FormattingEnabled = true;
             this.combStatus.IntegralHeight = false;
             this.combStatus.ItemHeight = 29;
-            this.combStatus.Location = new System.Drawing.Point(850, 247);
+            this.combStatus.Location = new System.Drawing.Point(889, 222);
             this.combStatus.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.combStatus.Name = "combStatus";
             this.combStatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combStatus.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combStatus.Size = new System.Drawing.Size(141, 35);
+            this.combStatus.Size = new System.Drawing.Size(136, 35);
             this.combStatus.TabIndex = 14;
             // 
             // btnEnviar
             // 
+            this.btnEnviar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(186)))), ((int)(((byte)(69)))));
             this.btnEnviar.FlatAppearance.BorderSize = 0;
             this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
@@ -703,7 +660,8 @@
             this.btnEnviar.IconColor = System.Drawing.Color.White;
             this.btnEnviar.IconSize = 16;
             this.btnEnviar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEnviar.Location = new System.Drawing.Point(861, 433);
+            this.btnEnviar.Location = new System.Drawing.Point(895, 451);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(10);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Rotation = 0D;
             this.btnEnviar.Size = new System.Drawing.Size(130, 35);
@@ -713,13 +671,61 @@
             this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.onEnviar);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.ForeColor = System.Drawing.Color.Silver;
+            this.panel1.Location = new System.Drawing.Point(12, 32);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1017, 2);
+            this.panel1.TabIndex = 88;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Silver;
+            this.label10.Location = new System.Drawing.Point(12, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(203, 20);
+            this.label10.TabIndex = 87;
+            this.label10.Text = "INFORMAÇÕES BASICAS";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.ForeColor = System.Drawing.Color.Silver;
+            this.panel2.Location = new System.Drawing.Point(12, 301);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1017, 2);
+            this.panel2.TabIndex = 88;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.Location = new System.Drawing.Point(12, 278);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 20);
+            this.label1.TabIndex = 87;
+            this.label1.Text = "INFORMAÇÕES DE PESO";
+            // 
             // FormVeiculos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 478);
+            this.ClientSize = new System.Drawing.Size(1044, 505);
             this.ControlBox = false;
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.combStatus);
             this.Controls.Add(this.combAnoModelo);
@@ -743,8 +749,6 @@
             this.Controls.Add(this.lblPesoBrutoTotal);
             this.Controls.Add(this.lblLotacao);
             this.Controls.Add(this.lblTara);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblAnoModelo);
             this.Controls.Add(this.lblAnoFabricacao);
@@ -759,8 +763,6 @@
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblPlaca);
             this.Controls.Add(this.lblFrota);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormVeiculos";
             this.Text = "Cadastrar Veiculo";
@@ -770,9 +772,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblFrota;
         private System.Windows.Forms.Label lblPlaca;
         private System.Windows.Forms.Label lblCategoria;
@@ -787,8 +786,6 @@
         private System.Windows.Forms.Label lblAnoFabricacao;
         private System.Windows.Forms.Label lblAnoModelo;
         private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lblTara;
         private System.Windows.Forms.Label lblLotacao;
         private System.Windows.Forms.Label lblPesoBrutoTotal;
@@ -812,5 +809,9 @@
         private Guna.UI.WinForms.GunaComboBox combAnoModelo;
         private Guna.UI.WinForms.GunaComboBox combStatus;
         private FontAwesome.Sharp.IconButton btnEnviar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
     }
 }

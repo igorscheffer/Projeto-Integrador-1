@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -96,13 +97,30 @@ namespace Projeto_Integrador_1.Util
             }
         }
 
-        private void validateNumeric(dynamic component, string name, string rules) {
+        private void validateEmail(dynamic component, string name, string rules) {
             dynamic value = this.getValue(component);
             if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0) {
+                var regexp = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
+                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+                if (!match.Success)
+                {
+                    Errors.Add(new { Component = component, Message = name + " não é um endereco de E-mail valido." });
+                    this.CountErrors++;
+                }
+            }
+        }
+
+        private void validateNumeric(dynamic component, string name, string rules)
+        {
+            dynamic value = this.getValue(component);
+            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            {
                 var regexp = @"([0-9])";
                 var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
 
-                if (!match.Success) {
+                if (!match.Success)
+                {
                     Errors.Add(new { Component = component, Message = name + " deve ser numerico." });
                     this.CountErrors++;
                 }
@@ -143,6 +161,9 @@ namespace Projeto_Integrador_1.Util
                             case "numeric":
                                 this.validateNumeric(this.Rules[i][0], this.Rules[i][1], this.Rules[i][2]);
                                     break;
+                            case "email":
+                                this.validateEmail(this.Rules[i][0], this.Rules[i][1], this.Rules[i][2]);
+                                break;
                             default:
                                 Console.WriteLine("Regra não atribuida > " + divideRule);
                                 break;

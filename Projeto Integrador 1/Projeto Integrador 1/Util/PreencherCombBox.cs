@@ -82,6 +82,28 @@ namespace Projeto_Integrador_1.Util
             return anos;
         }
 
+        public List<dynamic> getSexo()
+        {
+            List<dynamic> sexo = new List<dynamic> {
+                new { Value = "M", Text = "Homem" },
+                new { Value = "F", Text = "Mulher" }
+            };
+
+            return sexo;
+        }
+
+        public List<dynamic> getEstadoCivil()
+        {
+            List<dynamic> estadoCivil = new List<dynamic> {
+                new { Value = 1, Text = "Solteiro(a)" },
+                new { Value = 2, Text = "Casado(a)" },
+                new { Value = 3, Text = "Divorciado(a)" },
+                new { Value = 4, Text = "Viúvo(a)" }
+            };
+
+            return estadoCivil;
+        }
+
         public List<dynamic> getVeiculosCategorias() {
             List<dynamic> categorias = new List<dynamic> {
                 new { Value = 1, Text = "Carro" },
@@ -120,9 +142,42 @@ namespace Projeto_Integrador_1.Util
                 new { Value = 1, Text = "Finalizada" },
                 new { Value = 2, Text = "Agendada" },
                 new { Value = 3, Text = "Em Andamento" },
-                new { Value = 4, Text = "Cancelada" }
+                new { Value = 0, Text = "Cancelada" }
             };
             return status;
+        }
+
+        public List<dynamic> getMotoristaStatus() {
+            List<dynamic> status = new List<dynamic> {
+                new { Value = 1, Text = "Ativo" },
+                new { Value = 0, Text = "Inativo" }
+            };
+
+            return status;
+        }
+
+        public List<dynamic> getCategoriasCNH() {
+            List<dynamic> categorias = new List<dynamic> {
+                new { Value = "A", Text = "A" },
+                new { Value = "B", Text = "B" },
+                new { Value = "C", Text = "C" },
+                new { Value = "D", Text = "D" },
+                new { Value = "AB", Text = "AB" },
+                new { Value = "AC", Text = "AC" },
+                new { Value = "AD", Text = "AD" },
+                new { Value = "AE", Text = "AE" }
+            };
+
+            return categorias;
+        }
+
+        public List<dynamic> getMotoristaCargos() {
+            List<dynamic> cargos = new List<dynamic> {
+                new { Value = 1, Text = "Motorista" },
+                new { Value = 2, Text = "Ajudante" }
+            };
+
+            return cargos;
         }
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,6 +20,17 @@ namespace Projeto_Integrador_1
         private bool menuHidde;
 
         private Form currentForm;
+
+        private async void testeCep() {
+            HttpClient client = new HttpClient();
+
+            HttpResponseMessage response = await client.GetAsync("https://viacep.com.br/ws/14787022/json/");
+
+            response.EnsureSuccessStatusCode();
+            string responseBody = await response.Content.ReadAsStringAsync();
+
+            Console.WriteLine(responseBody);
+        }
 
         public FormPrincipal()
         {

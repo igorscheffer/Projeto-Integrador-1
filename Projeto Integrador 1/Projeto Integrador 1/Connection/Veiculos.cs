@@ -9,9 +9,10 @@ namespace Projeto_Integrador_1.Connection
 {
     class Veiculos : Config {
         
-        public Veiculos() {
-        
-        }
+        public Veiculos() { }
+
+        public bool Success;
+        public string Message;
 
         public string Frota { set; get; }
         public string Placa { set; get; }
@@ -32,41 +33,44 @@ namespace Projeto_Integrador_1.Connection
         public string PesoBrutoTotal { set; get; }
         public string Capacidade { set; get; }
 
-        public dynamic[] create() {
+        public void Create() {
+            
             try {
-                string sql = "INSERT INTO `veiculos` (`frota`, `placa`, `categoria`, `marca`, `carroceria`, `modelo`, `cor`, `combustivel`, `motorizacao`, `renavam`, `chassi`, `ano_fabricacao`, `ano_modelo`, `status`, `tara`, `lotacao`, `peso_bruto_total`, `capacidade`) VALUES (':frota', ':placa', ':categoria', ':marca', ':carroceria', ':modelo', ':cor', ':combustivel', ':motorizacao', ':renavam', ':chassi', ':ano_fabricacao', ':ano_modelo', ':status', ':tara', ':lotacao', ':peso_bruto_total', ':capacidade');";
-                
-                sql = sql.Replace(":frota", this.Frota);
-                sql = sql.Replace(":placa", this.Placa);
-                sql = sql.Replace(":categoria", this.Categoria);
-                sql = sql.Replace(":marca", this.Marca);
-                sql = sql.Replace(":carroceria", this.Carroceria);
-                sql = sql.Replace(":modelo", this.Modelo);
-                sql = sql.Replace(":cor", this.Cor);
-                sql = sql.Replace(":combustivel", this.Combustivel);
-                sql = sql.Replace(":motorizacao", this.Motorizacao);
-                sql = sql.Replace(":renavam", this.Renavam);
-                sql = sql.Replace(":chassi", this.Chassi);
-                sql = sql.Replace(":ano_fabricacao", this.AnoFabricacao);
-                sql = sql.Replace(":ano_modelo", this.AnoModelo);
-                sql = sql.Replace(":status", this.Status);
-                sql = sql.Replace(":tara", this.Tara);
-                sql = sql.Replace(":lotacao", this.Lotacao);
-                sql = sql.Replace(":peso_bruto_total", this.PesoBrutoTotal);
-                sql = sql.Replace(":capacidade", this.Capacidade);
-
+                string sql = "INSERT INTO `veiculos` (`frota`, `placa`, `categoria`, `marca`, `carroceria`, `modelo`, `cor`, `combustivel`, `motorizacao`, `renavam`, `chassi`, `ano_fabricacao`, `ano_modelo`, `status`, `tara`, `lotacao`, `peso_bruto_total`, `capacidade`) VALUES (@frota, @placa, @categoria, @marca, @carroceria, @modelo, @cor, @combustivel, @motorizacao, @renavam, @chassi, @ano_fabricacao, @ano_modelo, @status, @tara, @lotacao, @peso_bruto_total, @capacidade);";
+               
                 if (openConnection()) {
                     MySqlCommand query = new MySqlCommand(sql, connection);
+
+                    query.Parameters.AddWithValue("@frota", this.Frota);
+                    query.Parameters.AddWithValue("@placa", this.Placa);
+                    query.Parameters.AddWithValue("@categoria", this.Categoria);
+                    query.Parameters.AddWithValue("@marca", this.Marca);
+                    query.Parameters.AddWithValue("@carroceria", this.Carroceria);
+                    query.Parameters.AddWithValue("@modelo", this.Modelo);
+                    query.Parameters.AddWithValue("@cor", this.Cor);
+                    query.Parameters.AddWithValue("@combustivel", this.Combustivel);
+                    query.Parameters.AddWithValue("@motorizacao", this.Motorizacao);
+                    query.Parameters.AddWithValue("@renavam", this.Renavam);
+                    query.Parameters.AddWithValue("@chassi", this.Chassi);
+                    query.Parameters.AddWithValue("@ano_fabricacao", this.AnoFabricacao);
+                    query.Parameters.AddWithValue("@ano_modelo", this.AnoModelo);
+                    query.Parameters.AddWithValue("@status", this.Status);
+                    query.Parameters.AddWithValue("@tara", this.Tara);
+                    query.Parameters.AddWithValue("@lotacao", this.Lotacao);
+                    query.Parameters.AddWithValue("@peso_bruto_total", this.PesoBrutoTotal);
+                    query.Parameters.AddWithValue("@capacidade", this.Capacidade);
 
                     query.ExecuteNonQuery();
 
                     closeConnection();
                 }
 
-                return new dynamic[] { true, "Veiculo salvo com sucesso." };
+                this.Success = true;
+                this.Message = "Veiculo salvo com sucesso.";
             }
             catch (Exception e) {
-                return new dynamic[] { false, e.Message };
+                this.Success = false;
+                this.Message = e.Message;
             }
         }
 

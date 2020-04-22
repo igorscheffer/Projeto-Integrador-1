@@ -54,6 +54,9 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="Correios.CEP">
+      <HintPath>Util\Correios.CEP.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=5.12.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.12.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -95,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection\Config.cs" />
+    <Compile Include="Connection\Motoristas.cs" />
     <Compile Include="Connection\Veiculos.cs" />
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
@@ -145,7 +149,6 @@
     <Compile Include="TMSForms\Register\FormVeiculos.Designer.cs">
       <DependentUpon>FormVeiculos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Util\Estados.cs" />
     <Compile Include="Util\PreencherCombBox.cs" />
     <Compile Include="Util\Validate.cs" />
     <EmbeddedResource Include="FormPrincipal.resx">
