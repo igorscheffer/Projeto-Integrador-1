@@ -35,5 +35,10 @@ namespace Projeto_Integrador_1.TMSForms
         {
             fmPrincipal.AtivarForm(new TMSForms.Register.FormClientes());
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            fmPrincipal.AtivarForm(new TMSForms.Register.FormViagens());
+        }
     }
 }

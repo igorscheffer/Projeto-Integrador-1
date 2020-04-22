@@ -145,6 +145,118 @@ namespace Projeto_Integrador_1.Util
             }
         }
 
+        private void validateCPF(dynamic component, string name, string rules)
+        {
+            dynamic value = this.getValue(component);
+            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            {
+                var regexp = @"^(\d{3})(\.\d{3})(\.\d{3})(\-\d{2})$";
+                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+                if (!match.Success)
+                {
+                    Errors.Add(new { Component = component, Message = name + " não é um número de CPF valido." });
+                    this.CountErrors++;
+                }
+            }
+        }
+
+        private void validateCNPJ(dynamic component, string name, string rules)
+        {
+            dynamic value = this.getValue(component);
+            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            {
+                var regexp = @"^(\d{2})(\.\d{3}){2}(\/\d{4})(\-\d{2})$";
+                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+                if (!match.Success)
+                {
+                    Errors.Add(new { Component = component, Message = name + " não é um número de CNPJ valido." });
+                    this.CountErrors++;
+                }
+            }
+        }
+
+        private void validateTelefone(dynamic component, string name, string rules)
+        {
+            dynamic value = this.getValue(component);
+            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            {
+                var regexp = @"\(\d{2,}\) \d{4,}\-\d{4}$";
+                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+                if (!match.Success)
+                {
+                    Errors.Add(new { Component = component, Message = name + " não é um número de Telefone valido." });
+                    this.CountErrors++;
+                }
+            }
+        }
+
+        private void validateNFE(dynamic component, string name, string rules)
+        {
+            dynamic value = this.getValue(component);
+            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            {
+                var regexp = @"^(\d{0,3}(\.\d{3}){2})$";
+                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+                if (!match.Success)
+                {
+                    Errors.Add(new { Component = component, Message = name + " não é um número de NF-E valido." });
+                    this.CountErrors++;
+                }
+            }
+        }
+
+        private void validateReais(dynamic component, string name, string rules)
+        {
+            dynamic value = this.getValue(component);
+            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            {
+                var regexp = @"^(\d{1,3}(\.\d{3})*)(\,\d{2})$";
+                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+                if (!match.Success)
+                {
+                    Errors.Add(new { Component = component, Message = name + " não é um valor R$ valido." });
+                    this.CountErrors++;
+                }
+            }
+        }
+
+        private void validateCEP(dynamic component, string name, string rules)
+        {
+            dynamic value = this.getValue(component);
+            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            {
+                var regexp = @"^(\d{5})(\-\d{3})$";
+                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+                if (!match.Success)
+                {
+                    Errors.Add(new { Component = component, Message = name + " não é um número CEP valido." });
+                    this.CountErrors++;
+                }
+            }
+        }
+
+        private void validatePlaca(dynamic component, string name, string rules)
+        {
+            dynamic value = this.getValue(component);
+            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            {
+                var regexp = @"^([A-Z]{3})(\-\d\w\d{2})$";
+                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+                if (!match.Success)
+                {
+                    Errors.Add(new { Component = component, Message = name + " não é uma Placa valida." });
+                    this.CountErrors++;
+                }
+            }
+        }
+
         public void Validation() {
             for (var i = 0; i < this.contar; i++) {
                 string[] rules = this.Rules[i][2].Split('|');
@@ -185,8 +297,30 @@ namespace Projeto_Integrador_1.Util
                             case "email":
                                 this.validateEmail(this.Rules[i][0], this.Rules[i][1], this.Rules[i][2]);
                                 break;
+                            case "cpf":
+                                this.validateCPF(this.Rules[i][0], this.Rules[i][1], this.Rules[i][2]);
+                                break;
+                            case "cnpj":
+                                this.validateCNPJ(this.Rules[i][0], this.Rules[i][1], this.Rules[i][2]);
+                                break;
+                            case "telefone":
+                                this.validateTelefone(this.Rules[i][0], this.Rules[i][1], this.Rules[i][2]);
+                                break;
+                            case "nfe":
+                                this.validateNFE(this.Rules[i][0], this.Rules[i][1], this.Rules[i][2]);
+                                break;
+                            case "reais":
+                                this.validateReais(this.Rules[i][0], this.Rules[i][1], this.Rules[i][2]);
+                                break;
+                            case "cep":
+                                this.validateCEP(this.Rules[i][0], this.Rules[i][1], this.Rules[i][2]);
+                                break;
+                            case "placa":
+                                this.validatePlaca(this.Rules[i][0], this.Rules[i][1], this.Rules[i][2]);
+                                break;
                             default:
-                                Console.WriteLine("Regra não atribuida > " + divideRule);
+                                Errors.Add(new { Component = this.Rules[i][0], Message = this.Rules[i][1] + " " + divideRule + " não é um regra valida." });
+                                this.CountErrors++;
                                 break;
                         }
                     }

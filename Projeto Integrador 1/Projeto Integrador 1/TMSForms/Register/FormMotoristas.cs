@@ -79,7 +79,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 Validate Validate = new Util.Validate();
 
                 Validate.addRule(textNome, "Nome Completo", "required|max:100");
-                Validate.addRule(textCPF, "CPF", @"required|regExp:^(\d{3})(\.\d{3})(\.\d{3})(\-\d{2})$");
+                Validate.addRule(textCPF, "CPF", "required|cpf");
                 Validate.addRule(textRG, "RG", "numeric|max:12");
                 Validate.addRule(combStatus, "Status", "required|numeric|exact:1");
                 Validate.addRule(textCNH, "CNH", "numeric|max:12");
@@ -87,7 +87,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 Validate.addRule(combCategoriaCNH, "Categoria", "min:1|max:2");
                 Validate.addRule(combSexo, "Sexo", "required|in:h,m");
                 Validate.addRule(combEstadoCivil, "Estado Civil", "required|numeric|exact:1");
-                Validate.addRule(textCEP, "CEP", @"regExp:^(\d{5})(\-\d{3})$");
+                Validate.addRule(textCEP, "CEP", "cep");
                 Validate.addRule(textEndereco, "Endereco", "max:100");
                 Validate.addRule(textN, "Nº", "max:10");
                 Validate.addRule(textBairro, "Bairro", "max:60");
@@ -95,8 +95,8 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 Validate.addRule(textCidade, "Cidade", "max:100");
                 Validate.addRule(combEstado, "Estado", "exact:2");
                 Validate.addRule(combCargo, "Cargo", "numeric|exact:1");
-                Validate.addRule(textTelefone, "Telefone", @"regExp:\(\d{2,}\) \d{4,}\-\d{4}$");
-                Validate.addRule(textCelular, "Celular", @"regExp:\(\d{2,}\) \d{4,}\-\d{4}$");
+                Validate.addRule(textTelefone, "Telefone", "telefone");
+                Validate.addRule(textCelular, "Celular", "telefone");
                 Validate.addRule(textEmail, "Email", "email|max:100");
 
                 Validate.Validation();

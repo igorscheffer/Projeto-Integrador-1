@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace Projeto_Integrador_1.Connection
 
         public bool Success;
         public string Message;
+        public List<dynamic> Results = new List<dynamic>();
 
         public string Frota { set; get; }
         public string Placa { set; get; }
@@ -74,17 +76,32 @@ namespace Projeto_Integrador_1.Connection
             }
         }
 
-        public List<dynamic> getAll() {
-            List<dynamic> list = new List<dynamic>();
+        public void GetAll()
+        {
+            string sql = "SELECT * FROM `veiculos`;";
 
-            try {
-                if (openConnection()) {
-                    MySqlCommand query = new MySqlCommand("SELECT * FROM `teste`", connection);
+            PreencherCombBox preValues = new Util.PreencherCombBox();
+            List<dynamic> marcas = preValues.getVeiculosMarcas();
+
+            try
+            {
+                if (openConnection())
+                {
+                    MySqlCommand query = new MySqlCommand(sql, connection);
                     MySqlDataReader data = query.ExecuteReader();
 
-                    while (data.Read()) {
-                        list.Add(
-                            new { Id = data["id"], Text = data["teste"] }    
+                    while (data.Read())
+                    {
+                        dynamic marca = marcas.Find(item => item.Value == Int16.Parse(data["marca"].ToString()));
+
+                        this.Results.Add(
+                            new
+                            {
+                                Id = data["id"],
+                                Frota = data["frota"],
+                                Placa = data["placa"],
+                                Veiculo = (data["placa"] + " " + marca.Text + " " + data["modelo"]).ToUpper()
+                            }
                         );
                     }
 
@@ -93,11 +110,12 @@ namespace Projeto_Integrador_1.Connection
                     closeConnection();
                 }
 
-                return list;
+                this.Success = true;
             }
-            catch (Exception e) {
-                Console.Write(e.Message);
-                return list;
+            catch (MySqlException e)
+            {
+                this.Success = false;
+                this.Message = e.Message;
             }
         }
     }

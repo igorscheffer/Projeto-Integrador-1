@@ -150,6 +150,12 @@
     <Compile Include="TMSForms\Register\FormVeiculos.Designer.cs">
       <DependentUpon>FormVeiculos.cs</DependentUpon>
     </Compile>
+    <Compile Include="TMSForms\Register\FormViagens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMSForms\Register\FormViagens.Designer.cs">
+      <DependentUpon>FormViagens.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util\PreencherCombBox.cs" />
     <Compile Include="Util\Validate.cs" />
     <EmbeddedResource Include="FormPrincipal.resx">
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\Register\FormVeiculos.resx">
       <DependentUpon>FormVeiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\Register\FormViagens.resx">
+      <DependentUpon>FormViagens.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

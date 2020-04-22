@@ -13,6 +13,7 @@ namespace Projeto_Integrador_1.Connection
 
         public bool Success;
         public string Message;
+        public List<dynamic> Results = new List<dynamic>();
 
         public dynamic TipoCadastro { get; set; }
         public dynamic TipoPessoa { get; set; }
@@ -72,6 +73,39 @@ namespace Projeto_Integrador_1.Connection
 
                 this.Success = true;
                 this.Message = "Cliente salvo com sucesso.";
+            }
+            catch (MySqlException e) {
+                this.Success = false;
+                this.Message = e.Message;
+            }
+        }
+
+        public void GetAll() {
+            string sql = "SELECT * FROM `clientes`;";
+
+            try {
+                if (openConnection()) {
+                    MySqlCommand query = new MySqlCommand(sql, connection);
+                    MySqlDataReader data = query.ExecuteReader();
+
+                    while (data.Read()) {
+                        this.Results.Add(
+                            new {
+                                Id = data["id"],
+                                TipoCadastro = data["tipo_cadastro"],
+                                TipoPessoa = data["tipo_pessoa"],
+                                CNPJ = data["cnpj"],
+                                RazaoSocial = data["razao_social"],
+                            }    
+                        );
+                    }
+
+                    data.Close();
+
+                    closeConnection();
+                }
+
+                this.Success = true;
             }
             catch (MySqlException e) {
                 this.Success = false;

@@ -134,19 +134,16 @@ namespace Projeto_Integrador_1.TMSForms.Register
         {
             try
             {
-                string regExpCNPJ = @"^(\d{2})(\.\d{3}){2}(\/\d{4})(\-\d{2})$";
-                string regExpCPF = @"^(\d{3})(\.\d{3})(\.\d{3})(\-\d{2})$";
-
                 Validate Validate = new Util.Validate();
 
                 Validate.addRule(combTipoCadastro,          "Tipo Cadastro",            "required|in:C,F,A|exact:1");
                 Validate.addRule(combTipoPessoa,            "Tipo Pessoa",              "required|in:PF,PJ|exact:2");
-                Validate.addRule(textCNPJ,                  lblCNPJ.Text,               "required|regExp:" + (combTipoPessoa.SelectedValue == "PJ" ? regExpCNPJ : regExpCPF));
+                Validate.addRule(textCNPJ,                  lblCNPJ.Text,               "required|" + (combTipoPessoa.SelectedValue == "PJ" ? "cnpj" : "cpf"));
                 Validate.addRule(textRazaoSocial,           lblRazaoSocial.Text,        "required|max:150");
                 Validate.addRule(textNomeFantasia,          "Razão Social",             "max:150");
                 Validate.addRule(textInscricaoMunicipal,    lblInscricaoMunicipal.Text, "max:12");
                 Validate.addRule(textInscricaoEstadual,     lblInscricaoEstadual.Text,  "max:12");
-                Validate.addRule(textCEP,                   "CEP",                      @"regExp:^(\d{5})(\-\d{3})$");
+                Validate.addRule(textCEP,                   "CEP",                      "cep");
                 Validate.addRule(textEndereco,              "Endereco",                 "max:100");
                 Validate.addRule(textN,                     "Nº",                       "max:10");
                 Validate.addRule(textBairro,                "Bairro",                   "max:60");
@@ -154,9 +151,9 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 Validate.addRule(textCidade,                "Cidade",                   "max:100");
                 Validate.addRule(combEstado,                "Estado",                   "exact:2");
                 Validate.addRule(textNome,                  "Contato Nome",             "max:100");
-                Validate.addRule(textTelefone,              "Telefone",                 @"regExp:\(\d{2,}\) \d{4,}\-\d{4}$");
+                Validate.addRule(textTelefone,              "Telefone",                 "telefone");
                 Validate.addRule(textRamal,                 "Ramal",                    "numeric|max:10");
-                Validate.addRule(textCelular,               "Celular",                  @"regExp:\(\d{2,}\) \d{4,}\-\d{4}$");
+                Validate.addRule(textCelular,               "Celular",                  "telefone");
                 Validate.addRule(textEmail,                 "Email",                    "email|max:100");
                 Validate.addRule(textObservacoes,           "Observações",              "max:500");
 

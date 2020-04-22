@@ -198,5 +198,29 @@ namespace Projeto_Integrador_1.Util
 
             return tipoPessoa;
         }
+
+        public List<dynamic> getViagemTomador() {
+            List<dynamic> tomador = new List<dynamic>
+            {
+                new { Value = 1, Text = "Remetente" },
+                new { Value = 2, Text = "Destinatario" }
+            };
+
+            return tomador;
+        }
+
+        public List<dynamic> getViagemTipo()
+        {
+            List<dynamic> tipo = new List<dynamic>
+            {
+                new { Value = 1, Text = "Normal" },
+                new { Value = 2, Text = "Subcontratação" },
+                new { Value = 3, Text = "Redespacho" },
+                new { Value = 4, Text = "Redespacho Intermediario" },
+                new { Value = 5, Text = "Multimodal" }
+            };
+
+            return tipo;
+        }
     }
 }
