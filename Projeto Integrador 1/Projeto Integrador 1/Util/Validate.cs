@@ -62,7 +62,7 @@ namespace Projeto_Integrador_1.Util
             }
         }
 
-        private void ValidateRegExp(dynamic component, string name, string rule, string rules)
+        private void validateRegExp(dynamic component, string name, string rule, string rules)
         {
             dynamic value = this.getValue(component);
             if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
@@ -85,7 +85,7 @@ namespace Projeto_Integrador_1.Util
             {
                 string[] inRules = rule.Split(',');
 
-                if (inRules.Contains(rule))
+                if (!Array.Exists(inRules, array => array.ToLower() == value.ToLower()))
                 {
                     Errors.Add(new { Component = component, Message = name + " não é um valor valido." });
                     this.CountErrors++;
@@ -164,10 +164,10 @@ namespace Projeto_Integrador_1.Util
                                 this.validateExact(this.Rules[i][0], this.Rules[i][1], Int16.Parse(rule[1]), this.Rules[i][2]);
                                 break;
                             case "regExp":
-                                this.ValidateRegExp(this.Rules[i][0], this.Rules[i][1], rule[1], this.Rules[i][2]);
+                                this.validateRegExp(this.Rules[i][0], this.Rules[i][1], rule[1], this.Rules[i][2]);
                                 break;
                             case "in":
-                                this.ValidateIn(this.Rules[i][0], this.Rules[i][1], rule[1], this.Rules[i][2]);
+                                this.validateIn(this.Rules[i][0], this.Rules[i][1], rule[1], this.Rules[i][2]);
                                 break;
                             case "date":
                                 this.validateDate(this.Rules[i][0], this.Rules[i][1], rule[1], this.Rules[i][2]);

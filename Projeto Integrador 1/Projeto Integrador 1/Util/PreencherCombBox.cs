@@ -85,8 +85,8 @@ namespace Projeto_Integrador_1.Util
         public List<dynamic> getSexo()
         {
             List<dynamic> sexo = new List<dynamic> {
-                new { Value = "M", Text = "Homem" },
-                new { Value = "F", Text = "Mulher" }
+                new { Value = "H", Text = "Homem" },
+                new { Value = "M", Text = "Mulher" }
             };
 
             return sexo;
