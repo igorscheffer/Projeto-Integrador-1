@@ -30,21 +30,21 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.gunaComboBox2 = new Guna.UI.WinForms.GunaComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.GunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.GunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.GunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.GunaTextBox4 = new Guna.UI.WinForms.GunaTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.GunaTextBox5 = new Guna.UI.WinForms.GunaTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.combTipoCadastro = new Guna.UI.WinForms.GunaComboBox();
+            this.lblTipoCadastro = new System.Windows.Forms.Label();
+            this.combTipoPessoa = new Guna.UI.WinForms.GunaComboBox();
+            this.lblTipoPessoa = new System.Windows.Forms.Label();
+            this.textCNPJ = new Guna.UI.WinForms.GunaTextBox();
+            this.lblCNPJ = new System.Windows.Forms.Label();
+            this.textRazaoSocial = new Guna.UI.WinForms.GunaTextBox();
+            this.lblRazaoSocial = new System.Windows.Forms.Label();
+            this.textNomeFantasia = new Guna.UI.WinForms.GunaTextBox();
+            this.lblNomeFantasia = new System.Windows.Forms.Label();
+            this.textInscricaoMunicipal = new Guna.UI.WinForms.GunaTextBox();
+            this.lblInscricaoMunicipal = new System.Windows.Forms.Label();
+            this.textInscricaoEstadual = new Guna.UI.WinForms.GunaTextBox();
+            this.lblInscricaoEstadual = new System.Windows.Forms.Label();
+            this.checkIsento = new System.Windows.Forms.CheckBox();
             this.GunaTextBox13 = new Guna.UI.WinForms.GunaTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.GunaTextBox14 = new Guna.UI.WinForms.GunaTextBox();
@@ -55,7 +55,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.GunaTextBox17 = new Guna.UI.WinForms.GunaTextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textObservacoes = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
             this.buttonBuscarCEP = new FontAwesome.Sharp.IconButton();
@@ -75,6 +75,7 @@
             this.lblCEP = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
+            this.btnEnviar = new FontAwesome.Sharp.IconButton();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,235 +101,237 @@
             this.label10.TabIndex = 83;
             this.label10.Text = "INFORMAÇÕES CLIENTE";
             // 
-            // gunaComboBox1
+            // combTipoCadastro
             // 
-            this.gunaComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.gunaComboBox1.BorderSize = 1;
-            this.gunaComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox1.FormattingEnabled = true;
-            this.gunaComboBox1.IntegralHeight = false;
-            this.gunaComboBox1.ItemHeight = 29;
-            this.gunaComboBox1.Location = new System.Drawing.Point(18, 72);
-            this.gunaComboBox1.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaComboBox1.Name = "gunaComboBox1";
-            this.gunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaComboBox1.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox1.Size = new System.Drawing.Size(150, 35);
-            this.gunaComboBox1.TabIndex = 1;
+            this.combTipoCadastro.BackColor = System.Drawing.Color.Transparent;
+            this.combTipoCadastro.BaseColor = System.Drawing.Color.White;
+            this.combTipoCadastro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combTipoCadastro.BorderSize = 1;
+            this.combTipoCadastro.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combTipoCadastro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combTipoCadastro.FocusedColor = System.Drawing.Color.Empty;
+            this.combTipoCadastro.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.combTipoCadastro.ForeColor = System.Drawing.Color.Black;
+            this.combTipoCadastro.FormattingEnabled = true;
+            this.combTipoCadastro.IntegralHeight = false;
+            this.combTipoCadastro.ItemHeight = 29;
+            this.combTipoCadastro.Location = new System.Drawing.Point(18, 72);
+            this.combTipoCadastro.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combTipoCadastro.Name = "combTipoCadastro";
+            this.combTipoCadastro.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.combTipoCadastro.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.combTipoCadastro.Size = new System.Drawing.Size(150, 35);
+            this.combTipoCadastro.TabIndex = 1;
             // 
-            // label1
+            // lblTipoCadastro
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(15, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 18);
-            this.label1.TabIndex = 127;
-            this.label1.Text = "TIPO CADASTRO";
+            this.lblTipoCadastro.AutoSize = true;
+            this.lblTipoCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTipoCadastro.Location = new System.Drawing.Point(15, 49);
+            this.lblTipoCadastro.Name = "lblTipoCadastro";
+            this.lblTipoCadastro.Size = new System.Drawing.Size(128, 18);
+            this.lblTipoCadastro.TabIndex = 127;
+            this.lblTipoCadastro.Text = "TIPO CADASTRO";
             // 
-            // gunaComboBox2
+            // combTipoPessoa
             // 
-            this.gunaComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.gunaComboBox2.BorderSize = 1;
-            this.gunaComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gunaComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox2.FormattingEnabled = true;
-            this.gunaComboBox2.IntegralHeight = false;
-            this.gunaComboBox2.ItemHeight = 29;
-            this.gunaComboBox2.Location = new System.Drawing.Point(188, 72);
-            this.gunaComboBox2.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.gunaComboBox2.Name = "gunaComboBox2";
-            this.gunaComboBox2.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.gunaComboBox2.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox2.Size = new System.Drawing.Size(160, 35);
-            this.gunaComboBox2.TabIndex = 2;
+            this.combTipoPessoa.BackColor = System.Drawing.Color.Transparent;
+            this.combTipoPessoa.BaseColor = System.Drawing.Color.White;
+            this.combTipoPessoa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combTipoPessoa.BorderSize = 1;
+            this.combTipoPessoa.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combTipoPessoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combTipoPessoa.FocusedColor = System.Drawing.Color.Empty;
+            this.combTipoPessoa.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.combTipoPessoa.ForeColor = System.Drawing.Color.Black;
+            this.combTipoPessoa.FormattingEnabled = true;
+            this.combTipoPessoa.IntegralHeight = false;
+            this.combTipoPessoa.ItemHeight = 29;
+            this.combTipoPessoa.Location = new System.Drawing.Point(188, 72);
+            this.combTipoPessoa.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combTipoPessoa.Name = "combTipoPessoa";
+            this.combTipoPessoa.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.combTipoPessoa.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.combTipoPessoa.Size = new System.Drawing.Size(160, 35);
+            this.combTipoPessoa.TabIndex = 2;
+            this.combTipoPessoa.SelectedIndexChanged += new System.EventHandler(this.onSelectTipoPessoa);
             // 
-            // label2
+            // lblTipoPessoa
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(185, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 18);
-            this.label2.TabIndex = 129;
-            this.label2.Text = "TIPO PESSOA";
+            this.lblTipoPessoa.AutoSize = true;
+            this.lblTipoPessoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoPessoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTipoPessoa.Location = new System.Drawing.Point(185, 49);
+            this.lblTipoPessoa.Name = "lblTipoPessoa";
+            this.lblTipoPessoa.Size = new System.Drawing.Size(107, 18);
+            this.lblTipoPessoa.TabIndex = 129;
+            this.lblTipoPessoa.Text = "TIPO PESSOA";
             // 
-            // GunaTextBox1
+            // textCNPJ
             // 
-            this.GunaTextBox1.BackColor = System.Drawing.Color.White;
-            this.GunaTextBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.GunaTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.GunaTextBox1.BorderSize = 1;
-            this.GunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.GunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.GunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.GunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.GunaTextBox1.Location = new System.Drawing.Point(368, 72);
-            this.GunaTextBox1.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.GunaTextBox1.Name = "GunaTextBox1";
-            this.GunaTextBox1.PasswordChar = '\0';
-            this.GunaTextBox1.Size = new System.Drawing.Size(220, 35);
-            this.GunaTextBox1.TabIndex = 3;
+            this.textCNPJ.BackColor = System.Drawing.Color.White;
+            this.textCNPJ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textCNPJ.BaseColor = System.Drawing.Color.White;
+            this.textCNPJ.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textCNPJ.BorderSize = 1;
+            this.textCNPJ.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textCNPJ.FocusedBaseColor = System.Drawing.Color.White;
+            this.textCNPJ.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textCNPJ.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.textCNPJ.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textCNPJ.Location = new System.Drawing.Point(368, 72);
+            this.textCNPJ.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textCNPJ.Name = "textCNPJ";
+            this.textCNPJ.PasswordChar = '\0';
+            this.textCNPJ.Size = new System.Drawing.Size(220, 35);
+            this.textCNPJ.TabIndex = 3;
             // 
-            // label3
+            // lblCNPJ
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(365, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 18);
-            this.label3.TabIndex = 131;
-            this.label3.Text = "CNPJ";
+            this.lblCNPJ.AutoSize = true;
+            this.lblCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCNPJ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblCNPJ.Location = new System.Drawing.Point(365, 49);
+            this.lblCNPJ.Name = "lblCNPJ";
+            this.lblCNPJ.Size = new System.Drawing.Size(48, 18);
+            this.lblCNPJ.TabIndex = 131;
+            this.lblCNPJ.Text = "CNPJ";
             // 
-            // GunaTextBox2
+            // textRazaoSocial
             // 
-            this.GunaTextBox2.BackColor = System.Drawing.Color.White;
-            this.GunaTextBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GunaTextBox2.BaseColor = System.Drawing.Color.White;
-            this.GunaTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.GunaTextBox2.BorderSize = 1;
-            this.GunaTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GunaTextBox2.FocusedBaseColor = System.Drawing.Color.White;
-            this.GunaTextBox2.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.GunaTextBox2.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.GunaTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.GunaTextBox2.Location = new System.Drawing.Point(608, 72);
-            this.GunaTextBox2.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.GunaTextBox2.Name = "GunaTextBox2";
-            this.GunaTextBox2.PasswordChar = '\0';
-            this.GunaTextBox2.Size = new System.Drawing.Size(417, 35);
-            this.GunaTextBox2.TabIndex = 4;
+            this.textRazaoSocial.BackColor = System.Drawing.Color.White;
+            this.textRazaoSocial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textRazaoSocial.BaseColor = System.Drawing.Color.White;
+            this.textRazaoSocial.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textRazaoSocial.BorderSize = 1;
+            this.textRazaoSocial.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textRazaoSocial.FocusedBaseColor = System.Drawing.Color.White;
+            this.textRazaoSocial.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textRazaoSocial.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.textRazaoSocial.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textRazaoSocial.Location = new System.Drawing.Point(608, 72);
+            this.textRazaoSocial.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textRazaoSocial.Name = "textRazaoSocial";
+            this.textRazaoSocial.PasswordChar = '\0';
+            this.textRazaoSocial.Size = new System.Drawing.Size(417, 35);
+            this.textRazaoSocial.TabIndex = 4;
             // 
-            // label4
+            // lblRazaoSocial
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(605, 49);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 18);
-            this.label4.TabIndex = 133;
-            this.label4.Text = "RAZÃO SOCIAL";
+            this.lblRazaoSocial.AutoSize = true;
+            this.lblRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRazaoSocial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblRazaoSocial.Location = new System.Drawing.Point(605, 49);
+            this.lblRazaoSocial.Name = "lblRazaoSocial";
+            this.lblRazaoSocial.Size = new System.Drawing.Size(115, 18);
+            this.lblRazaoSocial.TabIndex = 133;
+            this.lblRazaoSocial.Text = "RAZÃO SOCIAL";
             // 
-            // GunaTextBox3
+            // textNomeFantasia
             // 
-            this.GunaTextBox3.BackColor = System.Drawing.Color.White;
-            this.GunaTextBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GunaTextBox3.BaseColor = System.Drawing.Color.White;
-            this.GunaTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.GunaTextBox3.BorderSize = 1;
-            this.GunaTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GunaTextBox3.FocusedBaseColor = System.Drawing.Color.White;
-            this.GunaTextBox3.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.GunaTextBox3.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.GunaTextBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.GunaTextBox3.Location = new System.Drawing.Point(19, 145);
-            this.GunaTextBox3.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.GunaTextBox3.Name = "GunaTextBox3";
-            this.GunaTextBox3.PasswordChar = '\0';
-            this.GunaTextBox3.Size = new System.Drawing.Size(350, 35);
-            this.GunaTextBox3.TabIndex = 5;
+            this.textNomeFantasia.BackColor = System.Drawing.Color.White;
+            this.textNomeFantasia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textNomeFantasia.BaseColor = System.Drawing.Color.White;
+            this.textNomeFantasia.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textNomeFantasia.BorderSize = 1;
+            this.textNomeFantasia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textNomeFantasia.FocusedBaseColor = System.Drawing.Color.White;
+            this.textNomeFantasia.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textNomeFantasia.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.textNomeFantasia.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textNomeFantasia.Location = new System.Drawing.Point(19, 145);
+            this.textNomeFantasia.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textNomeFantasia.Name = "textNomeFantasia";
+            this.textNomeFantasia.PasswordChar = '\0';
+            this.textNomeFantasia.Size = new System.Drawing.Size(350, 35);
+            this.textNomeFantasia.TabIndex = 5;
             // 
-            // label5
+            // lblNomeFantasia
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(16, 122);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 18);
-            this.label5.TabIndex = 135;
-            this.label5.Text = "NOME FANTASIA";
+            this.lblNomeFantasia.AutoSize = true;
+            this.lblNomeFantasia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeFantasia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblNomeFantasia.Location = new System.Drawing.Point(16, 122);
+            this.lblNomeFantasia.Name = "lblNomeFantasia";
+            this.lblNomeFantasia.Size = new System.Drawing.Size(127, 18);
+            this.lblNomeFantasia.TabIndex = 135;
+            this.lblNomeFantasia.Text = "NOME FANTASIA";
             // 
-            // GunaTextBox4
+            // textInscricaoMunicipal
             // 
-            this.GunaTextBox4.BackColor = System.Drawing.Color.White;
-            this.GunaTextBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GunaTextBox4.BaseColor = System.Drawing.Color.White;
-            this.GunaTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.GunaTextBox4.BorderSize = 1;
-            this.GunaTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GunaTextBox4.FocusedBaseColor = System.Drawing.Color.White;
-            this.GunaTextBox4.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.GunaTextBox4.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.GunaTextBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.GunaTextBox4.Location = new System.Drawing.Point(389, 145);
-            this.GunaTextBox4.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.GunaTextBox4.Name = "GunaTextBox4";
-            this.GunaTextBox4.PasswordChar = '\0';
-            this.GunaTextBox4.Size = new System.Drawing.Size(250, 35);
-            this.GunaTextBox4.TabIndex = 6;
+            this.textInscricaoMunicipal.BackColor = System.Drawing.Color.White;
+            this.textInscricaoMunicipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textInscricaoMunicipal.BaseColor = System.Drawing.Color.White;
+            this.textInscricaoMunicipal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textInscricaoMunicipal.BorderSize = 1;
+            this.textInscricaoMunicipal.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textInscricaoMunicipal.FocusedBaseColor = System.Drawing.Color.White;
+            this.textInscricaoMunicipal.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textInscricaoMunicipal.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.textInscricaoMunicipal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textInscricaoMunicipal.Location = new System.Drawing.Point(389, 145);
+            this.textInscricaoMunicipal.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textInscricaoMunicipal.Name = "textInscricaoMunicipal";
+            this.textInscricaoMunicipal.PasswordChar = '\0';
+            this.textInscricaoMunicipal.Size = new System.Drawing.Size(250, 35);
+            this.textInscricaoMunicipal.TabIndex = 6;
             // 
-            // label6
+            // lblInscricaoMunicipal
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(386, 122);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 18);
-            this.label6.TabIndex = 137;
-            this.label6.Text = "INSCRIÇÃO MUNICIPAL";
+            this.lblInscricaoMunicipal.AutoSize = true;
+            this.lblInscricaoMunicipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInscricaoMunicipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblInscricaoMunicipal.Location = new System.Drawing.Point(386, 122);
+            this.lblInscricaoMunicipal.Name = "lblInscricaoMunicipal";
+            this.lblInscricaoMunicipal.Size = new System.Drawing.Size(172, 18);
+            this.lblInscricaoMunicipal.TabIndex = 137;
+            this.lblInscricaoMunicipal.Text = "INSCRIÇÃO MUNICIPAL";
             // 
-            // GunaTextBox5
+            // textInscricaoEstadual
             // 
-            this.GunaTextBox5.BackColor = System.Drawing.Color.White;
-            this.GunaTextBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GunaTextBox5.BaseColor = System.Drawing.Color.White;
-            this.GunaTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.GunaTextBox5.BorderSize = 1;
-            this.GunaTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GunaTextBox5.FocusedBaseColor = System.Drawing.Color.White;
-            this.GunaTextBox5.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.GunaTextBox5.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.GunaTextBox5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.GunaTextBox5.Location = new System.Drawing.Point(659, 145);
-            this.GunaTextBox5.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.GunaTextBox5.Name = "GunaTextBox5";
-            this.GunaTextBox5.PasswordChar = '\0';
-            this.GunaTextBox5.Size = new System.Drawing.Size(242, 35);
-            this.GunaTextBox5.TabIndex = 7;
+            this.textInscricaoEstadual.BackColor = System.Drawing.Color.White;
+            this.textInscricaoEstadual.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textInscricaoEstadual.BaseColor = System.Drawing.Color.White;
+            this.textInscricaoEstadual.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textInscricaoEstadual.BorderSize = 1;
+            this.textInscricaoEstadual.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textInscricaoEstadual.FocusedBaseColor = System.Drawing.Color.White;
+            this.textInscricaoEstadual.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textInscricaoEstadual.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.textInscricaoEstadual.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textInscricaoEstadual.Location = new System.Drawing.Point(659, 145);
+            this.textInscricaoEstadual.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textInscricaoEstadual.Name = "textInscricaoEstadual";
+            this.textInscricaoEstadual.PasswordChar = '\0';
+            this.textInscricaoEstadual.Size = new System.Drawing.Size(242, 35);
+            this.textInscricaoEstadual.TabIndex = 7;
             // 
-            // label7
+            // lblInscricaoEstadual
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(656, 122);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(170, 18);
-            this.label7.TabIndex = 139;
-            this.label7.Text = "INSCRIÇÃO ESTADUAL";
+            this.lblInscricaoEstadual.AutoSize = true;
+            this.lblInscricaoEstadual.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInscricaoEstadual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblInscricaoEstadual.Location = new System.Drawing.Point(656, 122);
+            this.lblInscricaoEstadual.Name = "lblInscricaoEstadual";
+            this.lblInscricaoEstadual.Size = new System.Drawing.Size(170, 18);
+            this.lblInscricaoEstadual.TabIndex = 139;
+            this.lblInscricaoEstadual.Text = "INSCRIÇÃO ESTADUAL";
             // 
-            // checkBox1
+            // checkIsento
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.checkBox1.Location = new System.Drawing.Point(914, 151);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(79, 22);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "ISENTO";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkIsento.AutoSize = true;
+            this.checkIsento.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.checkIsento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkIsento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.checkIsento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.checkIsento.Location = new System.Drawing.Point(914, 151);
+            this.checkIsento.Name = "checkIsento";
+            this.checkIsento.Size = new System.Drawing.Size(79, 22);
+            this.checkIsento.TabIndex = 8;
+            this.checkIsento.Text = "ISENTO";
+            this.checkIsento.UseVisualStyleBackColor = true;
+            this.checkIsento.CheckedChanged += new System.EventHandler(this.onChangeIsento);
             // 
             // GunaTextBox13
             // 
@@ -480,23 +483,23 @@
             this.label23.TabIndex = 165;
             this.label23.Text = "RAMAL";
             // 
-            // richTextBox1
+            // textObservacoes
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.richTextBox1.Location = new System.Drawing.Point(1, 1);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.richTextBox1.MaxLength = 1000;
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1000, 118);
-            this.richTextBox1.TabIndex = 23;
-            this.richTextBox1.Text = "";
+            this.textObservacoes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textObservacoes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textObservacoes.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textObservacoes.Location = new System.Drawing.Point(1, 1);
+            this.textObservacoes.Margin = new System.Windows.Forms.Padding(0);
+            this.textObservacoes.MaxLength = 1000;
+            this.textObservacoes.Name = "textObservacoes";
+            this.textObservacoes.Size = new System.Drawing.Size(1000, 118);
+            this.textObservacoes.TabIndex = 23;
+            this.textObservacoes.Text = "";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.panel3.Controls.Add(this.richTextBox1);
+            this.panel3.Controls.Add(this.textObservacoes);
             this.panel3.Location = new System.Drawing.Point(23, 477);
             this.panel3.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.panel3.Name = "panel3";
@@ -774,12 +777,37 @@
             this.label16.TabIndex = 180;
             this.label16.Text = "INFORMAÇÕES ADICIONAIS";
             // 
+            // btnEnviar
+            // 
+            this.btnEnviar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(186)))), ((int)(((byte)(69)))));
+            this.btnEnviar.FlatAppearance.BorderSize = 0;
+            this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnEnviar.Font = new System.Drawing.Font("SansSerif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.ForeColor = System.Drawing.Color.White;
+            this.btnEnviar.IconChar = FontAwesome.Sharp.IconChar.PaperPlane;
+            this.btnEnviar.IconColor = System.Drawing.Color.White;
+            this.btnEnviar.IconSize = 16;
+            this.btnEnviar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEnviar.Location = new System.Drawing.Point(895, 706);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(10);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Rotation = 0D;
+            this.btnEnviar.Size = new System.Drawing.Size(130, 35);
+            this.btnEnviar.TabIndex = 189;
+            this.btnEnviar.Text = "Salvar";
+            this.btnEnviar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEnviar.UseVisualStyleBackColor = false;
+            // 
             // FormClientes
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1044, 626);
+            this.ClientSize = new System.Drawing.Size(1044, 760);
             this.ControlBox = false;
+            this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.buttonBuscarCEP);
             this.Controls.Add(this.combEstado);
             this.Controls.Add(this.textCidade);
@@ -809,21 +837,21 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.GunaTextBox13);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.GunaTextBox5);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.GunaTextBox4);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.GunaTextBox3);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.GunaTextBox2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.GunaTextBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.gunaComboBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.gunaComboBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.checkIsento);
+            this.Controls.Add(this.textInscricaoEstadual);
+            this.Controls.Add(this.lblInscricaoEstadual);
+            this.Controls.Add(this.textInscricaoMunicipal);
+            this.Controls.Add(this.lblInscricaoMunicipal);
+            this.Controls.Add(this.textNomeFantasia);
+            this.Controls.Add(this.lblNomeFantasia);
+            this.Controls.Add(this.textRazaoSocial);
+            this.Controls.Add(this.lblRazaoSocial);
+            this.Controls.Add(this.textCNPJ);
+            this.Controls.Add(this.lblCNPJ);
+            this.Controls.Add(this.combTipoPessoa);
+            this.Controls.Add(this.lblTipoPessoa);
+            this.Controls.Add(this.combTipoCadastro);
+            this.Controls.Add(this.lblTipoCadastro);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -839,21 +867,21 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label10;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox1;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox2;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI.WinForms.GunaTextBox GunaTextBox1;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI.WinForms.GunaTextBox GunaTextBox2;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI.WinForms.GunaTextBox GunaTextBox3;
-        private System.Windows.Forms.Label label5;
-        private Guna.UI.WinForms.GunaTextBox GunaTextBox4;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI.WinForms.GunaTextBox GunaTextBox5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private Guna.UI.WinForms.GunaComboBox combTipoCadastro;
+        private System.Windows.Forms.Label lblTipoCadastro;
+        private Guna.UI.WinForms.GunaComboBox combTipoPessoa;
+        private System.Windows.Forms.Label lblTipoPessoa;
+        private Guna.UI.WinForms.GunaTextBox textCNPJ;
+        private System.Windows.Forms.Label lblCNPJ;
+        private Guna.UI.WinForms.GunaTextBox textRazaoSocial;
+        private System.Windows.Forms.Label lblRazaoSocial;
+        private Guna.UI.WinForms.GunaTextBox textNomeFantasia;
+        private System.Windows.Forms.Label lblNomeFantasia;
+        private Guna.UI.WinForms.GunaTextBox textInscricaoMunicipal;
+        private System.Windows.Forms.Label lblInscricaoMunicipal;
+        private Guna.UI.WinForms.GunaTextBox textInscricaoEstadual;
+        private System.Windows.Forms.Label lblInscricaoEstadual;
+        private System.Windows.Forms.CheckBox checkIsento;
         private Guna.UI.WinForms.GunaTextBox GunaTextBox13;
         private System.Windows.Forms.Label label17;
         private Guna.UI.WinForms.GunaTextBox GunaTextBox14;
@@ -864,7 +892,7 @@
         private System.Windows.Forms.Label label20;
         private Guna.UI.WinForms.GunaTextBox GunaTextBox17;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox textObservacoes;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label21;
         private FontAwesome.Sharp.IconButton buttonBuscarCEP;
@@ -884,5 +912,6 @@
         private System.Windows.Forms.Label lblCEP;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label16;
+        private FontAwesome.Sharp.IconButton btnEnviar;
     }
 }

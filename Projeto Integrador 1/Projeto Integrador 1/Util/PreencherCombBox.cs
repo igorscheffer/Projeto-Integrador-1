@@ -179,5 +179,24 @@ namespace Projeto_Integrador_1.Util
 
             return cargos;
         }
+
+        public List<dynamic> getClienteTipoCadastro() {
+            List<dynamic> tipoCadastro = new List<dynamic> {
+                new { Value = "C", Text = "Cliente" },
+                new { Value = "F", Text = "Fornecedor" },
+                new { Value = "A", Text = "Ambos" }
+            };
+
+            return tipoCadastro;
+        }
+
+        public List<dynamic> getClienteTipoPessoa() {
+            List<dynamic> tipoPessoa = new List<dynamic> {
+                new { Value = "PF", Text = "Pessoa Fisica" },
+                new { Value = "PJ", Text = "Pessoa Juridica" }
+            };
+
+            return tipoPessoa;
+        }
     }
 }
