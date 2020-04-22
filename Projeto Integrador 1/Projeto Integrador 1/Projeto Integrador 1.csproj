@@ -97,6 +97,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection\Clientes.cs" />
     <Compile Include="Connection\Config.cs" />
     <Compile Include="Connection\Motoristas.cs" />
     <Compile Include="Connection\Veiculos.cs" />

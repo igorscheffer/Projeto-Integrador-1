@@ -45,15 +45,15 @@
             this.textInscricaoEstadual = new Guna.UI.WinForms.GunaTextBox();
             this.lblInscricaoEstadual = new System.Windows.Forms.Label();
             this.checkIsento = new System.Windows.Forms.CheckBox();
-            this.GunaTextBox13 = new Guna.UI.WinForms.GunaTextBox();
+            this.textNome = new Guna.UI.WinForms.GunaTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.GunaTextBox14 = new Guna.UI.WinForms.GunaTextBox();
+            this.textTelefone = new Guna.UI.WinForms.GunaTextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.GunaTextBox15 = new Guna.UI.WinForms.GunaTextBox();
+            this.textCelular = new Guna.UI.WinForms.GunaTextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.GunaTextBox16 = new Guna.UI.WinForms.GunaTextBox();
+            this.textEmail = new Guna.UI.WinForms.GunaTextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.GunaTextBox17 = new Guna.UI.WinForms.GunaTextBox();
+            this.textRamal = new Guna.UI.WinForms.GunaTextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.textObservacoes = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -182,6 +182,7 @@
             this.textCNPJ.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textCNPJ.Location = new System.Drawing.Point(368, 72);
             this.textCNPJ.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textCNPJ.MaxLength = 20;
             this.textCNPJ.Name = "textCNPJ";
             this.textCNPJ.PasswordChar = '\0';
             this.textCNPJ.Size = new System.Drawing.Size(220, 35);
@@ -212,6 +213,7 @@
             this.textRazaoSocial.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textRazaoSocial.Location = new System.Drawing.Point(608, 72);
             this.textRazaoSocial.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textRazaoSocial.MaxLength = 150;
             this.textRazaoSocial.Name = "textRazaoSocial";
             this.textRazaoSocial.PasswordChar = '\0';
             this.textRazaoSocial.Size = new System.Drawing.Size(417, 35);
@@ -242,6 +244,7 @@
             this.textNomeFantasia.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textNomeFantasia.Location = new System.Drawing.Point(19, 145);
             this.textNomeFantasia.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textNomeFantasia.MaxLength = 150;
             this.textNomeFantasia.Name = "textNomeFantasia";
             this.textNomeFantasia.PasswordChar = '\0';
             this.textNomeFantasia.Size = new System.Drawing.Size(350, 35);
@@ -272,6 +275,7 @@
             this.textInscricaoMunicipal.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textInscricaoMunicipal.Location = new System.Drawing.Point(389, 145);
             this.textInscricaoMunicipal.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textInscricaoMunicipal.MaxLength = 12;
             this.textInscricaoMunicipal.Name = "textInscricaoMunicipal";
             this.textInscricaoMunicipal.PasswordChar = '\0';
             this.textInscricaoMunicipal.Size = new System.Drawing.Size(250, 35);
@@ -302,6 +306,7 @@
             this.textInscricaoEstadual.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textInscricaoEstadual.Location = new System.Drawing.Point(659, 145);
             this.textInscricaoEstadual.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textInscricaoEstadual.MaxLength = 12;
             this.textInscricaoEstadual.Name = "textInscricaoEstadual";
             this.textInscricaoEstadual.PasswordChar = '\0';
             this.textInscricaoEstadual.Size = new System.Drawing.Size(242, 35);
@@ -333,24 +338,25 @@
             this.checkIsento.UseVisualStyleBackColor = true;
             this.checkIsento.CheckedChanged += new System.EventHandler(this.onChangeIsento);
             // 
-            // GunaTextBox13
+            // textNome
             // 
-            this.GunaTextBox13.BackColor = System.Drawing.Color.White;
-            this.GunaTextBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GunaTextBox13.BaseColor = System.Drawing.Color.White;
-            this.GunaTextBox13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.GunaTextBox13.BorderSize = 1;
-            this.GunaTextBox13.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GunaTextBox13.FocusedBaseColor = System.Drawing.Color.White;
-            this.GunaTextBox13.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.GunaTextBox13.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.GunaTextBox13.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.GunaTextBox13.Location = new System.Drawing.Point(22, 404);
-            this.GunaTextBox13.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.GunaTextBox13.Name = "GunaTextBox13";
-            this.GunaTextBox13.PasswordChar = '\0';
-            this.GunaTextBox13.Size = new System.Drawing.Size(250, 35);
-            this.GunaTextBox13.TabIndex = 18;
+            this.textNome.BackColor = System.Drawing.Color.White;
+            this.textNome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textNome.BaseColor = System.Drawing.Color.White;
+            this.textNome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textNome.BorderSize = 1;
+            this.textNome.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textNome.FocusedBaseColor = System.Drawing.Color.White;
+            this.textNome.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textNome.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.textNome.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textNome.Location = new System.Drawing.Point(22, 404);
+            this.textNome.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textNome.MaxLength = 100;
+            this.textNome.Name = "textNome";
+            this.textNome.PasswordChar = '\0';
+            this.textNome.Size = new System.Drawing.Size(250, 35);
+            this.textNome.TabIndex = 18;
             // 
             // label17
             // 
@@ -359,28 +365,29 @@
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label17.Location = new System.Drawing.Point(19, 381);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(54, 18);
+            this.label17.Size = new System.Drawing.Size(131, 18);
             this.label17.TabIndex = 157;
-            this.label17.Text = "NOME";
+            this.label17.Text = "CONTATO NOME";
             // 
-            // GunaTextBox14
+            // textTelefone
             // 
-            this.GunaTextBox14.BackColor = System.Drawing.Color.White;
-            this.GunaTextBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GunaTextBox14.BaseColor = System.Drawing.Color.White;
-            this.GunaTextBox14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.GunaTextBox14.BorderSize = 1;
-            this.GunaTextBox14.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GunaTextBox14.FocusedBaseColor = System.Drawing.Color.White;
-            this.GunaTextBox14.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.GunaTextBox14.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.GunaTextBox14.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.GunaTextBox14.Location = new System.Drawing.Point(292, 404);
-            this.GunaTextBox14.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.GunaTextBox14.Name = "GunaTextBox14";
-            this.GunaTextBox14.PasswordChar = '\0';
-            this.GunaTextBox14.Size = new System.Drawing.Size(150, 35);
-            this.GunaTextBox14.TabIndex = 19;
+            this.textTelefone.BackColor = System.Drawing.Color.White;
+            this.textTelefone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textTelefone.BaseColor = System.Drawing.Color.White;
+            this.textTelefone.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textTelefone.BorderSize = 1;
+            this.textTelefone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textTelefone.FocusedBaseColor = System.Drawing.Color.White;
+            this.textTelefone.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textTelefone.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.textTelefone.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textTelefone.Location = new System.Drawing.Point(292, 404);
+            this.textTelefone.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textTelefone.MaxLength = 15;
+            this.textTelefone.Name = "textTelefone";
+            this.textTelefone.PasswordChar = '\0';
+            this.textTelefone.Size = new System.Drawing.Size(150, 35);
+            this.textTelefone.TabIndex = 19;
             // 
             // label18
             // 
@@ -393,24 +400,25 @@
             this.label18.TabIndex = 159;
             this.label18.Text = "TELEFONE";
             // 
-            // GunaTextBox15
+            // textCelular
             // 
-            this.GunaTextBox15.BackColor = System.Drawing.Color.White;
-            this.GunaTextBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GunaTextBox15.BaseColor = System.Drawing.Color.White;
-            this.GunaTextBox15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.GunaTextBox15.BorderSize = 1;
-            this.GunaTextBox15.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GunaTextBox15.FocusedBaseColor = System.Drawing.Color.White;
-            this.GunaTextBox15.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.GunaTextBox15.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.GunaTextBox15.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.GunaTextBox15.Location = new System.Drawing.Point(562, 404);
-            this.GunaTextBox15.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.GunaTextBox15.Name = "GunaTextBox15";
-            this.GunaTextBox15.PasswordChar = '\0';
-            this.GunaTextBox15.Size = new System.Drawing.Size(150, 35);
-            this.GunaTextBox15.TabIndex = 21;
+            this.textCelular.BackColor = System.Drawing.Color.White;
+            this.textCelular.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textCelular.BaseColor = System.Drawing.Color.White;
+            this.textCelular.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textCelular.BorderSize = 1;
+            this.textCelular.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textCelular.FocusedBaseColor = System.Drawing.Color.White;
+            this.textCelular.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textCelular.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.textCelular.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textCelular.Location = new System.Drawing.Point(562, 404);
+            this.textCelular.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textCelular.MaxLength = 15;
+            this.textCelular.Name = "textCelular";
+            this.textCelular.PasswordChar = '\0';
+            this.textCelular.Size = new System.Drawing.Size(150, 35);
+            this.textCelular.TabIndex = 21;
             // 
             // label19
             // 
@@ -423,24 +431,25 @@
             this.label19.TabIndex = 161;
             this.label19.Text = "CELULAR";
             // 
-            // GunaTextBox16
+            // textEmail
             // 
-            this.GunaTextBox16.BackColor = System.Drawing.Color.White;
-            this.GunaTextBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GunaTextBox16.BaseColor = System.Drawing.Color.White;
-            this.GunaTextBox16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.GunaTextBox16.BorderSize = 1;
-            this.GunaTextBox16.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GunaTextBox16.FocusedBaseColor = System.Drawing.Color.White;
-            this.GunaTextBox16.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.GunaTextBox16.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.GunaTextBox16.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.GunaTextBox16.Location = new System.Drawing.Point(732, 404);
-            this.GunaTextBox16.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.GunaTextBox16.Name = "GunaTextBox16";
-            this.GunaTextBox16.PasswordChar = '\0';
-            this.GunaTextBox16.Size = new System.Drawing.Size(293, 35);
-            this.GunaTextBox16.TabIndex = 22;
+            this.textEmail.BackColor = System.Drawing.Color.White;
+            this.textEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textEmail.BaseColor = System.Drawing.Color.White;
+            this.textEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textEmail.BorderSize = 1;
+            this.textEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textEmail.FocusedBaseColor = System.Drawing.Color.White;
+            this.textEmail.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textEmail.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.textEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textEmail.Location = new System.Drawing.Point(732, 404);
+            this.textEmail.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textEmail.MaxLength = 100;
+            this.textEmail.Name = "textEmail";
+            this.textEmail.PasswordChar = '\0';
+            this.textEmail.Size = new System.Drawing.Size(293, 35);
+            this.textEmail.TabIndex = 22;
             // 
             // label20
             // 
@@ -453,24 +462,25 @@
             this.label20.TabIndex = 163;
             this.label20.Text = "E-MAIL";
             // 
-            // GunaTextBox17
+            // textRamal
             // 
-            this.GunaTextBox17.BackColor = System.Drawing.Color.White;
-            this.GunaTextBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GunaTextBox17.BaseColor = System.Drawing.Color.White;
-            this.GunaTextBox17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.GunaTextBox17.BorderSize = 1;
-            this.GunaTextBox17.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GunaTextBox17.FocusedBaseColor = System.Drawing.Color.White;
-            this.GunaTextBox17.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.GunaTextBox17.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.GunaTextBox17.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.GunaTextBox17.Location = new System.Drawing.Point(462, 404);
-            this.GunaTextBox17.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.GunaTextBox17.Name = "GunaTextBox17";
-            this.GunaTextBox17.PasswordChar = '\0';
-            this.GunaTextBox17.Size = new System.Drawing.Size(80, 35);
-            this.GunaTextBox17.TabIndex = 20;
+            this.textRamal.BackColor = System.Drawing.Color.White;
+            this.textRamal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textRamal.BaseColor = System.Drawing.Color.White;
+            this.textRamal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textRamal.BorderSize = 1;
+            this.textRamal.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textRamal.FocusedBaseColor = System.Drawing.Color.White;
+            this.textRamal.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textRamal.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.textRamal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textRamal.Location = new System.Drawing.Point(462, 404);
+            this.textRamal.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textRamal.MaxLength = 10;
+            this.textRamal.Name = "textRamal";
+            this.textRamal.PasswordChar = '\0';
+            this.textRamal.Size = new System.Drawing.Size(80, 35);
+            this.textRamal.TabIndex = 20;
             // 
             // label23
             // 
@@ -800,6 +810,7 @@
             this.btnEnviar.Text = "Salvar";
             this.btnEnviar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.onEnviar);
             // 
             // FormClientes
             // 
@@ -827,15 +838,15 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.GunaTextBox17);
+            this.Controls.Add(this.textRamal);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.GunaTextBox16);
+            this.Controls.Add(this.textEmail);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.GunaTextBox15);
+            this.Controls.Add(this.textCelular);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.GunaTextBox14);
+            this.Controls.Add(this.textTelefone);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.GunaTextBox13);
+            this.Controls.Add(this.textNome);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.checkIsento);
             this.Controls.Add(this.textInscricaoEstadual);
@@ -882,15 +893,15 @@
         private Guna.UI.WinForms.GunaTextBox textInscricaoEstadual;
         private System.Windows.Forms.Label lblInscricaoEstadual;
         private System.Windows.Forms.CheckBox checkIsento;
-        private Guna.UI.WinForms.GunaTextBox GunaTextBox13;
+        private Guna.UI.WinForms.GunaTextBox textNome;
         private System.Windows.Forms.Label label17;
-        private Guna.UI.WinForms.GunaTextBox GunaTextBox14;
+        private Guna.UI.WinForms.GunaTextBox textTelefone;
         private System.Windows.Forms.Label label18;
-        private Guna.UI.WinForms.GunaTextBox GunaTextBox15;
+        private Guna.UI.WinForms.GunaTextBox textCelular;
         private System.Windows.Forms.Label label19;
-        private Guna.UI.WinForms.GunaTextBox GunaTextBox16;
+        private Guna.UI.WinForms.GunaTextBox textEmail;
         private System.Windows.Forms.Label label20;
-        private Guna.UI.WinForms.GunaTextBox GunaTextBox17;
+        private Guna.UI.WinForms.GunaTextBox textRamal;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.RichTextBox textObservacoes;
         private System.Windows.Forms.Panel panel3;

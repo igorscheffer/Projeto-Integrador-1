@@ -85,7 +85,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 Validate.addRule(textCNH, "CNH", "numeric|max:12");
                 Validate.addRule(timeVencimentoCNH, "Vencimento", "date:dd/MM/yyyy");
                 Validate.addRule(combCategoriaCNH, "Categoria", "min:1|max:2");
-                Validate.addRule(combSexo, "Sexo", "required|in:h,m|exact:1");
+                Validate.addRule(combSexo, "Sexo", "required|in:h,m");
                 Validate.addRule(combEstadoCivil, "Estado Civil", "required|numeric|exact:1");
                 Validate.addRule(textCEP, "CEP", @"regExp:^(\d{5})(\-\d{3})$");
                 Validate.addRule(textEndereco, "Endereco", "max:100");
