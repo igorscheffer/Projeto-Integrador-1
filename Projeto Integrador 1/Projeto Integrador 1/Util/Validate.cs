@@ -263,8 +263,8 @@ namespace Projeto_Integrador_1.Util
 
                 foreach (var divideRule in rules) {
                     if (divideRule.Contains(":")){
-                        string[] rule = divideRule.Split(':');
-
+                        string[] rule = divideRule.Split(new char[] {':'}, 2, StringSplitOptions.None);
+                        
                         switch (rule[0]) {
                             case "min":
                                 this.validateMin(this.Rules[i][0], this.Rules[i][1], Int16.Parse(rule[1]), this.Rules[i][2]);
