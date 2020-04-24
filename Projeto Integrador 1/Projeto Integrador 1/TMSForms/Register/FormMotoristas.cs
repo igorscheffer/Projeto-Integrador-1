@@ -26,32 +26,26 @@ namespace Projeto_Integrador_1.TMSForms.Register
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
             combStatus.DataSource = ValuesComb.getMotoristaStatus();
-            combStatus.SelectedValue = -1;
 
             combCategoriaCNH.DisplayMember = "Text";
             combCategoriaCNH.ValueMember = "Value";
             combCategoriaCNH.DataSource = ValuesComb.getCategoriasCNH();
-            combCategoriaCNH.SelectedValue = -1;
 
             combSexo.DisplayMember = "Text";
             combSexo.ValueMember = "Value";
             combSexo.DataSource = ValuesComb.getSexo();
-            combSexo.SelectedValue = -1;
 
             combEstadoCivil.DisplayMember = "Text";
             combEstadoCivil.ValueMember = "Value";
             combEstadoCivil.DataSource = ValuesComb.getEstadoCivil();
-            combEstadoCivil.SelectedValue = -1;
 
             combEstado.DisplayMember = "Text";
             combEstado.ValueMember = "Value";
             combEstado.DataSource = ValuesComb.getEstados();
-            combEstado.SelectedValue = -1;
 
             combCargo.DisplayMember = "Text";
             combCargo.ValueMember = "Value";
             combCargo.DataSource = ValuesComb.getMotoristaCargos();
-            combCargo.SelectedValue = -1;
 
             timeVencimentoCNH.ResetText();
         }

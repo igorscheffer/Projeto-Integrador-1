@@ -190,6 +190,7 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Rotation = 0D;
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // FormVeiculos
             // 

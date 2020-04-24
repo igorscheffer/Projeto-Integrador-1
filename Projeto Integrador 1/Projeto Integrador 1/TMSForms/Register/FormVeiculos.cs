@@ -23,42 +23,34 @@ namespace Projeto_Integrador_1.TMSForms.Register
             combCategoria.DisplayMember = "Text";
             combCategoria.ValueMember = "Value";
             combCategoria.DataSource = ValuesComb.getVeiculosCategorias();
-            combCategoria.SelectedValue = -1;
 
             combMarca.DisplayMember = "Text";
             combMarca.ValueMember = "Value";
             combMarca.DataSource = ValuesComb.getVeiculosMarcas();
-            combMarca.SelectedValue = -1;
 
             combCarroceria.DisplayMember = "Text";
             combCarroceria.ValueMember = "Value";
             combCarroceria.DataSource = ValuesComb.getVeiculosCarrocerias();
-            combCarroceria.SelectedValue = -1;
 
             combCor.DisplayMember = "Text";
             combCor.ValueMember = "Value";
             combCor.DataSource = ValuesComb.getCores();
-            combCor.SelectedValue = -1;
 
             combCombustivel.DisplayMember = "Text";
             combCombustivel.ValueMember = "Value";
             combCombustivel.DataSource = ValuesComb.getCombustiveis();
-            combCombustivel.SelectedValue = -1;
 
             combAnoFabricacao.DisplayMember = "Text";
             combAnoFabricacao.ValueMember = "Value";
             combAnoFabricacao.DataSource = ValuesComb.getAnos();
-            combAnoFabricacao.SelectedValue = -1;
 
             combAnoModelo.DisplayMember = "Text";
             combAnoModelo.ValueMember = "Value";
             combAnoModelo.DataSource = ValuesComb.getAnos();
-            combAnoModelo.SelectedValue = -1;
 
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
             combStatus.DataSource = ValuesComb.getVeiculosStatus();
-            combStatus.SelectedValue = -1;
         }
 
         private void onEnviar(object sender, EventArgs e) {

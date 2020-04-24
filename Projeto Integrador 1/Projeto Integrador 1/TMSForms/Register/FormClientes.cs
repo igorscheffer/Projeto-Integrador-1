@@ -25,17 +25,14 @@ namespace Projeto_Integrador_1.TMSForms.Register
             combTipoCadastro.DisplayMember = "Text";
             combTipoCadastro.ValueMember = "Value";
             combTipoCadastro.DataSource = ValuesComb.getClienteTipoCadastro();
-            combTipoCadastro.SelectedValue = "";
 
             combTipoPessoa.DisplayMember = "Text";
             combTipoPessoa.ValueMember = "Value";
             combTipoPessoa.DataSource = ValuesComb.getClienteTipoPessoa();
-            combTipoPessoa.SelectedValue = "";
 
             combEstado.DisplayMember = "Text";
             combEstado.ValueMember = "Value";
             combEstado.DataSource = ValuesComb.getEstados();
-            combEstado.SelectedValue = "";
         }
 
         private void onBuscarCEP(object sender, EventArgs e)

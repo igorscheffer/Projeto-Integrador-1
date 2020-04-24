@@ -41,34 +41,28 @@ namespace Projeto_Integrador_1.TMSForms.Register
             combTomador.DisplayMember = "Text";
             combTomador.ValueMember = "Value";
             combTomador.DataSource = ValuesComb.getViagemTomador();
-            combTomador.SelectedValue = -1;
 
             combTipoViagem.DisplayMember = "Text";
             combTipoViagem.ValueMember = "Value";
             combTipoViagem.DataSource = ValuesComb.getViagemTipo();
-            combTipoViagem.SelectedValue = -1;
 
             combSaidaUF.DisplayMember = "Text";
             combSaidaUF.ValueMember = "Value";
             combSaidaUF.DataSource = ValuesComb.getEstados();
-            combSaidaUF.SelectedValue = "";
 
             combDestinoUF.DisplayMember = "Text";
             combDestinoUF.ValueMember = "Value";
             combDestinoUF.DataSource = ValuesComb.getEstados();
-            combDestinoUF.SelectedValue = "";
 
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
             combStatus.DataSource = ValuesComb.getViagemStatus();
-            combStatus.SelectedValue = -1;
 
             List<dynamic> combustiveis = ValuesComb.getCombustiveis();
 
             combAbastecimentoCombustivel.DisplayMember = "Text";
             combAbastecimentoCombustivel.ValueMember = "Value";
             combAbastecimentoCombustivel.DataSource = new List<dynamic>(combustiveis);
-            combAbastecimentoCombustivel.SelectedValue = -1;
 
             combGridAbastecimentoCombustivel.DisplayMember = "Text";
             combGridAbastecimentoCombustivel.ValueMember = "Value";

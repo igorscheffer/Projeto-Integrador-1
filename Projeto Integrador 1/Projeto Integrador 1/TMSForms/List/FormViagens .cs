@@ -31,7 +31,7 @@ namespace Projeto_Integrador_1.TMSForms.List
 
             foreach (dynamic viagem in viagens.Results)
             {
-                string status = ListaStatus.Find(find => Convert.ToString(find.Value) == Convert.ToInt32(viagem.Status)).Text;
+                string status = ListaStatus.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(viagem.Status)).Text;
                 gridViagens.Rows.Add(
                     viagem.CodigoInterno,
                     viagem.DataSaida,
