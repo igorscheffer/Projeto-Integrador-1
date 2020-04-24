@@ -202,7 +202,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 }
                 else
                 {
-                    Validate.ErrorMessageBox(); ;
+                    Validate.ErrorMessageBox();
                 }
             }
             catch (Exception ex)

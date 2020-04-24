@@ -104,6 +104,7 @@
   <ItemGroup>
     <Compile Include="Connection\Clientes.cs" />
     <Compile Include="Connection\Config.cs" />
+    <Compile Include="Connection\Manutencoes.cs" />
     <Compile Include="Connection\Motoristas.cs" />
     <Compile Include="Connection\Veiculos.cs" />
     <Compile Include="Connection\Viagens.cs" />
@@ -137,6 +138,12 @@
     </Compile>
     <Compile Include="TMSForms\List\FormClientes.Designer.cs">
       <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TMSForms\List\FormManutencoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMSForms\List\FormManutencoes.Designer.cs">
+      <DependentUpon>FormManutencoes.cs</DependentUpon>
     </Compile>
     <Compile Include="TMSForms\List\FormViagens .cs">
       <SubType>Form</SubType>
@@ -201,6 +208,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\List\FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\List\FormManutencoes.aa.resx">
+      <DependentUpon>FormManutencoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\List\FormManutencoes.resx">
+      <DependentUpon>FormManutencoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\List\FormViagens .aa.resx">
       <DependentUpon>FormViagens .cs</DependentUpon>

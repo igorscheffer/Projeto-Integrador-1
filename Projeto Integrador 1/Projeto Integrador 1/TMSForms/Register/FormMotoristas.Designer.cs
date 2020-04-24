@@ -74,6 +74,18 @@
             this.lblCargo = new System.Windows.Forms.Label();
             this.buttonBuscarCEP = new FontAwesome.Sharp.IconButton();
             this.btnEnviar = new FontAwesome.Sharp.IconButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // textNome
@@ -680,12 +692,12 @@
             this.textEmail.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textEmail.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textEmail.Location = new System.Drawing.Point(640, 403);
+            this.textEmail.Location = new System.Drawing.Point(665, 403);
             this.textEmail.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textEmail.MaxLength = 100;
             this.textEmail.Name = "textEmail";
             this.textEmail.PasswordChar = '\0';
-            this.textEmail.Size = new System.Drawing.Size(380, 35);
+            this.textEmail.Size = new System.Drawing.Size(355, 35);
             this.textEmail.TabIndex = 21;
             // 
             // lblEmail
@@ -694,7 +706,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEmail.Location = new System.Drawing.Point(640, 380);
+            this.lblEmail.Location = new System.Drawing.Point(629, 380);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(50, 18);
             this.lblEmail.TabIndex = 177;
@@ -713,13 +725,14 @@
             this.textCelular.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textCelular.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textCelular.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCelular.Location = new System.Drawing.Point(440, 403);
+            this.textCelular.Location = new System.Drawing.Point(470, 403);
             this.textCelular.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textCelular.MaxLength = 15;
             this.textCelular.Name = "textCelular";
             this.textCelular.PasswordChar = '\0';
-            this.textCelular.Size = new System.Drawing.Size(180, 35);
+            this.textCelular.Size = new System.Drawing.Size(140, 35);
             this.textCelular.TabIndex = 20;
+            this.textCelular.TextChanged += new System.EventHandler(this.textCelular_TextChanged);
             // 
             // lblCelular
             // 
@@ -727,7 +740,7 @@
             this.lblCelular.AutoSize = true;
             this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCelular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCelular.Location = new System.Drawing.Point(440, 380);
+            this.lblCelular.Location = new System.Drawing.Point(435, 380);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(54, 18);
             this.lblCelular.TabIndex = 175;
@@ -746,12 +759,12 @@
             this.textTelefone.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textTelefone.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textTelefone.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textTelefone.Location = new System.Drawing.Point(240, 403);
+            this.textTelefone.Location = new System.Drawing.Point(275, 403);
             this.textTelefone.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textTelefone.MaxLength = 15;
             this.textTelefone.Name = "textTelefone";
             this.textTelefone.PasswordChar = '\0';
-            this.textTelefone.Size = new System.Drawing.Size(180, 35);
+            this.textTelefone.Size = new System.Drawing.Size(140, 35);
             this.textTelefone.TabIndex = 19;
             // 
             // lblTelefone
@@ -846,11 +859,90 @@
             this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.onEnviar);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel4.Controls.Add(this.iconPictureBox1);
+            this.panel4.Location = new System.Drawing.Point(240, 403);
+            this.panel4.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(35, 35);
+            this.panel4.TabIndex = 191;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Phone;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox1.IconSize = 20;
+            this.iconPictureBox1.Location = new System.Drawing.Point(9, 8);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox1.TabIndex = 90;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel5.Controls.Add(this.iconPictureBox2);
+            this.panel5.Location = new System.Drawing.Point(435, 403);
+            this.panel5.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(35, 35);
+            this.panel5.TabIndex = 192;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Mobile;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox2.IconSize = 20;
+            this.iconPictureBox2.Location = new System.Drawing.Point(9, 8);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox2.TabIndex = 90;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel6.Controls.Add(this.iconPictureBox3);
+            this.panel6.Location = new System.Drawing.Point(630, 403);
+            this.panel6.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(35, 35);
+            this.panel6.TabIndex = 193;
+            // 
+            // iconPictureBox3
+            // 
+            this.iconPictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.At;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox3.IconSize = 20;
+            this.iconPictureBox3.Location = new System.Drawing.Point(9, 8);
+            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox3.TabIndex = 90;
+            this.iconPictureBox3.TabStop = false;
+            // 
             // FormMotoristas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 535);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.buttonBuscarCEP);
             this.Controls.Add(this.combCargo);
@@ -900,6 +992,15 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMotoristas";
             this.Text = "Cadastrar Motorista";
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -952,5 +1053,11 @@
         private System.Windows.Forms.Label lblCargo;
         private FontAwesome.Sharp.IconButton buttonBuscarCEP;
         private FontAwesome.Sharp.IconButton btnEnviar;
+        private System.Windows.Forms.Panel panel4;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Panel panel5;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private System.Windows.Forms.Panel panel6;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
     }
 }

@@ -241,7 +241,7 @@ namespace Projeto_Integrador_1.Util
 
         public List<dynamic> getViagemStatus()
         {
-            List<dynamic> tipo = new List<dynamic>
+            List<dynamic> status = new List<dynamic>
             {
                 new { Value = -1, Text = "---" },
                 new { Value = 0, Text = "Cancelada" },
@@ -250,7 +250,40 @@ namespace Projeto_Integrador_1.Util
                 new { Value = 9, Text = "Finalizada" }
             };
 
+            return status;
+        }
+
+        public List<dynamic> getManutencaoTipo() {
+            List<dynamic> tipo = new List<dynamic> {
+                new { Value = -1, Text = "---" },
+                new { Value = 1, Text = "Corretiva" },
+                new { Value = 2, Text = "Preventiva" }
+            };
+
             return tipo;
+        }
+
+        public List<dynamic> getManutencaoPreventiva()
+        {
+            List<dynamic> preventiva = new List<dynamic> {
+                new { Value = -1, Text = "---" },
+                new { Value = 1, Text = "Por Hodômetro (KM)" },
+                new { Value = 2, Text = "Por Tempo" }
+            };
+
+            return preventiva;
+        }
+
+        public List<dynamic> getManutencaoStatus()
+        {
+            List<dynamic> status = new List<dynamic> {
+                new { Value = -1, Text = "---" },
+                new { Value = 0, Text = "Cancelada" },
+                new { Value = 1, Text = "Concluida" },
+                new { Value = 2, Text = "Agendada" }
+            };
+
+            return status;
         }
     }
 }

@@ -825,7 +825,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel3.Controls.Add(this.iconPictureBox1);
-            this.panel3.Location = new System.Drawing.Point(484, 341);
+            this.panel3.Location = new System.Drawing.Point(485, 341);
             this.panel3.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(35, 35);

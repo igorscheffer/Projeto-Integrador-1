@@ -150,5 +150,15 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void textCelular_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

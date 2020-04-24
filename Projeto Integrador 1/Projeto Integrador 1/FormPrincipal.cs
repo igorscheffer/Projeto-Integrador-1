@@ -167,6 +167,7 @@ namespace Projeto_Integrador_1
         private void btnManutencoes_Click(object sender, EventArgs e)
         {
             AtivarBotao(sender);
+            AtivarForm(new TMSForms.List.FormManutencoes(this));
         }
 
         private void btnAbastecimentos_Click(object sender, EventArgs e)

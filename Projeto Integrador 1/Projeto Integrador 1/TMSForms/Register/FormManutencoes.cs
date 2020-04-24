@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Projeto_Integrador_1.Util;
+using Newtonsoft.Json;
 
 namespace Projeto_Integrador_1.TMSForms.Register
 {
     public partial class FormManutencoes : Form
     {
+        private string jsonItens;
         public FormManutencoes()
         {
             InitializeComponent();
@@ -21,6 +23,20 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.LoadVeiculos();
             this.LoadMotoristas();
             this.LoadClientes();
+
+            PreencherCombBox ValuesComb = new Util.PreencherCombBox();
+
+            combTipoManutencao.DisplayMember = "Text";
+            combTipoManutencao.ValueMember = "Value";
+            combTipoManutencao.DataSource = ValuesComb.getManutencaoTipo();
+
+            combTipoPreventiva.DisplayMember = "Text";
+            combTipoPreventiva.ValueMember = "Value";
+            combTipoPreventiva.DataSource = ValuesComb.getManutencaoPreventiva();
+
+            combStatus.DisplayMember = "Text";
+            combStatus.ValueMember = "Value";
+            combStatus.DataSource = ValuesComb.getManutencaoStatus();
         }
 
         private void LoadClientes()
@@ -107,6 +123,107 @@ namespace Projeto_Integrador_1.TMSForms.Register
             formMotoristas.Closed += (s, ea) => this.LoadMotoristas();
 
             formMotoristas.ShowDialog();
+        }
+
+        private void onEnviar(object sender, EventArgs e)
+        {
+            try
+            {
+                Validate Validate = new Util.Validate();
+
+                Validate.addRule(combTipoManutencao,        "Tipo Manuteção",               "required|numeric|exact:1");
+                Validate.addRule(combTipoPreventiva,        "Tipo Preventiva",              "numeric|exact:1");
+                Validate.addRule(combVeiculo,               "Veiculo",                      "required|numeric|max:11");
+                Validate.addRule(combStatus,                "Status",                       "required|numeric|exact:1");
+                Validate.addRule(combMotorista,             "Motorista",                    "required|numeric|max:11");
+                Validate.addRule(timeDataAgendada,          "Data Agendada",                "required|date:dd/MM/yyyy HH:mm");
+                Validate.addRule(timeDataRealizada,         "Data Realizada",               "date:dd/MM/yyyy HH:mm");
+                Validate.addRule(textHodometroAgendado,     "Hodômetro Agendado",           "required|numeric|max:20");
+                Validate.addRule(textHodometroRealizado,    "Hodômetro Realizado",          "numeric|max:20");
+                Validate.addRule(textObservacoes,           "Motivo/Observações",           "max:1000");
+                Validate.addRule(textOrdemServico,          "Ordem Servico",                "max:20");
+                Validate.addRule(combFornecedor,            "Concessionaria/Fornecedor",    "numeric|max:11");
+                Validate.addRule(textMaoObra,               "Mão de Obra",                  "numeric|max:20");
+                Validate.addRule(textDesconto,              "Desconto",                     "numeric|max:20");
+                Validate.addRule(textAcrecimo,              "Acrécimo",                     "numeric|max:20");
+                Validate.addRule(textValor,                 "Valor Total",                  "numeric|max:20");
+
+                Validate.Validation();
+
+                if (Validate.IsValid())
+                {
+                    this.PreencherJson();
+
+                    Manutencoes manutencoes = new Manutencoes();
+
+                    manutencoes.Tipo = combTipoManutencao.SelectedValue;
+                    manutencoes.Preventiva = combTipoPreventiva.SelectedValue;
+                    manutencoes.Veiculo = combVeiculo.SelectedValue;
+                    manutencoes.Status = combStatus.SelectedValue;
+                    manutencoes.Motorista = combMotorista.SelectedValue;
+                    manutencoes.DataAgendada = timeDataAgendada.Text;
+                    manutencoes.DataRealizada = timeDataRealizada.Text;
+                    manutencoes.HodometroAgendado = textHodometroAgendado.Text;
+                    manutencoes.HodometroRealizado = textHodometroRealizado.Text;
+                    manutencoes.Observacoes = textObservacoes.Text;
+                    manutencoes.OrdemServico = textOrdemServico.Text;
+                    manutencoes.Fornecedor = combFornecedor.SelectedValue;
+                    manutencoes.MaoObra = textMaoObra.Text;
+                    manutencoes.Desconto = textDesconto.Text;
+                    manutencoes.Acrecimo = textAcrecimo.Text;
+                    manutencoes.Valor = textValor.Text;
+                    manutencoes.Itens = this.jsonItens;
+
+                    manutencoes.Create();
+
+                    if (manutencoes.Success)
+                    {
+                        MessageBox.Show(manutencoes.Message);
+                    }
+                    else {
+                        MessageBox.Show("Houve um erro ao salvar a manutenção (" + manutencoes.Message + ")");
+                    }
+                }
+                else
+                {
+                    Validate.ErrorMessageBox();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void PreencherJson()
+        {
+            List<object> Itens = new List<object>();
+
+            foreach (DataGridViewRow carga in gridItens.Rows)
+            {
+                Itens.Add(new
+                {
+                    NFE = carga.Cells[0].Value,
+                    Descricao = carga.Cells[1].Value,
+                    Peso = carga.Cells[2].Value,
+                    Valor = carga.Cells[3].Value
+                });
+            }
+            this.jsonItens = JsonConvert.SerializeObject(Itens);
+        }
+
+        private void onSelectTipoManutencao(object sender, EventArgs e)
+        {
+            var Selected = combTipoManutencao.SelectedValue;
+
+            if (Convert.ToInt32(Selected) == 2)
+            {
+                combTipoPreventiva.Enabled = true;
+            }
+            else {
+                combTipoPreventiva.SelectedValue = -1;
+                combTipoPreventiva.Enabled = false;
+            }
         }
 
         private void OnAddItem(object sender, EventArgs e)

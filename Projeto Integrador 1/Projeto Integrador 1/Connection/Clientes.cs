@@ -41,35 +41,35 @@ namespace Projeto_Integrador_1.Connection
             try {
                 string sql = "INSERT INTO `clientes` (`tipo_cadastro`, `tipo_pessoa`, `cnpj`, `razao_social`, `nome_fantasia`, `inscricao_municipal`, `inscricao_estadual`, `isento`, `cep`, `endereco`, `n`, `bairro`, `complemento`, `cidade`, `estado`, `nome`, `telefone`, `ramal`, `celular`, `email`, `observacoes`) VALUES (@tipo_cadastro, @tipo_pessoa, @cnpj, @razao_social, @nome_fantasia, @inscricao_municipal, @inscricao_estadual, @isento, @cep, @endereco, @n, @bairro, @complemento, @cidade, @estado, @nome, @telefone, @ramal, @celular, @email, @observacoes);";
 
-                if (openConnection()) {
-                    MySqlCommand query = new MySqlCommand(sql, connection);
+                openConnection();
 
-                    query.Parameters.AddWithValue("@tipo_cadastro", this.TipoCadastro);
-                    query.Parameters.AddWithValue("@tipo_pessoa", this.TipoPessoa);
-                    query.Parameters.AddWithValue("@cnpj", this.CNPJ);
-                    query.Parameters.AddWithValue("@razao_social", this.RazaoSocial);
-                    query.Parameters.AddWithValue("@nome_fantasia", this.NomeFantasia);
-                    query.Parameters.AddWithValue("@inscricao_municipal", this.InscricaoMunicipal);
-                    query.Parameters.AddWithValue("@inscricao_estadual", this.InscricaoEstadual);
-                    query.Parameters.AddWithValue("@isento", this.Isento);
-                    query.Parameters.AddWithValue("@cep", this.CEP);
-                    query.Parameters.AddWithValue("@endereco", this.Endereco);
-                    query.Parameters.AddWithValue("@n", this.N);
-                    query.Parameters.AddWithValue("@bairro", this.Bairro);
-                    query.Parameters.AddWithValue("@complemento", this.Complemento);
-                    query.Parameters.AddWithValue("@cidade", this.Cidade);
-                    query.Parameters.AddWithValue("@estado", this.Estado);
-                    query.Parameters.AddWithValue("@nome", this.Nome);
-                    query.Parameters.AddWithValue("@telefone", this.Telefone);
-                    query.Parameters.AddWithValue("@ramal", this.Ramal);
-                    query.Parameters.AddWithValue("@celular", this.Celular);
-                    query.Parameters.AddWithValue("@email", this.Email);
-                    query.Parameters.AddWithValue("@observacoes", this.Observacoes);
+                MySqlCommand query = new MySqlCommand(sql, connection);
 
-                    query.ExecuteNonQuery();
+                query.Parameters.AddWithValue("@tipo_cadastro", this.TipoCadastro);
+                query.Parameters.AddWithValue("@tipo_pessoa", this.TipoPessoa);
+                query.Parameters.AddWithValue("@cnpj", this.CNPJ);
+                query.Parameters.AddWithValue("@razao_social", this.RazaoSocial);
+                query.Parameters.AddWithValue("@nome_fantasia", this.NomeFantasia);
+                query.Parameters.AddWithValue("@inscricao_municipal", this.InscricaoMunicipal);
+                query.Parameters.AddWithValue("@inscricao_estadual", this.InscricaoEstadual);
+                query.Parameters.AddWithValue("@isento", this.Isento);
+                query.Parameters.AddWithValue("@cep", this.CEP);
+                query.Parameters.AddWithValue("@endereco", this.Endereco);
+                query.Parameters.AddWithValue("@n", this.N);
+                query.Parameters.AddWithValue("@bairro", this.Bairro);
+                query.Parameters.AddWithValue("@complemento", this.Complemento);
+                query.Parameters.AddWithValue("@cidade", this.Cidade);
+                query.Parameters.AddWithValue("@estado", this.Estado);
+                query.Parameters.AddWithValue("@nome", this.Nome);
+                query.Parameters.AddWithValue("@telefone", this.Telefone);
+                query.Parameters.AddWithValue("@ramal", this.Ramal);
+                query.Parameters.AddWithValue("@celular", this.Celular);
+                query.Parameters.AddWithValue("@email", this.Email);
+                query.Parameters.AddWithValue("@observacoes", this.Observacoes);
 
-                    closeConnection();
-                }
+                query.ExecuteNonQuery();
+
+                closeConnection();
 
                 this.Success = true;
                 this.Message = "Cliente salvo com sucesso.";

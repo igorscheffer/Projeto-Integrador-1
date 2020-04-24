@@ -37,9 +37,13 @@ namespace Projeto_Integrador_1.Util
             }
         }
 
+        private bool optional(dynamic value, string rules) {
+            return (rules.Contains("required") && value.ToString().Trim() != "") && (Convert.ToString(value) != Convert.ToString(-1) && value.ToString().Trim().Length > 0);
+        }
+
         private void validateMin(dynamic component, string name, int rule, string rules) {
             dynamic value = this.getValue(component);
-            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0) {
+            if (this.optional(value, rules)) {
                 if (value.Length < rule)
                 {
                     Errors.Add(new { Component = component, Message = name + " deve conter no minimo " + rule + " caracteres." });
@@ -65,7 +69,7 @@ namespace Projeto_Integrador_1.Util
 
         private void validateExact(dynamic component, string name, int rule, string rules) {
             dynamic value = this.getValue(component);
-            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0) {
+            if (this.optional(value, rules)) {
                 if (value.ToString().Length != rule)
                 {
                     Errors.Add(new { Component = component, Message = name + " deve conter " + rule + " caracteres." });
@@ -80,7 +84,7 @@ namespace Projeto_Integrador_1.Util
         private void validateRegExp(dynamic component, string name, string rule, string rules)
         {
             dynamic value = this.getValue(component);
-            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            if (this.optional(value, rules))
             {
                 var regexp = rule;
                 var match = System.Text.RegularExpressions.Regex.Match(value, regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
@@ -99,7 +103,7 @@ namespace Projeto_Integrador_1.Util
         private void validateIn(dynamic component, string name, string rule, string rules)
         {
             dynamic value = this.getValue(component);
-            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            if (this.optional(value, rules))
             {
                 string[] inRules = rule.Split(',');
 
@@ -116,7 +120,7 @@ namespace Projeto_Integrador_1.Util
 
         private void validateDate(dynamic component, string name, string rule, string rules) {
             dynamic value = this.getValue(component);
-            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0) {
+            if (this.optional(value, rules)) {
                 DateTime date;
 
                 bool validate = DateTime.TryParseExact(value.ToString(), rule, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out date);
@@ -132,21 +136,23 @@ namespace Projeto_Integrador_1.Util
             }
         }        
 
-        private void validateRequired(dynamic component, string name) {
+        private bool validateRequired(dynamic component, string name) {
             dynamic value = this.getValue(component);
-            if (value.ToString().Trim() == "")
+            if (value.ToString().Trim() == "" || Convert.ToString(value) == Convert.ToString(-1))
             {
                 Errors.Add(new { Component = component, Message = name + " deve ser preenchido." });
                 this.CountErrors++;
+                return false;
             }
             else {
                 Valids.Add(new { Component = component, Value = value });
+                return true;
             }
         }
 
         private void validateEmail(dynamic component, string name, string rules) {
             dynamic value = this.getValue(component);
-            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0) {
+            if (this.optional(value, rules)) {
                 var regexp = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
                 var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
 
@@ -164,7 +170,7 @@ namespace Projeto_Integrador_1.Util
         private void validateNumeric(dynamic component, string name, string rules)
         {
             dynamic value = this.getValue(component);
-            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            if (this.optional(value, rules))
             {
                 var regexp = @"([0-9])";
                 var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
@@ -183,7 +189,7 @@ namespace Projeto_Integrador_1.Util
         private void validateCPF(dynamic component, string name, string rules)
         {
             dynamic value = this.getValue(component);
-            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            if (this.optional(value, rules))
             {
                 var regexp = @"^(\d{3})(\.\d{3})(\.\d{3})(\-\d{2})$";
                 var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
@@ -202,7 +208,7 @@ namespace Projeto_Integrador_1.Util
         private void validateCNPJ(dynamic component, string name, string rules)
         {
             dynamic value = this.getValue(component);
-            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            if (this.optional(value, rules))
             {
                 var regexp = @"^(\d{2})(\.\d{3}){2}(\/\d{4})(\-\d{2})$";
                 var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
@@ -221,7 +227,7 @@ namespace Projeto_Integrador_1.Util
         private void validateTelefone(dynamic component, string name, string rules)
         {
             dynamic value = this.getValue(component);
-            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            if (this.optional(value, rules))
             {
                 var regexp = @"\(\d{2,}\) \d{4,}\-\d{4}$";
                 var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
@@ -240,7 +246,7 @@ namespace Projeto_Integrador_1.Util
         private void validateNFE(dynamic component, string name, string rules)
         {
             dynamic value = this.getValue(component);
-            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            if (this.optional(value, rules))
             {
                 var regexp = @"^(\d{0,3}(\.\d{3}){2})$";
                 var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
@@ -259,7 +265,7 @@ namespace Projeto_Integrador_1.Util
         private void validateReais(dynamic component, string name, string rules)
         {
             dynamic value = this.getValue(component);
-            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            if (this.optional(value, rules))
             {
                 var regexp = @"^(\d{1,3}(\.\d{3})*)(\,\d{2})$";
                 var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
@@ -278,7 +284,7 @@ namespace Projeto_Integrador_1.Util
         private void validateCEP(dynamic component, string name, string rules)
         {
             dynamic value = this.getValue(component);
-            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            if (this.optional(value, rules))
             {
                 var regexp = @"^(\d{5})(\-\d{3})$";
                 var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
@@ -297,7 +303,7 @@ namespace Projeto_Integrador_1.Util
         private void validatePlaca(dynamic component, string name, string rules)
         {
             dynamic value = this.getValue(component);
-            if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0)
+            if (this.optional(value, rules))
             {
                 var regexp = @"^([A-Z]{3})(\-\d\w\d{2})$";
                 var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);

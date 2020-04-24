@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPanelItens = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.gridItens = new Guna.UI.WinForms.GunaDataGridView();
@@ -40,6 +40,8 @@
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAddCarga = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -52,6 +54,18 @@
             this.label27 = new System.Windows.Forms.Label();
             this.textItemDescricao = new Guna.UI.WinForms.GunaTextBox();
             this.tabPanelManutencao = new System.Windows.Forms.TabPage();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
             this.textValor = new Guna.UI.WinForms.GunaTextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.textAcrecimo = new Guna.UI.WinForms.GunaTextBox();
@@ -92,36 +106,22 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabViagem = new System.Windows.Forms.TabControl();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.tabPanelItens.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridItens)).BeginInit();
             this.panel8.SuspendLayout();
-            this.tabPanelManutencao.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.tabViagem.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
+            this.tabPanelManutencao.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.panel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tabViagem.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPanelItens
@@ -150,21 +150,21 @@
             // 
             this.gridItens.AllowUserToAddRows = false;
             this.gridItens.AllowUserToResizeRows = false;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            this.gridItens.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.gridItens.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.gridItens.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridItens.BackgroundColor = System.Drawing.Color.White;
             this.gridItens.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridItens.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridItens.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.gridItens.ColumnHeadersHeight = 35;
             this.gridItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridItens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -173,15 +173,15 @@
             this.peso,
             this.valor,
             this.Column1});
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle21.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridItens.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridItens.DefaultCellStyle = dataGridViewCellStyle15;
             this.gridItens.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridItens.EnableHeadersVisualStyles = false;
             this.gridItens.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
@@ -265,6 +265,28 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1032, 111);
             this.panel8.TabIndex = 272;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel10.Controls.Add(this.label23);
+            this.panel10.Location = new System.Drawing.Point(844, 76);
+            this.panel10.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(35, 35);
+            this.panel10.TabIndex = 272;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Arial", 10F);
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.label23.Location = new System.Drawing.Point(6, 9);
+            this.label23.Margin = new System.Windows.Forms.Padding(0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(26, 16);
+            this.label23.TabIndex = 250;
+            this.label23.Text = "R$";
             // 
             // label5
             // 
@@ -392,7 +414,7 @@
             this.textItemQtd.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textItemQtd.Location = new System.Drawing.Point(708, 76);
             this.textItemQtd.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textItemQtd.MaxLength = 20;
+            this.textItemQtd.MaxLength = 5;
             this.textItemQtd.Name = "textItemQtd";
             this.textItemQtd.PasswordChar = '\0';
             this.textItemQtd.Size = new System.Drawing.Size(116, 35);
@@ -437,7 +459,7 @@
             this.textItemDescricao.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textItemDescricao.Location = new System.Drawing.Point(188, 76);
             this.textItemDescricao.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textItemDescricao.MaxLength = 20;
+            this.textItemDescricao.MaxLength = 100;
             this.textItemDescricao.Name = "textItemDescricao";
             this.textItemDescricao.PasswordChar = '\0';
             this.textItemDescricao.Size = new System.Drawing.Size(500, 35);
@@ -496,6 +518,144 @@
             this.tabPanelManutencao.Size = new System.Drawing.Size(1032, 589);
             this.tabPanelManutencao.TabIndex = 0;
             this.tabPanelManutencao.Text = "      MANUTENÇÃO      ";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel11.Controls.Add(this.iconPictureBox1);
+            this.panel11.Location = new System.Drawing.Point(315, 307);
+            this.panel11.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(35, 35);
+            this.panel11.TabIndex = 276;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.TachometerAlt;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox1.IconSize = 20;
+            this.iconPictureBox1.Location = new System.Drawing.Point(9, 8);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox1.TabIndex = 90;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel20.Controls.Add(this.iconPictureBox4);
+            this.panel20.Location = new System.Drawing.Point(315, 231);
+            this.panel20.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(35, 35);
+            this.panel20.TabIndex = 275;
+            // 
+            // iconPictureBox4
+            // 
+            this.iconPictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.TachometerAlt;
+            this.iconPictureBox4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox4.IconSize = 20;
+            this.iconPictureBox4.Location = new System.Drawing.Point(9, 8);
+            this.iconPictureBox4.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox4.Name = "iconPictureBox4";
+            this.iconPictureBox4.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox4.TabIndex = 90;
+            this.iconPictureBox4.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel7.Controls.Add(this.label22);
+            this.panel7.Location = new System.Drawing.Point(898, 383);
+            this.panel7.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(35, 35);
+            this.panel7.TabIndex = 271;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 10F);
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.label22.Location = new System.Drawing.Point(6, 9);
+            this.label22.Margin = new System.Windows.Forms.Padding(0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(26, 16);
+            this.label22.TabIndex = 250;
+            this.label22.Text = "R$";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel6.Controls.Add(this.label21);
+            this.panel6.Location = new System.Drawing.Point(648, 383);
+            this.panel6.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(35, 35);
+            this.panel6.TabIndex = 271;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Arial", 10F);
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.label21.Location = new System.Drawing.Point(6, 9);
+            this.label21.Margin = new System.Windows.Forms.Padding(0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(26, 16);
+            this.label21.TabIndex = 250;
+            this.label21.Text = "R$";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(520, 383);
+            this.panel2.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(35, 35);
+            this.panel2.TabIndex = 271;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 10F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.label3.Location = new System.Drawing.Point(6, 9);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 16);
+            this.label3.TabIndex = 250;
+            this.label3.Text = "R$";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel5.Controls.Add(this.label16);
+            this.panel5.Location = new System.Drawing.Point(773, 383);
+            this.panel5.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(35, 35);
+            this.panel5.TabIndex = 270;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 10F);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.label16.Location = new System.Drawing.Point(6, 9);
+            this.label16.Margin = new System.Windows.Forms.Padding(0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(26, 16);
+            this.label16.TabIndex = 250;
+            this.label16.Text = "R$";
             // 
             // textValor
             // 
@@ -725,11 +885,11 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.panel3.Controls.Add(this.textObservacoes);
-            this.panel3.Location = new System.Drawing.Point(370, 161);
+            this.panel3.Location = new System.Drawing.Point(370, 155);
             this.panel3.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(1);
-            this.panel3.Size = new System.Drawing.Size(650, 181);
+            this.panel3.Size = new System.Drawing.Size(650, 187);
             this.panel3.TabIndex = 254;
             // 
             // textObservacoes
@@ -741,7 +901,7 @@
             this.textObservacoes.Margin = new System.Windows.Forms.Padding(0);
             this.textObservacoes.MaxLength = 1000;
             this.textObservacoes.Name = "textObservacoes";
-            this.textObservacoes.Size = new System.Drawing.Size(648, 179);
+            this.textObservacoes.Size = new System.Drawing.Size(648, 185);
             this.textObservacoes.TabIndex = 22;
             this.textObservacoes.Text = "";
             // 
@@ -751,11 +911,11 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label24.Location = new System.Drawing.Point(370, 135);
+            this.label24.Location = new System.Drawing.Point(370, 129);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(138, 18);
+            this.label24.Size = new System.Drawing.Size(146, 18);
             this.label24.TabIndex = 253;
-            this.label24.Text = "Motivo/Observação";
+            this.label24.Text = "Motivo/Observações";
             // 
             // textHodometroRealizado
             // 
@@ -1103,6 +1263,7 @@
             this.combTipoManutencao.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combTipoManutencao.Size = new System.Drawing.Size(202, 35);
             this.combTipoManutencao.TabIndex = 231;
+            this.combTipoManutencao.SelectedValueChanged += new System.EventHandler(this.onSelectTipoManutencao);
             // 
             // label2
             // 
@@ -1139,6 +1300,7 @@
             this.btnEnviar.Text = "Salvar";
             this.btnEnviar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.onEnviar);
             // 
             // label10
             // 
@@ -1180,166 +1342,6 @@
             this.tabViagem.Size = new System.Drawing.Size(1040, 637);
             this.tabViagem.TabIndex = 271;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel5.Controls.Add(this.label16);
-            this.panel5.Location = new System.Drawing.Point(773, 383);
-            this.panel5.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(35, 35);
-            this.panel5.TabIndex = 270;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial", 10F);
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.label16.Location = new System.Drawing.Point(6, 9);
-            this.label16.Margin = new System.Windows.Forms.Padding(0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(26, 16);
-            this.label16.TabIndex = 250;
-            this.label16.Text = "R$";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(520, 383);
-            this.panel2.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(35, 35);
-            this.panel2.TabIndex = 271;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 10F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.label3.Location = new System.Drawing.Point(6, 9);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 16);
-            this.label3.TabIndex = 250;
-            this.label3.Text = "R$";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel6.Controls.Add(this.label21);
-            this.panel6.Location = new System.Drawing.Point(648, 383);
-            this.panel6.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(35, 35);
-            this.panel6.TabIndex = 271;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial", 10F);
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.label21.Location = new System.Drawing.Point(6, 9);
-            this.label21.Margin = new System.Windows.Forms.Padding(0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(26, 16);
-            this.label21.TabIndex = 250;
-            this.label21.Text = "R$";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel7.Controls.Add(this.label22);
-            this.panel7.Location = new System.Drawing.Point(898, 383);
-            this.panel7.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(35, 35);
-            this.panel7.TabIndex = 271;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 10F);
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.label22.Location = new System.Drawing.Point(6, 9);
-            this.label22.Margin = new System.Windows.Forms.Padding(0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(26, 16);
-            this.label22.TabIndex = 250;
-            this.label22.Text = "R$";
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel10.Controls.Add(this.label23);
-            this.panel10.Location = new System.Drawing.Point(844, 76);
-            this.panel10.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(35, 35);
-            this.panel10.TabIndex = 272;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Arial", 10F);
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.label23.Location = new System.Drawing.Point(6, 9);
-            this.label23.Margin = new System.Windows.Forms.Padding(0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(26, 16);
-            this.label23.TabIndex = 250;
-            this.label23.Text = "R$";
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel20.Controls.Add(this.iconPictureBox4);
-            this.panel20.Location = new System.Drawing.Point(315, 231);
-            this.panel20.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(35, 35);
-            this.panel20.TabIndex = 275;
-            // 
-            // iconPictureBox4
-            // 
-            this.iconPictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.TachometerAlt;
-            this.iconPictureBox4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.iconPictureBox4.IconSize = 20;
-            this.iconPictureBox4.Location = new System.Drawing.Point(9, 8);
-            this.iconPictureBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.iconPictureBox4.Name = "iconPictureBox4";
-            this.iconPictureBox4.Size = new System.Drawing.Size(20, 20);
-            this.iconPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.iconPictureBox4.TabIndex = 90;
-            this.iconPictureBox4.TabStop = false;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel11.Controls.Add(this.iconPictureBox1);
-            this.panel11.Location = new System.Drawing.Point(315, 307);
-            this.panel11.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(35, 35);
-            this.panel11.TabIndex = 276;
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.TachometerAlt;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.iconPictureBox1.IconSize = 20;
-            this.iconPictureBox1.Location = new System.Drawing.Point(9, 8);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.iconPictureBox1.TabIndex = 90;
-            this.iconPictureBox1.TabStop = false;
-            // 
             // FormManutencoes
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1353,26 +1355,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridItens)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.tabPanelManutencao.ResumeLayout(false);
-            this.tabPanelManutencao.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.tabViagem.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
+            this.tabPanelManutencao.ResumeLayout(false);
+            this.tabPanelManutencao.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.tabViagem.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
