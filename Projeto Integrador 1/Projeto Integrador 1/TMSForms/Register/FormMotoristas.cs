@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Correios.CEP;
+using FontAwesome.Sharp;
 using Projeto_Integrador_1.Connection;
 using Projeto_Integrador_1.Util;
 
@@ -57,6 +58,12 @@ namespace Projeto_Integrador_1.TMSForms.Register
 
         private void onBuscarCEP(object sender, EventArgs e)
         {
+            IconButton button = (IconButton)sender;
+
+            IconChar defaultIcon = button.IconChar;
+
+            button.IconChar = IconChar.Spinner;
+
             try {
                 cepConsulta endereco = correiosCEP.GetAddress(textCEP.Text);
 
@@ -66,8 +73,11 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 textComplemento.Text = "";
                 textCidade.Text = endereco.Cidade;
                 combEstado.SelectedValue = endereco.UF;
+
+                button.IconChar = defaultIcon;
             }
             catch (Exception ex) {
+                button.IconChar = defaultIcon;
                 MessageBox.Show(ex.Message);
             }
         }
@@ -139,14 +149,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 }
                 else
                 {
-                    string ShowMessage = "";
-
-                    foreach (dynamic Erro in Validate.getErrors())
-                    {
-                        ShowMessage += Erro.Message + "\n";
-                    }
-
-                    MessageBox.Show(ShowMessage);
+                    Validate.ErrorMessageBox();
                 }
             }
             catch (Exception ex) {

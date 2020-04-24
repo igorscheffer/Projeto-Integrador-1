@@ -11,6 +11,7 @@ namespace Projeto_Integrador_1.Util
         public List<dynamic> getEstados()
         {
             List<dynamic> estados = new List<dynamic> {
+                new { Value = "", Text = "---" },
                 new { Value = "AC", Text = "Acre (AC)" },
                 new { Value = "AL", Text = "Alagoas (AL)" },
                 new { Value = "AP", Text = "Amapá (AP)" },
@@ -45,6 +46,7 @@ namespace Projeto_Integrador_1.Util
         public List<dynamic> getCores()
         {
             List<dynamic> cores = new List<dynamic> {
+                new { Value = -1, Text = "---" },
                 new { Value = 1, Text = "Preto" },
                 new { Value = 2, Text = "Branco" },
                 new { Value = 3, Text = "Azul" },
@@ -57,6 +59,7 @@ namespace Projeto_Integrador_1.Util
         public List<dynamic> getCombustiveis()
         {
             List<dynamic> combustiveis = new List<dynamic> {
+                new { Value = -1, Text = "---" },
                 new { Value = 1, Text = "Gasolina" },
                 new { Value = 2, Text = "Etanol" },
                 new { Value = 3, Text = "Diesel" },
@@ -85,6 +88,7 @@ namespace Projeto_Integrador_1.Util
         public List<dynamic> getSexo()
         {
             List<dynamic> sexo = new List<dynamic> {
+                new { Value = "", Text = "---" },
                 new { Value = "H", Text = "Homem" },
                 new { Value = "M", Text = "Mulher" }
             };
@@ -95,6 +99,7 @@ namespace Projeto_Integrador_1.Util
         public List<dynamic> getEstadoCivil()
         {
             List<dynamic> estadoCivil = new List<dynamic> {
+                new { Value = -1, Text = "---" },
                 new { Value = 1, Text = "Solteiro(a)" },
                 new { Value = 2, Text = "Casado(a)" },
                 new { Value = 3, Text = "Divorciado(a)" },
@@ -106,6 +111,7 @@ namespace Projeto_Integrador_1.Util
 
         public List<dynamic> getVeiculosCategorias() {
             List<dynamic> categorias = new List<dynamic> {
+                new { Value = -1, Text = "---" },
                 new { Value = 1, Text = "Carro" },
                 new { Value = 2, Text = "Moto" },
                 new { Value = 3, Text = "Caminhão" },
@@ -116,6 +122,7 @@ namespace Projeto_Integrador_1.Util
 
         public List<dynamic> getVeiculosMarcas() {
             List<dynamic> marcas = new List<dynamic> {
+                new { Value = -1, Text = "---" },
                 new { Value = 1, Text = "Scania" },
                 new { Value = 2, Text = "Volvo" },
                 new { Value = 3, Text = "Ford" },
@@ -128,6 +135,7 @@ namespace Projeto_Integrador_1.Util
 
         public List<dynamic> getVeiculosCarrocerias() {
             List<dynamic> carrocerias = new List<dynamic> {
+                new { Value = -1, Text = "---" },
                 new { Value = 1, Text = "Baú" },
                 new { Value = 2, Text = "Carga Seca" },
                 new { Value = 3, Text = "Plancha" },
@@ -139,6 +147,7 @@ namespace Projeto_Integrador_1.Util
 
         public List<dynamic> getVeiculosStatus() {
             List<dynamic> status = new List<dynamic> {
+                new { Value = -1, Text = "---" },
                 new { Value = 1, Text = "Finalizada" },
                 new { Value = 2, Text = "Agendada" },
                 new { Value = 3, Text = "Em Andamento" },
@@ -149,6 +158,7 @@ namespace Projeto_Integrador_1.Util
 
         public List<dynamic> getMotoristaStatus() {
             List<dynamic> status = new List<dynamic> {
+                new { Value = -1, Text = "---" },
                 new { Value = 1, Text = "Ativo" },
                 new { Value = 0, Text = "Inativo" }
             };
@@ -158,6 +168,7 @@ namespace Projeto_Integrador_1.Util
 
         public List<dynamic> getCategoriasCNH() {
             List<dynamic> categorias = new List<dynamic> {
+                new { Value = "", Text = "---" },
                 new { Value = "A", Text = "A" },
                 new { Value = "B", Text = "B" },
                 new { Value = "C", Text = "C" },
@@ -173,6 +184,7 @@ namespace Projeto_Integrador_1.Util
 
         public List<dynamic> getMotoristaCargos() {
             List<dynamic> cargos = new List<dynamic> {
+                new { Value = -1, Text = "---" },
                 new { Value = 1, Text = "Motorista" },
                 new { Value = 2, Text = "Ajudante" }
             };
@@ -182,6 +194,7 @@ namespace Projeto_Integrador_1.Util
 
         public List<dynamic> getClienteTipoCadastro() {
             List<dynamic> tipoCadastro = new List<dynamic> {
+                new { Value = -1, Text = "---" },
                 new { Value = "C", Text = "Cliente" },
                 new { Value = "F", Text = "Fornecedor" },
                 new { Value = "A", Text = "Ambos" }
@@ -192,6 +205,7 @@ namespace Projeto_Integrador_1.Util
 
         public List<dynamic> getClienteTipoPessoa() {
             List<dynamic> tipoPessoa = new List<dynamic> {
+                new { Value = -1, Text = "---" },
                 new { Value = "PF", Text = "Pessoa Fisica" },
                 new { Value = "PJ", Text = "Pessoa Juridica" }
             };
@@ -202,6 +216,7 @@ namespace Projeto_Integrador_1.Util
         public List<dynamic> getViagemTomador() {
             List<dynamic> tomador = new List<dynamic>
             {
+                new { Value = -1, Text = "---" },
                 new { Value = 1, Text = "Remetente" },
                 new { Value = 2, Text = "Destinatario" }
             };
@@ -213,11 +228,26 @@ namespace Projeto_Integrador_1.Util
         {
             List<dynamic> tipo = new List<dynamic>
             {
+                new { Value = -1, Text = "---" },
                 new { Value = 1, Text = "Normal" },
                 new { Value = 2, Text = "Subcontratação" },
                 new { Value = 3, Text = "Redespacho" },
                 new { Value = 4, Text = "Redespacho Intermediario" },
                 new { Value = 5, Text = "Multimodal" }
+            };
+
+            return tipo;
+        }
+
+        public List<dynamic> getViagemStatus()
+        {
+            List<dynamic> tipo = new List<dynamic>
+            {
+                new { Value = -1, Text = "---" },
+                new { Value = 0, Text = "Cancelada" },
+                new { Value = 1, Text = "Agendada" },
+                new { Value = 2, Text = "Em Andamento" },
+                new { Value = 9, Text = "Finalizada" }
             };
 
             return tipo;

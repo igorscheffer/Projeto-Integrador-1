@@ -1,4 +1,5 @@
 ﻿using Correios.CEP;
+using FontAwesome.Sharp;
 using Projeto_Integrador_1.Connection;
 using Projeto_Integrador_1.Util;
 using System;
@@ -24,23 +25,28 @@ namespace Projeto_Integrador_1.TMSForms.Register
             combTipoCadastro.DisplayMember = "Text";
             combTipoCadastro.ValueMember = "Value";
             combTipoCadastro.DataSource = ValuesComb.getClienteTipoCadastro();
-            combTipoCadastro.SelectedValue = -1;
+            combTipoCadastro.SelectedValue = "";
 
             combTipoPessoa.DisplayMember = "Text";
             combTipoPessoa.ValueMember = "Value";
             combTipoPessoa.DataSource = ValuesComb.getClienteTipoPessoa();
-            combTipoPessoa.SelectedValue = -1;
+            combTipoPessoa.SelectedValue = "";
 
             combEstado.DisplayMember = "Text";
             combEstado.ValueMember = "Value";
             combEstado.DataSource = ValuesComb.getEstados();
-            combEstado.SelectedValue = -1;
+            combEstado.SelectedValue = "";
         }
 
         private void onBuscarCEP(object sender, EventArgs e)
         {
-            try
-            {
+            IconButton button = (IconButton)sender;
+
+            IconChar defaultIcon = button.IconChar;
+
+            button.IconChar = IconChar.Spinner;
+            
+            try{
                 cepConsulta endereco = correiosCEP.GetAddress(textCEP.Text);
 
                 textEndereco.Text = endereco.Rua;
@@ -49,9 +55,12 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 textComplemento.Text = "";
                 textCidade.Text = endereco.Cidade;
                 combEstado.SelectedValue = endereco.UF;
+
+                button.IconChar = defaultIcon;
             }
             catch (Exception ex)
             {
+                button.IconChar = defaultIcon;
                 MessageBox.Show(ex.Message);
             }
         }
@@ -85,7 +94,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
 
             var Selected = combTipoPessoa.SelectedValue;
 
-            if (Selected == "PF")
+            if (Convert.ToString(Selected) == "PF")
             {
                 lblCNPJ.Text = "CPF";
                 lblRazaoSocial.Text = "NOME";
@@ -107,7 +116,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
                     checkIsento.Location = new Point((checkIsento.Location.X - widthNF), checkIsento.Location.Y);
                 }
             }
-            else if(Selected == "PJ") {
+            else if(Convert.ToString(Selected) == "PJ") {
                 lblCNPJ.Text = "CNPJ";
                 lblNomeFantasia.Text = "NOME FANTASIA";
                 lblInscricaoMunicipal.Text = "INSCRIÇÃO MUNICIPAL";
@@ -138,7 +147,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
 
                 Validate.addRule(combTipoCadastro,          "Tipo Cadastro",            "required|in:C,F,A|exact:1");
                 Validate.addRule(combTipoPessoa,            "Tipo Pessoa",              "required|in:PF,PJ|exact:2");
-                Validate.addRule(textCNPJ,                  lblCNPJ.Text,               "required|" + (combTipoPessoa.SelectedValue == "PJ" ? "cnpj" : "cpf"));
+                Validate.addRule(textCNPJ,                  lblCNPJ.Text,               "required|" + ((string)combTipoPessoa.SelectedValue == "PJ" ? "cnpj" : "cpf"));
                 Validate.addRule(textRazaoSocial,           lblRazaoSocial.Text,        "required|max:150");
                 Validate.addRule(textNomeFantasia,          "Razão Social",             "max:150");
                 Validate.addRule(textInscricaoMunicipal,    lblInscricaoMunicipal.Text, "max:12");
@@ -196,14 +205,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 }
                 else
                 {
-                    string ShowMessage = "";
-
-                    foreach (dynamic Erro in Validate.getErrors())
-                    {
-                        ShowMessage += Erro.Message + "\n";
-                    }
-
-                    MessageBox.Show(ShowMessage);
+                    Validate.ErrorMessageBox(); ;
                 }
             }
             catch (Exception ex)

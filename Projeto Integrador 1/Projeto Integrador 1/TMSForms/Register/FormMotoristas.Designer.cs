@@ -78,6 +78,7 @@
             // 
             // textNome
             // 
+            this.textNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textNome.BackColor = System.Drawing.Color.White;
             this.textNome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textNome.BaseColor = System.Drawing.Color.White;
@@ -88,20 +89,21 @@
             this.textNome.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textNome.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textNome.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textNome.Location = new System.Drawing.Point(19, 71);
+            this.textNome.Location = new System.Drawing.Point(20, 71);
             this.textNome.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textNome.MaxLength = 100;
             this.textNome.Name = "textNome";
             this.textNome.PasswordChar = '\0';
-            this.textNome.Size = new System.Drawing.Size(300, 35);
+            this.textNome.Size = new System.Drawing.Size(299, 35);
             this.textNome.TabIndex = 1;
             // 
             // lblNome
             // 
+            this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNome.Location = new System.Drawing.Point(16, 48);
+            this.lblNome.Location = new System.Drawing.Point(20, 48);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(143, 18);
             this.lblNome.TabIndex = 88;
@@ -109,6 +111,7 @@
             // 
             // textCPF
             // 
+            this.textCPF.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCPF.BackColor = System.Drawing.Color.White;
             this.textCPF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textCPF.BaseColor = System.Drawing.Color.White;
@@ -129,10 +132,11 @@
             // 
             // lblCPF
             // 
+            this.lblCPF.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCPF.AutoSize = true;
             this.lblCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCPF.Location = new System.Drawing.Point(336, 48);
+            this.lblCPF.Location = new System.Drawing.Point(339, 48);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(38, 18);
             this.lblCPF.TabIndex = 90;
@@ -140,6 +144,7 @@
             // 
             // textRG
             // 
+            this.textRG.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textRG.BackColor = System.Drawing.Color.White;
             this.textRG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textRG.BaseColor = System.Drawing.Color.White;
@@ -160,10 +165,11 @@
             // 
             // lblRG
             // 
+            this.lblRG.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblRG.AutoSize = true;
             this.lblRG.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblRG.Location = new System.Drawing.Point(606, 48);
+            this.lblRG.Location = new System.Drawing.Point(609, 48);
             this.lblRG.Name = "lblRG";
             this.lblRG.Size = new System.Drawing.Size(31, 18);
             this.lblRG.TabIndex = 92;
@@ -171,6 +177,7 @@
             // 
             // combStatus
             // 
+            this.combStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combStatus.BackColor = System.Drawing.Color.Transparent;
             this.combStatus.BaseColor = System.Drawing.Color.White;
             this.combStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -188,15 +195,16 @@
             this.combStatus.Name = "combStatus";
             this.combStatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combStatus.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combStatus.Size = new System.Drawing.Size(146, 35);
+            this.combStatus.Size = new System.Drawing.Size(141, 35);
             this.combStatus.TabIndex = 4;
             // 
             // lblStatus
             // 
+            this.lblStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblStatus.Location = new System.Drawing.Point(876, 48);
+            this.lblStatus.Location = new System.Drawing.Point(879, 48);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(66, 18);
             this.lblStatus.TabIndex = 94;
@@ -204,6 +212,7 @@
             // 
             // textCNH
             // 
+            this.textCNH.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCNH.BackColor = System.Drawing.Color.White;
             this.textCNH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textCNH.BaseColor = System.Drawing.Color.White;
@@ -214,20 +223,21 @@
             this.textCNH.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textCNH.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textCNH.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCNH.Location = new System.Drawing.Point(19, 144);
+            this.textCNH.Location = new System.Drawing.Point(20, 144);
             this.textCNH.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textCNH.MaxLength = 12;
             this.textCNH.Name = "textCNH";
             this.textCNH.PasswordChar = '\0';
-            this.textCNH.Size = new System.Drawing.Size(280, 35);
+            this.textCNH.Size = new System.Drawing.Size(279, 35);
             this.textCNH.TabIndex = 5;
             // 
             // lblCNH
             // 
+            this.lblCNH.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCNH.AutoSize = true;
             this.lblCNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCNH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCNH.Location = new System.Drawing.Point(16, 121);
+            this.lblCNH.Location = new System.Drawing.Point(20, 121);
             this.lblCNH.Name = "lblCNH";
             this.lblCNH.Size = new System.Drawing.Size(41, 18);
             this.lblCNH.TabIndex = 96;
@@ -235,10 +245,11 @@
             // 
             // lblVencimentoCNH
             // 
+            this.lblVencimentoCNH.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblVencimentoCNH.AutoSize = true;
             this.lblVencimentoCNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVencimentoCNH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblVencimentoCNH.Location = new System.Drawing.Point(316, 121);
+            this.lblVencimentoCNH.Location = new System.Drawing.Point(319, 121);
             this.lblVencimentoCNH.Name = "lblVencimentoCNH";
             this.lblVencimentoCNH.Size = new System.Drawing.Size(144, 18);
             this.lblVencimentoCNH.TabIndex = 98;
@@ -246,6 +257,7 @@
             // 
             // timeVencimentoCNH
             // 
+            this.timeVencimentoCNH.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeVencimentoCNH.BaseColor = System.Drawing.Color.White;
             this.timeVencimentoCNH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeVencimentoCNH.BorderSize = 1;
@@ -271,6 +283,7 @@
             // 
             // combCategoriaCNH
             // 
+            this.combCategoriaCNH.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combCategoriaCNH.BackColor = System.Drawing.Color.Transparent;
             this.combCategoriaCNH.BaseColor = System.Drawing.Color.White;
             this.combCategoriaCNH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -293,10 +306,11 @@
             // 
             // lblCategoriaCNH
             // 
+            this.lblCategoriaCNH.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCategoriaCNH.AutoSize = true;
             this.lblCategoriaCNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoriaCNH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCategoriaCNH.Location = new System.Drawing.Point(543, 121);
+            this.lblCategoriaCNH.Location = new System.Drawing.Point(546, 121);
             this.lblCategoriaCNH.Name = "lblCategoriaCNH";
             this.lblCategoriaCNH.Size = new System.Drawing.Size(94, 18);
             this.lblCategoriaCNH.TabIndex = 101;
@@ -304,6 +318,7 @@
             // 
             // combSexo
             // 
+            this.combSexo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combSexo.BackColor = System.Drawing.Color.Transparent;
             this.combSexo.BaseColor = System.Drawing.Color.White;
             this.combSexo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -326,10 +341,11 @@
             // 
             // lblSexo
             // 
+            this.lblSexo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblSexo.Location = new System.Drawing.Point(693, 121);
+            this.lblSexo.Location = new System.Drawing.Point(696, 121);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(50, 18);
             this.lblSexo.TabIndex = 103;
@@ -337,6 +353,7 @@
             // 
             // combEstadoCivil
             // 
+            this.combEstadoCivil.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combEstadoCivil.BackColor = System.Drawing.Color.Transparent;
             this.combEstadoCivil.BaseColor = System.Drawing.Color.White;
             this.combEstadoCivil.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -354,15 +371,16 @@
             this.combEstadoCivil.Name = "combEstadoCivil";
             this.combEstadoCivil.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combEstadoCivil.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combEstadoCivil.Size = new System.Drawing.Size(179, 35);
+            this.combEstadoCivil.Size = new System.Drawing.Size(174, 35);
             this.combEstadoCivil.TabIndex = 9;
             // 
             // lblEstadoCivil
             // 
+            this.lblEstadoCivil.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEstadoCivil.AutoSize = true;
             this.lblEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstadoCivil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEstadoCivil.Location = new System.Drawing.Point(843, 121);
+            this.lblEstadoCivil.Location = new System.Drawing.Point(846, 121);
             this.lblEstadoCivil.Name = "lblEstadoCivil";
             this.lblEstadoCivil.Size = new System.Drawing.Size(107, 18);
             this.lblEstadoCivil.TabIndex = 105;
@@ -370,10 +388,11 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Silver;
-            this.label10.Location = new System.Drawing.Point(12, 9);
+            this.label10.Location = new System.Drawing.Point(20, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(214, 20);
             this.label10.TabIndex = 85;
@@ -381,32 +400,35 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.Silver;
-            this.panel1.Location = new System.Drawing.Point(12, 32);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
+            this.panel1.Location = new System.Drawing.Point(20, 32);
+            this.panel1.Margin = new System.Windows.Forms.Padding(10, 3, 10, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1017, 2);
+            this.panel1.Size = new System.Drawing.Size(1000, 2);
             this.panel1.TabIndex = 86;
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.Color.Silver;
-            this.panel2.Location = new System.Drawing.Point(12, 218);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
+            this.panel2.Location = new System.Drawing.Point(20, 218);
+            this.panel2.Margin = new System.Windows.Forms.Padding(10, 3, 10, 15);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1017, 2);
+            this.panel2.Size = new System.Drawing.Size(1000, 2);
             this.panel2.TabIndex = 107;
             // 
             // label16
             // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Silver;
-            this.label16.Location = new System.Drawing.Point(12, 195);
+            this.label16.Location = new System.Drawing.Point(20, 195);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(226, 20);
             this.label16.TabIndex = 106;
@@ -414,6 +436,7 @@
             // 
             // combEstado
             // 
+            this.combEstado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combEstado.BackColor = System.Drawing.Color.Transparent;
             this.combEstado.BaseColor = System.Drawing.Color.White;
             this.combEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -436,6 +459,7 @@
             // 
             // textCidade
             // 
+            this.textCidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCidade.BackColor = System.Drawing.Color.White;
             this.textCidade.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textCidade.BaseColor = System.Drawing.Color.White;
@@ -446,20 +470,21 @@
             this.textCidade.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textCidade.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textCidade.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCidade.Location = new System.Drawing.Point(19, 330);
+            this.textCidade.Location = new System.Drawing.Point(20, 330);
             this.textCidade.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textCidade.MaxLength = 100;
             this.textCidade.Name = "textCidade";
             this.textCidade.PasswordChar = '\0';
-            this.textCidade.Size = new System.Drawing.Size(180, 35);
+            this.textCidade.Size = new System.Drawing.Size(179, 35);
             this.textCidade.TabIndex = 16;
             // 
             // lblEstado
             // 
+            this.lblEstado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEstado.Location = new System.Drawing.Point(216, 307);
+            this.lblEstado.Location = new System.Drawing.Point(219, 307);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(69, 18);
             this.lblEstado.TabIndex = 168;
@@ -467,10 +492,11 @@
             // 
             // lblCidade
             // 
+            this.lblCidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCidade.AutoSize = true;
             this.lblCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCidade.Location = new System.Drawing.Point(16, 307);
+            this.lblCidade.Location = new System.Drawing.Point(20, 307);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(63, 18);
             this.lblCidade.TabIndex = 167;
@@ -478,6 +504,7 @@
             // 
             // textComplemento
             // 
+            this.textComplemento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textComplemento.BackColor = System.Drawing.Color.White;
             this.textComplemento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textComplemento.BaseColor = System.Drawing.Color.White;
@@ -493,15 +520,16 @@
             this.textComplemento.MaxLength = 100;
             this.textComplemento.Name = "textComplemento";
             this.textComplemento.PasswordChar = '\0';
-            this.textComplemento.Size = new System.Drawing.Size(236, 35);
+            this.textComplemento.Size = new System.Drawing.Size(231, 35);
             this.textComplemento.TabIndex = 15;
             // 
             // lblComplemento
             // 
+            this.lblComplemento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblComplemento.AutoSize = true;
             this.lblComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComplemento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblComplemento.Location = new System.Drawing.Point(786, 234);
+            this.lblComplemento.Location = new System.Drawing.Point(789, 234);
             this.lblComplemento.Name = "lblComplemento";
             this.lblComplemento.Size = new System.Drawing.Size(127, 18);
             this.lblComplemento.TabIndex = 165;
@@ -509,6 +537,7 @@
             // 
             // textBairro
             // 
+            this.textBairro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBairro.BackColor = System.Drawing.Color.White;
             this.textBairro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textBairro.BaseColor = System.Drawing.Color.White;
@@ -529,10 +558,11 @@
             // 
             // lblBairro
             // 
+            this.lblBairro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblBairro.AutoSize = true;
             this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBairro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblBairro.Location = new System.Drawing.Point(586, 234);
+            this.lblBairro.Location = new System.Drawing.Point(589, 234);
             this.lblBairro.Name = "lblBairro";
             this.lblBairro.Size = new System.Drawing.Size(64, 18);
             this.lblBairro.TabIndex = 163;
@@ -540,6 +570,7 @@
             // 
             // textN
             // 
+            this.textN.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textN.BackColor = System.Drawing.Color.White;
             this.textN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textN.BaseColor = System.Drawing.Color.White;
@@ -560,10 +591,11 @@
             // 
             // lblN
             // 
+            this.lblN.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblN.AutoSize = true;
             this.lblN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblN.Location = new System.Drawing.Point(486, 234);
+            this.lblN.Location = new System.Drawing.Point(489, 234);
             this.lblN.Name = "lblN";
             this.lblN.Size = new System.Drawing.Size(24, 18);
             this.lblN.TabIndex = 161;
@@ -571,6 +603,7 @@
             // 
             // textEndereco
             // 
+            this.textEndereco.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textEndereco.BackColor = System.Drawing.Color.White;
             this.textEndereco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textEndereco.BaseColor = System.Drawing.Color.White;
@@ -591,10 +624,11 @@
             // 
             // lblEndereco
             // 
+            this.lblEndereco.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEndereco.Location = new System.Drawing.Point(166, 234);
+            this.lblEndereco.Location = new System.Drawing.Point(169, 234);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(94, 18);
             this.lblEndereco.TabIndex = 159;
@@ -602,6 +636,7 @@
             // 
             // textCEP
             // 
+            this.textCEP.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCEP.BackColor = System.Drawing.Color.White;
             this.textCEP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textCEP.BaseColor = System.Drawing.Color.White;
@@ -612,20 +647,21 @@
             this.textCEP.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textCEP.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textCEP.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCEP.Location = new System.Drawing.Point(19, 257);
+            this.textCEP.Location = new System.Drawing.Point(20, 257);
             this.textCEP.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textCEP.MaxLength = 9;
             this.textCEP.Name = "textCEP";
             this.textCEP.PasswordChar = '\0';
-            this.textCEP.Size = new System.Drawing.Size(95, 35);
+            this.textCEP.Size = new System.Drawing.Size(94, 35);
             this.textCEP.TabIndex = 10;
             // 
             // lblCEP
             // 
+            this.lblCEP.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCEP.AutoSize = true;
             this.lblCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCEP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCEP.Location = new System.Drawing.Point(16, 234);
+            this.lblCEP.Location = new System.Drawing.Point(20, 234);
             this.lblCEP.Name = "lblCEP";
             this.lblCEP.Size = new System.Drawing.Size(39, 18);
             this.lblCEP.TabIndex = 157;
@@ -633,6 +669,7 @@
             // 
             // textEmail
             // 
+            this.textEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textEmail.BackColor = System.Drawing.Color.White;
             this.textEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textEmail.BaseColor = System.Drawing.Color.White;
@@ -648,15 +685,16 @@
             this.textEmail.MaxLength = 100;
             this.textEmail.Name = "textEmail";
             this.textEmail.PasswordChar = '\0';
-            this.textEmail.Size = new System.Drawing.Size(385, 35);
+            this.textEmail.Size = new System.Drawing.Size(380, 35);
             this.textEmail.TabIndex = 21;
             // 
             // lblEmail
             // 
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEmail.Location = new System.Drawing.Point(637, 380);
+            this.lblEmail.Location = new System.Drawing.Point(640, 380);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(56, 18);
             this.lblEmail.TabIndex = 177;
@@ -664,6 +702,7 @@
             // 
             // textCelular
             // 
+            this.textCelular.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCelular.BackColor = System.Drawing.Color.White;
             this.textCelular.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textCelular.BaseColor = System.Drawing.Color.White;
@@ -684,10 +723,11 @@
             // 
             // lblCelular
             // 
+            this.lblCelular.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCelular.AutoSize = true;
             this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCelular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCelular.Location = new System.Drawing.Point(437, 380);
+            this.lblCelular.Location = new System.Drawing.Point(440, 380);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(76, 18);
             this.lblCelular.TabIndex = 175;
@@ -695,6 +735,7 @@
             // 
             // textTelefone
             // 
+            this.textTelefone.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textTelefone.BackColor = System.Drawing.Color.White;
             this.textTelefone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textTelefone.BaseColor = System.Drawing.Color.White;
@@ -715,10 +756,11 @@
             // 
             // lblTelefone
             // 
+            this.lblTelefone.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblTelefone.Location = new System.Drawing.Point(237, 380);
+            this.lblTelefone.Location = new System.Drawing.Point(240, 380);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(87, 18);
             this.lblTelefone.TabIndex = 173;
@@ -726,6 +768,7 @@
             // 
             // combCargo
             // 
+            this.combCargo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combCargo.BackColor = System.Drawing.Color.Transparent;
             this.combCargo.BaseColor = System.Drawing.Color.White;
             this.combCargo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -748,10 +791,11 @@
             // 
             // lblCargo
             // 
+            this.lblCargo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCargo.Location = new System.Drawing.Point(17, 380);
+            this.lblCargo.Location = new System.Drawing.Point(20, 380);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(63, 18);
             this.lblCargo.TabIndex = 179;
@@ -759,6 +803,7 @@
             // 
             // buttonBuscarCEP
             // 
+            this.buttonBuscarCEP.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonBuscarCEP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(186)))), ((int)(((byte)(69)))));
             this.buttonBuscarCEP.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
             this.buttonBuscarCEP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
@@ -768,6 +813,7 @@
             this.buttonBuscarCEP.IconColor = System.Drawing.Color.White;
             this.buttonBuscarCEP.IconSize = 16;
             this.buttonBuscarCEP.Location = new System.Drawing.Point(114, 257);
+            this.buttonBuscarCEP.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.buttonBuscarCEP.Name = "buttonBuscarCEP";
             this.buttonBuscarCEP.Rotation = 0D;
             this.buttonBuscarCEP.Size = new System.Drawing.Size(35, 35);
@@ -789,7 +835,7 @@
             this.btnEnviar.IconColor = System.Drawing.Color.White;
             this.btnEnviar.IconSize = 16;
             this.btnEnviar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEnviar.Location = new System.Drawing.Point(895, 481);
+            this.btnEnviar.Location = new System.Drawing.Point(891, 481);
             this.btnEnviar.Margin = new System.Windows.Forms.Padding(10);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Rotation = 0D;
@@ -803,9 +849,8 @@
             // FormMotoristas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1044, 535);
+            this.ClientSize = new System.Drawing.Size(1040, 535);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.buttonBuscarCEP);
             this.Controls.Add(this.combCargo);

@@ -74,6 +74,7 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
@@ -131,6 +132,18 @@
     <Compile Include="TMSForms\List\FormMotoristas.Designer.cs">
       <DependentUpon>FormMotoristas.cs</DependentUpon>
     </Compile>
+    <Compile Include="TMSForms\List\FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMSForms\List\FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TMSForms\List\FormViagens .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMSForms\List\FormViagens .Designer.cs">
+      <DependentUpon>FormViagens .cs</DependentUpon>
+    </Compile>
     <Compile Include="TMSForms\List\FormVeiculos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +189,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\List\FormMotoristas.resx">
       <DependentUpon>FormMotoristas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\List\FormClientes.aa.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\List\FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\List\FormViagens .aa.resx">
+      <DependentUpon>FormViagens .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\List\FormViagens .resx">
+      <DependentUpon>FormViagens .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\List\FormVeiculos.aa.resx">
       <DependentUpon>FormVeiculos.cs</DependentUpon>

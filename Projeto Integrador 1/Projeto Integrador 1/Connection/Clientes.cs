@@ -96,6 +96,8 @@ namespace Projeto_Integrador_1.Connection
                                 TipoPessoa = data["tipo_pessoa"],
                                 CNPJ = data["cnpj"],
                                 RazaoSocial = data["razao_social"],
+                                Cidade = data["cidade"],
+                                UF = data["estado"]
                             }    
                         );
                     }

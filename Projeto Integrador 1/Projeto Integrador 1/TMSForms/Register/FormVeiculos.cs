@@ -122,14 +122,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 }
                 else
                 {
-                    string ShowMessage = "";
-
-                    foreach (dynamic Erro in Validate.getErrors())
-                    {
-                        ShowMessage += Erro.Message + "\n";
-                    }
-
-                    MessageBox.Show(ShowMessage);
+                    Validate.ErrorMessageBox();
                 }
             }
             catch (Exception ex) {

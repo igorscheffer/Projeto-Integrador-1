@@ -155,11 +155,13 @@ namespace Projeto_Integrador_1
         private void btnClientes_Click(object sender, EventArgs e)
         {
             AtivarBotao(sender);
+            AtivarForm(new TMSForms.List.FormClientes(this));
         }
 
         private void btnViagens_Click(object sender, EventArgs e)
         {
             AtivarBotao(sender);
+            AtivarForm(new TMSForms.List.FormViagens(this));
         }
 
         private void btnManutencoes_Click(object sender, EventArgs e)

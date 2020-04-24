@@ -118,63 +118,57 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gridVeiculos.ColumnHeadersHeight" type="System.Int32, mscorlib">
+  <data name="gridClientes.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
   <metadata name="frota.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="frota.HeaderText" xml:space="preserve">
-    <value>Frota</value>
-  </data>
-  <metadata name="placa.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="placa.HeaderText" xml:space="preserve">
-    <value>Placa</value>
-  </data>
-  <metadata name="veiculo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="veiculo.HeaderText" xml:space="preserve">
-    <value>Veiculo</value>
+    <value>Tipo Cadastro</value>
   </data>
   <metadata name="cor.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="cor.HeaderText" xml:space="preserve">
-    <value>Cor</value>
+    <value>Tipo Pessoa</value>
   </data>
-  <metadata name="status.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="placa.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="status.HeaderText" xml:space="preserve">
-    <value>Status</value>
+  <data name="placa.HeaderText" xml:space="preserve">
+    <value>CPF/CNPJ</value>
+  </data>
+  <metadata name="veiculo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="veiculo.HeaderText" xml:space="preserve">
+    <value>Nome/Razão Social</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gridVeiculos.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="gridClientes.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="gridVeiculos.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="gridClientes.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 55</value>
   </data>
-  <data name="gridVeiculos.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="gridClientes.Size" type="System.Drawing.Size, System.Drawing">
     <value>1040, 395</value>
   </data>
-  <data name="gridVeiculos.TabIndex" type="System.Int32, mscorlib">
+  <data name="gridClientes.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;gridVeiculos.Name" xml:space="preserve">
-    <value>gridVeiculos</value>
+  <data name="&gt;&gt;gridClientes.Name" xml:space="preserve">
+    <value>gridClientes</value>
   </data>
-  <data name="&gt;&gt;gridVeiculos.Type" xml:space="preserve">
+  <data name="&gt;&gt;gridClientes.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaDataGridView, Guna.UI, Version=1.9.0.0, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="&gt;&gt;gridVeiculos.Parent" xml:space="preserve">
+  <data name="&gt;&gt;gridClientes.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;gridVeiculos.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;gridClientes.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="btnCadastrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -250,12 +244,18 @@
     <value>1040, 450</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Veiculos</value>
+    <value>Clientes</value>
   </data>
   <data name="&gt;&gt;frota.Name" xml:space="preserve">
     <value>frota</value>
   </data>
   <data name="&gt;&gt;frota.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cor.Name" xml:space="preserve">
+    <value>cor</value>
+  </data>
+  <data name="&gt;&gt;cor.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;placa.Name" xml:space="preserve">
@@ -270,20 +270,8 @@
   <data name="&gt;&gt;veiculo.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cor.Name" xml:space="preserve">
-    <value>cor</value>
-  </data>
-  <data name="&gt;&gt;cor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;status.Name" xml:space="preserve">
-    <value>status</value>
-  </data>
-  <data name="&gt;&gt;status.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormVeiculos</value>
+    <value>FormClientes</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

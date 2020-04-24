@@ -48,7 +48,7 @@ namespace Projeto_Integrador_1.Connection
                     query.Parameters.AddWithValue("@rg", this.RG);
                     query.Parameters.AddWithValue("@status", this.Status);
                     query.Parameters.AddWithValue("@cnh", this.CNH);
-                    query.Parameters.AddWithValue("@vencimento", this.Vencimento);
+                    query.Parameters.AddWithValue("@vencimento", DateTime.Parse(this.Vencimento));
                     query.Parameters.AddWithValue("@categoria", this.Categoria);
                     query.Parameters.AddWithValue("@sexo", this.Sexo);
                     query.Parameters.AddWithValue("@estado_civil", this.EstadoCivil);
@@ -96,7 +96,11 @@ namespace Projeto_Integrador_1.Connection
                             {
                                 Id = data["id"],
                                 Nome = data["nome"],
-                                CNH = data["cnh"]
+                                RG = data["RG"],
+                                CPF = data["CPF"],
+                                CNH = data["cnh"],
+                                Categoria = data["categoria"],
+                                Vencimento = data["vencimento"]
                             }
                         );
                     }

@@ -143,6 +143,7 @@
             this.textGridAbastecimentoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textGridAbastecimentoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.btnAddPosto = new FontAwesome.Sharp.IconButton();
             this.combAbastecimentoPosto = new Guna.UI.WinForms.GunaComboBox();
             this.combAbastecimentoCombustivel = new Guna.UI.WinForms.GunaComboBox();
             this.label39 = new System.Windows.Forms.Label();
@@ -175,6 +176,7 @@
             // 
             // textCodigoInterno
             // 
+            this.textCodigoInterno.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCodigoInterno.BackColor = System.Drawing.Color.White;
             this.textCodigoInterno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textCodigoInterno.BaseColor = System.Drawing.Color.White;
@@ -185,20 +187,21 @@
             this.textCodigoInterno.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textCodigoInterno.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textCodigoInterno.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCodigoInterno.Location = new System.Drawing.Point(18, 189);
-            this.textCodigoInterno.Margin = new System.Windows.Forms.Padding(15, 5, 15, 15);
+            this.textCodigoInterno.Location = new System.Drawing.Point(20, 189);
+            this.textCodigoInterno.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textCodigoInterno.MaxLength = 20;
             this.textCodigoInterno.Name = "textCodigoInterno";
             this.textCodigoInterno.PasswordChar = '\0';
-            this.textCodigoInterno.Size = new System.Drawing.Size(150, 35);
+            this.textCodigoInterno.Size = new System.Drawing.Size(153, 35);
             this.textCodigoInterno.TabIndex = 4;
             // 
             // lblCNPJ
             // 
+            this.lblCNPJ.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCNPJ.AutoSize = true;
             this.lblCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCNPJ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCNPJ.Location = new System.Drawing.Point(15, 163);
+            this.lblCNPJ.Location = new System.Drawing.Point(20, 163);
             this.lblCNPJ.Name = "lblCNPJ";
             this.lblCNPJ.Size = new System.Drawing.Size(117, 18);
             this.lblCNPJ.TabIndex = 135;
@@ -206,21 +209,23 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.Silver;
-            this.panel1.Location = new System.Drawing.Point(14, 36);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
+            this.panel1.Location = new System.Drawing.Point(20, 36);
+            this.panel1.Margin = new System.Windows.Forms.Padding(10, 3, 10, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1017, 2);
+            this.panel1.Size = new System.Drawing.Size(1000, 2);
             this.panel1.TabIndex = 137;
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Silver;
-            this.label10.Location = new System.Drawing.Point(8, 10);
+            this.label10.Location = new System.Drawing.Point(20, 10);
             this.label10.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(237, 20);
@@ -229,6 +234,7 @@
             // 
             // combRemetente
             // 
+            this.combRemetente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combRemetente.BackColor = System.Drawing.Color.Transparent;
             this.combRemetente.BaseColor = System.Drawing.Color.White;
             this.combRemetente.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -241,20 +247,23 @@
             this.combRemetente.FormattingEnabled = true;
             this.combRemetente.IntegralHeight = false;
             this.combRemetente.ItemHeight = 29;
-            this.combRemetente.Location = new System.Drawing.Point(18, 76);
+            this.combRemetente.Location = new System.Drawing.Point(20, 76);
             this.combRemetente.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.combRemetente.Name = "combRemetente";
             this.combRemetente.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combRemetente.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combRemetente.Size = new System.Drawing.Size(345, 35);
             this.combRemetente.TabIndex = 1;
+            this.combRemetente.Tag = "Tag";
+            this.combRemetente.SelectedValueChanged += new System.EventHandler(this.OnChangeCliente);
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(15, 50);
+            this.label1.Location = new System.Drawing.Point(20, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 18);
             this.label1.TabIndex = 192;
@@ -262,6 +271,7 @@
             // 
             // combDestinatario
             // 
+            this.combDestinatario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combDestinatario.BackColor = System.Drawing.Color.Transparent;
             this.combDestinatario.BaseColor = System.Drawing.Color.White;
             this.combDestinatario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -281,13 +291,15 @@
             this.combDestinatario.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combDestinatario.Size = new System.Drawing.Size(345, 35);
             this.combDestinatario.TabIndex = 2;
+            this.combDestinatario.SelectedValueChanged += new System.EventHandler(this.OnChangeCliente);
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(415, 50);
+            this.label2.Location = new System.Drawing.Point(418, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 18);
             this.label2.TabIndex = 194;
@@ -295,6 +307,7 @@
             // 
             // combTomador
             // 
+            this.combTomador.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combTomador.BackColor = System.Drawing.Color.Transparent;
             this.combTomador.BaseColor = System.Drawing.Color.White;
             this.combTomador.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -312,15 +325,16 @@
             this.combTomador.Name = "combTomador";
             this.combTomador.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combTomador.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combTomador.Size = new System.Drawing.Size(206, 35);
+            this.combTomador.Size = new System.Drawing.Size(202, 35);
             this.combTomador.TabIndex = 3;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(815, 50);
+            this.label3.Location = new System.Drawing.Point(818, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 18);
             this.label3.TabIndex = 196;
@@ -328,21 +342,23 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.Color.Silver;
-            this.panel2.Location = new System.Drawing.Point(14, 149);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
+            this.panel2.Location = new System.Drawing.Point(20, 149);
+            this.panel2.Margin = new System.Windows.Forms.Padding(10, 3, 10, 15);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1017, 2);
+            this.panel2.Size = new System.Drawing.Size(1000, 2);
             this.panel2.TabIndex = 198;
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(8, 123);
+            this.label4.Location = new System.Drawing.Point(20, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(223, 20);
             this.label4.TabIndex = 197;
@@ -350,6 +366,7 @@
             // 
             // combTipoViagem
             // 
+            this.combTipoViagem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combTipoViagem.BackColor = System.Drawing.Color.Transparent;
             this.combTipoViagem.BaseColor = System.Drawing.Color.White;
             this.combTipoViagem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -367,15 +384,16 @@
             this.combTipoViagem.Name = "combTipoViagem";
             this.combTipoViagem.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combTipoViagem.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combTipoViagem.Size = new System.Drawing.Size(161, 35);
+            this.combTipoViagem.Size = new System.Drawing.Size(157, 35);
             this.combTipoViagem.TabIndex = 5;
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(190, 163);
+            this.label6.Location = new System.Drawing.Point(193, 163);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 18);
             this.label6.TabIndex = 202;
@@ -383,6 +401,7 @@
             // 
             // combVeiculo
             // 
+            this.combVeiculo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combVeiculo.BackColor = System.Drawing.Color.Transparent;
             this.combVeiculo.BaseColor = System.Drawing.Color.White;
             this.combVeiculo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -395,7 +414,7 @@
             this.combVeiculo.FormattingEnabled = true;
             this.combVeiculo.IntegralHeight = false;
             this.combVeiculo.ItemHeight = 29;
-            this.combVeiculo.Location = new System.Drawing.Point(374, 189);
+            this.combVeiculo.Location = new System.Drawing.Point(370, 189);
             this.combVeiculo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.combVeiculo.Name = "combVeiculo";
             this.combVeiculo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
@@ -405,10 +424,11 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(371, 163);
+            this.label7.Location = new System.Drawing.Point(370, 163);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 18);
             this.label7.TabIndex = 205;
@@ -416,6 +436,7 @@
             // 
             // combReboque
             // 
+            this.combReboque.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combReboque.BackColor = System.Drawing.Color.Transparent;
             this.combReboque.BaseColor = System.Drawing.Color.White;
             this.combReboque.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -428,7 +449,7 @@
             this.combReboque.FormattingEnabled = true;
             this.combReboque.IntegralHeight = false;
             this.combReboque.ItemHeight = 29;
-            this.combReboque.Location = new System.Drawing.Point(709, 189);
+            this.combReboque.Location = new System.Drawing.Point(705, 189);
             this.combReboque.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.combReboque.Name = "combReboque";
             this.combReboque.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
@@ -438,6 +459,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -449,6 +471,7 @@
             // 
             // btnAddRemetente
             // 
+            this.btnAddRemetente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAddRemetente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(186)))), ((int)(((byte)(69)))));
             this.btnAddRemetente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
             this.btnAddRemetente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
@@ -457,7 +480,7 @@
             this.btnAddRemetente.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnAddRemetente.IconColor = System.Drawing.Color.White;
             this.btnAddRemetente.IconSize = 16;
-            this.btnAddRemetente.Location = new System.Drawing.Point(363, 76);
+            this.btnAddRemetente.Location = new System.Drawing.Point(364, 76);
             this.btnAddRemetente.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.btnAddRemetente.Name = "btnAddRemetente";
             this.btnAddRemetente.Rotation = 0D;
@@ -468,6 +491,7 @@
             // 
             // btnAddReboque
             // 
+            this.btnAddReboque.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAddReboque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(186)))), ((int)(((byte)(69)))));
             this.btnAddReboque.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
             this.btnAddReboque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
@@ -476,7 +500,7 @@
             this.btnAddReboque.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnAddReboque.IconColor = System.Drawing.Color.White;
             this.btnAddReboque.IconSize = 16;
-            this.btnAddReboque.Location = new System.Drawing.Point(989, 189);
+            this.btnAddReboque.Location = new System.Drawing.Point(985, 189);
             this.btnAddReboque.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.btnAddReboque.Name = "btnAddReboque";
             this.btnAddReboque.Rotation = 0D;
@@ -487,6 +511,7 @@
             // 
             // btnAddVeiculo
             // 
+            this.btnAddVeiculo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAddVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(186)))), ((int)(((byte)(69)))));
             this.btnAddVeiculo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
             this.btnAddVeiculo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
@@ -495,7 +520,7 @@
             this.btnAddVeiculo.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnAddVeiculo.IconColor = System.Drawing.Color.White;
             this.btnAddVeiculo.IconSize = 16;
-            this.btnAddVeiculo.Location = new System.Drawing.Point(654, 189);
+            this.btnAddVeiculo.Location = new System.Drawing.Point(650, 189);
             this.btnAddVeiculo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.btnAddVeiculo.Name = "btnAddVeiculo";
             this.btnAddVeiculo.Rotation = 0D;
@@ -518,7 +543,7 @@
             this.btnEnviar.IconColor = System.Drawing.Color.White;
             this.btnEnviar.IconSize = 16;
             this.btnEnviar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEnviar.Location = new System.Drawing.Point(895, 604);
+            this.btnEnviar.Location = new System.Drawing.Point(890, 560);
             this.btnEnviar.Margin = new System.Windows.Forms.Padding(10);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Rotation = 0D;
@@ -531,6 +556,7 @@
             // 
             // btnAddDestinatario
             // 
+            this.btnAddDestinatario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAddDestinatario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(186)))), ((int)(((byte)(69)))));
             this.btnAddDestinatario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
             this.btnAddDestinatario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
@@ -550,6 +576,7 @@
             // 
             // combMotorista
             // 
+            this.combMotorista.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combMotorista.BackColor = System.Drawing.Color.Transparent;
             this.combMotorista.BaseColor = System.Drawing.Color.White;
             this.combMotorista.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -562,20 +589,21 @@
             this.combMotorista.FormattingEnabled = true;
             this.combMotorista.IntegralHeight = false;
             this.combMotorista.ItemHeight = 29;
-            this.combMotorista.Location = new System.Drawing.Point(18, 262);
+            this.combMotorista.Location = new System.Drawing.Point(20, 262);
             this.combMotorista.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.combMotorista.Name = "combMotorista";
             this.combMotorista.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combMotorista.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combMotorista.Size = new System.Drawing.Size(220, 35);
+            this.combMotorista.Size = new System.Drawing.Size(218, 35);
             this.combMotorista.TabIndex = 8;
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(15, 236);
+            this.label9.Location = new System.Drawing.Point(20, 236);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(96, 18);
             this.label9.TabIndex = 213;
@@ -583,6 +611,7 @@
             // 
             // btnAddMotorista
             // 
+            this.btnAddMotorista.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAddMotorista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(186)))), ((int)(((byte)(69)))));
             this.btnAddMotorista.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
             this.btnAddMotorista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
@@ -602,6 +631,7 @@
             // 
             // textSaidaCidade
             // 
+            this.textSaidaCidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textSaidaCidade.BackColor = System.Drawing.Color.White;
             this.textSaidaCidade.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textSaidaCidade.BaseColor = System.Drawing.Color.White;
@@ -622,10 +652,11 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(295, 236);
+            this.label11.Location = new System.Drawing.Point(298, 236);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(109, 18);
             this.label11.TabIndex = 216;
@@ -633,6 +664,7 @@
             // 
             // combSaidaUF
             // 
+            this.combSaidaUF.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combSaidaUF.BackColor = System.Drawing.Color.Transparent;
             this.combSaidaUF.BaseColor = System.Drawing.Color.White;
             this.combSaidaUF.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -655,10 +687,11 @@
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(474, 236);
+            this.label12.Location = new System.Drawing.Point(477, 236);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(28, 18);
             this.label12.TabIndex = 218;
@@ -666,6 +699,7 @@
             // 
             // combDestinoUF
             // 
+            this.combDestinoUF.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combDestinoUF.BackColor = System.Drawing.Color.Transparent;
             this.combDestinoUF.BaseColor = System.Drawing.Color.White;
             this.combDestinoUF.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -688,10 +722,11 @@
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(793, 236);
+            this.label13.Location = new System.Drawing.Point(796, 236);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(28, 18);
             this.label13.TabIndex = 222;
@@ -699,6 +734,7 @@
             // 
             // textDestinoCidade
             // 
+            this.textDestinoCidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textDestinoCidade.BackColor = System.Drawing.Color.White;
             this.textDestinoCidade.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textDestinoCidade.BaseColor = System.Drawing.Color.White;
@@ -719,10 +755,11 @@
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label14.Location = new System.Drawing.Point(614, 236);
+            this.label14.Location = new System.Drawing.Point(617, 236);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(133, 18);
             this.label14.TabIndex = 220;
@@ -730,6 +767,7 @@
             // 
             // combStatus
             // 
+            this.combStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combStatus.BackColor = System.Drawing.Color.Transparent;
             this.combStatus.BaseColor = System.Drawing.Color.White;
             this.combStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -747,15 +785,16 @@
             this.combStatus.Name = "combStatus";
             this.combStatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combStatus.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combStatus.Size = new System.Drawing.Size(93, 35);
+            this.combStatus.Size = new System.Drawing.Size(89, 35);
             this.combStatus.TabIndex = 13;
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(928, 236);
+            this.label15.Location = new System.Drawing.Point(931, 236);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(66, 18);
             this.label15.TabIndex = 224;
@@ -763,6 +802,7 @@
             // 
             // timeDataSaida
             // 
+            this.timeDataSaida.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeDataSaida.BaseColor = System.Drawing.Color.White;
             this.timeDataSaida.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeDataSaida.BorderSize = 1;
@@ -772,7 +812,7 @@
             this.timeDataSaida.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.timeDataSaida.ForeColor = System.Drawing.Color.Black;
             this.timeDataSaida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeDataSaida.Location = new System.Drawing.Point(18, 335);
+            this.timeDataSaida.Location = new System.Drawing.Point(20, 335);
             this.timeDataSaida.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.timeDataSaida.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.timeDataSaida.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -781,17 +821,18 @@
             this.timeDataSaida.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.timeDataSaida.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.timeDataSaida.OnPressedColor = System.Drawing.Color.Black;
-            this.timeDataSaida.Size = new System.Drawing.Size(180, 35);
+            this.timeDataSaida.Size = new System.Drawing.Size(178, 35);
             this.timeDataSaida.TabIndex = 14;
             this.timeDataSaida.Text = "22/04/2020 12:57";
             this.timeDataSaida.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
             // label16
             // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label16.Location = new System.Drawing.Point(15, 309);
+            this.label16.Location = new System.Drawing.Point(20, 309);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(92, 18);
             this.label16.TabIndex = 230;
@@ -799,6 +840,7 @@
             // 
             // timeDataEntrega
             // 
+            this.timeDataEntrega.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeDataEntrega.BaseColor = System.Drawing.Color.White;
             this.timeDataEntrega.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeDataEntrega.BorderSize = 1;
@@ -824,10 +866,11 @@
             // 
             // label18
             // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label18.Location = new System.Drawing.Point(215, 309);
+            this.label18.Location = new System.Drawing.Point(218, 309);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(122, 18);
             this.label18.TabIndex = 232;
@@ -835,6 +878,7 @@
             // 
             // timeDataChegada
             // 
+            this.timeDataChegada.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeDataChegada.BaseColor = System.Drawing.Color.White;
             this.timeDataChegada.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeDataChegada.BorderSize = 1;
@@ -860,10 +904,11 @@
             // 
             // label19
             // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label19.Location = new System.Drawing.Point(415, 309);
+            this.label19.Location = new System.Drawing.Point(418, 309);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(123, 18);
             this.label19.TabIndex = 234;
@@ -871,6 +916,7 @@
             // 
             // textHodometroSaida
             // 
+            this.textHodometroSaida.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textHodometroSaida.BackColor = System.Drawing.Color.White;
             this.textHodometroSaida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textHodometroSaida.BaseColor = System.Drawing.Color.White;
@@ -881,20 +927,21 @@
             this.textHodometroSaida.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textHodometroSaida.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textHodometroSaida.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textHodometroSaida.Location = new System.Drawing.Point(18, 408);
+            this.textHodometroSaida.Location = new System.Drawing.Point(20, 408);
             this.textHodometroSaida.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textHodometroSaida.MaxLength = 20;
             this.textHodometroSaida.Name = "textHodometroSaida";
             this.textHodometroSaida.PasswordChar = '\0';
-            this.textHodometroSaida.Size = new System.Drawing.Size(130, 35);
+            this.textHodometroSaida.Size = new System.Drawing.Size(128, 35);
             this.textHodometroSaida.TabIndex = 17;
             // 
             // label20
             // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label20.Location = new System.Drawing.Point(15, 382);
+            this.label20.Location = new System.Drawing.Point(20, 382);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(77, 18);
             this.label20.TabIndex = 237;
@@ -902,6 +949,7 @@
             // 
             // textHodometroEntrega
             // 
+            this.textHodometroEntrega.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textHodometroEntrega.BackColor = System.Drawing.Color.White;
             this.textHodometroEntrega.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textHodometroEntrega.BaseColor = System.Drawing.Color.White;
@@ -922,10 +970,11 @@
             // 
             // label21
             // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label21.Location = new System.Drawing.Point(165, 382);
+            this.label21.Location = new System.Drawing.Point(168, 382);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(107, 18);
             this.label21.TabIndex = 239;
@@ -933,6 +982,7 @@
             // 
             // textHodometroChegada
             // 
+            this.textHodometroChegada.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textHodometroChegada.BackColor = System.Drawing.Color.White;
             this.textHodometroChegada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textHodometroChegada.BaseColor = System.Drawing.Color.White;
@@ -953,10 +1003,11 @@
             // 
             // label22
             // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label22.Location = new System.Drawing.Point(315, 382);
+            this.label22.Location = new System.Drawing.Point(318, 382);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(108, 18);
             this.label22.TabIndex = 241;
@@ -964,6 +1015,7 @@
             // 
             // textHodometroPercorrido
             // 
+            this.textHodometroPercorrido.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textHodometroPercorrido.BackColor = System.Drawing.Color.White;
             this.textHodometroPercorrido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textHodometroPercorrido.BaseColor = System.Drawing.Color.White;
@@ -984,10 +1036,11 @@
             // 
             // label23
             // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label23.Location = new System.Drawing.Point(465, 382);
+            this.label23.Location = new System.Drawing.Point(468, 382);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(110, 18);
             this.label23.TabIndex = 243;
@@ -995,10 +1048,11 @@
             // 
             // label24
             // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label24.Location = new System.Drawing.Point(613, 309);
+            this.label24.Location = new System.Drawing.Point(617, 309);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(270, 18);
             this.label24.TabIndex = 245;
@@ -1006,13 +1060,14 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.panel3.Controls.Add(this.textInformacoesComplementares);
             this.panel3.Location = new System.Drawing.Point(616, 335);
             this.panel3.Margin = new System.Windows.Forms.Padding(15, 5, 15, 15);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(1);
-            this.panel3.Size = new System.Drawing.Size(408, 181);
+            this.panel3.Size = new System.Drawing.Size(404, 181);
             this.panel3.TabIndex = 246;
             // 
             // textInformacoesComplementares
@@ -1024,12 +1079,13 @@
             this.textInformacoesComplementares.Margin = new System.Windows.Forms.Padding(0);
             this.textInformacoesComplementares.MaxLength = 1000;
             this.textInformacoesComplementares.Name = "textInformacoesComplementares";
-            this.textInformacoesComplementares.Size = new System.Drawing.Size(406, 179);
+            this.textInformacoesComplementares.Size = new System.Drawing.Size(402, 179);
             this.textInformacoesComplementares.TabIndex = 22;
             this.textInformacoesComplementares.Text = "";
             // 
             // textValor
             // 
+            this.textValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textValor.BackColor = System.Drawing.Color.White;
             this.textValor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textValor.BaseColor = System.Drawing.Color.White;
@@ -1040,7 +1096,7 @@
             this.textValor.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textValor.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textValor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textValor.Location = new System.Drawing.Point(18, 481);
+            this.textValor.Location = new System.Drawing.Point(20, 481);
             this.textValor.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textValor.MaxLength = 20;
             this.textValor.Name = "textValor";
@@ -1050,10 +1106,11 @@
             // 
             // label25
             // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label25.Location = new System.Drawing.Point(15, 455);
+            this.label25.Location = new System.Drawing.Point(20, 455);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(137, 18);
             this.label25.TabIndex = 248;
@@ -1061,21 +1118,23 @@
             // 
             // panel5
             // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel5.ForeColor = System.Drawing.Color.Silver;
-            this.panel5.Location = new System.Drawing.Point(9, 36);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
+            this.panel5.Location = new System.Drawing.Point(20, 36);
+            this.panel5.Margin = new System.Windows.Forms.Padding(10, 3, 10, 15);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1017, 2);
+            this.panel5.Size = new System.Drawing.Size(1000, 2);
             this.panel5.TabIndex = 260;
             // 
             // label29
             // 
+            this.label29.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Silver;
-            this.label29.Location = new System.Drawing.Point(3, 10);
+            this.label29.Location = new System.Drawing.Point(20, 10);
             this.label29.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(225, 20);
@@ -1084,6 +1143,7 @@
             // 
             // timeCustoData
             // 
+            this.timeCustoData.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeCustoData.BaseColor = System.Drawing.Color.White;
             this.timeCustoData.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeCustoData.BorderSize = 1;
@@ -1093,7 +1153,7 @@
             this.timeCustoData.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.timeCustoData.ForeColor = System.Drawing.Color.Black;
             this.timeCustoData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeCustoData.Location = new System.Drawing.Point(13, 76);
+            this.timeCustoData.Location = new System.Drawing.Point(20, 76);
             this.timeCustoData.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.timeCustoData.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.timeCustoData.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -1109,10 +1169,11 @@
             // 
             // label30
             // 
+            this.label30.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label30.Location = new System.Drawing.Point(10, 50);
+            this.label30.Location = new System.Drawing.Point(20, 50);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(46, 18);
             this.label30.TabIndex = 262;
@@ -1120,6 +1181,7 @@
             // 
             // textCustoDescricao
             // 
+            this.textCustoDescricao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCustoDescricao.BackColor = System.Drawing.Color.White;
             this.textCustoDescricao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textCustoDescricao.BaseColor = System.Drawing.Color.White;
@@ -1140,10 +1202,11 @@
             // 
             // label31
             // 
+            this.label31.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label31.Location = new System.Drawing.Point(170, 50);
+            this.label31.Location = new System.Drawing.Point(173, 50);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(96, 18);
             this.label31.TabIndex = 264;
@@ -1151,6 +1214,7 @@
             // 
             // btnAddCusto
             // 
+            this.btnAddCusto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAddCusto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(186)))), ((int)(((byte)(69)))));
             this.btnAddCusto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
             this.btnAddCusto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
@@ -1159,7 +1223,7 @@
             this.btnAddCusto.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnAddCusto.IconColor = System.Drawing.Color.White;
             this.btnAddCusto.IconSize = 16;
-            this.btnAddCusto.Location = new System.Drawing.Point(983, 76);
+            this.btnAddCusto.Location = new System.Drawing.Point(985, 76);
             this.btnAddCusto.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.btnAddCusto.Name = "btnAddCusto";
             this.btnAddCusto.Rotation = 0D;
@@ -1170,6 +1234,7 @@
             // 
             // textCustoValor
             // 
+            this.textCustoValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCustoValor.BackColor = System.Drawing.Color.White;
             this.textCustoValor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textCustoValor.BaseColor = System.Drawing.Color.White;
@@ -1185,15 +1250,16 @@
             this.textCustoValor.MaxLength = 20;
             this.textCustoValor.Name = "textCustoValor";
             this.textCustoValor.PasswordChar = '\0';
-            this.textCustoValor.Size = new System.Drawing.Size(120, 35);
+            this.textCustoValor.Size = new System.Drawing.Size(122, 35);
             this.textCustoValor.TabIndex = 267;
             // 
             // label32
             // 
+            this.label32.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label32.Location = new System.Drawing.Point(840, 50);
+            this.label32.Location = new System.Drawing.Point(843, 50);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(57, 18);
             this.label32.TabIndex = 268;
@@ -1201,6 +1267,7 @@
             // 
             // textCustoQTD
             // 
+            this.textCustoQTD.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCustoQTD.BackColor = System.Drawing.Color.White;
             this.textCustoQTD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textCustoQTD.BaseColor = System.Drawing.Color.White;
@@ -1221,10 +1288,11 @@
             // 
             // label33
             // 
+            this.label33.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label33.Location = new System.Drawing.Point(700, 50);
+            this.label33.Location = new System.Drawing.Point(703, 50);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(44, 18);
             this.label33.TabIndex = 266;
@@ -1244,12 +1312,13 @@
             this.tabViagem.Name = "tabViagem";
             this.tabViagem.Padding = new System.Drawing.Point(0, 0);
             this.tabViagem.SelectedIndex = 0;
-            this.tabViagem.Size = new System.Drawing.Size(1044, 658);
+            this.tabViagem.Size = new System.Drawing.Size(1040, 658);
             this.tabViagem.TabIndex = 270;
             // 
             // tabPanelViagem
             // 
             this.tabPanelViagem.BackColor = System.Drawing.Color.White;
+            this.tabPanelViagem.Controls.Add(this.btnEnviar);
             this.tabPanelViagem.Controls.Add(this.label10);
             this.tabPanelViagem.Controls.Add(this.lblCNPJ);
             this.tabPanelViagem.Controls.Add(this.textCodigoInterno);
@@ -1306,7 +1375,7 @@
             this.tabPanelViagem.Location = new System.Drawing.Point(4, 44);
             this.tabPanelViagem.Margin = new System.Windows.Forms.Padding(0);
             this.tabPanelViagem.Name = "tabPanelViagem";
-            this.tabPanelViagem.Size = new System.Drawing.Size(1036, 610);
+            this.tabPanelViagem.Size = new System.Drawing.Size(1032, 610);
             this.tabPanelViagem.TabIndex = 0;
             this.tabPanelViagem.Text = "      VIAGEM      ";
             // 
@@ -1317,7 +1386,7 @@
             this.tabPanelCargas.Location = new System.Drawing.Point(4, 44);
             this.tabPanelCargas.Margin = new System.Windows.Forms.Padding(0);
             this.tabPanelCargas.Name = "tabPanelCargas";
-            this.tabPanelCargas.Size = new System.Drawing.Size(1036, 610);
+            this.tabPanelCargas.Size = new System.Drawing.Size(1032, 610);
             this.tabPanelCargas.TabIndex = 1;
             this.tabPanelCargas.Text = "      CARGAS      ";
             this.tabPanelCargas.UseVisualStyleBackColor = true;
@@ -1329,7 +1398,7 @@
             this.panel9.Location = new System.Drawing.Point(0, 111);
             this.panel9.Margin = new System.Windows.Forms.Padding(0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1036, 499);
+            this.panel9.Size = new System.Drawing.Size(1032, 499);
             this.panel9.TabIndex = 273;
             // 
             // gridCargas
@@ -1338,8 +1407,6 @@
             this.gridCargas.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.gridCargas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridCargas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.gridCargas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridCargas.BackgroundColor = System.Drawing.Color.White;
             this.gridCargas.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1369,9 +1436,10 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridCargas.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridCargas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridCargas.EnableHeadersVisualStyles = false;
             this.gridCargas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.gridCargas.Location = new System.Drawing.Point(18, 20);
+            this.gridCargas.Location = new System.Drawing.Point(0, 0);
             this.gridCargas.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.gridCargas.MultiSelect = false;
             this.gridCargas.Name = "gridCargas";
@@ -1380,7 +1448,7 @@
             this.gridCargas.RowTemplate.DividerHeight = 1;
             this.gridCargas.RowTemplate.Height = 30;
             this.gridCargas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridCargas.Size = new System.Drawing.Size(1006, 459);
+            this.gridCargas.Size = new System.Drawing.Size(1032, 499);
             this.gridCargas.TabIndex = 258;
             this.gridCargas.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.gridCargas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -1442,15 +1510,16 @@
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1036, 111);
+            this.panel8.Size = new System.Drawing.Size(1032, 111);
             this.panel8.TabIndex = 272;
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Silver;
-            this.label5.Location = new System.Drawing.Point(11, 10);
+            this.label5.Location = new System.Drawing.Point(20, 10);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(228, 20);
@@ -1459,6 +1528,7 @@
             // 
             // btnAddCarga
             // 
+            this.btnAddCarga.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAddCarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(186)))), ((int)(((byte)(69)))));
             this.btnAddCarga.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
             this.btnAddCarga.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
@@ -1467,7 +1537,7 @@
             this.btnAddCarga.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnAddCarga.IconColor = System.Drawing.Color.White;
             this.btnAddCarga.IconSize = 16;
-            this.btnAddCarga.Location = new System.Drawing.Point(989, 76);
+            this.btnAddCarga.Location = new System.Drawing.Point(985, 76);
             this.btnAddCarga.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.btnAddCarga.Name = "btnAddCarga";
             this.btnAddCarga.Rotation = 0D;
@@ -1478,17 +1548,19 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.ForeColor = System.Drawing.Color.Silver;
-            this.panel4.Location = new System.Drawing.Point(14, 36);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
+            this.panel4.Location = new System.Drawing.Point(20, 36);
+            this.panel4.Margin = new System.Windows.Forms.Padding(10, 3, 10, 15);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1017, 2);
+            this.panel4.Size = new System.Drawing.Size(1000, 2);
             this.panel4.TabIndex = 200;
             // 
             // textCargaValor
             // 
+            this.textCargaValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCargaValor.BackColor = System.Drawing.Color.White;
             this.textCargaValor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textCargaValor.BaseColor = System.Drawing.Color.White;
@@ -1499,7 +1571,7 @@
             this.textCargaValor.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textCargaValor.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textCargaValor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCargaValor.Location = new System.Drawing.Point(848, 76);
+            this.textCargaValor.Location = new System.Drawing.Point(844, 76);
             this.textCargaValor.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textCargaValor.MaxLength = 20;
             this.textCargaValor.Name = "textCargaValor";
@@ -1509,10 +1581,11 @@
             // 
             // label17
             // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label17.Location = new System.Drawing.Point(15, 50);
+            this.label17.Location = new System.Drawing.Point(20, 50);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(43, 18);
             this.label17.TabIndex = 250;
@@ -1520,10 +1593,11 @@
             // 
             // label28
             // 
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label28.Location = new System.Drawing.Point(845, 50);
+            this.label28.Location = new System.Drawing.Point(844, 50);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(57, 18);
             this.label28.TabIndex = 256;
@@ -1531,6 +1605,7 @@
             // 
             // textCargaNFE
             // 
+            this.textCargaNFE.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCargaNFE.BackColor = System.Drawing.Color.White;
             this.textCargaNFE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textCargaNFE.BaseColor = System.Drawing.Color.White;
@@ -1541,16 +1616,17 @@
             this.textCargaNFE.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textCargaNFE.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textCargaNFE.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCargaNFE.Location = new System.Drawing.Point(18, 76);
+            this.textCargaNFE.Location = new System.Drawing.Point(20, 76);
             this.textCargaNFE.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textCargaNFE.MaxLength = 10;
             this.textCargaNFE.Name = "textCargaNFE";
             this.textCargaNFE.PasswordChar = '\0';
-            this.textCargaNFE.Size = new System.Drawing.Size(150, 35);
+            this.textCargaNFE.Size = new System.Drawing.Size(148, 35);
             this.textCargaNFE.TabIndex = 249;
             // 
             // textCargaPeso
             // 
+            this.textCargaPeso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCargaPeso.BackColor = System.Drawing.Color.White;
             this.textCargaPeso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textCargaPeso.BaseColor = System.Drawing.Color.White;
@@ -1566,15 +1642,16 @@
             this.textCargaPeso.MaxLength = 20;
             this.textCargaPeso.Name = "textCargaPeso";
             this.textCargaPeso.PasswordChar = '\0';
-            this.textCargaPeso.Size = new System.Drawing.Size(120, 35);
+            this.textCargaPeso.Size = new System.Drawing.Size(116, 35);
             this.textCargaPeso.TabIndex = 253;
             // 
             // label26
             // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label26.Location = new System.Drawing.Point(185, 50);
+            this.label26.Location = new System.Drawing.Point(188, 50);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(96, 18);
             this.label26.TabIndex = 252;
@@ -1582,10 +1659,11 @@
             // 
             // label27
             // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label27.Location = new System.Drawing.Point(705, 50);
+            this.label27.Location = new System.Drawing.Point(708, 50);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(50, 18);
             this.label27.TabIndex = 254;
@@ -1593,6 +1671,7 @@
             // 
             // textCargaDescricao
             // 
+            this.textCargaDescricao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCargaDescricao.BackColor = System.Drawing.Color.White;
             this.textCargaDescricao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textCargaDescricao.BaseColor = System.Drawing.Color.White;
@@ -1618,7 +1697,7 @@
             this.tabPanelCustos.Location = new System.Drawing.Point(4, 44);
             this.tabPanelCustos.Margin = new System.Windows.Forms.Padding(0);
             this.tabPanelCustos.Name = "tabPanelCustos";
-            this.tabPanelCustos.Size = new System.Drawing.Size(1036, 610);
+            this.tabPanelCustos.Size = new System.Drawing.Size(1032, 610);
             this.tabPanelCustos.TabIndex = 2;
             this.tabPanelCustos.Text = "      CUSTOS      ";
             this.tabPanelCustos.UseVisualStyleBackColor = true;
@@ -1630,7 +1709,7 @@
             this.panel7.Location = new System.Drawing.Point(0, 112);
             this.panel7.Margin = new System.Windows.Forms.Padding(0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1036, 498);
+            this.panel7.Size = new System.Drawing.Size(1032, 498);
             this.panel7.TabIndex = 272;
             // 
             // gridCustos
@@ -1754,7 +1833,7 @@
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1036, 112);
+            this.panel6.Size = new System.Drawing.Size(1032, 112);
             this.panel6.TabIndex = 271;
             // 
             // tabPanelAbastecimentos
@@ -1764,7 +1843,7 @@
             this.tabPanelAbastecimentos.Location = new System.Drawing.Point(4, 44);
             this.tabPanelAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
             this.tabPanelAbastecimentos.Name = "tabPanelAbastecimentos";
-            this.tabPanelAbastecimentos.Size = new System.Drawing.Size(1036, 610);
+            this.tabPanelAbastecimentos.Size = new System.Drawing.Size(1032, 610);
             this.tabPanelAbastecimentos.TabIndex = 3;
             this.tabPanelAbastecimentos.Text = "      ABASTECIMENTOS      ";
             this.tabPanelAbastecimentos.UseVisualStyleBackColor = true;
@@ -1776,7 +1855,7 @@
             this.panel10.Location = new System.Drawing.Point(0, 112);
             this.panel10.Margin = new System.Windows.Forms.Padding(0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1036, 498);
+            this.panel10.Size = new System.Drawing.Size(1032, 498);
             this.panel10.TabIndex = 274;
             // 
             // gridAbastecimentos
@@ -1894,6 +1973,7 @@
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.btnAddPosto);
             this.panel11.Controls.Add(this.combAbastecimentoPosto);
             this.panel11.Controls.Add(this.combAbastecimentoCombustivel);
             this.panel11.Controls.Add(this.label39);
@@ -1911,11 +1991,32 @@
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Margin = new System.Windows.Forms.Padding(0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1036, 112);
+            this.panel11.Size = new System.Drawing.Size(1032, 112);
             this.panel11.TabIndex = 273;
+            // 
+            // btnAddPosto
+            // 
+            this.btnAddPosto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAddPosto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(186)))), ((int)(((byte)(69)))));
+            this.btnAddPosto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
+            this.btnAddPosto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
+            this.btnAddPosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPosto.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnAddPosto.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnAddPosto.IconColor = System.Drawing.Color.White;
+            this.btnAddPosto.IconSize = 16;
+            this.btnAddPosto.Location = new System.Drawing.Point(478, 76);
+            this.btnAddPosto.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.btnAddPosto.Name = "btnAddPosto";
+            this.btnAddPosto.Rotation = 0D;
+            this.btnAddPosto.Size = new System.Drawing.Size(35, 35);
+            this.btnAddPosto.TabIndex = 273;
+            this.btnAddPosto.UseVisualStyleBackColor = false;
+            this.btnAddPosto.Click += new System.EventHandler(this.onCadastrarCliente);
             // 
             // combAbastecimentoPosto
             // 
+            this.combAbastecimentoPosto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combAbastecimentoPosto.BackColor = System.Drawing.Color.Transparent;
             this.combAbastecimentoPosto.BaseColor = System.Drawing.Color.White;
             this.combAbastecimentoPosto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -1933,11 +2034,12 @@
             this.combAbastecimentoPosto.Name = "combAbastecimentoPosto";
             this.combAbastecimentoPosto.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combAbastecimentoPosto.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combAbastecimentoPosto.Size = new System.Drawing.Size(320, 35);
+            this.combAbastecimentoPosto.Size = new System.Drawing.Size(285, 35);
             this.combAbastecimentoPosto.TabIndex = 272;
             // 
             // combAbastecimentoCombustivel
             // 
+            this.combAbastecimentoCombustivel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combAbastecimentoCombustivel.BackColor = System.Drawing.Color.Transparent;
             this.combAbastecimentoCombustivel.BaseColor = System.Drawing.Color.White;
             this.combAbastecimentoCombustivel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -1960,10 +2062,11 @@
             // 
             // label39
             // 
+            this.label39.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label39.Location = new System.Drawing.Point(530, 50);
+            this.label39.Location = new System.Drawing.Point(533, 50);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(114, 18);
             this.label39.TabIndex = 271;
@@ -1971,6 +2074,7 @@
             // 
             // timeAbastecimentoData
             // 
+            this.timeAbastecimentoData.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeAbastecimentoData.BaseColor = System.Drawing.Color.White;
             this.timeAbastecimentoData.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeAbastecimentoData.BorderSize = 1;
@@ -1980,7 +2084,7 @@
             this.timeAbastecimentoData.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.timeAbastecimentoData.ForeColor = System.Drawing.Color.Black;
             this.timeAbastecimentoData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeAbastecimentoData.Location = new System.Drawing.Point(13, 76);
+            this.timeAbastecimentoData.Location = new System.Drawing.Point(20, 76);
             this.timeAbastecimentoData.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.timeAbastecimentoData.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.timeAbastecimentoData.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -1996,10 +2100,11 @@
             // 
             // label34
             // 
+            this.label34.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.Silver;
-            this.label34.Location = new System.Drawing.Point(3, 10);
+            this.label34.Location = new System.Drawing.Point(20, 10);
             this.label34.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(306, 20);
@@ -2008,10 +2113,11 @@
             // 
             // label35
             // 
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label35.Location = new System.Drawing.Point(700, 50);
+            this.label35.Location = new System.Drawing.Point(703, 50);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(61, 18);
             this.label35.TabIndex = 266;
@@ -2019,6 +2125,7 @@
             // 
             // btnAddAbastecimento
             // 
+            this.btnAddAbastecimento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAddAbastecimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(186)))), ((int)(((byte)(69)))));
             this.btnAddAbastecimento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
             this.btnAddAbastecimento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(177)))), ((int)(((byte)(66)))));
@@ -2027,7 +2134,7 @@
             this.btnAddAbastecimento.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnAddAbastecimento.IconColor = System.Drawing.Color.White;
             this.btnAddAbastecimento.IconSize = 16;
-            this.btnAddAbastecimento.Location = new System.Drawing.Point(983, 76);
+            this.btnAddAbastecimento.Location = new System.Drawing.Point(985, 76);
             this.btnAddAbastecimento.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.btnAddAbastecimento.Name = "btnAddAbastecimento";
             this.btnAddAbastecimento.Rotation = 0D;
@@ -2038,10 +2145,11 @@
             // 
             // label36
             // 
+            this.label36.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label36.Location = new System.Drawing.Point(190, 50);
+            this.label36.Location = new System.Drawing.Point(193, 50);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(61, 18);
             this.label36.TabIndex = 264;
@@ -2049,17 +2157,19 @@
             // 
             // panel12
             // 
+            this.panel12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel12.ForeColor = System.Drawing.Color.Silver;
-            this.panel12.Location = new System.Drawing.Point(9, 36);
-            this.panel12.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
+            this.panel12.Location = new System.Drawing.Point(20, 36);
+            this.panel12.Margin = new System.Windows.Forms.Padding(10, 3, 10, 15);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1017, 2);
+            this.panel12.Size = new System.Drawing.Size(1000, 2);
             this.panel12.TabIndex = 260;
             // 
             // textAbastecimentoLitros
             // 
+            this.textAbastecimentoLitros.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textAbastecimentoLitros.BackColor = System.Drawing.Color.White;
             this.textAbastecimentoLitros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textAbastecimentoLitros.BaseColor = System.Drawing.Color.White;
@@ -2080,6 +2190,7 @@
             // 
             // textAbastecimentoValor
             // 
+            this.textAbastecimentoValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textAbastecimentoValor.BackColor = System.Drawing.Color.White;
             this.textAbastecimentoValor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.textAbastecimentoValor.BaseColor = System.Drawing.Color.White;
@@ -2095,15 +2206,16 @@
             this.textAbastecimentoValor.MaxLength = 20;
             this.textAbastecimentoValor.Name = "textAbastecimentoValor";
             this.textAbastecimentoValor.PasswordChar = '\0';
-            this.textAbastecimentoValor.Size = new System.Drawing.Size(120, 35);
+            this.textAbastecimentoValor.Size = new System.Drawing.Size(122, 35);
             this.textAbastecimentoValor.TabIndex = 267;
             // 
             // label37
             // 
+            this.label37.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label37.Location = new System.Drawing.Point(840, 50);
+            this.label37.Location = new System.Drawing.Point(843, 50);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(57, 18);
             this.label37.TabIndex = 268;
@@ -2111,10 +2223,11 @@
             // 
             // label38
             // 
+            this.label38.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label38.Location = new System.Drawing.Point(10, 50);
+            this.label38.Location = new System.Drawing.Point(20, 50);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(46, 18);
             this.label38.TabIndex = 262;
@@ -2125,12 +2238,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1044, 658);
-            this.Controls.Add(this.btnEnviar);
+            this.ClientSize = new System.Drawing.Size(1040, 658);
             this.Controls.Add(this.tabViagem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormViagens";
-            this.Text = "Viagens";
+            this.Text = "Cadastrar Viagem";
             this.panel3.ResumeLayout(false);
             this.tabViagem.ResumeLayout(false);
             this.tabPanelViagem.ResumeLayout(false);
@@ -2275,5 +2387,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn textGridAbastecimentoValor;
         private System.Windows.Forms.DataGridViewTextBoxColumn textGridAbastecimentoTotal;
         private Guna.UI.WinForms.GunaComboBox combAbastecimentoPosto;
+        private FontAwesome.Sharp.IconButton btnAddPosto;
     }
 }

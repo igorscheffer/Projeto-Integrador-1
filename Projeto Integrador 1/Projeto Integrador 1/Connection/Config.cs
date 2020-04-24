@@ -20,7 +20,7 @@ namespace Projeto_Integrador_1.Connection
         }
 
         private void Initialize() {
-            connection = new MySqlConnection("SERVER=" + this.Host + ";DATABASE=" + this.Base + ";UID=" + this.User + ";PASSWORD=" + this.Pass + ";");
+            connection = new MySqlConnection("SERVER=" + this.Host + ";DATABASE=" + this.Base + ";UID=" + this.User + ";PASSWORD=" + this.Pass + ";Convert Zero Datetime=True;");
         }
 
         protected bool openConnection() {

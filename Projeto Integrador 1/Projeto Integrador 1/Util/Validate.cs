@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Net.Mail;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +14,7 @@ namespace Projeto_Integrador_1.Util
         private int contar = 0;
 
         private dynamic[][] Rules = new dynamic[50][];
+        private List<dynamic> Valids = new List<dynamic>();
         private List<dynamic> Errors = new List<dynamic>();
         private int CountErrors = 0;
 
@@ -37,27 +40,39 @@ namespace Projeto_Integrador_1.Util
         private void validateMin(dynamic component, string name, int rule, string rules) {
             dynamic value = this.getValue(component);
             if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0) {
-                if (value.Length < rule) {
-                    Errors.Add(new {Component = component, Message = name + " deve conter no minimo " + rule + " caracteres." });
+                if (value.Length < rule)
+                {
+                    Errors.Add(new { Component = component, Message = name + " deve conter no minimo " + rule + " caracteres." });
                     this.CountErrors++;
+                }
+                else {
+                    Valids.Add(new { Component = component, Value = value });
                 }
             }
         }
 
         private void validateMax(dynamic component, string name, int rule) {
             dynamic value = this.getValue(component);
-            if (value.ToString().Length > rule) {
+            if (value.ToString().Length > rule)
+            {
                 Errors.Add(new { Component = component, Message = name + " deve conter no maximo " + rule + " caracteres." });
                 this.CountErrors++;
+            }
+            else {
+                Valids.Add(new { Component = component, Value = value });
             }
         }
 
         private void validateExact(dynamic component, string name, int rule, string rules) {
             dynamic value = this.getValue(component);
             if ((rules.Contains("required") && value.ToString().Trim() != "") || value.ToString().Trim().Length > 0) {
-                if (value.ToString().Length != rule) {
+                if (value.ToString().Length != rule)
+                {
                     Errors.Add(new { Component = component, Message = name + " deve conter " + rule + " caracteres." });
                     this.CountErrors++;
+                }
+                else {
+                    Valids.Add(new { Component = component, Value = value });
                 }
             }
         }
@@ -75,6 +90,9 @@ namespace Projeto_Integrador_1.Util
                     Errors.Add(new { Component = component, Message = name + " não está em um formato valido." });
                     this.CountErrors++;
                 }
+                else {
+                    Valids.Add(new { Component = component, Value = value });
+                }
             }
         }
 
@@ -90,6 +108,9 @@ namespace Projeto_Integrador_1.Util
                     Errors.Add(new { Component = component, Message = name + " não é um valor valido." });
                     this.CountErrors++;
                 }
+                else {
+                    Valids.Add(new { Component = component, Value = value });
+                }
             }
         }
 
@@ -100,18 +121,26 @@ namespace Projeto_Integrador_1.Util
 
                 bool validate = DateTime.TryParseExact(value.ToString(), rule, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out date);
 
-                if (!validate){
+                if (!validate)
+                {
                     Errors.Add(new { Component = component, Message = name + " não é um fomato de data valido." });
                     this.CountErrors++;
+                }
+                else {
+                    Valids.Add(new { Component = component, Value = value });
                 }
             }
         }        
 
         private void validateRequired(dynamic component, string name) {
             dynamic value = this.getValue(component);
-            if (value.ToString().Trim() == "") {
+            if (value.ToString().Trim() == "")
+            {
                 Errors.Add(new { Component = component, Message = name + " deve ser preenchido." });
                 this.CountErrors++;
+            }
+            else {
+                Valids.Add(new { Component = component, Value = value });
             }
         }
 
@@ -125,6 +154,9 @@ namespace Projeto_Integrador_1.Util
                 {
                     Errors.Add(new { Component = component, Message = name + " não é um endereco de E-mail valido." });
                     this.CountErrors++;
+                }
+                else {
+                    Valids.Add(new { Component = component, Value = value });
                 }
             }
         }
@@ -142,6 +174,9 @@ namespace Projeto_Integrador_1.Util
                     Errors.Add(new { Component = component, Message = name + " deve ser numerico." });
                     this.CountErrors++;
                 }
+                else {
+                    Valids.Add(new { Component = component, Value = value });
+                }
             }
         }
 
@@ -157,6 +192,9 @@ namespace Projeto_Integrador_1.Util
                 {
                     Errors.Add(new { Component = component, Message = name + " não é um número de CPF valido." });
                     this.CountErrors++;
+                }
+                else {
+                    Valids.Add(new { Component = component, Value = value });
                 }
             }
         }
@@ -174,6 +212,9 @@ namespace Projeto_Integrador_1.Util
                     Errors.Add(new { Component = component, Message = name + " não é um número de CNPJ valido." });
                     this.CountErrors++;
                 }
+                else {
+                    Valids.Add(new { Component = component, Value = value });
+                }
             }
         }
 
@@ -189,6 +230,9 @@ namespace Projeto_Integrador_1.Util
                 {
                     Errors.Add(new { Component = component, Message = name + " não é um número de Telefone valido." });
                     this.CountErrors++;
+                }
+                else {
+                    Valids.Add(new { Component = component, Value = value });
                 }
             }
         }
@@ -206,6 +250,9 @@ namespace Projeto_Integrador_1.Util
                     Errors.Add(new { Component = component, Message = name + " não é um número de NF-E valido." });
                     this.CountErrors++;
                 }
+                else {
+                    Valids.Add(new { Component = component, Value = value });
+                }
             }
         }
 
@@ -221,6 +268,9 @@ namespace Projeto_Integrador_1.Util
                 {
                     Errors.Add(new { Component = component, Message = name + " não é um valor R$ valido." });
                     this.CountErrors++;
+                }
+                else {
+                    Valids.Add(new { Component = component, Value = value });
                 }
             }
         }
@@ -238,6 +288,9 @@ namespace Projeto_Integrador_1.Util
                     Errors.Add(new { Component = component, Message = name + " não é um número CEP valido." });
                     this.CountErrors++;
                 }
+                else {
+                    Valids.Add(new { Component = component, Value = value });
+                }
             }
         }
 
@@ -253,6 +306,9 @@ namespace Projeto_Integrador_1.Util
                 {
                     Errors.Add(new { Component = component, Message = name + " não é uma Placa valida." });
                     this.CountErrors++;
+                }
+                else {
+                    Valids.Add(new { Component = component, Value = value });
                 }
             }
         }
@@ -339,6 +395,17 @@ namespace Projeto_Integrador_1.Util
 
         public List<dynamic> getErrors() {
             return this.Errors;
+        }
+
+        public void ErrorMessageBox() {
+            string ShowMessage = "\n";
+
+            foreach (dynamic Erro in this.getErrors())
+            {
+                ShowMessage += Erro.Message + "\n\n";
+            }
+
+            MessageBox.Show(ShowMessage, "VALIDAÇÃO");
         }
     }
 }

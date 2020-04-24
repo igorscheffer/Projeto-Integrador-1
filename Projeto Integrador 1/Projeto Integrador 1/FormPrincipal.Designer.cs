@@ -372,7 +372,7 @@
             this.painelHeader.Location = new System.Drawing.Point(220, 0);
             this.painelHeader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.painelHeader.Name = "painelHeader";
-            this.painelHeader.Size = new System.Drawing.Size(1064, 60);
+            this.painelHeader.Size = new System.Drawing.Size(1040, 60);
             this.painelHeader.TabIndex = 1;
             // 
             // txtHeader
@@ -423,21 +423,21 @@
             this.painelForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.painelForm.Location = new System.Drawing.Point(220, 60);
             this.painelForm.Name = "painelForm";
-            this.painelForm.Size = new System.Drawing.Size(1064, 621);
+            this.painelForm.Size = new System.Drawing.Size(1040, 621);
             this.painelForm.TabIndex = 2;
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 681);
+            this.ClientSize = new System.Drawing.Size(1260, 681);
             this.Controls.Add(this.painelForm);
             this.Controls.Add(this.painelHeader);
             this.Controls.Add(this.painelMenu);
             this.Font = new System.Drawing.Font("SansSerif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MinimumSize = new System.Drawing.Size(1080, 660);
+            this.MinimumSize = new System.Drawing.Size(1276, 660);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PROJETO INTEGRADOR";

@@ -100,7 +100,9 @@ namespace Projeto_Integrador_1.Connection
                                 Id = data["id"],
                                 Frota = data["frota"],
                                 Placa = data["placa"],
-                                Veiculo = (data["placa"] + " " + marca.Text + " " + data["modelo"]).ToUpper()
+                                Veiculo = (data["placa"] + " " + marca.Text + " " + data["modelo"]).ToUpper(),
+                                Cor = data["cor"],
+                                Status = data["status"]
                             }
                         );
                     }
