@@ -69,6 +69,22 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFrota
@@ -79,9 +95,9 @@
             this.lblFrota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblFrota.Location = new System.Drawing.Point(20, 53);
             this.lblFrota.Name = "lblFrota";
-            this.lblFrota.Size = new System.Drawing.Size(58, 18);
+            this.lblFrota.Size = new System.Drawing.Size(43, 18);
             this.lblFrota.TabIndex = 30;
-            this.lblFrota.Text = "FROTA";
+            this.lblFrota.Text = "Frota";
             // 
             // lblPlaca
             // 
@@ -91,9 +107,9 @@
             this.lblPlaca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblPlaca.Location = new System.Drawing.Point(180, 53);
             this.lblPlaca.Name = "lblPlaca";
-            this.lblPlaca.Size = new System.Drawing.Size(55, 18);
+            this.lblPlaca.Size = new System.Drawing.Size(45, 18);
             this.lblPlaca.TabIndex = 32;
-            this.lblPlaca.Text = "PLACA";
+            this.lblPlaca.Text = "Placa";
             // 
             // lblCategoria
             // 
@@ -103,9 +119,9 @@
             this.lblCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCategoria.Location = new System.Drawing.Point(340, 53);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(94, 18);
+            this.lblCategoria.Size = new System.Drawing.Size(72, 18);
             this.lblCategoria.TabIndex = 34;
-            this.lblCategoria.Text = "CATEGORIA";
+            this.lblCategoria.Text = "Categoria";
             // 
             // lblMarca
             // 
@@ -115,9 +131,9 @@
             this.lblMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblMarca.Location = new System.Drawing.Point(570, 53);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(61, 18);
+            this.lblMarca.Size = new System.Drawing.Size(50, 18);
             this.lblMarca.TabIndex = 36;
-            this.lblMarca.Text = "MARCA";
+            this.lblMarca.Text = "Marca";
             // 
             // lblCarroceria
             // 
@@ -127,9 +143,9 @@
             this.lblCarroceria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCarroceria.Location = new System.Drawing.Point(800, 53);
             this.lblCarroceria.Name = "lblCarroceria";
-            this.lblCarroceria.Size = new System.Drawing.Size(106, 18);
+            this.lblCarroceria.Size = new System.Drawing.Size(78, 18);
             this.lblCarroceria.TabIndex = 38;
-            this.lblCarroceria.Text = "CARROCERIA";
+            this.lblCarroceria.Text = "Carroceria";
             // 
             // lblModelo
             // 
@@ -139,9 +155,9 @@
             this.lblModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblModelo.Location = new System.Drawing.Point(20, 126);
             this.lblModelo.Name = "lblModelo";
-            this.lblModelo.Size = new System.Drawing.Size(74, 18);
+            this.lblModelo.Size = new System.Drawing.Size(58, 18);
             this.lblModelo.TabIndex = 40;
-            this.lblModelo.Text = "MODELO";
+            this.lblModelo.Text = "Modelo";
             // 
             // lblCor
             // 
@@ -151,9 +167,9 @@
             this.lblCor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCor.Location = new System.Drawing.Point(329, 126);
             this.lblCor.Name = "lblCor";
-            this.lblCor.Size = new System.Drawing.Size(42, 18);
+            this.lblCor.Size = new System.Drawing.Size(33, 18);
             this.lblCor.TabIndex = 42;
-            this.lblCor.Text = "COR";
+            this.lblCor.Text = "Cor";
             // 
             // lblCombustivel
             // 
@@ -163,9 +179,9 @@
             this.lblCombustivel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCombustivel.Location = new System.Drawing.Point(539, 126);
             this.lblCombustivel.Name = "lblCombustivel";
-            this.lblCombustivel.Size = new System.Drawing.Size(114, 18);
+            this.lblCombustivel.Size = new System.Drawing.Size(90, 18);
             this.lblCombustivel.TabIndex = 44;
-            this.lblCombustivel.Text = "COMBUSTIVEL";
+            this.lblCombustivel.Text = "Combustivel";
             // 
             // lblMotorizacao
             // 
@@ -175,9 +191,9 @@
             this.lblMotorizacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblMotorizacao.Location = new System.Drawing.Point(749, 126);
             this.lblMotorizacao.Name = "lblMotorizacao";
-            this.lblMotorizacao.Size = new System.Drawing.Size(118, 18);
+            this.lblMotorizacao.Size = new System.Drawing.Size(92, 18);
             this.lblMotorizacao.TabIndex = 46;
-            this.lblMotorizacao.Text = "MOTORIZAÇÃO";
+            this.lblMotorizacao.Text = "Motorização";
             // 
             // lblRenavam
             // 
@@ -187,9 +203,9 @@
             this.lblRenavam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblRenavam.Location = new System.Drawing.Point(20, 199);
             this.lblRenavam.Name = "lblRenavam";
-            this.lblRenavam.Size = new System.Drawing.Size(80, 18);
+            this.lblRenavam.Size = new System.Drawing.Size(71, 18);
             this.lblRenavam.TabIndex = 48;
-            this.lblRenavam.Text = "RENAVAM";
+            this.lblRenavam.Text = "Renavam";
             // 
             // lblChassi
             // 
@@ -199,9 +215,9 @@
             this.lblChassi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblChassi.Location = new System.Drawing.Point(289, 199);
             this.lblChassi.Name = "lblChassi";
-            this.lblChassi.Size = new System.Drawing.Size(62, 18);
+            this.lblChassi.Size = new System.Drawing.Size(54, 18);
             this.lblChassi.TabIndex = 50;
-            this.lblChassi.Text = "CHASSI";
+            this.lblChassi.Text = "Chassi";
             // 
             // lblAnoFabricacao
             // 
@@ -211,9 +227,9 @@
             this.lblAnoFabricacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblAnoFabricacao.Location = new System.Drawing.Point(559, 199);
             this.lblAnoFabricacao.Name = "lblAnoFabricacao";
-            this.lblAnoFabricacao.Size = new System.Drawing.Size(138, 18);
+            this.lblAnoFabricacao.Size = new System.Drawing.Size(112, 18);
             this.lblAnoFabricacao.TabIndex = 52;
-            this.lblAnoFabricacao.Text = "ANO FABRICAÇÃO";
+            this.lblAnoFabricacao.Text = "Ano Fabricação";
             // 
             // lblAnoModelo
             // 
@@ -223,9 +239,9 @@
             this.lblAnoModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblAnoModelo.Location = new System.Drawing.Point(724, 199);
             this.lblAnoModelo.Name = "lblAnoModelo";
-            this.lblAnoModelo.Size = new System.Drawing.Size(110, 18);
+            this.lblAnoModelo.Size = new System.Drawing.Size(88, 18);
             this.lblAnoModelo.TabIndex = 54;
-            this.lblAnoModelo.Text = "ANO MODELO";
+            this.lblAnoModelo.Text = "Ano Modelo";
             // 
             // lblStatus
             // 
@@ -235,9 +251,9 @@
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblStatus.Location = new System.Drawing.Point(889, 199);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(66, 18);
+            this.lblStatus.Size = new System.Drawing.Size(50, 18);
             this.lblStatus.TabIndex = 56;
-            this.lblStatus.Text = "STATUS";
+            this.lblStatus.Text = "Status";
             // 
             // lblTara
             // 
@@ -247,9 +263,9 @@
             this.lblTara.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblTara.Location = new System.Drawing.Point(20, 318);
             this.lblTara.Name = "lblTara";
-            this.lblTara.Size = new System.Drawing.Size(46, 18);
+            this.lblTara.Size = new System.Drawing.Size(38, 18);
             this.lblTara.TabIndex = 58;
-            this.lblTara.Text = "TARA";
+            this.lblTara.Text = "Tara";
             // 
             // lblLotacao
             // 
@@ -259,9 +275,9 @@
             this.lblLotacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblLotacao.Location = new System.Drawing.Point(280, 318);
             this.lblLotacao.Name = "lblLotacao";
-            this.lblLotacao.Size = new System.Drawing.Size(78, 18);
+            this.lblLotacao.Size = new System.Drawing.Size(62, 18);
             this.lblLotacao.TabIndex = 60;
-            this.lblLotacao.Text = "LOTAÇÃO";
+            this.lblLotacao.Text = "Lotação";
             // 
             // lblPesoBrutoTotal
             // 
@@ -271,9 +287,9 @@
             this.lblPesoBrutoTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblPesoBrutoTotal.Location = new System.Drawing.Point(540, 318);
             this.lblPesoBrutoTotal.Name = "lblPesoBrutoTotal";
-            this.lblPesoBrutoTotal.Size = new System.Drawing.Size(158, 18);
+            this.lblPesoBrutoTotal.Size = new System.Drawing.Size(120, 18);
             this.lblPesoBrutoTotal.TabIndex = 62;
-            this.lblPesoBrutoTotal.Text = "PESO BRUTO TOTAL";
+            this.lblPesoBrutoTotal.Text = "Peso Bruto Total";
             // 
             // lblCapacidade
             // 
@@ -283,9 +299,9 @@
             this.lblCapacidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCapacidade.Location = new System.Drawing.Point(800, 318);
             this.lblCapacidade.Name = "lblCapacidade";
-            this.lblCapacidade.Size = new System.Drawing.Size(124, 18);
+            this.lblCapacidade.Size = new System.Drawing.Size(108, 18);
             this.lblCapacidade.TabIndex = 64;
-            this.lblCapacidade.Text = "CAPACIDADE M³";
+            this.lblCapacidade.Text = "Capacidade M³";
             // 
             // textFrota
             // 
@@ -368,7 +384,7 @@
             this.textTara.MaxLength = 20;
             this.textTara.Name = "textTara";
             this.textTara.PasswordChar = '\0';
-            this.textTara.Size = new System.Drawing.Size(240, 35);
+            this.textTara.Size = new System.Drawing.Size(205, 35);
             this.textTara.TabIndex = 15;
             // 
             // textLotacao
@@ -389,7 +405,7 @@
             this.textLotacao.MaxLength = 20;
             this.textLotacao.Name = "textLotacao";
             this.textLotacao.PasswordChar = '\0';
-            this.textLotacao.Size = new System.Drawing.Size(240, 35);
+            this.textLotacao.Size = new System.Drawing.Size(205, 35);
             this.textLotacao.TabIndex = 16;
             // 
             // textPesoBrutoTotal
@@ -410,7 +426,7 @@
             this.textPesoBrutoTotal.MaxLength = 20;
             this.textPesoBrutoTotal.Name = "textPesoBrutoTotal";
             this.textPesoBrutoTotal.PasswordChar = '\0';
-            this.textPesoBrutoTotal.Size = new System.Drawing.Size(240, 35);
+            this.textPesoBrutoTotal.Size = new System.Drawing.Size(205, 35);
             this.textPesoBrutoTotal.TabIndex = 17;
             // 
             // textCapacidade
@@ -431,7 +447,7 @@
             this.textCapacidade.MaxLength = 20;
             this.textCapacidade.Name = "textCapacidade";
             this.textCapacidade.PasswordChar = '\0';
-            this.textCapacidade.Size = new System.Drawing.Size(220, 35);
+            this.textCapacidade.Size = new System.Drawing.Size(185, 35);
             this.textCapacidade.TabIndex = 18;
             // 
             // textRenavam
@@ -755,6 +771,106 @@
             this.label1.TabIndex = 87;
             this.label1.Text = "INFORMAÇÕES DE PESO";
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel5.Controls.Add(this.iconPictureBox3);
+            this.panel5.Location = new System.Drawing.Point(225, 341);
+            this.panel5.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(35, 35);
+            this.panel5.TabIndex = 92;
+            // 
+            // iconPictureBox3
+            // 
+            this.iconPictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.WeightHanging;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox3.IconSize = 20;
+            this.iconPictureBox3.Location = new System.Drawing.Point(9, 8);
+            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox3.TabIndex = 90;
+            this.iconPictureBox3.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel6.Controls.Add(this.iconPictureBox4);
+            this.panel6.Location = new System.Drawing.Point(985, 341);
+            this.panel6.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(35, 35);
+            this.panel6.TabIndex = 91;
+            // 
+            // iconPictureBox4
+            // 
+            this.iconPictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.Cube;
+            this.iconPictureBox4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox4.IconSize = 20;
+            this.iconPictureBox4.Location = new System.Drawing.Point(9, 8);
+            this.iconPictureBox4.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox4.Name = "iconPictureBox4";
+            this.iconPictureBox4.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox4.TabIndex = 90;
+            this.iconPictureBox4.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.iconPictureBox1);
+            this.panel3.Location = new System.Drawing.Point(484, 341);
+            this.panel3.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(35, 35);
+            this.panel3.TabIndex = 93;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.WeightHanging;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox1.IconSize = 20;
+            this.iconPictureBox1.Location = new System.Drawing.Point(9, 8);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox1.TabIndex = 90;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel4.Controls.Add(this.iconPictureBox2);
+            this.panel4.Location = new System.Drawing.Point(745, 341);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(35, 35);
+            this.panel4.TabIndex = 94;
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.WeightHanging;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox2.IconSize = 20;
+            this.iconPictureBox2.Location = new System.Drawing.Point(9, 8);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox2.TabIndex = 90;
+            this.iconPictureBox2.TabStop = false;
+            // 
             // FormVeiculos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -762,6 +878,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 505);
             this.ControlBox = false;
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -806,6 +926,18 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormVeiculos";
             this.Text = "Cadastrar Veiculo";
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -853,5 +985,13 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel5;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
+        private System.Windows.Forms.Panel panel6;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
+        private System.Windows.Forms.Panel panel3;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Panel panel4;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
     }
 }

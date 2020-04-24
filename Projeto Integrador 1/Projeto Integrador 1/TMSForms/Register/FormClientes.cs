@@ -94,9 +94,9 @@ namespace Projeto_Integrador_1.TMSForms.Register
             if (Convert.ToString(Selected) == "PF")
             {
                 lblCNPJ.Text = "CPF";
-                lblRazaoSocial.Text = "NOME";
+                lblRazaoSocial.Text = "Nome";
                 lblInscricaoMunicipal.Text = "RG";
-                lblInscricaoEstadual.Text = "INSCRIÇÃO PRODUTOR RURAL";
+                lblInscricaoEstadual.Text = "Insc. Estadual Produtor Rural";
 
                 lblNomeFantasia.Visible = false;
                 textNomeFantasia.Visible = false;
@@ -115,9 +115,9 @@ namespace Projeto_Integrador_1.TMSForms.Register
             }
             else if(Convert.ToString(Selected) == "PJ") {
                 lblCNPJ.Text = "CNPJ";
-                lblNomeFantasia.Text = "NOME FANTASIA";
-                lblInscricaoMunicipal.Text = "INSCRIÇÃO MUNICIPAL";
-                lblInscricaoEstadual.Text = "INSCRIÇÃO ESTADUAL";
+                lblNomeFantasia.Text = "Nome Fantasia";
+                lblInscricaoMunicipal.Text = "Inscrição Municipal";
+                lblInscricaoEstadual.Text = "Inscrição Estadual";
 
                 lblNomeFantasia.Visible = true;
                 textNomeFantasia.Visible = true;

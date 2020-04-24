@@ -40,5 +40,15 @@ namespace Projeto_Integrador_1.TMSForms
         {
             fmPrincipal.AtivarForm(new TMSForms.Register.FormViagens());
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            fmPrincipal.AtivarForm(new TMSForms.Register.FormViagens());
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            fmPrincipal.AtivarForm(new TMSForms.Register.FormManutencoes());
+        }
     }
 }

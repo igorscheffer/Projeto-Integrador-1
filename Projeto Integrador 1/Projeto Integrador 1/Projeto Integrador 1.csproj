@@ -156,6 +156,12 @@
     <Compile Include="TMSForms\Register\FormClientes.Designer.cs">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="TMSForms\Register\FormManutencoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMSForms\Register\FormManutencoes.Designer.cs">
+      <DependentUpon>FormManutencoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="TMSForms\Register\FormMotoristas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\Register\FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\Register\FormManutencoes.resx">
+      <DependentUpon>FormManutencoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\Register\FormMotoristas.resx">
       <DependentUpon>FormMotoristas.cs</DependentUpon>

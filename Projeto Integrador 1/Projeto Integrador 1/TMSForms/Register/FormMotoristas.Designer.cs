@@ -105,9 +105,9 @@
             this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblNome.Location = new System.Drawing.Point(20, 48);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(143, 18);
+            this.lblNome.Size = new System.Drawing.Size(118, 18);
             this.lblNome.TabIndex = 88;
-            this.lblNome.Text = "NOME COMPLETO";
+            this.lblNome.Text = "Nome Completo";
             // 
             // textCPF
             // 
@@ -206,9 +206,9 @@
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblStatus.Location = new System.Drawing.Point(879, 48);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(66, 18);
+            this.lblStatus.Size = new System.Drawing.Size(50, 18);
             this.lblStatus.TabIndex = 94;
-            this.lblStatus.Text = "STATUS";
+            this.lblStatus.Text = "Status";
             // 
             // textCNH
             // 
@@ -251,9 +251,9 @@
             this.lblVencimentoCNH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblVencimentoCNH.Location = new System.Drawing.Point(319, 121);
             this.lblVencimentoCNH.Name = "lblVencimentoCNH";
-            this.lblVencimentoCNH.Size = new System.Drawing.Size(144, 18);
+            this.lblVencimentoCNH.Size = new System.Drawing.Size(123, 18);
             this.lblVencimentoCNH.TabIndex = 98;
-            this.lblVencimentoCNH.Text = "VENCIMENTO CNH";
+            this.lblVencimentoCNH.Text = "Vencimento CNH";
             // 
             // timeVencimentoCNH
             // 
@@ -312,9 +312,9 @@
             this.lblCategoriaCNH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCategoriaCNH.Location = new System.Drawing.Point(546, 121);
             this.lblCategoriaCNH.Name = "lblCategoriaCNH";
-            this.lblCategoriaCNH.Size = new System.Drawing.Size(94, 18);
+            this.lblCategoriaCNH.Size = new System.Drawing.Size(72, 18);
             this.lblCategoriaCNH.TabIndex = 101;
-            this.lblCategoriaCNH.Text = "CATEGORIA";
+            this.lblCategoriaCNH.Text = "Categoria";
             // 
             // combSexo
             // 
@@ -347,9 +347,9 @@
             this.lblSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblSexo.Location = new System.Drawing.Point(696, 121);
             this.lblSexo.Name = "lblSexo";
-            this.lblSexo.Size = new System.Drawing.Size(50, 18);
+            this.lblSexo.Size = new System.Drawing.Size(42, 18);
             this.lblSexo.TabIndex = 103;
-            this.lblSexo.Text = "SEXO";
+            this.lblSexo.Text = "Sexo";
             // 
             // combEstadoCivil
             // 
@@ -382,9 +382,9 @@
             this.lblEstadoCivil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblEstadoCivil.Location = new System.Drawing.Point(846, 121);
             this.lblEstadoCivil.Name = "lblEstadoCivil";
-            this.lblEstadoCivil.Size = new System.Drawing.Size(107, 18);
+            this.lblEstadoCivil.Size = new System.Drawing.Size(86, 18);
             this.lblEstadoCivil.TabIndex = 105;
-            this.lblEstadoCivil.Text = "ESTADO CIVIL";
+            this.lblEstadoCivil.Text = "Estado Civil";
             // 
             // label10
             // 
@@ -486,9 +486,9 @@
             this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblEstado.Location = new System.Drawing.Point(219, 307);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(69, 18);
+            this.lblEstado.Size = new System.Drawing.Size(55, 18);
             this.lblEstado.TabIndex = 168;
-            this.lblEstado.Text = "ESTADO";
+            this.lblEstado.Text = "Estado";
             // 
             // lblCidade
             // 
@@ -498,9 +498,9 @@
             this.lblCidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCidade.Location = new System.Drawing.Point(20, 307);
             this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(63, 18);
+            this.lblCidade.Size = new System.Drawing.Size(54, 18);
             this.lblCidade.TabIndex = 167;
-            this.lblCidade.Text = "CIDADE";
+            this.lblCidade.Text = "Cidade";
             // 
             // textComplemento
             // 
@@ -531,9 +531,9 @@
             this.lblComplemento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblComplemento.Location = new System.Drawing.Point(789, 234);
             this.lblComplemento.Name = "lblComplemento";
-            this.lblComplemento.Size = new System.Drawing.Size(127, 18);
+            this.lblComplemento.Size = new System.Drawing.Size(102, 18);
             this.lblComplemento.TabIndex = 165;
-            this.lblComplemento.Text = "COMPLEMENTO";
+            this.lblComplemento.Text = "Complemento";
             // 
             // textBairro
             // 
@@ -564,9 +564,9 @@
             this.lblBairro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblBairro.Location = new System.Drawing.Point(589, 234);
             this.lblBairro.Name = "lblBairro";
-            this.lblBairro.Size = new System.Drawing.Size(64, 18);
+            this.lblBairro.Size = new System.Drawing.Size(48, 18);
             this.lblBairro.TabIndex = 163;
-            this.lblBairro.Text = "BAIRRO";
+            this.lblBairro.Text = "Bairro";
             // 
             // textN
             // 
@@ -630,9 +630,9 @@
             this.lblEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblEndereco.Location = new System.Drawing.Point(169, 234);
             this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(94, 18);
+            this.lblEndereco.Size = new System.Drawing.Size(72, 18);
             this.lblEndereco.TabIndex = 159;
-            this.lblEndereco.Text = "ENDEREÇO";
+            this.lblEndereco.Text = "Endereço";
             // 
             // textCEP
             // 
@@ -696,9 +696,9 @@
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblEmail.Location = new System.Drawing.Point(640, 380);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(56, 18);
+            this.lblEmail.Size = new System.Drawing.Size(50, 18);
             this.lblEmail.TabIndex = 177;
-            this.lblEmail.Text = "E-MAIL";
+            this.lblEmail.Text = "E-mail";
             // 
             // textCelular
             // 
@@ -729,9 +729,9 @@
             this.lblCelular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCelular.Location = new System.Drawing.Point(440, 380);
             this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(76, 18);
+            this.lblCelular.Size = new System.Drawing.Size(54, 18);
             this.lblCelular.TabIndex = 175;
-            this.lblCelular.Text = "CELULAR";
+            this.lblCelular.Text = "Celular";
             // 
             // textTelefone
             // 
@@ -762,9 +762,9 @@
             this.lblTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblTelefone.Location = new System.Drawing.Point(240, 380);
             this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(87, 18);
+            this.lblTelefone.Size = new System.Drawing.Size(65, 18);
             this.lblTelefone.TabIndex = 173;
-            this.lblTelefone.Text = "TELEFONE";
+            this.lblTelefone.Text = "Telefone";
             // 
             // combCargo
             // 
@@ -797,9 +797,9 @@
             this.lblCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCargo.Location = new System.Drawing.Point(20, 380);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(63, 18);
+            this.lblCargo.Size = new System.Drawing.Size(49, 18);
             this.lblCargo.TabIndex = 179;
-            this.lblCargo.Text = "CARGO";
+            this.lblCargo.Text = "Cargo";
             // 
             // buttonBuscarCEP
             // 

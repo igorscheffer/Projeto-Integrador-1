@@ -194,7 +194,7 @@ namespace Projeto_Integrador_1.Util
 
         public List<dynamic> getClienteTipoCadastro() {
             List<dynamic> tipoCadastro = new List<dynamic> {
-                new { Value = -1, Text = "---" },
+                new { Value = "", Text = "---" },
                 new { Value = "C", Text = "Cliente" },
                 new { Value = "F", Text = "Fornecedor" },
                 new { Value = "A", Text = "Ambos" }
@@ -205,7 +205,7 @@ namespace Projeto_Integrador_1.Util
 
         public List<dynamic> getClienteTipoPessoa() {
             List<dynamic> tipoPessoa = new List<dynamic> {
-                new { Value = -1, Text = "---" },
+                new { Value = "", Text = "---" },
                 new { Value = "PF", Text = "Pessoa Fisica" },
                 new { Value = "PJ", Text = "Pessoa Juridica" }
             };
