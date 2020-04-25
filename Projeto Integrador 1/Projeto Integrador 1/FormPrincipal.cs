@@ -173,6 +173,7 @@ namespace Projeto_Integrador_1
         private void btnAbastecimentos_Click(object sender, EventArgs e)
         {
             AtivarBotao(sender);
+            AtivarForm(new TMSForms.List.FormAbastecimentos(this));
         }
 
         private void btnMultas_Click(object sender, EventArgs e)

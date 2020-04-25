@@ -5,10 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projeto_Integrador_1.Connection
-{
-    class Viagens : Config
-    {
+namespace Projeto_Integrador_1.Connection {
+    class Viagens : Config {
         public Viagens() { }
 
         public bool Success;
@@ -86,34 +84,28 @@ namespace Projeto_Integrador_1.Connection
             }
         }
 
-        public void GetAll()
-        {
+        public void GetAll() {
             string sql = "SELECT `viagens`.*, `veiculos`.`placa` AS `veiculo_placa`, `motoristas`.`nome` AS `motorista_nome` FROM `viagens` LEFT OUTER JOIN `veiculos` ON (`viagens`.`veiculo` = `veiculos`.`id`) LEFT OUTER JOIN `motoristas` ON (`viagens`.`motorista` = `motoristas`.`id`);";
 
-            try
-            {
-                if (openConnection())
-                {
+            try {
+                if (openConnection()) {
                     MySqlCommand query = new MySqlCommand(sql, connection);
-                    
+
                     MySqlDataReader data = query.ExecuteReader();
 
-                    while (data.Read())
-                    {
-                        this.Results.Add(
-                            new
-                            {
-                                Id = data["id"],
-                                CodigoInterno = data["codigo_interno"],
-                                DataSaida = data["data_saida"],
-                                DataChegada = data["data_chegada"],
-                                SaidaCidade = data["saida_cidade"],
-                                SaidaUF = data["saida_uf"],
-                                DestinoCidade = data["destino_cidade"],
-                                DestinoUF = data["destino_uf"],
-                                Placa = data["veiculo_placa"],
-                                Motorista = data["motorista_nome"],
-                                Status = data["status"]
+                    while (data.Read()) {
+                        this.Results.Add(new {
+                            Id = data["id"],
+                            CodigoInterno = data["codigo_interno"],
+                            DataSaida = data["data_saida"],
+                            DataChegada = data["data_chegada"],
+                            SaidaCidade = data["saida_cidade"],
+                            SaidaUF = data["saida_uf"],
+                            DestinoCidade = data["destino_cidade"],
+                            DestinoUF = data["destino_uf"],
+                            Placa = data["veiculo_placa"],
+                            Motorista = data["motorista_nome"],
+                            Status = data["status"]
                             }
                         );
                     }
@@ -125,8 +117,7 @@ namespace Projeto_Integrador_1.Connection
 
                 this.Success = true;
             }
-            catch (MySqlException e)
-            {
+            catch (MySqlException e) {
                 this.Success = false;
                 this.Message = e.Message;
             }

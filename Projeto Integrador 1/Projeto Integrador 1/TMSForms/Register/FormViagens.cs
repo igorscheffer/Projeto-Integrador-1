@@ -117,7 +117,6 @@ namespace Projeto_Integrador_1.TMSForms.Register
             combMotorista.DataSource = new List<dynamic>(motoristas.Results);
             combMotorista.SelectedValue = -1;
         }
-
         private void onCadastrarCliente(object sender, EventArgs e)
         {
             Form formClientes = new TMSForms.Register.FormClientes();

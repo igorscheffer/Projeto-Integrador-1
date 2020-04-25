@@ -102,6 +102,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection\Abastecimentos.cs" />
     <Compile Include="Connection\Clientes.cs" />
     <Compile Include="Connection\Config.cs" />
     <Compile Include="Connection\Manutencoes.cs" />
@@ -126,6 +127,12 @@
     </Compile>
     <Compile Include="TMSForms\FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TMSForms\List\FormAbastecimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMSForms\List\FormAbastecimentos.Designer.cs">
+      <DependentUpon>FormAbastecimentos.cs</DependentUpon>
     </Compile>
     <Compile Include="TMSForms\List\FormMotoristas.cs">
       <SubType>Form</SubType>
@@ -156,6 +163,12 @@
     </Compile>
     <Compile Include="TMSForms\List\FormVeiculos.Designer.cs">
       <DependentUpon>FormVeiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TMSForms\Register\FormAbastecimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMSForms\Register\FormAbastecimentos.Designer.cs">
+      <DependentUpon>FormAbastecimentos.cs</DependentUpon>
     </Compile>
     <Compile Include="TMSForms\Register\FormClientes.cs">
       <SubType>Form</SubType>
@@ -200,6 +213,12 @@
     <EmbeddedResource Include="TMSForms\FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\List\FormAbastecimentos.aa.resx">
+      <DependentUpon>FormAbastecimentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\List\FormAbastecimentos.resx">
+      <DependentUpon>FormAbastecimentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\List\FormMotoristas.resx">
       <DependentUpon>FormMotoristas.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\List\FormVeiculos.resx">
       <DependentUpon>FormVeiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\Register\FormAbastecimentos.resx">
+      <DependentUpon>FormAbastecimentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\Register\FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>

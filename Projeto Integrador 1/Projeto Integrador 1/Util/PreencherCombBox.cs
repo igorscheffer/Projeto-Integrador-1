@@ -285,5 +285,15 @@ namespace Projeto_Integrador_1.Util
 
             return status;
         }
+
+        public List<dynamic> getAbastecimentosStatus() {
+            List<dynamic> status = new List<dynamic> {
+                new { Value = -1, Text = "---" },
+                new { Value = 0, Text = "Em Aberto" },
+                new { Value = 1, Text = "Pago" }
+            };
+
+            return status;
+        }
     }
 }
