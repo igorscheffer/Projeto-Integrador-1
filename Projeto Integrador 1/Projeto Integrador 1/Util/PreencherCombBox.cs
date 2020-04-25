@@ -295,5 +295,29 @@ namespace Projeto_Integrador_1.Util
 
             return status;
         }
+
+        public List<dynamic> getMultaGravidade() {
+            List<dynamic> gravidade = new List<dynamic> {
+                new { Value = -1, Text = "---" },
+                new { Value = 7, Text = "7 - Gravissima" },
+                new { Value = 5, Text = "5 - Grave" },
+                new { Value = 4, Text = "4 - Média" },
+                new { Value = 2, Text = "2 - Leve" }
+            };
+
+            return gravidade;
+        }
+
+        public List<dynamic> getMultaStatus() {
+            List<dynamic> status = new List<dynamic> {
+                new { Value = -1, Text = "---" },
+                new { Value = 0, Text = "Vencida" },
+                new { Value = 1, Text = "Paga" },
+                new { Value = 2, Text = "Em aberto" },
+                new { Value = 3, Text = "Recorrida" }
+            };
+
+            return status;
+        }
     }
 }

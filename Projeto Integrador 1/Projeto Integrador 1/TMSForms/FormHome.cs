@@ -55,5 +55,9 @@ namespace Projeto_Integrador_1.TMSForms
         {
             fmPrincipal.AtivarForm(new TMSForms.Register.FormAbastecimentos());
         }
+
+        private void button7_Click(object sender, EventArgs e) {
+            fmPrincipal.AtivarForm(new TMSForms.Register.FormMultas());
+        }
     }
 }

@@ -179,6 +179,7 @@ namespace Projeto_Integrador_1
         private void btnMultas_Click(object sender, EventArgs e)
         {
             AtivarBotao(sender);
+            AtivarForm(new TMSForms.List.FormMultas(this));
         }
 
         private void btnFinanceiro_Click(object sender, EventArgs e)
