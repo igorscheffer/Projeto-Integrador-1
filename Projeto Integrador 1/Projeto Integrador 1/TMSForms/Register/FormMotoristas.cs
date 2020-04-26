@@ -4,6 +4,7 @@ using Correios.CEP;
 using FontAwesome.Sharp;
 using Projeto_Integrador_1.Connection;
 using Projeto_Integrador_1.Util;
+using Projeto_Integrador_1.Util.Validate;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormMotoristas : Form {
@@ -67,28 +68,28 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
         private void onEnviar(object sender, EventArgs e) {
             try {
-                Validate Validate = new Util.Validate();
+                Validate Validate = new Validate(this, ErrorProvider);
 
-                Validate.addRule(textNome, "Nome Completo", "required|max:100");
-                Validate.addRule(textCPF, "CPF", "required|cpf");
-                Validate.addRule(textRG, "RG", "numeric|max:12");
-                Validate.addRule(combStatus, "Status", "required|numeric|exact:1");
-                Validate.addRule(textCNH, "CNH", "numeric|max:12");
-                Validate.addRule(timeVencimentoCNH, "Vencimento", "date:dd/MM/yyyy");
-                Validate.addRule(combCategoriaCNH, "Categoria", "min:1|max:2");
-                Validate.addRule(combSexo, "Sexo", "required|in:h,m");
-                Validate.addRule(combEstadoCivil, "Estado Civil", "required|numeric|exact:1");
-                Validate.addRule(textCEP, "CEP", "cep");
-                Validate.addRule(textEndereco, "Endereco", "max:100");
-                Validate.addRule(textN, "Nº", "max:10");
-                Validate.addRule(textBairro, "Bairro", "max:60");
-                Validate.addRule(textComplemento, "Complemento", "max:100");
-                Validate.addRule(textCidade, "Cidade", "max:100");
-                Validate.addRule(combEstado, "Estado", "exact:2");
-                Validate.addRule(combCargo, "Cargo", "numeric|exact:1");
-                Validate.addRule(textTelefone, "Telefone", "telefone");
-                Validate.addRule(textCelular, "Celular", "telefone");
-                Validate.addRule(textEmail, "Email", "email|max:100");
+                Validate.AddRule(textNome, "Nome Completo", "required|max:100");
+                Validate.AddRule(textCPF, "CPF", "required|cpf");
+                Validate.AddRule(textRG, "RG", "numeric|max:12");
+                Validate.AddRule(combStatus, "Status", "required|numeric|exact:1");
+                Validate.AddRule(textCNH, "CNH", "numeric|max:12");
+                Validate.AddRule(timeVencimentoCNH, "Vencimento", "date:dd/MM/yyyy");
+                Validate.AddRule(combCategoriaCNH, "Categoria", "min:1|max:2");
+                Validate.AddRule(combSexo, "Sexo", "required|in:h,m");
+                Validate.AddRule(combEstadoCivil, "Estado Civil", "required|numeric|exact:1");
+                Validate.AddRule(textCEP, "CEP", "cep");
+                Validate.AddRule(textEndereco, "Endereco", "max:100");
+                Validate.AddRule(textN, "Nº", "max:10");
+                Validate.AddRule(textBairro, "Bairro", "max:60");
+                Validate.AddRule(textComplemento, "Complemento", "max:100");
+                Validate.AddRule(textCidade, "Cidade", "max:100");
+                Validate.AddRule(combEstado, "Estado", "exact:2");
+                Validate.AddRule(combCargo, "Cargo", "numeric|exact:1");
+                Validate.AddRule(textTelefone, "Telefone", "telefone");
+                Validate.AddRule(textCelular, "Celular", "telefone");
+                Validate.AddRule(textEmail, "Email", "email|max:100");
 
                 Validate.Validation();
 

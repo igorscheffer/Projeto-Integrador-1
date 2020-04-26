@@ -3,6 +3,7 @@ using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Projeto_Integrador_1.Util.Validate;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormAbastecimentos : Form {
@@ -95,20 +96,20 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
         private void OnEnviar(object sender, EventArgs e) {
             try {
-                Validate Validate = new Validate();
+                Validate Validate = new Validate(this, ErrorProvider);
 
                 //Validate.addRule(ViagemId, "Viagem", "numeric|max:11");
-                Validate.addRule(timeData, "Data", "required|date:dd/MM/yyyy HH:mm");
-                Validate.addRule(textCupom, "Cupom", "max:20");
-                Validate.addRule(combPosto, "Posto", "required|numeric|max:11");
-                Validate.addRule(combCombustivel, "Combustivel", "required|numeric|exact:1");
-                Validate.addRule(combVeiculo, "Veiculo", "numeric|max:11");
-                Validate.addRule(combMotorista, "Motorista", "numeric|max:11");
-                Validate.addRule(textHodometro, "Hodômetro", "numeric|max:22");
-                Validate.addRule(combStatus, "Status", "required|numeric|max:22");
-                Validate.addRule(textLitros, "Litros", "required|numeric|max:11");
-                Validate.addRule(textValor, "Valor", "required|numeric|max:11");
-                Validate.addRule(textTotal, "Total", "required|numeric|max:11");
+                Validate.AddRule(timeData, "Data", "required|date:dd/MM/yyyy HH:mm");
+                Validate.AddRule(textCupom, "Cupom", "max:20");
+                Validate.AddRule(combPosto, "Posto", "required|numeric|max:11");
+                Validate.AddRule(combCombustivel, "Combustivel", "required|numeric|exact:1");
+                Validate.AddRule(combVeiculo, "Veiculo", "numeric|max:11");
+                Validate.AddRule(combMotorista, "Motorista", "numeric|max:11");
+                Validate.AddRule(textHodometro, "Hodômetro", "numeric|max:22");
+                Validate.AddRule(combStatus, "Status", "required|numeric|max:22");
+                Validate.AddRule(textLitros, "Litros", "required|numeric|max:11");
+                Validate.AddRule(textValor, "Valor", "required|numeric|max:11");
+                Validate.AddRule(textTotal, "Total", "required|numeric|max:11");
 
                 Validate.Validation();
 

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Guna.UI.WinForms;
+using Projeto_Integrador_1.Util.Validate;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormViagens : Form {
@@ -155,12 +156,12 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
         private void onAddCarga(object sender, EventArgs e) {
             try {
-                Validate Validate = new Util.Validate();
+                Validate Validate = new Validate(this, ErrorProvider);
 
-                Validate.addRule(textCargaNFE, "NF-E", "required|nfe");
-                Validate.addRule(textCargaDescricao, "Descrição", "required|max:100");
-                Validate.addRule(textCargaPeso, "Peso", "required|numeric|max:20");
-                Validate.addRule(textCargaValor, "Valor", "required|reais");
+                Validate.AddRule(textCargaNFE, "NF-E", "required|nfe");
+                Validate.AddRule(textCargaDescricao, "Descrição", "required|max:100");
+                Validate.AddRule(textCargaPeso, "Peso", "required|numeric|max:20");
+                Validate.AddRule(textCargaValor, "Valor", "required|reais");
 
                 Validate.Validation();
 
@@ -183,12 +184,12 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
         private void onAddCusto(object sender, EventArgs e) {
             try {
-                Validate Validate = new Util.Validate();
+                Validate Validate = new Validate(this, ErrorProvider);
 
-                Validate.addRule(timeCustoData, "Data", "required|date:dd/MM/yyyy");
-                Validate.addRule(textCustoDescricao, "Descrição", "required|max:100");
-                Validate.addRule(textCustoQTD, "Qtd", "required|numeric|max:20");
-                Validate.addRule(textCustoValor, "Valor", "required|reais");
+                Validate.AddRule(timeCustoData, "Data", "required|date:dd/MM/yyyy");
+                Validate.AddRule(textCustoDescricao, "Descrição", "required|max:100");
+                Validate.AddRule(textCustoQTD, "Qtd", "required|numeric|max:20");
+                Validate.AddRule(textCustoValor, "Valor", "required|reais");
 
                 Validate.Validation();
 
@@ -212,15 +213,14 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         }
 
         private void onAddAbastecimento(object sender, EventArgs e) {
-            Console.Write("" + combAbastecimentoPosto.Text + " > " + combAbastecimentoPosto.SelectedItem);
             try {
-                Validate Validate = new Util.Validate();
+                Validate Validate = new Validate(this, ErrorProvider);
 
-                Validate.addRule(timeAbastecimentoData, "Data", "required|date:dd/MM/yyyy H:mm");
-                Validate.addRule(combAbastecimentoPosto, "Posto", "required|numeric");
-                Validate.addRule(combAbastecimentoCombustivel, "Combustivel", "required|numeric");
-                Validate.addRule(textAbastecimentoLitros, "Litros", "required|numeric|max:20");
-                Validate.addRule(textAbastecimentoValor, "Valor", "required");
+                Validate.AddRule(timeAbastecimentoData, "Data", "required|date:dd/MM/yyyy H:mm");
+                Validate.AddRule(combAbastecimentoPosto, "Posto", "required|numeric");
+                Validate.AddRule(combAbastecimentoCombustivel, "Combustivel", "required|numeric");
+                Validate.AddRule(textAbastecimentoLitros, "Litros", "required|numeric|max:20");
+                Validate.AddRule(textAbastecimentoValor, "Valor", "required");
 
                 Validate.Validation();
 
@@ -246,30 +246,30 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
         private void OnSalvar(object sender, EventArgs e) {
             try {
-                Validate Validate = new Util.Validate();
+                Validate Validate = new Validate(this, ErrorProvider);
 
-                Validate.addRule(combRemetente, "Remetente", "required|numeric|max:11");
-                Validate.addRule(combDestinatario, "Destinatario", "required|numeric|max:11");
-                Validate.addRule(combTomador, "Tomador", "required|numeric|exact:1");
-                Validate.addRule(textCodigoInterno, "Codigo Interno", "max:10");
-                Validate.addRule(combTipoViagem, "Tipo Viagem", "required|numeric|exact:1");
-                Validate.addRule(combVeiculo, "Veiculo", "required|numeric|max:11");
-                Validate.addRule(combReboque, "Reboque", "numeric|max:11");
-                Validate.addRule(combMotorista, "Motorista", "required|numeric|max:11");
-                Validate.addRule(textSaidaCidade, "Cidade Saida", "required|max:100");
-                Validate.addRule(combSaidaUF, "UF Saida", "required|exact:2");
-                Validate.addRule(textDestinoCidade, "Cidade Destino", "required|max:100");
-                Validate.addRule(combDestinoUF, "UF Destino", "required|exact:2");
-                Validate.addRule(combStatus, "Status", "required|numeric|exact:1");
-                Validate.addRule(timeDataSaida, "Data Saida", "date:dd/MM/yyyy HH:mm");
-                Validate.addRule(timeDataEntrega, "Data Entrega", "date:dd/MM/yyyy HH:mm");
-                Validate.addRule(timeDataChegada, "Data Chegada", "date:dd/MM/yyyy HH:mm");
-                Validate.addRule(textHodometroSaida, "KM Saida", "numeric|max:20");
-                Validate.addRule(textHodometroEntrega, "KM Entrega", "numeric|max:20");
-                Validate.addRule(textHodometroChegada, "KM Chegada", "numeric|max:20");
-                Validate.addRule(textHodometroPercorrido, "KM Percorrido", "numeric|max:11");
-                Validate.addRule(textValor, "Valor do Frete", "numeric|max:11");
-                Validate.addRule(textInformacoesComplementares, "Informações Complementares", "max:1000");
+                Validate.AddRule(combRemetente, "Remetente", "required|numeric|max:11");
+                Validate.AddRule(combDestinatario, "Destinatario", "required|numeric|max:11");
+                Validate.AddRule(combTomador, "Tomador", "required|numeric|exact:1");
+                Validate.AddRule(textCodigoInterno, "Codigo Interno", "max:10");
+                Validate.AddRule(combTipoViagem, "Tipo Viagem", "required|numeric|exact:1");
+                Validate.AddRule(combVeiculo, "Veiculo", "required|numeric|max:11");
+                Validate.AddRule(combReboque, "Reboque", "numeric|max:11");
+                Validate.AddRule(combMotorista, "Motorista", "required|numeric|max:11");
+                Validate.AddRule(textSaidaCidade, "Cidade Saida", "required|max:100");
+                Validate.AddRule(combSaidaUF, "UF Saida", "required|exact:2");
+                Validate.AddRule(textDestinoCidade, "Cidade Destino", "required|max:100");
+                Validate.AddRule(combDestinoUF, "UF Destino", "required|exact:2");
+                Validate.AddRule(combStatus, "Status", "required|numeric|exact:1");
+                Validate.AddRule(timeDataSaida, "Data Saida", "date:dd/MM/yyyy HH:mm");
+                Validate.AddRule(timeDataEntrega, "Data Entrega", "date:dd/MM/yyyy HH:mm");
+                Validate.AddRule(timeDataChegada, "Data Chegada", "date:dd/MM/yyyy HH:mm");
+                Validate.AddRule(textHodometroSaida, "KM Saida", "numeric|max:20");
+                Validate.AddRule(textHodometroEntrega, "KM Entrega", "numeric|max:20");
+                Validate.AddRule(textHodometroChegada, "KM Chegada", "numeric|max:20");
+                Validate.AddRule(textHodometroPercorrido, "KM Percorrido", "numeric|max:11");
+                Validate.AddRule(textValor, "Valor do Frete", "numeric|max:11");
+                Validate.AddRule(textInformacoesComplementares, "Informações Complementares", "max:1000");
 
                 Validate.Validation();
 

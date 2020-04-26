@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Projeto_Integrador_1.Util;
 using Newtonsoft.Json;
+using Projeto_Integrador_1.Util.Validate;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormManutencoes : Form {
@@ -113,24 +114,24 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
         private void onEnviar(object sender, EventArgs e) {
             try {
-                Validate Validate = new Util.Validate();
+                Validate Validate = new Validate(this, ErrorProvider);
 
-                Validate.addRule(combTipoManutencao, "Tipo Manuteção", "required|numeric|exact:1");
-                Validate.addRule(combTipoPreventiva, "Tipo Preventiva", "numeric|exact:1");
-                Validate.addRule(combVeiculo, "Veiculo", "required|numeric|max:11");
-                Validate.addRule(combStatus, "Status", "required|numeric|exact:1");
-                Validate.addRule(combMotorista, "Motorista", "required|numeric|max:11");
-                Validate.addRule(timeDataAgendada, "Data Agendada", "required|date:dd/MM/yyyy HH:mm");
-                Validate.addRule(timeDataRealizada, "Data Realizada", "date:dd/MM/yyyy HH:mm");
-                Validate.addRule(textHodometroAgendado, "Hodômetro Agendado", "required|numeric|max:20");
-                Validate.addRule(textHodometroRealizado, "Hodômetro Realizado", "numeric|max:20");
-                Validate.addRule(textObservacoes, "Motivo/Observações", "max:1000");
-                Validate.addRule(textOrdemServico, "Ordem Servico", "max:20");
-                Validate.addRule(combFornecedor, "Concessionaria/Fornecedor", "numeric|max:11");
-                Validate.addRule(textMaoObra, "Mão de Obra", "numeric|max:20");
-                Validate.addRule(textDesconto, "Desconto", "numeric|max:20");
-                Validate.addRule(textAcrecimo, "Acrécimo", "numeric|max:20");
-                Validate.addRule(textValor, "Valor Total", "numeric|max:20");
+                Validate.AddRule(combTipoManutencao, "Tipo Manuteção", "required|numeric|exact:1");
+                Validate.AddRule(combTipoPreventiva, "Tipo Preventiva", "numeric|exact:1");
+                Validate.AddRule(combVeiculo, "Veiculo", "required|numeric|max:11");
+                Validate.AddRule(combStatus, "Status", "required|numeric|exact:1");
+                Validate.AddRule(combMotorista, "Motorista", "required|numeric|max:11");
+                Validate.AddRule(timeDataAgendada, "Data Agendada", "required|date:dd/MM/yyyy HH:mm");
+                Validate.AddRule(timeDataRealizada, "Data Realizada", "date:dd/MM/yyyy HH:mm");
+                Validate.AddRule(textHodometroAgendado, "Hodômetro Agendado", "required|numeric|max:20");
+                Validate.AddRule(textHodometroRealizado, "Hodômetro Realizado", "numeric|max:20");
+                Validate.AddRule(textObservacoes, "Motivo/Observações", "max:1000");
+                Validate.AddRule(textOrdemServico, "Ordem Servico", "max:20");
+                Validate.AddRule(combFornecedor, "Concessionaria/Fornecedor", "numeric|max:11");
+                Validate.AddRule(textMaoObra, "Mão de Obra", "numeric|max:20");
+                Validate.AddRule(textDesconto, "Desconto", "numeric|max:20");
+                Validate.AddRule(textAcrecimo, "Acrécimo", "numeric|max:20");
+                Validate.AddRule(textValor, "Valor Total", "numeric|max:20");
 
                 Validate.Validation();
 
@@ -203,12 +204,12 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
         private void OnAddItem(object sender, EventArgs e) {
             try {
-                Validate Validate = new Util.Validate();
+                Validate Validate = new Validate(this, ErrorProvider);
 
-                Validate.addRule(textItemCodigo, "Codigo", "required|max:10");
-                Validate.addRule(textItemDescricao, "Descrição", "required|max:60");
-                Validate.addRule(textItemQtd, "Qtd", "required|numeric|max:20");
-                Validate.addRule(textItemValor, "Valor", "required|numeric|max:20");
+                Validate.AddRule(textItemCodigo, "Codigo", "required|max:10");
+                Validate.AddRule(textItemDescricao, "Descrição", "required|max:60");
+                Validate.AddRule(textItemQtd, "Qtd", "required|numeric|max:20");
+                Validate.AddRule(textItemValor, "Valor", "required|numeric|max:20");
 
                 Validate.Validation();
 

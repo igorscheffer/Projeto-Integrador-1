@@ -2,6 +2,7 @@
 using Projeto_Integrador_1.Util;
 using System;
 using System.Windows.Forms;
+using Projeto_Integrador_1.Util.Validate;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormVeiculos : Form {
@@ -46,26 +47,26 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
         private void onEnviar(object sender, EventArgs e) {
             try {
-                Validate Validate = new Util.Validate();
+                Validate Validate = new Validate(this, ErrorProvider);
 
-                Validate.addRule(textFrota, "Frota", "max:20");
-                Validate.addRule(textPlaca, "Placa", "required|placa");
-                Validate.addRule(combCategoria, "Categoria", "required|numeric|max:2");
-                Validate.addRule(combMarca, "Marca", "required|numeric|max:2");
-                Validate.addRule(combCarroceria, "Carroceria", "required|numeric|max:2");
-                Validate.addRule(textModelo, "Modelo", "required|max:50");
-                Validate.addRule(combCor, "Cor", "required|numeric|max:2");
-                Validate.addRule(combCombustivel, "Combustivel", "required|numeric|max:2");
-                Validate.addRule(textMotorizacao, "Motorizacao", "max:30");
-                Validate.addRule(textRenavam, "Renavam", "numeric|max:30");
-                Validate.addRule(textChassi, "Chassi", "required|max:30");
-                Validate.addRule(combAnoFabricacao, "Ano Fabricação", "required|numeric|date:yyyy");
-                Validate.addRule(combAnoModelo, "Ano Modelo", "required|numeric|date:yyyy");
-                Validate.addRule(combStatus, "Status", "required|numeric|max:2");
-                Validate.addRule(textTara, "Tara", "max:20");
-                Validate.addRule(textLotacao, "Lotação", "max:20");
-                Validate.addRule(textPesoBrutoTotal, "Peso Bruto Total", "max:20");
-                Validate.addRule(textCapacidade, "Capacidade M³", "max:20");
+                Validate.AddRule(textFrota, "Frota", "max:20");
+                Validate.AddRule(textPlaca, "Placa", "required|placa");
+                Validate.AddRule(combCategoria, "Categoria", "required|numeric|max:2");
+                Validate.AddRule(combMarca, "Marca", "required|numeric|max:2");
+                Validate.AddRule(combCarroceria, "Carroceria", "required|numeric|max:2");
+                Validate.AddRule(textModelo, "Modelo", "required|max:50");
+                Validate.AddRule(combCor, "Cor", "required|numeric|max:2");
+                Validate.AddRule(combCombustivel, "Combustivel", "required|numeric|max:2");
+                Validate.AddRule(textMotorizacao, "Motorizacao", "max:30");
+                Validate.AddRule(textRenavam, "Renavam", "numeric|max:30");
+                Validate.AddRule(textChassi, "Chassi", "required|max:30");
+                Validate.AddRule(combAnoFabricacao, "Ano Fabricação", "required|numeric|date:yyyy");
+                Validate.AddRule(combAnoModelo, "Ano Modelo", "required|numeric|date:yyyy");
+                Validate.AddRule(combStatus, "Status", "required|numeric|max:2");
+                Validate.AddRule(textTara, "Tara", "max:20");
+                Validate.AddRule(textLotacao, "Lotação", "max:20");
+                Validate.AddRule(textPesoBrutoTotal, "Peso Bruto Total", "max:20");
+                Validate.AddRule(textCapacidade, "Capacidade M³", "max:20");
 
                 Validate.Validation();
 

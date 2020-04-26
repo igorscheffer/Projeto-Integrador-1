@@ -5,6 +5,7 @@ using Projeto_Integrador_1.Util;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Projeto_Integrador_1.Util.Validate;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormClientes : Form {
@@ -123,28 +124,28 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
         private void onEnviar(object sender, EventArgs e) {
             try {
-                Validate Validate = new Util.Validate();
+                Validate Validate = new Validate(this, ErrorProvider);
 
-                Validate.addRule(combTipoCadastro, "Tipo Cadastro", "required|in:C,F,A|exact:1");
-                Validate.addRule(combTipoPessoa, "Tipo Pessoa", "required|in:PF,PJ|exact:2");
-                Validate.addRule(textCNPJ, lblCNPJ.Text, "required|" + ((string)combTipoPessoa.SelectedValue == "PJ" ? "cnpj" : "cpf"));
-                Validate.addRule(textRazaoSocial, lblRazaoSocial.Text, "required|max:150");
-                Validate.addRule(textNomeFantasia, "Razão Social", "max:150");
-                Validate.addRule(textInscricaoMunicipal, lblInscricaoMunicipal.Text, "max:12");
-                Validate.addRule(textInscricaoEstadual, lblInscricaoEstadual.Text, "max:12");
-                Validate.addRule(textCEP, "CEP", "cep");
-                Validate.addRule(textEndereco, "Endereco", "max:100");
-                Validate.addRule(textN, "Nº", "max:10");
-                Validate.addRule(textBairro, "Bairro", "max:60");
-                Validate.addRule(textComplemento, "Complemento", "max:100");
-                Validate.addRule(textCidade, "Cidade", "max:100");
-                Validate.addRule(combEstado, "Estado", "exact:2");
-                Validate.addRule(textNome, "Contato Nome", "max:100");
-                Validate.addRule(textTelefone, "Telefone", "telefone");
-                Validate.addRule(textRamal, "Ramal", "numeric|max:10");
-                Validate.addRule(textCelular, "Celular", "telefone");
-                Validate.addRule(textEmail, "Email", "email|max:100");
-                Validate.addRule(textObservacoes, "Observações", "max:500");
+                Validate.AddRule(combTipoCadastro, "Tipo Cadastro", "required|in:C,F,A|exact:1");
+                Validate.AddRule(combTipoPessoa, "Tipo Pessoa", "required|in:PF,PJ|exact:2");
+                Validate.AddRule(textCNPJ, lblCNPJ.Text, "required|" + ((string)combTipoPessoa.SelectedValue == "PJ" ? "cnpj" : "cpf"));
+                Validate.AddRule(textRazaoSocial, lblRazaoSocial.Text, "required|max:150");
+                Validate.AddRule(textNomeFantasia, "Razão Social", "max:150");
+                Validate.AddRule(textInscricaoMunicipal, lblInscricaoMunicipal.Text, "max:12");
+                Validate.AddRule(textInscricaoEstadual, lblInscricaoEstadual.Text, "max:12");
+                Validate.AddRule(textCEP, "CEP", "cep");
+                Validate.AddRule(textEndereco, "Endereco", "max:100");
+                Validate.AddRule(textN, "Nº", "max:10");
+                Validate.AddRule(textBairro, "Bairro", "max:60");
+                Validate.AddRule(textComplemento, "Complemento", "max:100");
+                Validate.AddRule(textCidade, "Cidade", "max:100");
+                Validate.AddRule(combEstado, "Estado", "exact:2");
+                Validate.AddRule(textNome, "Contato Nome", "max:100");
+                Validate.AddRule(textTelefone, "Telefone", "telefone");
+                Validate.AddRule(textRamal, "Ramal", "numeric|max:10");
+                Validate.AddRule(textCelular, "Celular", "telefone");
+                Validate.AddRule(textEmail, "Email", "email|max:100");
+                Validate.AddRule(textObservacoes, "Observações", "max:500");
 
                 Validate.Validation();
 

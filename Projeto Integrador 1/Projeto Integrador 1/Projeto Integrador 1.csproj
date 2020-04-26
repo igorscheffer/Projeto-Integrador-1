@@ -215,8 +215,11 @@
       <DependentUpon>FormViagens.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\PreencherCombBox.cs" />
-    <Compile Include="Util\Rules.cs" />
-    <Compile Include="Util\Validate.cs" />
+    <Compile Include="Util\Validate\Errors.cs" />
+    <Compile Include="Util\Validate\Rules.cs" />
+    <Compile Include="Util\Validate\Translate.cs" />
+    <Compile Include="Util\Validate\Valid.cs" />
+    <Compile Include="Util\Validate\Validate.cs" />
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>

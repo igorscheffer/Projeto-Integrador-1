@@ -3,6 +3,7 @@ using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Projeto_Integrador_1.Util.Validate;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormMultas : Form {
@@ -44,19 +45,19 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         }
 
         private void OnEnviar(object sender, EventArgs e) {
-            try {
-                Validate Validate = new Util.Validate(this, ErrorProvider);
+            
+                Validate Validate = new Validate(this, ErrorProvider);
 
-                Validate.addRule(combVeiculo, "Veiculo", "required|numeric|max:11");
-                Validate.addRule(combMotorista, "Motorista", "numeric|max:11");
-                Validate.addRule(combGravidade, "Gravidade", "required|numeric|exact:1");
-                Validate.addRule(combStatus, "Status", "required|numeric|exact:1");
-                Validate.addRule(timeDataOcorrencia, "Data Ocorrencia", "required|date:dd/MM/yyyy");
-                Validate.addRule(timeDataNotificacao, "Data Notificacao", "date:dd/MM/yyyy");
-                Validate.addRule(timeDataVencimento, "Data Vencimento", "date:dd/MM/yyyy");
-                Validate.addRule(textValor, "Valor", "numeric|max:11");
-                Validate.addRule(textDescricao, "Descrição da Infração", "max:500");
-                Validate.addRule(textLocal, "Local da Infração", "max:500");
+                Validate.AddRule(combVeiculo, "Veiculo", "required|numeric|max:11");
+                Validate.AddRule(combMotorista, "Motorista", "numeric|max:11");
+                Validate.AddRule(combGravidade, "Gravidade", "required|numeric|exact:1");
+                Validate.AddRule(combStatus, "Status", "required|numeric|exact:1");
+                Validate.AddRule(timeDataOcorrencia, "Data Ocorrencia", "required|date:dd/MM/yyyy");
+                Validate.AddRule(timeDataNotificacao, "Data Notificacao", "date:dd/MM/yyyy");
+                Validate.AddRule(timeDataVencimento, "Data Vencimento", "date:dd/MM/yyyy");
+                Validate.AddRule(textValor, "Valor", "numeric|max:11");
+                Validate.AddRule(textDescricao, "Descrição da Infração", "max:500");
+                Validate.AddRule(textLocal, "Local da Infração", "max:500");
 
                 Validate.Validation();
 
@@ -86,10 +87,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 else {
                     Validate.ErrorProviderShow();
                 }
-            }
-            catch (Exception ex) {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
     }
 }
