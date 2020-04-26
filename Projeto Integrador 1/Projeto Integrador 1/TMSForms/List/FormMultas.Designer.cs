@@ -33,8 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridMultas = new Guna.UI.WinForms.GunaDataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCadastrar = new FontAwesome.Sharp.IconButton();
             this.frota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +41,8 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCadastrar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridMultas)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -125,28 +125,6 @@
             this.gridMultas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridMultas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.panel1.Controls.Add(this.btnCadastrar);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(152)))), ((int)(((byte)(204)))));
-            resources.ApplyResources(this.btnCadastrar, "btnCadastrar");
-            this.btnCadastrar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnCadastrar.IconColor = System.Drawing.Color.White;
-            this.btnCadastrar.IconSize = 16;
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Rotation = 0D;
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
             // frota
             // 
             dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
@@ -210,6 +188,28 @@
             resources.ApplyResources(this.Column4, "Column4");
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.panel1.Controls.Add(this.btnCadastrar);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(152)))), ((int)(((byte)(204)))));
+            resources.ApplyResources(this.btnCadastrar, "btnCadastrar");
+            this.btnCadastrar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnCadastrar.IconColor = System.Drawing.Color.White;
+            this.btnCadastrar.IconSize = 16;
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Rotation = 0D;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // FormMultas
             // 

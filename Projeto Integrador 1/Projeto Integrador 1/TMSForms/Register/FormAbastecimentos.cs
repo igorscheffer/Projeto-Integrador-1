@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormAbastecimentos : Form {
+        ErrorProvider ErrorProvider = new ErrorProvider();
         public FormAbastecimentos() {
             InitializeComponent();
 
@@ -144,7 +145,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     }
                 }
                 else {
-                    Validate.ErrorMessageBox();
+                    Validate.ErrorProviderShow();
                 }
             }
             catch (Exception ex) {

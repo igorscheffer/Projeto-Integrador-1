@@ -20,6 +20,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
 {
     public partial class FormViagens : Form
     {
+        ErrorProvider ErrorProvider = new ErrorProvider();
 
         List<dynamic> ListaCargas = new List<dynamic>();
         List<dynamic> ListaClientes = new List<dynamic>();
@@ -189,7 +190,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
                     textCargaValor.ResetText();
                 }
                 else {
-                    Validate.ErrorMessageBox();
+                    Validate.ErrorProviderShow();
                 }
             }
             catch (Exception ex) {
@@ -223,7 +224,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 }
                 else
                 {
-                    Validate.ErrorMessageBox();
+                    Validate.ErrorProviderShow();
                 }
             }
             catch (Exception ex)
@@ -261,7 +262,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 }
                 else
                 {
-                    Validate.ErrorMessageBox();
+                    Validate.ErrorProviderShow();
                 }
             }
             catch (Exception ex)
@@ -344,7 +345,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 }
                 else
                 {
-                    Validate.ErrorMessageBox();
+                    Validate.ErrorProviderShow();
                 }
             }
             catch (Exception ex)

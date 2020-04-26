@@ -46,12 +46,12 @@
             this.label24 = new System.Windows.Forms.Label();
             this.textDescricao = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textLocal = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnEnviar = new FontAwesome.Sharp.IconButton();
+            this.textLocal = new System.Windows.Forms.RichTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -429,31 +429,6 @@
             this.panel3.Size = new System.Drawing.Size(490, 130);
             this.panel3.TabIndex = 276;
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.panel2.Controls.Add(this.textLocal);
-            this.panel2.Location = new System.Drawing.Point(530, 228);
-            this.panel2.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(1);
-            this.panel2.Size = new System.Drawing.Size(490, 130);
-            this.panel2.TabIndex = 277;
-            // 
-            // textLocal
-            // 
-            this.textLocal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textLocal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textLocal.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textLocal.Location = new System.Drawing.Point(1, 1);
-            this.textLocal.Margin = new System.Windows.Forms.Padding(0);
-            this.textLocal.MaxLength = 1000;
-            this.textLocal.Name = "textLocal";
-            this.textLocal.Size = new System.Drawing.Size(488, 128);
-            this.textLocal.TabIndex = 22;
-            this.textLocal.Text = "";
-            // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -529,6 +504,31 @@
             this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.OnEnviar);
             // 
+            // textLocal
+            // 
+            this.textLocal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textLocal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textLocal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textLocal.Location = new System.Drawing.Point(1, 1);
+            this.textLocal.Margin = new System.Windows.Forms.Padding(0);
+            this.textLocal.MaxLength = 1000;
+            this.textLocal.Name = "textLocal";
+            this.textLocal.Size = new System.Drawing.Size(488, 128);
+            this.textLocal.TabIndex = 22;
+            this.textLocal.Text = "";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel2.Controls.Add(this.textLocal);
+            this.panel2.Location = new System.Drawing.Point(530, 228);
+            this.panel2.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(1);
+            this.panel2.Size = new System.Drawing.Size(490, 130);
+            this.panel2.TabIndex = 277;
+            // 
             // FormMultas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -599,9 +599,9 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.RichTextBox textDescricao;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RichTextBox textLocal;
         private System.Windows.Forms.Label label7;
         private FontAwesome.Sharp.IconButton btnEnviar;
+        private System.Windows.Forms.RichTextBox textLocal;
+        private System.Windows.Forms.Panel panel2;
     }
 }

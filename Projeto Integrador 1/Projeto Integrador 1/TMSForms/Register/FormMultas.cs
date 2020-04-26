@@ -1,4 +1,5 @@
-﻿using Projeto_Integrador_1.Connection;
+﻿using Guna.UI.WinForms;
+using Projeto_Integrador_1.Connection;
 using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
@@ -8,10 +9,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormMultas : Form {
+        ErrorProvider ErrorProvider = new ErrorProvider();
         public FormMultas() {
             InitializeComponent();
 
@@ -47,9 +50,10 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             combMotorista.DataSource = new List<dynamic>(motoristas.Results);
             combMotorista.SelectedValue = -1;
         }
+
         private void OnEnviar(object sender, EventArgs e) {
             try {
-                Validate Validate = new Util.Validate();
+                Validate Validate = new Util.Validate(this, ErrorProvider);
 
                 Validate.addRule(combVeiculo, "Veiculo", "required|numeric|max:11");
                 Validate.addRule(combMotorista, "Motorista", "numeric|max:11");
@@ -69,7 +73,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
                     multas.Veiculo = combVeiculo.SelectedValue;
                     multas.Motorista = combMotorista.SelectedValue;
-                    //multas.Gravidade = combGravidade.SelectedValue;
+                    multas.Gravidade = combGravidade.SelectedValue;
                     multas.Status = combStatus.SelectedValue;
                     multas.DataOcorrencia = timeDataOcorrencia.Text;
                     multas.DataNotificacao = timeDataNotificacao.Text;
@@ -88,7 +92,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     }
                 }
                 else {
-                    Validate.ErrorMessageBox();
+                    Validate.ErrorProviderShow();
                 }
             }
             catch (Exception ex) {

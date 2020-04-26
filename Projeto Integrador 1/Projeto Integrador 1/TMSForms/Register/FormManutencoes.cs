@@ -15,6 +15,8 @@ namespace Projeto_Integrador_1.TMSForms.Register
 {
     public partial class FormManutencoes : Form
     {
+        ErrorProvider ErrorProvider = new ErrorProvider();
+
         private string jsonItens;
         public FormManutencoes()
         {
@@ -186,7 +188,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 }
                 else
                 {
-                    Validate.ErrorMessageBox();
+                    Validate.ErrorProviderShow();
                 }
             }
             catch (Exception ex)
@@ -254,7 +256,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 }
                 else
                 {
-                    Validate.ErrorMessageBox();
+                    Validate.ErrorProviderShow();
                 }
             }
             catch (Exception ex)

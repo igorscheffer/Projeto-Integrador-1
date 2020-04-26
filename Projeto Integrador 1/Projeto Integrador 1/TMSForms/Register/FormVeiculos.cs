@@ -14,6 +14,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
 {
     public partial class FormVeiculos : Form
     {
+        ErrorProvider ErrorProvider = new ErrorProvider();
         public FormVeiculos()
         {
             InitializeComponent();
@@ -114,7 +115,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
                 }
                 else
                 {
-                    Validate.ErrorMessageBox();
+                    Validate.ErrorProviderShow();
                 }
             }
             catch (Exception ex) {
