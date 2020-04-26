@@ -2,24 +2,12 @@
 using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Runtime.Serialization.Json;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
 using Newtonsoft.Json;
-using System.Windows.Controls;
 using Guna.UI.WinForms;
 
-namespace Projeto_Integrador_1.TMSForms.Register
-{
-    public partial class FormViagens : Form
-    {
+namespace Projeto_Integrador_1.TMSForms.Register {
+    public partial class FormViagens : Form {
         ErrorProvider ErrorProvider = new ErrorProvider();
 
         List<dynamic> ListaCargas = new List<dynamic>();
@@ -29,15 +17,14 @@ namespace Projeto_Integrador_1.TMSForms.Register
         private string jsonCustos;
         private string jsonAbastecimentos;
 
-        public FormViagens()
-        {
+        public FormViagens() {
             InitializeComponent();
 
             PreencherCombBox ValuesComb = new Util.PreencherCombBox();
 
-            this.LoadClientes();
-            this.LoadVeiculos();
-            this.LoadMotoristas();
+            LoadClientes();
+            LoadVeiculos();
+            LoadMotoristas();
 
             combTomador.DisplayMember = "Text";
             combTomador.ValueMember = "Value";
@@ -78,7 +65,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
 
             combRemetente.DisplayMember = "RazaoSocial";
             combRemetente.ValueMember = "Id";
-            combRemetente.DataSource = new List<dynamic> (clientes.Results);
+            combRemetente.DataSource = new List<dynamic>(clientes.Results);
             combRemetente.SelectedValue = -1;
 
             combDestinatario.DisplayMember = "RazaoSocial";
@@ -118,8 +105,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             combMotorista.DataSource = new List<dynamic>(motoristas.Results);
             combMotorista.SelectedValue = -1;
         }
-        private void onCadastrarCliente(object sender, EventArgs e)
-        {
+        private void onCadastrarCliente(object sender, EventArgs e) {
             Form formClientes = new TMSForms.Register.FormClientes();
 
             formClientes.StartPosition = FormStartPosition.CenterScreen;
@@ -128,13 +114,12 @@ namespace Projeto_Integrador_1.TMSForms.Register
             formClientes.MaximizeBox = false;
             formClientes.MinimizeBox = false;
 
-            formClientes.Closed += (s, ea) => this.LoadClientes();
+            formClientes.Closed += (s, ea) => LoadClientes();
 
             formClientes.ShowDialog();
         }
 
-        private void onCadastrarVeiculo(object sender, EventArgs e)
-        {
+        private void onCadastrarVeiculo(object sender, EventArgs e) {
             Form formVeiculo = new TMSForms.Register.FormVeiculos();
 
             formVeiculo.StartPosition = FormStartPosition.CenterScreen;
@@ -143,13 +128,12 @@ namespace Projeto_Integrador_1.TMSForms.Register
             formVeiculo.MaximizeBox = false;
             formVeiculo.MinimizeBox = false;
 
-            formVeiculo.Closed += (s, ea) => this.LoadVeiculos();
+            formVeiculo.Closed += (s, ea) => LoadVeiculos();
 
             formVeiculo.ShowDialog();
         }
 
-        private void onCadastrarMotorista(object sender, EventArgs e)
-        {
+        private void onCadastrarMotorista(object sender, EventArgs e) {
             Form formMotoristas = new TMSForms.Register.FormMotoristas();
 
             formMotoristas.StartPosition = FormStartPosition.CenterScreen;
@@ -158,19 +142,18 @@ namespace Projeto_Integrador_1.TMSForms.Register
             formMotoristas.MaximizeBox = false;
             formMotoristas.MinimizeBox = false;
 
-            formMotoristas.Closed += (s, ea) => this.LoadMotoristas();
+            formMotoristas.Closed += (s, ea) => LoadMotoristas();
 
             formMotoristas.ShowDialog();
         }
 
         private void PreencherGridCargas() {
-            foreach (dynamic item in this.ListaCargas) {
+            foreach (dynamic item in ListaCargas) {
                 gridCargas.Rows.Add(item.NFE, item.Descricao, item.Peso, item.Valor);
             }
         }
 
-        private void onAddCarga(object sender, EventArgs e)
-        {
+        private void onAddCarga(object sender, EventArgs e) {
             try {
                 Validate Validate = new Util.Validate();
 
@@ -198,10 +181,8 @@ namespace Projeto_Integrador_1.TMSForms.Register
             }
         }
 
-        private void onAddCusto(object sender, EventArgs e)
-        {
-            try
-            {
+        private void onAddCusto(object sender, EventArgs e) {
+            try {
                 Validate Validate = new Util.Validate();
 
                 Validate.addRule(timeCustoData, "Data", "required|date:dd/MM/yyyy");
@@ -211,8 +192,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
 
                 Validate.Validation();
 
-                if (Validate.IsValid())
-                {
+                if (Validate.IsValid()) {
                     int valorTotal = Int32.Parse(textCustoValor.Text) * Int32.Parse(textCustoQTD.Text);
 
                     gridCustos.Rows.Add(timeCustoData.Text, textCustoDescricao.Text, textCustoQTD.Text, textCustoValor.Text, valorTotal);
@@ -222,22 +202,18 @@ namespace Projeto_Integrador_1.TMSForms.Register
                     textCustoQTD.ResetText();
                     textCustoValor.ResetText();
                 }
-                else
-                {
+                else {
                     Validate.ErrorProviderShow();
                 }
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void onAddAbastecimento(object sender, EventArgs e)
-        {
+        private void onAddAbastecimento(object sender, EventArgs e) {
             Console.Write("" + combAbastecimentoPosto.Text + " > " + combAbastecimentoPosto.SelectedItem);
-            try
-            {
+            try {
                 Validate Validate = new Util.Validate();
 
                 Validate.addRule(timeAbastecimentoData, "Data", "required|date:dd/MM/yyyy H:mm");
@@ -248,8 +224,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
 
                 Validate.Validation();
 
-                if (Validate.IsValid())
-                {
+                if (Validate.IsValid()) {
                     int valorTotal = Int32.Parse(textAbastecimentoValor.Text) * Int32.Parse(textAbastecimentoLitros.Text);
 
                     gridAbastecimentos.Rows.Add(timeAbastecimentoData.Text, combAbastecimentoPosto.SelectedValue, combAbastecimentoCombustivel.SelectedValue, textAbastecimentoLitros.Text, textAbastecimentoValor.Text, valorTotal);
@@ -260,51 +235,46 @@ namespace Projeto_Integrador_1.TMSForms.Register
                     textAbastecimentoLitros.ResetText();
                     textAbastecimentoValor.ResetText();
                 }
-                else
-                {
+                else {
                     Validate.ErrorProviderShow();
                 }
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void OnSalvar(object sender, EventArgs e)
-        {
-            try
-            {
+        private void OnSalvar(object sender, EventArgs e) {
+            try {
                 Validate Validate = new Util.Validate();
 
-                Validate.addRule(combRemetente,                     "Remetente",                    "required|numeric|max:11");
-                Validate.addRule(combDestinatario,                  "Destinatario",                 "required|numeric|max:11");
-                Validate.addRule(combTomador,                       "Tomador",                      "required|numeric|exact:1");
-                Validate.addRule(textCodigoInterno,                 "Codigo Interno",               "max:10");
-                Validate.addRule(combTipoViagem,                    "Tipo Viagem",                  "required|numeric|exact:1");
-                Validate.addRule(combVeiculo,                       "Veiculo",                      "required|numeric|max:11");
-                Validate.addRule(combReboque,                       "Reboque",                      "numeric|max:11");
-                Validate.addRule(combMotorista,                     "Motorista",                    "required|numeric|max:11");
-                Validate.addRule(textSaidaCidade,                   "Cidade Saida",                 "required|max:100");
-                Validate.addRule(combSaidaUF,                       "UF Saida",                     "required|exact:2");
-                Validate.addRule(textDestinoCidade,                 "Cidade Destino",               "required|max:100");
-                Validate.addRule(combDestinoUF,                     "UF Destino",                   "required|exact:2");
-                Validate.addRule(combStatus,                        "Status",                       "required|numeric|exact:1");
-                Validate.addRule(timeDataSaida,                     "Data Saida",                   "date:dd/MM/yyyy HH:mm");
-                Validate.addRule(timeDataEntrega,                   "Data Entrega",                 "date:dd/MM/yyyy HH:mm");
-                Validate.addRule(timeDataChegada,                   "Data Chegada",                 "date:dd/MM/yyyy HH:mm");
-                Validate.addRule(textHodometroSaida,                "KM Saida",                     "numeric|max:20");
-                Validate.addRule(textHodometroEntrega,              "KM Entrega",                   "numeric|max:20");
-                Validate.addRule(textHodometroChegada,              "KM Chegada",                   "numeric|max:20");
-                Validate.addRule(textHodometroPercorrido,           "KM Percorrido",                "numeric|max:11");
-                Validate.addRule(textValor,                         "Valor do Frete",               "numeric|max:11");
-                Validate.addRule(textInformacoesComplementares,     "Informações Complementares",   "max:1000");
+                Validate.addRule(combRemetente, "Remetente", "required|numeric|max:11");
+                Validate.addRule(combDestinatario, "Destinatario", "required|numeric|max:11");
+                Validate.addRule(combTomador, "Tomador", "required|numeric|exact:1");
+                Validate.addRule(textCodigoInterno, "Codigo Interno", "max:10");
+                Validate.addRule(combTipoViagem, "Tipo Viagem", "required|numeric|exact:1");
+                Validate.addRule(combVeiculo, "Veiculo", "required|numeric|max:11");
+                Validate.addRule(combReboque, "Reboque", "numeric|max:11");
+                Validate.addRule(combMotorista, "Motorista", "required|numeric|max:11");
+                Validate.addRule(textSaidaCidade, "Cidade Saida", "required|max:100");
+                Validate.addRule(combSaidaUF, "UF Saida", "required|exact:2");
+                Validate.addRule(textDestinoCidade, "Cidade Destino", "required|max:100");
+                Validate.addRule(combDestinoUF, "UF Destino", "required|exact:2");
+                Validate.addRule(combStatus, "Status", "required|numeric|exact:1");
+                Validate.addRule(timeDataSaida, "Data Saida", "date:dd/MM/yyyy HH:mm");
+                Validate.addRule(timeDataEntrega, "Data Entrega", "date:dd/MM/yyyy HH:mm");
+                Validate.addRule(timeDataChegada, "Data Chegada", "date:dd/MM/yyyy HH:mm");
+                Validate.addRule(textHodometroSaida, "KM Saida", "numeric|max:20");
+                Validate.addRule(textHodometroEntrega, "KM Entrega", "numeric|max:20");
+                Validate.addRule(textHodometroChegada, "KM Chegada", "numeric|max:20");
+                Validate.addRule(textHodometroPercorrido, "KM Percorrido", "numeric|max:11");
+                Validate.addRule(textValor, "Valor do Frete", "numeric|max:11");
+                Validate.addRule(textInformacoesComplementares, "Informações Complementares", "max:1000");
 
                 Validate.Validation();
 
-                if (Validate.IsValid())
-                {
-                    this.PreencherJson();
+                if (Validate.IsValid()) {
+                    PreencherJson();
 
                     Viagens viagens = new Viagens();
 
@@ -343,13 +313,11 @@ namespace Projeto_Integrador_1.TMSForms.Register
                         MessageBox.Show("Houve um erro ao salvar a viagem. (" + viagens.Message + ")");
                     }
                 }
-                else
-                {
+                else {
                     Validate.ErrorProviderShow();
                 }
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
         }
@@ -359,34 +327,28 @@ namespace Projeto_Integrador_1.TMSForms.Register
             List<object> Custos = new List<object>();
             List<object> Abastecimentos = new List<object>();
 
-            foreach (DataGridViewRow carga in gridCargas.Rows)
-            {
-                Cargas.Add(new
-                {
+            foreach (DataGridViewRow carga in gridCargas.Rows) {
+                Cargas.Add(new {
                     NFE = carga.Cells[0].Value,
                     Descricao = carga.Cells[1].Value,
                     Peso = carga.Cells[2].Value,
                     Valor = carga.Cells[3].Value
                 });
             }
-            this.jsonCargas = JsonConvert.SerializeObject(Cargas);
+            jsonCargas = JsonConvert.SerializeObject(Cargas);
 
-            foreach (DataGridViewRow custos in gridCustos.Rows)
-            {
-                Custos.Add(new
-                {
+            foreach (DataGridViewRow custos in gridCustos.Rows) {
+                Custos.Add(new {
                     Data = custos.Cells[0].Value,
                     Descricao = custos.Cells[1].Value,
                     QTD = custos.Cells[2].Value,
                     Valor = custos.Cells[3].Value
                 });
             }
-            this.jsonCustos = JsonConvert.SerializeObject(Custos);
+            jsonCustos = JsonConvert.SerializeObject(Custos);
 
-            foreach (DataGridViewRow abastecimentos in gridAbastecimentos.Rows)
-            {
-                Abastecimentos.Add(new
-                {
+            foreach (DataGridViewRow abastecimentos in gridAbastecimentos.Rows) {
+                Abastecimentos.Add(new {
                     Data = abastecimentos.Cells[0].Value,
                     Posto = abastecimentos.Cells[1].Value,
                     Combustivel = abastecimentos.Cells[2].Value,
@@ -394,23 +356,20 @@ namespace Projeto_Integrador_1.TMSForms.Register
                     Valor = abastecimentos.Cells[4].Value
                 });
             }
-            this.jsonAbastecimentos = JsonConvert.SerializeObject(Abastecimentos);
+            jsonAbastecimentos = JsonConvert.SerializeObject(Abastecimentos);
         }
 
-        private void OnChangeCliente(object sender, EventArgs e)
-        {
+        private void OnChangeCliente(object sender, EventArgs e) {
             GunaComboBox comboBox = (GunaComboBox)sender;
 
             if (comboBox.SelectedValue != null) {
                 dynamic Selected = ListaClientes.Find(find => (int)find.Id == (int)comboBox.SelectedValue);
 
-                if (comboBox.Name == "combRemetente")
-                {
+                if (comboBox.Name == "combRemetente") {
                     textSaidaCidade.Text = Selected.Cidade;
                     combSaidaUF.SelectedValue = Selected.UF;
                 }
-                else if (comboBox.Name == "combDestinatario")
-                {
+                else if (comboBox.Name == "combDestinatario") {
                     textDestinoCidade.Text = Selected.Cidade;
                     combDestinoUF.SelectedValue = Selected.UF;
                 }

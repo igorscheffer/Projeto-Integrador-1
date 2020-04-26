@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Projeto_Integrador_1.Util {
@@ -85,7 +86,7 @@ namespace Projeto_Integrador_1.Util {
             dynamic value = this.getValue(component);
             if (this.optional(value, rules)) {
                 var regexp = rule;
-                var match = System.Text.RegularExpressions.Regex.Match(value, regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var match = Regex.Match(value, regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
                     Errors.Add(new { Component = component, Message = name + " não está em um formato valido." });
@@ -146,7 +147,7 @@ namespace Projeto_Integrador_1.Util {
             dynamic value = this.getValue(component);
             if (this.optional(value, rules)) {
                 var regexp = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
-                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var match = Regex.Match(value.ToString(), regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
                     Errors.Add(new { Component = component, Message = name + " não é um endereco de E-mail valido." });
@@ -163,7 +164,7 @@ namespace Projeto_Integrador_1.Util {
             if (this.optional(value, rules)) {
                 Console.WriteLine(name + " >>> " + value);
                 var regexp = @"([0-9])";
-                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var match = Regex.Match(value.ToString(), regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
                     Errors.Add(new { Component = component, Message = name + " deve ser numerico." });
@@ -179,7 +180,7 @@ namespace Projeto_Integrador_1.Util {
             dynamic value = this.getValue(component);
             if (this.optional(value, rules)) {
                 var regexp = @"^(\d{3})(\.\d{3})(\.\d{3})(\-\d{2})$";
-                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var match = Regex.Match(value.ToString(), regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
                     Errors.Add(new { Component = component, Message = name + " não é um número de CPF valido." });
@@ -195,7 +196,7 @@ namespace Projeto_Integrador_1.Util {
             dynamic value = this.getValue(component);
             if (this.optional(value, rules)) {
                 var regexp = @"^(\d{2})(\.\d{3}){2}(\/\d{4})(\-\d{2})$";
-                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var match = Regex.Match(value.ToString(), regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
                     Errors.Add(new { Component = component, Message = name + " não é um número de CNPJ valido." });
@@ -211,7 +212,7 @@ namespace Projeto_Integrador_1.Util {
             dynamic value = this.getValue(component);
             if (this.optional(value, rules)) {
                 var regexp = @"\(\d{2,}\) \d{4,}\-\d{4}$";
-                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var match = Regex.Match(value.ToString(), regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
                     Errors.Add(new { Component = component, Message = name + " não é um número de Telefone valido." });
@@ -227,7 +228,7 @@ namespace Projeto_Integrador_1.Util {
             dynamic value = this.getValue(component);
             if (this.optional(value, rules)) {
                 var regexp = @"^(\d{0,3}(\.\d{3}){2})$";
-                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var match = Regex.Match(value.ToString(), regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
                     Errors.Add(new { Component = component, Message = name + " não é um número de NF-E valido." });
@@ -243,7 +244,7 @@ namespace Projeto_Integrador_1.Util {
             dynamic value = this.getValue(component);
             if (this.optional(value, rules)) {
                 var regexp = @"^(\d{1,3}(\.\d{3})*)(\,\d{2})$";
-                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var match = Regex.Match(value.ToString(), regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
                     Errors.Add(new { Component = component, Message = name + " não é um valor R$ valido." });
@@ -259,7 +260,7 @@ namespace Projeto_Integrador_1.Util {
             dynamic value = this.getValue(component);
             if (this.optional(value, rules)) {
                 var regexp = @"^(\d{5})(\-\d{3})$";
-                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var match = Regex.Match(value.ToString(), regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
                     Errors.Add(new { Component = component, Message = name + " não é um número CEP valido." });
@@ -275,7 +276,7 @@ namespace Projeto_Integrador_1.Util {
             dynamic value = this.getValue(component);
             if (this.optional(value, rules)) {
                 var regexp = @"^([A-Z]{3})(\-\d\w\d{2})$";
-                var match = System.Text.RegularExpressions.Regex.Match(value.ToString(), regexp, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var match = Regex.Match(value.ToString(), regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
                     Errors.Add(new { Component = component, Message = name + " não é uma Placa valida." });

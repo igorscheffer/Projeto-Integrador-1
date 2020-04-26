@@ -2,14 +2,10 @@
 using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Projeto_Integrador_1.Connection
-{
+namespace Projeto_Integrador_1.Connection {
     class Veiculos : Config {
-        
+
         public Veiculos() { }
 
         public bool Success;
@@ -36,7 +32,7 @@ namespace Projeto_Integrador_1.Connection
         public string Capacidade { set; get; }
 
         public void Create() {
-            
+
             try {
                 string sql = "INSERT INTO `veiculos` (`frota`, `placa`, `categoria`, `marca`, `carroceria`, `modelo`, `cor`, `combustivel`, `motorizacao`, `renavam`, `chassi`, `ano_fabricacao`, `ano_modelo`, `status`, `tara`, `lotacao`, `peso_bruto_total`, `capacidade`) VALUES (@frota, @placa, @categoria, @marca, @carroceria, @modelo, @cor, @combustivel, @motorizacao, @renavam, @chassi, @ano_fabricacao, @ano_modelo, @status, @tara, @lotacao, @peso_bruto_total, @capacidade);";
 
@@ -44,59 +40,54 @@ namespace Projeto_Integrador_1.Connection
 
                 MySqlCommand query = new MySqlCommand(sql, connection);
 
-                query.Parameters.AddWithValue("@frota", this.Frota);
-                query.Parameters.AddWithValue("@placa", this.Placa);
-                query.Parameters.AddWithValue("@categoria", this.Categoria);
-                query.Parameters.AddWithValue("@marca", this.Marca);
-                query.Parameters.AddWithValue("@carroceria", this.Carroceria);
-                query.Parameters.AddWithValue("@modelo", this.Modelo);
-                query.Parameters.AddWithValue("@cor", this.Cor);
-                query.Parameters.AddWithValue("@combustivel", this.Combustivel);
-                query.Parameters.AddWithValue("@motorizacao", this.Motorizacao);
-                query.Parameters.AddWithValue("@renavam", this.Renavam);
-                query.Parameters.AddWithValue("@chassi", this.Chassi);
-                query.Parameters.AddWithValue("@ano_fabricacao", this.AnoFabricacao);
-                query.Parameters.AddWithValue("@ano_modelo", this.AnoModelo);
-                query.Parameters.AddWithValue("@status", this.Status);
-                query.Parameters.AddWithValue("@tara", this.Tara);
-                query.Parameters.AddWithValue("@lotacao", this.Lotacao);
-                query.Parameters.AddWithValue("@peso_bruto_total", this.PesoBrutoTotal);
-                query.Parameters.AddWithValue("@capacidade", this.Capacidade);
+                query.Parameters.AddWithValue("@frota", Frota);
+                query.Parameters.AddWithValue("@placa", Placa);
+                query.Parameters.AddWithValue("@categoria", Categoria);
+                query.Parameters.AddWithValue("@marca", Marca);
+                query.Parameters.AddWithValue("@carroceria", Carroceria);
+                query.Parameters.AddWithValue("@modelo", Modelo);
+                query.Parameters.AddWithValue("@cor", Cor);
+                query.Parameters.AddWithValue("@combustivel", Combustivel);
+                query.Parameters.AddWithValue("@motorizacao", Motorizacao);
+                query.Parameters.AddWithValue("@renavam", Renavam);
+                query.Parameters.AddWithValue("@chassi", Chassi);
+                query.Parameters.AddWithValue("@ano_fabricacao", AnoFabricacao);
+                query.Parameters.AddWithValue("@ano_modelo", AnoModelo);
+                query.Parameters.AddWithValue("@status", Status);
+                query.Parameters.AddWithValue("@tara", Tara);
+                query.Parameters.AddWithValue("@lotacao", Lotacao);
+                query.Parameters.AddWithValue("@peso_bruto_total", PesoBrutoTotal);
+                query.Parameters.AddWithValue("@capacidade", Capacidade);
 
                 query.ExecuteNonQuery();
 
                 closeConnection();
 
-                this.Success = true;
-                this.Message = "Veiculo salvo com sucesso.";
+                Success = true;
+                Message = "Veiculo salvo com sucesso.";
             }
             catch (Exception e) {
-                this.Success = false;
-                this.Message = e.Message;
+                Success = false;
+                Message = e.Message;
             }
         }
 
-        public void GetAll()
-        {
+        public void GetAll() {
             string sql = "SELECT * FROM `veiculos`;";
 
             PreencherCombBox preValues = new Util.PreencherCombBox();
             List<dynamic> marcas = preValues.getVeiculosMarcas();
 
-            try
-            {
-                if (openConnection())
-                {
+            try {
+                if (openConnection()) {
                     MySqlCommand query = new MySqlCommand(sql, connection);
                     MySqlDataReader data = query.ExecuteReader();
 
-                    while (data.Read())
-                    {
+                    while (data.Read()) {
                         dynamic marca = marcas.Find(item => item.Value == Int16.Parse(data["marca"].ToString()));
 
-                        this.Results.Add(
-                            new
-                            {
+                        Results.Add(
+                            new {
                                 Id = data["id"],
                                 Frota = data["frota"],
                                 Placa = data["placa"],
@@ -112,12 +103,11 @@ namespace Projeto_Integrador_1.Connection
                     closeConnection();
                 }
 
-                this.Success = true;
+                Success = true;
             }
-            catch (MySqlException e)
-            {
-                this.Success = false;
-                this.Message = e.Message;
+            catch (MySqlException e) {
+                Success = false;
+                Message = e.Message;
             }
         }
     }

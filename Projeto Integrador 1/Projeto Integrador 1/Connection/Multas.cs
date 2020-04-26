@@ -1,12 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projeto_Integrador_1.Connection {
-    class Multas : Config{
+    class Multas : Config {
         public Multas() { }
 
         public bool Success;
@@ -31,27 +28,27 @@ namespace Projeto_Integrador_1.Connection {
 
                 MySqlCommand query = new MySqlCommand(sql, connection);
 
-                query.Parameters.AddWithValue("@veiculo", this.Veiculo);
-                query.Parameters.AddWithValue("@motorista", this.Motorista);
-                query.Parameters.AddWithValue("@gravidade", this.Gravidade);
-                query.Parameters.AddWithValue("@status", this.Status);
-                query.Parameters.AddWithValue("@data_ocorrencia", DateTime.Parse(this.DataOcorrencia));
-                query.Parameters.AddWithValue("@data_notificacao", DateTime.Parse(this.DataNotificacao));
-                query.Parameters.AddWithValue("@data_vencimento", DateTime.Parse(this.DataVencimento));
-                query.Parameters.AddWithValue("@valor", this.Valor);
-                query.Parameters.AddWithValue("@descricao", this.Descricao);
-                query.Parameters.AddWithValue("@local", this.Local);
+                query.Parameters.AddWithValue("@veiculo", Veiculo);
+                query.Parameters.AddWithValue("@motorista", Motorista);
+                query.Parameters.AddWithValue("@gravidade", Gravidade);
+                query.Parameters.AddWithValue("@status", Status);
+                query.Parameters.AddWithValue("@data_ocorrencia", DateTime.Parse(DataOcorrencia));
+                query.Parameters.AddWithValue("@data_notificacao", DateTime.Parse(DataNotificacao));
+                query.Parameters.AddWithValue("@data_vencimento", DateTime.Parse(DataVencimento));
+                query.Parameters.AddWithValue("@valor", Valor);
+                query.Parameters.AddWithValue("@descricao", Descricao);
+                query.Parameters.AddWithValue("@local", Local);
 
                 query.ExecuteNonQuery();
 
                 closeConnection();
 
-                this.Success = true;
-                this.Message = "Multa salva com sucesso.";
+                Success = true;
+                Message = "Multa salva com sucesso.";
             }
             catch (MySqlException e) {
-                this.Success = false;
-                this.Message = e.Message;
+                Success = false;
+                Message = e.Message;
             }
         }
 
@@ -64,7 +61,7 @@ namespace Projeto_Integrador_1.Connection {
                 MySqlDataReader data = query.ExecuteReader();
 
                 while (data.Read()) {
-                    this.Results.Add(
+                    Results.Add(
                         new {
                             DataOcorrencia = Convert.ToDateTime(data["data_ocorrencia"]).ToString("dd/MM/yyyy"),
                             Placa = data["veiculo_placa"],
@@ -82,11 +79,11 @@ namespace Projeto_Integrador_1.Connection {
 
                 closeConnection();
 
-                this.Success = true;
+                Success = true;
             }
             catch (MySqlException e) {
-                this.Success = false;
-                this.Message = e.Message;
+                Success = false;
+                Message = e.Message;
             }
         }
     }

@@ -1,9 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projeto_Integrador_1.Connection {
     class Viagens : Config {
@@ -46,41 +43,41 @@ namespace Projeto_Integrador_1.Connection {
 
                 MySqlCommand query = new MySqlCommand(sql, connection);
 
-                query.Parameters.AddWithValue("@remetente", this.Remetente);
-                query.Parameters.AddWithValue("@destinatario", this.Destinatario);
-                query.Parameters.AddWithValue("@tomador", this.Tomador);
-                query.Parameters.AddWithValue("@codigo_interno", this.CodigoInterno);
-                query.Parameters.AddWithValue("@tipo_viagem", this.TipoViagem);
-                query.Parameters.AddWithValue("@veiculo", this.Veiculo);
-                query.Parameters.AddWithValue("@reboque", this.Reboque);
-                query.Parameters.AddWithValue("@motorista", this.Motorista);
-                query.Parameters.AddWithValue("@saida_cidade", this.SaidaCidade);
-                query.Parameters.AddWithValue("@saida_uf", this.SaidaUF);
-                query.Parameters.AddWithValue("@destino_cidade", this.DestinoCidade);
-                query.Parameters.AddWithValue("@destino_uf", this.DestinoUF);
-                query.Parameters.AddWithValue("@status", this.Status);
-                query.Parameters.AddWithValue("@data_saida", DateTime.Parse(this.DataSaida));
-                query.Parameters.AddWithValue("@data_entrega", DateTime.Parse(this.DataEntrega));
-                query.Parameters.AddWithValue("@data_chegada", DateTime.Parse(this.DataChegada));
-                query.Parameters.AddWithValue("@hodometro_saida", this.HodometroSaida);
-                query.Parameters.AddWithValue("@hodometro_entrega", this.HodometroEntrega);
-                query.Parameters.AddWithValue("@hodometro_percorrido", this.HodometroPercorrido);
-                query.Parameters.AddWithValue("@valor", this.Valor);
-                query.Parameters.AddWithValue("@informacoes_complementares", this.InformacoesComplementares);
-                query.Parameters.AddWithValue("@cargas", this.Cargas);
-                query.Parameters.AddWithValue("@custos", this.Custos);
-                query.Parameters.AddWithValue("@abastecimentos", this.Abastecimentos);
+                query.Parameters.AddWithValue("@remetente", Remetente);
+                query.Parameters.AddWithValue("@destinatario", Destinatario);
+                query.Parameters.AddWithValue("@tomador", Tomador);
+                query.Parameters.AddWithValue("@codigo_interno", CodigoInterno);
+                query.Parameters.AddWithValue("@tipo_viagem", TipoViagem);
+                query.Parameters.AddWithValue("@veiculo", Veiculo);
+                query.Parameters.AddWithValue("@reboque", Reboque);
+                query.Parameters.AddWithValue("@motorista", Motorista);
+                query.Parameters.AddWithValue("@saida_cidade", SaidaCidade);
+                query.Parameters.AddWithValue("@saida_uf", SaidaUF);
+                query.Parameters.AddWithValue("@destino_cidade", DestinoCidade);
+                query.Parameters.AddWithValue("@destino_uf", DestinoUF);
+                query.Parameters.AddWithValue("@status", Status);
+                query.Parameters.AddWithValue("@data_saida", DateTime.Parse(DataSaida));
+                query.Parameters.AddWithValue("@data_entrega", DateTime.Parse(DataEntrega));
+                query.Parameters.AddWithValue("@data_chegada", DateTime.Parse(DataChegada));
+                query.Parameters.AddWithValue("@hodometro_saida", HodometroSaida);
+                query.Parameters.AddWithValue("@hodometro_entrega", HodometroEntrega);
+                query.Parameters.AddWithValue("@hodometro_percorrido", HodometroPercorrido);
+                query.Parameters.AddWithValue("@valor", Valor);
+                query.Parameters.AddWithValue("@informacoes_complementares", InformacoesComplementares);
+                query.Parameters.AddWithValue("@cargas", Cargas);
+                query.Parameters.AddWithValue("@custos", Custos);
+                query.Parameters.AddWithValue("@abastecimentos", Abastecimentos);
 
                 query.ExecuteNonQuery();
 
                 closeConnection();
 
-                this.Success = true;
-                this.Message = "Viagem salva com sucesso.";
+                Success = true;
+                Message = "Viagem salva com sucesso.";
             }
             catch (MySqlException e) {
-                this.Success = false;
-                this.Message = e.Message;
+                Success = false;
+                Message = e.Message;
             }
         }
 
@@ -94,7 +91,7 @@ namespace Projeto_Integrador_1.Connection {
                     MySqlDataReader data = query.ExecuteReader();
 
                     while (data.Read()) {
-                        this.Results.Add(new {
+                        Results.Add(new {
                             Id = data["id"],
                             CodigoInterno = data["codigo_interno"],
                             DataSaida = data["data_saida"],
@@ -106,7 +103,7 @@ namespace Projeto_Integrador_1.Connection {
                             Placa = data["veiculo_placa"],
                             Motorista = data["motorista_nome"],
                             Status = data["status"]
-                            }
+                        }
                         );
                     }
 
@@ -115,11 +112,11 @@ namespace Projeto_Integrador_1.Connection {
                     closeConnection();
                 }
 
-                this.Success = true;
+                Success = true;
             }
             catch (MySqlException e) {
-                this.Success = false;
-                this.Message = e.Message;
+                Success = false;
+                Message = e.Message;
             }
         }
     }

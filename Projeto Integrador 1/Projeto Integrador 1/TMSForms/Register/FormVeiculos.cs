@@ -1,22 +1,12 @@
 ﻿using Projeto_Integrador_1.Connection;
 using Projeto_Integrador_1.Util;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Projeto_Integrador_1.TMSForms.Register
-{
-    public partial class FormVeiculos : Form
-    {
+namespace Projeto_Integrador_1.TMSForms.Register {
+    public partial class FormVeiculos : Form {
         ErrorProvider ErrorProvider = new ErrorProvider();
-        public FormVeiculos()
-        {
+        public FormVeiculos() {
             InitializeComponent();
 
             PreencherCombBox ValuesComb = new Util.PreencherCombBox();
@@ -79,8 +69,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
 
                 Validate.Validation();
 
-                if (Validate.IsValid())
-                {
+                if (Validate.IsValid()) {
                     Veiculos veiculos = new Veiculos();
 
                     veiculos.Frota = textFrota.Text;
@@ -104,17 +93,14 @@ namespace Projeto_Integrador_1.TMSForms.Register
 
                     veiculos.Create();
 
-                    if (veiculos.Success)
-                    {
+                    if (veiculos.Success) {
                         MessageBox.Show(veiculos.Message);
                     }
-                    else
-                    {
+                    else {
                         MessageBox.Show("Houve um erro ao salvar o veiculo. (" + veiculos.Message + ")");
                     }
                 }
-                else
-                {
+                else {
                     Validate.ErrorProviderShow();
                 }
             }

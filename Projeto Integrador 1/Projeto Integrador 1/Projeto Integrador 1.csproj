@@ -215,6 +215,7 @@
       <DependentUpon>FormViagens.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\PreencherCombBox.cs" />
+    <Compile Include="Util\Rules.cs" />
     <Compile Include="Util\Validate.cs" />
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>

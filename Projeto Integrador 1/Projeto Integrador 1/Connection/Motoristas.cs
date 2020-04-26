@@ -1,13 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Projeto_Integrador_1.Connection
-{
-    class Motoristas : Config{
+namespace Projeto_Integrador_1.Connection {
+    class Motoristas : Config {
 
         public Motoristas() { }
 
@@ -36,64 +32,58 @@ namespace Projeto_Integrador_1.Connection
         public string Email { get; set; }
 
         public void Create() {
-            try
-            {
+            try {
                 string sql = "INSERT INTO `motoristas` (`nome`, `cpf`, `rg`, `status`, `cnh`, `vencimento`, `categoria`, `sexo`, `estado_civil`, `cep`, `endereco`, `n`, `bairro`, `complemento`, `cidade`, `estado`, `cargo`, `telefone`, `celular`, `email`) VALUES (@nome, @cpf, @rg, @status, @cnh, @vencimento, @categoria, @sexo, @estado_civil, @cep, @endereco, @n, @bairro, @complemento, @cidade, @estado, @cargo, @telefone, @celular, @email);";
 
                 if (openConnection()) {
                     MySqlCommand query = new MySqlCommand(sql, connection);
 
-                    query.Parameters.AddWithValue("@nome", this.Nome);
-                    query.Parameters.AddWithValue("@cpf", this.CNH);
-                    query.Parameters.AddWithValue("@rg", this.RG);
-                    query.Parameters.AddWithValue("@status", this.Status);
-                    query.Parameters.AddWithValue("@cnh", this.CNH);
-                    query.Parameters.AddWithValue("@vencimento", DateTime.Parse(this.Vencimento));
-                    query.Parameters.AddWithValue("@categoria", this.Categoria);
-                    query.Parameters.AddWithValue("@sexo", this.Sexo);
-                    query.Parameters.AddWithValue("@estado_civil", this.EstadoCivil);
-                    query.Parameters.AddWithValue("@cep", this.CEP);
-                    query.Parameters.AddWithValue("@endereco", this.Endereco);
-                    query.Parameters.AddWithValue("@n", this.N);
-                    query.Parameters.AddWithValue("@bairro", this.Bairro);
-                    query.Parameters.AddWithValue("@complemento", this.Complemento);
-                    query.Parameters.AddWithValue("@cidade", this.Cidade);
-                    query.Parameters.AddWithValue("@estado", this.Estado);
-                    query.Parameters.AddWithValue("@cargo", this.Cargo);
-                    query.Parameters.AddWithValue("@telefone", this.Telefone);
-                    query.Parameters.AddWithValue("@celular", this.Celular);
-                    query.Parameters.AddWithValue("@email", this.Email);
+                    query.Parameters.AddWithValue("@nome", Nome);
+                    query.Parameters.AddWithValue("@cpf", CNH);
+                    query.Parameters.AddWithValue("@rg", RG);
+                    query.Parameters.AddWithValue("@status", Status);
+                    query.Parameters.AddWithValue("@cnh", CNH);
+                    query.Parameters.AddWithValue("@vencimento", DateTime.Parse(Vencimento));
+                    query.Parameters.AddWithValue("@categoria", Categoria);
+                    query.Parameters.AddWithValue("@sexo", Sexo);
+                    query.Parameters.AddWithValue("@estado_civil", EstadoCivil);
+                    query.Parameters.AddWithValue("@cep", CEP);
+                    query.Parameters.AddWithValue("@endereco", Endereco);
+                    query.Parameters.AddWithValue("@n", N);
+                    query.Parameters.AddWithValue("@bairro", Bairro);
+                    query.Parameters.AddWithValue("@complemento", Complemento);
+                    query.Parameters.AddWithValue("@cidade", Cidade);
+                    query.Parameters.AddWithValue("@estado", Estado);
+                    query.Parameters.AddWithValue("@cargo", Cargo);
+                    query.Parameters.AddWithValue("@telefone", Telefone);
+                    query.Parameters.AddWithValue("@celular", Celular);
+                    query.Parameters.AddWithValue("@email", Email);
 
                     query.ExecuteNonQuery();
 
                     closeConnection();
                 }
 
-                this.Success = true;
-                this.Message = "Motorista salvo com sucesso.";
+                Success = true;
+                Message = "Motorista salvo com sucesso.";
             }
             catch (MySqlException e) {
-                this.Success = false;
-                this.Message = e.Message;
+                Success = false;
+                Message = e.Message;
             }
         }
 
-        public void GetAll()
-        {
+        public void GetAll() {
             string sql = "SELECT * FROM `motoristas`;";
 
-            try
-            {
-                if (openConnection())
-                {
+            try {
+                if (openConnection()) {
                     MySqlCommand query = new MySqlCommand(sql, connection);
                     MySqlDataReader data = query.ExecuteReader();
 
-                    while (data.Read())
-                    {
-                        this.Results.Add(
-                            new
-                            {
+                    while (data.Read()) {
+                        Results.Add(
+                            new {
                                 Id = data["id"],
                                 Nome = data["nome"],
                                 RG = data["RG"],
@@ -110,12 +100,11 @@ namespace Projeto_Integrador_1.Connection
                     closeConnection();
                 }
 
-                this.Success = true;
+                Success = true;
             }
-            catch (MySqlException e)
-            {
-                this.Success = false;
-                this.Message = e.Message;
+            catch (MySqlException e) {
+                Success = false;
+                Message = e.Message;
             }
         }
     }

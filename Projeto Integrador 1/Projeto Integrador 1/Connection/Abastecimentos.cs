@@ -1,9 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projeto_Integrador_1.Connection {
     class Abastecimentos : Config {
@@ -31,28 +28,28 @@ namespace Projeto_Integrador_1.Connection {
 
                 MySqlCommand query = new MySqlCommand(sql, connection);
 
-                query.Parameters.AddWithValue("@viagem", this.Viagem);
-                query.Parameters.AddWithValue("@posto", this.Posto);
-                query.Parameters.AddWithValue("@veiculo", this.Veiculo);
-                query.Parameters.AddWithValue("@motorista", this.Motorista);
-                query.Parameters.AddWithValue("@data", DateTime.Parse(this.Data));
-                query.Parameters.AddWithValue("@cupom", this.Cupom);
-                query.Parameters.AddWithValue("@combustivel", this.Combustivel);
-                query.Parameters.AddWithValue("@hodometro", this.Hodometro);
-                query.Parameters.AddWithValue("@status", this.Status);
-                query.Parameters.AddWithValue("@litros", this.Litros);
-                query.Parameters.AddWithValue("@valor", this.Valor);
-                query.Parameters.AddWithValue("@total", this.Total);
+                query.Parameters.AddWithValue("@viagem", Viagem);
+                query.Parameters.AddWithValue("@posto", Posto);
+                query.Parameters.AddWithValue("@veiculo", Veiculo);
+                query.Parameters.AddWithValue("@motorista", Motorista);
+                query.Parameters.AddWithValue("@data", DateTime.Parse(Data));
+                query.Parameters.AddWithValue("@cupom", Cupom);
+                query.Parameters.AddWithValue("@combustivel", Combustivel);
+                query.Parameters.AddWithValue("@hodometro", Hodometro);
+                query.Parameters.AddWithValue("@status", Status);
+                query.Parameters.AddWithValue("@litros", Litros);
+                query.Parameters.AddWithValue("@valor", Valor);
+                query.Parameters.AddWithValue("@total", Total);
 
                 query.ExecuteNonQuery();
 
-                this.Success = true;
-                this.Message = "Abastecimento salvo com sucesso."; 
+                Success = true;
+                Message = "Abastecimento salvo com sucesso.";
 
             }
             catch (MySqlException e) {
-                this.Success = false;
-                this.Message = e.Message;
+                Success = false;
+                Message = e.Message;
             }
         }
         public void GetAll() {
@@ -65,7 +62,7 @@ namespace Projeto_Integrador_1.Connection {
                 MySqlDataReader data = query.ExecuteReader();
 
                 while (data.Read()) {
-                    this.Results.Add(new {
+                    Results.Add(new {
                         Data = data["data"],
                         Placa = data["veiculo_placa"],
                         Posto = data["posto_nome"],
@@ -82,11 +79,11 @@ namespace Projeto_Integrador_1.Connection {
 
                 closeConnection();
 
-                this.Success = true;
+                Success = true;
             }
             catch (MySqlException e) {
-                this.Success = false;
-                this.Message = e.Message;
+                Success = false;
+                Message = e.Message;
             }
         }
     }

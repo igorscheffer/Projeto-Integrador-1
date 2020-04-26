@@ -2,12 +2,8 @@
 using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Projeto_Integrador_1.Connection
-{
+namespace Projeto_Integrador_1.Connection {
     class Manutencoes : Config {
 
         public Manutencoes() { }
@@ -41,34 +37,34 @@ namespace Projeto_Integrador_1.Connection
 
                 MySqlCommand query = new MySqlCommand(sql, connection);
 
-                query.Parameters.AddWithValue("@tipo", this.Tipo);
-                query.Parameters.AddWithValue("@preventiva", this.Preventiva);
-                query.Parameters.AddWithValue("@veiculo", this.Veiculo);
-                query.Parameters.AddWithValue("@status", this.Status);
-                query.Parameters.AddWithValue("@motorista", this.Motorista);
-                query.Parameters.AddWithValue("@data_agendada", DateTime.Parse(this.DataAgendada));
-                query.Parameters.AddWithValue("@data_realizada", DateTime.Parse(this.DataRealizada));
-                query.Parameters.AddWithValue("@hodometro_agendado", this.HodometroAgendado);
-                query.Parameters.AddWithValue("@hodometro_realizado", this.HodometroRealizado);
-                query.Parameters.AddWithValue("@observacoes", this.Observacoes);
-                query.Parameters.AddWithValue("@ordem_servico", this.OrdemServico);
-                query.Parameters.AddWithValue("@fornecedor", this.Fornecedor);
-                query.Parameters.AddWithValue("@mao_obra", this.MaoObra);
-                query.Parameters.AddWithValue("@desconto", this.Desconto);
-                query.Parameters.AddWithValue("@acrecimo", this.Acrecimo);
-                query.Parameters.AddWithValue("@valor", this.Valor);
-                query.Parameters.AddWithValue("@itens", this.Itens);
+                query.Parameters.AddWithValue("@tipo", Tipo);
+                query.Parameters.AddWithValue("@preventiva", Preventiva);
+                query.Parameters.AddWithValue("@veiculo", Veiculo);
+                query.Parameters.AddWithValue("@status", Status);
+                query.Parameters.AddWithValue("@motorista", Motorista);
+                query.Parameters.AddWithValue("@data_agendada", DateTime.Parse(DataAgendada));
+                query.Parameters.AddWithValue("@data_realizada", DateTime.Parse(DataRealizada));
+                query.Parameters.AddWithValue("@hodometro_agendado", HodometroAgendado);
+                query.Parameters.AddWithValue("@hodometro_realizado", HodometroRealizado);
+                query.Parameters.AddWithValue("@observacoes", Observacoes);
+                query.Parameters.AddWithValue("@ordem_servico", OrdemServico);
+                query.Parameters.AddWithValue("@fornecedor", Fornecedor);
+                query.Parameters.AddWithValue("@mao_obra", MaoObra);
+                query.Parameters.AddWithValue("@desconto", Desconto);
+                query.Parameters.AddWithValue("@acrecimo", Acrecimo);
+                query.Parameters.AddWithValue("@valor", Valor);
+                query.Parameters.AddWithValue("@itens", Itens);
 
                 query.ExecuteNonQuery();
 
                 closeConnection();
 
-                this.Success = true;
-                this.Message = "Manutenção salva com sucesso.";
+                Success = true;
+                Message = "Manutenção salva com sucesso.";
             }
             catch (MySqlException e) {
-                this.Success = false;
-                this.Message = e.Message;
+                Success = false;
+                Message = e.Message;
             }
         }
 
@@ -78,25 +74,23 @@ namespace Projeto_Integrador_1.Connection
             PreencherCombBox preValues = new Util.PreencherCombBox();
             List<dynamic> marcas = preValues.getVeiculosMarcas();
 
-            try
-            {
+            try {
                 openConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, connection);
                 MySqlDataReader data = query.ExecuteReader();
 
-                while (data.Read())
-                {
+                while (data.Read()) {
                     dynamic marca = marcas.Find(item => item.Value == Int16.Parse(data["veiculo_marca"].ToString()));
 
-                    this.Results.Add(
+                    Results.Add(
                         new {
                             Id = data["id"],
                             DataAgendada = data["data_agendada"],
                             DataRealizada = data["data_realizada"],
                             Tipo = data["tipo"],
                             Placa = data["veiculo_placa"],
-                            Veiculo = (data["veiculo_placa"] + " - " +data["veiculo_placa"] + " " + marca.Text + " " + data["veiculo_modelo"]).ToUpper(),
+                            Veiculo = (data["veiculo_placa"] + " - " + data["veiculo_placa"] + " " + marca.Text + " " + data["veiculo_modelo"]).ToUpper(),
                             Fornecedor = data["fornecedor_nome"],
                             Valor = data["valor"],
                             Status = data["status"]
@@ -108,11 +102,11 @@ namespace Projeto_Integrador_1.Connection
 
                 closeConnection();
 
-                this.Success = true;
+                Success = true;
             }
             catch (MySqlException e) {
-                this.Success = false;
-                this.Message = e.Message;
+                Success = false;
+                Message = e.Message;
             }
         }
     }

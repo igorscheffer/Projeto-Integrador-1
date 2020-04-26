@@ -1,24 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Correios.CEP;
 using FontAwesome.Sharp;
 using Projeto_Integrador_1.Connection;
 using Projeto_Integrador_1.Util;
 
-namespace Projeto_Integrador_1.TMSForms.Register
-{
-    public partial class FormMotoristas : Form
-    {
+namespace Projeto_Integrador_1.TMSForms.Register {
+    public partial class FormMotoristas : Form {
         ErrorProvider ErrorProvider = new ErrorProvider();
-        public FormMotoristas()
-        {
+        public FormMotoristas() {
             InitializeComponent();
 
             PreencherCombBox ValuesComb = new Util.PreencherCombBox();
@@ -50,8 +40,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             timeVencimentoCNH.ResetText();
         }
 
-        private void onBuscarCEP(object sender, EventArgs e)
-        {
+        private void onBuscarCEP(object sender, EventArgs e) {
             IconButton button = (IconButton)sender;
 
             IconChar defaultIcon = button.IconChar;
@@ -76,10 +65,8 @@ namespace Projeto_Integrador_1.TMSForms.Register
             }
         }
 
-        private void onEnviar(object sender, EventArgs e)
-        {
-            try
-            {
+        private void onEnviar(object sender, EventArgs e) {
+            try {
                 Validate Validate = new Util.Validate();
 
                 Validate.addRule(textNome, "Nome Completo", "required|max:100");
@@ -105,8 +92,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
 
                 Validate.Validation();
 
-                if (Validate.IsValid())
-                {
+                if (Validate.IsValid()) {
                     Motoristas motoristas = new Motoristas();
 
                     motoristas.Nome = textNome.Text;
@@ -132,17 +118,14 @@ namespace Projeto_Integrador_1.TMSForms.Register
 
                     motoristas.Create();
 
-                    if (motoristas.Success)
-                    {
+                    if (motoristas.Success) {
                         MessageBox.Show(motoristas.Message);
                     }
-                    else
-                    {
+                    else {
                         MessageBox.Show("Houver um erro ao salvar o motorista (" + motoristas.Message + ")");
                     }
                 }
-                else
-                {
+                else {
                     Validate.ErrorProviderShow();
                 }
             }
@@ -151,13 +134,11 @@ namespace Projeto_Integrador_1.TMSForms.Register
             }
         }
 
-        private void textCelular_TextChanged(object sender, EventArgs e)
-        {
+        private void textCelular_TextChanged(object sender, EventArgs e) {
 
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
+        private void panel5_Paint(object sender, PaintEventArgs e) {
 
         }
     }

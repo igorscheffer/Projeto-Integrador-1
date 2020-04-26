@@ -3,22 +3,13 @@ using FontAwesome.Sharp;
 using Projeto_Integrador_1.Connection;
 using Projeto_Integrador_1.Util;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Projeto_Integrador_1.TMSForms.Register
-{
-    public partial class FormClientes : Form
-    {
+namespace Projeto_Integrador_1.TMSForms.Register {
+    public partial class FormClientes : Form {
         ErrorProvider ErrorProvider = new ErrorProvider();
-        public FormClientes()
-        {
+        public FormClientes() {
             InitializeComponent();
 
             PreencherCombBox ValuesComb = new Util.PreencherCombBox();
@@ -36,15 +27,14 @@ namespace Projeto_Integrador_1.TMSForms.Register
             combEstado.DataSource = ValuesComb.getEstados();
         }
 
-        private void onBuscarCEP(object sender, EventArgs e)
-        {
+        private void onBuscarCEP(object sender, EventArgs e) {
             IconButton button = (IconButton)sender;
 
             IconChar defaultIcon = button.IconChar;
 
             button.IconChar = IconChar.Spinner;
-            
-            try{
+
+            try {
                 cepConsulta endereco = correiosCEP.GetAddress(textCEP.Text);
 
                 textEndereco.Text = endereco.Rua;
@@ -56,22 +46,18 @@ namespace Projeto_Integrador_1.TMSForms.Register
 
                 button.IconChar = defaultIcon;
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 button.IconChar = defaultIcon;
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void onChangeIsento(object sender, EventArgs e)
-        {
-            if (checkIsento.Checked)
-            {
+        private void onChangeIsento(object sender, EventArgs e) {
+            if (checkIsento.Checked) {
                 textInscricaoEstadual.Text = "ISENTO";
                 textInscricaoEstadual.Enabled = false;
             }
-            else
-            {
+            else {
                 textInscricaoEstadual.ResetText();
                 textInscricaoEstadual.Enabled = true;
             }
@@ -85,15 +71,13 @@ namespace Projeto_Integrador_1.TMSForms.Register
             return width + marginLeft + marginRight;
         }
 
-        private void onSelectTipoPessoa(object sender, EventArgs e)
-        {
-            int widthNF = this.WidthComponent(textNomeFantasia);
-            int widthIM = this.WidthComponent(textInscricaoMunicipal);
+        private void onSelectTipoPessoa(object sender, EventArgs e) {
+            int widthNF = WidthComponent(textNomeFantasia);
+            int widthIM = WidthComponent(textInscricaoMunicipal);
 
             var Selected = combTipoPessoa.SelectedValue;
 
-            if (Convert.ToString(Selected) == "PF")
-            {
+            if (Convert.ToString(Selected) == "PF") {
                 lblCNPJ.Text = "CPF";
                 lblRazaoSocial.Text = "Nome";
                 lblInscricaoMunicipal.Text = "RG";
@@ -104,17 +88,17 @@ namespace Projeto_Integrador_1.TMSForms.Register
 
                 textCNPJ.MaxLength = 14;
 
-                if ((textInscricaoMunicipal.Location.X - widthNF) > 0){
+                if ((textInscricaoMunicipal.Location.X - widthNF) > 0) {
                     lblInscricaoMunicipal.Location = new Point((lblInscricaoMunicipal.Location.X - widthNF), lblInscricaoMunicipal.Location.Y);
                     textInscricaoMunicipal.Location = new Point((textInscricaoMunicipal.Location.X - widthNF), textInscricaoMunicipal.Location.Y);
 
                     lblInscricaoEstadual.Location = new Point((lblInscricaoEstadual.Location.X - widthNF), lblInscricaoEstadual.Location.Y);
                     textInscricaoEstadual.Location = new Point((textInscricaoEstadual.Location.X - widthNF), textInscricaoEstadual.Location.Y);
-                    
+
                     checkIsento.Location = new Point((checkIsento.Location.X - widthNF), checkIsento.Location.Y);
                 }
             }
-            else if(Convert.ToString(Selected) == "PJ") {
+            else if (Convert.ToString(Selected) == "PJ") {
                 lblCNPJ.Text = "CNPJ";
                 lblNomeFantasia.Text = "Nome Fantasia";
                 lblInscricaoMunicipal.Text = "Inscrição Municipal";
@@ -131,43 +115,40 @@ namespace Projeto_Integrador_1.TMSForms.Register
 
                     lblInscricaoEstadual.Location = new Point((lblInscricaoEstadual.Location.X + widthNF), lblInscricaoEstadual.Location.Y);
                     textInscricaoEstadual.Location = new Point((textInscricaoEstadual.Location.X + widthNF), textInscricaoEstadual.Location.Y);
-                    
+
                     checkIsento.Location = new Point((checkIsento.Location.X + widthNF), checkIsento.Location.Y);
                 }
             }
         }
 
-        private void onEnviar(object sender, EventArgs e)
-        {
-            try
-            {
+        private void onEnviar(object sender, EventArgs e) {
+            try {
                 Validate Validate = new Util.Validate();
 
-                Validate.addRule(combTipoCadastro,          "Tipo Cadastro",            "required|in:C,F,A|exact:1");
-                Validate.addRule(combTipoPessoa,            "Tipo Pessoa",              "required|in:PF,PJ|exact:2");
-                Validate.addRule(textCNPJ,                  lblCNPJ.Text,               "required|" + ((string)combTipoPessoa.SelectedValue == "PJ" ? "cnpj" : "cpf"));
-                Validate.addRule(textRazaoSocial,           lblRazaoSocial.Text,        "required|max:150");
-                Validate.addRule(textNomeFantasia,          "Razão Social",             "max:150");
-                Validate.addRule(textInscricaoMunicipal,    lblInscricaoMunicipal.Text, "max:12");
-                Validate.addRule(textInscricaoEstadual,     lblInscricaoEstadual.Text,  "max:12");
-                Validate.addRule(textCEP,                   "CEP",                      "cep");
-                Validate.addRule(textEndereco,              "Endereco",                 "max:100");
-                Validate.addRule(textN,                     "Nº",                       "max:10");
-                Validate.addRule(textBairro,                "Bairro",                   "max:60");
-                Validate.addRule(textComplemento,           "Complemento",              "max:100");
-                Validate.addRule(textCidade,                "Cidade",                   "max:100");
-                Validate.addRule(combEstado,                "Estado",                   "exact:2");
-                Validate.addRule(textNome,                  "Contato Nome",             "max:100");
-                Validate.addRule(textTelefone,              "Telefone",                 "telefone");
-                Validate.addRule(textRamal,                 "Ramal",                    "numeric|max:10");
-                Validate.addRule(textCelular,               "Celular",                  "telefone");
-                Validate.addRule(textEmail,                 "Email",                    "email|max:100");
-                Validate.addRule(textObservacoes,           "Observações",              "max:500");
+                Validate.addRule(combTipoCadastro, "Tipo Cadastro", "required|in:C,F,A|exact:1");
+                Validate.addRule(combTipoPessoa, "Tipo Pessoa", "required|in:PF,PJ|exact:2");
+                Validate.addRule(textCNPJ, lblCNPJ.Text, "required|" + ((string)combTipoPessoa.SelectedValue == "PJ" ? "cnpj" : "cpf"));
+                Validate.addRule(textRazaoSocial, lblRazaoSocial.Text, "required|max:150");
+                Validate.addRule(textNomeFantasia, "Razão Social", "max:150");
+                Validate.addRule(textInscricaoMunicipal, lblInscricaoMunicipal.Text, "max:12");
+                Validate.addRule(textInscricaoEstadual, lblInscricaoEstadual.Text, "max:12");
+                Validate.addRule(textCEP, "CEP", "cep");
+                Validate.addRule(textEndereco, "Endereco", "max:100");
+                Validate.addRule(textN, "Nº", "max:10");
+                Validate.addRule(textBairro, "Bairro", "max:60");
+                Validate.addRule(textComplemento, "Complemento", "max:100");
+                Validate.addRule(textCidade, "Cidade", "max:100");
+                Validate.addRule(combEstado, "Estado", "exact:2");
+                Validate.addRule(textNome, "Contato Nome", "max:100");
+                Validate.addRule(textTelefone, "Telefone", "telefone");
+                Validate.addRule(textRamal, "Ramal", "numeric|max:10");
+                Validate.addRule(textCelular, "Celular", "telefone");
+                Validate.addRule(textEmail, "Email", "email|max:100");
+                Validate.addRule(textObservacoes, "Observações", "max:500");
 
                 Validate.Validation();
 
-                if (Validate.IsValid())
-                {
+                if (Validate.IsValid()) {
                     Clientes clientes = new Clientes();
 
                     clientes.TipoCadastro = combTipoCadastro.SelectedValue;
@@ -194,20 +175,18 @@ namespace Projeto_Integrador_1.TMSForms.Register
 
                     clientes.Create();
 
-                    if (clientes.Success){
+                    if (clientes.Success) {
                         MessageBox.Show(clientes.Message);
                     }
                     else {
                         MessageBox.Show("Houve um erro ao salvar o cliente (" + clientes.Message + ")");
                     }
                 }
-                else
-                {
+                else {
                     Validate.ErrorProviderShow();
                 }
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
         }

@@ -1,15 +1,7 @@
-﻿using Guna.UI.WinForms;
-using Projeto_Integrador_1.Connection;
+﻿using Projeto_Integrador_1.Connection;
 using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
@@ -20,8 +12,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
             PreencherCombBox ValuesComb = new Util.PreencherCombBox();
 
-            this.LoadVeiculos();
-            this.LoadMotoristas();
+            LoadVeiculos();
+            LoadMotoristas();
 
             combGravidade.DisplayMember = "Text";
             combGravidade.ValueMember = "Value";

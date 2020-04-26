@@ -1,12 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Projeto_Integrador_1.Connection
-{
+namespace Projeto_Integrador_1.Connection {
     class Clientes : Config {
 
         public Clientes() { }
@@ -45,38 +40,38 @@ namespace Projeto_Integrador_1.Connection
 
                 MySqlCommand query = new MySqlCommand(sql, connection);
 
-                query.Parameters.AddWithValue("@tipo_cadastro", this.TipoCadastro);
-                query.Parameters.AddWithValue("@tipo_pessoa", this.TipoPessoa);
-                query.Parameters.AddWithValue("@cnpj", this.CNPJ);
-                query.Parameters.AddWithValue("@razao_social", this.RazaoSocial);
-                query.Parameters.AddWithValue("@nome_fantasia", this.NomeFantasia);
-                query.Parameters.AddWithValue("@inscricao_municipal", this.InscricaoMunicipal);
-                query.Parameters.AddWithValue("@inscricao_estadual", this.InscricaoEstadual);
-                query.Parameters.AddWithValue("@isento", this.Isento);
-                query.Parameters.AddWithValue("@cep", this.CEP);
-                query.Parameters.AddWithValue("@endereco", this.Endereco);
-                query.Parameters.AddWithValue("@n", this.N);
-                query.Parameters.AddWithValue("@bairro", this.Bairro);
-                query.Parameters.AddWithValue("@complemento", this.Complemento);
-                query.Parameters.AddWithValue("@cidade", this.Cidade);
-                query.Parameters.AddWithValue("@estado", this.Estado);
-                query.Parameters.AddWithValue("@nome", this.Nome);
-                query.Parameters.AddWithValue("@telefone", this.Telefone);
-                query.Parameters.AddWithValue("@ramal", this.Ramal);
-                query.Parameters.AddWithValue("@celular", this.Celular);
-                query.Parameters.AddWithValue("@email", this.Email);
-                query.Parameters.AddWithValue("@observacoes", this.Observacoes);
+                query.Parameters.AddWithValue("@tipo_cadastro", TipoCadastro);
+                query.Parameters.AddWithValue("@tipo_pessoa", TipoPessoa);
+                query.Parameters.AddWithValue("@cnpj", CNPJ);
+                query.Parameters.AddWithValue("@razao_social", RazaoSocial);
+                query.Parameters.AddWithValue("@nome_fantasia", NomeFantasia);
+                query.Parameters.AddWithValue("@inscricao_municipal", InscricaoMunicipal);
+                query.Parameters.AddWithValue("@inscricao_estadual", InscricaoEstadual);
+                query.Parameters.AddWithValue("@isento", Isento);
+                query.Parameters.AddWithValue("@cep", CEP);
+                query.Parameters.AddWithValue("@endereco", Endereco);
+                query.Parameters.AddWithValue("@n", N);
+                query.Parameters.AddWithValue("@bairro", Bairro);
+                query.Parameters.AddWithValue("@complemento", Complemento);
+                query.Parameters.AddWithValue("@cidade", Cidade);
+                query.Parameters.AddWithValue("@estado", Estado);
+                query.Parameters.AddWithValue("@nome", Nome);
+                query.Parameters.AddWithValue("@telefone", Telefone);
+                query.Parameters.AddWithValue("@ramal", Ramal);
+                query.Parameters.AddWithValue("@celular", Celular);
+                query.Parameters.AddWithValue("@email", Email);
+                query.Parameters.AddWithValue("@observacoes", Observacoes);
 
                 query.ExecuteNonQuery();
 
                 closeConnection();
 
-                this.Success = true;
-                this.Message = "Cliente salvo com sucesso.";
+                Success = true;
+                Message = "Cliente salvo com sucesso.";
             }
             catch (MySqlException e) {
-                this.Success = false;
-                this.Message = e.Message;
+                Success = false;
+                Message = e.Message;
             }
         }
 
@@ -89,7 +84,7 @@ namespace Projeto_Integrador_1.Connection
                     MySqlDataReader data = query.ExecuteReader();
 
                     while (data.Read()) {
-                        this.Results.Add(
+                        Results.Add(
                             new {
                                 Id = data["id"],
                                 TipoCadastro = data["tipo_cadastro"],
@@ -98,7 +93,7 @@ namespace Projeto_Integrador_1.Connection
                                 RazaoSocial = data["razao_social"],
                                 Cidade = data["cidade"],
                                 UF = data["estado"]
-                            }    
+                            }
                         );
                     }
 
@@ -107,11 +102,11 @@ namespace Projeto_Integrador_1.Connection
                     closeConnection();
                 }
 
-                this.Success = true;
+                Success = true;
             }
             catch (MySqlException e) {
-                this.Success = false;
-                this.Message = e.Message;
+                Success = false;
+                Message = e.Message;
             }
         }
     }

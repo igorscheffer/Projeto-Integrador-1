@@ -2,23 +2,14 @@
 using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Projeto_Integrador_1.TMSForms.List
-{
-    public partial class FormManutencoes : Form
-    {
+namespace Projeto_Integrador_1.TMSForms.List {
+    public partial class FormManutencoes : Form {
 
         FormPrincipal fmPrincipal;
 
-        public FormManutencoes(FormPrincipal Principal)
-        {
+        public FormManutencoes(FormPrincipal Principal) {
             InitializeComponent();
             fmPrincipal = Principal;
 
@@ -30,8 +21,7 @@ namespace Projeto_Integrador_1.TMSForms.List
             Manutencoes manutencoes = new Manutencoes();
             manutencoes.GetAll();
 
-            foreach (dynamic manutencao in manutencoes.Results)
-            {
+            foreach (dynamic manutencao in manutencoes.Results) {
                 string tipo = ListaTipos.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(manutencao.Tipo)).Text;
                 string status = ListaStatus.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(manutencao.Status)).Text;
                 gridManutencoes.Rows.Add(
@@ -46,8 +36,7 @@ namespace Projeto_Integrador_1.TMSForms.List
             }
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
+        private void btnCadastrar_Click(object sender, EventArgs e) {
             fmPrincipal.AtivarForm(new TMSForms.Register.FormManutencoes());
         }
     }

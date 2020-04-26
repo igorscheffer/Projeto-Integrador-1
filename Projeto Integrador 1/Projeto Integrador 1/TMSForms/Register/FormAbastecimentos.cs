@@ -2,12 +2,6 @@
 using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
@@ -18,9 +12,9 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
             PreencherCombBox ValuesComb = new Util.PreencherCombBox();
 
-            this.LoadClientes();
-            this.LoadVeiculos();
-            this.LoadMotoristas();
+            LoadClientes();
+            LoadVeiculos();
+            LoadMotoristas();
 
             combCombustivel.DisplayMember = "Text";
             combCombustivel.ValueMember = "Value";
@@ -66,7 +60,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             formClientes.MaximizeBox = false;
             formClientes.MinimizeBox = false;
 
-            formClientes.Closed += (s, ea) => this.LoadClientes();
+            formClientes.Closed += (s, ea) => LoadClientes();
 
             formClientes.ShowDialog();
         }
@@ -80,7 +74,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             formVeiculo.MaximizeBox = false;
             formVeiculo.MinimizeBox = false;
 
-            formVeiculo.Closed += (s, ea) => this.LoadVeiculos();
+            formVeiculo.Closed += (s, ea) => LoadVeiculos();
 
             formVeiculo.ShowDialog();
         }
@@ -94,7 +88,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             formMotoristas.MaximizeBox = false;
             formMotoristas.MinimizeBox = false;
 
-            formMotoristas.Closed += (s, ea) => this.LoadMotoristas();
+            formMotoristas.Closed += (s, ea) => LoadMotoristas();
 
             formMotoristas.ShowDialog();
         }

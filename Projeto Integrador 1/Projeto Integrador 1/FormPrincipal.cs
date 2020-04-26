@@ -1,20 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
-using Projeto_Integrador_1.TMSForms;
 
-namespace Projeto_Integrador_1
-{
-    public partial class FormPrincipal : Form
-    {
+namespace Projeto_Integrador_1 {
+    public partial class FormPrincipal : Form {
         private IconButton currentButton;
         private List<string> menuItens = new List<string>();
         private bool menuHidde;
@@ -32,20 +24,15 @@ namespace Projeto_Integrador_1
             Console.WriteLine(responseBody);
         }
 
-        public FormPrincipal()
-        {
+        public FormPrincipal() {
             InitializeComponent();
             AtivarForm(new TMSForms.FormHome(this));
         }
 
-        private void HiddenMenu()
-        {
-            if (menuHidde == false)
-            {
-                foreach (Control btnControl in painelMenu.Controls)
-                {
-                    if (btnControl.GetType() == typeof(IconButton))
-                    {
+        private void HiddenMenu() {
+            if (menuHidde == false) {
+                foreach (Control btnControl in painelMenu.Controls) {
+                    if (btnControl.GetType() == typeof(IconButton)) {
                         IconButton menuItem = (IconButton)btnControl;
                         menuItens.Add(menuItem.Text);
                         menuItem.Text = "";
@@ -61,10 +48,8 @@ namespace Projeto_Integrador_1
             }
             else {
                 int c = 0;
-                foreach (Control btnControl in painelMenu.Controls)
-                {
-                    if (btnControl.GetType() == typeof(IconButton))
-                    {
+                foreach (Control btnControl in painelMenu.Controls) {
+                    if (btnControl.GetType() == typeof(IconButton)) {
                         IconButton menuItem = (IconButton)btnControl;
                         menuItem.Text = menuItens[c];
                         menuItem.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
@@ -80,12 +65,9 @@ namespace Projeto_Integrador_1
             }
         }
 
-        private void DesabilitarBotao()
-        {
-            foreach(Control btnControl in painelMenu.Controls)
-            {
-                if(btnControl.GetType() == typeof(IconButton))
-                {
+        private void DesabilitarBotao() {
+            foreach (Control btnControl in painelMenu.Controls) {
+                if (btnControl.GetType() == typeof(IconButton)) {
                     IconButton disableButton = (IconButton)btnControl;
                     disableButton.BackColor = Color.FromArgb(5, 178, 220);
                     disableButton.IconColor = Color.White;
@@ -94,10 +76,8 @@ namespace Projeto_Integrador_1
             }
         }
 
-        private void AtivarBotao(object btnSender)
-        {
-            if(btnSender != null)
-            {
+        private void AtivarBotao(object btnSender) {
+            if (btnSender != null) {
                 currentButton = (IconButton)btnSender;
                 DesabilitarBotao();
                 currentButton.BackColor = Color.FromArgb(4, 166, 210);
@@ -106,12 +86,10 @@ namespace Projeto_Integrador_1
             }
         }
 
-        public void AtivarForm(Form formSender)
-        {
+        public void AtivarForm(Form formSender) {
             Console.WriteLine(formSender);
 
-            if(currentForm != null)
-            {
+            if (currentForm != null) {
                 currentForm.Close();
             }
 
@@ -129,61 +107,51 @@ namespace Projeto_Integrador_1
             currentForm.Show();
         }
 
-        private void btnHiddenMenu_Click(object sender, EventArgs e)
-        {
+        private void btnHiddenMenu_Click(object sender, EventArgs e) {
             HiddenMenu();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
+        private void btnHome_Click(object sender, EventArgs e) {
             AtivarBotao(sender);
             AtivarForm(new TMSForms.FormHome(this));
         }
 
-        private void btnMotoristas_Click(object sender, EventArgs e)
-        {
+        private void btnMotoristas_Click(object sender, EventArgs e) {
             AtivarBotao(sender);
             AtivarForm(new TMSForms.List.FormMotoristas(this));
         }
 
-        private void btnVeiculos_Click(object sender, EventArgs e)
-        {
+        private void btnVeiculos_Click(object sender, EventArgs e) {
             AtivarBotao(sender);
             AtivarForm(new TMSForms.List.FormVeiculos(this));
         }
 
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
+        private void btnClientes_Click(object sender, EventArgs e) {
             AtivarBotao(sender);
             AtivarForm(new TMSForms.List.FormClientes(this));
         }
 
-        private void btnViagens_Click(object sender, EventArgs e)
-        {
+        private void btnViagens_Click(object sender, EventArgs e) {
             AtivarBotao(sender);
             AtivarForm(new TMSForms.List.FormViagens(this));
         }
 
-        private void btnManutencoes_Click(object sender, EventArgs e)
-        {
+        private void btnManutencoes_Click(object sender, EventArgs e) {
             AtivarBotao(sender);
             AtivarForm(new TMSForms.List.FormManutencoes(this));
         }
 
-        private void btnAbastecimentos_Click(object sender, EventArgs e)
-        {
+        private void btnAbastecimentos_Click(object sender, EventArgs e) {
             AtivarBotao(sender);
             AtivarForm(new TMSForms.List.FormAbastecimentos(this));
         }
 
-        private void btnMultas_Click(object sender, EventArgs e)
-        {
+        private void btnMultas_Click(object sender, EventArgs e) {
             AtivarBotao(sender);
             AtivarForm(new TMSForms.List.FormMultas(this));
         }
 
-        private void btnFinanceiro_Click(object sender, EventArgs e)
-        {
+        private void btnFinanceiro_Click(object sender, EventArgs e) {
             AtivarBotao(sender);
         }
     }

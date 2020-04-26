@@ -1,15 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Projeto_Integrador_1.Util
-{
-    class PreencherCombBox
-    {
-        public List<dynamic> getEstados()
-        {
+namespace Projeto_Integrador_1.Util {
+    class PreencherCombBox {
+        public List<dynamic> getEstados() {
             List<dynamic> estados = new List<dynamic> {
                 new { Value = "", Text = "---" },
                 new { Value = "AC", Text = "Acre (AC)" },
@@ -43,8 +37,7 @@ namespace Projeto_Integrador_1.Util
             return estados;
         }
 
-        public List<dynamic> getCores()
-        {
+        public List<dynamic> getCores() {
             List<dynamic> cores = new List<dynamic> {
                 new { Value = -1, Text = "---" },
                 new { Value = 1, Text = "Preto" },
@@ -56,8 +49,7 @@ namespace Projeto_Integrador_1.Util
             return cores;
         }
 
-        public List<dynamic> getCombustiveis()
-        {
+        public List<dynamic> getCombustiveis() {
             List<dynamic> combustiveis = new List<dynamic> {
                 new { Value = -1, Text = "---" },
                 new { Value = 1, Text = "Gasolina" },
@@ -70,23 +62,20 @@ namespace Projeto_Integrador_1.Util
             return combustiveis;
         }
 
-        public List<int> getAnos()
-        {
+        public List<int> getAnos() {
             DateTime date = DateTime.Now.Date;
             int a = date.Year;
 
             List<int> anos = new List<int>();
 
-            for (var i = a; i >= (a - 50); i--)
-            {
+            for (var i = a; i >= (a - 50); i--) {
                 anos.Add(i);
             }
 
             return anos;
         }
 
-        public List<dynamic> getSexo()
-        {
+        public List<dynamic> getSexo() {
             List<dynamic> sexo = new List<dynamic> {
                 new { Value = "", Text = "---" },
                 new { Value = "H", Text = "Homem" },
@@ -96,8 +85,7 @@ namespace Projeto_Integrador_1.Util
             return sexo;
         }
 
-        public List<dynamic> getEstadoCivil()
-        {
+        public List<dynamic> getEstadoCivil() {
             List<dynamic> estadoCivil = new List<dynamic> {
                 new { Value = -1, Text = "---" },
                 new { Value = 1, Text = "Solteiro(a)" },
@@ -224,8 +212,7 @@ namespace Projeto_Integrador_1.Util
             return tomador;
         }
 
-        public List<dynamic> getViagemTipo()
-        {
+        public List<dynamic> getViagemTipo() {
             List<dynamic> tipo = new List<dynamic>
             {
                 new { Value = -1, Text = "---" },
@@ -239,8 +226,7 @@ namespace Projeto_Integrador_1.Util
             return tipo;
         }
 
-        public List<dynamic> getViagemStatus()
-        {
+        public List<dynamic> getViagemStatus() {
             List<dynamic> status = new List<dynamic>
             {
                 new { Value = -1, Text = "---" },
@@ -263,8 +249,7 @@ namespace Projeto_Integrador_1.Util
             return tipo;
         }
 
-        public List<dynamic> getManutencaoPreventiva()
-        {
+        public List<dynamic> getManutencaoPreventiva() {
             List<dynamic> preventiva = new List<dynamic> {
                 new { Value = -1, Text = "---" },
                 new { Value = 1, Text = "Por Hodômetro (KM)" },
@@ -274,8 +259,7 @@ namespace Projeto_Integrador_1.Util
             return preventiva;
         }
 
-        public List<dynamic> getManutencaoStatus()
-        {
+        public List<dynamic> getManutencaoStatus() {
             List<dynamic> status = new List<dynamic> {
                 new { Value = -1, Text = "---" },
                 new { Value = 0, Text = "Cancelada" },

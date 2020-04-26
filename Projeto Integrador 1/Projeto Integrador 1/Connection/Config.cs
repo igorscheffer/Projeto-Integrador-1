@@ -1,13 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Projeto_Integrador_1.Connection
-{
+namespace Projeto_Integrador_1.Connection {
     class Config {
         protected MySqlConnection connection;
         private string Host = "localhost";
@@ -20,7 +15,7 @@ namespace Projeto_Integrador_1.Connection
         }
 
         private void Initialize() {
-            connection = new MySqlConnection("SERVER=" + this.Host + ";DATABASE=" + this.Base + ";UID=" + this.User + ";PASSWORD=" + this.Pass + ";Convert Zero Datetime=True;");
+            connection = new MySqlConnection("SERVER=" + Host + ";DATABASE=" + Base + ";UID=" + User + ";PASSWORD=" + Pass + ";Convert Zero Datetime=True;");
         }
 
         protected bool openConnection() {
