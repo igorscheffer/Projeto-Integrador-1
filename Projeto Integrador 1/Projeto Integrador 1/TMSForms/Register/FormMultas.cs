@@ -8,8 +8,14 @@ using Projeto_Integrador_1.Util.Validate;
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormMultas : Form {
         ErrorProvider ErrorProvider = new ErrorProvider();
-        public FormMultas() {
+
+        FormPrincipal fmPrincipal;
+
+        private int Id;
+
+        public FormMultas(FormPrincipal fmPrincipal = null, int Id = 0) {
             InitializeComponent();
+            this.fmPrincipal = fmPrincipal;
 
             PreencherCombBox ValuesComb = new Util.PreencherCombBox();
 
@@ -23,6 +29,33 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
             combStatus.DataSource = ValuesComb.getMultaStatus();
+
+            if (Id > 0) {
+                this.Text = "Editar Multa";
+                this.Id = Id;
+                this.PreencherDados();
+            }
+        }
+
+        private void PreencherDados() {
+
+                Multas multas = new Multas();
+                multas.Id = this.Id;
+                multas.Get();
+
+                dynamic multa = multas.Results[0];
+
+                combVeiculo.SelectedValue = Convert.ToInt32(multa.Veiculo);
+                combMotorista.SelectedValue = Convert.ToInt32(multa.Motorista);
+                combGravidade.SelectedValue = Convert.ToInt32(multa.Gravidade);
+                combStatus.SelectedValue = Convert.ToInt32(multa.Status);
+                timeDataOcorrencia.Text = multa.DataOcorrencia;
+                timeDataNotificacao.Text = multa.DataNotificacao;
+                timeDataVencimento.Text = multa.DataVencimento;
+                textValor.Text = Convert.ToString(multa.Valor);
+                textDescricao.Text = multa.Descricao;
+                textLocal.Text = multa.Local;
+            
         }
 
         private void LoadVeiculos() {
@@ -45,7 +78,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         }
 
         private void OnEnviar(object sender, EventArgs e) {
-            
+            try {
                 Validate Validate = new Validate(this, ErrorProvider);
 
                 Validate.AddRule(combVeiculo, "Veiculo", "required|numeric|max:11");
@@ -75,10 +108,24 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     multas.Descricao = textDescricao.Text;
                     multas.Local = textLocal.Text;
 
-                    multas.Create();
+                    if (this.Id > 0) {
+                        multas.Id = Convert.ToInt32(this.Id);
+                        multas.Update();
+                    }
+                    else {
+                        multas.Create();
+                    }
 
                     if (multas.Success) {
-                        MessageBox.Show(multas.Message);
+                        DialogResult SuccessBox = MessageBox.Show(multas.Message, "CADASTRADO");
+                        if (SuccessBox == DialogResult.OK) {
+                            if (fmPrincipal != null) {
+                                fmPrincipal.AtivarForm(new TMSForms.List.FormMultas(fmPrincipal));
+                            }
+                            else {
+                                this.Close();
+                            }
+                        }
                     }
                     else {
                         MessageBox.Show("Houver um erro ao salvar a multas (" + multas.Message + ")");
@@ -87,7 +134,10 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 else {
                     Validate.ErrorProviderShow();
                 }
-            
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

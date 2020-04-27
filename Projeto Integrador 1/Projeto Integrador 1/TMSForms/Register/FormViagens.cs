@@ -11,6 +11,10 @@ namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormViagens : Form {
         ErrorProvider ErrorProvider = new ErrorProvider();
 
+        FormPrincipal fmPrincipal;
+
+        private int Id;
+
         List<dynamic> ListaCargas = new List<dynamic>();
         List<dynamic> ListaClientes = new List<dynamic>();
 
@@ -18,8 +22,9 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         private string jsonCustos;
         private string jsonAbastecimentos;
 
-        public FormViagens() {
+        public FormViagens(FormPrincipal fmPrincipal = null, int Id = 0) {
             InitializeComponent();
+            this.fmPrincipal = fmPrincipal;
 
             PreencherCombBox ValuesComb = new Util.PreencherCombBox();
 
@@ -56,6 +61,48 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             combGridAbastecimentoCombustivel.DisplayMember = "Text";
             combGridAbastecimentoCombustivel.ValueMember = "Value";
             combGridAbastecimentoCombustivel.DataSource = new List<dynamic>(combustiveis);
+
+            if (Id > 0) {
+                Text = "Editar Viagem";
+                this.Id = Id;
+                PreencherDados();
+            }
+        }
+
+        private void PreencherDados() {
+            try {
+                Viagens viagens = new Viagens();
+                viagens.Id = Id;
+                viagens.Get();
+
+                dynamic viagem = viagens.Results[0];
+
+                combRemetente.SelectedValue = viagem.Remetente;
+                combDestinatario.SelectedValue = viagem.Destinatario;
+                combTomador.SelectedValue = viagem.Tomador;
+                textCodigoInterno.Text = viagem.CodigoInterno;
+                combTipoViagem.SelectedValue = viagem.TipoViagem;
+                combVeiculo.SelectedValue = viagem.Veiculo;
+                combTipoViagem.SelectedValue = viagem.Reboque;
+                combMotorista.SelectedValue = viagem.Motorista;
+                textSaidaCidade.Text = viagem.SaidaCidade;
+                combSaidaUF.SelectedValue = viagem.SaidaUF;
+                textDestinoCidade.Text = viagem.DestinoCidade;
+                combDestinoUF.SelectedValue = viagem.DestinoUF;
+                combStatus.SelectedValue = viagem.Status;
+                timeDataSaida.Text = viagem.DataSaida;
+                timeDataEntrega.Text = viagem.DataEntrega;
+                timeDataChegada.Text = viagem.DataChegada;
+                textHodometroSaida.Text = Convert.ToString(viagem.HodometroSaida);
+                textHodometroEntrega.Text = Convert.ToString(viagem.HodometroEntrega);
+                textHodometroChegada.Text = Convert.ToString(viagem.HodometroChegada);
+                textHodometroPercorrido.Text = Convert.ToString(viagem.HodometroPercorrido);
+                textValor.Text = Convert.ToString(viagem.Valor);
+                textInformacoesComplementares.Text = viagem.InformacoesComplementares;
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void LoadClientes() {
@@ -304,10 +351,24 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     viagens.Custos = jsonCustos;
                     viagens.Abastecimentos = jsonAbastecimentos;
 
-                    viagens.Create();
+                    if (Id > 0) {
+                        viagens.Id = Convert.ToInt32(Id);
+                        viagens.Update();
+                    }
+                    else {
+                        viagens.Create();
+                    }
 
                     if (viagens.Success) {
-                        MessageBox.Show(viagens.Message);
+                        DialogResult SuccessBox = MessageBox.Show(viagens.Message, "CADASTRADO");
+                        if (SuccessBox == DialogResult.OK) {
+                            if (fmPrincipal != null) {
+                                fmPrincipal.AtivarForm(new TMSForms.List.FormViagens(fmPrincipal));
+                            }
+                            else {
+                                this.Close();
+                            }
+                        }
                     }
                     else {
                         MessageBox.Show("Houve um erro ao salvar a viagem. (" + viagens.Message + ")");

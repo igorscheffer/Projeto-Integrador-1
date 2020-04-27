@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridMultas = new Guna.UI.WinForms.GunaDataGridView();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.frota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,6 +73,7 @@
             resources.ApplyResources(this.gridMultas, "gridMultas");
             this.gridMultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridMultas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colId,
             this.frota,
             this.cor,
             this.placa,
@@ -124,6 +126,13 @@
             this.gridMultas.ThemeStyle.RowsStyle.Height = 35;
             this.gridMultas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridMultas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridMultas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnSelectItem);
+            // 
+            // colId
+            // 
+            resources.ApplyResources(this.colId, "colId");
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
             // 
             // frota
             // 
@@ -229,6 +238,7 @@
         private Guna.UI.WinForms.GunaDataGridView gridMultas;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnCadastrar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn frota;
         private System.Windows.Forms.DataGridViewTextBoxColumn cor;
         private System.Windows.Forms.DataGridViewTextBoxColumn placa;

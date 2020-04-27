@@ -98,7 +98,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         }
 
         private void ValidateRequired(Rules Rules, string Rule) {
-            if (string.IsNullOrEmpty(Rules.Value.Trim())) {
+            if (string.IsNullOrWhiteSpace(Rules.Value)) {
                 Errors.Add(new Errors { Rules = Rules, Rule = Rule });
             }
             else {
@@ -234,7 +234,7 @@ namespace Projeto_Integrador_1.Util.Validate {
 
         public void Validation() {
             foreach (Rules Rule in Rules) {
-                if (Rule.Rule.Contains('|')) {
+                if (!string.IsNullOrWhiteSpace(Rule.Rule)) {
                     string[] split_rules = Rule.Rule.Split('|');
 
                     foreach (string split_rule in split_rules) {
@@ -260,7 +260,7 @@ namespace Projeto_Integrador_1.Util.Validate {
                                 case "telefone": ValidateTelefone(Rule, split_rule); break;
                                 case "nfe": ValidateNFE(Rule, split_rule); break;
                                 case "reais": ValidateReais(Rule, split_rule); break;
-                                case "cep": ValidateCEP(Rule, split_rule); break;
+                                case "cep": Console.WriteLine("Esta no CEP"); ValidateCEP(Rule, split_rule); break;
                                 case "placa": ValidatePlaca(Rule, split_rule); break;
                             }
                         }

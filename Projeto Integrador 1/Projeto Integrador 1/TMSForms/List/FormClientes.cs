@@ -25,6 +25,7 @@ namespace Projeto_Integrador_1.TMSForms.List {
                 string tipoCadastro = ListaTipoCadastro.Find(find => Convert.ToString(find.Value) == Convert.ToString(cliente.TipoCadastro)).Text;
                 string tipoPessoa = ListaTipoPessoa.Find(find => Convert.ToString(find.Value) == Convert.ToString(cliente.TipoPessoa)).Text;
                 gridClientes.Rows.Add(
+                    cliente.Id,
                     tipoCadastro,
                     tipoPessoa,
                     cliente.CNPJ,
@@ -34,7 +35,14 @@ namespace Projeto_Integrador_1.TMSForms.List {
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e) {
-            fmPrincipal.AtivarForm(new TMSForms.Register.FormClientes());
+            fmPrincipal.AtivarForm(new TMSForms.Register.FormClientes(fmPrincipal));
+        }
+
+        private void OnSelectItem(object sender, DataGridViewCellEventArgs e) {
+            if (e.RowIndex >= 0) {
+                int Id = Convert.ToInt32(gridClientes.Rows[e.RowIndex].Cells[0].Value);
+                fmPrincipal.AtivarForm(new TMSForms.Register.FormClientes(fmPrincipal, Convert.ToInt32(Id)));
+            }
         }
     }
 }

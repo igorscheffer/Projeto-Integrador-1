@@ -10,9 +10,14 @@ namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormManutencoes : Form {
         ErrorProvider ErrorProvider = new ErrorProvider();
 
+        FormPrincipal fmPrincipal;
+
+        private int Id;
+
         private string jsonItens;
-        public FormManutencoes() {
+        public FormManutencoes(FormPrincipal fmPrincipal = null, int Id = 0) {
             InitializeComponent();
+            this.fmPrincipal = fmPrincipal;
 
             LoadVeiculos();
             LoadMotoristas();
@@ -31,6 +36,42 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
             combStatus.DataSource = ValuesComb.getManutencaoStatus();
+
+            if (Id > 0) {
+                this.Text = "Editar Manutenção";
+                this.Id = Id;
+                this.PreencherDados();
+            }
+        }
+
+        private void PreencherDados() {
+            try {
+                Manutencoes manutencoes = new Manutencoes();
+                manutencoes.Id = this.Id;
+                manutencoes.Get();
+
+                dynamic manutencao = manutencoes.Results[0];
+
+                combTipoManutencao.SelectedValue = manutencao.Tipo;
+                combTipoPreventiva.SelectedValue = manutencao.Preventiva;
+                combVeiculo.SelectedValue = manutencao.Veiculo;
+                combStatus.SelectedValue = manutencao.Status;
+                combMotorista.SelectedValue = manutencao.Motorista;
+                timeDataAgendada.Text = manutencao.DataAgendada;
+                timeDataRealizada.Text = manutencao.DataRealizada;
+                textHodometroAgendado.Text = Convert.ToString(manutencao.HodometroAgendado);
+                textHodometroRealizado.Text = Convert.ToString(manutencao.HodometroRealizado);
+                textObservacoes.Text = manutencao.Observacoes;
+                textOrdemServico.Text = manutencao.OrdemServico;
+                combFornecedor.SelectedValue = manutencao.Fornecedor;
+                textMaoObra.Text = Convert.ToString(manutencao.MaoObra);
+                textDesconto.Text = Convert.ToString(manutencao.Desconto);
+                textAcrecimo.Text = Convert.ToString(manutencao.Acrecimo);
+                textValor.Text = Convert.ToString(manutencao.Valor);
+            }
+            catch (Exception e) {
+                MessageBox.Show("Houve um erro ao preencher os dados (" + e.Message + ").");
+            }
         }
 
         private void LoadClientes() {
@@ -158,10 +199,24 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     manutencoes.Valor = textValor.Text;
                     manutencoes.Itens = jsonItens;
 
-                    manutencoes.Create();
+                    if (this.Id > 0) {
+                        manutencoes.Id = Convert.ToInt32(this.Id);
+                        manutencoes.Update();
+                    }
+                    else {
+                        manutencoes.Create();
+                    }
 
                     if (manutencoes.Success) {
-                        MessageBox.Show(manutencoes.Message);
+                        DialogResult SuccessBox = MessageBox.Show(manutencoes.Message, "CADASTRADO");
+                        if (SuccessBox == DialogResult.OK) {
+                            if (fmPrincipal != null) {
+                                fmPrincipal.AtivarForm(new TMSForms.List.FormManutencoes(fmPrincipal));
+                            }
+                            else {
+                                this.Close();
+                            }
+                        }
                     }
                     else {
                         MessageBox.Show("Houve um erro ao salvar a manutenção (" + manutencoes.Message + ")");

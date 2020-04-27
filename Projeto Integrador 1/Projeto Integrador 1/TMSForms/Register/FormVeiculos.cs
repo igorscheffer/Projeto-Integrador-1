@@ -7,8 +7,19 @@ using Projeto_Integrador_1.Util.Validate;
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormVeiculos : Form {
         ErrorProvider ErrorProvider = new ErrorProvider();
-        public FormVeiculos() {
+
+        FormPrincipal fmPrincipal;
+
+        private int Id;
+
+        public FormVeiculos(FormPrincipal fmPrincipal = null, int Id = 0) {
             InitializeComponent();
+            this.fmPrincipal = fmPrincipal;
+
+            if (Id > 0) {
+                this.Text = "Editar Veiculo";
+                this.Id = Id;
+            }
 
             PreencherCombBox ValuesComb = new Util.PreencherCombBox();
 
@@ -43,6 +54,44 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
             combStatus.DataSource = ValuesComb.getVeiculosStatus();
+
+            if (Id > 0) {
+                this.Text = "Editar Veiculo";
+                this.Id = Id;
+                this.PreencherDados();
+            }
+        }
+
+        private void PreencherDados() {
+            try {
+                Veiculos veiculos = new Veiculos();
+                veiculos.Id = this.Id;
+                veiculos.Get();
+
+                dynamic veiculo = veiculos.Results[0];
+
+                textFrota.Text = veiculo.Frota;
+                textPlaca.Text = veiculo.Placa;
+                combCategoria.SelectedValue = veiculo.Categoria;
+                combMarca.SelectedValue = veiculo.Marca;
+                combCarroceria.SelectedValue = veiculo.Carroceria;
+                textModelo.Text = veiculo.Modelo;
+                combCor.SelectedValue = veiculo.Cor;
+                combCombustivel.SelectedValue = veiculo.Combustivel;
+                textMotorizacao.Text = veiculo.Motorizacao;
+                textRenavam.Text = veiculo.Renavam;
+                textChassi.Text = veiculo.Chassi;
+                combAnoFabricacao.SelectedItem = veiculo.AnoFabricacao;
+                combAnoModelo.SelectedItem = veiculo.AnoModelo;
+                combStatus.SelectedValue = veiculo.Status;
+                textTara.Text = Convert.ToString(veiculo.Tara);
+                textLotacao.Text = Convert.ToString(veiculo.Lotacao);
+                textPesoBrutoTotal.Text = Convert.ToString(veiculo.PesoBrutoTotal);
+                textCapacidade.Text = Convert.ToString(veiculo.Capacidade);
+            }
+            catch (Exception e) {
+                MessageBox.Show("Houve um erro ao preencher os dados (" + e.Message + ").");
+            }
         }
 
         private void onEnviar(object sender, EventArgs e) {
@@ -92,10 +141,24 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     veiculos.PesoBrutoTotal = textPesoBrutoTotal.Text;
                     veiculos.Capacidade = textCapacidade.Text;
 
-                    veiculos.Create();
+                    if (this.Id > 0) {
+                        veiculos.Id = Convert.ToInt32(this.Id);
+                        veiculos.Update();
+                    }
+                    else {
+                        veiculos.Create();
+                    }
 
                     if (veiculos.Success) {
-                        MessageBox.Show(veiculos.Message);
+                        DialogResult SuccessBox = MessageBox.Show(veiculos.Message, "CADASTRADO");
+                        if (SuccessBox == DialogResult.OK) {
+                            if (fmPrincipal != null) {
+                                fmPrincipal.AtivarForm(new TMSForms.List.FormVeiculos(fmPrincipal));
+                            }
+                            else {
+                                this.Close();
+                            }
+                        }
                     }
                     else {
                         MessageBox.Show("Houve um erro ao salvar o veiculo. (" + veiculos.Message + ")");

@@ -14,7 +14,8 @@ namespace Projeto_Integrador_1.TMSForms.List {
             motoristas.GetAll();
 
             foreach (dynamic motorista in motoristas.Results) {
-                gridClientes.Rows.Add(
+                gridMotoristas.Rows.Add(
+                    motorista.Id,
                     motorista.Nome,
                     motorista.RG,
                     motorista.CPF,
@@ -26,7 +27,14 @@ namespace Projeto_Integrador_1.TMSForms.List {
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e) {
-            fmPrincipal.AtivarForm(new TMSForms.Register.FormMotoristas());
+            fmPrincipal.AtivarForm(new TMSForms.Register.FormMotoristas(fmPrincipal));
+        }
+
+        private void OnSelectItem(object sender, DataGridViewCellEventArgs e) {
+            if (e.RowIndex >= 0) {
+                int Id = Convert.ToInt32(gridMotoristas.Rows[e.RowIndex].Cells[0].Value);
+                fmPrincipal.AtivarForm(new TMSForms.Register.FormMotoristas(fmPrincipal, Convert.ToInt32(Id)));
+            }
         }
     }
 }

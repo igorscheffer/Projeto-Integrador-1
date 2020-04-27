@@ -9,8 +9,14 @@ using Projeto_Integrador_1.Util.Validate;
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormMotoristas : Form {
         ErrorProvider ErrorProvider = new ErrorProvider();
-        public FormMotoristas() {
+
+        FormPrincipal fmPrincipal;
+
+        private int Id;
+
+        public FormMotoristas(FormPrincipal fmPrincipal = null, int Id = 0) {
             InitializeComponent();
+            this.fmPrincipal = fmPrincipal;
 
             PreencherCombBox ValuesComb = new Util.PreencherCombBox();
 
@@ -39,6 +45,46 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             combCargo.DataSource = ValuesComb.getMotoristaCargos();
 
             timeVencimentoCNH.ResetText();
+
+            if (Id > 0) {
+                this.Text = "Editar Motorista";
+                this.Id = Id;
+                this.PreencherDados();
+            }
+        }
+
+        private void PreencherDados() {
+            try {
+                Motoristas motoristas = new Motoristas();
+                motoristas.Id = this.Id;
+                motoristas.Get();
+
+                dynamic motorista = motoristas.Results[0];
+
+                textNome.Text = motorista.Nome;
+                textCPF.Text = motorista.CPF;
+                textRG.Text = Convert.ToString(motorista.RG);
+                combStatus.SelectedValue = motorista.Status;
+                textCNH.Text = Convert.ToString(motorista.CNH);
+                timeVencimentoCNH.Text = motorista.Vencimento;
+                combCategoriaCNH.SelectedValue = motorista.Categoria;
+                combSexo.SelectedValue = motorista.Sexo;
+                combEstadoCivil.SelectedValue = motorista.EstadoCivil;
+                textCEP.Text = motorista.CEP;
+                textEndereco.Text = motorista.Endereco;
+                textN.Text = Convert.ToString(motorista.N);
+                textBairro.Text = motorista.Bairro;
+                textComplemento.Text = motorista.Complemento;
+                textCidade.Text = motorista.Cidade;
+                combEstado.SelectedValue = motorista.Estado;
+                combCargo.SelectedValue = motorista.Cargo;
+                textTelefone.Text = motorista.Telefone;
+                textCelular.Text = motorista.Celular;
+                textEmail.Text = motorista.Email;
+            }
+            catch (Exception e) {
+                MessageBox.Show("Houve um erro ao preencher os dados (" + e.Message + ").");
+            }
         }
 
         private void onBuscarCEP(object sender, EventArgs e) {
@@ -117,10 +163,24 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     motoristas.Celular = textCelular.Text;
                     motoristas.Email = textEmail.Text;
 
-                    motoristas.Create();
+                    if (this.Id > 0) {
+                        motoristas.Id = Convert.ToInt32(this.Id);
+                        motoristas.Update();
+                    }
+                    else {
+                        motoristas.Create();
+                    }
 
                     if (motoristas.Success) {
-                        MessageBox.Show(motoristas.Message);
+                        DialogResult SuccessBox = MessageBox.Show(motoristas.Message, "CADASTRADO");
+                        if (SuccessBox == DialogResult.OK) {
+                            if (fmPrincipal != null) {
+                                fmPrincipal.AtivarForm(new TMSForms.List.FormMotoristas(fmPrincipal));
+                            }
+                            else {
+                                this.Close();
+                            }
+                        }
                     }
                     else {
                         MessageBox.Show("Houver um erro ao salvar o motorista (" + motoristas.Message + ")");

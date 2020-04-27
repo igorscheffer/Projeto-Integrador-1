@@ -25,6 +25,7 @@ namespace Projeto_Integrador_1.TMSForms.List {
                 string cor = ListaCores.Find(find => Convert.ToString(find.Value) == Convert.ToString(veiculo.Cor)).Text;
                 string status = ListaStatus.Find(find => Convert.ToString(find.Value) == Convert.ToString(veiculo.Status)).Text;
                 gridVeiculos.Rows.Add(
+                    veiculo.Id,
                     veiculo.Frota,
                     veiculo.Placa,
                     veiculo.Veiculo,
@@ -35,7 +36,15 @@ namespace Projeto_Integrador_1.TMSForms.List {
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e) {
-            fmPrincipal.AtivarForm(new TMSForms.Register.FormVeiculos());
+            fmPrincipal.AtivarForm(new TMSForms.Register.FormVeiculos(fmPrincipal));
+        }
+
+        private void OnSelectItem(object sender, DataGridViewCellEventArgs e) {
+            Console.WriteLine(e.RowIndex);
+            if (e.RowIndex >= 0) {
+                int Id = Convert.ToInt32(gridVeiculos.Rows[e.RowIndex].Cells[0].Value);
+                fmPrincipal.AtivarForm(new TMSForms.Register.FormVeiculos(fmPrincipal, Convert.ToInt32(Id)));
+            }
         }
     }
 }

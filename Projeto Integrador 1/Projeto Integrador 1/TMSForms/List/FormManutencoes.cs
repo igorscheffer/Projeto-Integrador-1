@@ -25,6 +25,7 @@ namespace Projeto_Integrador_1.TMSForms.List {
                 string tipo = ListaTipos.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(manutencao.Tipo)).Text;
                 string status = ListaStatus.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(manutencao.Status)).Text;
                 gridManutencoes.Rows.Add(
+                    manutencao.Id,
                     manutencao.DataAgendada,
                     manutencao.DataRealizada,
                     tipo,
@@ -37,7 +38,14 @@ namespace Projeto_Integrador_1.TMSForms.List {
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e) {
-            fmPrincipal.AtivarForm(new TMSForms.Register.FormManutencoes());
+            fmPrincipal.AtivarForm(new TMSForms.Register.FormManutencoes(fmPrincipal));
+        }
+
+        private void OnSelectItem(object sender, DataGridViewCellEventArgs e) {
+            if (e.RowIndex >= 0) {
+                int Id = Convert.ToInt32(gridManutencoes.Rows[e.RowIndex].Cells[0].Value);
+                fmPrincipal.AtivarForm(new TMSForms.Register.FormManutencoes(fmPrincipal, Convert.ToInt32(Id)));
+            }
         }
     }
 }

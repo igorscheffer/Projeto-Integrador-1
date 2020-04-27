@@ -6,12 +6,19 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using Projeto_Integrador_1.Util.Validate;
+using System.Collections.Generic;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormClientes : Form {
         ErrorProvider ErrorProvider = new ErrorProvider();
-        public FormClientes() {
+
+        FormPrincipal fmPrincipal;
+
+        private int Id;
+        
+        public FormClientes(FormPrincipal fmPrincipal = null, int Id = 0) {
             InitializeComponent();
+            this.fmPrincipal = fmPrincipal;
 
             PreencherCombBox ValuesComb = new Util.PreencherCombBox();
 
@@ -26,6 +33,46 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             combEstado.DisplayMember = "Text";
             combEstado.ValueMember = "Value";
             combEstado.DataSource = ValuesComb.getEstados();
+
+            if (Id > 0) {
+                this.Text = "Editar Cliente";
+                this.Id = Id;
+                this.PreencherDados();
+            }
+        }
+
+        private void PreencherDados() {
+            try {
+                Clientes clientes = new Clientes();
+                clientes.Id = this.Id;
+                clientes.Get();
+
+                dynamic cliente = clientes.Results[0];
+
+                combTipoCadastro.SelectedValue = cliente.TipoCadastro;
+                combTipoPessoa.SelectedValue = cliente.TipoPessoa;
+                textCNPJ.Text = cliente.CNPJ;
+                textRazaoSocial.Text = cliente.RazaoSocial;
+                textInscricaoMunicipal.Text = cliente.InscricaoMunicipal;
+                textInscricaoEstadual.Text = cliente.InscricaoEstadual;
+                checkIsento.Checked = cliente.Isento;
+                textCEP.Text = cliente.CEP;
+                textEndereco.Text = cliente.Endereco;
+                textN.Text = cliente.N;
+                textBairro.Text = cliente.Bairro;
+                textComplemento.Text = cliente.Complemento;
+                textCidade.Text = cliente.Cidade;
+                combEstado.SelectedValue = cliente.Estado;
+                textNome.Text = cliente.Nome;
+                textTelefone.Text = cliente.Telefone;
+                textRamal.Text = cliente.Ramal;
+                textCelular.Text = cliente.Celular;
+                textEmail.Text = cliente.Email;
+            }
+            catch (Exception e) {
+                MessageBox.Show("Houve um erro ao preencher os dados (" + e.Message + ").");
+            }
+            
         }
 
         private void onBuscarCEP(object sender, EventArgs e) {
@@ -174,10 +221,24 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     clientes.Email = textEmail.Text;
                     clientes.Observacoes = textObservacoes.Text;
 
-                    clientes.Create();
+                    if (this.Id > 0) {
+                        clientes.Id = Convert.ToInt32(this.Id);
+                        clientes.Update();
+                    }
+                    else {
+                        clientes.Create();
+                    }
 
                     if (clientes.Success) {
-                        MessageBox.Show(clientes.Message);
+                        DialogResult SuccessBox = MessageBox.Show(clientes.Message, "CADASTRADO");
+                        if (SuccessBox == DialogResult.OK) {
+                            if (fmPrincipal != null) {
+                                fmPrincipal.AtivarForm(new TMSForms.List.FormClientes(fmPrincipal));
+                            }
+                            else {
+                                this.Close();
+                            }
+                        }
                     }
                     else {
                         MessageBox.Show("Houve um erro ao salvar o cliente (" + clientes.Message + ")");

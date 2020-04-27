@@ -33,8 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridAbastecimentos = new Guna.UI.WinForms.GunaDataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCadastrar = new FontAwesome.Sharp.IconButton();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.frota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +42,8 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCadastrar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridAbastecimentos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +73,7 @@
             resources.ApplyResources(this.gridAbastecimentos, "gridAbastecimentos");
             this.gridAbastecimentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridAbastecimentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colId,
             this.frota,
             this.cor,
             this.placa,
@@ -124,28 +126,13 @@
             this.gridAbastecimentos.ThemeStyle.RowsStyle.Height = 35;
             this.gridAbastecimentos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridAbastecimentos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridAbastecimentos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnSelectItem);
             // 
-            // panel1
+            // colId
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.panel1.Controls.Add(this.btnCadastrar);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(152)))), ((int)(((byte)(204)))));
-            resources.ApplyResources(this.btnCadastrar, "btnCadastrar");
-            this.btnCadastrar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnCadastrar.IconColor = System.Drawing.Color.White;
-            this.btnCadastrar.IconSize = 16;
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Rotation = 0D;
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            resources.ApplyResources(this.colId, "colId");
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
             // 
             // frota
             // 
@@ -211,6 +198,28 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.panel1.Controls.Add(this.btnCadastrar);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(152)))), ((int)(((byte)(204)))));
+            resources.ApplyResources(this.btnCadastrar, "btnCadastrar");
+            this.btnCadastrar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnCadastrar.IconColor = System.Drawing.Color.White;
+            this.btnCadastrar.IconSize = 16;
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Rotation = 0D;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
             // FormAbastecimentos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -229,6 +238,7 @@
         private Guna.UI.WinForms.GunaDataGridView gridAbastecimentos;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnCadastrar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn frota;
         private System.Windows.Forms.DataGridViewTextBoxColumn cor;
         private System.Windows.Forms.DataGridViewTextBoxColumn placa;

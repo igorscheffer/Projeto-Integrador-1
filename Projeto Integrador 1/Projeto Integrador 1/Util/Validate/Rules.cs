@@ -8,7 +8,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         public string Value {
             get {
                 if (Component.GetType().BaseType.Name == "ComboBox") {
-                    if (Component.SelectedValue == null || Component.SelectedValue == -1) {
+                    if (Component.SelectedValue == null || Convert.ToString(Component.SelectedValue) == Convert.ToString(-1)) {
                         return string.Empty;
                     }
                     else {

@@ -12,30 +12,30 @@ namespace Projeto_Integrador_1.Connection {
         public string Message;
         public List<dynamic> Results = new List<dynamic>();
 
-        public string Frota { set; get; }
-        public string Placa { set; get; }
-        public string Categoria { set; get; }
-        public string Marca { set; get; }
-        public string Carroceria { set; get; }
-        public string Modelo { set; get; }
-        public string Cor { set; get; }
-        public string Combustivel { set; get; }
-        public string Motorizacao { set; get; }
-        public string Renavam { set; get; }
-        public string Chassi { set; get; }
-        public string AnoFabricacao { set; get; }
-        public string AnoModelo { set; get; }
-        public string Status { set; get; }
-        public string Tara { set; get; }
-        public string Lotacao { set; get; }
-        public string PesoBrutoTotal { set; get; }
-        public string Capacidade { set; get; }
+        public int Id { get; set; }
+        public string Frota { get; set; }
+        public string Placa { get; set; }
+        public string Categoria { get; set; }
+        public string Marca { get; set; }
+        public string Carroceria { get; set; }
+        public string Modelo { get; set; }
+        public string Cor { get; set; }
+        public string Combustivel { get; set; }
+        public string Motorizacao { get; set; }
+        public string Renavam { get; set; }
+        public string Chassi { get; set; }
+        public string AnoFabricacao { get; set; }
+        public string AnoModelo { get; set; }
+        public string Status { get; set; }
+        public string Tara { get; set; }
+        public string Lotacao { get; set; }
+        public string PesoBrutoTotal { get; set; }
+        public string Capacidade { get; set; }
 
         public void Create() {
+            string sql = "INSERT INTO `veiculos` (`frota`, `placa`, `categoria`, `marca`, `carroceria`, `modelo`, `cor`, `combustivel`, `motorizacao`, `renavam`, `chassi`, `ano_fabricacao`, `ano_modelo`, `status`, `tara`, `lotacao`, `peso_bruto_total`, `capacidade`) VALUES (@frota, @placa, @categoria, @marca, @carroceria, @modelo, @cor, @combustivel, @motorizacao, @renavam, @chassi, @ano_fabricacao, @ano_modelo, @status, @tara, @lotacao, @peso_bruto_total, @capacidade);";
 
             try {
-                string sql = "INSERT INTO `veiculos` (`frota`, `placa`, `categoria`, `marca`, `carroceria`, `modelo`, `cor`, `combustivel`, `motorizacao`, `renavam`, `chassi`, `ano_fabricacao`, `ano_modelo`, `status`, `tara`, `lotacao`, `peso_bruto_total`, `capacidade`) VALUES (@frota, @placa, @categoria, @marca, @carroceria, @modelo, @cor, @combustivel, @motorizacao, @renavam, @chassi, @ano_fabricacao, @ano_modelo, @status, @tara, @lotacao, @peso_bruto_total, @capacidade);";
-
                 openConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, connection);
@@ -72,6 +72,95 @@ namespace Projeto_Integrador_1.Connection {
             }
         }
 
+        public void Update() {
+            string sql = "UPDATE `veiculos` SET `frota` = @frota, `placa` = @placa, `categoria` = @categoria, `marca` = @marca, `carroceria` = @carroceria, `modelo` = @modelo, `cor` = @cor, `combustivel` = @combustivel, `motorizacao` = @motorizacao, `renavam` = @renavam, `chassi` = @chassi, `ano_fabricacao` = @ano_fabricacao, `ano_modelo` = @ano_modelo, `status` = @status, `tara` = @tara, `lotacao` = @lotacao, `peso_bruto_total` = @peso_bruto_total, `capacidade` = @capacidade WHERE `id` = @id LIMIT 1;";
+
+            try {
+                openConnection();
+
+                MySqlCommand query = new MySqlCommand(sql, connection);
+
+                query.Parameters.AddWithValue("@frota", Frota);
+                query.Parameters.AddWithValue("@placa", Placa);
+                query.Parameters.AddWithValue("@categoria", Categoria);
+                query.Parameters.AddWithValue("@marca", Marca);
+                query.Parameters.AddWithValue("@carroceria", Carroceria);
+                query.Parameters.AddWithValue("@modelo", Modelo);
+                query.Parameters.AddWithValue("@cor", Cor);
+                query.Parameters.AddWithValue("@combustivel", Combustivel);
+                query.Parameters.AddWithValue("@motorizacao", Motorizacao);
+                query.Parameters.AddWithValue("@renavam", Renavam);
+                query.Parameters.AddWithValue("@chassi", Chassi);
+                query.Parameters.AddWithValue("@ano_fabricacao", AnoFabricacao);
+                query.Parameters.AddWithValue("@ano_modelo", AnoModelo);
+                query.Parameters.AddWithValue("@status", Status);
+                query.Parameters.AddWithValue("@tara", Tara);
+                query.Parameters.AddWithValue("@lotacao", Lotacao);
+                query.Parameters.AddWithValue("@peso_bruto_total", PesoBrutoTotal);
+                query.Parameters.AddWithValue("@capacidade", Capacidade);
+                query.Parameters.AddWithValue("@id", Id);
+
+                query.ExecuteNonQuery();
+
+                closeConnection();
+
+                Success = true;
+                Message = "Veiculo salvo com sucesso.";
+            }
+            catch (Exception e) {
+                Success = false;
+                Message = e.Message;
+            }
+        }
+
+        public void Get() {
+            string sql = "SELECT * FROM `veiculos` WHERE `id` = @id LIMIT 1;";
+
+            try {
+                openConnection();
+
+                MySqlCommand query = new MySqlCommand(sql, connection);
+                query.Parameters.AddWithValue("@id", Id);
+
+                MySqlDataReader data = query.ExecuteReader();
+                data.Read();
+
+                Results.Add(
+                    new {
+                        Id = data["id"],
+                        Frota = data["frota"],
+                        Placa = data["placa"],
+                        Categoria = data["categoria"],
+                        Marca = data["marca"],
+                        Carroceria = data["carroceria"],
+                        Modelo = data["modelo"],
+                        Cor = data["cor"],
+                        Combustivel = data["combustivel"],
+                        Motorizacao = data["motorizacao"],
+                        Renavam = data["renavam"],
+                        Chassi = data["chassi"],
+                        AnoFabricacao = data["ano_fabricacao"],
+                        AnoModelo = data["ano_modelo"],
+                        Status = data["status"],
+                        Tara = data["tara"],
+                        Lotacao = data["lotacao"],
+                        PesoBrutoTotal = data["peso_bruto_total"],
+                        Capacidade = data["capacidade"]
+                    }
+                );
+
+                data.Close();
+
+                closeConnection();
+
+                Success = true;
+            }
+            catch (MySqlException e) {
+                Success = false;
+                Message = e.Message;
+            }
+        }
+
         public void GetAll() {
             string sql = "SELECT * FROM `veiculos`;";
 
@@ -79,29 +168,29 @@ namespace Projeto_Integrador_1.Connection {
             List<dynamic> marcas = preValues.getVeiculosMarcas();
 
             try {
-                if (openConnection()) {
-                    MySqlCommand query = new MySqlCommand(sql, connection);
-                    MySqlDataReader data = query.ExecuteReader();
+                openConnection();
 
-                    while (data.Read()) {
-                        dynamic marca = marcas.Find(item => item.Value == Int16.Parse(data["marca"].ToString()));
+                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlDataReader data = query.ExecuteReader();
 
-                        Results.Add(
-                            new {
-                                Id = data["id"],
-                                Frota = data["frota"],
-                                Placa = data["placa"],
-                                Veiculo = (data["placa"] + " " + marca.Text + " " + data["modelo"]).ToUpper(),
-                                Cor = data["cor"],
-                                Status = data["status"]
-                            }
-                        );
-                    }
+                while (data.Read()) {
+                    dynamic marca = marcas.Find(item => item.Value == Int16.Parse(data["marca"].ToString()));
 
-                    data.Close();
-
-                    closeConnection();
+                    Results.Add(
+                        new {
+                            Id = data["id"],
+                            Frota = data["frota"],
+                            Placa = data["placa"],
+                            Veiculo = (data["placa"] + " " + marca.Text + " " + data["modelo"]).ToUpper(),
+                            Cor = data["cor"],
+                            Status = data["status"]
+                        }
+                    );
                 }
+
+                data.Close();
+
+                closeConnection();
 
                 Success = true;
             }

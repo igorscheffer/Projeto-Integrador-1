@@ -8,8 +8,14 @@ using Projeto_Integrador_1.Util.Validate;
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormAbastecimentos : Form {
         ErrorProvider ErrorProvider = new ErrorProvider();
-        public FormAbastecimentos() {
+
+        FormPrincipal fmPrincipal;
+
+        private int Id;
+
+        public FormAbastecimentos(FormPrincipal fmPrincipal = null, int Id = 0) {
             InitializeComponent();
+            this.fmPrincipal = fmPrincipal;
 
             PreencherCombBox ValuesComb = new Util.PreencherCombBox();
 
@@ -24,7 +30,39 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
             combStatus.DataSource = ValuesComb.getAbastecimentosStatus();
+
+            if (Id > 0) {
+                this.Text = "Editar Abastecimento";
+                this.Id = Id;
+                this.PreencherDados();
+            }
         }
+
+        private void PreencherDados() {
+            try {
+                Abastecimentos abastecimentos = new Abastecimentos();
+                abastecimentos.Id = this.Id;
+                abastecimentos.Get();
+
+                dynamic abastecimento = abastecimentos.Results[0];
+
+                timeData.Text = abastecimento.Data;
+                textCupom.Text = abastecimentos.Cupom;
+                combPosto.SelectedValue = abastecimento.Posto;
+                combCombustivel.SelectedValue = abastecimento.Combustivel;
+                combVeiculo.SelectedValue = abastecimento.Veiculo;
+                combMotorista.SelectedValue = abastecimento.Motorista;
+                textHodometro.Text = Convert.ToString(abastecimento.Hodometro);
+                combStatus.SelectedValue = abastecimento.Status;
+                textLitros.Text = Convert.ToString(abastecimento.Litros);
+                textValor.Text = Convert.ToString(abastecimento.Valor);
+                textTotal.Text = Convert.ToString(abastecimento.Total);
+            }
+            catch (Exception e) {
+                MessageBox.Show("Houve um erro ao preencher os dados (" + e.Message + ").");
+            }
+        }
+
         private void LoadClientes() {
             Clientes clientes = new Clientes();
             clientes.GetAll();
@@ -116,7 +154,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 if (Validate.IsValid()) {
                     Abastecimentos abastecimentos = new Abastecimentos();
 
-                    int total = (Convert.ToInt32(textValor.Text) * Convert.ToInt32(textLitros.Text));
+                    decimal total = (Convert.ToDecimal(textValor.Text) * Convert.ToDecimal(textLitros.Text));
 
                     abastecimentos.Data = timeData.Text;
                     abastecimentos.Cupom = textCupom.Text;
@@ -130,10 +168,24 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     abastecimentos.Valor = textValor.Text;
                     abastecimentos.Total = Convert.ToString(total);
 
-                    abastecimentos.Create();
+                    if (this.Id > 0) {
+                        abastecimentos.Id = Convert.ToInt32(this.Id);
+                        abastecimentos.Update();
+                    }
+                    else {
+                        abastecimentos.Create();
+                    }
 
                     if (abastecimentos.Success) {
-                        MessageBox.Show(abastecimentos.Message);
+                        DialogResult SuccessBox = MessageBox.Show(abastecimentos.Message, "CADASTRADO");
+                        if (SuccessBox == DialogResult.OK) {
+                            if (fmPrincipal != null) {
+                                fmPrincipal.AtivarForm(new TMSForms.List.FormAbastecimentos(fmPrincipal));
+                            }
+                            else {
+                                this.Close();
+                            }
+                        }
                     }
                     else {
                         throw new Exception("Houve um erro ao salvar o abastecimento (" + abastecimentos.Message + ")");

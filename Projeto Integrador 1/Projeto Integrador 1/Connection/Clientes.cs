@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 
 namespace Projeto_Integrador_1.Connection {
@@ -10,6 +11,7 @@ namespace Projeto_Integrador_1.Connection {
         public string Message;
         public List<dynamic> Results = new List<dynamic>();
 
+        public int Id { get; set; }
         public dynamic TipoCadastro { get; set; }
         public dynamic TipoPessoa { get; set; }
         public string CNPJ { get; set; }
@@ -68,6 +70,99 @@ namespace Projeto_Integrador_1.Connection {
 
                 Success = true;
                 Message = "Cliente salvo com sucesso.";
+            }
+            catch (MySqlException e) {
+                Success = false;
+                Message = e.Message;
+            }
+        }
+
+        public void Update() {
+            try {
+                string sql = "UPDATE `clientes` SET `tipo_cadastro` = @tipo_cadastro, `tipo_pessoa` = @tipo_pessoa, `cnpj` = @cnpj, `razao_social` = @razao_social, `nome_fantasia` = @nome_fantasia, `inscricao_municipal` = @inscricao_municipal, `inscricao_estadual` = @inscricao_estadual, `isento` = @isento, `cep` = @cep, `endereco` = @endereco, `n` = @n, `bairro` = @bairro, `complemento` = @complemento, `cidade` = @cidade, `estado` = @estado, `nome` = @nome, `telefone` = @telefone, `ramal` = @ramal, `celular` = @celular, `email` = @email, `observacoes` = @observacoes WHERE `id` = @id LIMIT 1;";
+
+                openConnection();
+
+                MySqlCommand query = new MySqlCommand(sql, connection);
+
+                query.Parameters.AddWithValue("@tipo_cadastro", TipoCadastro);
+                query.Parameters.AddWithValue("@tipo_pessoa", TipoPessoa);
+                query.Parameters.AddWithValue("@cnpj", CNPJ);
+                query.Parameters.AddWithValue("@razao_social", RazaoSocial);
+                query.Parameters.AddWithValue("@nome_fantasia", NomeFantasia);
+                query.Parameters.AddWithValue("@inscricao_municipal", InscricaoMunicipal);
+                query.Parameters.AddWithValue("@inscricao_estadual", InscricaoEstadual);
+                query.Parameters.AddWithValue("@isento", Isento);
+                query.Parameters.AddWithValue("@cep", CEP);
+                query.Parameters.AddWithValue("@endereco", Endereco);
+                query.Parameters.AddWithValue("@n", N);
+                query.Parameters.AddWithValue("@bairro", Bairro);
+                query.Parameters.AddWithValue("@complemento", Complemento);
+                query.Parameters.AddWithValue("@cidade", Cidade);
+                query.Parameters.AddWithValue("@estado", Estado);
+                query.Parameters.AddWithValue("@nome", Nome);
+                query.Parameters.AddWithValue("@telefone", Telefone);
+                query.Parameters.AddWithValue("@ramal", Ramal);
+                query.Parameters.AddWithValue("@celular", Celular);
+                query.Parameters.AddWithValue("@email", Email);
+                query.Parameters.AddWithValue("@observacoes", Observacoes);
+                query.Parameters.AddWithValue("@id", Id);
+
+                query.ExecuteNonQuery();
+
+                closeConnection();
+
+                Success = true;
+                Message = "Cliente salvo com sucesso.";
+            }
+            catch (MySqlException e) {
+                Success = false;
+                Message = e.Message;
+            }
+        }
+
+        public void Get() {
+            string sql = "SELECT * FROM `clientes` WHERE `id` = @id lIMIT 1;";
+            try {
+                openConnection();
+
+                MySqlCommand query = new MySqlCommand(sql, connection);
+
+                query.Parameters.AddWithValue("@id", Id);
+
+                MySqlDataReader data = query.ExecuteReader();
+                data.Read();
+
+                Results.Add(new {
+                    Id = data["id"],
+                    TipoCadastro = data["tipo_cadastro"],
+                    TipoPessoa = data["tipo_pessoa"],
+                    CNPJ = data["cnpj"],
+                    RazaoSocial = data["razao_social"],
+                    NomeFantasia = data["nome_fantasia"],
+                    InscricaoMunicipal = data["inscricao_municipal"],
+                    InscricaoEstadual = data["inscricao_estadual"],
+                    Isento = data["isento"],
+                    CEP = data["cep"],
+                    Endereco = data["endereco"],
+                    N = data["n"],
+                    Bairro = data["bairro"],
+                    Complemento = data["complemento"],
+                    Cidade = data["cidade"],
+                    Estado = data["estado"],
+                    Nome = data["nome"],
+                    Telefone = data["telefone"],
+                    Ramal = data["ramal"],
+                    Celular = data["celular"],
+                    Email = data["email"],
+                    Observacoes = data["observacoes"]
+                });
+
+                data.Close();
+
+                closeConnection();
+
+                Success = true;
             }
             catch (MySqlException e) {
                 Success = false;

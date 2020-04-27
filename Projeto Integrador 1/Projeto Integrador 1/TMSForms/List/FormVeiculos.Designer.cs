@@ -39,6 +39,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridVeiculos = new Guna.UI.WinForms.GunaDataGridView();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.frota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.veiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +76,7 @@
             resources.ApplyResources(this.gridVeiculos, "gridVeiculos");
             this.gridVeiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridVeiculos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colId,
             this.frota,
             this.placa,
             this.veiculo,
@@ -124,6 +126,13 @@
             this.gridVeiculos.ThemeStyle.RowsStyle.Height = 35;
             this.gridVeiculos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridVeiculos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridVeiculos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnSelectItem);
+            // 
+            // colId
+            // 
+            resources.ApplyResources(this.colId, "colId");
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
             // 
             // frota
             // 
@@ -210,6 +219,7 @@
         private Guna.UI.WinForms.GunaDataGridView gridVeiculos;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnCadastrar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn frota;
         private System.Windows.Forms.DataGridViewTextBoxColumn placa;
         private System.Windows.Forms.DataGridViewTextBoxColumn veiculo;

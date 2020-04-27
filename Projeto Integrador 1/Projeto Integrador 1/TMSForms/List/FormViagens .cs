@@ -23,6 +23,7 @@ namespace Projeto_Integrador_1.TMSForms.List {
             foreach (dynamic viagem in viagens.Results) {
                 string status = ListaStatus.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(viagem.Status)).Text;
                 gridViagens.Rows.Add(
+                    viagem.Id,
                     viagem.CodigoInterno,
                     viagem.DataSaida,
                     viagem.DataChegada,
@@ -36,7 +37,14 @@ namespace Projeto_Integrador_1.TMSForms.List {
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e) {
-            fmPrincipal.AtivarForm(new TMSForms.Register.FormViagens());
+            fmPrincipal.AtivarForm(new TMSForms.Register.FormViagens(fmPrincipal));
+        }
+
+        private void OnSelectItem(object sender, DataGridViewCellEventArgs e) {
+            if (e.RowIndex >= 0) {
+                int Id = Convert.ToInt32(gridViagens.Rows[e.RowIndex].Cells[0].Value);
+                fmPrincipal.AtivarForm(new TMSForms.Register.FormViagens(fmPrincipal, Convert.ToInt32(Id)));
+            }
         }
     }
 }
