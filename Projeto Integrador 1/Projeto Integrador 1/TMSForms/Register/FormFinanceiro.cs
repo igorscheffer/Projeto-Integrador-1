@@ -113,7 +113,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         }
 
         private void OnEnviar(object sender, EventArgs e) {
-            try {
+
                 Validate Validate = new Validate(this, ErrorProvider);
 
                 Validate.AddRule(textNome, "Nome", "required|max:30");
@@ -126,7 +126,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 Validate.AddRule(textValor, "Valor", "required|numeric|max:11");
                 Validate.AddRule(textDocumento, "Nº Document", "max:30");
                 Validate.AddRule(combOcorrencia, "Ocorrencia", "required|numeric|exact:1");
-                Validate.AddRule(textQtdParcelas, "Qtd. Parcelas", "max:3");
+                Validate.AddRule(textQtdParcelas, "Qtd. Parcelas", "required_if:combOcorrencia,2|max:3");
                 Validate.Validation();
 
                 if (Validate.IsValid()) {
@@ -135,10 +135,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 else {
                     Validate.ErrorProviderShow();
                 }
-            }
-            catch (Exception ex) {
-                MessageBox.Show(ex.Message);
-            }
+
         }
     }
 }

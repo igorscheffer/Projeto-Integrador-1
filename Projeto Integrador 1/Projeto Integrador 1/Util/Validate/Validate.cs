@@ -25,7 +25,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         }
 
         private void ValidateMin(Rules Rules, string Rule, string RuleValue) {
-            if (Rules.Optional) {
+            if (!Rules.Optional) {
                 if (Rules.Value.Length < Convert.ToInt16(RuleValue)) {
                     Errors.Add(new Errors { Rules = Rules, Rule = Rule, RuleValue = RuleValue });
                 }
@@ -45,7 +45,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         }
 
         private void ValidateExact(Rules Rules, string Rule, string RuleValue) {
-            if (Rules.Optional) {
+            if (!Rules.Optional) {
                 if (Rules.Value.Length != Convert.ToInt16(RuleValue)) {
                     Errors.Add(new Errors { Rules = Rules, Rule = Rule, RuleValue = RuleValue });
                 }
@@ -56,7 +56,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         }
 
         private void ValidateRegExp(Rules Rules, string Rule, string RuleValue) {
-            if (Rules.Optional) {
+            if (!Rules.Optional) {
                 var regexp = RuleValue;
                 var match = Regex.Match(RuleValue, regexp, RegexOptions.IgnoreCase);
 
@@ -70,7 +70,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         }
 
         private void ValidateIn(Rules Rules, string Rule, string RuleValue) {
-            if (Rules.Optional) {
+            if (!Rules.Optional) {
                 string[] inRules = RuleValue.Split(',');
 
                 if (!Array.Exists(inRules, find => find.ToLower() == Rules.Value.ToLower())) {
@@ -83,7 +83,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         }
 
         private void ValidateDate(Rules Rules, string Rule, string RuleValue) {
-            if (Rules.Optional) {
+            if (!Rules.Optional) {
                 DateTime date;
 
                 bool validate = DateTime.TryParseExact(Rules.Value, RuleValue, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out date);
@@ -106,8 +106,29 @@ namespace Projeto_Integrador_1.Util.Validate {
             }
         }
 
+        private void ValidateRequiredIf(Rules Rules, string Rule, string RuleValue) {
+            string[] inRules = RuleValue.Split(',');
+
+            Rules RequiredIfComponent = this.Rules.Find(find => find.Component.Name == inRules[0]);
+
+            if (RequiredIfComponent != null) {
+                if (RuleValue.Contains(",")) {
+                    if (Array.Exists(inRules, find => find.ToLower() == RequiredIfComponent.Value.ToLower())) {
+                        Rules.Optional = false;
+                        this.ValidateRule(Rules, true);
+                    }
+                }
+                else {
+                    if(!string.IsNullOrWhiteSpace(RequiredIfComponent.Value)) {
+                        Rules.Optional = false;
+                        this.ValidateRule(Rules, true);
+                    }
+                }
+            }
+        }
+
         private void ValidateEmail(Rules Rules, string Rule) {
-            if (Rules.Optional) {
+            if (!Rules.Optional) {
                 var regexp = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
@@ -121,7 +142,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         }
 
         private void ValidateNumeric(Rules Rules, string Rule) {
-            if (Rules.Optional) {
+            if (!Rules.Optional) {
                 var regexp = @"([0-9])";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
@@ -135,7 +156,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         }
 
         private void ValidateCPF(Rules Rules, string Rule) {
-            if (Rules.Optional) {
+            if (!Rules.Optional) {
                 var regexp = @"^(\d{3})(\.\d{3})(\.\d{3})(\-\d{2})$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
@@ -149,7 +170,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         }
 
         private void ValidateCNPJ(Rules Rules, string Rule) {
-            if (Rules.Optional) {
+            if (!Rules.Optional) {
                 var regexp = @"^(\d{2})(\.\d{3}){2}(\/\d{4})(\-\d{2})$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
@@ -163,7 +184,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         }
 
         private void ValidateTelefone(Rules Rules, string Rule) {
-            if (Rules.Optional) {
+            if (!Rules.Optional) {
                 var regexp = @"\(\d{2,}\) \d{4,}\-\d{4}$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
@@ -177,7 +198,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         }
 
         private void ValidateNFE(Rules Rules, string Rule) {
-            if (Rules.Optional) {
+            if (!Rules.Optional) {
                 var regexp = @"^(\d{0,3}(\.\d{3}){2})$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
@@ -191,7 +212,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         }
 
         private void ValidateReais(Rules Rules, string Rule) {
-            if (Rules.Optional) {
+            if (!Rules.Optional) {
                 var regexp = @"^(\d{1,3}(\.\d{3})*)(\,\d{2})$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
@@ -205,7 +226,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         }
 
         private void ValidateCEP(Rules Rules, string Rule) {
-            if (Rules.Optional) {
+            if (!Rules.Optional) {
                 var regexp = @"^(\d{5})(\-\d{3})$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
@@ -219,7 +240,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         }
 
         private void ValidatePlaca(Rules Rules, string Rule) {
-            if (Rules.Optional) {
+            if (!Rules.Optional) {
                 var regexp = @"^([A-Z]{3})(\-\d\w\d{2})$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
@@ -232,39 +253,48 @@ namespace Projeto_Integrador_1.Util.Validate {
             }
         }
 
+        private void ValidateRule(Rules Rule, bool ForceRequired = false) {
+            if (!string.IsNullOrWhiteSpace(Rule.Rule)) {
+                if (ForceRequired) ValidateRequired(Rule, "required");
+
+                string[] split_rules = Rule.Rule.Split('|');
+
+                foreach (string split_rule in split_rules) {
+                    if (split_rule.Contains(':')) {
+                        string[] sub_split_rules = split_rule.Split(new char[] { ':' }, 2, StringSplitOptions.None);
+
+                        switch (sub_split_rules[0]) {
+                            case "min": ValidateMin(Rule, sub_split_rules[0], sub_split_rules[1]); break;
+                            case "max": ValidateMax(Rule, sub_split_rules[0], sub_split_rules[1]); break;
+                            case "exact": ValidateExact(Rule, sub_split_rules[0], sub_split_rules[1]); break;
+                            case "regExp": ValidateRegExp(Rule, sub_split_rules[0], sub_split_rules[1]); break;
+                            case "in": ValidateIn(Rule, sub_split_rules[0], sub_split_rules[1]); break;
+                            case "date": ValidateDate(Rule, sub_split_rules[0], sub_split_rules[1]); break;
+                            case "required_if": if (!ForceRequired) { ValidateRequiredIf(Rule, sub_split_rules[0], sub_split_rules[1]); } break;
+                        }
+                    }
+                    else {
+                        switch (split_rule) {
+                            case "required": ValidateRequired(Rule, split_rule); break;
+                            case "numeric": ValidateNumeric(Rule, split_rule); break;
+                            case "email": ValidateEmail(Rule, split_rule); break;
+                            case "cpf": ValidateCPF(Rule, split_rule); break;
+                            case "cnpj": ValidateCNPJ(Rule, split_rule); break;
+                            case "telefone": ValidateTelefone(Rule, split_rule); break;
+                            case "nfe": ValidateNFE(Rule, split_rule); break;
+                            case "reais": ValidateReais(Rule, split_rule); break;
+                            case "cep": ValidateCEP(Rule, split_rule); break;
+                            case "placa": ValidatePlaca(Rule, split_rule); break;
+                        }
+                    }
+                }
+            }
+        }
+
         public void Validation() {
             foreach (Rules Rule in Rules) {
                 if (!string.IsNullOrWhiteSpace(Rule.Rule)) {
-                    string[] split_rules = Rule.Rule.Split('|');
-
-                    foreach (string split_rule in split_rules) {
-                        if (split_rule.Contains(':')) {
-                            string[] sub_split_rules = split_rule.Split(new char[] { ':' }, 2, StringSplitOptions.None);
-
-                            switch (sub_split_rules[0]) {
-                                case "min": ValidateMin(Rule, sub_split_rules[0], sub_split_rules[1]); break;
-                                case "max": ValidateMax(Rule, sub_split_rules[0], sub_split_rules[1]); break;
-                                case "exact": ValidateExact(Rule, sub_split_rules[0], sub_split_rules[1]); break;
-                                case "regExp": ValidateRegExp(Rule, sub_split_rules[0], sub_split_rules[1]); break;
-                                case "in": ValidateIn(Rule, sub_split_rules[0], sub_split_rules[1]); break;
-                                case "date": ValidateDate(Rule, sub_split_rules[0], sub_split_rules[1]); break;
-                            }
-                        }
-                        else {
-                            switch (split_rule) {
-                                case "required": ValidateRequired(Rule, split_rule); break;
-                                case "numeric": ValidateNumeric(Rule, split_rule); break;
-                                case "email": ValidateEmail(Rule, split_rule); break;
-                                case "cpf": ValidateCPF(Rule, split_rule); break;
-                                case "cnpj": ValidateCNPJ(Rule, split_rule); break;
-                                case "telefone": ValidateTelefone(Rule, split_rule); break;
-                                case "nfe": ValidateNFE(Rule, split_rule); break;
-                                case "reais": ValidateReais(Rule, split_rule); break;
-                                case "cep": Console.WriteLine("Esta no CEP"); ValidateCEP(Rule, split_rule); break;
-                                case "placa": ValidatePlaca(Rule, split_rule); break;
-                            }
-                        }
-                    }
+                    this.ValidateRule(Rule);
                 }
             }
         }

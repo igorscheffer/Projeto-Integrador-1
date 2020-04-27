@@ -2,6 +2,8 @@
 
 namespace Projeto_Integrador_1.Util.Validate {
     class Rules {
+        private bool _Optional;
+
         public dynamic Component { get; set; }
         public string Name { get; set; }
         public string Rule { get; set; }
@@ -21,8 +23,14 @@ namespace Projeto_Integrador_1.Util.Validate {
             }
         }
         public bool Optional {
-            get {
-                return (Rule.Contains("required") && !string.IsNullOrEmpty(Value)) || !string.IsNullOrEmpty(Value);
+            get => _Optional;
+            set {
+                if (!string.IsNullOrEmpty(Convert.ToString(value))) {
+                    _Optional = value;
+                }
+                else {
+                    _Optional = !((Rule.Contains("required") && !Rule.Contains("required_if")) && !string.IsNullOrEmpty(Value)) || !string.IsNullOrEmpty(Value);
+                }
             }
         }
 
