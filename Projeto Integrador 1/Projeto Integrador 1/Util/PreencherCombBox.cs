@@ -5,7 +5,7 @@ namespace Projeto_Integrador_1.Util {
     class PreencherCombBox {
         public List<dynamic> getEstados() {
             List<dynamic> estados = new List<dynamic> {
-                new { Value = "", Text = "---" },
+                new { Value = string.Empty, Text = "---" },
                 new { Value = "AC", Text = "Acre (AC)" },
                 new { Value = "AL", Text = "Alagoas (AL)" },
                 new { Value = "AP", Text = "Amapá (AP)" },
@@ -77,7 +77,7 @@ namespace Projeto_Integrador_1.Util {
 
         public List<dynamic> getSexo() {
             List<dynamic> sexo = new List<dynamic> {
-                new { Value = "", Text = "---" },
+                new { Value = string.Empty, Text = "---" },
                 new { Value = "H", Text = "Homem" },
                 new { Value = "M", Text = "Mulher" }
             };
@@ -156,7 +156,7 @@ namespace Projeto_Integrador_1.Util {
 
         public List<dynamic> getCategoriasCNH() {
             List<dynamic> categorias = new List<dynamic> {
-                new { Value = "", Text = "---" },
+                new { Value = string.Empty, Text = "---" },
                 new { Value = "A", Text = "A" },
                 new { Value = "B", Text = "B" },
                 new { Value = "C", Text = "C" },
@@ -182,7 +182,7 @@ namespace Projeto_Integrador_1.Util {
 
         public List<dynamic> getClienteTipoCadastro() {
             List<dynamic> tipoCadastro = new List<dynamic> {
-                new { Value = "", Text = "---" },
+                new { Value = string.Empty, Text = "---" },
                 new { Value = "C", Text = "Cliente" },
                 new { Value = "F", Text = "Fornecedor" },
                 new { Value = "A", Text = "Ambos" }
@@ -193,7 +193,7 @@ namespace Projeto_Integrador_1.Util {
 
         public List<dynamic> getClienteTipoPessoa() {
             List<dynamic> tipoPessoa = new List<dynamic> {
-                new { Value = "", Text = "---" },
+                new { Value = string.Empty, Text = "---" },
                 new { Value = "PF", Text = "Pessoa Fisica" },
                 new { Value = "PJ", Text = "Pessoa Juridica" }
             };
@@ -299,6 +299,70 @@ namespace Projeto_Integrador_1.Util {
                 new { Value = 1, Text = "Paga" },
                 new { Value = 2, Text = "Em aberto" },
                 new { Value = 3, Text = "Recorrida" }
+            };
+
+            return status;
+        }
+
+        public List<dynamic> getFinanceiroTipo() {
+            List<dynamic> tipo = new List<dynamic> {
+                new { Value = -1, Text = "---" },
+                new { Value = 1, Text = "Conta à Receber" },
+                new { Value = 2, Text = "Conta à Pagar" }
+            };
+
+            return tipo;
+        }
+
+        public List<dynamic> getFinanceiroContaBancaria() {
+            List<dynamic> conta = new List<dynamic> {
+                new { Value = 1, Text = "Conta Padrão" }
+            };
+
+            return conta;
+        }
+
+        public List<dynamic> getFinanceiroCentroCusto() {
+            List<dynamic> centro = new List<dynamic> {
+                new { Value = -1, Text = "---" },
+                new { Value = 0, Text = "Outros" },
+                new { Value = 1, Text = "Motorista" },
+                new { Value = 2, Text = "Veiculo" },
+                new { Value = 3, Text = "Viagem" },
+                new { Value = 4, Text = "Manutenção" },
+                new { Value = 5, Text = "Abastecimento" },
+                new { Value = 6, Text = "Multa" }
+            };
+
+            return centro;
+        }
+
+        public List<dynamic> getFinanceiroFormaPagamento() {
+            List<dynamic> forma = new List<dynamic> {
+                new { Value = -1, Text = "Transferencia" },
+                new { Value = 1, Text = "Boleto" },
+                new { Value = 2, Text = "Cartão de Credito" },
+                new { Value = 3, Text = "Cartão de Debito" },
+                new { Value = 4, Text = "Dinheiro" }
+            };
+
+            return forma;
+        }
+
+        public List<dynamic> getFinanceiroStatus() {
+            List<dynamic> status = new List<dynamic> {
+                new { Value = 0, Text = "Em Aberto" },
+                new { Value = 1, Text = "Pago" }
+            };
+
+            return status;
+        }
+
+        public List<dynamic> getFinanceiroOcorrencia() {
+            List<dynamic> status = new List<dynamic> {
+                new { Value = -1, Text = "---" },
+                new { Value = 1, Text = "Única" },
+                new { Value = 2, Text = "Parcelada" }
             };
 
             return status;

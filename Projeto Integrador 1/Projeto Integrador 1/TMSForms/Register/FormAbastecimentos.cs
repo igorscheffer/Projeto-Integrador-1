@@ -136,7 +136,6 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             try {
                 Validate Validate = new Validate(this, ErrorProvider);
 
-                //Validate.addRule(ViagemId, "Viagem", "numeric|max:11");
                 Validate.AddRule(timeData, "Data", "required|date:dd/MM/yyyy HH:mm");
                 Validate.AddRule(textCupom, "Cupom", "max:20");
                 Validate.AddRule(combPosto, "Posto", "required|numeric|max:11");

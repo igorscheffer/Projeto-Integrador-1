@@ -42,5 +42,9 @@ namespace Projeto_Integrador_1.TMSForms {
         private void button7_Click(object sender, EventArgs e) {
             fmPrincipal.AtivarForm(new TMSForms.Register.FormMultas());
         }
+
+        private void button8_Click(object sender, EventArgs e) {
+            fmPrincipal.AtivarForm(new TMSForms.Register.FormFinanceiro());
+        }
     }
 }

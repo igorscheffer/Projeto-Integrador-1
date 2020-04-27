@@ -146,7 +146,11 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     checkIsento.Location = new Point((checkIsento.Location.X - widthNF), checkIsento.Location.Y);
                 }
             }
-            else if (Convert.ToString(Selected) == "PJ") {
+            else {
+                if (string.IsNullOrWhiteSpace(Convert.ToString(Selected))) {
+                    combTipoPessoa.SelectedValue = "PJ";
+                }
+
                 lblCNPJ.Text = "CNPJ";
                 lblNomeFantasia.Text = "Nome Fantasia";
                 lblInscricaoMunicipal.Text = "Inscrição Municipal";

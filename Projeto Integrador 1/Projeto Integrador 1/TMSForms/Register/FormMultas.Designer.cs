@@ -339,6 +339,7 @@
             // 
             // panel7
             // 
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel7.Controls.Add(this.label22);
             this.panel7.Location = new System.Drawing.Point(500, 151);

@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle118 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle119 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle120 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle121 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle122 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle123 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle124 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle125 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle126 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textCodigoInterno = new Guna.UI.WinForms.GunaTextBox();
             this.lblCNPJ = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -105,6 +105,16 @@
             this.label33 = new System.Windows.Forms.Label();
             this.tabViagem = new System.Windows.Forms.TabControl();
             this.tabPanelViagem = new System.Windows.Forms.TabPage();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label40 = new System.Windows.Forms.Label();
             this.tabPanelCargas = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.gridCargas = new Guna.UI.WinForms.GunaDataGridView();
@@ -113,6 +123,10 @@
             this.peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label41 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAddCarga = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -133,6 +147,8 @@
             this.textGridCustoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textGridCustoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label42 = new System.Windows.Forms.Label();
             this.tabPanelAbastecimentos = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
             this.gridAbastecimentos = new Guna.UI.WinForms.GunaDataGridView();
@@ -143,6 +159,8 @@
             this.textGridAbastecimentoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textGridAbastecimentoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.label43 = new System.Windows.Forms.Label();
             this.btnAddPosto = new FontAwesome.Sharp.IconButton();
             this.combAbastecimentoPosto = new Guna.UI.WinForms.GunaComboBox();
             this.combAbastecimentoCombustivel = new Guna.UI.WinForms.GunaComboBox();
@@ -157,53 +175,35 @@
             this.textAbastecimentoValor = new Guna.UI.WinForms.GunaTextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label40 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label41 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label42 = new System.Windows.Forms.Label();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.label43 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             this.panel3.SuspendLayout();
             this.tabViagem.SuspendLayout();
             this.tabPanelViagem.SuspendLayout();
+            this.panel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
+            this.panel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
+            this.panel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
+            this.panel13.SuspendLayout();
             this.tabPanelCargas.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCargas)).BeginInit();
             this.panel8.SuspendLayout();
+            this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            this.panel14.SuspendLayout();
             this.tabPanelCustos.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustos)).BeginInit();
             this.panel6.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.tabPanelAbastecimentos.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridAbastecimentos)).BeginInit();
             this.panel11.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
-            this.panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
-            this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
-            this.panel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            this.panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
-            this.panel21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // textCodigoInterno
@@ -1416,6 +1416,133 @@
             this.tabPanelViagem.TabIndex = 0;
             this.tabPanelViagem.Text = "      VIAGEM      ";
             // 
+            // panel21
+            // 
+            this.panel21.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel21.Controls.Add(this.iconPictureBox5);
+            this.panel21.Location = new System.Drawing.Point(115, 408);
+            this.panel21.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(35, 35);
+            this.panel21.TabIndex = 275;
+            // 
+            // iconPictureBox5
+            // 
+            this.iconPictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.TachometerAlt;
+            this.iconPictureBox5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox5.IconSize = 20;
+            this.iconPictureBox5.Location = new System.Drawing.Point(9, 8);
+            this.iconPictureBox5.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox5.Name = "iconPictureBox5";
+            this.iconPictureBox5.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox5.TabIndex = 90;
+            this.iconPictureBox5.TabStop = false;
+            // 
+            // panel20
+            // 
+            this.panel20.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel20.Controls.Add(this.iconPictureBox4);
+            this.panel20.Location = new System.Drawing.Point(265, 408);
+            this.panel20.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(35, 35);
+            this.panel20.TabIndex = 274;
+            // 
+            // iconPictureBox4
+            // 
+            this.iconPictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.TachometerAlt;
+            this.iconPictureBox4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox4.IconSize = 20;
+            this.iconPictureBox4.Location = new System.Drawing.Point(9, 8);
+            this.iconPictureBox4.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox4.Name = "iconPictureBox4";
+            this.iconPictureBox4.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox4.TabIndex = 90;
+            this.iconPictureBox4.TabStop = false;
+            // 
+            // panel19
+            // 
+            this.panel19.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel19.Controls.Add(this.iconPictureBox1);
+            this.panel19.Location = new System.Drawing.Point(561, 408);
+            this.panel19.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(35, 35);
+            this.panel19.TabIndex = 274;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.TachometerAlt;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox1.IconSize = 20;
+            this.iconPictureBox1.Location = new System.Drawing.Point(9, 8);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox1.TabIndex = 90;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // panel18
+            // 
+            this.panel18.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel18.Controls.Add(this.iconPictureBox3);
+            this.panel18.Location = new System.Drawing.Point(415, 408);
+            this.panel18.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(35, 35);
+            this.panel18.TabIndex = 273;
+            // 
+            // iconPictureBox3
+            // 
+            this.iconPictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.TachometerAlt;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox3.IconSize = 20;
+            this.iconPictureBox3.Location = new System.Drawing.Point(9, 8);
+            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox3.TabIndex = 90;
+            this.iconPictureBox3.TabStop = false;
+            // 
+            // panel13
+            // 
+            this.panel13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel13.Controls.Add(this.label40);
+            this.panel13.Location = new System.Drawing.Point(20, 481);
+            this.panel13.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(35, 35);
+            this.panel13.TabIndex = 272;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Arial", 10F);
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.label40.Location = new System.Drawing.Point(6, 9);
+            this.label40.Margin = new System.Windows.Forms.Padding(0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(26, 16);
+            this.label40.TabIndex = 250;
+            this.label40.Text = "R$";
+            // 
             // tabPanelCargas
             // 
             this.tabPanelCargas.Controls.Add(this.panel9);
@@ -1442,21 +1569,21 @@
             // 
             this.gridCargas.AllowUserToAddRows = false;
             this.gridCargas.AllowUserToResizeRows = false;
-            dataGridViewCellStyle118.BackColor = System.Drawing.Color.White;
-            this.gridCargas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle118;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.gridCargas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridCargas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridCargas.BackgroundColor = System.Drawing.Color.White;
             this.gridCargas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridCargas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridCargas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle119.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle119.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle119.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
-            dataGridViewCellStyle119.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle119.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle119.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle119.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridCargas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle119;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridCargas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridCargas.ColumnHeadersHeight = 35;
             this.gridCargas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridCargas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1464,15 +1591,15 @@
             this.descricao,
             this.peso,
             this.valor});
-            dataGridViewCellStyle120.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle120.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle120.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
-            dataGridViewCellStyle120.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle120.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            dataGridViewCellStyle120.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle120.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle120.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridCargas.DefaultCellStyle = dataGridViewCellStyle120;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridCargas.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridCargas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridCargas.EnableHeadersVisualStyles = false;
             this.gridCargas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
@@ -1551,6 +1678,55 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1032, 111);
             this.panel8.TabIndex = 272;
+            // 
+            // panel17
+            // 
+            this.panel17.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel17.Controls.Add(this.iconPictureBox2);
+            this.panel17.Location = new System.Drawing.Point(789, 76);
+            this.panel17.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(35, 35);
+            this.panel17.TabIndex = 273;
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.WeightHanging;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.iconPictureBox2.IconSize = 20;
+            this.iconPictureBox2.Location = new System.Drawing.Point(9, 8);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox2.TabIndex = 90;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // panel14
+            // 
+            this.panel14.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel14.Controls.Add(this.label41);
+            this.panel14.Location = new System.Drawing.Point(847, 76);
+            this.panel14.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(35, 35);
+            this.panel14.TabIndex = 272;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Arial", 10F);
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.label41.Location = new System.Drawing.Point(6, 9);
+            this.label41.Margin = new System.Windows.Forms.Padding(0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(26, 16);
+            this.label41.TabIndex = 250;
+            this.label41.Text = "R$";
             // 
             // label5
             // 
@@ -1755,8 +1931,8 @@
             // 
             this.gridCustos.AllowUserToAddRows = false;
             this.gridCustos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle121.BackColor = System.Drawing.Color.White;
-            this.gridCustos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle121;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.gridCustos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gridCustos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.gridCustos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -1764,14 +1940,14 @@
             this.gridCustos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridCustos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridCustos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle122.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle122.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle122.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
-            dataGridViewCellStyle122.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle122.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle122.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle122.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridCustos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle122;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridCustos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gridCustos.ColumnHeadersHeight = 35;
             this.gridCustos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridCustos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1780,15 +1956,15 @@
             this.textGridCustoQTD,
             this.textGridCustoValor,
             this.textGridCustoTotal});
-            dataGridViewCellStyle123.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle123.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle123.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
-            dataGridViewCellStyle123.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle123.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            dataGridViewCellStyle123.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle123.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle123.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridCustos.DefaultCellStyle = dataGridViewCellStyle123;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridCustos.DefaultCellStyle = dataGridViewCellStyle6;
             this.gridCustos.EnableHeadersVisualStyles = false;
             this.gridCustos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridCustos.Location = new System.Drawing.Point(10, 19);
@@ -1876,6 +2052,29 @@
             this.panel6.Size = new System.Drawing.Size(1032, 112);
             this.panel6.TabIndex = 271;
             // 
+            // panel15
+            // 
+            this.panel15.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel15.Controls.Add(this.label42);
+            this.panel15.Location = new System.Drawing.Point(843, 76);
+            this.panel15.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(35, 35);
+            this.panel15.TabIndex = 272;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Arial", 10F);
+            this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.label42.Location = new System.Drawing.Point(6, 9);
+            this.label42.Margin = new System.Windows.Forms.Padding(0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(26, 16);
+            this.label42.TabIndex = 250;
+            this.label42.Text = "R$";
+            // 
             // tabPanelAbastecimentos
             // 
             this.tabPanelAbastecimentos.Controls.Add(this.panel10);
@@ -1902,8 +2101,8 @@
             // 
             this.gridAbastecimentos.AllowUserToAddRows = false;
             this.gridAbastecimentos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle124.BackColor = System.Drawing.Color.White;
-            this.gridAbastecimentos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle124;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.gridAbastecimentos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.gridAbastecimentos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.gridAbastecimentos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -1911,14 +2110,14 @@
             this.gridAbastecimentos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridAbastecimentos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridAbastecimentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle125.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle125.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle125.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
-            dataGridViewCellStyle125.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle125.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle125.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle125.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridAbastecimentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle125;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridAbastecimentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.gridAbastecimentos.ColumnHeadersHeight = 35;
             this.gridAbastecimentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridAbastecimentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1928,15 +2127,15 @@
             this.textGridAbastecimentoLitros,
             this.textGridAbastecimentoValor,
             this.textGridAbastecimentoTotal});
-            dataGridViewCellStyle126.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle126.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle126.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
-            dataGridViewCellStyle126.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle126.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            dataGridViewCellStyle126.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle126.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle126.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridAbastecimentos.DefaultCellStyle = dataGridViewCellStyle126;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridAbastecimentos.DefaultCellStyle = dataGridViewCellStyle9;
             this.gridAbastecimentos.EnableHeadersVisualStyles = false;
             this.gridAbastecimentos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridAbastecimentos.Location = new System.Drawing.Point(10, 19);
@@ -2034,6 +2233,29 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1032, 112);
             this.panel11.TabIndex = 273;
+            // 
+            // panel16
+            // 
+            this.panel16.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel16.Controls.Add(this.label43);
+            this.panel16.Location = new System.Drawing.Point(843, 76);
+            this.panel16.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(35, 35);
+            this.panel16.TabIndex = 274;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Arial", 10F);
+            this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.label43.Location = new System.Drawing.Point(6, 9);
+            this.label43.Margin = new System.Windows.Forms.Padding(0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(26, 16);
+            this.label43.TabIndex = 250;
+            this.label43.Text = "R$";
             // 
             // btnAddPosto
             // 
@@ -2274,219 +2496,6 @@
             this.label38.TabIndex = 262;
             this.label38.Text = "Data";
             // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel13.Controls.Add(this.label40);
-            this.panel13.Location = new System.Drawing.Point(20, 481);
-            this.panel13.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(35, 35);
-            this.panel13.TabIndex = 272;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Arial", 10F);
-            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.label40.Location = new System.Drawing.Point(6, 9);
-            this.label40.Margin = new System.Windows.Forms.Padding(0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(26, 16);
-            this.label40.TabIndex = 250;
-            this.label40.Text = "R$";
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel14.Controls.Add(this.label41);
-            this.panel14.Location = new System.Drawing.Point(847, 76);
-            this.panel14.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(35, 35);
-            this.panel14.TabIndex = 272;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Arial", 10F);
-            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.label41.Location = new System.Drawing.Point(6, 9);
-            this.label41.Margin = new System.Windows.Forms.Padding(0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(26, 16);
-            this.label41.TabIndex = 250;
-            this.label41.Text = "R$";
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel15.Controls.Add(this.label42);
-            this.panel15.Location = new System.Drawing.Point(843, 76);
-            this.panel15.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(35, 35);
-            this.panel15.TabIndex = 272;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Arial", 10F);
-            this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.label42.Location = new System.Drawing.Point(6, 9);
-            this.label42.Margin = new System.Windows.Forms.Padding(0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(26, 16);
-            this.label42.TabIndex = 250;
-            this.label42.Text = "R$";
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel16.Controls.Add(this.label43);
-            this.panel16.Location = new System.Drawing.Point(843, 76);
-            this.panel16.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(35, 35);
-            this.panel16.TabIndex = 274;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Arial", 10F);
-            this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.label43.Location = new System.Drawing.Point(6, 9);
-            this.label43.Margin = new System.Windows.Forms.Padding(0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(26, 16);
-            this.label43.TabIndex = 250;
-            this.label43.Text = "R$";
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel17.Controls.Add(this.iconPictureBox2);
-            this.panel17.Location = new System.Drawing.Point(789, 76);
-            this.panel17.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(35, 35);
-            this.panel17.TabIndex = 273;
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.WeightHanging;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.iconPictureBox2.IconSize = 20;
-            this.iconPictureBox2.Location = new System.Drawing.Point(9, 8);
-            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(20, 20);
-            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.iconPictureBox2.TabIndex = 90;
-            this.iconPictureBox2.TabStop = false;
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel18.Controls.Add(this.iconPictureBox3);
-            this.panel18.Location = new System.Drawing.Point(415, 408);
-            this.panel18.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(35, 35);
-            this.panel18.TabIndex = 273;
-            // 
-            // iconPictureBox3
-            // 
-            this.iconPictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.TachometerAlt;
-            this.iconPictureBox3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.iconPictureBox3.IconSize = 20;
-            this.iconPictureBox3.Location = new System.Drawing.Point(9, 8);
-            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.iconPictureBox3.Name = "iconPictureBox3";
-            this.iconPictureBox3.Size = new System.Drawing.Size(20, 20);
-            this.iconPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.iconPictureBox3.TabIndex = 90;
-            this.iconPictureBox3.TabStop = false;
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel19.Controls.Add(this.iconPictureBox1);
-            this.panel19.Location = new System.Drawing.Point(561, 408);
-            this.panel19.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(35, 35);
-            this.panel19.TabIndex = 274;
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.TachometerAlt;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.iconPictureBox1.IconSize = 20;
-            this.iconPictureBox1.Location = new System.Drawing.Point(9, 8);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.iconPictureBox1.TabIndex = 90;
-            this.iconPictureBox1.TabStop = false;
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel20.Controls.Add(this.iconPictureBox4);
-            this.panel20.Location = new System.Drawing.Point(265, 408);
-            this.panel20.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(35, 35);
-            this.panel20.TabIndex = 274;
-            // 
-            // iconPictureBox4
-            // 
-            this.iconPictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.TachometerAlt;
-            this.iconPictureBox4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.iconPictureBox4.IconSize = 20;
-            this.iconPictureBox4.Location = new System.Drawing.Point(9, 8);
-            this.iconPictureBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.iconPictureBox4.Name = "iconPictureBox4";
-            this.iconPictureBox4.Size = new System.Drawing.Size(20, 20);
-            this.iconPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.iconPictureBox4.TabIndex = 90;
-            this.iconPictureBox4.TabStop = false;
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel21.Controls.Add(this.iconPictureBox5);
-            this.panel21.Location = new System.Drawing.Point(115, 408);
-            this.panel21.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(35, 35);
-            this.panel21.TabIndex = 275;
-            // 
-            // iconPictureBox5
-            // 
-            this.iconPictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.TachometerAlt;
-            this.iconPictureBox5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.iconPictureBox5.IconSize = 20;
-            this.iconPictureBox5.Location = new System.Drawing.Point(9, 8);
-            this.iconPictureBox5.Margin = new System.Windows.Forms.Padding(0);
-            this.iconPictureBox5.Name = "iconPictureBox5";
-            this.iconPictureBox5.Size = new System.Drawing.Size(20, 20);
-            this.iconPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.iconPictureBox5.TabIndex = 90;
-            this.iconPictureBox5.TabStop = false;
-            // 
             // FormViagens
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2501,44 +2510,44 @@
             this.tabViagem.ResumeLayout(false);
             this.tabPanelViagem.ResumeLayout(false);
             this.tabPanelViagem.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.tabPanelCargas.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridCargas)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.tabPanelCustos.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridCustos)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             this.tabPanelAbastecimentos.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridAbastecimentos)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
-            this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }

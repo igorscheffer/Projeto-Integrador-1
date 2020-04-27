@@ -54,8 +54,9 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
-    <Reference Include="Correios.CEP">
-      <HintPath>Util\Correios.CEP.dll</HintPath>
+    <Reference Include="Correios.CEP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Correios.CEP.dll</HintPath>
     </Reference>
     <Reference Include="FontAwesome.Sharp, Version=5.12.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.12.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
@@ -65,7 +66,7 @@
     </Reference>
     <Reference Include="Guna.UI, Version=1.9.0.0, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Downloads\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
+      <HintPath>Lib\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
@@ -196,6 +197,12 @@
     <Compile Include="TMSForms\Register\FormMotoristas.Designer.cs">
       <DependentUpon>FormMotoristas.cs</DependentUpon>
     </Compile>
+    <Compile Include="TMSForms\Register\FormFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMSForms\Register\FormFinanceiro.Designer.cs">
+      <DependentUpon>FormFinanceiro.cs</DependentUpon>
+    </Compile>
     <Compile Include="TMSForms\Register\FormMultas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\Register\FormMotoristas.resx">
       <DependentUpon>FormMotoristas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\Register\FormFinanceiro.resx">
+      <DependentUpon>FormFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\Register\FormMultas.resx">
       <DependentUpon>FormMultas.cs</DependentUpon>
