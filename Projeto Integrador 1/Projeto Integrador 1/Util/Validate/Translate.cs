@@ -28,6 +28,8 @@ namespace Projeto_Integrador_1.Util.Validate {
 
         public Dictionary<string, string> DefaultMessage = new Dictionary<string, string>() {
             { "required",       "{name} deve ser preenchido." },
+            { "match",          "{name} deve combinar com o campo {ruleValue}" },
+            { "different",      "{name} deve ter um valor diferente do campo {ruleValue}" },
             { "numeric",        "{name} deve ser definido para um número" },
             { "email",          "{name} deve ser um E-Mail válido" },
             { "cpf",            "{name} deve ser um número de CPF válido" },

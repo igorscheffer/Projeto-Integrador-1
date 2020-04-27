@@ -127,6 +127,32 @@ namespace Projeto_Integrador_1.Util.Validate {
             }
         }
 
+        private void ValidateMatch(Rules Rules, string Rule, string RuleValue) {
+            if (!Rules.Optional) {
+                Rules Match = this.Rules.Find(find => find.Component.Name == RuleValue);
+
+                if (Rules.Value != Match.Value) {
+                    Errors.Add(new Errors { Rules = Rules, Rule = Rule, RuleValue = Match.Name });
+                }
+                else {
+                    Valid.Add(new Valid { Rules = Rules, Rule = Rule });
+                }
+            }
+        }
+
+        private void ValidateDifferent(Rules Rules, string Rule, string RuleValue) {
+            if (!Rules.Optional) {
+                Rules Different = this.Rules.Find(find => find.Component.Name == RuleValue);
+
+                if (Rules.Value == Different.Value) {
+                    Errors.Add(new Errors { Rules = Rules, Rule = Rule, RuleValue = Different.Name });
+                }
+                else {
+                    Valid.Add(new Valid { Rules = Rules, Rule = Rule });
+                }
+            }
+        }
+
         private void ValidateEmail(Rules Rules, string Rule) {
             if (!Rules.Optional) {
                 var regexp = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
@@ -264,13 +290,15 @@ namespace Projeto_Integrador_1.Util.Validate {
                         string[] sub_split_rules = split_rule.Split(new char[] { ':' }, 2, StringSplitOptions.None);
 
                         switch (sub_split_rules[0]) {
+                            case "required_if": if (!ForceRequired) { ValidateRequiredIf(Rule, sub_split_rules[0], sub_split_rules[1]); } break;
+                            case "match": ValidateMatch(Rule, sub_split_rules[0], sub_split_rules[1]); break;
+                            case "different": ValidateDifferent(Rule, sub_split_rules[0], sub_split_rules[1]); break;
                             case "min": ValidateMin(Rule, sub_split_rules[0], sub_split_rules[1]); break;
                             case "max": ValidateMax(Rule, sub_split_rules[0], sub_split_rules[1]); break;
                             case "exact": ValidateExact(Rule, sub_split_rules[0], sub_split_rules[1]); break;
                             case "regExp": ValidateRegExp(Rule, sub_split_rules[0], sub_split_rules[1]); break;
                             case "in": ValidateIn(Rule, sub_split_rules[0], sub_split_rules[1]); break;
                             case "date": ValidateDate(Rule, sub_split_rules[0], sub_split_rules[1]); break;
-                            case "required_if": if (!ForceRequired) { ValidateRequiredIf(Rule, sub_split_rules[0], sub_split_rules[1]); } break;
                         }
                     }
                     else {
