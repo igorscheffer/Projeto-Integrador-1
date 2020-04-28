@@ -339,11 +339,12 @@ namespace Projeto_Integrador_1.Util {
 
         public List<dynamic> getFinanceiroFormaPagamento() {
             List<dynamic> forma = new List<dynamic> {
-                new { Value = -1, Text = "Transferencia" },
-                new { Value = 1, Text = "Boleto" },
-                new { Value = 2, Text = "Cartão de Credito" },
-                new { Value = 3, Text = "Cartão de Debito" },
-                new { Value = 4, Text = "Dinheiro" }
+                new { Value = -1, Text = "---" },
+                new { Value = 1, Text = "Transferencia" },
+                new { Value = 2, Text = "Boleto" },
+                new { Value = 3, Text = "Cartão de Credito" },
+                new { Value = 4, Text = "Cartão de Debito" },
+                new { Value = 5, Text = "Dinheiro" }
             };
 
             return forma;

@@ -114,13 +114,11 @@ namespace Projeto_Integrador_1.Util.Validate {
             if (RequiredIfComponent != null) {
                 if (RuleValue.Contains(",")) {
                     if (Array.Exists(inRules, find => find.ToLower() == RequiredIfComponent.Value.ToLower())) {
-                        Rules.Optional = false;
                         this.ValidateRule(Rules, true);
                     }
                 }
                 else {
                     if(!string.IsNullOrWhiteSpace(RequiredIfComponent.Value)) {
-                        Rules.Optional = false;
                         this.ValidateRule(Rules, true);
                     }
                 }
@@ -183,7 +181,7 @@ namespace Projeto_Integrador_1.Util.Validate {
 
         private void ValidateCPF(Rules Rules, string Rule) {
             if (!Rules.Optional) {
-                var regexp = @"^(\d{3})(\.\d{3})(\.\d{3})(\-\d{2})$";
+                var regexp = @"^(\d{3})([\.\,]\d{3})([\.\,]\d{3})(\-\d{2})$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
@@ -197,7 +195,7 @@ namespace Projeto_Integrador_1.Util.Validate {
 
         private void ValidateCNPJ(Rules Rules, string Rule) {
             if (!Rules.Optional) {
-                var regexp = @"^(\d{2})(\.\d{3}){2}(\/\d{4})(\-\d{2})$";
+                var regexp = @"^(\d{2})([\.\,]\d{3}){2}(\/\d{4})(\-\d{2})$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
