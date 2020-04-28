@@ -1,7 +1,5 @@
-﻿using Projeto_Integrador_1.Connection;
-using Projeto_Integrador_1.Util;
+﻿using Projeto_Integrador_1.Util;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 using Projeto_Integrador_1.Util.Validate;
 
@@ -17,41 +15,39 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
 
-            PreencherCombBox ValuesComb = new Util.PreencherCombBox();
-
             combTipo.DisplayMember = "Text";
             combTipo.ValueMember = "Value";
-            combTipo.DataSource = ValuesComb.getFinanceiroTipo();
+            combTipo.DataSource = Listas.FinanceiroTipos;
 
             combCentroCusto.DisplayMember = "Text";
             combCentroCusto.ValueMember = "Value";
-            combCentroCusto.DataSource = ValuesComb.getFinanceiroCentroCusto();
+            combCentroCusto.DataSource = Listas.FinanceiroCentroCustos;
 
             combFormaPagamento.DisplayMember = "Text";
             combFormaPagamento.ValueMember = "Value";
-            combFormaPagamento.DataSource = ValuesComb.getFinanceiroFormaPagamento();
+            combFormaPagamento.DataSource = Listas.FinanceiroFormasPagamentos;
 
             colFormaPagamento.DisplayMember = "Text";
             colFormaPagamento.ValueMember = "Value";
-            colFormaPagamento.DataSource = ValuesComb.getFinanceiroFormaPagamento();
+            colFormaPagamento.DataSource = Listas.FinanceiroFormasPagamentos;
 
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
-            combStatus.DataSource = ValuesComb.getFinanceiroStatus();
+            combStatus.DataSource = Listas.FinanceiroStatus;
 
             combOcorrencia.DisplayMember = "Text";
             combOcorrencia.ValueMember = "Value";
-            combOcorrencia.DataSource = ValuesComb.getFinanceiroOcorrencia();
+            combOcorrencia.DataSource = Listas.FinanceiroOcorrencias;
 
             if (Id > 0) {
-                this.Text = "Editar Financeiro";
+                Text = "Editar Financeiro";
                 this.Id = Id;
-                this.PreencherDados();
+                PreencherDados();
             }
         }
 
         private void PreencherDados() {
-            
+
         }
 
         private void OnGerarParcelas(object sender, EventArgs e) {
@@ -70,9 +66,9 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     decimal valorParcelas = Convert.ToInt32(textValor.Text) / Convert.ToDecimal(qtdParcelas);
 
                     gridParcelas.Rows.Clear();
-                    
+
                     for (var i = 0; i < qtdParcelas; i++) {
-                        gridParcelas.Rows.Add(i+1, data.AddMonths(i).ToString("dd/MM/yyyy"), valorParcelas.ToString("F"), combFormaPagamento.SelectedValue, "", (Convert.ToInt32(combStatus.SelectedValue) == 1 ? true : false));
+                        gridParcelas.Rows.Add(i + 1, data.AddMonths(i).ToString("dd/MM/yyyy"), valorParcelas.ToString("F"), combFormaPagamento.SelectedValue, "", (Convert.ToInt32(combStatus.SelectedValue) == 1 ? true : false));
                     }
 
                     lblInfoPagamento.Visible = true;
@@ -114,27 +110,27 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
         private void OnEnviar(object sender, EventArgs e) {
 
-                Validate Validate = new Validate(this, ErrorProvider);
+            Validate Validate = new Validate(this, ErrorProvider);
 
-                Validate.AddRule(textNome, "Nome", "required|max:30");
-                Validate.AddRule(combTipo, "Tipo", "required|numeric|exact:1");
-                Validate.AddRule(combCentroCusto, "Centro de Custo", "required|max:2");
-                Validate.AddRule(combFormaPagamento, "Forma de Pagamento", "required|max:2");
-                Validate.AddRule(combStatus, "Status", "required|numeric|exact:1");
-                Validate.AddRule(timeDataEmissao, "Data Emissão", "required|data:dd/MM/yyyy");
-                Validate.AddRule(timeDataVencimento, "Data Vencimento", "required|data:dd/MM/yyyy");
-                Validate.AddRule(textValor, "Valor", "required|numeric|max:11");
-                Validate.AddRule(textDocumento, "Nº Document", "max:30");
-                Validate.AddRule(combOcorrencia, "Ocorrencia", "required|numeric|exact:1");
-                Validate.AddRule(textQtdParcelas, "Qtd. Parcelas", "required_if:combOcorrencia,2|max:3");
-                Validate.Validation();
+            Validate.AddRule(textNome, "Nome", "required|max:30");
+            Validate.AddRule(combTipo, "Tipo", "required|numeric|exact:1");
+            Validate.AddRule(combCentroCusto, "Centro de Custo", "required|max:2");
+            Validate.AddRule(combFormaPagamento, "Forma de Pagamento", "required|max:2");
+            Validate.AddRule(combStatus, "Status", "required|numeric|exact:1");
+            Validate.AddRule(timeDataEmissao, "Data Emissão", "required|data:dd/MM/yyyy");
+            Validate.AddRule(timeDataVencimento, "Data Vencimento", "required|data:dd/MM/yyyy");
+            Validate.AddRule(textValor, "Valor", "required|numeric|max:11");
+            Validate.AddRule(textDocumento, "Nº Document", "max:30");
+            Validate.AddRule(combOcorrencia, "Ocorrencia", "required|numeric|exact:1");
+            Validate.AddRule(textQtdParcelas, "Qtd. Parcelas", "required_if:combOcorrencia,2|max:3");
+            Validate.Validation();
 
-                if (Validate.IsValid()) {
-                    MessageBox.Show("TUDO OK");
-                }
-                else {
-                    Validate.ErrorProviderShow();
-                }
+            if (Validate.IsValid()) {
+                MessageBox.Show("TUDO OK");
+            }
+            else {
+                Validate.ErrorProviderShow();
+            }
 
         }
     }

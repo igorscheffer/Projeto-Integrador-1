@@ -18,45 +18,43 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
 
-            PreencherCombBox ValuesComb = new Util.PreencherCombBox();
-
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
-            combStatus.DataSource = ValuesComb.getMotoristaStatus();
+            combStatus.DataSource = Listas.MotoristasStatus;
 
             combCategoriaCNH.DisplayMember = "Text";
             combCategoriaCNH.ValueMember = "Value";
-            combCategoriaCNH.DataSource = ValuesComb.getCategoriasCNH();
+            combCategoriaCNH.DataSource = Listas.CNHCategorias;
 
             combSexo.DisplayMember = "Text";
             combSexo.ValueMember = "Value";
-            combSexo.DataSource = ValuesComb.getSexo();
+            combSexo.DataSource = Listas.Sexos;
 
             combEstadoCivil.DisplayMember = "Text";
             combEstadoCivil.ValueMember = "Value";
-            combEstadoCivil.DataSource = ValuesComb.getEstadoCivil();
+            combEstadoCivil.DataSource = Listas.EstadoCivil;
 
             combEstado.DisplayMember = "Text";
             combEstado.ValueMember = "Value";
-            combEstado.DataSource = ValuesComb.getEstados();
+            combEstado.DataSource = Listas.Estados;
 
             combCargo.DisplayMember = "Text";
             combCargo.ValueMember = "Value";
-            combCargo.DataSource = ValuesComb.getMotoristaCargos();
+            combCargo.DataSource = Listas.MotoristasCargos;
 
             timeVencimentoCNH.ResetText();
 
             if (Id > 0) {
-                this.Text = "Editar Motorista";
+                Text = "Editar Motorista";
                 this.Id = Id;
-                this.PreencherDados();
+                PreencherDados();
             }
         }
 
         private void PreencherDados() {
             try {
                 Motoristas motoristas = new Motoristas();
-                motoristas.Id = this.Id;
+                motoristas.Id = Id;
                 motoristas.Get();
 
                 dynamic motorista = motoristas.Results[0];
@@ -163,8 +161,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     motoristas.Celular = textCelular.Text;
                     motoristas.Email = textEmail.Text;
 
-                    if (this.Id > 0) {
-                        motoristas.Id = Convert.ToInt32(this.Id);
+                    if (Id > 0) {
+                        motoristas.Id = Convert.ToInt32(Id);
                         motoristas.Update();
                     }
                     else {
@@ -178,7 +176,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                                 fmPrincipal.AtivarForm(new TMSForms.List.FormMotoristas(fmPrincipal));
                             }
                             else {
-                                this.Close();
+                                Close();
                             }
                         }
                     }

@@ -114,12 +114,12 @@ namespace Projeto_Integrador_1.Util.Validate {
             if (RequiredIfComponent != null) {
                 if (RuleValue.Contains(",")) {
                     if (Array.Exists(inRules, find => find.ToLower() == RequiredIfComponent.Value.ToLower())) {
-                        this.ValidateRule(Rules, true);
+                        ValidateRule(Rules, true);
                     }
                 }
                 else {
-                    if(!string.IsNullOrWhiteSpace(RequiredIfComponent.Value)) {
-                        this.ValidateRule(Rules, true);
+                    if (!string.IsNullOrWhiteSpace(RequiredIfComponent.Value)) {
+                        ValidateRule(Rules, true);
                     }
                 }
             }
@@ -320,7 +320,7 @@ namespace Projeto_Integrador_1.Util.Validate {
         public void Validation() {
             foreach (Rules Rule in Rules) {
                 if (!string.IsNullOrWhiteSpace(Rule.Rule)) {
-                    this.ValidateRule(Rule);
+                    ValidateRule(Rule);
                 }
             }
         }

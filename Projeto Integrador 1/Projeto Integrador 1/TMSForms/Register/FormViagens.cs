@@ -26,41 +26,39 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
 
-            PreencherCombBox ValuesComb = new Util.PreencherCombBox();
-
             LoadClientes();
             LoadVeiculos();
             LoadMotoristas();
 
             combTomador.DisplayMember = "Text";
             combTomador.ValueMember = "Value";
-            combTomador.DataSource = ValuesComb.getViagemTomador();
+            combTomador.DataSource = Listas.ViagemTomador;
 
             combTipoViagem.DisplayMember = "Text";
             combTipoViagem.ValueMember = "Value";
-            combTipoViagem.DataSource = ValuesComb.getViagemTipo();
+            combTipoViagem.DataSource = Listas.ViagemTipos;
 
             combSaidaUF.DisplayMember = "Text";
             combSaidaUF.ValueMember = "Value";
-            combSaidaUF.DataSource = ValuesComb.getEstados();
+            combSaidaUF.DataSource = Listas.Estados;
 
             combDestinoUF.DisplayMember = "Text";
             combDestinoUF.ValueMember = "Value";
-            combDestinoUF.DataSource = ValuesComb.getEstados();
+            combDestinoUF.DataSource = Listas.Estados;
 
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
-            combStatus.DataSource = ValuesComb.getViagemStatus();
+            combStatus.DataSource = Listas.ViagemStatus;
 
-            List<dynamic> combustiveis = ValuesComb.getCombustiveis();
+            List<dynamic> ListaCombustiveis = Listas.Combustiveis;
 
             combAbastecimentoCombustivel.DisplayMember = "Text";
             combAbastecimentoCombustivel.ValueMember = "Value";
-            combAbastecimentoCombustivel.DataSource = new List<dynamic>(combustiveis);
+            combAbastecimentoCombustivel.DataSource = new List<dynamic>(ListaCombustiveis);
 
             combGridAbastecimentoCombustivel.DisplayMember = "Text";
             combGridAbastecimentoCombustivel.ValueMember = "Value";
-            combGridAbastecimentoCombustivel.DataSource = new List<dynamic>(combustiveis);
+            combGridAbastecimentoCombustivel.DataSource = new List<dynamic>(ListaCombustiveis);
 
             if (Id > 0) {
                 Text = "Editar Viagem";
@@ -366,7 +364,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                                 fmPrincipal.AtivarForm(new TMSForms.List.FormViagens(fmPrincipal));
                             }
                             else {
-                                this.Close();
+                                Close();
                             }
                         }
                     }

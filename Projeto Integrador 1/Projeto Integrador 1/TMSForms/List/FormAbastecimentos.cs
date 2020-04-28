@@ -13,10 +13,8 @@ namespace Projeto_Integrador_1.TMSForms.List {
             InitializeComponent();
             fmPrincipal = Principal;
 
-            PreencherCombBox ValuesComb = new Util.PreencherCombBox();
-
-            List<dynamic> ListaCombustiveis = ValuesComb.getCombustiveis();
-            List<dynamic> ListaStatus = ValuesComb.getAbastecimentosStatus();
+            List<dynamic> ListaCombustiveis = Listas.Combustiveis;
+            List<dynamic> ListaStatus = Listas.AbastecimentosStatus;
 
             Abastecimentos abastecimentos = new Abastecimentos();
             abastecimentos.GetAll();

@@ -13,10 +13,8 @@ namespace Projeto_Integrador_1.TMSForms.List {
             InitializeComponent();
             fmPrincipal = Principal;
 
-            PreencherCombBox ValuesComb = new Util.PreencherCombBox();
-
-            List<dynamic> ListaTipoCadastro = ValuesComb.getClienteTipoCadastro();
-            List<dynamic> ListaTipoPessoa = ValuesComb.getClienteTipoPessoa();
+            List<dynamic> ListaTipoCadastro = Listas.ClientesTipoCadastros;
+            List<dynamic> ListaTipoPessoa = Listas.ClientesTipoPessoas;
 
             Clientes clientes = new Clientes();
             clientes.GetAll();

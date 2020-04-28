@@ -6,7 +6,6 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using Projeto_Integrador_1.Util.Validate;
-using System.Collections.Generic;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormClientes : Form {
@@ -15,36 +14,34 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         FormPrincipal fmPrincipal;
 
         private int Id;
-        
+
         public FormClientes(FormPrincipal fmPrincipal = null, int Id = 0) {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
 
-            PreencherCombBox ValuesComb = new Util.PreencherCombBox();
-
             combTipoCadastro.DisplayMember = "Text";
             combTipoCadastro.ValueMember = "Value";
-            combTipoCadastro.DataSource = ValuesComb.getClienteTipoCadastro();
+            combTipoCadastro.DataSource = Listas.ClientesTipoCadastros;
 
             combTipoPessoa.DisplayMember = "Text";
             combTipoPessoa.ValueMember = "Value";
-            combTipoPessoa.DataSource = ValuesComb.getClienteTipoPessoa();
+            combTipoPessoa.DataSource = Listas.ClientesTipoPessoas;
 
             combEstado.DisplayMember = "Text";
             combEstado.ValueMember = "Value";
-            combEstado.DataSource = ValuesComb.getEstados();
+            combEstado.DataSource = Listas.Estados;
 
             if (Id > 0) {
-                this.Text = "Editar Cliente";
+                Text = "Editar Cliente";
                 this.Id = Id;
-                this.PreencherDados();
+                PreencherDados();
             }
         }
 
         private void PreencherDados() {
             try {
                 Clientes clientes = new Clientes();
-                clientes.Id = this.Id;
+                clientes.Id = Id;
                 clientes.Get();
 
                 dynamic cliente = clientes.Results[0];
@@ -72,7 +69,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             catch (Exception e) {
                 MessageBox.Show("Houve um erro ao preencher os dados (" + e.Message + ").");
             }
-            
+
         }
 
         private void onBuscarCEP(object sender, EventArgs e) {
@@ -225,8 +222,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     clientes.Email = textEmail.Text;
                     clientes.Observacoes = textObservacoes.Text;
 
-                    if (this.Id > 0) {
-                        clientes.Id = Convert.ToInt32(this.Id);
+                    if (Id > 0) {
+                        clientes.Id = Convert.ToInt32(Id);
                         clientes.Update();
                     }
                     else {
@@ -240,7 +237,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                                 fmPrincipal.AtivarForm(new TMSForms.List.FormClientes(fmPrincipal));
                             }
                             else {
-                                this.Close();
+                                Close();
                             }
                         }
                     }

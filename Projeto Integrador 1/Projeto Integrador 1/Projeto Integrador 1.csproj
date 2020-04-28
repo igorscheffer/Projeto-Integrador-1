@@ -162,6 +162,12 @@
     <Compile Include="TMSForms\List\FormManutencoes.Designer.cs">
       <DependentUpon>FormManutencoes.cs</DependentUpon>
     </Compile>
+    <Compile Include="TMSForms\List\FormFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMSForms\List\FormFinanceiro.Designer.cs">
+      <DependentUpon>FormFinanceiro.cs</DependentUpon>
+    </Compile>
     <Compile Include="TMSForms\List\FormViagens .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,7 +228,7 @@
     <Compile Include="TMSForms\Register\FormViagens.Designer.cs">
       <DependentUpon>FormViagens.cs</DependentUpon>
     </Compile>
-    <Compile Include="Util\PreencherCombBox.cs" />
+    <Compile Include="Util\Listas.cs" />
     <Compile Include="Util\Validate\Errors.cs" />
     <Compile Include="Util\Validate\Rules.cs" />
     <Compile Include="Util\Validate\Translate.cs" />
@@ -265,6 +271,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\List\FormManutencoes.resx">
       <DependentUpon>FormManutencoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\List\FormFinanceiro.aa.resx">
+      <DependentUpon>FormFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\List\FormFinanceiro.resx">
+      <DependentUpon>FormFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\List\FormViagens .aa.resx">
       <DependentUpon>FormViagens .cs</DependentUpon>

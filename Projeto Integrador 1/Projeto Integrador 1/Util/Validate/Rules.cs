@@ -18,7 +18,7 @@ namespace Projeto_Integrador_1.Util.Validate {
                         return Convert.ToString(Component.SelectedValue);
                     }
                 }
-				else if (Component.GetType().Name == "MaskedTextBox" || Component.GetType().BaseType.Name == "MaskedTextBox") {
+                else if (Component.GetType().Name == "MaskedTextBox" || Component.GetType().BaseType.Name == "MaskedTextBox") {
                     MaskedTextBox UnMask = Component;
                     UnMask.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
                     if (string.IsNullOrWhiteSpace(UnMask.Text)) {

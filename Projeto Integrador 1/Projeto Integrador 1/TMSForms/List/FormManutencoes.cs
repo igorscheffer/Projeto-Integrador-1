@@ -13,10 +13,10 @@ namespace Projeto_Integrador_1.TMSForms.List {
             InitializeComponent();
             fmPrincipal = Principal;
 
-            PreencherCombBox ValuesComb = new Util.PreencherCombBox();
+            Listas ValuesComb = new Util.Listas();
 
-            List<dynamic> ListaTipos = ValuesComb.getManutencaoTipo();
-            List<dynamic> ListaStatus = ValuesComb.getManutencaoStatus();
+            List<dynamic> ListaTipos = Listas.ManutencoesTipos;
+            List<dynamic> ListaStatus = Listas.ManutencoesStatus;
 
             Manutencoes manutencoes = new Manutencoes();
             manutencoes.GetAll();

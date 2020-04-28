@@ -17,45 +17,43 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
 
-            PreencherCombBox ValuesComb = new Util.PreencherCombBox();
-
             LoadVeiculos();
             LoadMotoristas();
 
             combGravidade.DisplayMember = "Text";
             combGravidade.ValueMember = "Value";
-            combGravidade.DataSource = ValuesComb.getMultaGravidade();
+            combGravidade.DataSource = Listas.MultasGravidades;
 
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
-            combStatus.DataSource = ValuesComb.getMultaStatus();
+            combStatus.DataSource = Listas.MultasStatus;
 
             if (Id > 0) {
-                this.Text = "Editar Multa";
+                Text = "Editar Multa";
                 this.Id = Id;
-                this.PreencherDados();
+                PreencherDados();
             }
         }
 
         private void PreencherDados() {
 
-                Multas multas = new Multas();
-                multas.Id = this.Id;
-                multas.Get();
+            Multas multas = new Multas();
+            multas.Id = Id;
+            multas.Get();
 
-                dynamic multa = multas.Results[0];
+            dynamic multa = multas.Results[0];
 
-                combVeiculo.SelectedValue = Convert.ToInt32(multa.Veiculo);
-                combMotorista.SelectedValue = Convert.ToInt32(multa.Motorista);
-                combGravidade.SelectedValue = Convert.ToInt32(multa.Gravidade);
-                combStatus.SelectedValue = Convert.ToInt32(multa.Status);
-                timeDataOcorrencia.Text = multa.DataOcorrencia;
-                timeDataNotificacao.Text = multa.DataNotificacao;
-                timeDataVencimento.Text = multa.DataVencimento;
-                textValor.Text = Convert.ToString(multa.Valor);
-                textDescricao.Text = multa.Descricao;
-                textLocal.Text = multa.Local;
-            
+            combVeiculo.SelectedValue = Convert.ToInt32(multa.Veiculo);
+            combMotorista.SelectedValue = Convert.ToInt32(multa.Motorista);
+            combGravidade.SelectedValue = Convert.ToInt32(multa.Gravidade);
+            combStatus.SelectedValue = Convert.ToInt32(multa.Status);
+            timeDataOcorrencia.Text = multa.DataOcorrencia;
+            timeDataNotificacao.Text = multa.DataNotificacao;
+            timeDataVencimento.Text = multa.DataVencimento;
+            textValor.Text = Convert.ToString(multa.Valor);
+            textDescricao.Text = multa.Descricao;
+            textLocal.Text = multa.Local;
+
         }
 
         private void LoadVeiculos() {
@@ -108,8 +106,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     multas.Descricao = textDescricao.Text;
                     multas.Local = textLocal.Text;
 
-                    if (this.Id > 0) {
-                        multas.Id = Convert.ToInt32(this.Id);
+                    if (Id > 0) {
+                        multas.Id = Convert.ToInt32(Id);
                         multas.Update();
                     }
                     else {
@@ -123,7 +121,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                                 fmPrincipal.AtivarForm(new TMSForms.List.FormMultas(fmPrincipal));
                             }
                             else {
-                                this.Close();
+                                Close();
                             }
                         }
                     }

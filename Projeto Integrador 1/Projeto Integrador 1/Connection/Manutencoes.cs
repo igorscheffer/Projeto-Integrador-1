@@ -34,9 +34,9 @@ namespace Projeto_Integrador_1.Connection {
         public void Create() {
             string sql = "INSERT INTO `manutencoes`(`tipo`, `preventiva`, `veiculo`, `status`, `motorista`, `data_agendada`, `data_realizada`, `hodometro_agendado`, `hodometro_realizado`, `observacoes`, `ordem_servico`, `fornecedor`, `mao_obra`, `desconto`, `acrecimo`, `valor`, `itens`) VALUES (@tipo, @preventiva, @veiculo, @status, @motorista, @data_agendada, @data_realizada, @hodometro_agendado, @hodometro_realizado, @observacoes, @ordem_servico, @fornecedor, @mao_obra, @desconto, @acrecimo, @valor, @itens);";
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
 
                 query.Parameters.AddWithValue("@tipo", Tipo);
                 query.Parameters.AddWithValue("@preventiva", Preventiva);
@@ -58,7 +58,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                closeConnection();
+                CloseConnection();
 
                 Success = true;
                 Message = "Manutenção salva com sucesso.";
@@ -72,9 +72,9 @@ namespace Projeto_Integrador_1.Connection {
         public void Update() {
             string sql = "UPDATE `manutencoes` SET `tipo` = @tipo, `preventiva` = @preventiva, `veiculo` = @veiculo, `status` = @status, `motorista` = @motorista, `data_agendada` = @data_agendada, `data_realizada` = @data_realizada, `hodometro_agendado` = @hodometro_agendado, `hodometro_realizado` = @hodometro_realizado, `observacoes` = @observacoes, `ordem_servico` = @ordem_servico, `fornecedor` = @fornecedor, `mao_obra` = @mao_obra, `desconto` = @desconto, `acrecimo` = @acrecimo, `valor` = @valor, `itens` = @itens WHERE `id` = @id LIMIT 1;";
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
 
                 query.Parameters.AddWithValue("@tipo", Tipo);
                 query.Parameters.AddWithValue("@preventiva", Preventiva);
@@ -97,7 +97,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                closeConnection();
+                CloseConnection();
 
                 Success = true;
                 Message = "Manutenção salva com sucesso.";
@@ -111,13 +111,10 @@ namespace Projeto_Integrador_1.Connection {
         public void Get() {
             string sql = "SELECT `manutencoes`.*, `veiculos`.`placa` AS `veiculo_placa`, `veiculos`.`marca` AS `veiculo_marca`, `veiculos`.`modelo` AS `veiculo_modelo`, `motoristas`.`nome` AS `motorista_nome`, `clientes`.`razao_social` AS `fornecedor_nome` FROM `manutencoes` LEFT OUTER JOIN `veiculos` ON (`manutencoes`.`veiculo` = `veiculos`.`id`) LEFT OUTER JOIN `motoristas` ON (`manutencoes`.`motorista` = `motoristas`.`id`) LEFT OUTER JOIN `clientes` ON (`manutencoes`.`fornecedor` = `clientes`.`id`) WHERE `manutencoes`.`id` = @id LIMIT 1;";
 
-            PreencherCombBox preValues = new Util.PreencherCombBox();
-            List<dynamic> marcas = preValues.getVeiculosMarcas();
-
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@id", Id);
 
                 MySqlDataReader data = query.ExecuteReader();
@@ -148,7 +145,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 data.Close();
 
-                closeConnection();
+                CloseConnection();
 
                 Success = true;
             }
@@ -161,17 +158,16 @@ namespace Projeto_Integrador_1.Connection {
         public void GetAll() {
             string sql = "SELECT `manutencoes`.*, `veiculos`.`placa` AS `veiculo_placa`, `veiculos`.`marca` AS `veiculo_marca`, `veiculos`.`modelo` AS `veiculo_modelo`, `motoristas`.`nome` AS `motorista_nome`, `clientes`.`razao_social` AS `fornecedor_nome` FROM `manutencoes` LEFT OUTER JOIN `veiculos` ON (`manutencoes`.`veiculo` = `veiculos`.`id`) LEFT OUTER JOIN `motoristas` ON (`manutencoes`.`motorista` = `motoristas`.`id`) LEFT OUTER JOIN `clientes` ON (`manutencoes`.`fornecedor` = `clientes`.`id`);";
 
-            PreencherCombBox preValues = new Util.PreencherCombBox();
-            List<dynamic> marcas = preValues.getVeiculosMarcas();
+            List<dynamic> ListaMarcas = Listas.VeiculosMarcas;
 
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
                 MySqlDataReader data = query.ExecuteReader();
 
                 while (data.Read()) {
-                    dynamic marca = marcas.Find(item => item.Value == Int16.Parse(data["veiculo_marca"].ToString()));
+                    dynamic marca = ListaMarcas.Find(item => item.Value == Int16.Parse(data["veiculo_marca"].ToString()));
 
                     Results.Add(
                         new {
@@ -190,7 +186,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 data.Close();
 
-                closeConnection();
+                CloseConnection();
 
                 Success = true;
             }

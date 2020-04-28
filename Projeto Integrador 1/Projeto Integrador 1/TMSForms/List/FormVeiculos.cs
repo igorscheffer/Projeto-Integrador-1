@@ -13,10 +13,8 @@ namespace Projeto_Integrador_1.TMSForms.List {
             InitializeComponent();
             fmPrincipal = Principal;
 
-            PreencherCombBox ValuesComb = new Util.PreencherCombBox();
-
-            List<dynamic> ListaCores = ValuesComb.getCores();
-            List<dynamic> ListaStatus = ValuesComb.getVeiculosStatus();
+            List<dynamic> ListaCores = Listas.Cores;
+            List<dynamic> ListaStatus = Listas.VeiculosStatus;
 
             Veiculos veiculos = new Veiculos();
             veiculos.GetAll();

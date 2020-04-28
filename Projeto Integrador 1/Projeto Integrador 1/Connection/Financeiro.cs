@@ -33,9 +33,9 @@ namespace Projeto_Integrador_1.Connection {
             string sql = "INSERT INTO `financeiro` (`nome`, `tipo`, `centro_custo`, `forma_pagamento`, `status`, `data_emissao`, `data_vencimento`, `valor`, `documento`, `ocorrencia`, `qtd_parcelas`, `parcelas`, `observacoes`) VALUES (@nome, @tipo, @centro_custo, @forma_pagamento, @status, @data_emissao, @data_vencimento, @valor, @documento, @ocorrencia, @qtd_parcelas, @parcelas, @observacoes);";
             
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@nome", this.Nome);
                 query.Parameters.AddWithValue("@tipo", this.Tipo);
                 query.Parameters.AddWithValue("@centro_custo", this.CentroCusto);
@@ -52,7 +52,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                closeConnection();
+                CloseConnection();
 
                 this.Success = true;
                 this.Message = "Financeiro salvo com sucesso.";
@@ -67,9 +67,9 @@ namespace Projeto_Integrador_1.Connection {
             string sql = "UPDATE `financeiro` SET `nome` = @nome, `tipo` = @tipo, `centro_custo` = @centro_custo, `forma_pagamento` = @forma_pagamento, `status` = @status, `data_emissao` = @data_emissao, `data_vencimento` = @data_vencimento, `valor` = @valor, `documento` = @documento, `ocorrencia` = @ocorrencia, `qtd_parcelas` = @qtd_parcelas, `parcelas` = @parcelas, `observacoes` = @observacoes WHERE `id` = @id LIMIT 1;";
 
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@nome", this.Nome);
                 query.Parameters.AddWithValue("@tipo", this.Tipo);
                 query.Parameters.AddWithValue("@centro_custo", this.CentroCusto);
@@ -87,7 +87,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                closeConnection();
+                CloseConnection();
 
                 this.Success = true;
                 this.Message = "Financeiro salvo com sucesso.";
@@ -101,9 +101,9 @@ namespace Projeto_Integrador_1.Connection {
         public void Get() {
             string sql = "SELECT * FROM `financeiro` WHERE `id` = @id LIMIT 1;";
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@id", this.Id);
 
                 MySqlDataReader data = query.ExecuteReader();
@@ -137,9 +137,9 @@ namespace Projeto_Integrador_1.Connection {
         public void GetAll() {
             string sql = "SELECT * FROM `financeiro`;";
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
                 
                 MySqlDataReader data = query.ExecuteReader();
 

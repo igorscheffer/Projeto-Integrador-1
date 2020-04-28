@@ -38,9 +38,9 @@ namespace Projeto_Integrador_1.Connection {
         public void Create() {
             string sql = "INSERT INTO `multas`(`veiculo`, `motorista`, `gravidade`, `status`, `data_ocorrencia`, `data_notificacao`, `data_vencimento`, `valor`, `descricao`, `local`) VALUES (@veiculo, @motorista, @gravidade, @status, @data_ocorrencia, @data_notificacao, @data_vencimento, @valor, @descricao, @local);";
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
 
                 query.Parameters.AddWithValue("@veiculo", Veiculo);
                 query.Parameters.AddWithValue("@motorista", Motorista);
@@ -55,7 +55,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                closeConnection();
+                CloseConnection();
 
                 Success = true;
                 Message = "Multa salva com sucesso.";
@@ -69,9 +69,9 @@ namespace Projeto_Integrador_1.Connection {
         public void Update() {
             string sql = "UPDATE `multas` SET `veiculo` = @veiculo, `motorista` = @motorista, `gravidade` = @gravidade, `status` = @status, `data_ocorrencia` = @data_ocorrencia, `data_notificacao` = @data_notificacao, `data_vencimento` = @data_vencimento, `valor` = @valor, `descricao` = @descricao, `local` = @local WHERE `id` = @id LIMIT 1;";
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
 
                 query.Parameters.AddWithValue("@veiculo", Veiculo);
                 query.Parameters.AddWithValue("@motorista", Motorista);
@@ -87,7 +87,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                closeConnection();
+                CloseConnection();
 
                 Success = true;
                 Message = "Multa salva com sucesso.";
@@ -101,9 +101,9 @@ namespace Projeto_Integrador_1.Connection {
         public void Get() {
             string sql = "SELECT `multas`.*, `veiculos`.`placa` AS `veiculo_placa`, `motoristas`.`nome` AS `motorista_nome` FROM `multas` LEFT OUTER JOIN `veiculos` ON (`multas`.`veiculo` = `veiculos`.`id`) LEFT OUTER JOIN `motoristas` ON (`multas`.`motorista` = `motoristas`.`id`) WHERE `multas`.`id` = @id LIMIT 1;";
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@id", Id);
 
                 MySqlDataReader data = query.ExecuteReader();
@@ -127,7 +127,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 data.Close();
 
-                closeConnection();
+                CloseConnection();
 
                 Success = true;
             }
@@ -140,9 +140,9 @@ namespace Projeto_Integrador_1.Connection {
         public void GetAll() {
             string sql = "SELECT `multas`.*, `veiculos`.`placa` AS `veiculo_placa`, `motoristas`.`nome` AS `motorista_nome` FROM `multas` LEFT OUTER JOIN `veiculos` ON (`multas`.`veiculo` = `veiculos`.`id`) LEFT OUTER JOIN `motoristas` ON (`multas`.`motorista` = `motoristas`.`id`);";
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
                 MySqlDataReader data = query.ExecuteReader();
 
                 while (data.Read()) {
@@ -163,7 +163,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 data.Close();
 
-                closeConnection();
+                CloseConnection();
 
                 Success = true;
             }

@@ -17,55 +17,53 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             this.fmPrincipal = fmPrincipal;
 
             if (Id > 0) {
-                this.Text = "Editar Veiculo";
+                Text = "Editar Veiculo";
                 this.Id = Id;
             }
 
-            PreencherCombBox ValuesComb = new Util.PreencherCombBox();
-
             combCategoria.DisplayMember = "Text";
             combCategoria.ValueMember = "Value";
-            combCategoria.DataSource = ValuesComb.getVeiculosCategorias();
+            combCategoria.DataSource = Listas.VeiculosCategorias;
 
             combMarca.DisplayMember = "Text";
             combMarca.ValueMember = "Value";
-            combMarca.DataSource = ValuesComb.getVeiculosMarcas();
+            combMarca.DataSource = Listas.VeiculosMarcas;
 
             combCarroceria.DisplayMember = "Text";
             combCarroceria.ValueMember = "Value";
-            combCarroceria.DataSource = ValuesComb.getVeiculosCarrocerias();
+            combCarroceria.DataSource = Listas.VeiculosCarrocerias;
 
             combCor.DisplayMember = "Text";
             combCor.ValueMember = "Value";
-            combCor.DataSource = ValuesComb.getCores();
+            combCor.DataSource = Listas.Cores;
 
             combCombustivel.DisplayMember = "Text";
             combCombustivel.ValueMember = "Value";
-            combCombustivel.DataSource = ValuesComb.getCombustiveis();
+            combCombustivel.DataSource = Listas.Combustiveis;
 
             combAnoFabricacao.DisplayMember = "Text";
             combAnoFabricacao.ValueMember = "Value";
-            combAnoFabricacao.DataSource = ValuesComb.getAnos();
+            combAnoFabricacao.DataSource = Listas.Anos;
 
             combAnoModelo.DisplayMember = "Text";
             combAnoModelo.ValueMember = "Value";
-            combAnoModelo.DataSource = ValuesComb.getAnos();
+            combAnoModelo.DataSource = Listas.Anos;
 
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
-            combStatus.DataSource = ValuesComb.getVeiculosStatus();
+            combStatus.DataSource = Listas.VeiculosStatus;
 
             if (Id > 0) {
-                this.Text = "Editar Veiculo";
+                Text = "Editar Veiculo";
                 this.Id = Id;
-                this.PreencherDados();
+                PreencherDados();
             }
         }
 
         private void PreencherDados() {
             try {
                 Veiculos veiculos = new Veiculos();
-                veiculos.Id = this.Id;
+                veiculos.Id = Id;
                 veiculos.Get();
 
                 dynamic veiculo = veiculos.Results[0];
@@ -141,8 +139,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     veiculos.PesoBrutoTotal = textPesoBrutoTotal.Text;
                     veiculos.Capacidade = textCapacidade.Text;
 
-                    if (this.Id > 0) {
-                        veiculos.Id = Convert.ToInt32(this.Id);
+                    if (Id > 0) {
+                        veiculos.Id = Convert.ToInt32(Id);
                         veiculos.Update();
                     }
                     else {
@@ -156,7 +154,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                                 fmPrincipal.AtivarForm(new TMSForms.List.FormVeiculos(fmPrincipal));
                             }
                             else {
-                                this.Close();
+                                Close();
                             }
                         }
                     }

@@ -13,9 +13,7 @@ namespace Projeto_Integrador_1.TMSForms.List {
             InitializeComponent();
             fmPrincipal = Principal;
 
-            PreencherCombBox ValuesComb = new Util.PreencherCombBox();
-
-            List<dynamic> ListaStatus = ValuesComb.getViagemStatus();
+            List<dynamic> ListaStatus = Listas.ViagemStatus;
 
             Viagens viagens = new Viagens();
             viagens.GetAll();

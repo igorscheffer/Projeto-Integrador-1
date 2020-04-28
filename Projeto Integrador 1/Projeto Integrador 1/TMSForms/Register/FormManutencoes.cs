@@ -23,31 +23,29 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             LoadMotoristas();
             LoadClientes();
 
-            PreencherCombBox ValuesComb = new Util.PreencherCombBox();
-
             combTipoManutencao.DisplayMember = "Text";
             combTipoManutencao.ValueMember = "Value";
-            combTipoManutencao.DataSource = ValuesComb.getManutencaoTipo();
+            combTipoManutencao.DataSource = Listas.ManutencoesTipos;
 
             combTipoPreventiva.DisplayMember = "Text";
             combTipoPreventiva.ValueMember = "Value";
-            combTipoPreventiva.DataSource = ValuesComb.getManutencaoPreventiva();
+            combTipoPreventiva.DataSource = Listas.ManutencoesPreventivas;
 
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
-            combStatus.DataSource = ValuesComb.getManutencaoStatus();
+            combStatus.DataSource = Listas.ManutencoesStatus;
 
             if (Id > 0) {
-                this.Text = "Editar Manutenção";
+                Text = "Editar Manutenção";
                 this.Id = Id;
-                this.PreencherDados();
+                PreencherDados();
             }
         }
 
         private void PreencherDados() {
             try {
                 Manutencoes manutencoes = new Manutencoes();
-                manutencoes.Id = this.Id;
+                manutencoes.Id = Id;
                 manutencoes.Get();
 
                 dynamic manutencao = manutencoes.Results[0];
@@ -199,8 +197,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     manutencoes.Valor = textValor.Text;
                     manutencoes.Itens = jsonItens;
 
-                    if (this.Id > 0) {
-                        manutencoes.Id = Convert.ToInt32(this.Id);
+                    if (Id > 0) {
+                        manutencoes.Id = Convert.ToInt32(Id);
                         manutencoes.Update();
                     }
                     else {
@@ -214,7 +212,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                                 fmPrincipal.AtivarForm(new TMSForms.List.FormManutencoes(fmPrincipal));
                             }
                             else {
-                                this.Close();
+                                Close();
                             }
                         }
                     }

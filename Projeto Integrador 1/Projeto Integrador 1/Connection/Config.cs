@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Projeto_Integrador_1.Connection {
     class Config {
-        public MySqlConnection connection;
+        public MySqlConnection Connection;
         private string Host = "localhost";
         private string User = "root";
         private string Pass = "";
@@ -15,12 +15,12 @@ namespace Projeto_Integrador_1.Connection {
         }
 
         public void Initialize() {
-            connection = new MySqlConnection("SERVER=" + Host + ";DATABASE=" + Base + ";UID=" + User + ";PASSWORD=" + Pass + ";Convert Zero Datetime=True;");
+            Connection = new MySqlConnection("SERVER=" + Host + ";DATABASE=" + Base + ";UID=" + User + ";PASSWORD=" + Pass + ";Convert Zero Datetime=True;");
         }
 
-        public bool openConnection() {
+        public bool OpenConnection() {
             try {
-                connection.Open();
+                Connection.Open();
 
                 Console.WriteLine("Conexão com banco de dados aberta.");
 
@@ -33,9 +33,9 @@ namespace Projeto_Integrador_1.Connection {
             }
         }
 
-        public bool closeConnection() {
+        public bool CloseConnection() {
             try {
-                connection.Close();
+                Connection.Close();
 
                 Console.WriteLine("Conexão com banco de dados fechada.");
 

@@ -13,16 +13,14 @@ namespace Projeto_Integrador_1.TMSForms.List {
             InitializeComponent();
             fmPrincipal = Principal;
 
-            PreencherCombBox ValuesComb = new Util.PreencherCombBox();
-
-            List<dynamic> ListaGravidade = ValuesComb.getMultaGravidade();
-            List<dynamic> ListaStatus = ValuesComb.getMultaStatus();
+            List<dynamic> ListaGravidades = Listas.MultasGravidades;
+            List<dynamic> ListaStatus = Listas.MultasStatus;
 
             Multas multas = new Multas();
             multas.GetAll();
 
             foreach (dynamic multa in multas.Results) {
-                string gravidade = ListaGravidade.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(multa.Gravidade)).Text;
+                string gravidade = ListaGravidades.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(multa.Gravidade)).Text;
                 string status = ListaStatus.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(multa.Status)).Text;
                 gridMultas.Rows.Add(
                     multa.Id,

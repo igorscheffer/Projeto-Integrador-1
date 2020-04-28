@@ -17,31 +17,29 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
 
-            PreencherCombBox ValuesComb = new Util.PreencherCombBox();
-
             LoadClientes();
             LoadVeiculos();
             LoadMotoristas();
 
             combCombustivel.DisplayMember = "Text";
             combCombustivel.ValueMember = "Value";
-            combCombustivel.DataSource = ValuesComb.getCombustiveis();
+            combCombustivel.DataSource = Listas.Combustiveis;
 
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
-            combStatus.DataSource = ValuesComb.getAbastecimentosStatus();
+            combStatus.DataSource = Listas.AbastecimentosStatus;
 
             if (Id > 0) {
-                this.Text = "Editar Abastecimento";
+                Text = "Editar Abastecimento";
                 this.Id = Id;
-                this.PreencherDados();
+                PreencherDados();
             }
         }
 
         private void PreencherDados() {
             try {
                 Abastecimentos abastecimentos = new Abastecimentos();
-                abastecimentos.Id = this.Id;
+                abastecimentos.Id = Id;
                 abastecimentos.Get();
 
                 dynamic abastecimento = abastecimentos.Results[0];
@@ -167,8 +165,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     abastecimentos.Valor = textValor.Text;
                     abastecimentos.Total = Convert.ToString(total);
 
-                    if (this.Id > 0) {
-                        abastecimentos.Id = Convert.ToInt32(this.Id);
+                    if (Id > 0) {
+                        abastecimentos.Id = Convert.ToInt32(Id);
                         abastecimentos.Update();
                     }
                     else {
@@ -182,7 +180,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                                 fmPrincipal.AtivarForm(new TMSForms.List.FormAbastecimentos(fmPrincipal));
                             }
                             else {
-                                this.Close();
+                                Close();
                             }
                         }
                     }

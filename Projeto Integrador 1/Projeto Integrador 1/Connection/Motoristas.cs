@@ -37,9 +37,9 @@ namespace Projeto_Integrador_1.Connection {
             string sql = "INSERT INTO `motoristas` (`nome`, `cpf`, `rg`, `status`, `cnh`, `vencimento`, `categoria`, `sexo`, `estado_civil`, `cep`, `endereco`, `n`, `bairro`, `complemento`, `cidade`, `estado`, `cargo`, `telefone`, `celular`, `email`) VALUES (@nome, @cpf, @rg, @status, @cnh, @vencimento, @categoria, @sexo, @estado_civil, @cep, @endereco, @n, @bairro, @complemento, @cidade, @estado, @cargo, @telefone, @celular, @email);";
 
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
 
                 query.Parameters.AddWithValue("@nome", Nome);
                 query.Parameters.AddWithValue("@cpf", CNH);
@@ -64,7 +64,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                closeConnection();
+                CloseConnection();
 
                 Success = true;
                 Message = "Motorista salvo com sucesso.";
@@ -79,9 +79,9 @@ namespace Projeto_Integrador_1.Connection {
             string sql = "UPDATE `motoristas` SET `nome` = @nome, `cpf` = @cpf, `rg` = @rg, `status` = @status, `cnh` = @cnh, `vencimento` = @vencimento, `categoria` = @categoria, `sexo` = @sexo, `estado_civil` = @estado_civil, `cep` = @cep, `endereco` = @endereco, `n` = @n, `bairro` = @bairro, `complemento` = @complemento, `cidade` = @cidade, `estado` = @estado, `cargo` = @cargo, `telefone` = @telefone, `celular` = @celular, `email` = @email WHERE `id` = @id LIMIT 1;";
 
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
 
                 query.Parameters.AddWithValue("@nome", Nome);
                 query.Parameters.AddWithValue("@cpf", CPF);
@@ -107,7 +107,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                closeConnection();
+                CloseConnection();
 
                 Success = true;
                 Message = "Motorista salvo com sucesso.";
@@ -122,9 +122,9 @@ namespace Projeto_Integrador_1.Connection {
             string sql = "SELECT * FROM `motoristas` WHERE `id` = @id LIMIT 1;";
 
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@id", Id);
 
                 MySqlDataReader data = query.ExecuteReader();
@@ -158,7 +158,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 data.Close();
 
-                closeConnection();
+                CloseConnection();
 
                 Success = true;
             }
@@ -172,9 +172,9 @@ namespace Projeto_Integrador_1.Connection {
             string sql = "SELECT * FROM `motoristas`;";
 
             try {
-                openConnection();
+                OpenConnection();
 
-                MySqlCommand query = new MySqlCommand(sql, connection);
+                MySqlCommand query = new MySqlCommand(sql, Connection);
                 MySqlDataReader data = query.ExecuteReader();
 
                 while (data.Read()) {
@@ -193,7 +193,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 data.Close();
 
-                closeConnection();
+                CloseConnection();
 
                 Success = true;
             }
