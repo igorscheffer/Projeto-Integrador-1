@@ -107,6 +107,7 @@
     <Compile Include="Connection\Abastecimentos.cs" />
     <Compile Include="Connection\Clientes.cs" />
     <Compile Include="Connection\Config.cs" />
+    <Compile Include="Connection\Financeiro.cs" />
     <Compile Include="Connection\Manutencoes.cs" />
     <Compile Include="Connection\Motoristas.cs" />
     <Compile Include="Connection\Multas.cs" />
