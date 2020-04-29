@@ -117,72 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gridClientes.ColumnHeadersHeight" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <metadata name="colId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="colId.HeaderText" xml:space="preserve">
-    <value>Id</value>
-  </data>
-  <data name="colId.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <metadata name="frota.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="frota.HeaderText" xml:space="preserve">
-    <value>Tipo Cadastro</value>
-  </data>
-  <metadata name="cor.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="cor.HeaderText" xml:space="preserve">
-    <value>Tipo Pessoa</value>
-  </data>
-  <metadata name="placa.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="placa.HeaderText" xml:space="preserve">
-    <value>CPF/CNPJ</value>
-  </data>
-  <metadata name="veiculo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="veiculo.HeaderText" xml:space="preserve">
-    <value>Nome/Razão Social</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gridClientes.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="gridClientes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 55</value>
-  </data>
-  <data name="gridClientes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1040, 395</value>
-  </data>
-  <data name="gridClientes.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;gridClientes.Name" xml:space="preserve">
-    <value>gridClientes</value>
-  </data>
-  <data name="&gt;&gt;gridClientes.Type" xml:space="preserve">
-    <value>Guna.UI.WinForms.GunaDataGridView, Guna.UI, Version=1.9.0.0, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;gridClientes.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gridClientes.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="btnCadastrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnCadastrar.Font" type="System.Drawing.Font, System.Drawing">
     <value>SansSerif, 9pt, style=Bold</value>
   </data>
@@ -195,6 +134,7 @@
   <data name="btnCadastrar.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 35</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnCadastrar.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -244,6 +184,93 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnMenuItemEditar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 34</value>
+  </data>
+  <data name="btnMenuItemEditar.Text" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="btnMenuItemExcluir.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 34</value>
+  </data>
+  <data name="btnMenuItemExcluir.Text" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
+  <metadata name="MenuItens.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="MenuItens.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="MenuItens.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 72</value>
+  </data>
+  <data name="&gt;&gt;MenuItens.Name" xml:space="preserve">
+    <value>MenuItens</value>
+  </data>
+  <data name="&gt;&gt;MenuItens.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaContextMenuStrip, Guna.UI, Version=1.9.0.0, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="gridClientes.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <metadata name="colId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colId.HeaderText" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="colId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="colTipoCadastro.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colTipoCadastro.HeaderText" xml:space="preserve">
+    <value>Tipo Cadastro</value>
+  </data>
+  <metadata name="colTipoPessoa.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colTipoPessoa.HeaderText" xml:space="preserve">
+    <value>Tipo Pessoa</value>
+  </data>
+  <metadata name="colCNPJ.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colCNPJ.HeaderText" xml:space="preserve">
+    <value>CPF/CNPJ</value>
+  </data>
+  <metadata name="colRazaoSocial.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="colRazaoSocial.HeaderText" xml:space="preserve">
+    <value>Nome/Razão Social</value>
+  </data>
+  <data name="gridClientes.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gridClientes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 55</value>
+  </data>
+  <data name="gridClientes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1040, 395</value>
+  </data>
+  <data name="gridClientes.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;gridClientes.Name" xml:space="preserve">
+    <value>gridClientes</value>
+  </data>
+  <data name="&gt;&gt;gridClientes.Type" xml:space="preserve">
+    <value>Guna.UI.WinForms.GunaDataGridView, Guna.UI, Version=1.9.0.0, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;gridClientes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gridClientes.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -255,34 +282,46 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Clientes</value>
   </data>
+  <data name="&gt;&gt;btnMenuItemEditar.Name" xml:space="preserve">
+    <value>btnMenuItemEditar</value>
+  </data>
+  <data name="&gt;&gt;btnMenuItemEditar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMenuItemExcluir.Name" xml:space="preserve">
+    <value>btnMenuItemExcluir</value>
+  </data>
+  <data name="&gt;&gt;btnMenuItemExcluir.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;colId.Name" xml:space="preserve">
     <value>colId</value>
   </data>
   <data name="&gt;&gt;colId.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;frota.Name" xml:space="preserve">
-    <value>frota</value>
+  <data name="&gt;&gt;colTipoCadastro.Name" xml:space="preserve">
+    <value>colTipoCadastro</value>
   </data>
-  <data name="&gt;&gt;frota.Type" xml:space="preserve">
+  <data name="&gt;&gt;colTipoCadastro.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cor.Name" xml:space="preserve">
-    <value>cor</value>
+  <data name="&gt;&gt;colTipoPessoa.Name" xml:space="preserve">
+    <value>colTipoPessoa</value>
   </data>
-  <data name="&gt;&gt;cor.Type" xml:space="preserve">
+  <data name="&gt;&gt;colTipoPessoa.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;placa.Name" xml:space="preserve">
-    <value>placa</value>
+  <data name="&gt;&gt;colCNPJ.Name" xml:space="preserve">
+    <value>colCNPJ</value>
   </data>
-  <data name="&gt;&gt;placa.Type" xml:space="preserve">
+  <data name="&gt;&gt;colCNPJ.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;veiculo.Name" xml:space="preserve">
-    <value>veiculo</value>
+  <data name="&gt;&gt;colRazaoSocial.Name" xml:space="preserve">
+    <value>colRazaoSocial</value>
   </data>
-  <data name="&gt;&gt;veiculo.Type" xml:space="preserve">
+  <data name="&gt;&gt;colRazaoSocial.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -12,7 +12,7 @@ namespace Projeto_Integrador_1.Connection {
 
         public bool Success;
         public string Message;
-        public List<dynamic> Results;
+        public List<dynamic> Results = new List<dynamic>();
 
         public int Id { get; set; }
         public string Nome { get; set; }
@@ -33,7 +33,7 @@ namespace Projeto_Integrador_1.Connection {
             string sql = "INSERT INTO `financeiro` (`nome`, `tipo`, `centro_custo`, `forma_pagamento`, `status`, `data_emissao`, `data_vencimento`, `valor`, `documento`, `ocorrencia`, `qtd_parcelas`, `parcelas`, `observacoes`) VALUES (@nome, @tipo, @centro_custo, @forma_pagamento, @status, @data_emissao, @data_vencimento, @valor, @documento, @ocorrencia, @qtd_parcelas, @parcelas, @observacoes);";
             
             try {
-                OpenConnection();
+                Open();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@nome", this.Nome);
@@ -41,8 +41,8 @@ namespace Projeto_Integrador_1.Connection {
                 query.Parameters.AddWithValue("@centro_custo", this.CentroCusto);
                 query.Parameters.AddWithValue("@forma_pagamento", this.FormaPagamento);
                 query.Parameters.AddWithValue("@status", this.Status);
-                query.Parameters.AddWithValue("@data_emissao", this.DataEmissao);
-                query.Parameters.AddWithValue("@data_vencimento", this.DataVencimento);
+                query.Parameters.AddWithValue("@data_emissao", DateTime.Parse(this.DataEmissao));
+                query.Parameters.AddWithValue("@data_vencimento", DateTime.Parse(this.DataVencimento));
                 query.Parameters.AddWithValue("@valor", this.Valor);
                 query.Parameters.AddWithValue("@documento", this.Documento);
                 query.Parameters.AddWithValue("@ocorrencia", this.Ocorrencia);
@@ -52,7 +52,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                CloseConnection();
+                Close();
 
                 this.Success = true;
                 this.Message = "Financeiro salvo com sucesso.";
@@ -67,7 +67,7 @@ namespace Projeto_Integrador_1.Connection {
             string sql = "UPDATE `financeiro` SET `nome` = @nome, `tipo` = @tipo, `centro_custo` = @centro_custo, `forma_pagamento` = @forma_pagamento, `status` = @status, `data_emissao` = @data_emissao, `data_vencimento` = @data_vencimento, `valor` = @valor, `documento` = @documento, `ocorrencia` = @ocorrencia, `qtd_parcelas` = @qtd_parcelas, `parcelas` = @parcelas, `observacoes` = @observacoes WHERE `id` = @id LIMIT 1;";
 
             try {
-                OpenConnection();
+                Open();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@nome", this.Nome);
@@ -75,8 +75,8 @@ namespace Projeto_Integrador_1.Connection {
                 query.Parameters.AddWithValue("@centro_custo", this.CentroCusto);
                 query.Parameters.AddWithValue("@forma_pagamento", this.FormaPagamento);
                 query.Parameters.AddWithValue("@status", this.Status);
-                query.Parameters.AddWithValue("@data_emissao", this.DataEmissao);
-                query.Parameters.AddWithValue("@data_vencimento", this.DataVencimento);
+                query.Parameters.AddWithValue("@data_emissao", DateTime.Parse(this.DataEmissao));
+                query.Parameters.AddWithValue("@data_vencimento", DateTime.Parse(this.DataVencimento));
                 query.Parameters.AddWithValue("@valor", this.Valor);
                 query.Parameters.AddWithValue("@documento", this.Documento);
                 query.Parameters.AddWithValue("@ocorrencia", this.Ocorrencia);
@@ -87,7 +87,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                CloseConnection();
+                Close();
 
                 this.Success = true;
                 this.Message = "Financeiro salvo com sucesso.";
@@ -101,7 +101,7 @@ namespace Projeto_Integrador_1.Connection {
         public void Get() {
             string sql = "SELECT * FROM `financeiro` WHERE `id` = @id LIMIT 1;";
             try {
-                OpenConnection();
+                Open();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@id", this.Id);
@@ -113,11 +113,11 @@ namespace Projeto_Integrador_1.Connection {
                     Id = data["id"],
                     Nome = data["nome"],
                     Tipo = data["tipo"],
-                    CentroCusto = data["centro_custp"],
+                    CentroCusto = data["centro_custo"],
                     FormaPagamento = data["forma_pagamento"],
                     Status = data["status"],
-                    DataEmissao = data["data_emissao"],
-                    DataVencimento = data["data_vencimento"],
+                    DataEmissao = Convert.ToDateTime(data["data_emissao"]).ToString("dd/MM/yyyy"),
+                    DataVencimento = Convert.ToDateTime(data["data_vencimento"]).ToString("dd/MM/yyyy"),
                     Valor = data["valor"],
                     Documento = data["documento"],
                     Ocorrencia = data["ocorrencia"],
@@ -137,7 +137,7 @@ namespace Projeto_Integrador_1.Connection {
         public void GetAll() {
             string sql = "SELECT * FROM `financeiro`;";
             try {
-                OpenConnection();
+                Open();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 
@@ -148,11 +148,11 @@ namespace Projeto_Integrador_1.Connection {
                         Id = data["id"],
                         Nome = data["nome"],
                         Tipo = data["tipo"],
-                        CentroCusto = data["centro_custp"],
+                        CentroCusto = data["centro_custo"],
                         FormaPagamento = data["forma_pagamento"],
                         Status = data["status"],
-                        DataEmissao = data["data_emissao"],
-                        DataVencimento = data["data_vencimento"],
+                        DataEmissao = Convert.ToDateTime(data["data_emissao"]).ToString("dd/MM/yyyy"),
+                        DataVencimento = Convert.ToDateTime(data["data_vencimento"]).ToString("dd/MM/yyyy"),
                         Valor = data["valor"],
                         Documento = data["documento"],
                         Ocorrencia = data["ocorrencia"],

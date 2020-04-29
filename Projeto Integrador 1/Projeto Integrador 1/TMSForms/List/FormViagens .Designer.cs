@@ -39,18 +39,22 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridViagens = new Guna.UI.WinForms.GunaDataGridView();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.veiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Motorista = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MenuItens = new Guna.UI.WinForms.GunaContextMenuStrip();
+            this.btnMenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMenuItemExcluir = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCadastrar = new FontAwesome.Sharp.IconButton();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCodigoInterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDataSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDataChegada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCidadeSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCidadeDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMotorista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridViagens)).BeginInit();
+            this.MenuItens.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,14 +84,14 @@
             this.gridViagens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridViagens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
-            this.frota,
-            this.placa,
-            this.veiculo,
-            this.cor,
-            this.status,
-            this.Column1,
-            this.Motorista,
-            this.Column2});
+            this.colCodigoInterno,
+            this.colDataSaida,
+            this.colDataChegada,
+            this.colCidadeSaida,
+            this.colCidadeDestino,
+            this.colPlaca,
+            this.colMotorista,
+            this.colStatus});
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -135,79 +139,41 @@
             this.gridViagens.ThemeStyle.RowsStyle.Height = 35;
             this.gridViagens.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridViagens.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gridViagens.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnSelectItem);
+            this.gridViagens.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnMouseEnterCell);
             // 
-            // colId
+            // MenuItens
             // 
-            resources.ApplyResources(this.colId, "colId");
-            this.colId.Name = "colId";
-            this.colId.ReadOnly = true;
+            this.MenuItens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            resources.ApplyResources(this.MenuItens, "MenuItens");
+            this.MenuItens.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnMenuItemEditar,
+            this.btnMenuItemExcluir});
+            this.MenuItens.Name = "MenuItens";
+            this.MenuItens.RenderStyle.ArrowColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
+            this.MenuItens.RenderStyle.ColorTable = null;
+            this.MenuItens.RenderStyle.RoundedEdges = true;
+            this.MenuItens.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.MenuItens.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.MenuItens.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
+            this.MenuItens.ShowCheckMargin = true;
             // 
-            // frota
+            // btnMenuItemEditar
             // 
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.frota.DefaultCellStyle = dataGridViewCellStyle3;
-            this.frota.FillWeight = 88.78702F;
-            resources.ApplyResources(this.frota, "frota");
-            this.frota.Name = "frota";
-            this.frota.ReadOnly = true;
+            this.btnMenuItemEditar.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemEditar.Name = "btnMenuItemEditar";
+            this.btnMenuItemEditar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            resources.ApplyResources(this.btnMenuItemEditar, "btnMenuItemEditar");
+            this.btnMenuItemEditar.Click += new System.EventHandler(this.OnSelectEditar);
             // 
-            // placa
+            // btnMenuItemExcluir
             // 
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.placa.DefaultCellStyle = dataGridViewCellStyle4;
-            this.placa.FillWeight = 83.05664F;
-            resources.ApplyResources(this.placa, "placa");
-            this.placa.Name = "placa";
-            this.placa.ReadOnly = true;
-            // 
-            // veiculo
-            // 
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.veiculo.DefaultCellStyle = dataGridViewCellStyle5;
-            this.veiculo.FillWeight = 101.5228F;
-            resources.ApplyResources(this.veiculo, "veiculo");
-            this.veiculo.Name = "veiculo";
-            this.veiculo.ReadOnly = true;
-            // 
-            // cor
-            // 
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.cor.DefaultCellStyle = dataGridViewCellStyle6;
-            this.cor.FillWeight = 105.9449F;
-            resources.ApplyResources(this.cor, "cor");
-            this.cor.Name = "cor";
-            this.cor.ReadOnly = true;
-            // 
-            // status
-            // 
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.status.DefaultCellStyle = dataGridViewCellStyle7;
-            this.status.FillWeight = 113.1045F;
-            resources.ApplyResources(this.status, "status");
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 95.67404F;
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Motorista
-            // 
-            this.Motorista.FillWeight = 116.2358F;
-            resources.ApplyResources(this.Motorista, "Motorista");
-            this.Motorista.Name = "Motorista";
-            this.Motorista.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 95.67404F;
-            resources.ApplyResources(this.Column2, "Column2");
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.btnMenuItemExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemExcluir.Name = "btnMenuItemExcluir";
+            this.btnMenuItemExcluir.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            resources.ApplyResources(this.btnMenuItemExcluir, "btnMenuItemExcluir");
             // 
             // panel1
             // 
@@ -231,6 +197,86 @@
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // colId
+            // 
+            resources.ApplyResources(this.colId, "colId");
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
+            // 
+            // colCodigoInterno
+            // 
+            this.colCodigoInterno.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colCodigoInterno.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colCodigoInterno.FillWeight = 88.78702F;
+            resources.ApplyResources(this.colCodigoInterno, "colCodigoInterno");
+            this.colCodigoInterno.Name = "colCodigoInterno";
+            this.colCodigoInterno.ReadOnly = true;
+            // 
+            // colDataSaida
+            // 
+            this.colDataSaida.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colDataSaida.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colDataSaida.FillWeight = 83.05664F;
+            resources.ApplyResources(this.colDataSaida, "colDataSaida");
+            this.colDataSaida.Name = "colDataSaida";
+            this.colDataSaida.ReadOnly = true;
+            // 
+            // colDataChegada
+            // 
+            this.colDataChegada.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colDataChegada.DefaultCellStyle = dataGridViewCellStyle5;
+            this.colDataChegada.FillWeight = 101.5228F;
+            resources.ApplyResources(this.colDataChegada, "colDataChegada");
+            this.colDataChegada.Name = "colDataChegada";
+            this.colDataChegada.ReadOnly = true;
+            // 
+            // colCidadeSaida
+            // 
+            this.colCidadeSaida.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colCidadeSaida.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colCidadeSaida.FillWeight = 105.9449F;
+            resources.ApplyResources(this.colCidadeSaida, "colCidadeSaida");
+            this.colCidadeSaida.Name = "colCidadeSaida";
+            this.colCidadeSaida.ReadOnly = true;
+            // 
+            // colCidadeDestino
+            // 
+            this.colCidadeDestino.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colCidadeDestino.DefaultCellStyle = dataGridViewCellStyle7;
+            this.colCidadeDestino.FillWeight = 113.1045F;
+            resources.ApplyResources(this.colCidadeDestino, "colCidadeDestino");
+            this.colCidadeDestino.Name = "colCidadeDestino";
+            this.colCidadeDestino.ReadOnly = true;
+            // 
+            // colPlaca
+            // 
+            this.colPlaca.ContextMenuStrip = this.MenuItens;
+            this.colPlaca.FillWeight = 95.67404F;
+            resources.ApplyResources(this.colPlaca, "colPlaca");
+            this.colPlaca.Name = "colPlaca";
+            this.colPlaca.ReadOnly = true;
+            // 
+            // colMotorista
+            // 
+            this.colMotorista.ContextMenuStrip = this.MenuItens;
+            this.colMotorista.FillWeight = 116.2358F;
+            resources.ApplyResources(this.colMotorista, "colMotorista");
+            this.colMotorista.Name = "colMotorista";
+            this.colMotorista.ReadOnly = true;
+            // 
+            // colStatus
+            // 
+            this.colStatus.ContextMenuStrip = this.MenuItens;
+            this.colStatus.FillWeight = 95.67404F;
+            resources.ApplyResources(this.colStatus, "colStatus");
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
+            // 
             // FormViagens
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -240,6 +286,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormViagens";
             ((System.ComponentModel.ISupportInitialize)(this.gridViagens)).EndInit();
+            this.MenuItens.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -249,14 +296,17 @@
         private Guna.UI.WinForms.GunaDataGridView gridViagens;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnCadastrar;
+        private Guna.UI.WinForms.GunaContextMenuStrip MenuItens;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuItemEditar;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuItemExcluir;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn frota;
-        private System.Windows.Forms.DataGridViewTextBoxColumn placa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn veiculo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Motorista;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigoInterno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDataSaida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDataChegada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCidadeSaida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCidadeDestino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPlaca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMotorista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
     }
 }

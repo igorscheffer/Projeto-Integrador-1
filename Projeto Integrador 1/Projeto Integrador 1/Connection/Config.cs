@@ -18,31 +18,25 @@ namespace Projeto_Integrador_1.Connection {
             Connection = new MySqlConnection("SERVER=" + Host + ";DATABASE=" + Base + ";UID=" + User + ";PASSWORD=" + Pass + ";Convert Zero Datetime=True;");
         }
 
-        public bool OpenConnection() {
+        public bool Open() {
             try {
                 Connection.Open();
-
-                Console.WriteLine("Conexão com banco de dados aberta.");
-
                 return true;
             }
             catch (MySqlException e) {
-                MessageBox.Show(e.Message);
+                Console.WriteLine("Não foi possivel abrir um conexão com banco de dados. (" + e.Message + ")");
 
                 return false;
             }
         }
 
-        public bool CloseConnection() {
+        public bool Close() {
             try {
                 Connection.Close();
-
-                Console.WriteLine("Conexão com banco de dados fechada.");
-
                 return true;
             }
             catch (MySqlException e) {
-                MessageBox.Show(e.Message);
+                Console.WriteLine("Não foi possivel fechar a conexão com banco de dados. (" + e.Message + ")");
 
                 return false;
             }

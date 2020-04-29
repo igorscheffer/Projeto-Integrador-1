@@ -41,15 +41,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCadastrar = new FontAwesome.Sharp.IconButton();
             this.gridMotoristas = new Guna.UI.WinForms.GunaDataGridView();
+            this.MenuItens = new Guna.UI.WinForms.GunaContextMenuStrip();
+            this.btnMenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMenuItemExcluir = new System.Windows.Forms.ToolStripMenuItem();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cnh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCNH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colVencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMotoristas)).BeginInit();
+            this.MenuItens.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,12 +116,12 @@
             this.gridMotoristas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridMotoristas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
-            this.nome,
-            this.rg,
-            this.cpf,
-            this.cnh,
-            this.categoria,
-            this.vencimento});
+            this.colNome,
+            this.colRg,
+            this.colCPF,
+            this.colCNH,
+            this.colCategoria,
+            this.colVencimento});
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -167,7 +171,44 @@
             this.gridMotoristas.ThemeStyle.RowsStyle.Height = 35;
             this.gridMotoristas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridMotoristas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gridMotoristas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnSelectItem);
+            this.gridMotoristas.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnMouseEnterCell);
+            // 
+            // MenuItens
+            // 
+            this.MenuItens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.MenuItens.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.MenuItens.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnMenuItemEditar,
+            this.btnMenuItemExcluir});
+            this.MenuItens.Name = "MenuItens";
+            this.MenuItens.RenderStyle.ArrowColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
+            this.MenuItens.RenderStyle.ColorTable = null;
+            this.MenuItens.RenderStyle.RoundedEdges = true;
+            this.MenuItens.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.MenuItens.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.MenuItens.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
+            this.MenuItens.ShowCheckMargin = true;
+            this.MenuItens.Size = new System.Drawing.Size(144, 72);
+            // 
+            // btnMenuItemEditar
+            // 
+            this.btnMenuItemEditar.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemEditar.Name = "btnMenuItemEditar";
+            this.btnMenuItemEditar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.btnMenuItemEditar.Size = new System.Drawing.Size(143, 34);
+            this.btnMenuItemEditar.Text = "Editar";
+            this.btnMenuItemEditar.Click += new System.EventHandler(this.OnSelectEditar);
+            // 
+            // btnMenuItemExcluir
+            // 
+            this.btnMenuItemExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemExcluir.Name = "btnMenuItemExcluir";
+            this.btnMenuItemExcluir.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.btnMenuItemExcluir.Size = new System.Drawing.Size(143, 34);
+            this.btnMenuItemExcluir.Text = "Excluir";
             // 
             // colId
             // 
@@ -176,53 +217,59 @@
             this.colId.ReadOnly = true;
             this.colId.Visible = false;
             // 
-            // nome
+            // colNome
             // 
+            this.colNome.ContextMenuStrip = this.MenuItens;
             dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.nome.DefaultCellStyle = dataGridViewCellStyle3;
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
+            this.colNome.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colNome.HeaderText = "Nome";
+            this.colNome.Name = "colNome";
+            this.colNome.ReadOnly = true;
             // 
-            // rg
+            // colRg
             // 
+            this.colRg.ContextMenuStrip = this.MenuItens;
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.rg.DefaultCellStyle = dataGridViewCellStyle4;
-            this.rg.HeaderText = "RG";
-            this.rg.Name = "rg";
-            this.rg.ReadOnly = true;
+            this.colRg.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colRg.HeaderText = "RG";
+            this.colRg.Name = "colRg";
+            this.colRg.ReadOnly = true;
             // 
-            // cpf
+            // colCPF
             // 
+            this.colCPF.ContextMenuStrip = this.MenuItens;
             dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.cpf.DefaultCellStyle = dataGridViewCellStyle5;
-            this.cpf.HeaderText = "CPF";
-            this.cpf.Name = "cpf";
-            this.cpf.ReadOnly = true;
+            this.colCPF.DefaultCellStyle = dataGridViewCellStyle5;
+            this.colCPF.HeaderText = "CPF";
+            this.colCPF.Name = "colCPF";
+            this.colCPF.ReadOnly = true;
             // 
-            // cnh
+            // colCNH
             // 
+            this.colCNH.ContextMenuStrip = this.MenuItens;
             dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.cnh.DefaultCellStyle = dataGridViewCellStyle6;
-            this.cnh.HeaderText = "CNH";
-            this.cnh.Name = "cnh";
-            this.cnh.ReadOnly = true;
+            this.colCNH.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colCNH.HeaderText = "CNH";
+            this.colCNH.Name = "colCNH";
+            this.colCNH.ReadOnly = true;
             // 
-            // categoria
+            // colCategoria
             // 
+            this.colCategoria.ContextMenuStrip = this.MenuItens;
             dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.categoria.DefaultCellStyle = dataGridViewCellStyle7;
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
+            this.colCategoria.DefaultCellStyle = dataGridViewCellStyle7;
+            this.colCategoria.HeaderText = "Categoria";
+            this.colCategoria.Name = "colCategoria";
+            this.colCategoria.ReadOnly = true;
             // 
-            // vencimento
+            // colVencimento
             // 
+            this.colVencimento.ContextMenuStrip = this.MenuItens;
             dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.vencimento.DefaultCellStyle = dataGridViewCellStyle8;
-            this.vencimento.HeaderText = "Vencimento";
-            this.vencimento.Name = "vencimento";
-            this.vencimento.ReadOnly = true;
+            this.colVencimento.DefaultCellStyle = dataGridViewCellStyle8;
+            this.colVencimento.HeaderText = "Vencimento";
+            this.colVencimento.Name = "colVencimento";
+            this.colVencimento.ReadOnly = true;
             // 
             // FormMotoristas
             // 
@@ -235,6 +282,7 @@
             this.Text = "Motoristas";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridMotoristas)).EndInit();
+            this.MenuItens.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -244,12 +292,15 @@
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnCadastrar;
         private Guna.UI.WinForms.GunaDataGridView gridMotoristas;
+        private Guna.UI.WinForms.GunaContextMenuStrip MenuItens;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuItemEditar;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuItemExcluir;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cpf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cnh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vencimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCPF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCNH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colVencimento;
     }
 }

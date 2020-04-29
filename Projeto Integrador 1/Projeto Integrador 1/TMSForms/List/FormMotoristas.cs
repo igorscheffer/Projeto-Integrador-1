@@ -6,6 +6,8 @@ namespace Projeto_Integrador_1.TMSForms.List {
     public partial class FormMotoristas : Form {
         FormPrincipal fmPrincipal;
 
+        private DataGridViewCellEventArgs mouseLocation;
+
         public FormMotoristas(FormPrincipal Principal) {
             InitializeComponent();
             fmPrincipal = Principal;
@@ -30,11 +32,15 @@ namespace Projeto_Integrador_1.TMSForms.List {
             fmPrincipal.AtivarForm(new TMSForms.Register.FormMotoristas(fmPrincipal));
         }
 
-        private void OnSelectItem(object sender, DataGridViewCellEventArgs e) {
-            if (e.RowIndex >= 0) {
-                int Id = Convert.ToInt32(gridMotoristas.Rows[e.RowIndex].Cells[0].Value);
+        private void OnSelectEditar(object sender, EventArgs e) {
+            if (mouseLocation.RowIndex >= 0) {
+                int Id = Convert.ToInt32(gridMotoristas.Rows[mouseLocation.RowIndex].Cells[0].Value);
                 fmPrincipal.AtivarForm(new TMSForms.Register.FormMotoristas(fmPrincipal, Convert.ToInt32(Id)));
             }
+        }
+
+        private void OnMouseEnterCell(object sender, DataGridViewCellEventArgs e) {
+            mouseLocation = e;
         }
     }
 }

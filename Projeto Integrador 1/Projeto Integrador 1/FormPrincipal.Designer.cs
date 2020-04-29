@@ -96,11 +96,12 @@
             this.btnFinanceiro.Rotation = 0D;
             this.btnFinanceiro.Size = new System.Drawing.Size(220, 40);
             this.btnFinanceiro.TabIndex = 10;
+            this.btnFinanceiro.Tag = "financeiro";
             this.btnFinanceiro.Text = "Financeiro";
             this.btnFinanceiro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFinanceiro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFinanceiro.UseVisualStyleBackColor = false;
-            this.btnFinanceiro.Click += new System.EventHandler(this.btnFinanceiro_Click);
+            this.btnFinanceiro.Click += new System.EventHandler(this.OnClickMenu);
             // 
             // btnMultas
             // 
@@ -123,11 +124,12 @@
             this.btnMultas.Rotation = 0D;
             this.btnMultas.Size = new System.Drawing.Size(220, 40);
             this.btnMultas.TabIndex = 9;
+            this.btnMultas.Tag = "multas";
             this.btnMultas.Text = "Multas";
             this.btnMultas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMultas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMultas.UseVisualStyleBackColor = false;
-            this.btnMultas.Click += new System.EventHandler(this.btnMultas_Click);
+            this.btnMultas.Click += new System.EventHandler(this.OnClickMenu);
             // 
             // btnAbastecimentos
             // 
@@ -150,11 +152,12 @@
             this.btnAbastecimentos.Rotation = 0D;
             this.btnAbastecimentos.Size = new System.Drawing.Size(220, 40);
             this.btnAbastecimentos.TabIndex = 8;
+            this.btnAbastecimentos.Tag = "abastecimentos";
             this.btnAbastecimentos.Text = "Abastecimentos";
             this.btnAbastecimentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAbastecimentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAbastecimentos.UseVisualStyleBackColor = false;
-            this.btnAbastecimentos.Click += new System.EventHandler(this.btnAbastecimentos_Click);
+            this.btnAbastecimentos.Click += new System.EventHandler(this.OnClickMenu);
             // 
             // btnManutencoes
             // 
@@ -177,11 +180,12 @@
             this.btnManutencoes.Rotation = 0D;
             this.btnManutencoes.Size = new System.Drawing.Size(220, 40);
             this.btnManutencoes.TabIndex = 7;
+            this.btnManutencoes.Tag = "manutencoes";
             this.btnManutencoes.Text = "Manutenções";
             this.btnManutencoes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManutencoes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnManutencoes.UseVisualStyleBackColor = false;
-            this.btnManutencoes.Click += new System.EventHandler(this.btnManutencoes_Click);
+            this.btnManutencoes.Click += new System.EventHandler(this.OnClickMenu);
             // 
             // btnViagens
             // 
@@ -204,11 +208,12 @@
             this.btnViagens.Rotation = 0D;
             this.btnViagens.Size = new System.Drawing.Size(220, 40);
             this.btnViagens.TabIndex = 6;
+            this.btnViagens.Tag = "viagens";
             this.btnViagens.Text = "Viagens";
             this.btnViagens.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnViagens.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnViagens.UseVisualStyleBackColor = false;
-            this.btnViagens.Click += new System.EventHandler(this.btnViagens_Click);
+            this.btnViagens.Click += new System.EventHandler(this.OnClickMenu);
             // 
             // btnClientes
             // 
@@ -231,11 +236,12 @@
             this.btnClientes.Rotation = 0D;
             this.btnClientes.Size = new System.Drawing.Size(220, 40);
             this.btnClientes.TabIndex = 5;
+            this.btnClientes.Tag = "clientes";
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClientes.UseVisualStyleBackColor = false;
-            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            this.btnClientes.Click += new System.EventHandler(this.OnClickMenu);
             // 
             // btnVeiculos
             // 
@@ -258,11 +264,12 @@
             this.btnVeiculos.Rotation = 0D;
             this.btnVeiculos.Size = new System.Drawing.Size(220, 40);
             this.btnVeiculos.TabIndex = 4;
+            this.btnVeiculos.Tag = "veiculos";
             this.btnVeiculos.Text = "Veiculos";
             this.btnVeiculos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVeiculos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVeiculos.UseVisualStyleBackColor = false;
-            this.btnVeiculos.Click += new System.EventHandler(this.btnVeiculos_Click);
+            this.btnVeiculos.Click += new System.EventHandler(this.OnClickMenu);
             // 
             // btnMotoristas
             // 
@@ -285,11 +292,12 @@
             this.btnMotoristas.Rotation = 0D;
             this.btnMotoristas.Size = new System.Drawing.Size(220, 40);
             this.btnMotoristas.TabIndex = 3;
+            this.btnMotoristas.Tag = "motoristas";
             this.btnMotoristas.Text = "Motoristas";
             this.btnMotoristas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMotoristas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMotoristas.UseVisualStyleBackColor = false;
-            this.btnMotoristas.Click += new System.EventHandler(this.btnMotoristas_Click);
+            this.btnMotoristas.Click += new System.EventHandler(this.OnClickMenu);
             // 
             // btnHome
             // 
@@ -312,11 +320,12 @@
             this.btnHome.Rotation = 0D;
             this.btnHome.Size = new System.Drawing.Size(220, 40);
             this.btnHome.TabIndex = 2;
+            this.btnHome.Tag = "home";
             this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.Click += new System.EventHandler(this.OnClickMenu);
             // 
             // panel4
             // 
@@ -416,7 +425,7 @@
             this.btnHiddenMenu.Size = new System.Drawing.Size(60, 60);
             this.btnHiddenMenu.TabIndex = 1;
             this.btnHiddenMenu.UseVisualStyleBackColor = false;
-            this.btnHiddenMenu.Click += new System.EventHandler(this.btnHiddenMenu_Click);
+            this.btnHiddenMenu.Click += new System.EventHandler(this.OnClickHiddenMenu);
             // 
             // painelForm
             // 

@@ -39,17 +39,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridManutencoes = new Guna.UI.WinForms.GunaDataGridView();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.veiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MenuItens = new Guna.UI.WinForms.GunaContextMenuStrip();
+            this.btnMenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMenuItemExcluir = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCadastrar = new FontAwesome.Sharp.IconButton();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDataAgendada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDataRealizada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFornecedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridManutencoes)).BeginInit();
+            this.MenuItens.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,13 +83,13 @@
             this.gridManutencoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridManutencoes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
-            this.frota,
-            this.placa,
-            this.veiculo,
-            this.cor,
-            this.status,
-            this.Column1,
-            this.Column2});
+            this.colDataAgendada,
+            this.colDataRealizada,
+            this.colTipo,
+            this.colPlaca,
+            this.colFornecedor,
+            this.colValor,
+            this.colStatus});
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -130,65 +134,41 @@
             this.gridManutencoes.ThemeStyle.RowsStyle.Height = 35;
             this.gridManutencoes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridManutencoes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gridManutencoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnSelectItem);
+            this.gridManutencoes.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnMouseEnterCell);
             // 
-            // colId
+            // MenuItens
             // 
-            resources.ApplyResources(this.colId, "colId");
-            this.colId.Name = "colId";
-            this.colId.ReadOnly = true;
+            this.MenuItens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            resources.ApplyResources(this.MenuItens, "MenuItens");
+            this.MenuItens.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnMenuItemEditar,
+            this.btnMenuItemExcluir});
+            this.MenuItens.Name = "MenuItens";
+            this.MenuItens.RenderStyle.ArrowColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
+            this.MenuItens.RenderStyle.ColorTable = null;
+            this.MenuItens.RenderStyle.RoundedEdges = true;
+            this.MenuItens.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.MenuItens.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.MenuItens.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
+            this.MenuItens.ShowCheckMargin = true;
             // 
-            // frota
+            // btnMenuItemEditar
             // 
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.frota.DefaultCellStyle = dataGridViewCellStyle3;
-            this.frota.FillWeight = 110.1523F;
-            resources.ApplyResources(this.frota, "frota");
-            this.frota.Name = "frota";
+            this.btnMenuItemEditar.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemEditar.Name = "btnMenuItemEditar";
+            this.btnMenuItemEditar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            resources.ApplyResources(this.btnMenuItemEditar, "btnMenuItemEditar");
+            this.btnMenuItemEditar.Click += new System.EventHandler(this.OnSelectEditar);
             // 
-            // placa
+            // btnMenuItemExcluir
             // 
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.placa.DefaultCellStyle = dataGridViewCellStyle4;
-            this.placa.FillWeight = 112.1418F;
-            resources.ApplyResources(this.placa, "placa");
-            this.placa.Name = "placa";
-            // 
-            // veiculo
-            // 
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.veiculo.DefaultCellStyle = dataGridViewCellStyle5;
-            this.veiculo.FillWeight = 73.57122F;
-            resources.ApplyResources(this.veiculo, "veiculo");
-            this.veiculo.Name = "veiculo";
-            // 
-            // cor
-            // 
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.cor.DefaultCellStyle = dataGridViewCellStyle6;
-            this.cor.FillWeight = 74.44971F;
-            resources.ApplyResources(this.cor, "cor");
-            this.cor.Name = "cor";
-            // 
-            // status
-            // 
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.status.DefaultCellStyle = dataGridViewCellStyle7;
-            this.status.FillWeight = 177.1856F;
-            resources.ApplyResources(this.status, "status");
-            this.status.Name = "status";
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 75.1065F;
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 77.39284F;
-            resources.ApplyResources(this.Column2, "Column2");
-            this.Column2.Name = "Column2";
+            this.btnMenuItemExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemExcluir.Name = "btnMenuItemExcluir";
+            this.btnMenuItemExcluir.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            resources.ApplyResources(this.btnMenuItemExcluir, "btnMenuItemExcluir");
             // 
             // panel1
             // 
@@ -212,6 +192,78 @@
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // colId
+            // 
+            resources.ApplyResources(this.colId, "colId");
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
+            // 
+            // colDataAgendada
+            // 
+            this.colDataAgendada.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colDataAgendada.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colDataAgendada.FillWeight = 110.1523F;
+            resources.ApplyResources(this.colDataAgendada, "colDataAgendada");
+            this.colDataAgendada.Name = "colDataAgendada";
+            this.colDataAgendada.ReadOnly = true;
+            // 
+            // colDataRealizada
+            // 
+            this.colDataRealizada.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colDataRealizada.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colDataRealizada.FillWeight = 112.1418F;
+            resources.ApplyResources(this.colDataRealizada, "colDataRealizada");
+            this.colDataRealizada.Name = "colDataRealizada";
+            this.colDataRealizada.ReadOnly = true;
+            // 
+            // colTipo
+            // 
+            this.colTipo.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colTipo.DefaultCellStyle = dataGridViewCellStyle5;
+            this.colTipo.FillWeight = 73.57122F;
+            resources.ApplyResources(this.colTipo, "colTipo");
+            this.colTipo.Name = "colTipo";
+            this.colTipo.ReadOnly = true;
+            // 
+            // colPlaca
+            // 
+            this.colPlaca.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colPlaca.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colPlaca.FillWeight = 74.44971F;
+            resources.ApplyResources(this.colPlaca, "colPlaca");
+            this.colPlaca.Name = "colPlaca";
+            this.colPlaca.ReadOnly = true;
+            // 
+            // colFornecedor
+            // 
+            this.colFornecedor.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colFornecedor.DefaultCellStyle = dataGridViewCellStyle7;
+            this.colFornecedor.FillWeight = 177.1856F;
+            resources.ApplyResources(this.colFornecedor, "colFornecedor");
+            this.colFornecedor.Name = "colFornecedor";
+            this.colFornecedor.ReadOnly = true;
+            // 
+            // colValor
+            // 
+            this.colValor.ContextMenuStrip = this.MenuItens;
+            this.colValor.FillWeight = 75.1065F;
+            resources.ApplyResources(this.colValor, "colValor");
+            this.colValor.Name = "colValor";
+            this.colValor.ReadOnly = true;
+            // 
+            // colStatus
+            // 
+            this.colStatus.ContextMenuStrip = this.MenuItens;
+            this.colStatus.FillWeight = 77.39284F;
+            resources.ApplyResources(this.colStatus, "colStatus");
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
+            // 
             // FormManutencoes
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -221,6 +273,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormManutencoes";
             ((System.ComponentModel.ISupportInitialize)(this.gridManutencoes)).EndInit();
+            this.MenuItens.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -230,13 +283,16 @@
         private Guna.UI.WinForms.GunaDataGridView gridManutencoes;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnCadastrar;
+        private Guna.UI.WinForms.GunaContextMenuStrip MenuItens;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuItemEditar;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuItemExcluir;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn frota;
-        private System.Windows.Forms.DataGridViewTextBoxColumn placa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn veiculo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDataAgendada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDataRealizada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPlaca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFornecedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
     }
 }

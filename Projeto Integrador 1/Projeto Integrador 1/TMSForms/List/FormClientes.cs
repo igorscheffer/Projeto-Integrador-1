@@ -9,6 +9,8 @@ namespace Projeto_Integrador_1.TMSForms.List {
 
         FormPrincipal fmPrincipal;
 
+        private DataGridViewCellEventArgs mouseLocation;
+
         public FormClientes(FormPrincipal Principal) {
             InitializeComponent();
             fmPrincipal = Principal;
@@ -36,11 +38,15 @@ namespace Projeto_Integrador_1.TMSForms.List {
             fmPrincipal.AtivarForm(new TMSForms.Register.FormClientes(fmPrincipal));
         }
 
-        private void OnSelectItem(object sender, DataGridViewCellEventArgs e) {
-            if (e.RowIndex >= 0) {
-                int Id = Convert.ToInt32(gridClientes.Rows[e.RowIndex].Cells[0].Value);
+        private void OnSelectEditar(object sender, EventArgs e) {
+            if (mouseLocation.RowIndex >= 0) {
+                int Id = Convert.ToInt32(gridClientes.Rows[mouseLocation.RowIndex].Cells[0].Value);
                 fmPrincipal.AtivarForm(new TMSForms.Register.FormClientes(fmPrincipal, Convert.ToInt32(Id)));
             }
+        }
+
+        private void OnMouseEnterCell(object sender, DataGridViewCellEventArgs e) {
+            mouseLocation = e;
         }
     }
 }

@@ -34,11 +34,6 @@
             this.tabPanelItens = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.gridItens = new Guna.UI.WinForms.GunaDataGridView();
-            this.nfe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
@@ -106,6 +101,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabViagem = new System.Windows.Forms.TabControl();
+            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPanelItens.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridItens)).BeginInit();
@@ -168,11 +168,11 @@
             this.gridItens.ColumnHeadersHeight = 35;
             this.gridItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridItens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nfe,
-            this.descricao,
-            this.peso,
-            this.valor,
-            this.Column1});
+            this.colCodigo,
+            this.colDescricao,
+            this.colQtd,
+            this.colValor,
+            this.colTotal});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
@@ -218,32 +218,6 @@
             this.gridItens.ThemeStyle.RowsStyle.Height = 30;
             this.gridItens.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridItens.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            // 
-            // nfe
-            // 
-            this.nfe.HeaderText = "COD.";
-            this.nfe.Name = "nfe";
-            // 
-            // descricao
-            // 
-            this.descricao.HeaderText = "DESCRIÇÃO";
-            this.descricao.Name = "descricao";
-            // 
-            // peso
-            // 
-            this.peso.HeaderText = "QTD.";
-            this.peso.Name = "peso";
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "VALOR";
-            this.valor.Name = "valor";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "TOTAL";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             // 
             // panel8
             // 
@@ -1348,6 +1322,32 @@
             this.tabViagem.Size = new System.Drawing.Size(1040, 637);
             this.tabViagem.TabIndex = 271;
             // 
+            // colCodigo
+            // 
+            this.colCodigo.HeaderText = "COD.";
+            this.colCodigo.Name = "colCodigo";
+            // 
+            // colDescricao
+            // 
+            this.colDescricao.HeaderText = "DESCRIÇÃO";
+            this.colDescricao.Name = "colDescricao";
+            // 
+            // colQtd
+            // 
+            this.colQtd.HeaderText = "QTD.";
+            this.colQtd.Name = "colQtd";
+            // 
+            // colValor
+            // 
+            this.colValor.HeaderText = "VALOR";
+            this.colValor.Name = "colValor";
+            // 
+            // colTotal
+            // 
+            this.colTotal.HeaderText = "TOTAL";
+            this.colTotal.Name = "colTotal";
+            this.colTotal.ReadOnly = true;
+            // 
             // FormManutencoes
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1442,11 +1442,6 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private Guna.UI.WinForms.GunaTextBox textOrdemServico;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nfe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn peso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel6;
@@ -1461,5 +1456,10 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Panel panel20;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colQtd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTotal;
     }
 }

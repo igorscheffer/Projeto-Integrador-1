@@ -28,26 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.gridClientes = new Guna.UI.WinForms.GunaDataGridView();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.veiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCadastrar = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).BeginInit();
+            this.btnMenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMenuItemExcluir = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItens = new Guna.UI.WinForms.GunaContextMenuStrip();
+            this.gridClientes = new Guna.UI.WinForms.GunaDataGridView();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTipoCadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTipoPessoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRazaoSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            this.MenuItens.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.panel1.Controls.Add(this.btnCadastrar);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(152)))), ((int)(((byte)(204)))));
+            resources.ApplyResources(this.btnCadastrar, "btnCadastrar");
+            this.btnCadastrar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnCadastrar.IconColor = System.Drawing.Color.White;
+            this.btnCadastrar.IconSize = 16;
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Rotation = 0D;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // btnMenuItemEditar
+            // 
+            this.btnMenuItemEditar.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemEditar.Name = "btnMenuItemEditar";
+            this.btnMenuItemEditar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            resources.ApplyResources(this.btnMenuItemEditar, "btnMenuItemEditar");
+            this.btnMenuItemEditar.Click += new System.EventHandler(this.OnSelectEditar);
+            // 
+            // btnMenuItemExcluir
+            // 
+            this.btnMenuItemExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemExcluir.Name = "btnMenuItemExcluir";
+            this.btnMenuItemExcluir.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            resources.ApplyResources(this.btnMenuItemExcluir, "btnMenuItemExcluir");
+            // 
+            // MenuItens
+            // 
+            this.MenuItens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            resources.ApplyResources(this.MenuItens, "MenuItens");
+            this.MenuItens.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnMenuItemEditar,
+            this.btnMenuItemExcluir});
+            this.MenuItens.Name = "MenuItens";
+            this.MenuItens.RenderStyle.ArrowColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
+            this.MenuItens.RenderStyle.ColorTable = null;
+            this.MenuItens.RenderStyle.RoundedEdges = true;
+            this.MenuItens.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.MenuItens.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.MenuItens.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
+            this.MenuItens.ShowCheckMargin = true;
             // 
             // gridClientes
             // 
@@ -75,10 +135,10 @@
             this.gridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
-            this.frota,
-            this.cor,
-            this.placa,
-            this.veiculo});
+            this.colTipoCadastro,
+            this.colTipoPessoa,
+            this.colCNPJ,
+            this.colRazaoSocial});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -123,7 +183,7 @@
             this.gridClientes.ThemeStyle.RowsStyle.Height = 35;
             this.gridClientes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridClientes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gridClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnSelectItem);
+            this.gridClientes.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnMouseEnterCell);
             // 
             // colId
             // 
@@ -131,63 +191,45 @@
             this.colId.Name = "colId";
             this.colId.ReadOnly = true;
             // 
-            // frota
+            // colTipoCadastro
             // 
+            this.colTipoCadastro.ContextMenuStrip = this.MenuItens;
             dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.frota.DefaultCellStyle = dataGridViewCellStyle3;
-            this.frota.FillWeight = 61.80534F;
-            resources.ApplyResources(this.frota, "frota");
-            this.frota.Name = "frota";
-            this.frota.ReadOnly = true;
+            this.colTipoCadastro.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colTipoCadastro.FillWeight = 61.80534F;
+            resources.ApplyResources(this.colTipoCadastro, "colTipoCadastro");
+            this.colTipoCadastro.Name = "colTipoCadastro";
+            this.colTipoCadastro.ReadOnly = true;
             // 
-            // cor
+            // colTipoPessoa
             // 
+            this.colTipoPessoa.ContextMenuStrip = this.MenuItens;
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.cor.DefaultCellStyle = dataGridViewCellStyle4;
-            this.cor.FillWeight = 50.7614F;
-            resources.ApplyResources(this.cor, "cor");
-            this.cor.Name = "cor";
-            this.cor.ReadOnly = true;
+            this.colTipoPessoa.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colTipoPessoa.FillWeight = 50.7614F;
+            resources.ApplyResources(this.colTipoPessoa, "colTipoPessoa");
+            this.colTipoPessoa.Name = "colTipoPessoa";
+            this.colTipoPessoa.ReadOnly = true;
             // 
-            // placa
+            // colCNPJ
             // 
+            this.colCNPJ.ContextMenuStrip = this.MenuItens;
             dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.placa.DefaultCellStyle = dataGridViewCellStyle5;
-            this.placa.FillWeight = 62.70886F;
-            resources.ApplyResources(this.placa, "placa");
-            this.placa.Name = "placa";
-            this.placa.ReadOnly = true;
+            this.colCNPJ.DefaultCellStyle = dataGridViewCellStyle5;
+            this.colCNPJ.FillWeight = 62.70886F;
+            resources.ApplyResources(this.colCNPJ, "colCNPJ");
+            this.colCNPJ.Name = "colCNPJ";
+            this.colCNPJ.ReadOnly = true;
             // 
-            // veiculo
+            // colRazaoSocial
             // 
+            this.colRazaoSocial.ContextMenuStrip = this.MenuItens;
             dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.veiculo.DefaultCellStyle = dataGridViewCellStyle6;
-            this.veiculo.FillWeight = 255.6464F;
-            resources.ApplyResources(this.veiculo, "veiculo");
-            this.veiculo.Name = "veiculo";
-            this.veiculo.ReadOnly = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.panel1.Controls.Add(this.btnCadastrar);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(152)))), ((int)(((byte)(204)))));
-            resources.ApplyResources(this.btnCadastrar, "btnCadastrar");
-            this.btnCadastrar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnCadastrar.IconColor = System.Drawing.Color.White;
-            this.btnCadastrar.IconSize = 16;
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Rotation = 0D;
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.colRazaoSocial.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colRazaoSocial.FillWeight = 255.6464F;
+            resources.ApplyResources(this.colRazaoSocial, "colRazaoSocial");
+            this.colRazaoSocial.Name = "colRazaoSocial";
+            this.colRazaoSocial.ReadOnly = true;
             // 
             // FormClientes
             // 
@@ -197,20 +239,24 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormClientes";
-            ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.MenuItens.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Guna.UI.WinForms.GunaDataGridView gridClientes;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnCadastrar;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuItemEditar;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuItemExcluir;
+        private Guna.UI.WinForms.GunaContextMenuStrip MenuItens;
+        private Guna.UI.WinForms.GunaDataGridView gridClientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn frota;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn placa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn veiculo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTipoCadastro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTipoPessoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCNPJ;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRazaoSocial;
     }
 }

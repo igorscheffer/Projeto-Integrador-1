@@ -33,18 +33,22 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridAbastecimentos = new Guna.UI.WinForms.GunaDataGridView();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.veiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MenuItens = new Guna.UI.WinForms.GunaContextMenuStrip();
+            this.btnMenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMenuItemExcluir = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCadastrar = new FontAwesome.Sharp.IconButton();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colData = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCombustivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLitros = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHodometro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridAbastecimentos)).BeginInit();
+            this.MenuItens.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,14 +78,14 @@
             this.gridAbastecimentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridAbastecimentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
-            this.frota,
-            this.cor,
-            this.placa,
-            this.veiculo,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.colData,
+            this.colPlaca,
+            this.colPosto,
+            this.colCombustivel,
+            this.colLitros,
+            this.colValor,
+            this.colHodometro,
+            this.colStatus});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -126,77 +130,41 @@
             this.gridAbastecimentos.ThemeStyle.RowsStyle.Height = 35;
             this.gridAbastecimentos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridAbastecimentos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gridAbastecimentos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnSelectItem);
+            this.gridAbastecimentos.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnMouseEnterCell);
             // 
-            // colId
+            // MenuItens
             // 
-            resources.ApplyResources(this.colId, "colId");
-            this.colId.Name = "colId";
-            this.colId.ReadOnly = true;
+            this.MenuItens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            resources.ApplyResources(this.MenuItens, "MenuItens");
+            this.MenuItens.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnMenuItemEditar,
+            this.btnMenuItemExcluir});
+            this.MenuItens.Name = "MenuItens";
+            this.MenuItens.RenderStyle.ArrowColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
+            this.MenuItens.RenderStyle.ColorTable = null;
+            this.MenuItens.RenderStyle.RoundedEdges = true;
+            this.MenuItens.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.MenuItens.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.MenuItens.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
+            this.MenuItens.ShowCheckMargin = true;
             // 
-            // frota
+            // btnMenuItemEditar
             // 
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.frota.DefaultCellStyle = dataGridViewCellStyle3;
-            this.frota.FillWeight = 115F;
-            resources.ApplyResources(this.frota, "frota");
-            this.frota.Name = "frota";
-            this.frota.ReadOnly = true;
+            this.btnMenuItemEditar.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemEditar.Name = "btnMenuItemEditar";
+            this.btnMenuItemEditar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            resources.ApplyResources(this.btnMenuItemEditar, "btnMenuItemEditar");
+            this.btnMenuItemEditar.Click += new System.EventHandler(this.OnSelectEditar);
             // 
-            // cor
+            // btnMenuItemExcluir
             // 
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.cor.DefaultCellStyle = dataGridViewCellStyle4;
-            this.cor.FillWeight = 70F;
-            resources.ApplyResources(this.cor, "cor");
-            this.cor.Name = "cor";
-            this.cor.ReadOnly = true;
-            // 
-            // placa
-            // 
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.placa.DefaultCellStyle = dataGridViewCellStyle5;
-            this.placa.FillWeight = 130F;
-            resources.ApplyResources(this.placa, "placa");
-            this.placa.Name = "placa";
-            this.placa.ReadOnly = true;
-            // 
-            // veiculo
-            // 
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.veiculo.DefaultCellStyle = dataGridViewCellStyle6;
-            this.veiculo.FillWeight = 80F;
-            resources.ApplyResources(this.veiculo, "veiculo");
-            this.veiculo.Name = "veiculo";
-            this.veiculo.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 65F;
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 130F;
-            resources.ApplyResources(this.Column2, "Column2");
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 75F;
-            resources.ApplyResources(this.Column3, "Column3");
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 75F;
-            resources.ApplyResources(this.Column4, "Column4");
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.btnMenuItemExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemExcluir.Name = "btnMenuItemExcluir";
+            this.btnMenuItemExcluir.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            resources.ApplyResources(this.btnMenuItemExcluir, "btnMenuItemExcluir");
             // 
             // panel1
             // 
@@ -220,6 +188,84 @@
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // colId
+            // 
+            resources.ApplyResources(this.colId, "colId");
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
+            // 
+            // colData
+            // 
+            this.colData.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colData.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colData.FillWeight = 115F;
+            resources.ApplyResources(this.colData, "colData");
+            this.colData.Name = "colData";
+            this.colData.ReadOnly = true;
+            // 
+            // colPlaca
+            // 
+            this.colPlaca.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colPlaca.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colPlaca.FillWeight = 70F;
+            resources.ApplyResources(this.colPlaca, "colPlaca");
+            this.colPlaca.Name = "colPlaca";
+            this.colPlaca.ReadOnly = true;
+            // 
+            // colPosto
+            // 
+            this.colPosto.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colPosto.DefaultCellStyle = dataGridViewCellStyle5;
+            this.colPosto.FillWeight = 130F;
+            resources.ApplyResources(this.colPosto, "colPosto");
+            this.colPosto.Name = "colPosto";
+            this.colPosto.ReadOnly = true;
+            // 
+            // colCombustivel
+            // 
+            this.colCombustivel.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colCombustivel.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colCombustivel.FillWeight = 80F;
+            resources.ApplyResources(this.colCombustivel, "colCombustivel");
+            this.colCombustivel.Name = "colCombustivel";
+            this.colCombustivel.ReadOnly = true;
+            // 
+            // colLitros
+            // 
+            this.colLitros.ContextMenuStrip = this.MenuItens;
+            this.colLitros.FillWeight = 65F;
+            resources.ApplyResources(this.colLitros, "colLitros");
+            this.colLitros.Name = "colLitros";
+            this.colLitros.ReadOnly = true;
+            // 
+            // colValor
+            // 
+            this.colValor.ContextMenuStrip = this.MenuItens;
+            this.colValor.FillWeight = 130F;
+            resources.ApplyResources(this.colValor, "colValor");
+            this.colValor.Name = "colValor";
+            this.colValor.ReadOnly = true;
+            // 
+            // colHodometro
+            // 
+            this.colHodometro.ContextMenuStrip = this.MenuItens;
+            this.colHodometro.FillWeight = 75F;
+            resources.ApplyResources(this.colHodometro, "colHodometro");
+            this.colHodometro.Name = "colHodometro";
+            this.colHodometro.ReadOnly = true;
+            // 
+            // colStatus
+            // 
+            this.colStatus.ContextMenuStrip = this.MenuItens;
+            this.colStatus.FillWeight = 75F;
+            resources.ApplyResources(this.colStatus, "colStatus");
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
+            // 
             // FormAbastecimentos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -229,6 +275,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAbastecimentos";
             ((System.ComponentModel.ISupportInitialize)(this.gridAbastecimentos)).EndInit();
+            this.MenuItens.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -238,14 +285,17 @@
         private Guna.UI.WinForms.GunaDataGridView gridAbastecimentos;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnCadastrar;
+        private Guna.UI.WinForms.GunaContextMenuStrip MenuItens;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuItemEditar;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuItemExcluir;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn frota;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn placa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn veiculo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPlaca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPosto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCombustivel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLitros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colHodometro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
     }
 }

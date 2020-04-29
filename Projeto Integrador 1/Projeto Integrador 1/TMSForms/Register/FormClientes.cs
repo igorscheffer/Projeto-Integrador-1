@@ -69,7 +69,6 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             catch (Exception e) {
                 MessageBox.Show("Houve um erro ao preencher os dados (" + e.Message + ").");
             }
-
         }
 
         private void onBuscarCEP(object sender, EventArgs e) {

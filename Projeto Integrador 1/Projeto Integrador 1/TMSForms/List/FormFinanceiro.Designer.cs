@@ -39,17 +39,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridFinanceiro = new Guna.UI.WinForms.GunaDataGridView();
+            this.MenuItens = new Guna.UI.WinForms.GunaContextMenuStrip();
+            this.btnMenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMenuItemExcluir = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCadastrar = new FontAwesome.Sharp.IconButton();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.veiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Motorista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colVencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFormaPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridFinanceiro)).BeginInit();
+            this.MenuItens.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,13 +83,13 @@
             this.gridFinanceiro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridFinanceiro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
-            this.frota,
-            this.placa,
-            this.veiculo,
-            this.cor,
-            this.status,
-            this.Column1,
-            this.Motorista});
+            this.colTipo,
+            this.colEmissao,
+            this.colVencimento,
+            this.colNome,
+            this.colFormaPagamento,
+            this.colValor,
+            this.colStatus});
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -133,7 +137,41 @@
             this.gridFinanceiro.ThemeStyle.RowsStyle.Height = 35;
             this.gridFinanceiro.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridFinanceiro.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gridFinanceiro.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnSelectItem);
+            this.gridFinanceiro.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnMouseEnterCell);
+            // 
+            // MenuItens
+            // 
+            this.MenuItens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            resources.ApplyResources(this.MenuItens, "MenuItens");
+            this.MenuItens.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnMenuItemEditar,
+            this.btnMenuItemExcluir});
+            this.MenuItens.Name = "MenuItens";
+            this.MenuItens.RenderStyle.ArrowColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
+            this.MenuItens.RenderStyle.ColorTable = null;
+            this.MenuItens.RenderStyle.RoundedEdges = true;
+            this.MenuItens.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.MenuItens.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.MenuItens.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.MenuItens.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
+            this.MenuItens.ShowCheckMargin = true;
+            // 
+            // btnMenuItemEditar
+            // 
+            this.btnMenuItemEditar.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemEditar.Name = "btnMenuItemEditar";
+            this.btnMenuItemEditar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            resources.ApplyResources(this.btnMenuItemEditar, "btnMenuItemEditar");
+            this.btnMenuItemEditar.Click += new System.EventHandler(this.OnSelectEditar);
+            // 
+            // btnMenuItemExcluir
+            // 
+            this.btnMenuItemExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemExcluir.Name = "btnMenuItemExcluir";
+            this.btnMenuItemExcluir.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            resources.ApplyResources(this.btnMenuItemExcluir, "btnMenuItemExcluir");
             // 
             // panel1
             // 
@@ -163,64 +201,71 @@
             this.colId.Name = "colId";
             this.colId.ReadOnly = true;
             // 
-            // frota
+            // colTipo
             // 
+            this.colTipo.ContextMenuStrip = this.MenuItens;
             dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.frota.DefaultCellStyle = dataGridViewCellStyle3;
-            this.frota.FillWeight = 88.78702F;
-            resources.ApplyResources(this.frota, "frota");
-            this.frota.Name = "frota";
-            this.frota.ReadOnly = true;
+            this.colTipo.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colTipo.FillWeight = 88.78702F;
+            resources.ApplyResources(this.colTipo, "colTipo");
+            this.colTipo.Name = "colTipo";
+            this.colTipo.ReadOnly = true;
             // 
-            // placa
+            // colEmissao
             // 
+            this.colEmissao.ContextMenuStrip = this.MenuItens;
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.placa.DefaultCellStyle = dataGridViewCellStyle4;
-            this.placa.FillWeight = 83.05664F;
-            resources.ApplyResources(this.placa, "placa");
-            this.placa.Name = "placa";
-            this.placa.ReadOnly = true;
+            this.colEmissao.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colEmissao.FillWeight = 83.05664F;
+            resources.ApplyResources(this.colEmissao, "colEmissao");
+            this.colEmissao.Name = "colEmissao";
+            this.colEmissao.ReadOnly = true;
             // 
-            // veiculo
+            // colVencimento
             // 
+            this.colVencimento.ContextMenuStrip = this.MenuItens;
             dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.veiculo.DefaultCellStyle = dataGridViewCellStyle5;
-            this.veiculo.FillWeight = 101.5228F;
-            resources.ApplyResources(this.veiculo, "veiculo");
-            this.veiculo.Name = "veiculo";
-            this.veiculo.ReadOnly = true;
+            this.colVencimento.DefaultCellStyle = dataGridViewCellStyle5;
+            this.colVencimento.FillWeight = 101.5228F;
+            resources.ApplyResources(this.colVencimento, "colVencimento");
+            this.colVencimento.Name = "colVencimento";
+            this.colVencimento.ReadOnly = true;
             // 
-            // cor
+            // colNome
             // 
+            this.colNome.ContextMenuStrip = this.MenuItens;
             dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.cor.DefaultCellStyle = dataGridViewCellStyle6;
-            this.cor.FillWeight = 105.9449F;
-            resources.ApplyResources(this.cor, "cor");
-            this.cor.Name = "cor";
-            this.cor.ReadOnly = true;
+            this.colNome.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colNome.FillWeight = 105.9449F;
+            resources.ApplyResources(this.colNome, "colNome");
+            this.colNome.Name = "colNome";
+            this.colNome.ReadOnly = true;
             // 
-            // status
+            // colFormaPagamento
             // 
+            this.colFormaPagamento.ContextMenuStrip = this.MenuItens;
             dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.status.DefaultCellStyle = dataGridViewCellStyle7;
-            this.status.FillWeight = 113.1045F;
-            resources.ApplyResources(this.status, "status");
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
+            this.colFormaPagamento.DefaultCellStyle = dataGridViewCellStyle7;
+            this.colFormaPagamento.FillWeight = 113.1045F;
+            resources.ApplyResources(this.colFormaPagamento, "colFormaPagamento");
+            this.colFormaPagamento.Name = "colFormaPagamento";
+            this.colFormaPagamento.ReadOnly = true;
             // 
-            // Column1
+            // colValor
             // 
-            this.Column1.FillWeight = 95.67404F;
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.colValor.ContextMenuStrip = this.MenuItens;
+            this.colValor.FillWeight = 95.67404F;
+            resources.ApplyResources(this.colValor, "colValor");
+            this.colValor.Name = "colValor";
+            this.colValor.ReadOnly = true;
             // 
-            // Motorista
+            // colStatus
             // 
-            this.Motorista.FillWeight = 116.2358F;
-            resources.ApplyResources(this.Motorista, "Motorista");
-            this.Motorista.Name = "Motorista";
-            this.Motorista.ReadOnly = true;
+            this.colStatus.ContextMenuStrip = this.MenuItens;
+            this.colStatus.FillWeight = 116.2358F;
+            resources.ApplyResources(this.colStatus, "colStatus");
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
             // 
             // FormFinanceiro
             // 
@@ -231,6 +276,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormFinanceiro";
             ((System.ComponentModel.ISupportInitialize)(this.gridFinanceiro)).EndInit();
+            this.MenuItens.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -240,13 +286,16 @@
         private Guna.UI.WinForms.GunaDataGridView gridFinanceiro;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnCadastrar;
+        private Guna.UI.WinForms.GunaContextMenuStrip MenuItens;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuItemEditar;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuItemExcluir;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn frota;
-        private System.Windows.Forms.DataGridViewTextBoxColumn placa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn veiculo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Motorista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEmissao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colVencimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFormaPagamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
     }
 }

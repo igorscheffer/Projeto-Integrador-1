@@ -9,6 +9,8 @@ namespace Projeto_Integrador_1.TMSForms.List {
 
         FormPrincipal fmPrincipal;
 
+        private DataGridViewCellEventArgs mouseLocation;
+
         public FormFinanceiro(FormPrincipal Principal) {
             InitializeComponent();
             fmPrincipal = Principal;
@@ -22,13 +24,14 @@ namespace Projeto_Integrador_1.TMSForms.List {
             financeiro.GetAll();
 
             foreach (dynamic fin in financeiro.Results) {
-                string Tipo = ListaStatus.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(fin.Tipo)).Text;
-                string FormaPagamento = ListaStatus.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(fin.FormaPagamento)).Text;
+                string Tipo = ListaTipos.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(fin.Tipo)).Text;
+                string FormaPagamento = ListaFormaPagamentos.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(fin.FormaPagamento)).Text;
                 string Status = ListaStatus.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(fin.Status)).Text;
                 gridFinanceiro.Rows.Add(
+                    fin.Id,
                     Tipo,
-                    fin.Emissao,
-                    fin.Vencimento,
+                    fin.DataEmissao,
+                    fin.DataVencimento,
                     fin.Nome,
                     FormaPagamento,
                     fin.Valor,
@@ -41,11 +44,15 @@ namespace Projeto_Integrador_1.TMSForms.List {
             fmPrincipal.AtivarForm(new TMSForms.Register.FormFinanceiro(fmPrincipal));
         }
 
-        private void OnSelectItem(object sender, DataGridViewCellEventArgs e) {
-            if (e.RowIndex >= 0) {
-                int Id = Convert.ToInt32(gridFinanceiro.Rows[e.RowIndex].Cells[0].Value);
+        private void OnSelectEditar(object sender, EventArgs e) {
+            if (mouseLocation.RowIndex >= 0) {
+                int Id = Convert.ToInt32(gridFinanceiro.Rows[mouseLocation.RowIndex].Cells[0].Value);
                 fmPrincipal.AtivarForm(new TMSForms.Register.FormFinanceiro(fmPrincipal, Convert.ToInt32(Id)));
             }
+        }
+
+        private void OnMouseEnterCell(object sender, DataGridViewCellEventArgs e) {
+            mouseLocation = e;
         }
     }
 }

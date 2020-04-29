@@ -26,7 +26,7 @@ namespace Projeto_Integrador_1.Connection {
         public void Create() {
             string sql = "INSERT INTO `abastecimentos`(`viagem`, `posto`, `veiculo`, `motorista`, `data`, `cupom`, `combustivel`, `hodometro`, `status`, `litros`, `valor`, `total`) VALUES (@viagem, @posto, @veiculo, @motorista, @data, @cupom, @combustivel, @hodometro, @status, @litros, @valor, @total);";
             try {
-                OpenConnection();
+                Open();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
 
@@ -58,7 +58,7 @@ namespace Projeto_Integrador_1.Connection {
         public void Update() {
             string sql = "UPDATE `abastecimentos` SET `viagem` = @viagem, `posto` = @posto, `veiculo` = @veiculo, `motorista` = @motorista, `data` = @data, `cupom` = @cupom, `combustivel` = @combustivel, `hodometro` = @hodometro, `status` = @status, `litros` = @litros, `valor` = @valor, `total` = @total WHERE `id` = @id LIMIT 1;";
             try {
-                OpenConnection();
+                Open();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
 
@@ -91,7 +91,7 @@ namespace Projeto_Integrador_1.Connection {
         public void Get() {
             string sql = "SELECT `abastecimentos`.*, `clientes`.`razao_social` AS `posto_nome`, `veiculos`.`placa` AS `veiculo_placa`, `motoristas`.`nome` AS `motorista_nome` FROM `abastecimentos` LEFT OUTER JOIN `clientes` ON (`abastecimentos`.`posto` = `clientes`.`id`) LEFT OUTER JOIN `veiculos` ON (`abastecimentos`.`veiculo` = `veiculos`.`id`) LEFT OUTER JOIN `motoristas` ON (`abastecimentos`.`motorista` = `motoristas`.`id`) WHERE `abastecimentos`.`id` = @id LIMIT 1;";
             try {
-                OpenConnection();
+                Open();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@id", Id);
@@ -117,7 +117,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 data.Close();
 
-                CloseConnection();
+                Close();
 
                 Success = true;
             }
@@ -130,7 +130,7 @@ namespace Projeto_Integrador_1.Connection {
         public void GetAll() {
             string sql = "SELECT `abastecimentos`.*, `clientes`.`razao_social` AS `posto_nome`, `veiculos`.`placa` AS `veiculo_placa`, `motoristas`.`nome` AS `motorista_nome` FROM `abastecimentos` LEFT OUTER JOIN `clientes` ON (`abastecimentos`.`posto` = `clientes`.`id`) LEFT OUTER JOIN `veiculos` ON (`abastecimentos`.`veiculo` = `veiculos`.`id`) LEFT OUTER JOIN `motoristas` ON (`abastecimentos`.`motorista` = `motoristas`.`id`);";
             try {
-                OpenConnection();
+                Open();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
 
@@ -153,7 +153,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 data.Close();
 
-                CloseConnection();
+                Close();
 
                 Success = true;
             }

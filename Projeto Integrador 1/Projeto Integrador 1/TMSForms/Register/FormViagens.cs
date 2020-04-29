@@ -67,6 +67,45 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             }
         }
 
+        private void PreencherGrids(string cargas, string custos, string abastecimentos) {
+            if (!string.IsNullOrWhiteSpace(cargas)) {
+                List<dynamic> Cargas = JsonConvert.DeserializeObject<List<dynamic>>(cargas);
+                foreach (var carga in Cargas) {
+                    gridCustos.Rows.Add(
+                        carga.NFE,
+                        carga.Descricao,
+                        carga.Peso,
+                        carga.Valor
+                    );
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(custos)) {
+                List<dynamic> Custos = JsonConvert.DeserializeObject<List<dynamic>>(custos);
+                foreach (var custo in Custos) {
+                    gridCustos.Rows.Add(
+                        custo.Data,
+                        custo.Descricao,
+                        custo.QTD,
+                        custo.Valor
+                    );
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(abastecimentos)) {
+                List<dynamic> Abastecimentos = JsonConvert.DeserializeObject<List<dynamic>>(abastecimentos);
+                foreach (var abastecimento in Abastecimentos) {
+                    gridAbastecimentos.Rows.Add(
+                        abastecimento.Data,
+                        abastecimento.Posto,
+                        Convert.ToInt32(abastecimento.Combustivel),
+                        abastecimento.Litros,
+                        abastecimento.Valor
+                    );
+                }
+            }
+        }
+
         private void PreencherDados() {
             try {
                 Viagens viagens = new Viagens();
@@ -97,6 +136,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 textHodometroPercorrido.Text = Convert.ToString(viagem.HodometroPercorrido);
                 textValor.Text = Convert.ToString(viagem.Valor);
                 textInformacoesComplementares.Text = viagem.InformacoesComplementares;
+
+                PreencherGrids(Convert.ToString(viagem.Cargas), Convert.ToString(viagem.Custos), Convert.ToString(viagem.Abastecimentos));
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);

@@ -118,10 +118,6 @@
             this.tabPanelCargas = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.gridCargas = new Guna.UI.WinForms.GunaDataGridView();
-            this.nfe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
@@ -175,6 +171,10 @@
             this.textAbastecimentoValor = new Guna.UI.WinForms.GunaTextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
+            this.colNFE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             this.tabViagem.SuspendLayout();
             this.tabPanelViagem.SuspendLayout();
@@ -1587,10 +1587,10 @@
             this.gridCargas.ColumnHeadersHeight = 35;
             this.gridCargas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridCargas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nfe,
-            this.descricao,
-            this.peso,
-            this.valor});
+            this.colNFE,
+            this.colDescricao,
+            this.colPeso,
+            this.colValor});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
@@ -1636,26 +1636,6 @@
             this.gridCargas.ThemeStyle.RowsStyle.Height = 30;
             this.gridCargas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridCargas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            // 
-            // nfe
-            // 
-            this.nfe.HeaderText = "NF-E";
-            this.nfe.Name = "nfe";
-            // 
-            // descricao
-            // 
-            this.descricao.HeaderText = "DESCRIÇÃO";
-            this.descricao.Name = "descricao";
-            // 
-            // peso
-            // 
-            this.peso.HeaderText = "PESO";
-            this.peso.Name = "peso";
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "VALOR";
-            this.valor.Name = "valor";
             // 
             // panel8
             // 
@@ -2496,6 +2476,26 @@
             this.label38.TabIndex = 262;
             this.label38.Text = "Data";
             // 
+            // colNFE
+            // 
+            this.colNFE.HeaderText = "NF-E";
+            this.colNFE.Name = "colNFE";
+            // 
+            // colDescricao
+            // 
+            this.colDescricao.HeaderText = "DESCRIÇÃO";
+            this.colDescricao.Name = "colDescricao";
+            // 
+            // colPeso
+            // 
+            this.colPeso.HeaderText = "PESO";
+            this.colPeso.Name = "colPeso";
+            // 
+            // colValor
+            // 
+            this.colValor.HeaderText = "VALOR";
+            this.colValor.Name = "colValor";
+            // 
             // FormViagens
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2634,10 +2634,6 @@
         private Guna.UI.WinForms.GunaTextBox textCargaValor;
         private FontAwesome.Sharp.IconButton btnAddCarga;
         private Guna.UI.WinForms.GunaDataGridView gridCargas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nfe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn peso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
         private System.Windows.Forms.TabPage tabPanelCustos;
         private System.Windows.Forms.TabPage tabPanelCargas;
         private System.Windows.Forms.TabPage tabPanelAbastecimentos;
@@ -2692,5 +2688,9 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Panel panel18;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNFE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPeso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colValor;
     }
 }

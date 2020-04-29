@@ -2,6 +2,8 @@
 using System;
 using System.Windows.Forms;
 using Projeto_Integrador_1.Util.Validate;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormFinanceiro : Form {
@@ -10,6 +12,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         FormPrincipal fmPrincipal;
 
         private int Id;
+
+        private string jsonParcelas;
 
         public FormFinanceiro(FormPrincipal fmPrincipal = null, int Id = 0) {
             InitializeComponent();
@@ -46,8 +50,51 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             }
         }
 
-        private void PreencherDados() {
+        private void PreencherGrids(string json) {
+            if (!string.IsNullOrWhiteSpace(json)) {
+                List<dynamic> Parcelas = JsonConvert.DeserializeObject<List<dynamic>>(json);
+                foreach (var parcela in Parcelas) {
+                    gridParcelas.Rows.Add(
+                        parcela.Parcela,
+                        parcela.Data,
+                        parcela.Valor,
+                        Convert.ToInt32(parcela.FormaPagamento),
+                        parcela.Observacoes,
+                        parcela.Pago
+                    );
+                }
 
+                lblInfoPagamento.Visible = true;
+                panelInfoPagamento.Visible = true;
+                gridParcelas.Visible = true;
+            }
+        }
+
+        private void PreencherDados() {
+            try {
+                Connection.Financeiro financeiro = new Connection.Financeiro();
+                financeiro.Id = Id;
+                financeiro.Get();
+
+                dynamic fin = financeiro.Results[0];
+
+                textNome.Text = fin.Nome;
+                combTipo.SelectedValue = Convert.ToInt32(fin.Tipo);
+                combCentroCusto.SelectedValue = Convert.ToInt32(fin.CentroCusto);
+                combFormaPagamento.SelectedValue = Convert.ToInt32(fin.FormaPagamento);
+                combStatus.SelectedValue = Convert.ToInt32(fin.Status);
+                timeDataEmissao.Text = fin.DataEmissao;
+                timeDataVencimento.Text = fin.DataVencimento;
+                textValor.Text = Convert.ToString(fin.Valor);
+                textDocumento.Text = fin.Documento;
+                combOcorrencia.SelectedValue = Convert.ToInt32(fin.Ocorrencia);
+                textQtdParcelas.Text = Convert.ToString(fin.QtdParcelas);
+
+                PreencherGrids(Convert.ToString(fin.Parcelas));
+            }
+            catch (Exception e) {
+                MessageBox.Show("Houve um erro ao preencher os dados (" + e.Message + ").");
+            }
         }
 
         private void OnGerarParcelas(object sender, EventArgs e) {
@@ -68,7 +115,14 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     gridParcelas.Rows.Clear();
 
                     for (var i = 0; i < qtdParcelas; i++) {
-                        gridParcelas.Rows.Add(i + 1, data.AddMonths(i).ToString("dd/MM/yyyy"), valorParcelas.ToString("F"), combFormaPagamento.SelectedValue, "", (Convert.ToInt32(combStatus.SelectedValue) == 1 ? true : false));
+                        gridParcelas.Rows.Add(
+                            i + 1,
+                            data.AddMonths(i).ToString("dd/MM/yyyy"),
+                            valorParcelas.ToString("F"),
+                            combFormaPagamento.SelectedValue,
+                            "",
+                            (Convert.ToInt32(combStatus.SelectedValue) == 1 ? true : false)
+                        );
                     }
 
                     lblInfoPagamento.Visible = true;
@@ -126,12 +180,66 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             Validate.Validation();
 
             if (Validate.IsValid()) {
-                MessageBox.Show("TUDO OK");
+                PreencherJson();
+
+                Connection.Financeiro financeiro = new Connection.Financeiro();
+
+                financeiro.Nome = textNome.Text;
+                financeiro.Tipo = combTipo.SelectedValue.ToString();
+                financeiro.CentroCusto = combCentroCusto.SelectedValue.ToString();
+                financeiro.FormaPagamento = combFormaPagamento.SelectedValue.ToString();
+                financeiro.Status = combStatus.SelectedValue.ToString();
+                financeiro.DataEmissao = timeDataEmissao.Text;
+                financeiro.DataVencimento = timeDataVencimento.Text;
+                financeiro.Valor = textValor.Text;
+                financeiro.Documento = textDocumento.Text;
+                financeiro.Ocorrencia = combOcorrencia.SelectedValue.ToString();
+                financeiro.QtdParcelas = textQtdParcelas.Text;
+                financeiro.Parcelas = jsonParcelas;
+
+                if (Id > 0) {
+                    financeiro.Id = Convert.ToInt32(Id);
+                    financeiro.Update();
+                }
+                else {
+                    financeiro.Create();
+                }
+
+                if (financeiro.Success) {
+                    DialogResult SuccessBox = MessageBox.Show(financeiro.Message, "CADASTRADO");
+                    if (SuccessBox == DialogResult.OK) {
+                        if (fmPrincipal != null) {
+                            fmPrincipal.AtivarForm(new TMSForms.List.FormFinanceiro(fmPrincipal));
+                        }
+                        else {
+                            Close();
+                        }
+                    }
+                }
+                else {
+                    MessageBox.Show("Houve um erro ao salvar o financeiro (" + financeiro.Message + ")");
+                }
             }
             else {
                 Validate.ErrorProviderShow();
             }
 
+        }
+
+        private void PreencherJson() {
+            List<object> Parcelas = new List<object>();
+
+            foreach (DataGridViewRow parcela in gridParcelas.Rows) {
+                Parcelas.Add(new {
+                    Parcela         = parcela.Cells[0].Value,
+                    Data            = parcela.Cells[1].Value,
+                    Valor           = parcela.Cells[2].Value,
+                    FormaPagamento  = parcela.Cells[3].Value,
+                    Observacoes     = parcela.Cells[4].Value,
+                    Pago            = parcela.Cells[5].Value
+                });
+            }
+            jsonParcelas = JsonConvert.SerializeObject(Parcelas);
         }
     }
 }

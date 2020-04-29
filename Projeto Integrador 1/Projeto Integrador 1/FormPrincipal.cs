@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Net.Http;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using Projeto_Integrador_1.Connection;
 
 namespace Projeto_Integrador_1 {
     public partial class FormPrincipal : Form {
@@ -24,7 +25,36 @@ namespace Projeto_Integrador_1 {
             Console.WriteLine(responseBody);
         }
 
+        private void VerificarConexao() {
+            try {
+                Config Connexao = new Config();
+
+                if (Connexao.Open()) {
+                    this.Enabled = true;
+                    Connexao.Close();
+                }
+                else {
+                    this.Enabled = false;
+                    throw new Exception("Não foi possivel conectar com o banco de dados.");
+                }
+            }
+            catch (Exception e) {
+                this.Enabled = false;
+
+                DialogResult VerificarConexao = MessageBox.Show(e.Message, "Conexao Offline", MessageBoxButtons.RetryCancel);
+
+                if (VerificarConexao == DialogResult.Retry) {
+                     this.VerificarConexao();
+                }
+                else {
+                    Application.Exit();
+                }
+            }
+        }
+
         public FormPrincipal() {
+            VerificarConexao();
+
             InitializeComponent();
             AtivarForm(new TMSForms.FormHome(this));
         }
@@ -107,52 +137,44 @@ namespace Projeto_Integrador_1 {
             currentForm.Show();
         }
 
-        private void btnHiddenMenu_Click(object sender, EventArgs e) {
+        private void OnClickHiddenMenu(object sender, EventArgs e) {
             HiddenMenu();
         }
 
-        private void btnHome_Click(object sender, EventArgs e) {
+        private void OnClickMenu(object sender, EventArgs e) {
+            IconButton Button = (IconButton)sender;
+            
             AtivarBotao(sender);
-            AtivarForm(new TMSForms.FormHome(this));
-        }
-
-        private void btnMotoristas_Click(object sender, EventArgs e) {
-            AtivarBotao(sender);
-            AtivarForm(new TMSForms.List.FormMotoristas(this));
-        }
-
-        private void btnVeiculos_Click(object sender, EventArgs e) {
-            AtivarBotao(sender);
-            AtivarForm(new TMSForms.List.FormVeiculos(this));
-        }
-
-        private void btnClientes_Click(object sender, EventArgs e) {
-            AtivarBotao(sender);
-            AtivarForm(new TMSForms.List.FormClientes(this));
-        }
-
-        private void btnViagens_Click(object sender, EventArgs e) {
-            AtivarBotao(sender);
-            AtivarForm(new TMSForms.List.FormViagens(this));
-        }
-
-        private void btnManutencoes_Click(object sender, EventArgs e) {
-            AtivarBotao(sender);
-            AtivarForm(new TMSForms.List.FormManutencoes(this));
-        }
-
-        private void btnAbastecimentos_Click(object sender, EventArgs e) {
-            AtivarBotao(sender);
-            AtivarForm(new TMSForms.List.FormAbastecimentos(this));
-        }
-
-        private void btnMultas_Click(object sender, EventArgs e) {
-            AtivarBotao(sender);
-            AtivarForm(new TMSForms.List.FormMultas(this));
-        }
-
-        private void btnFinanceiro_Click(object sender, EventArgs e) {
-            AtivarBotao(sender);
+            
+            switch (Button.Tag) {
+                case "home":
+                    AtivarForm(new TMSForms.FormHome(this));
+                    break;
+                case "motoristas":
+                    AtivarForm(new TMSForms.List.FormMotoristas(this));
+                    break;
+                case "veiculos":
+                    AtivarForm(new TMSForms.List.FormVeiculos(this));
+                    break;
+                case "clientes":
+                    AtivarForm(new TMSForms.List.FormClientes(this));
+                    break;
+                case "viagens":
+                    AtivarForm(new TMSForms.List.FormViagens(this));
+                    break;
+                case "manutencoes":
+                    AtivarForm(new TMSForms.List.FormManutencoes(this));
+                    break;
+                case "abastecimentos":
+                    AtivarForm(new TMSForms.List.FormAbastecimentos(this));
+                    break;
+                case "multas":
+                    AtivarForm(new TMSForms.List.FormMultas(this));
+                    break;
+                case "financeiro":
+                    AtivarForm(new TMSForms.List.FormFinanceiro(this));
+                    break;
+            }
         }
     }
 }

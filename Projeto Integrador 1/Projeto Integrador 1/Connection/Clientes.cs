@@ -38,7 +38,7 @@ namespace Projeto_Integrador_1.Connection {
             try {
                 string sql = "INSERT INTO `clientes` (`tipo_cadastro`, `tipo_pessoa`, `cnpj`, `razao_social`, `nome_fantasia`, `inscricao_municipal`, `inscricao_estadual`, `isento`, `cep`, `endereco`, `n`, `bairro`, `complemento`, `cidade`, `estado`, `nome`, `telefone`, `ramal`, `celular`, `email`, `observacoes`) VALUES (@tipo_cadastro, @tipo_pessoa, @cnpj, @razao_social, @nome_fantasia, @inscricao_municipal, @inscricao_estadual, @isento, @cep, @endereco, @n, @bairro, @complemento, @cidade, @estado, @nome, @telefone, @ramal, @celular, @email, @observacoes);";
 
-                OpenConnection();
+                Open();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
 
@@ -66,7 +66,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                CloseConnection();
+                Close();
 
                 Success = true;
                 Message = "Cliente salvo com sucesso.";
@@ -81,7 +81,7 @@ namespace Projeto_Integrador_1.Connection {
             try {
                 string sql = "UPDATE `clientes` SET `tipo_cadastro` = @tipo_cadastro, `tipo_pessoa` = @tipo_pessoa, `cnpj` = @cnpj, `razao_social` = @razao_social, `nome_fantasia` = @nome_fantasia, `inscricao_municipal` = @inscricao_municipal, `inscricao_estadual` = @inscricao_estadual, `isento` = @isento, `cep` = @cep, `endereco` = @endereco, `n` = @n, `bairro` = @bairro, `complemento` = @complemento, `cidade` = @cidade, `estado` = @estado, `nome` = @nome, `telefone` = @telefone, `ramal` = @ramal, `celular` = @celular, `email` = @email, `observacoes` = @observacoes WHERE `id` = @id LIMIT 1;";
 
-                OpenConnection();
+                Open();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
 
@@ -110,7 +110,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                CloseConnection();
+                Close();
 
                 Success = true;
                 Message = "Cliente salvo com sucesso.";
@@ -124,7 +124,7 @@ namespace Projeto_Integrador_1.Connection {
         public void Get() {
             string sql = "SELECT * FROM `clientes` WHERE `id` = @id lIMIT 1;";
             try {
-                OpenConnection();
+                Open();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
 
@@ -160,7 +160,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 data.Close();
 
-                CloseConnection();
+                Close();
 
                 Success = true;
             }
@@ -174,7 +174,7 @@ namespace Projeto_Integrador_1.Connection {
             string sql = "SELECT * FROM `clientes`;";
 
             try {
-                if (OpenConnection()) {
+                if (Open()) {
                     MySqlCommand query = new MySqlCommand(sql, Connection);
                     MySqlDataReader data = query.ExecuteReader();
 
@@ -194,7 +194,7 @@ namespace Projeto_Integrador_1.Connection {
 
                     data.Close();
 
-                    CloseConnection();
+                    Close();
                 }
 
                 Success = true;

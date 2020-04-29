@@ -42,6 +42,20 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             }
         }
 
+        private void PreencherGrids(string json) {
+            if (!string.IsNullOrWhiteSpace(json)) {
+                List<dynamic> Itens = JsonConvert.DeserializeObject<List<dynamic>>(json);
+                foreach (var item in Itens) {
+                    gridItens.Rows.Add(
+                        item.Codigo,
+                        item.Descricao,
+                        item.Qtd,
+                        item.Valor
+                    );
+                }
+            }
+        }
+
         private void PreencherDados() {
             try {
                 Manutencoes manutencoes = new Manutencoes();
@@ -66,6 +80,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 textDesconto.Text = Convert.ToString(manutencao.Desconto);
                 textAcrecimo.Text = Convert.ToString(manutencao.Acrecimo);
                 textValor.Text = Convert.ToString(manutencao.Valor);
+
+                PreencherGrids(Convert.ToString(manutencoes.Itens));
             }
             catch (Exception e) {
                 MessageBox.Show("Houve um erro ao preencher os dados (" + e.Message + ").");
@@ -234,10 +250,11 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
             foreach (DataGridViewRow carga in gridItens.Rows) {
                 Itens.Add(new {
-                    NFE = carga.Cells[0].Value,
+                    Codigo = carga.Cells[0].Value,
                     Descricao = carga.Cells[1].Value,
-                    Peso = carga.Cells[2].Value,
-                    Valor = carga.Cells[3].Value
+                    Qtd = carga.Cells[2].Value,
+                    Valor = carga.Cells[3].Value,
+                    Total = carga.Cells[4].Value
                 });
             }
             jsonItens = JsonConvert.SerializeObject(Itens);
@@ -269,7 +286,13 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 if (Validate.IsValid()) {
                     int valorTotal = Int32.Parse(textItemValor.Text) * Int32.Parse(textItemQtd.Text);
 
-                    gridItens.Rows.Add(textItemCodigo.Text, textItemDescricao.Text, textItemQtd.Text, textItemValor.Text, valorTotal);
+                    gridItens.Rows.Add(
+                        textItemCodigo.Text,
+                        textItemDescricao.Text,
+                        textItemQtd.Text,
+                        textItemValor.Text,
+                        valorTotal
+                    );
 
                     textItemCodigo.ResetText();
                     textItemDescricao.ResetText();

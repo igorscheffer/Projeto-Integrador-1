@@ -167,7 +167,7 @@ namespace Projeto_Integrador_1.Util.Validate {
 
         private void ValidateNumeric(Rules Rules, string Rule) {
             if (!Rules.Optional) {
-                var regexp = @"([0-9])";
+                var regexp = @"^([0-9]*)$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
