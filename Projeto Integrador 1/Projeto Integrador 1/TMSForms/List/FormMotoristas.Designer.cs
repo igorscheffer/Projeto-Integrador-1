@@ -41,11 +41,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCadastrar = new FontAwesome.Sharp.IconButton();
             this.gridMotoristas = new Guna.UI.WinForms.GunaDataGridView();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MenuItens = new Guna.UI.WinForms.GunaContextMenuStrip();
             this.btnMenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMenuItemExcluir = new System.Windows.Forms.ToolStripMenuItem();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCNH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -173,6 +173,22 @@
             this.gridMotoristas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.gridMotoristas.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnMouseEnterCell);
             // 
+            // colId
+            // 
+            this.colId.HeaderText = "Id";
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
+            this.colId.Visible = false;
+            // 
+            // colNome
+            // 
+            this.colNome.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colNome.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colNome.HeaderText = "Nome";
+            this.colNome.Name = "colNome";
+            this.colNome.ReadOnly = true;
+            // 
             // MenuItens
             // 
             this.MenuItens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
@@ -191,14 +207,14 @@
             this.MenuItens.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.MenuItens.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
             this.MenuItens.ShowCheckMargin = true;
-            this.MenuItens.Size = new System.Drawing.Size(144, 72);
+            this.MenuItens.Size = new System.Drawing.Size(203, 94);
             // 
             // btnMenuItemEditar
             // 
             this.btnMenuItemEditar.ForeColor = System.Drawing.Color.White;
             this.btnMenuItemEditar.Name = "btnMenuItemEditar";
             this.btnMenuItemEditar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
-            this.btnMenuItemEditar.Size = new System.Drawing.Size(143, 34);
+            this.btnMenuItemEditar.Size = new System.Drawing.Size(202, 34);
             this.btnMenuItemEditar.Text = "Editar";
             this.btnMenuItemEditar.Click += new System.EventHandler(this.OnSelectEditar);
             // 
@@ -207,24 +223,9 @@
             this.btnMenuItemExcluir.ForeColor = System.Drawing.Color.White;
             this.btnMenuItemExcluir.Name = "btnMenuItemExcluir";
             this.btnMenuItemExcluir.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
-            this.btnMenuItemExcluir.Size = new System.Drawing.Size(143, 34);
+            this.btnMenuItemExcluir.Size = new System.Drawing.Size(202, 34);
             this.btnMenuItemExcluir.Text = "Excluir";
-            // 
-            // colId
-            // 
-            this.colId.HeaderText = "Id";
-            this.colId.Name = "colId";
-            this.colId.ReadOnly = true;
-            this.colId.Visible = false;
-            // 
-            // colNome
-            // 
-            this.colNome.ContextMenuStrip = this.MenuItens;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.colNome.DefaultCellStyle = dataGridViewCellStyle3;
-            this.colNome.HeaderText = "Nome";
-            this.colNome.Name = "colNome";
-            this.colNome.ReadOnly = true;
+            this.btnMenuItemExcluir.Click += new System.EventHandler(this.OnSelectExcluir);
             // 
             // colRg
             // 

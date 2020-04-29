@@ -15,24 +15,35 @@ namespace Projeto_Integrador_1.TMSForms.List {
             InitializeComponent();
             fmPrincipal = Principal;
 
-            List<dynamic> ListaStatus = Listas.ViagemStatus;
+            LoadList();
+        }
 
-            Viagens viagens = new Viagens();
-            viagens.GetAll();
+        private void LoadList() {
+            try {
+                List<dynamic> ListaStatus = Listas.ViagemStatus;
 
-            foreach (dynamic viagem in viagens.Results) {
-                string status = ListaStatus.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(viagem.Status)).Text;
-                gridViagens.Rows.Add(
-                    viagem.Id,
-                    viagem.CodigoInterno,
-                    viagem.DataSaida,
-                    viagem.DataChegada,
-                    viagem.SaidaCidade + "/" + viagem.SaidaUF,
-                    viagem.DestinoCidade + "/" + viagem.DestinoUF,
-                    viagem.Placa,
-                    viagem.Motorista,
-                    status
-                );
+                Viagens viagens = new Viagens();
+                viagens.GetAll();
+
+                gridViagens.Rows.Clear();
+
+                foreach (dynamic viagem in viagens.Results) {
+                    string status = ListaStatus.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(viagem.Status)).Text;
+                    gridViagens.Rows.Add(
+                        viagem.Id,
+                        viagem.CodigoInterno,
+                        viagem.DataSaida,
+                        viagem.DataChegada,
+                        viagem.SaidaCidade + "/" + viagem.SaidaUF,
+                        viagem.DestinoCidade + "/" + viagem.DestinoUF,
+                        viagem.Placa,
+                        viagem.Motorista,
+                        status
+                    );
+                }
+            }
+            catch (Exception e) {
+                MessageBox.Show("Houver um erro ao carregar a lista. (" + e.Message + ")");
             }
         }
 
@@ -49,6 +60,33 @@ namespace Projeto_Integrador_1.TMSForms.List {
 
         private void OnMouseEnterCell(object sender, DataGridViewCellEventArgs e) {
             mouseLocation = e;
+        }
+
+        private void OnSelectExcluir(object sender, EventArgs e) {
+            try {
+                if (mouseLocation.RowIndex >= 0) {
+                    int Id = Convert.ToInt32(gridViagens.Rows[mouseLocation.RowIndex].Cells[0].Value);
+
+                    DialogResult Excluir = MessageBox.Show("Tem certeza que excluir esta Viagem?", "Excluir Viagem", MessageBoxButtons.YesNo);
+
+                    if (Excluir == DialogResult.Yes) {
+                        Viagens viagens = new Viagens();
+                        viagens.Id = Id;
+                        viagens.Delete();
+
+                        if (viagens.Success) {
+                            MessageBox.Show(viagens.Message);
+                            LoadList();
+                        }
+                        else {
+                            throw new Exception("Houver um erro ao excluir a viagem. (" + viagens.Message + ")");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

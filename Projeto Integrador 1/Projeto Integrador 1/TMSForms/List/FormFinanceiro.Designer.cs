@@ -39,19 +39,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridFinanceiro = new Guna.UI.WinForms.GunaDataGridView();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MenuItens = new Guna.UI.WinForms.GunaContextMenuStrip();
             this.btnMenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMenuItemExcluir = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCadastrar = new FontAwesome.Sharp.IconButton();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEmissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFormaPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCadastrar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridFinanceiro)).BeginInit();
             this.MenuItens.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -139,6 +139,22 @@
             this.gridFinanceiro.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.gridFinanceiro.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnMouseEnterCell);
             // 
+            // colId
+            // 
+            resources.ApplyResources(this.colId, "colId");
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
+            // 
+            // colTipo
+            // 
+            this.colTipo.ContextMenuStrip = this.MenuItens;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.colTipo.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colTipo.FillWeight = 88.78702F;
+            resources.ApplyResources(this.colTipo, "colTipo");
+            this.colTipo.Name = "colTipo";
+            this.colTipo.ReadOnly = true;
+            // 
             // MenuItens
             // 
             this.MenuItens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
@@ -172,44 +188,7 @@
             this.btnMenuItemExcluir.Name = "btnMenuItemExcluir";
             this.btnMenuItemExcluir.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
             resources.ApplyResources(this.btnMenuItemExcluir, "btnMenuItemExcluir");
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.panel1.Controls.Add(this.btnCadastrar);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
-            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(152)))), ((int)(((byte)(204)))));
-            resources.ApplyResources(this.btnCadastrar, "btnCadastrar");
-            this.btnCadastrar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnCadastrar.IconColor = System.Drawing.Color.White;
-            this.btnCadastrar.IconSize = 16;
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Rotation = 0D;
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // colId
-            // 
-            resources.ApplyResources(this.colId, "colId");
-            this.colId.Name = "colId";
-            this.colId.ReadOnly = true;
-            // 
-            // colTipo
-            // 
-            this.colTipo.ContextMenuStrip = this.MenuItens;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.colTipo.DefaultCellStyle = dataGridViewCellStyle3;
-            this.colTipo.FillWeight = 88.78702F;
-            resources.ApplyResources(this.colTipo, "colTipo");
-            this.colTipo.Name = "colTipo";
-            this.colTipo.ReadOnly = true;
+            this.btnMenuItemExcluir.Click += new System.EventHandler(this.OnSelectExcluir);
             // 
             // colEmissao
             // 
@@ -266,6 +245,28 @@
             resources.ApplyResources(this.colStatus, "colStatus");
             this.colStatus.Name = "colStatus";
             this.colStatus.ReadOnly = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.panel1.Controls.Add(this.btnCadastrar);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(183)))), ((int)(((byte)(255)))));
+            this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(152)))), ((int)(((byte)(204)))));
+            resources.ApplyResources(this.btnCadastrar, "btnCadastrar");
+            this.btnCadastrar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnCadastrar.IconColor = System.Drawing.Color.White;
+            this.btnCadastrar.IconSize = 16;
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Rotation = 0D;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // FormFinanceiro
             // 

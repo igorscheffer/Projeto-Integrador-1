@@ -169,5 +169,26 @@ namespace Projeto_Integrador_1.Connection {
                 this.Message = e.Message;
             }
         }
+
+        public void Delete() {
+            string sql = "DELETE FROM `financeiro` WHERE `id` = @id LIMIT 1;";
+            try {
+                Open();
+
+                MySqlCommand query = new MySqlCommand(sql, Connection);
+                query.Parameters.AddWithValue("@id", Id);
+
+                query.ExecuteNonQuery();
+
+                Close();
+
+                Success = true;
+                Message = "Financeiro excluido com sucesso.";
+            }
+            catch (MySqlException e) {
+                Success = false;
+                Message = e.Message;
+            }
+        }
     }
 }

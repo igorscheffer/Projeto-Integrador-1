@@ -141,19 +141,19 @@
     <value>Segoe UI, 11pt</value>
   </data>
   <data name="btnMenuItemEditar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 34</value>
+    <value>202, 34</value>
   </data>
   <data name="btnMenuItemEditar.Text" xml:space="preserve">
     <value>Editar</value>
   </data>
   <data name="btnMenuItemExcluir.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 34</value>
+    <value>202, 34</value>
   </data>
   <data name="btnMenuItemExcluir.Text" xml:space="preserve">
     <value>Excluir</value>
   </data>
   <data name="MenuItens.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 72</value>
+    <value>203, 94</value>
   </data>
   <data name="&gt;&gt;MenuItens.Name" xml:space="preserve">
     <value>MenuItens</value>
@@ -300,18 +300,6 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Viagens</value>
   </data>
-  <data name="&gt;&gt;btnMenuItemEditar.Name" xml:space="preserve">
-    <value>btnMenuItemEditar</value>
-  </data>
-  <data name="&gt;&gt;btnMenuItemEditar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnMenuItemExcluir.Name" xml:space="preserve">
-    <value>btnMenuItemExcluir</value>
-  </data>
-  <data name="&gt;&gt;btnMenuItemExcluir.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;colId.Name" xml:space="preserve">
     <value>colId</value>
   </data>
@@ -323,6 +311,18 @@
   </data>
   <data name="&gt;&gt;colTipo.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMenuItemEditar.Name" xml:space="preserve">
+    <value>btnMenuItemEditar</value>
+  </data>
+  <data name="&gt;&gt;btnMenuItemEditar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMenuItemExcluir.Name" xml:space="preserve">
+    <value>btnMenuItemExcluir</value>
+  </data>
+  <data name="&gt;&gt;btnMenuItemExcluir.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;colEmissao.Name" xml:space="preserve">
     <value>colEmissao</value>

@@ -89,6 +89,7 @@
             this.btnMenuItemExcluir.Name = "btnMenuItemExcluir";
             this.btnMenuItemExcluir.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
             resources.ApplyResources(this.btnMenuItemExcluir, "btnMenuItemExcluir");
+            this.btnMenuItemExcluir.Click += new System.EventHandler(this.OnSelectExcluir);
             // 
             // MenuItens
             // 

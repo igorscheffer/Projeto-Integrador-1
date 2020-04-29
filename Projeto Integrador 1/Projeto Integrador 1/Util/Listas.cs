@@ -63,7 +63,7 @@ namespace Projeto_Integrador_1.Util {
                 Year.Add(new { Value = -1, Text = "---" });
 
                 for (var i = currentYear; i >= (currentYear - 50); i--) {
-                    Year.Add(new { Value = i, Text = i });
+                    Year.Add(i);
                 }
 
                 return Year;
