@@ -50,7 +50,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             timeDataOcorrencia.Text = multa.DataOcorrencia;
             timeDataNotificacao.Text = multa.DataNotificacao;
             timeDataVencimento.Text = multa.DataVencimento;
-            textValor.Text = Convert.ToString(multa.Valor);
+            textValor.Text = Converter.DecimalToReais(Convert.ToDecimal(multa.Valor));
             textDescricao.Text = multa.Descricao;
             textLocal.Text = multa.Local;
 
@@ -136,6 +136,11 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void OnChangedTextValor(object sender, EventArgs e) {
+            MaskedTextBox Text = (MaskedTextBox)sender;
+            Converter.OnPressMoeda(ref Text);
         }
     }
 }

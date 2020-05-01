@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Projeto_Integrador_1.Util.Validate;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormFinanceiro : Form {
@@ -12,10 +13,11 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         FormPrincipal fmPrincipal;
 
         private int Id;
+        private int Referencia;
 
         private string jsonParcelas;
 
-        public FormFinanceiro(FormPrincipal fmPrincipal = null, int Id = 0) {
+        public FormFinanceiro(FormPrincipal fmPrincipal = null, int Id = 0, dynamic LancarFinanceiro = null) {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
 
@@ -48,6 +50,18 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 this.Id = Id;
                 PreencherDados();
             }
+
+            if (LancarFinanceiro != null) {
+                combTipo.SelectedValue = LancarFinanceiro.Tipo;
+                combTipo.Enabled = false;
+
+                combCentroCusto.SelectedValue = LancarFinanceiro.CentroCusto;
+                combCentroCusto.Enabled = false;
+                textValor.Text = Converter.DecimalToReais(Convert.ToDecimal(LancarFinanceiro.Valor));
+
+                Referencia = LancarFinanceiro.Id;
+            }
+
         }
 
         private void PreencherGrids(string json) {
@@ -91,52 +105,15 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 textQtdParcelas.Text = Convert.ToString(fin.QtdParcelas);
 
                 PreencherGrids(Convert.ToString(fin.Parcelas));
+
+                if (!string.IsNullOrEmpty(Convert.ToString(fin.Referencia)) && fin.Referencia > 0) {
+                    combTipo.Enabled = false;
+                    combCentroCusto.Enabled = false;
+                    Referencia = fin.Id;
+                }
             }
             catch (Exception e) {
                 MessageBox.Show("Houve um erro ao preencher os dados (" + e.Message + ").");
-            }
-        }
-
-        private void OnGerarParcelas(object sender, EventArgs e) {
-            Validate Validate = new Validate(this, ErrorProvider);
-
-            Validate.AddRule(textValor, "Valor", "required|numeric");
-            Validate.AddRule(textQtdParcelas, "Qtd. Parcelas", "required|numeric");
-            Validate.Validation();
-
-            if (Validate.IsValid()) {
-                int qtdParcelas = Convert.ToInt32(textQtdParcelas.Text);
-
-                if (qtdParcelas > 0) {
-                    var data = Convert.ToDateTime(timeDataEmissao.Text);
-
-                    decimal valorParcelas = Convert.ToInt32(textValor.Text) / Convert.ToDecimal(qtdParcelas);
-
-                    gridParcelas.Rows.Clear();
-
-                    for (var i = 0; i < qtdParcelas; i++) {
-                        gridParcelas.Rows.Add(
-                            i + 1,
-                            data.AddMonths(i).ToString("dd/MM/yyyy"),
-                            valorParcelas.ToString("F"),
-                            combFormaPagamento.SelectedValue,
-                            "",
-                            (Convert.ToInt32(combStatus.SelectedValue) == 1 ? true : false)
-                        );
-                    }
-
-                    lblInfoPagamento.Visible = true;
-                    panelInfoPagamento.Visible = true;
-                    gridParcelas.Visible = true;
-                }
-                else {
-                    lblInfoPagamento.Visible = false;
-                    panelInfoPagamento.Visible = false;
-                    gridParcelas.Visible = false;
-                }
-            }
-            else {
-                Validate.ErrorProviderShow();
             }
         }
 
@@ -173,7 +150,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             Validate.AddRule(combStatus, "Status", "required|numeric|exact:1");
             Validate.AddRule(timeDataEmissao, "Data Emissão", "required|data:dd/MM/yyyy");
             Validate.AddRule(timeDataVencimento, "Data Vencimento", "required|data:dd/MM/yyyy");
-            Validate.AddRule(textValor, "Valor", "required|numeric|max:11");
+            Validate.AddRule(textValor, "Valor", "required|real|max:11");
             Validate.AddRule(textDocumento, "Nº Document", "max:30");
             Validate.AddRule(combOcorrencia, "Ocorrencia", "required|numeric|exact:1");
             Validate.AddRule(textQtdParcelas, "Qtd. Parcelas", "required_if:combOcorrencia,2|max:3");
@@ -186,6 +163,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
                 financeiro.Nome = textNome.Text;
                 financeiro.Tipo = combTipo.SelectedValue.ToString();
+                financeiro.Referencia = this.Referencia;
                 financeiro.CentroCusto = combCentroCusto.SelectedValue.ToString();
                 financeiro.FormaPagamento = combFormaPagamento.SelectedValue.ToString();
                 financeiro.Status = combStatus.SelectedValue.ToString();
@@ -212,7 +190,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                             fmPrincipal.AtivarForm(new TMSForms.List.FormFinanceiro(fmPrincipal));
                         }
                         else {
-                            Close();
+                            this.Close();
                         }
                     }
                 }
@@ -240,6 +218,59 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 });
             }
             jsonParcelas = JsonConvert.SerializeObject(Parcelas);
+        }
+
+        private void OnClickGerarParcela(object sender, EventArgs e) {
+            try {
+                Validate Validate = new Validate(this, ErrorProvider);
+
+                Validate.AddRule(textValor, "Valor", "required|numeric");
+                Validate.AddRule(textQtdParcelas, "Qtd. Parcelas", "required|numeric");
+                Validate.Validation();
+
+                if (Validate.IsValid()) {
+                    int qtdParcelas = Convert.ToInt32(textQtdParcelas.Text);
+
+                    if (qtdParcelas > 0) {
+                        var data = Convert.ToDateTime(timeDataEmissao.Text);
+
+                        decimal valorParcelas = Convert.ToInt32(textValor.Text) / Convert.ToDecimal(qtdParcelas);
+
+                        gridParcelas.Rows.Clear();
+
+                        for (var i = 0; i < qtdParcelas; i++) {
+                            gridParcelas.Rows.Add(
+                                i + 1,
+                                data.AddMonths(i).ToString("dd/MM/yyyy"),
+                                valorParcelas.ToString("F"),
+                                combFormaPagamento.SelectedValue,
+                                "",
+                                (Convert.ToInt32(combStatus.SelectedValue) == 1 ? true : false)
+                            );
+                        }
+
+                        lblInfoPagamento.Visible = true;
+                        panelInfoPagamento.Visible = true;
+                        gridParcelas.Visible = true;
+                    }
+                    else {
+                        lblInfoPagamento.Visible = false;
+                        panelInfoPagamento.Visible = false;
+                        gridParcelas.Visible = false;
+                    }
+                }
+                else {
+                    Validate.ErrorProviderShow();
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Houve um erro ao gerar as parcelas. (" + ex.Message + ")");
+            }
+        }
+
+        private void OnChangedTextValor(object sender, EventArgs e) {
+            MaskedTextBox Text = (MaskedTextBox)sender;
+            Converter.OnPressMoeda(ref Text);
         }
     }
 }

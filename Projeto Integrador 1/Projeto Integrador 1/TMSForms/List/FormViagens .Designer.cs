@@ -53,6 +53,9 @@
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCadastrar = new FontAwesome.Sharp.IconButton();
+            this.btnMenuItemLancarConta = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMenuItemContaPagar = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridViagens)).BeginInit();
             this.MenuItens.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -163,6 +166,7 @@
             resources.ApplyResources(this.MenuItens, "MenuItens");
             this.MenuItens.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnMenuItemEditar,
+            this.btnMenuItemLancarConta,
             this.btnMenuItemExcluir});
             this.MenuItens.Name = "MenuItens";
             this.MenuItens.RenderStyle.ArrowColor = System.Drawing.Color.White;
@@ -276,7 +280,37 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Rotation = 0D;
             this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.btnCadastrar.Click += new System.EventHandler(this.OnClickCadastrar);
+            // 
+            // btnMenuItemLancarConta
+            // 
+            this.btnMenuItemLancarConta.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.btnMenuItemContaPagar});
+            this.btnMenuItemLancarConta.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemLancarConta.Name = "btnMenuItemLancarConta";
+            this.btnMenuItemLancarConta.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            resources.ApplyResources(this.btnMenuItemLancarConta, "btnMenuItemLancarConta");
+            // 
+            // btnMenuItemContaPagar
+            // 
+            this.btnMenuItemContaPagar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.btnMenuItemContaPagar.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemContaPagar.Name = "btnMenuItemContaPagar";
+            this.btnMenuItemContaPagar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            resources.ApplyResources(this.btnMenuItemContaPagar, "btnMenuItemContaPagar");
+            this.btnMenuItemContaPagar.Tag = "conta_receber";
+            this.btnMenuItemContaPagar.Click += new System.EventHandler(this.OnClickLancarConta);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.toolStripMenuItem1.Tag = "conta_pagar";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.OnClickLancarConta);
             // 
             // FormViagens
             // 
@@ -309,5 +343,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPlaca;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMotorista;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuItemLancarConta;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuItemContaPagar;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

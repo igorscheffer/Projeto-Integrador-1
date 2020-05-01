@@ -93,16 +93,27 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             button.IconChar = IconChar.Spinner;
 
             try {
-                cepConsulta endereco = correiosCEP.GetAddress(textCEP.Text);
+                Validate Validate = new Validate();
 
-                textEndereco.Text = endereco.Rua;
-                textN.Focus();
-                textBairro.Text = endereco.Bairro;
-                textComplemento.Text = "";
-                textCidade.Text = endereco.Cidade;
-                combEstado.SelectedValue = endereco.UF;
+                Validate.AddRule(textCEP, "CEP", "required|cep");
+                Validate.Validation();
 
-                button.IconChar = defaultIcon;
+                if (Validate.IsValid()) {
+                    cepConsulta endereco = correiosCEP.GetAddress(textCEP.Text);
+
+                    textEndereco.Text = endereco.Rua;
+                    textN.Focus();
+                    textBairro.Text = endereco.Bairro;
+                    textComplemento.Text = "";
+                    textCidade.Text = endereco.Cidade;
+                    combEstado.SelectedValue = endereco.UF;
+
+                    button.IconChar = defaultIcon;
+                }
+                else {
+                    button.IconChar = defaultIcon;
+                    Validate.ErrorMessageBox();
+                }
             }
             catch (Exception ex) {
                 button.IconChar = defaultIcon;
@@ -193,12 +204,18 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             }
         }
 
-        private void textCelular_TextChanged(object sender, EventArgs e) {
+        private void OnKeyPressUpTelefone(object sender, KeyEventArgs e) {
+            MaskedTextBox Telefone = (MaskedTextBox)sender;
+            Telefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
 
-        }
+            Telefone.PromptChar = (Telefone.MaskCompleted ? ' ' : '_');
 
-        private void panel5_Paint(object sender, PaintEventArgs e) {
-
+            if (Telefone.Text.Length == 11) {
+                Telefone.Mask = "(00) 00000-0000";
+            }
+            else {
+                Telefone.Mask = "(00) 0000-00009";
+            }
         }
     }
 }

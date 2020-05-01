@@ -49,7 +49,7 @@ namespace Projeto_Integrador_1.TMSForms.List {
             }
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e) {
+        private void OnClickCadastrar(object sender, EventArgs e) {
             fmPrincipal.AtivarForm(new TMSForms.Register.FormAbastecimentos(fmPrincipal));
         }
 

@@ -79,16 +79,27 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             button.IconChar = IconChar.Spinner;
 
             try {
-                cepConsulta endereco = correiosCEP.GetAddress(textCEP.Text);
+                Validate Validate = new Validate();
 
-                textEndereco.Text = endereco.Rua;
-                textN.Focus();
-                textBairro.Text = endereco.Bairro;
-                textComplemento.Text = "";
-                textCidade.Text = endereco.Cidade;
-                combEstado.SelectedValue = endereco.UF;
+                Validate.AddRule(textCEP, "CEP", "required|cep");
+                Validate.Validation();
 
-                button.IconChar = defaultIcon;
+                if (Validate.IsValid()) {
+                    cepConsulta endereco = correiosCEP.GetAddress(textCEP.Text);
+
+                    textEndereco.Text = endereco.Rua;
+                    textN.Focus();
+                    textBairro.Text = endereco.Bairro;
+                    textComplemento.Text = "";
+                    textCidade.Text = endereco.Cidade;
+                    combEstado.SelectedValue = endereco.UF;
+
+                    button.IconChar = defaultIcon;
+                }
+                else {
+                    button.IconChar = defaultIcon;
+                    Validate.ErrorMessageBox();
+                }
             }
             catch (Exception ex) {
                 button.IconChar = defaultIcon;
@@ -122,6 +133,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             var Selected = combTipoPessoa.SelectedValue;
 
             if (Convert.ToString(Selected) == "PF") {
+                textCNPJ.Mask = "000.000.000-00";
+
                 lblCNPJ.Text = "CPF";
                 lblRazaoSocial.Text = "Nome";
                 lblInscricaoMunicipal.Text = "RG";
@@ -146,6 +159,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 if (string.IsNullOrWhiteSpace(Convert.ToString(Selected))) {
                     combTipoPessoa.SelectedValue = "PJ";
                 }
+                textCNPJ.Mask = "00.000.000/0000-00";
 
                 lblCNPJ.Text = "CNPJ";
                 lblNomeFantasia.Text = "Nome Fantasia";
@@ -250,6 +264,20 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void OnKeyPressUpTelefone(object sender, KeyEventArgs e) {
+            MaskedTextBox Telefone = (MaskedTextBox)sender;
+            Telefone.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+
+            Telefone.PromptChar = (Telefone.MaskCompleted ? ' ' : '_');
+
+            if (Telefone.Text.Length == 11) {
+                Telefone.Mask = "(00) 00000-0000";
+            }
+            else {
+                Telefone.Mask = "(00) 0000-00009";
             }
         }
     }

@@ -90,7 +90,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textInformacoesComplementares = new System.Windows.Forms.RichTextBox();
-            this.textValor = new Guna.UI.WinForms.GunaTextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
@@ -99,12 +98,13 @@
             this.textCustoDescricao = new Guna.UI.WinForms.GunaTextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.btnAddCusto = new FontAwesome.Sharp.IconButton();
-            this.textCustoValor = new Guna.UI.WinForms.GunaTextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.textCustoQTD = new Guna.UI.WinForms.GunaTextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.tabViagem = new System.Windows.Forms.TabControl();
             this.tabPanelViagem = new System.Windows.Forms.TabPage();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.textValor = new System.Windows.Forms.MaskedTextBox();
             this.panel21 = new System.Windows.Forms.Panel();
             this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             this.panel20 = new System.Windows.Forms.Panel();
@@ -118,7 +118,14 @@
             this.tabPanelCargas = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.gridCargas = new Guna.UI.WinForms.GunaDataGridView();
+            this.colNFE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.textCargaValor = new System.Windows.Forms.MaskedTextBox();
             this.panel17 = new System.Windows.Forms.Panel();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -126,11 +133,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnAddCarga = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textCargaValor = new Guna.UI.WinForms.GunaTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.textCargaNFE = new Guna.UI.WinForms.GunaTextBox();
-            this.textCargaPeso = new Guna.UI.WinForms.GunaTextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.textCargaDescricao = new Guna.UI.WinForms.GunaTextBox();
@@ -143,6 +147,9 @@
             this.textGridCustoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textGridCustoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.textCustoValor = new System.Windows.Forms.MaskedTextBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label42 = new System.Windows.Forms.Label();
             this.tabPanelAbastecimentos = new System.Windows.Forms.TabPage();
@@ -154,7 +161,13 @@
             this.textGridAbastecimentoLitros = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textGridAbastecimentoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textGridAbastecimentoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.combGridAbastecimentoStatus = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.textAbastecimentoValor = new System.Windows.Forms.MaskedTextBox();
+            this.combAbastecimentoStatus = new Guna.UI.WinForms.GunaComboBox();
+            this.label44 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label43 = new System.Windows.Forms.Label();
             this.btnAddPosto = new FontAwesome.Sharp.IconButton();
@@ -167,17 +180,25 @@
             this.btnAddAbastecimento = new FontAwesome.Sharp.IconButton();
             this.label36 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.textAbastecimentoLitros = new Guna.UI.WinForms.GunaTextBox();
-            this.textAbastecimentoValor = new Guna.UI.WinForms.GunaTextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.colNFE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.textAbastecimentoLitros = new System.Windows.Forms.MaskedTextBox();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.textCustoQTD = new System.Windows.Forms.MaskedTextBox();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.textCargaPeso = new System.Windows.Forms.MaskedTextBox();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.textCargaNFE = new System.Windows.Forms.MaskedTextBox();
             this.panel3.SuspendLayout();
             this.tabViagem.SuspendLayout();
             this.tabPanelViagem.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel23.SuspendLayout();
             this.panel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
             this.panel20.SuspendLayout();
@@ -191,6 +212,8 @@
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCargas)).BeginInit();
             this.panel8.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel25.SuspendLayout();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel14.SuspendLayout();
@@ -198,12 +221,24 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustos)).BeginInit();
             this.panel6.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel27.SuspendLayout();
             this.panel15.SuspendLayout();
             this.tabPanelAbastecimentos.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridAbastecimentos)).BeginInit();
             this.panel11.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.panel29.SuspendLayout();
             this.panel16.SuspendLayout();
+            this.panel30.SuspendLayout();
+            this.panel31.SuspendLayout();
+            this.panel32.SuspendLayout();
+            this.panel33.SuspendLayout();
+            this.panel34.SuspendLayout();
+            this.panel35.SuspendLayout();
+            this.panel36.SuspendLayout();
+            this.panel37.SuspendLayout();
             this.SuspendLayout();
             // 
             // textCodigoInterno
@@ -1115,27 +1150,6 @@
             this.textInformacoesComplementares.TabIndex = 22;
             this.textInformacoesComplementares.Text = "";
             // 
-            // textValor
-            // 
-            this.textValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textValor.BackColor = System.Drawing.Color.White;
-            this.textValor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textValor.BaseColor = System.Drawing.Color.White;
-            this.textValor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textValor.BorderSize = 1;
-            this.textValor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textValor.FocusedBaseColor = System.Drawing.Color.White;
-            this.textValor.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textValor.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textValor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textValor.Location = new System.Drawing.Point(55, 481);
-            this.textValor.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textValor.MaxLength = 20;
-            this.textValor.Name = "textValor";
-            this.textValor.PasswordChar = '\0';
-            this.textValor.Size = new System.Drawing.Size(95, 35);
-            this.textValor.TabIndex = 21;
-            // 
             // label25
             // 
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -1264,27 +1278,6 @@
             this.btnAddCusto.UseVisualStyleBackColor = false;
             this.btnAddCusto.Click += new System.EventHandler(this.onAddCusto);
             // 
-            // textCustoValor
-            // 
-            this.textCustoValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textCustoValor.BackColor = System.Drawing.Color.White;
-            this.textCustoValor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textCustoValor.BaseColor = System.Drawing.Color.White;
-            this.textCustoValor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textCustoValor.BorderSize = 1;
-            this.textCustoValor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCustoValor.FocusedBaseColor = System.Drawing.Color.White;
-            this.textCustoValor.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textCustoValor.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textCustoValor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCustoValor.Location = new System.Drawing.Point(878, 76);
-            this.textCustoValor.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textCustoValor.MaxLength = 20;
-            this.textCustoValor.Name = "textCustoValor";
-            this.textCustoValor.PasswordChar = '\0';
-            this.textCustoValor.Size = new System.Drawing.Size(87, 35);
-            this.textCustoValor.TabIndex = 267;
-            // 
             // label32
             // 
             this.label32.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -1296,27 +1289,6 @@
             this.label32.Size = new System.Drawing.Size(42, 18);
             this.label32.TabIndex = 268;
             this.label32.Text = "Valor";
-            // 
-            // textCustoQTD
-            // 
-            this.textCustoQTD.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textCustoQTD.BackColor = System.Drawing.Color.White;
-            this.textCustoQTD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textCustoQTD.BaseColor = System.Drawing.Color.White;
-            this.textCustoQTD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textCustoQTD.BorderSize = 1;
-            this.textCustoQTD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCustoQTD.FocusedBaseColor = System.Drawing.Color.White;
-            this.textCustoQTD.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textCustoQTD.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textCustoQTD.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCustoQTD.Location = new System.Drawing.Point(703, 76);
-            this.textCustoQTD.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textCustoQTD.MaxLength = 20;
-            this.textCustoQTD.Name = "textCustoQTD";
-            this.textCustoQTD.PasswordChar = '\0';
-            this.textCustoQTD.Size = new System.Drawing.Size(120, 35);
-            this.textCustoQTD.TabIndex = 265;
             // 
             // label33
             // 
@@ -1350,6 +1322,7 @@
             // tabPanelViagem
             // 
             this.tabPanelViagem.BackColor = System.Drawing.Color.White;
+            this.tabPanelViagem.Controls.Add(this.panel22);
             this.tabPanelViagem.Controls.Add(this.panel21);
             this.tabPanelViagem.Controls.Add(this.panel20);
             this.tabPanelViagem.Controls.Add(this.panel19);
@@ -1381,7 +1354,6 @@
             this.tabPanelViagem.Controls.Add(this.label9);
             this.tabPanelViagem.Controls.Add(this.combMotorista);
             this.tabPanelViagem.Controls.Add(this.btnAddMotorista);
-            this.tabPanelViagem.Controls.Add(this.textValor);
             this.tabPanelViagem.Controls.Add(this.label11);
             this.tabPanelViagem.Controls.Add(this.label25);
             this.tabPanelViagem.Controls.Add(this.textSaidaCidade);
@@ -1415,6 +1387,42 @@
             this.tabPanelViagem.Size = new System.Drawing.Size(1032, 610);
             this.tabPanelViagem.TabIndex = 0;
             this.tabPanelViagem.Text = "      VIAGEM      ";
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel22.Controls.Add(this.panel23);
+            this.panel22.Location = new System.Drawing.Point(55, 481);
+            this.panel22.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel22.Name = "panel22";
+            this.panel22.Padding = new System.Windows.Forms.Padding(1);
+            this.panel22.Size = new System.Drawing.Size(140, 35);
+            this.panel22.TabIndex = 315;
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.White;
+            this.panel23.Controls.Add(this.textValor);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel23.Location = new System.Drawing.Point(1, 1);
+            this.panel23.Margin = new System.Windows.Forms.Padding(1);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(138, 33);
+            this.panel23.TabIndex = 0;
+            // 
+            // textValor
+            // 
+            this.textValor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textValor.BackColor = System.Drawing.Color.White;
+            this.textValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textValor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textValor.Location = new System.Drawing.Point(8, 7);
+            this.textValor.Name = "textValor";
+            this.textValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textValor.Size = new System.Drawing.Size(123, 22);
+            this.textValor.TabIndex = 21;
+            this.textValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             // 
             // panel21
             // 
@@ -1637,18 +1645,38 @@
             this.gridCargas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridCargas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             // 
+            // colNFE
+            // 
+            this.colNFE.HeaderText = "NF-E";
+            this.colNFE.Name = "colNFE";
+            // 
+            // colDescricao
+            // 
+            this.colDescricao.HeaderText = "DESCRIÇÃO";
+            this.colDescricao.Name = "colDescricao";
+            // 
+            // colPeso
+            // 
+            this.colPeso.HeaderText = "PESO";
+            this.colPeso.Name = "colPeso";
+            // 
+            // colValor
+            // 
+            this.colValor.HeaderText = "VALOR";
+            this.colValor.Name = "colValor";
+            // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.panel36);
+            this.panel8.Controls.Add(this.panel34);
+            this.panel8.Controls.Add(this.panel24);
             this.panel8.Controls.Add(this.panel17);
             this.panel8.Controls.Add(this.panel14);
             this.panel8.Controls.Add(this.label5);
             this.panel8.Controls.Add(this.btnAddCarga);
             this.panel8.Controls.Add(this.panel4);
-            this.panel8.Controls.Add(this.textCargaValor);
             this.panel8.Controls.Add(this.label17);
             this.panel8.Controls.Add(this.label28);
-            this.panel8.Controls.Add(this.textCargaNFE);
-            this.panel8.Controls.Add(this.textCargaPeso);
             this.panel8.Controls.Add(this.label26);
             this.panel8.Controls.Add(this.label27);
             this.panel8.Controls.Add(this.textCargaDescricao);
@@ -1659,12 +1687,48 @@
             this.panel8.Size = new System.Drawing.Size(1032, 111);
             this.panel8.TabIndex = 272;
             // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel24.Controls.Add(this.panel25);
+            this.panel24.Location = new System.Drawing.Point(870, 76);
+            this.panel24.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel24.Name = "panel24";
+            this.panel24.Padding = new System.Windows.Forms.Padding(1);
+            this.panel24.Size = new System.Drawing.Size(95, 35);
+            this.panel24.TabIndex = 315;
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.White;
+            this.panel25.Controls.Add(this.textCargaValor);
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel25.Location = new System.Drawing.Point(1, 1);
+            this.panel25.Margin = new System.Windows.Forms.Padding(1);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(93, 33);
+            this.panel25.TabIndex = 0;
+            // 
+            // textCargaValor
+            // 
+            this.textCargaValor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textCargaValor.BackColor = System.Drawing.Color.White;
+            this.textCargaValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textCargaValor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textCargaValor.Location = new System.Drawing.Point(8, 7);
+            this.textCargaValor.Name = "textCargaValor";
+            this.textCargaValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textCargaValor.Size = new System.Drawing.Size(78, 22);
+            this.textCargaValor.TabIndex = 21;
+            this.textCargaValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
+            // 
             // panel17
             // 
             this.panel17.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel17.Controls.Add(this.iconPictureBox2);
-            this.panel17.Location = new System.Drawing.Point(789, 76);
+            this.panel17.Location = new System.Drawing.Point(780, 76);
             this.panel17.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(35, 35);
@@ -1690,7 +1754,7 @@
             this.panel14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel14.Controls.Add(this.label41);
-            this.panel14.Location = new System.Drawing.Point(847, 76);
+            this.panel14.Location = new System.Drawing.Point(835, 76);
             this.panel14.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(35, 35);
@@ -1753,27 +1817,6 @@
             this.panel4.Size = new System.Drawing.Size(1000, 2);
             this.panel4.TabIndex = 200;
             // 
-            // textCargaValor
-            // 
-            this.textCargaValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textCargaValor.BackColor = System.Drawing.Color.White;
-            this.textCargaValor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textCargaValor.BaseColor = System.Drawing.Color.White;
-            this.textCargaValor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textCargaValor.BorderSize = 1;
-            this.textCargaValor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCargaValor.FocusedBaseColor = System.Drawing.Color.White;
-            this.textCargaValor.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textCargaValor.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textCargaValor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCargaValor.Location = new System.Drawing.Point(882, 76);
-            this.textCargaValor.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textCargaValor.MaxLength = 20;
-            this.textCargaValor.Name = "textCargaValor";
-            this.textCargaValor.PasswordChar = '\0';
-            this.textCargaValor.Size = new System.Drawing.Size(83, 35);
-            this.textCargaValor.TabIndex = 255;
-            // 
             // label17
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -1792,53 +1835,11 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label28.Location = new System.Drawing.Point(844, 50);
+            this.label28.Location = new System.Drawing.Point(832, 50);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(42, 18);
             this.label28.TabIndex = 256;
             this.label28.Text = "Valor";
-            // 
-            // textCargaNFE
-            // 
-            this.textCargaNFE.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textCargaNFE.BackColor = System.Drawing.Color.White;
-            this.textCargaNFE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textCargaNFE.BaseColor = System.Drawing.Color.White;
-            this.textCargaNFE.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textCargaNFE.BorderSize = 1;
-            this.textCargaNFE.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCargaNFE.FocusedBaseColor = System.Drawing.Color.White;
-            this.textCargaNFE.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textCargaNFE.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textCargaNFE.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCargaNFE.Location = new System.Drawing.Point(20, 76);
-            this.textCargaNFE.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textCargaNFE.MaxLength = 10;
-            this.textCargaNFE.Name = "textCargaNFE";
-            this.textCargaNFE.PasswordChar = '\0';
-            this.textCargaNFE.Size = new System.Drawing.Size(148, 35);
-            this.textCargaNFE.TabIndex = 249;
-            // 
-            // textCargaPeso
-            // 
-            this.textCargaPeso.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textCargaPeso.BackColor = System.Drawing.Color.White;
-            this.textCargaPeso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textCargaPeso.BaseColor = System.Drawing.Color.White;
-            this.textCargaPeso.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textCargaPeso.BorderSize = 1;
-            this.textCargaPeso.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCargaPeso.FocusedBaseColor = System.Drawing.Color.White;
-            this.textCargaPeso.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textCargaPeso.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textCargaPeso.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCargaPeso.Location = new System.Drawing.Point(708, 76);
-            this.textCargaPeso.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textCargaPeso.MaxLength = 20;
-            this.textCargaPeso.Name = "textCargaPeso";
-            this.textCargaPeso.PasswordChar = '\0';
-            this.textCargaPeso.Size = new System.Drawing.Size(81, 35);
-            this.textCargaPeso.TabIndex = 253;
             // 
             // label26
             // 
@@ -1858,7 +1859,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label27.Location = new System.Drawing.Point(708, 50);
+            this.label27.Location = new System.Drawing.Point(678, 50);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(43, 18);
             this.label27.TabIndex = 254;
@@ -1882,7 +1883,7 @@
             this.textCargaDescricao.MaxLength = 20;
             this.textCargaDescricao.Name = "textCargaDescricao";
             this.textCargaDescricao.PasswordChar = '\0';
-            this.textCargaDescricao.Size = new System.Drawing.Size(500, 35);
+            this.textCargaDescricao.Size = new System.Drawing.Size(470, 35);
             this.textCargaDescricao.TabIndex = 251;
             // 
             // tabPanelCustos
@@ -2013,6 +2014,8 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.panel32);
+            this.panel6.Controls.Add(this.panel26);
             this.panel6.Controls.Add(this.panel15);
             this.panel6.Controls.Add(this.timeCustoData);
             this.panel6.Controls.Add(this.textCustoDescricao);
@@ -2021,8 +2024,6 @@
             this.panel6.Controls.Add(this.btnAddCusto);
             this.panel6.Controls.Add(this.label31);
             this.panel6.Controls.Add(this.panel5);
-            this.panel6.Controls.Add(this.textCustoQTD);
-            this.panel6.Controls.Add(this.textCustoValor);
             this.panel6.Controls.Add(this.label32);
             this.panel6.Controls.Add(this.label30);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -2031,6 +2032,42 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1032, 112);
             this.panel6.TabIndex = 271;
+            // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel26.Controls.Add(this.panel27);
+            this.panel26.Location = new System.Drawing.Point(878, 76);
+            this.panel26.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel26.Name = "panel26";
+            this.panel26.Padding = new System.Windows.Forms.Padding(1);
+            this.panel26.Size = new System.Drawing.Size(87, 35);
+            this.panel26.TabIndex = 316;
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.White;
+            this.panel27.Controls.Add(this.textCustoValor);
+            this.panel27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel27.Location = new System.Drawing.Point(1, 1);
+            this.panel27.Margin = new System.Windows.Forms.Padding(1);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(85, 33);
+            this.panel27.TabIndex = 0;
+            // 
+            // textCustoValor
+            // 
+            this.textCustoValor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textCustoValor.BackColor = System.Drawing.Color.White;
+            this.textCustoValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textCustoValor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textCustoValor.Location = new System.Drawing.Point(8, 7);
+            this.textCustoValor.Name = "textCustoValor";
+            this.textCustoValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textCustoValor.Size = new System.Drawing.Size(70, 22);
+            this.textCustoValor.TabIndex = 21;
+            this.textCustoValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             // 
             // panel15
             // 
@@ -2106,7 +2143,8 @@
             this.combGridAbastecimentoCombustivel,
             this.textGridAbastecimentoLitros,
             this.textGridAbastecimentoValor,
-            this.textGridAbastecimentoTotal});
+            this.textGridAbastecimentoTotal,
+            this.combGridAbastecimentoStatus});
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
@@ -2190,8 +2228,19 @@
             this.textGridAbastecimentoTotal.Name = "textGridAbastecimentoTotal";
             this.textGridAbastecimentoTotal.ReadOnly = true;
             // 
+            // combGridAbastecimentoStatus
+            // 
+            this.combGridAbastecimentoStatus.HeaderText = "STATUS";
+            this.combGridAbastecimentoStatus.Name = "combGridAbastecimentoStatus";
+            this.combGridAbastecimentoStatus.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.combGridAbastecimentoStatus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.panel30);
+            this.panel11.Controls.Add(this.panel28);
+            this.panel11.Controls.Add(this.combAbastecimentoStatus);
+            this.panel11.Controls.Add(this.label44);
             this.panel11.Controls.Add(this.panel16);
             this.panel11.Controls.Add(this.btnAddPosto);
             this.panel11.Controls.Add(this.combAbastecimentoPosto);
@@ -2203,8 +2252,6 @@
             this.panel11.Controls.Add(this.btnAddAbastecimento);
             this.panel11.Controls.Add(this.label36);
             this.panel11.Controls.Add(this.panel12);
-            this.panel11.Controls.Add(this.textAbastecimentoLitros);
-            this.panel11.Controls.Add(this.textAbastecimentoValor);
             this.panel11.Controls.Add(this.label37);
             this.panel11.Controls.Add(this.label38);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
@@ -2214,12 +2261,83 @@
             this.panel11.Size = new System.Drawing.Size(1032, 112);
             this.panel11.TabIndex = 273;
             // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel28.Controls.Add(this.panel29);
+            this.panel28.Location = new System.Drawing.Point(740, 76);
+            this.panel28.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel28.Name = "panel28";
+            this.panel28.Padding = new System.Windows.Forms.Padding(1);
+            this.panel28.Size = new System.Drawing.Size(87, 35);
+            this.panel28.TabIndex = 316;
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.White;
+            this.panel29.Controls.Add(this.textAbastecimentoValor);
+            this.panel29.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel29.Location = new System.Drawing.Point(1, 1);
+            this.panel29.Margin = new System.Windows.Forms.Padding(1);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(85, 33);
+            this.panel29.TabIndex = 0;
+            // 
+            // textAbastecimentoValor
+            // 
+            this.textAbastecimentoValor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textAbastecimentoValor.BackColor = System.Drawing.Color.White;
+            this.textAbastecimentoValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textAbastecimentoValor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textAbastecimentoValor.Location = new System.Drawing.Point(8, 7);
+            this.textAbastecimentoValor.Name = "textAbastecimentoValor";
+            this.textAbastecimentoValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textAbastecimentoValor.Size = new System.Drawing.Size(70, 22);
+            this.textAbastecimentoValor.TabIndex = 21;
+            this.textAbastecimentoValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
+            // 
+            // combAbastecimentoStatus
+            // 
+            this.combAbastecimentoStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.combAbastecimentoStatus.BackColor = System.Drawing.Color.Transparent;
+            this.combAbastecimentoStatus.BaseColor = System.Drawing.Color.White;
+            this.combAbastecimentoStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combAbastecimentoStatus.BorderSize = 1;
+            this.combAbastecimentoStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combAbastecimentoStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combAbastecimentoStatus.FocusedColor = System.Drawing.Color.Empty;
+            this.combAbastecimentoStatus.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.combAbastecimentoStatus.ForeColor = System.Drawing.Color.Black;
+            this.combAbastecimentoStatus.FormattingEnabled = true;
+            this.combAbastecimentoStatus.IntegralHeight = false;
+            this.combAbastecimentoStatus.ItemHeight = 29;
+            this.combAbastecimentoStatus.Location = new System.Drawing.Point(847, 76);
+            this.combAbastecimentoStatus.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combAbastecimentoStatus.Name = "combAbastecimentoStatus";
+            this.combAbastecimentoStatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.combAbastecimentoStatus.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.combAbastecimentoStatus.Size = new System.Drawing.Size(118, 35);
+            this.combAbastecimentoStatus.TabIndex = 275;
+            // 
+            // label44
+            // 
+            this.label44.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label44.Location = new System.Drawing.Point(847, 50);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(50, 18);
+            this.label44.TabIndex = 276;
+            this.label44.Text = "Status";
+            // 
             // panel16
             // 
             this.panel16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel16.Controls.Add(this.label43);
-            this.panel16.Location = new System.Drawing.Point(843, 76);
+            this.panel16.Location = new System.Drawing.Point(705, 76);
             this.panel16.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(35, 35);
@@ -2248,7 +2366,7 @@
             this.btnAddPosto.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnAddPosto.IconColor = System.Drawing.Color.White;
             this.btnAddPosto.IconSize = 16;
-            this.btnAddPosto.Location = new System.Drawing.Point(478, 76);
+            this.btnAddPosto.Location = new System.Drawing.Point(420, 76);
             this.btnAddPosto.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.btnAddPosto.Name = "btnAddPosto";
             this.btnAddPosto.Rotation = 0D;
@@ -2277,7 +2395,7 @@
             this.combAbastecimentoPosto.Name = "combAbastecimentoPosto";
             this.combAbastecimentoPosto.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combAbastecimentoPosto.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combAbastecimentoPosto.Size = new System.Drawing.Size(278, 35);
+            this.combAbastecimentoPosto.Size = new System.Drawing.Size(220, 35);
             this.combAbastecimentoPosto.TabIndex = 272;
             // 
             // combAbastecimentoCombustivel
@@ -2295,12 +2413,12 @@
             this.combAbastecimentoCombustivel.FormattingEnabled = true;
             this.combAbastecimentoCombustivel.IntegralHeight = false;
             this.combAbastecimentoCombustivel.ItemHeight = 29;
-            this.combAbastecimentoCombustivel.Location = new System.Drawing.Point(533, 76);
+            this.combAbastecimentoCombustivel.Location = new System.Drawing.Point(475, 76);
             this.combAbastecimentoCombustivel.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.combAbastecimentoCombustivel.Name = "combAbastecimentoCombustivel";
             this.combAbastecimentoCombustivel.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combAbastecimentoCombustivel.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combAbastecimentoCombustivel.Size = new System.Drawing.Size(150, 35);
+            this.combAbastecimentoCombustivel.Size = new System.Drawing.Size(110, 35);
             this.combAbastecimentoCombustivel.TabIndex = 250;
             // 
             // label39
@@ -2309,7 +2427,7 @@
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label39.Location = new System.Drawing.Point(533, 50);
+            this.label39.Location = new System.Drawing.Point(475, 50);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(90, 18);
             this.label39.TabIndex = 271;
@@ -2360,7 +2478,7 @@
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label35.Location = new System.Drawing.Point(703, 50);
+            this.label35.Location = new System.Drawing.Point(605, 50);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(45, 18);
             this.label35.TabIndex = 266;
@@ -2410,55 +2528,13 @@
             this.panel12.Size = new System.Drawing.Size(1000, 2);
             this.panel12.TabIndex = 260;
             // 
-            // textAbastecimentoLitros
-            // 
-            this.textAbastecimentoLitros.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textAbastecimentoLitros.BackColor = System.Drawing.Color.White;
-            this.textAbastecimentoLitros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textAbastecimentoLitros.BaseColor = System.Drawing.Color.White;
-            this.textAbastecimentoLitros.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textAbastecimentoLitros.BorderSize = 1;
-            this.textAbastecimentoLitros.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textAbastecimentoLitros.FocusedBaseColor = System.Drawing.Color.White;
-            this.textAbastecimentoLitros.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textAbastecimentoLitros.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textAbastecimentoLitros.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textAbastecimentoLitros.Location = new System.Drawing.Point(703, 76);
-            this.textAbastecimentoLitros.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textAbastecimentoLitros.MaxLength = 20;
-            this.textAbastecimentoLitros.Name = "textAbastecimentoLitros";
-            this.textAbastecimentoLitros.PasswordChar = '\0';
-            this.textAbastecimentoLitros.Size = new System.Drawing.Size(120, 35);
-            this.textAbastecimentoLitros.TabIndex = 265;
-            // 
-            // textAbastecimentoValor
-            // 
-            this.textAbastecimentoValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textAbastecimentoValor.BackColor = System.Drawing.Color.White;
-            this.textAbastecimentoValor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textAbastecimentoValor.BaseColor = System.Drawing.Color.White;
-            this.textAbastecimentoValor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textAbastecimentoValor.BorderSize = 1;
-            this.textAbastecimentoValor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textAbastecimentoValor.FocusedBaseColor = System.Drawing.Color.White;
-            this.textAbastecimentoValor.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textAbastecimentoValor.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textAbastecimentoValor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textAbastecimentoValor.Location = new System.Drawing.Point(878, 76);
-            this.textAbastecimentoValor.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textAbastecimentoValor.MaxLength = 20;
-            this.textAbastecimentoValor.Name = "textAbastecimentoValor";
-            this.textAbastecimentoValor.PasswordChar = '\0';
-            this.textAbastecimentoValor.Size = new System.Drawing.Size(87, 35);
-            this.textAbastecimentoValor.TabIndex = 267;
-            // 
             // label37
             // 
             this.label37.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label37.Location = new System.Drawing.Point(843, 50);
+            this.label37.Location = new System.Drawing.Point(705, 50);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(42, 18);
             this.label37.TabIndex = 268;
@@ -2476,25 +2552,149 @@
             this.label38.TabIndex = 262;
             this.label38.Text = "Data";
             // 
-            // colNFE
+            // panel30
             // 
-            this.colNFE.HeaderText = "NF-E";
-            this.colNFE.Name = "colNFE";
+            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel30.Controls.Add(this.panel31);
+            this.panel30.Location = new System.Drawing.Point(605, 76);
+            this.panel30.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel30.Name = "panel30";
+            this.panel30.Padding = new System.Windows.Forms.Padding(1);
+            this.panel30.Size = new System.Drawing.Size(80, 35);
+            this.panel30.TabIndex = 317;
             // 
-            // colDescricao
+            // panel31
             // 
-            this.colDescricao.HeaderText = "DESCRIÇÃO";
-            this.colDescricao.Name = "colDescricao";
+            this.panel31.BackColor = System.Drawing.Color.White;
+            this.panel31.Controls.Add(this.textAbastecimentoLitros);
+            this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel31.Location = new System.Drawing.Point(1, 1);
+            this.panel31.Margin = new System.Windows.Forms.Padding(1);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(78, 33);
+            this.panel31.TabIndex = 0;
             // 
-            // colPeso
+            // textAbastecimentoLitros
             // 
-            this.colPeso.HeaderText = "PESO";
-            this.colPeso.Name = "colPeso";
+            this.textAbastecimentoLitros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textAbastecimentoLitros.BackColor = System.Drawing.Color.White;
+            this.textAbastecimentoLitros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textAbastecimentoLitros.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textAbastecimentoLitros.Location = new System.Drawing.Point(8, 7);
+            this.textAbastecimentoLitros.Name = "textAbastecimentoLitros";
+            this.textAbastecimentoLitros.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textAbastecimentoLitros.Size = new System.Drawing.Size(63, 22);
+            this.textAbastecimentoLitros.TabIndex = 21;
+            this.textAbastecimentoLitros.TextChanged += new System.EventHandler(this.OnChangedTextQtd);
             // 
-            // colValor
+            // panel32
             // 
-            this.colValor.HeaderText = "VALOR";
-            this.colValor.Name = "colValor";
+            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel32.Controls.Add(this.panel33);
+            this.panel32.Location = new System.Drawing.Point(703, 76);
+            this.panel32.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel32.Name = "panel32";
+            this.panel32.Padding = new System.Windows.Forms.Padding(1);
+            this.panel32.Size = new System.Drawing.Size(120, 35);
+            this.panel32.TabIndex = 318;
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.Color.White;
+            this.panel33.Controls.Add(this.textCustoQTD);
+            this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel33.Location = new System.Drawing.Point(1, 1);
+            this.panel33.Margin = new System.Windows.Forms.Padding(1);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(118, 33);
+            this.panel33.TabIndex = 0;
+            // 
+            // textCustoQTD
+            // 
+            this.textCustoQTD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textCustoQTD.BackColor = System.Drawing.Color.White;
+            this.textCustoQTD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textCustoQTD.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textCustoQTD.Location = new System.Drawing.Point(8, 7);
+            this.textCustoQTD.Name = "textCustoQTD";
+            this.textCustoQTD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textCustoQTD.Size = new System.Drawing.Size(103, 22);
+            this.textCustoQTD.TabIndex = 21;
+            this.textCustoQTD.TextChanged += new System.EventHandler(this.OnChangedTextQtd);
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel34.Controls.Add(this.panel35);
+            this.panel34.Location = new System.Drawing.Point(678, 76);
+            this.panel34.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel34.Name = "panel34";
+            this.panel34.Padding = new System.Windows.Forms.Padding(1);
+            this.panel34.Size = new System.Drawing.Size(102, 35);
+            this.panel34.TabIndex = 316;
+            // 
+            // panel35
+            // 
+            this.panel35.BackColor = System.Drawing.Color.White;
+            this.panel35.Controls.Add(this.textCargaPeso);
+            this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel35.Location = new System.Drawing.Point(1, 1);
+            this.panel35.Margin = new System.Windows.Forms.Padding(1);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(100, 33);
+            this.panel35.TabIndex = 0;
+            // 
+            // textCargaPeso
+            // 
+            this.textCargaPeso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textCargaPeso.BackColor = System.Drawing.Color.White;
+            this.textCargaPeso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textCargaPeso.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textCargaPeso.Location = new System.Drawing.Point(8, 7);
+            this.textCargaPeso.Name = "textCargaPeso";
+            this.textCargaPeso.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textCargaPeso.Size = new System.Drawing.Size(85, 22);
+            this.textCargaPeso.TabIndex = 21;
+            this.textCargaPeso.TextChanged += new System.EventHandler(this.OnChangedTextPeso);
+            // 
+            // panel36
+            // 
+            this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel36.Controls.Add(this.panel37);
+            this.panel36.Location = new System.Drawing.Point(20, 76);
+            this.panel36.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel36.Name = "panel36";
+            this.panel36.Padding = new System.Windows.Forms.Padding(1);
+            this.panel36.Size = new System.Drawing.Size(148, 35);
+            this.panel36.TabIndex = 317;
+            // 
+            // panel37
+            // 
+            this.panel37.BackColor = System.Drawing.Color.White;
+            this.panel37.Controls.Add(this.textCargaNFE);
+            this.panel37.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel37.Location = new System.Drawing.Point(1, 1);
+            this.panel37.Margin = new System.Windows.Forms.Padding(1);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(146, 33);
+            this.panel37.TabIndex = 0;
+            // 
+            // textCargaNFE
+            // 
+            this.textCargaNFE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textCargaNFE.BackColor = System.Drawing.Color.White;
+            this.textCargaNFE.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textCargaNFE.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textCargaNFE.Location = new System.Drawing.Point(8, 7);
+            this.textCargaNFE.Mask = "000.000.000";
+            this.textCargaNFE.Name = "textCargaNFE";
+            this.textCargaNFE.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textCargaNFE.Size = new System.Drawing.Size(131, 22);
+            this.textCargaNFE.TabIndex = 21;
             // 
             // FormViagens
             // 
@@ -2510,6 +2710,9 @@
             this.tabViagem.ResumeLayout(false);
             this.tabPanelViagem.ResumeLayout(false);
             this.tabPanelViagem.PerformLayout();
+            this.panel22.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
@@ -2529,6 +2732,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridCargas)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel24.ResumeLayout(false);
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
@@ -2539,6 +2745,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridCustos)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel26.ResumeLayout(false);
+            this.panel27.ResumeLayout(false);
+            this.panel27.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.tabPanelAbastecimentos.ResumeLayout(false);
@@ -2546,8 +2755,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridAbastecimentos)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.panel28.ResumeLayout(false);
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
+            this.panel30.ResumeLayout(false);
+            this.panel31.ResumeLayout(false);
+            this.panel31.PerformLayout();
+            this.panel32.ResumeLayout(false);
+            this.panel33.ResumeLayout(false);
+            this.panel33.PerformLayout();
+            this.panel34.ResumeLayout(false);
+            this.panel35.ResumeLayout(false);
+            this.panel35.PerformLayout();
+            this.panel36.ResumeLayout(false);
+            this.panel37.ResumeLayout(false);
+            this.panel37.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2607,7 +2831,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.RichTextBox textInformacoesComplementares;
-        private Guna.UI.WinForms.GunaTextBox textValor;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label29;
@@ -2616,22 +2839,17 @@
         private Guna.UI.WinForms.GunaTextBox textCustoDescricao;
         private System.Windows.Forms.Label label31;
         private FontAwesome.Sharp.IconButton btnAddCusto;
-        private Guna.UI.WinForms.GunaTextBox textCustoValor;
         private System.Windows.Forms.Label label32;
-        private Guna.UI.WinForms.GunaTextBox textCustoQTD;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TabControl tabViagem;
         private System.Windows.Forms.TabPage tabPanelViagem;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label17;
-        private Guna.UI.WinForms.GunaTextBox textCargaNFE;
         private System.Windows.Forms.Label label26;
         private Guna.UI.WinForms.GunaTextBox textCargaDescricao;
         private System.Windows.Forms.Label label27;
-        private Guna.UI.WinForms.GunaTextBox textCargaPeso;
         private System.Windows.Forms.Label label28;
-        private Guna.UI.WinForms.GunaTextBox textCargaValor;
         private FontAwesome.Sharp.IconButton btnAddCarga;
         private Guna.UI.WinForms.GunaDataGridView gridCargas;
         private System.Windows.Forms.TabPage tabPanelCustos;
@@ -2653,8 +2871,6 @@
         private FontAwesome.Sharp.IconButton btnAddAbastecimento;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Panel panel12;
-        private Guna.UI.WinForms.GunaTextBox textAbastecimentoLitros;
-        private Guna.UI.WinForms.GunaTextBox textAbastecimentoValor;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.DataGridViewTextBoxColumn textGridCustoData;
@@ -2662,12 +2878,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn textGridCustoQTD;
         private System.Windows.Forms.DataGridViewTextBoxColumn textGridCustoValor;
         private System.Windows.Forms.DataGridViewTextBoxColumn textGridCustoTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn textGridAbastecimentosData;
-        private System.Windows.Forms.DataGridViewComboBoxColumn combGridAbastecimentoPosto;
-        private System.Windows.Forms.DataGridViewComboBoxColumn combGridAbastecimentoCombustivel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn textGridAbastecimentoLitros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn textGridAbastecimentoValor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn textGridAbastecimentoTotal;
         private Guna.UI.WinForms.GunaComboBox combAbastecimentoPosto;
         private FontAwesome.Sharp.IconButton btnAddPosto;
         private System.Windows.Forms.Panel panel13;
@@ -2692,5 +2902,38 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPeso;
         private System.Windows.Forms.DataGridViewTextBoxColumn colValor;
+        private Guna.UI.WinForms.GunaComboBox combAbastecimentoStatus;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.DataGridViewTextBoxColumn textGridAbastecimentosData;
+        private System.Windows.Forms.DataGridViewComboBoxColumn combGridAbastecimentoPosto;
+        private System.Windows.Forms.DataGridViewComboBoxColumn combGridAbastecimentoCombustivel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn textGridAbastecimentoLitros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn textGridAbastecimentoValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn textGridAbastecimentoTotal;
+        private System.Windows.Forms.DataGridViewComboBoxColumn combGridAbastecimentoStatus;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.MaskedTextBox textValor;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.MaskedTextBox textCargaValor;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.MaskedTextBox textCustoValor;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.MaskedTextBox textAbastecimentoValor;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.MaskedTextBox textAbastecimentoLitros;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.MaskedTextBox textCustoQTD;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.MaskedTextBox textCargaPeso;
+        private System.Windows.Forms.Panel panel36;
+        private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.MaskedTextBox textCargaNFE;
     }
 }

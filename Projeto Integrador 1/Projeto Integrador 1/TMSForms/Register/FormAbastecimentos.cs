@@ -210,5 +210,10 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 textTotal.Text = Convert.ToString(0);
             }
         }
+
+        private void OnChangedTextValor(object sender, EventArgs e) {
+            MaskedTextBox Text = (MaskedTextBox)sender;
+            Converter.OnPressMoeda(ref Text);
+        }
     }
 }

@@ -76,10 +76,10 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 textObservacoes.Text = manutencao.Observacoes;
                 textOrdemServico.Text = manutencao.OrdemServico;
                 combFornecedor.SelectedValue = manutencao.Fornecedor;
-                textMaoObra.Text = Convert.ToString(manutencao.MaoObra);
-                textDesconto.Text = Convert.ToString(manutencao.Desconto);
-                textAcrecimo.Text = Convert.ToString(manutencao.Acrecimo);
-                textValor.Text = Convert.ToString(manutencao.Valor);
+                textMaoObra.Text = Converter.DecimalToReais(Convert.ToDecimal(manutencao.MaoObra));
+                textDesconto.Text = Converter.DecimalToReais(Convert.ToDecimal(manutencao.Desconto));
+                textAcrecimo.Text = Converter.DecimalToReais(Convert.ToDecimal(manutencao.Acrecimos));
+                textValor.Text = Converter.DecimalToReais(Convert.ToDecimal(manutencao.Valor));
 
                 PreencherGrids(Convert.ToString(manutencoes.Itens));
             }
@@ -207,10 +207,10 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     manutencoes.Observacoes = textObservacoes.Text;
                     manutencoes.OrdemServico = textOrdemServico.Text;
                     manutencoes.Fornecedor = combFornecedor.SelectedValue;
-                    manutencoes.MaoObra = textMaoObra.Text;
-                    manutencoes.Desconto = textDesconto.Text;
-                    manutencoes.Acrecimo = textAcrecimo.Text;
-                    manutencoes.Valor = textValor.Text;
+                    manutencoes.MaoObra = Convert.ToString(Converter.ReaisToDecimal(textMaoObra.Text));
+                    manutencoes.Desconto = Convert.ToString(Converter.ReaisToDecimal(textDesconto.Text));
+                    manutencoes.Acrecimo = Convert.ToString(Converter.ReaisToDecimal(textAcrecimo.Text));
+                    manutencoes.Valor = Convert.ToString(Converter.ReaisToDecimal(textValor.Text));
                     manutencoes.Itens = jsonItens;
 
                     if (Id > 0) {
@@ -252,9 +252,9 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 Itens.Add(new {
                     Codigo = carga.Cells[0].Value,
                     Descricao = carga.Cells[1].Value,
-                    Qtd = carga.Cells[2].Value,
-                    Valor = carga.Cells[3].Value,
-                    Total = carga.Cells[4].Value
+                    Qtd = Convert.ToDecimal(carga.Cells[2].Value),
+                    Valor = Convert.ToDecimal(carga.Cells[3].Value),
+                    Total = Convert.ToDecimal(carga.Cells[4].Value)
                 });
             }
             jsonItens = JsonConvert.SerializeObject(Itens);
@@ -278,20 +278,20 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
                 Validate.AddRule(textItemCodigo, "Codigo", "required|max:10");
                 Validate.AddRule(textItemDescricao, "Descrição", "required|max:60");
-                Validate.AddRule(textItemQtd, "Qtd", "required|numeric|max:20");
-                Validate.AddRule(textItemValor, "Valor", "required|numeric|max:20");
+                Validate.AddRule(textItemQtd, "Qtd", "required|quantidade|max:20");
+                Validate.AddRule(textItemValor, "Valor", "required|reais|max:20");
 
                 Validate.Validation();
 
                 if (Validate.IsValid()) {
-                    int valorTotal = Int32.Parse(textItemValor.Text) * Int32.Parse(textItemQtd.Text);
+                    decimal valorTotal = Converter.ReaisToDecimal(textItemValor.Text) * Convert.ToDecimal(textItemQtd.Text);
 
                     gridItens.Rows.Add(
                         textItemCodigo.Text,
                         textItemDescricao.Text,
                         textItemQtd.Text,
-                        textItemValor.Text,
-                        valorTotal
+                        Converter.DecimalToReais(Convert.ToDecimal(textItemValor.Text)),
+                        Converter.DecimalToReais(valorTotal)
                     );
 
                     textItemCodigo.ResetText();
@@ -308,6 +308,11 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void OnChangedTextValor(object sender, EventArgs e) {
+            MaskedTextBox Text = (MaskedTextBox)sender;
+            Converter.OnPressMoeda(ref Text);
         }
     }
 }

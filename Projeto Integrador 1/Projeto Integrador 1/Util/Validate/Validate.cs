@@ -209,8 +209,9 @@ namespace Projeto_Integrador_1.Util.Validate {
 
         private void ValidateTelefone(Rules Rules, string Rule) {
             if (!Rules.Optional) {
+                Console.WriteLine("VALIDATE = >" + Rules.Value + "<");
                 var regexp = @"\(\d{2,}\) \d{4,}\-\d{4}$";
-                var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
+                var match = Regex.Match(Rules.Value.Trim(), regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
                     Errors.Add(new Errors { Rules = Rules, Rule = Rule });
@@ -223,7 +224,7 @@ namespace Projeto_Integrador_1.Util.Validate {
 
         private void ValidateNFE(Rules Rules, string Rule) {
             if (!Rules.Optional) {
-                var regexp = @"^(\d{0,3}(\.\d{3}){2})$";
+                var regexp = @"^(\d{0,3}([\.\,]\d{3}){2})$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
@@ -238,6 +239,34 @@ namespace Projeto_Integrador_1.Util.Validate {
         private void ValidateReais(Rules Rules, string Rule) {
             if (!Rules.Optional) {
                 var regexp = @"^(\d{1,3}(\.\d{3})*)(\,\d{2})$";
+                var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
+
+                if (!match.Success) {
+                    Errors.Add(new Errors { Rules = Rules, Rule = Rule });
+                }
+                else {
+                    Valid.Add(new Valid { Rules = Rules, Rule = Rule });
+                }
+            }
+        }
+
+        private void ValidateQuantidade(Rules Rules, string Rule) {
+            if (!Rules.Optional) {
+                var regexp = @"^\d+(\,\d{2})$";
+                var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
+
+                if (!match.Success) {
+                    Errors.Add(new Errors { Rules = Rules, Rule = Rule });
+                }
+                else {
+                    Valid.Add(new Valid { Rules = Rules, Rule = Rule });
+                }
+            }
+        }
+
+        private void ValidatePeso(Rules Rules, string Rule) {
+            if (!Rules.Optional) {
+                var regexp = @"^\d+(\.\d{3})$";
                 var match = Regex.Match(Rules.Value, regexp, RegexOptions.IgnoreCase);
 
                 if (!match.Success) {
@@ -309,6 +338,8 @@ namespace Projeto_Integrador_1.Util.Validate {
                             case "telefone": ValidateTelefone(Rule, split_rule); break;
                             case "nfe": ValidateNFE(Rule, split_rule); break;
                             case "reais": ValidateReais(Rule, split_rule); break;
+                            case "quantidade": ValidateQuantidade(Rule, split_rule); break;
+                            case "peso": ValidatePeso(Rule, split_rule); break;
                             case "cep": ValidateCEP(Rule, split_rule); break;
                             case "placa": ValidatePlaca(Rule, split_rule); break;
                         }

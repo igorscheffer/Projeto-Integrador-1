@@ -34,11 +34,14 @@ namespace Projeto_Integrador_1.Connection {
         public string Valor { get; set; }
         public string InformacoesComplementares { get; set; }
         public string Cargas { get; set; }
+        public string TotalCargas { get; set; }
         public string Custos { get; set; }
+        public string TotalCustos { get; set; }
         public string Abastecimentos { get; set; }
+        public string TotalAbastecimentos { get; set; }
 
         public void Create() {
-            string sql = "INSERT INTO `viagens` (`remetente`, `destinatario`, `tomador`, `codigo_interno`, `tipo_viagem`, `veiculo`, `reboque`, `motorista`, `saida_cidade`, `saida_uf`, `destino_cidade`, `destino_uf`, `status`, `data_saida`, `data_entrega`, `data_chegada`, `hodometro_saida`, `hodometro_entrega`, `hodometro_percorrido`, `valor`, `informacoes_complementares`, `cargas`, `custos`, `abastecimentos`) VALUES (@remetente, @destinatario, @tomador, @codigo_interno, @tipo_viagem, @veiculo, @reboque, @motorista, @saida_cidade, @saida_uf, @destino_cidade, @destino_uf, @status, @data_saida, @data_entrega, @data_chegada, @hodometro_saida, @hodometro_entrega, @hodometro_percorrido, @valor, @informacoes_complementares, @cargas, @custos, @abastecimentos);";
+            string sql = "INSERT INTO `viagens` (`remetente`, `destinatario`, `tomador`, `codigo_interno`, `tipo_viagem`, `veiculo`, `reboque`, `motorista`, `saida_cidade`, `saida_uf`, `destino_cidade`, `destino_uf`, `status`, `data_saida`, `data_entrega`, `data_chegada`, `hodometro_saida`, `hodometro_entrega`, `hodometro_percorrido`, `valor`, `informacoes_complementares`, `cargas`, `valor_cargas`, `custos`, `valor_custos`, `abastecimentos`, `valor_abastecimentos`) VALUES (@remetente, @destinatario, @tomador, @codigo_interno, @tipo_viagem, @veiculo, @reboque, @motorista, @saida_cidade, @saida_uf, @destino_cidade, @destino_uf, @status, @data_saida, @data_entrega, @data_chegada, @hodometro_saida, @hodometro_entrega, @hodometro_percorrido, @valor, @informacoes_complementares, @cargas, @valor_cargas, @custos, @valor_custos, @abastecimentos, @valor_abastecimentos);";
             try {
                 Open();
 
@@ -66,8 +69,11 @@ namespace Projeto_Integrador_1.Connection {
                 query.Parameters.AddWithValue("@valor", Valor);
                 query.Parameters.AddWithValue("@informacoes_complementares", InformacoesComplementares);
                 query.Parameters.AddWithValue("@cargas", Cargas);
+                query.Parameters.AddWithValue("@valor_cargas", TotalCargas);
                 query.Parameters.AddWithValue("@custos", Custos);
+                query.Parameters.AddWithValue("@valor_custos", TotalCustos);
                 query.Parameters.AddWithValue("@abastecimentos", Abastecimentos);
+                query.Parameters.AddWithValue("@valor_abastecimentos", TotalAbastecimentos);
 
                 query.ExecuteNonQuery();
 
@@ -83,7 +89,7 @@ namespace Projeto_Integrador_1.Connection {
         }
 
         public void Update() {
-            string sql = "UPDATE `viagens` SET `remetente` = @remetente, `destinatario` = @destinatario, `tomador` = @tomador, `codigo_interno` = @codigo_interno, `tipo_viagem` = @tipo_viagem, `veiculo` = @veiculo, `reboque` = @reboque, `motorista` = @motorista, `saida_cidade` = @saida_cidade, `saida_uf` = @saida_uf, `destino_cidade` = @destino_cidade, `destino_uf` = @destino_uf, `status` = @status, `data_saida` = @data_saida, `data_entrega` = @data_entrega, `data_chegada` = @data_chegada, `hodometro_saida` = @hodometro_saida, `hodometro_entrega` = @hodometro_entrega, `hodometro_percorrido` = @hodometro_percorrido, `valor` = @valor, `informacoes_complementares` = @informacoes_complementares, `cargas` = @cargas, `custos` = @custos, `abastecimentos` = @abastecimentos WHERE `id` = @id LIMIT 1;";
+            string sql = "UPDATE `viagens` SET `remetente` = @remetente, `destinatario` = @destinatario, `tomador` = @tomador, `codigo_interno` = @codigo_interno, `tipo_viagem` = @tipo_viagem, `veiculo` = @veiculo, `reboque` = @reboque, `motorista` = @motorista, `saida_cidade` = @saida_cidade, `saida_uf` = @saida_uf, `destino_cidade` = @destino_cidade, `destino_uf` = @destino_uf, `status` = @status, `data_saida` = @data_saida, `data_entrega` = @data_entrega, `data_chegada` = @data_chegada, `hodometro_saida` = @hodometro_saida, `hodometro_entrega` = @hodometro_entrega, `hodometro_percorrido` = @hodometro_percorrido, `valor` = @valor, `informacoes_complementares` = @informacoes_complementares, `cargas` = @cargas, `valor_cargas` = @valor_cargas, `custos` = @custos, `valor_custos` = @valor_custos, `abastecimentos` = @abastecimentos, `valor_abastecimentos` = @valor_abastecimentos WHERE `id` = @id LIMIT 1;";
             try {
                 Open();
 
@@ -111,8 +117,11 @@ namespace Projeto_Integrador_1.Connection {
                 query.Parameters.AddWithValue("@valor", Valor);
                 query.Parameters.AddWithValue("@informacoes_complementares", InformacoesComplementares);
                 query.Parameters.AddWithValue("@cargas", Cargas);
+                query.Parameters.AddWithValue("@valor_cargas", TotalCargas);
                 query.Parameters.AddWithValue("@custos", Custos);
+                query.Parameters.AddWithValue("@valor_custos", TotalCustos);
                 query.Parameters.AddWithValue("@abastecimentos", Abastecimentos);
+                query.Parameters.AddWithValue("@valor_abastecimentos", TotalAbastecimentos); ;
                 query.Parameters.AddWithValue("@id", Id);
 
                 query.ExecuteNonQuery();
@@ -201,7 +210,11 @@ namespace Projeto_Integrador_1.Connection {
                         DestinoUF = data["destino_uf"],
                         Placa = data["veiculo_placa"],
                         Motorista = data["motorista_nome"],
-                        Status = data["status"]
+                        Valor = data["valor"],
+                        Status = data["status"],
+                        TotalCargas = data["valor_cargas"],
+                        TotalCustos = data["valor_custos"],
+                        TotalAbastecimentos = data["valor_abastecimentos"]
                     });
                 }
 

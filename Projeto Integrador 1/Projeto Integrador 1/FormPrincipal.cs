@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Net.Http;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using Projeto_Integrador_1.Connection;

@@ -41,7 +41,6 @@
             this.timeDataVencimento = new Guna.UI.WinForms.GunaDateTimePicker();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
-            this.textValor = new Guna.UI.WinForms.GunaTextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.textDescricao = new System.Windows.Forms.RichTextBox();
@@ -52,9 +51,14 @@
             this.btnEnviar = new FontAwesome.Sharp.IconButton();
             this.textLocal = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.textValor = new System.Windows.Forms.MaskedTextBox();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel19.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -360,27 +364,6 @@
             this.label22.TabIndex = 250;
             this.label22.Text = "R$";
             // 
-            // textValor
-            // 
-            this.textValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textValor.BackColor = System.Drawing.Color.White;
-            this.textValor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textValor.BaseColor = System.Drawing.Color.White;
-            this.textValor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textValor.BorderSize = 1;
-            this.textValor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textValor.FocusedBaseColor = System.Drawing.Color.White;
-            this.textValor.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textValor.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textValor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textValor.Location = new System.Drawing.Point(535, 151);
-            this.textValor.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textValor.MaxLength = 20;
-            this.textValor.Name = "textValor";
-            this.textValor.PasswordChar = '\0';
-            this.textValor.Size = new System.Drawing.Size(100, 35);
-            this.textValor.TabIndex = 272;
-            // 
             // label20
             // 
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -530,18 +513,54 @@
             this.panel2.Size = new System.Drawing.Size(490, 130);
             this.panel2.TabIndex = 277;
             // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel18.Controls.Add(this.panel19);
+            this.panel18.Location = new System.Drawing.Point(535, 151);
+            this.panel18.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel18.Name = "panel18";
+            this.panel18.Padding = new System.Windows.Forms.Padding(1);
+            this.panel18.Size = new System.Drawing.Size(110, 35);
+            this.panel18.TabIndex = 318;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.White;
+            this.panel19.Controls.Add(this.textValor);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel19.Location = new System.Drawing.Point(1, 1);
+            this.panel19.Margin = new System.Windows.Forms.Padding(1);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(108, 33);
+            this.panel19.TabIndex = 0;
+            // 
+            // textValor
+            // 
+            this.textValor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textValor.BackColor = System.Drawing.Color.White;
+            this.textValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textValor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textValor.Location = new System.Drawing.Point(8, 7);
+            this.textValor.Name = "textValor";
+            this.textValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textValor.Size = new System.Drawing.Size(93, 22);
+            this.textValor.TabIndex = 21;
+            this.textValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
+            // 
             // FormMultas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 500);
+            this.Controls.Add(this.panel18);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.textValor);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.timeDataVencimento);
@@ -568,6 +587,9 @@
             this.panel7.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -595,7 +617,6 @@
         private Guna.UI.WinForms.GunaDateTimePicker timeDataVencimento;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label22;
-        private Guna.UI.WinForms.GunaTextBox textValor;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.RichTextBox textDescricao;
@@ -604,5 +625,8 @@
         private FontAwesome.Sharp.IconButton btnEnviar;
         private System.Windows.Forms.RichTextBox textLocal;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.MaskedTextBox textValor;
     }
 }

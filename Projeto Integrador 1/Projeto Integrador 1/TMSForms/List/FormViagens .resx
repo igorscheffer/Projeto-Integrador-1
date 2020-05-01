@@ -146,6 +146,27 @@
   <data name="btnMenuItemEditar.Text" xml:space="preserve">
     <value>Editar</value>
   </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 34</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>Conta à Pagar</value>
+  </data>
+  <data name="btnMenuItemContaPagar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 34</value>
+  </data>
+  <data name="btnMenuItemContaPagar.Text" xml:space="preserve">
+    <value>Conta à Receber</value>
+  </data>
+  <data name="btnMenuItemContaPagar.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomLeft</value>
+  </data>
+  <data name="btnMenuItemLancarConta.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 34</value>
+  </data>
+  <data name="btnMenuItemLancarConta.Text" xml:space="preserve">
+    <value>Lançar Conta</value>
+  </data>
   <data name="btnMenuItemExcluir.Size" type="System.Drawing.Size, System.Drawing">
     <value>202, 34</value>
   </data>
@@ -153,7 +174,7 @@
     <value>Excluir</value>
   </data>
   <data name="MenuItens.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 94</value>
+    <value>203, 128</value>
   </data>
   <data name="&gt;&gt;MenuItens.Name" xml:space="preserve">
     <value>MenuItens</value>
@@ -371,6 +392,24 @@
   </data>
   <data name="&gt;&gt;colStatus.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMenuItemLancarConta.Name" xml:space="preserve">
+    <value>btnMenuItemLancarConta</value>
+  </data>
+  <data name="&gt;&gt;btnMenuItemLancarConta.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMenuItemContaPagar.Name" xml:space="preserve">
+    <value>btnMenuItemContaPagar</value>
+  </data>
+  <data name="&gt;&gt;btnMenuItemContaPagar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormViagens</value>

@@ -57,18 +57,26 @@
             this.label25 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.textTotal = new Guna.UI.WinForms.GunaTextBox();
             this.lab = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.textValor = new Guna.UI.WinForms.GunaTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnEnviar = new FontAwesome.Sharp.IconButton();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.textValor = new System.Windows.Forms.MaskedTextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.textTotal = new System.Windows.Forms.MaskedTextBox();
             this.panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -545,28 +553,6 @@
             this.label7.TabIndex = 250;
             this.label7.Text = "R$";
             // 
-            // textTotal
-            // 
-            this.textTotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textTotal.BackColor = System.Drawing.Color.White;
-            this.textTotal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textTotal.BaseColor = System.Drawing.Color.White;
-            this.textTotal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textTotal.BorderSize = 1;
-            this.textTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textTotal.Enabled = false;
-            this.textTotal.FocusedBaseColor = System.Drawing.Color.White;
-            this.textTotal.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textTotal.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textTotal.Location = new System.Drawing.Point(355, 230);
-            this.textTotal.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textTotal.MaxLength = 20;
-            this.textTotal.Name = "textTotal";
-            this.textTotal.PasswordChar = '\0';
-            this.textTotal.Size = new System.Drawing.Size(95, 35);
-            this.textTotal.TabIndex = 281;
-            // 
             // lab
             // 
             this.lab.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -600,28 +586,6 @@
             this.label9.Size = new System.Drawing.Size(26, 16);
             this.label9.TabIndex = 250;
             this.label9.Text = "R$";
-            // 
-            // textValor
-            // 
-            this.textValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textValor.BackColor = System.Drawing.Color.White;
-            this.textValor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textValor.BaseColor = System.Drawing.Color.White;
-            this.textValor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textValor.BorderSize = 1;
-            this.textValor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textValor.FocusedBaseColor = System.Drawing.Color.White;
-            this.textValor.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textValor.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textValor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textValor.Location = new System.Drawing.Point(205, 230);
-            this.textValor.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textValor.MaxLength = 20;
-            this.textValor.Name = "textValor";
-            this.textValor.PasswordChar = '\0';
-            this.textValor.Size = new System.Drawing.Size(95, 35);
-            this.textValor.TabIndex = 284;
-            this.textValor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalcularValorTotal);
             // 
             // label11
             // 
@@ -660,17 +624,88 @@
             this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.OnEnviar);
             // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel24.Controls.Add(this.panel25);
+            this.panel24.Location = new System.Drawing.Point(205, 230);
+            this.panel24.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel24.Name = "panel24";
+            this.panel24.Padding = new System.Windows.Forms.Padding(1);
+            this.panel24.Size = new System.Drawing.Size(95, 35);
+            this.panel24.TabIndex = 316;
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.White;
+            this.panel25.Controls.Add(this.textValor);
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel25.Location = new System.Drawing.Point(1, 1);
+            this.panel25.Margin = new System.Windows.Forms.Padding(1);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(93, 33);
+            this.panel25.TabIndex = 0;
+            // 
+            // textValor
+            // 
+            this.textValor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textValor.BackColor = System.Drawing.Color.White;
+            this.textValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textValor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textValor.Location = new System.Drawing.Point(8, 7);
+            this.textValor.Name = "textValor";
+            this.textValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textValor.Size = new System.Drawing.Size(78, 22);
+            this.textValor.TabIndex = 21;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Location = new System.Drawing.Point(355, 230);
+            this.panel4.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(1);
+            this.panel4.Size = new System.Drawing.Size(95, 35);
+            this.panel4.TabIndex = 317;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.textTotal);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(1, 1);
+            this.panel5.Margin = new System.Windows.Forms.Padding(1);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(93, 33);
+            this.panel5.TabIndex = 0;
+            // 
+            // textTotal
+            // 
+            this.textTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textTotal.BackColor = System.Drawing.Color.White;
+            this.textTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textTotal.Enabled = false;
+            this.textTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textTotal.Location = new System.Drawing.Point(8, 7);
+            this.textTotal.Name = "textTotal";
+            this.textTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textTotal.Size = new System.Drawing.Size(78, 22);
+            this.textTotal.TabIndex = 21;
+            // 
             // FormAbastecimentos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 372);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel24);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textValor);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textTotal);
             this.Controls.Add(this.lab);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.textLitros);
@@ -709,6 +744,12 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel24.ResumeLayout(false);
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -744,12 +785,16 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
-        private Guna.UI.WinForms.GunaTextBox textTotal;
         private System.Windows.Forms.Label lab;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label9;
-        private Guna.UI.WinForms.GunaTextBox textValor;
         private System.Windows.Forms.Label label11;
         private FontAwesome.Sharp.IconButton btnEnviar;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.MaskedTextBox textValor;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.MaskedTextBox textTotal;
     }
 }

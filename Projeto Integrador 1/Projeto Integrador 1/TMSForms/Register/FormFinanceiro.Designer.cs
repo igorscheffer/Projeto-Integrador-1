@@ -45,7 +45,6 @@
             this.timeDataVencimento = new Guna.UI.WinForms.GunaDateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.textValor = new Guna.UI.WinForms.GunaTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.textDocumento = new Guna.UI.WinForms.GunaTextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -57,14 +56,19 @@
             this.panelInfoPagamento = new System.Windows.Forms.Panel();
             this.lblInfoPagamento = new System.Windows.Forms.Label();
             this.gridParcelas = new Guna.UI.WinForms.GunaDataGridView();
-            this.textGridCustoTotal = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.textGridCustoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFormaPagamento = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colData = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colParcela = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colData = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFormaPagamento = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.textGridCustoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textGridCustoTotal = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.textValor = new System.Windows.Forms.MaskedTextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridParcelas)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -105,7 +109,7 @@
             this.btnEnviar.IconColor = System.Drawing.Color.White;
             this.btnEnviar.IconSize = 16;
             this.btnEnviar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEnviar.Location = new System.Drawing.Point(891, 607);
+            this.btnEnviar.Location = new System.Drawing.Point(891, 527);
             this.btnEnviar.Margin = new System.Windows.Forms.Padding(10);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Rotation = 0D;
@@ -388,27 +392,6 @@
             this.label14.TabIndex = 250;
             this.label14.Text = "R$";
             // 
-            // textValor
-            // 
-            this.textValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textValor.BackColor = System.Drawing.Color.White;
-            this.textValor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textValor.BaseColor = System.Drawing.Color.White;
-            this.textValor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textValor.BorderSize = 1;
-            this.textValor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textValor.FocusedBaseColor = System.Drawing.Color.White;
-            this.textValor.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textValor.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textValor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textValor.Location = new System.Drawing.Point(375, 151);
-            this.textValor.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textValor.MaxLength = 20;
-            this.textValor.Name = "textValor";
-            this.textValor.PasswordChar = '\0';
-            this.textValor.Size = new System.Drawing.Size(100, 35);
-            this.textValor.TabIndex = 301;
-            // 
             // label16
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -508,7 +491,7 @@
             this.btnGerarParcelas.Size = new System.Drawing.Size(35, 35);
             this.btnGerarParcelas.TabIndex = 309;
             this.btnGerarParcelas.UseVisualStyleBackColor = false;
-            this.btnGerarParcelas.Click += new System.EventHandler(this.OnGerarParcelas);
+            this.btnGerarParcelas.Click += new System.EventHandler(this.OnClickGerarParcela);
             // 
             // textQtdParcelas
             // 
@@ -618,7 +601,7 @@
             this.gridParcelas.RowTemplate.DividerHeight = 1;
             this.gridParcelas.RowTemplate.Height = 30;
             this.gridParcelas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridParcelas.Size = new System.Drawing.Size(1000, 320);
+            this.gridParcelas.Size = new System.Drawing.Size(1000, 302);
             this.gridParcelas.TabIndex = 313;
             this.gridParcelas.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.gridParcelas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -643,24 +626,17 @@
             this.gridParcelas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridParcelas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             // 
-            // textGridCustoTotal
+            // colParcela
             // 
-            this.textGridCustoTotal.HeaderText = "PAGO";
-            this.textGridCustoTotal.Name = "textGridCustoTotal";
-            this.textGridCustoTotal.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.textGridCustoTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colParcela.HeaderText = "PARCELA";
+            this.colParcela.Name = "colParcela";
+            this.colParcela.ReadOnly = true;
             // 
-            // textGridCustoValor
+            // colData
             // 
-            this.textGridCustoValor.HeaderText = "OBSERVAÇÃO";
-            this.textGridCustoValor.Name = "textGridCustoValor";
-            // 
-            // colFormaPagamento
-            // 
-            this.colFormaPagamento.HeaderText = "FORMA DE PAGAMENTO";
-            this.colFormaPagamento.Name = "colFormaPagamento";
-            this.colFormaPagamento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colFormaPagamento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colData.HeaderText = "DATA";
+            this.colData.Name = "colData";
+            this.colData.ReadOnly = true;
             // 
             // colValor
             // 
@@ -669,23 +645,67 @@
             this.colValor.Name = "colValor";
             this.colValor.ReadOnly = true;
             // 
-            // colData
+            // colFormaPagamento
             // 
-            this.colData.HeaderText = "DATA";
-            this.colData.Name = "colData";
-            this.colData.ReadOnly = true;
+            this.colFormaPagamento.HeaderText = "FORMA DE PAGAMENTO";
+            this.colFormaPagamento.Name = "colFormaPagamento";
+            this.colFormaPagamento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colFormaPagamento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // colParcela
+            // textGridCustoValor
             // 
-            this.colParcela.HeaderText = "PARCELA";
-            this.colParcela.Name = "colParcela";
-            this.colParcela.ReadOnly = true;
+            this.textGridCustoValor.HeaderText = "OBSERVAÇÃO";
+            this.textGridCustoValor.Name = "textGridCustoValor";
+            // 
+            // textGridCustoTotal
+            // 
+            this.textGridCustoTotal.HeaderText = "PAGO";
+            this.textGridCustoTotal.Name = "textGridCustoTotal";
+            this.textGridCustoTotal.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.textGridCustoTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel2.Controls.Add(this.panel11);
+            this.panel2.Location = new System.Drawing.Point(375, 151);
+            this.panel2.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(1);
+            this.panel2.Size = new System.Drawing.Size(140, 35);
+            this.panel2.TabIndex = 314;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Controls.Add(this.textValor);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(1, 1);
+            this.panel11.Margin = new System.Windows.Forms.Padding(1);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(138, 33);
+            this.panel11.TabIndex = 0;
+            // 
+            // textValor
+            // 
+            this.textValor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textValor.BackColor = System.Drawing.Color.White;
+            this.textValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textValor.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textValor.Location = new System.Drawing.Point(8, 7);
+            this.textValor.Name = "textValor";
+            this.textValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textValor.Size = new System.Drawing.Size(123, 22);
+            this.textValor.TabIndex = 21;
+            this.textValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             // 
             // FormFinanceiro
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1040, 661);
+            this.ClientSize = new System.Drawing.Size(1040, 581);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.gridParcelas);
             this.Controls.Add(this.panelInfoPagamento);
@@ -698,7 +718,6 @@
             this.Controls.Add(this.textDocumento);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textValor);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.timeDataVencimento);
@@ -722,6 +741,9 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridParcelas)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -748,7 +770,6 @@
         private Guna.UI.WinForms.GunaDateTimePicker timeDataVencimento;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label14;
-        private Guna.UI.WinForms.GunaTextBox textValor;
         private System.Windows.Forms.Label label16;
         private Guna.UI.WinForms.GunaTextBox textDocumento;
         private System.Windows.Forms.Label label17;
@@ -766,5 +787,8 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn colFormaPagamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn textGridCustoValor;
         private System.Windows.Forms.DataGridViewCheckBoxColumn textGridCustoTotal;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.MaskedTextBox textValor;
     }
 }

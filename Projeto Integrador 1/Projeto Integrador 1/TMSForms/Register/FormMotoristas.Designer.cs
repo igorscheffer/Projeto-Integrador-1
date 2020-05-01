@@ -30,7 +30,6 @@
         {
             this.textNome = new Guna.UI.WinForms.GunaTextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.textCPF = new Guna.UI.WinForms.GunaTextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.textRG = new Guna.UI.WinForms.GunaTextBox();
             this.lblRG = new System.Windows.Forms.Label();
@@ -62,13 +61,10 @@
             this.lblN = new System.Windows.Forms.Label();
             this.textEndereco = new Guna.UI.WinForms.GunaTextBox();
             this.lblEndereco = new System.Windows.Forms.Label();
-            this.textCEP = new Guna.UI.WinForms.GunaTextBox();
             this.lblCEP = new System.Windows.Forms.Label();
             this.textEmail = new Guna.UI.WinForms.GunaTextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.textCelular = new Guna.UI.WinForms.GunaTextBox();
             this.lblCelular = new System.Windows.Forms.Label();
-            this.textTelefone = new Guna.UI.WinForms.GunaTextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.combCargo = new Guna.UI.WinForms.GunaComboBox();
             this.lblCargo = new System.Windows.Forms.Label();
@@ -80,12 +76,32 @@
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.textCPF = new System.Windows.Forms.MaskedTextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.textTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.textCelular = new System.Windows.Forms.MaskedTextBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.textCEP = new System.Windows.Forms.MaskedTextBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // textNome
@@ -120,27 +136,6 @@
             this.lblNome.Size = new System.Drawing.Size(118, 18);
             this.lblNome.TabIndex = 88;
             this.lblNome.Text = "Nome Completo";
-            // 
-            // textCPF
-            // 
-            this.textCPF.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textCPF.BackColor = System.Drawing.Color.White;
-            this.textCPF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textCPF.BaseColor = System.Drawing.Color.White;
-            this.textCPF.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textCPF.BorderSize = 1;
-            this.textCPF.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCPF.FocusedBaseColor = System.Drawing.Color.White;
-            this.textCPF.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textCPF.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textCPF.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCPF.Location = new System.Drawing.Point(339, 71);
-            this.textCPF.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textCPF.MaxLength = 14;
-            this.textCPF.Name = "textCPF";
-            this.textCPF.PasswordChar = '\0';
-            this.textCPF.Size = new System.Drawing.Size(250, 35);
-            this.textCPF.TabIndex = 2;
             // 
             // lblCPF
             // 
@@ -607,7 +602,7 @@
             this.lblN.AutoSize = true;
             this.lblN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblN.Location = new System.Drawing.Point(489, 234);
+            this.lblN.Location = new System.Drawing.Point(489, 235);
             this.lblN.Name = "lblN";
             this.lblN.Size = new System.Drawing.Size(24, 18);
             this.lblN.TabIndex = 161;
@@ -626,12 +621,12 @@
             this.textEndereco.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textEndereco.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textEndereco.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textEndereco.Location = new System.Drawing.Point(169, 257);
+            this.textEndereco.Location = new System.Drawing.Point(170, 257);
             this.textEndereco.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textEndereco.MaxLength = 100;
             this.textEndereco.Name = "textEndereco";
             this.textEndereco.PasswordChar = '\0';
-            this.textEndereco.Size = new System.Drawing.Size(300, 35);
+            this.textEndereco.Size = new System.Drawing.Size(299, 35);
             this.textEndereco.TabIndex = 12;
             // 
             // lblEndereco
@@ -640,32 +635,11 @@
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEndereco.Location = new System.Drawing.Point(169, 234);
+            this.lblEndereco.Location = new System.Drawing.Point(170, 235);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(72, 18);
             this.lblEndereco.TabIndex = 159;
             this.lblEndereco.Text = "Endereço";
-            // 
-            // textCEP
-            // 
-            this.textCEP.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textCEP.BackColor = System.Drawing.Color.White;
-            this.textCEP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textCEP.BaseColor = System.Drawing.Color.White;
-            this.textCEP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textCEP.BorderSize = 1;
-            this.textCEP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCEP.FocusedBaseColor = System.Drawing.Color.White;
-            this.textCEP.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textCEP.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textCEP.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCEP.Location = new System.Drawing.Point(20, 257);
-            this.textCEP.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textCEP.MaxLength = 9;
-            this.textCEP.Name = "textCEP";
-            this.textCEP.PasswordChar = '\0';
-            this.textCEP.Size = new System.Drawing.Size(94, 35);
-            this.textCEP.TabIndex = 10;
             // 
             // lblCEP
             // 
@@ -712,28 +686,6 @@
             this.lblEmail.TabIndex = 177;
             this.lblEmail.Text = "E-mail";
             // 
-            // textCelular
-            // 
-            this.textCelular.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textCelular.BackColor = System.Drawing.Color.White;
-            this.textCelular.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textCelular.BaseColor = System.Drawing.Color.White;
-            this.textCelular.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textCelular.BorderSize = 1;
-            this.textCelular.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCelular.FocusedBaseColor = System.Drawing.Color.White;
-            this.textCelular.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textCelular.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textCelular.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCelular.Location = new System.Drawing.Point(470, 403);
-            this.textCelular.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textCelular.MaxLength = 15;
-            this.textCelular.Name = "textCelular";
-            this.textCelular.PasswordChar = '\0';
-            this.textCelular.Size = new System.Drawing.Size(140, 35);
-            this.textCelular.TabIndex = 20;
-            this.textCelular.TextChanged += new System.EventHandler(this.textCelular_TextChanged);
-            // 
             // lblCelular
             // 
             this.lblCelular.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -745,27 +697,6 @@
             this.lblCelular.Size = new System.Drawing.Size(54, 18);
             this.lblCelular.TabIndex = 175;
             this.lblCelular.Text = "Celular";
-            // 
-            // textTelefone
-            // 
-            this.textTelefone.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textTelefone.BackColor = System.Drawing.Color.White;
-            this.textTelefone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textTelefone.BaseColor = System.Drawing.Color.White;
-            this.textTelefone.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textTelefone.BorderSize = 1;
-            this.textTelefone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textTelefone.FocusedBaseColor = System.Drawing.Color.White;
-            this.textTelefone.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textTelefone.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textTelefone.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textTelefone.Location = new System.Drawing.Point(275, 403);
-            this.textTelefone.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textTelefone.MaxLength = 15;
-            this.textTelefone.Name = "textTelefone";
-            this.textTelefone.PasswordChar = '\0';
-            this.textTelefone.Size = new System.Drawing.Size(140, 35);
-            this.textTelefone.TabIndex = 19;
             // 
             // lblTelefone
             // 
@@ -825,7 +756,7 @@
             this.buttonBuscarCEP.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.buttonBuscarCEP.IconColor = System.Drawing.Color.White;
             this.buttonBuscarCEP.IconSize = 16;
-            this.buttonBuscarCEP.Location = new System.Drawing.Point(114, 257);
+            this.buttonBuscarCEP.Location = new System.Drawing.Point(115, 257);
             this.buttonBuscarCEP.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.buttonBuscarCEP.Name = "buttonBuscarCEP";
             this.buttonBuscarCEP.Rotation = 0D;
@@ -895,7 +826,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(35, 35);
             this.panel5.TabIndex = 192;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // iconPictureBox2
             // 
@@ -938,11 +868,157 @@
             this.iconPictureBox3.TabIndex = 90;
             this.iconPictureBox3.TabStop = false;
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Location = new System.Drawing.Point(339, 71);
+            this.panel7.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel7.Name = "panel7";
+            this.panel7.Padding = new System.Windows.Forms.Padding(1);
+            this.panel7.Size = new System.Drawing.Size(250, 35);
+            this.panel7.TabIndex = 194;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.textCPF);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(1, 1);
+            this.panel8.Margin = new System.Windows.Forms.Padding(1);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(248, 33);
+            this.panel8.TabIndex = 0;
+            // 
+            // textCPF
+            // 
+            this.textCPF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textCPF.BackColor = System.Drawing.Color.White;
+            this.textCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textCPF.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textCPF.Location = new System.Drawing.Point(3, 7);
+            this.textCPF.Mask = "000.000.000-00";
+            this.textCPF.Name = "textCPF";
+            this.textCPF.Size = new System.Drawing.Size(243, 22);
+            this.textCPF.TabIndex = 2;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Location = new System.Drawing.Point(275, 403);
+            this.panel9.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel9.Name = "panel9";
+            this.panel9.Padding = new System.Windows.Forms.Padding(1);
+            this.panel9.Size = new System.Drawing.Size(140, 35);
+            this.panel9.TabIndex = 195;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Controls.Add(this.textTelefone);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(1, 1);
+            this.panel10.Margin = new System.Windows.Forms.Padding(1);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(138, 33);
+            this.panel10.TabIndex = 0;
+            // 
+            // textTelefone
+            // 
+            this.textTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textTelefone.BackColor = System.Drawing.Color.White;
+            this.textTelefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textTelefone.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textTelefone.Location = new System.Drawing.Point(3, 7);
+            this.textTelefone.Mask = "(00) 90000-0000";
+            this.textTelefone.Name = "textTelefone";
+            this.textTelefone.Size = new System.Drawing.Size(133, 22);
+            this.textTelefone.TabIndex = 20;
+            this.textTelefone.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnKeyPressUpTelefone);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel3.Controls.Add(this.panel11);
+            this.panel3.Location = new System.Drawing.Point(470, 403);
+            this.panel3.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(1);
+            this.panel3.Size = new System.Drawing.Size(140, 35);
+            this.panel3.TabIndex = 196;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Controls.Add(this.textCelular);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(1, 1);
+            this.panel11.Margin = new System.Windows.Forms.Padding(1);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(138, 33);
+            this.panel11.TabIndex = 0;
+            // 
+            // textCelular
+            // 
+            this.textCelular.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textCelular.BackColor = System.Drawing.Color.White;
+            this.textCelular.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textCelular.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textCelular.Location = new System.Drawing.Point(3, 7);
+            this.textCelular.Mask = "(00) 90000-0000";
+            this.textCelular.Name = "textCelular";
+            this.textCelular.Size = new System.Drawing.Size(133, 22);
+            this.textCelular.TabIndex = 21;
+            this.textCelular.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnKeyPressUpTelefone);
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel13.Controls.Add(this.panel14);
+            this.panel13.Location = new System.Drawing.Point(20, 257);
+            this.panel13.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel13.Name = "panel13";
+            this.panel13.Padding = new System.Windows.Forms.Padding(1);
+            this.panel13.Size = new System.Drawing.Size(95, 35);
+            this.panel13.TabIndex = 197;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Controls.Add(this.textCEP);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(1, 1);
+            this.panel14.Margin = new System.Windows.Forms.Padding(1);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(93, 33);
+            this.panel14.TabIndex = 0;
+            // 
+            // textCEP
+            // 
+            this.textCEP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textCEP.BackColor = System.Drawing.Color.White;
+            this.textCEP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textCEP.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textCEP.Location = new System.Drawing.Point(3, 7);
+            this.textCEP.Mask = "00000-000";
+            this.textCEP.Name = "textCEP";
+            this.textCEP.Size = new System.Drawing.Size(88, 22);
+            this.textCEP.TabIndex = 10;
+            // 
             // FormMotoristas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 535);
+            this.Controls.Add(this.panel13);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -952,9 +1028,7 @@
             this.Controls.Add(this.lblCargo);
             this.Controls.Add(this.textEmail);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.textCelular);
             this.Controls.Add(this.lblCelular);
-            this.Controls.Add(this.textTelefone);
             this.Controls.Add(this.lblTelefone);
             this.Controls.Add(this.combEstado);
             this.Controls.Add(this.textCidade);
@@ -968,7 +1042,6 @@
             this.Controls.Add(this.lblN);
             this.Controls.Add(this.textEndereco);
             this.Controls.Add(this.lblEndereco);
-            this.Controls.Add(this.textCEP);
             this.Controls.Add(this.lblCEP);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label16);
@@ -986,7 +1059,6 @@
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.textRG);
             this.Controls.Add(this.lblRG);
-            this.Controls.Add(this.textCPF);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.textNome);
             this.Controls.Add(this.lblNome);
@@ -1004,6 +1076,18 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1012,7 +1096,6 @@
         #endregion
         private Guna.UI.WinForms.GunaTextBox textNome;
         private System.Windows.Forms.Label lblNome;
-        private Guna.UI.WinForms.GunaTextBox textCPF;
         private System.Windows.Forms.Label lblCPF;
         private Guna.UI.WinForms.GunaTextBox textRG;
         private System.Windows.Forms.Label lblRG;
@@ -1044,13 +1127,10 @@
         private System.Windows.Forms.Label lblN;
         private Guna.UI.WinForms.GunaTextBox textEndereco;
         private System.Windows.Forms.Label lblEndereco;
-        private Guna.UI.WinForms.GunaTextBox textCEP;
         private System.Windows.Forms.Label lblCEP;
         private Guna.UI.WinForms.GunaTextBox textEmail;
         private System.Windows.Forms.Label lblEmail;
-        private Guna.UI.WinForms.GunaTextBox textCelular;
         private System.Windows.Forms.Label lblCelular;
-        private Guna.UI.WinForms.GunaTextBox textTelefone;
         private System.Windows.Forms.Label lblTelefone;
         private Guna.UI.WinForms.GunaComboBox combCargo;
         private System.Windows.Forms.Label lblCargo;
@@ -1062,5 +1142,17 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.Panel panel6;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.MaskedTextBox textCPF;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.MaskedTextBox textTelefone;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.MaskedTextBox textCelular;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.MaskedTextBox textCEP;
     }
 }

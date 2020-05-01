@@ -17,6 +17,7 @@ namespace Projeto_Integrador_1.Connection {
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Tipo { get; set; }
+        public int Referencia { get; set; }
         public string CentroCusto { get; set; }
         public string FormaPagamento { get; set; }
         public string Status { get; set; }
@@ -30,7 +31,7 @@ namespace Projeto_Integrador_1.Connection {
         public string Observacoes { get; set; }
 
         public void Create() {
-            string sql = "INSERT INTO `financeiro` (`nome`, `tipo`, `centro_custo`, `forma_pagamento`, `status`, `data_emissao`, `data_vencimento`, `valor`, `documento`, `ocorrencia`, `qtd_parcelas`, `parcelas`, `observacoes`) VALUES (@nome, @tipo, @centro_custo, @forma_pagamento, @status, @data_emissao, @data_vencimento, @valor, @documento, @ocorrencia, @qtd_parcelas, @parcelas, @observacoes);";
+            string sql = "INSERT INTO `financeiro` (`nome`, `tipo`, `referencia`, `centro_custo`, `forma_pagamento`, `status`, `data_emissao`, `data_vencimento`, `valor`, `documento`, `ocorrencia`, `qtd_parcelas`, `parcelas`, `observacoes`) VALUES (@nome, @tipo, @referencia, @centro_custo, @forma_pagamento, @status, @data_emissao, @data_vencimento, @valor, @documento, @ocorrencia, @qtd_parcelas, @parcelas, @observacoes);";
             
             try {
                 Open();
@@ -38,6 +39,7 @@ namespace Projeto_Integrador_1.Connection {
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@nome", this.Nome);
                 query.Parameters.AddWithValue("@tipo", this.Tipo);
+                query.Parameters.AddWithValue("@referencia", this.Referencia);
                 query.Parameters.AddWithValue("@centro_custo", this.CentroCusto);
                 query.Parameters.AddWithValue("@forma_pagamento", this.FormaPagamento);
                 query.Parameters.AddWithValue("@status", this.Status);
@@ -64,7 +66,7 @@ namespace Projeto_Integrador_1.Connection {
         }
 
         public void Update() {
-            string sql = "UPDATE `financeiro` SET `nome` = @nome, `tipo` = @tipo, `centro_custo` = @centro_custo, `forma_pagamento` = @forma_pagamento, `status` = @status, `data_emissao` = @data_emissao, `data_vencimento` = @data_vencimento, `valor` = @valor, `documento` = @documento, `ocorrencia` = @ocorrencia, `qtd_parcelas` = @qtd_parcelas, `parcelas` = @parcelas, `observacoes` = @observacoes WHERE `id` = @id LIMIT 1;";
+            string sql = "UPDATE `financeiro` SET `nome` = @nome, `tipo` = @tipo, `referencia` = @referencia, `centro_custo` = @centro_custo, `forma_pagamento` = @forma_pagamento, `status` = @status, `data_emissao` = @data_emissao, `data_vencimento` = @data_vencimento, `valor` = @valor, `documento` = @documento, `ocorrencia` = @ocorrencia, `qtd_parcelas` = @qtd_parcelas, `parcelas` = @parcelas, `observacoes` = @observacoes WHERE `id` = @id LIMIT 1;";
 
             try {
                 Open();
@@ -72,6 +74,7 @@ namespace Projeto_Integrador_1.Connection {
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@nome", this.Nome);
                 query.Parameters.AddWithValue("@tipo", this.Tipo);
+                query.Parameters.AddWithValue("@referencia", this.Referencia);
                 query.Parameters.AddWithValue("@centro_custo", this.CentroCusto);
                 query.Parameters.AddWithValue("@forma_pagamento", this.FormaPagamento);
                 query.Parameters.AddWithValue("@status", this.Status);
@@ -113,6 +116,7 @@ namespace Projeto_Integrador_1.Connection {
                     Id = data["id"],
                     Nome = data["nome"],
                     Tipo = data["tipo"],
+                    Referencia = data["referencia"],
                     CentroCusto = data["centro_custo"],
                     FormaPagamento = data["forma_pagamento"],
                     Status = data["status"],
@@ -148,6 +152,7 @@ namespace Projeto_Integrador_1.Connection {
                         Id = data["id"],
                         Nome = data["nome"],
                         Tipo = data["tipo"],
+                        Referencia = data["referencia"],
                         CentroCusto = data["centro_custo"],
                         FormaPagamento = data["forma_pagamento"],
                         Status = data["status"],

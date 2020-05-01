@@ -22,6 +22,10 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         private string jsonCustos;
         private string jsonAbastecimentos;
 
+        decimal TotalCargas = 0;
+        decimal TotalCustos = 0;
+        decimal TotalAbastecimentos = 0;
+
         public FormViagens(FormPrincipal fmPrincipal = null, int Id = 0) {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
@@ -51,6 +55,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             combStatus.DataSource = Listas.ViagemStatus;
 
             List<dynamic> ListaCombustiveis = Listas.Combustiveis;
+            List<dynamic> ListaAbastecimentosStatus = Listas.AbastecimentosStatus;
 
             combAbastecimentoCombustivel.DisplayMember = "Text";
             combAbastecimentoCombustivel.ValueMember = "Value";
@@ -60,22 +65,31 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             combGridAbastecimentoCombustivel.ValueMember = "Value";
             combGridAbastecimentoCombustivel.DataSource = new List<dynamic>(ListaCombustiveis);
 
+            combAbastecimentoStatus.DisplayMember = "Text";
+            combAbastecimentoStatus.ValueMember = "Value";
+            combAbastecimentoStatus.DataSource = new List<dynamic>(ListaAbastecimentosStatus);
+
+            combGridAbastecimentoStatus.DisplayMember = "Text";
+            combGridAbastecimentoStatus.ValueMember = "Value";
+            combGridAbastecimentoStatus.DataSource = new List<dynamic>(ListaAbastecimentosStatus);
+
+            //combGridAbastecimentoStatus
+
             if (Id > 0) {
                 Text = "Editar Viagem";
                 this.Id = Id;
                 PreencherDados();
             }
         }
-
         private void PreencherGrids(string cargas, string custos, string abastecimentos) {
             if (!string.IsNullOrWhiteSpace(cargas)) {
                 List<dynamic> Cargas = JsonConvert.DeserializeObject<List<dynamic>>(cargas);
                 foreach (var carga in Cargas) {
-                    gridCustos.Rows.Add(
+                    gridCargas.Rows.Add(
                         carga.NFE,
                         carga.Descricao,
                         carga.Peso,
-                        carga.Valor
+                        Converter.DecimalToReais(Convert.ToDecimal(carga.Valor))
                     );
                 }
             }
@@ -87,7 +101,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                         custo.Data,
                         custo.Descricao,
                         custo.QTD,
-                        custo.Valor
+                        Converter.DecimalToReais(Convert.ToDecimal(custo.Valor)),
+                        Converter.DecimalToReais(Convert.ToDecimal(custo.Total))
                     );
                 }
             }
@@ -97,15 +112,16 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 foreach (var abastecimento in Abastecimentos) {
                     gridAbastecimentos.Rows.Add(
                         abastecimento.Data,
-                        abastecimento.Posto,
+                        Convert.ToInt32(abastecimento.Posto),
                         Convert.ToInt32(abastecimento.Combustivel),
                         abastecimento.Litros,
-                        abastecimento.Valor
+                        Converter.DecimalToReais(Convert.ToDecimal(abastecimento.Valor)),
+                        Converter.DecimalToReais(Convert.ToDecimal(abastecimento.Total)),
+                        Convert.ToInt32(abastecimento.Status)
                     );
                 }
             }
         }
-
         private void PreencherDados() {
             try {
                 Viagens viagens = new Viagens();
@@ -134,7 +150,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 textHodometroEntrega.Text = Convert.ToString(viagem.HodometroEntrega);
                 textHodometroChegada.Text = Convert.ToString(viagem.HodometroChegada);
                 textHodometroPercorrido.Text = Convert.ToString(viagem.HodometroPercorrido);
-                textValor.Text = Convert.ToString(viagem.Valor);
+                textValor.Text = Converter.DecimalToReais(Convert.ToDecimal(viagem.Valor));
                 textInformacoesComplementares.Text = viagem.InformacoesComplementares;
 
                 PreencherGrids(Convert.ToString(viagem.Cargas), Convert.ToString(viagem.Custos), Convert.ToString(viagem.Abastecimentos));
@@ -143,7 +159,6 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void LoadClientes() {
             Clientes clientes = new Clientes();
             clientes.GetAll();
@@ -205,7 +220,6 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
             formClientes.ShowDialog();
         }
-
         private void onCadastrarVeiculo(object sender, EventArgs e) {
             Form formVeiculo = new TMSForms.Register.FormVeiculos();
 
@@ -219,7 +233,6 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
             formVeiculo.ShowDialog();
         }
-
         private void onCadastrarMotorista(object sender, EventArgs e) {
             Form formMotoristas = new TMSForms.Register.FormMotoristas();
 
@@ -233,26 +246,29 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
             formMotoristas.ShowDialog();
         }
-
         private void PreencherGridCargas() {
             foreach (dynamic item in ListaCargas) {
                 gridCargas.Rows.Add(item.NFE, item.Descricao, item.Peso, item.Valor);
             }
         }
-
         private void onAddCarga(object sender, EventArgs e) {
             try {
                 Validate Validate = new Validate(this, ErrorProvider);
 
                 Validate.AddRule(textCargaNFE, "NF-E", "required|nfe");
                 Validate.AddRule(textCargaDescricao, "Descrição", "required|max:100");
-                Validate.AddRule(textCargaPeso, "Peso", "required|numeric|max:20");
+                Validate.AddRule(textCargaPeso, "Peso", "required|peso|max:20");
                 Validate.AddRule(textCargaValor, "Valor", "required|reais");
 
                 Validate.Validation();
 
                 if (Validate.IsValid()) {
-                    gridCargas.Rows.Add(textCargaNFE.Text, textCargaDescricao.Text, textCargaPeso.Text, textCargaValor.Text);
+                    gridCargas.Rows.Add(
+                        textCargaNFE.Text,
+                        textCargaDescricao.Text,
+                        textCargaPeso.Text,
+                        Converter.DecimalToReais(Convert.ToDecimal(textCargaValor.Text))
+                    );
 
                     textCargaNFE.ResetText();
                     textCargaDescricao.ResetText();
@@ -267,22 +283,27 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void onAddCusto(object sender, EventArgs e) {
             try {
                 Validate Validate = new Validate(this, ErrorProvider);
 
                 Validate.AddRule(timeCustoData, "Data", "required|date:dd/MM/yyyy");
                 Validate.AddRule(textCustoDescricao, "Descrição", "required|max:100");
-                Validate.AddRule(textCustoQTD, "Qtd", "required|numeric|max:20");
+                Validate.AddRule(textCustoQTD, "Qtd", "required|quantidade|max:20");
                 Validate.AddRule(textCustoValor, "Valor", "required|reais");
 
                 Validate.Validation();
 
                 if (Validate.IsValid()) {
-                    int valorTotal = Int32.Parse(textCustoValor.Text) * Int32.Parse(textCustoQTD.Text);
+                    decimal valorTotal = Converter.ReaisToDecimal(textCustoValor.Text) * Convert.ToDecimal(textCustoQTD.Text);
 
-                    gridCustos.Rows.Add(timeCustoData.Text, textCustoDescricao.Text, textCustoQTD.Text, textCustoValor.Text, valorTotal);
+                    gridCustos.Rows.Add(
+                        timeCustoData.Text,
+                        textCustoDescricao.Text,
+                        textCustoQTD.Text,
+                        Converter.DecimalToReais(Convert.ToDecimal(textCustoValor.Text)),
+                        Converter.DecimalToReais(valorTotal)
+                    );
 
                     timeCustoData.ResetText();
                     textCustoDescricao.ResetText();
@@ -297,7 +318,6 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void onAddAbastecimento(object sender, EventArgs e) {
             try {
                 Validate Validate = new Validate(this, ErrorProvider);
@@ -305,21 +325,30 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 Validate.AddRule(timeAbastecimentoData, "Data", "required|date:dd/MM/yyyy H:mm");
                 Validate.AddRule(combAbastecimentoPosto, "Posto", "required|numeric");
                 Validate.AddRule(combAbastecimentoCombustivel, "Combustivel", "required|numeric");
-                Validate.AddRule(textAbastecimentoLitros, "Litros", "required|numeric|max:20");
-                Validate.AddRule(textAbastecimentoValor, "Valor", "required");
+                Validate.AddRule(textAbastecimentoLitros, "Litros", "required|quantidade|max:20");
+                Validate.AddRule(textAbastecimentoValor, "Valor", "required|reais");
+                Validate.AddRule(combAbastecimentoStatus, "Status", "required|numeric|exact:1");
 
                 Validate.Validation();
 
                 if (Validate.IsValid()) {
-                    int valorTotal = Int32.Parse(textAbastecimentoValor.Text) * Int32.Parse(textAbastecimentoLitros.Text);
-
-                    gridAbastecimentos.Rows.Add(timeAbastecimentoData.Text, combAbastecimentoPosto.SelectedValue, combAbastecimentoCombustivel.SelectedValue, textAbastecimentoLitros.Text, textAbastecimentoValor.Text, valorTotal);
+                    decimal valorTotal = Converter.ReaisToDecimal(textAbastecimentoValor.Text) * Convert.ToDecimal(textAbastecimentoLitros.Text);
+                    Console.WriteLine(Convert.ToDecimal(valorTotal));
+                    gridAbastecimentos.Rows.Add(
+                        timeAbastecimentoData.Text,
+                        combAbastecimentoPosto.SelectedValue,
+                        combAbastecimentoCombustivel.SelectedValue,
+                        textAbastecimentoLitros.Text,
+                        Converter.DecimalToReais(Convert.ToDecimal(textAbastecimentoValor.Text)),
+                        Converter.DecimalToReais(valorTotal),
+                        combAbastecimentoStatus.SelectedValue);
 
                     timeAbastecimentoData.ResetText();
                     combAbastecimentoPosto.SelectedValue = -1;
                     combAbastecimentoCombustivel.SelectedValue = -1;
                     textAbastecimentoLitros.ResetText();
                     textAbastecimentoValor.ResetText();
+                    combAbastecimentoStatus.SelectedValue = -1;
                 }
                 else {
                     Validate.ErrorProviderShow();
@@ -329,9 +358,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void OnSalvar(object sender, EventArgs e) {
-            try {
+
                 Validate Validate = new Validate(this, ErrorProvider);
 
                 Validate.AddRule(combRemetente, "Remetente", "required|numeric|max:11");
@@ -354,7 +382,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 Validate.AddRule(textHodometroEntrega, "KM Entrega", "numeric|max:20");
                 Validate.AddRule(textHodometroChegada, "KM Chegada", "numeric|max:20");
                 Validate.AddRule(textHodometroPercorrido, "KM Percorrido", "numeric|max:11");
-                Validate.AddRule(textValor, "Valor do Frete", "numeric|max:11");
+                Validate.AddRule(textValor, "Valor do Frete", "reais|max:11");
                 Validate.AddRule(textInformacoesComplementares, "Informações Complementares", "max:1000");
 
                 Validate.Validation();
@@ -384,11 +412,14 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     viagens.HodometroEntrega = textHodometroEntrega.Text;
                     viagens.HodometroChegada = textHodometroChegada.Text;
                     viagens.HodometroPercorrido = textHodometroPercorrido.Text;
-                    viagens.Valor = textValor.Text;
+                    viagens.Valor = Convert.ToString(Converter.ReaisToDecimal(textValor.Text));
                     viagens.InformacoesComplementares = textInformacoesComplementares.Text;
                     viagens.Cargas = jsonCargas;
+                    viagens.TotalCargas = Convert.ToString(TotalCargas);
                     viagens.Custos = jsonCustos;
+                    viagens.TotalCustos = Convert.ToString(TotalCustos);
                     viagens.Abastecimentos = jsonAbastecimentos;
+                    viagens.TotalAbastecimentos = Convert.ToString(TotalAbastecimentos);
 
                     if (Id > 0) {
                         viagens.Id = Convert.ToInt32(Id);
@@ -416,49 +447,54 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 else {
                     Validate.ErrorProviderShow();
                 }
-            }
-            catch (Exception ex) {
-                MessageBox.Show(ex.Message);
-            }
-        }
 
+        }
         private void PreencherJson() {
+            TotalCargas = 0;
+            TotalCustos = 0;
+            TotalAbastecimentos = 0;
+
             List<object> Cargas = new List<object>();
             List<object> Custos = new List<object>();
             List<object> Abastecimentos = new List<object>();
 
             foreach (DataGridViewRow carga in gridCargas.Rows) {
+                TotalCargas += Convert.ToDecimal(carga.Cells[3].Value);
                 Cargas.Add(new {
                     NFE = carga.Cells[0].Value,
                     Descricao = carga.Cells[1].Value,
                     Peso = carga.Cells[2].Value,
-                    Valor = carga.Cells[3].Value
+                    Valor = Convert.ToDecimal(carga.Cells[3].Value)
                 });
             }
             jsonCargas = JsonConvert.SerializeObject(Cargas);
 
             foreach (DataGridViewRow custos in gridCustos.Rows) {
+                TotalCustos += Convert.ToDecimal(custos.Cells[4].Value);
                 Custos.Add(new {
                     Data = custos.Cells[0].Value,
                     Descricao = custos.Cells[1].Value,
                     QTD = custos.Cells[2].Value,
-                    Valor = custos.Cells[3].Value
+                    Valor = Convert.ToDecimal(custos.Cells[3].Value),
+                    Total = Convert.ToDecimal(custos.Cells[4].Value)
                 });
             }
             jsonCustos = JsonConvert.SerializeObject(Custos);
 
             foreach (DataGridViewRow abastecimentos in gridAbastecimentos.Rows) {
+                TotalAbastecimentos += Convert.ToDecimal(abastecimentos.Cells[5].Value);
                 Abastecimentos.Add(new {
                     Data = abastecimentos.Cells[0].Value,
                     Posto = abastecimentos.Cells[1].Value,
                     Combustivel = abastecimentos.Cells[2].Value,
                     Litros = abastecimentos.Cells[3].Value,
-                    Valor = abastecimentos.Cells[4].Value
+                    Valor = Convert.ToDecimal(abastecimentos.Cells[4].Value),
+                    Total = Convert.ToDecimal(abastecimentos.Cells[5].Value),
+                    Status = abastecimentos.Cells[6].Value
                 });
             }
             jsonAbastecimentos = JsonConvert.SerializeObject(Abastecimentos);
         }
-
         private void OnChangeCliente(object sender, EventArgs e) {
             GunaComboBox comboBox = (GunaComboBox)sender;
 
@@ -481,6 +517,21 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 textDestinoCidade.ResetText();
                 combDestinoUF.SelectedValue = -1;
             }
+        }
+
+        private void OnChangedTextValor(object sender, EventArgs e) {
+            MaskedTextBox Text = (MaskedTextBox)sender;
+            Converter.OnPressMoeda(ref Text);
+        }
+
+        private void OnChangedTextQtd(object sender, EventArgs e) {
+            MaskedTextBox Text = (MaskedTextBox)sender;
+            Converter.OnPressQtd(ref Text);
+        }
+
+        private void OnChangedTextPeso(object sender, EventArgs e) {
+            MaskedTextBox Text = (MaskedTextBox)sender;
+            Converter.OnPressPeso(ref Text);
         }
     }
 }

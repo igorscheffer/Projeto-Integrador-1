@@ -228,6 +228,7 @@
     <Compile Include="TMSForms\Register\FormViagens.Designer.cs">
       <DependentUpon>FormViagens.cs</DependentUpon>
     </Compile>
+    <Compile Include="Util\Converter.cs" />
     <Compile Include="Util\Listas.cs" />
     <Compile Include="Util\Validate\Errors.cs" />
     <Compile Include="Util\Validate\Rules.cs" />

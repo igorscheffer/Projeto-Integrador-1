@@ -141,19 +141,19 @@
     <value>Segoe UI, 11pt</value>
   </data>
   <data name="btnMenuItemEditar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 34</value>
+    <value>143, 34</value>
   </data>
   <data name="btnMenuItemEditar.Text" xml:space="preserve">
     <value>Editar</value>
   </data>
   <data name="btnMenuItemExcluir.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 34</value>
+    <value>143, 34</value>
   </data>
   <data name="btnMenuItemExcluir.Text" xml:space="preserve">
     <value>Excluir</value>
   </data>
   <data name="MenuItens.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 94</value>
+    <value>144, 72</value>
   </data>
   <data name="&gt;&gt;MenuItens.Name" xml:space="preserve">
     <value>MenuItens</value>
@@ -298,7 +298,7 @@
     <value>1040, 450</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Viagens</value>
+    <value>Financeiro</value>
   </data>
   <data name="&gt;&gt;colId.Name" xml:space="preserve">
     <value>colId</value>
