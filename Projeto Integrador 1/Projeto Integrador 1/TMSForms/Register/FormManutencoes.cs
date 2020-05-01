@@ -76,10 +76,10 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 textObservacoes.Text = manutencao.Observacoes;
                 textOrdemServico.Text = manutencao.OrdemServico;
                 combFornecedor.SelectedValue = manutencao.Fornecedor;
-                textMaoObra.Text = Converter.DecimalToReais(Convert.ToDecimal(manutencao.MaoObra));
-                textDesconto.Text = Converter.DecimalToReais(Convert.ToDecimal(manutencao.Desconto));
-                textAcrecimo.Text = Converter.DecimalToReais(Convert.ToDecimal(manutencao.Acrecimos));
-                textValor.Text = Converter.DecimalToReais(Convert.ToDecimal(manutencao.Valor));
+                textMaoObra.Text = Converter.ToReais(Convert.ToDecimal(manutencao.MaoObra));
+                textDesconto.Text = Converter.ToReais(Convert.ToDecimal(manutencao.Desconto));
+                textAcrecimo.Text = Converter.ToReais(Convert.ToDecimal(manutencao.Acrecimos));
+                textValor.Text = Converter.ToReais(Convert.ToDecimal(manutencao.Valor));
 
                 PreencherGrids(Convert.ToString(manutencoes.Itens));
             }
@@ -207,10 +207,10 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     manutencoes.Observacoes = textObservacoes.Text;
                     manutencoes.OrdemServico = textOrdemServico.Text;
                     manutencoes.Fornecedor = combFornecedor.SelectedValue;
-                    manutencoes.MaoObra = Convert.ToString(Converter.ReaisToDecimal(textMaoObra.Text));
-                    manutencoes.Desconto = Convert.ToString(Converter.ReaisToDecimal(textDesconto.Text));
-                    manutencoes.Acrecimo = Convert.ToString(Converter.ReaisToDecimal(textAcrecimo.Text));
-                    manutencoes.Valor = Convert.ToString(Converter.ReaisToDecimal(textValor.Text));
+                    manutencoes.MaoObra = Convert.ToString(Converter.ToDecimal(textMaoObra.Text));
+                    manutencoes.Desconto = Convert.ToString(Converter.ToDecimal(textDesconto.Text));
+                    manutencoes.Acrecimo = Convert.ToString(Converter.ToDecimal(textAcrecimo.Text));
+                    manutencoes.Valor = Convert.ToString(Converter.ToDecimal(textValor.Text));
                     manutencoes.Itens = jsonItens;
 
                     if (Id > 0) {
@@ -284,14 +284,14 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 Validate.Validation();
 
                 if (Validate.IsValid()) {
-                    decimal valorTotal = Converter.ReaisToDecimal(textItemValor.Text) * Convert.ToDecimal(textItemQtd.Text);
+                    decimal valorTotal = Converter.ToDecimal(textItemValor.Text) * Convert.ToDecimal(textItemQtd.Text);
 
                     gridItens.Rows.Add(
                         textItemCodigo.Text,
                         textItemDescricao.Text,
                         textItemQtd.Text,
-                        Converter.DecimalToReais(Convert.ToDecimal(textItemValor.Text)),
-                        Converter.DecimalToReais(valorTotal)
+                        Converter.ToReais(Convert.ToDecimal(textItemValor.Text)),
+                        Converter.ToReais(valorTotal)
                     );
 
                     textItemCodigo.ResetText();

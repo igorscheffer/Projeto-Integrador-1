@@ -89,7 +89,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                         carga.NFE,
                         carga.Descricao,
                         carga.Peso,
-                        Converter.DecimalToReais(Convert.ToDecimal(carga.Valor))
+                        Converter.ToReais(carga.Valor)
                     );
                 }
             }
@@ -101,8 +101,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                         custo.Data,
                         custo.Descricao,
                         custo.QTD,
-                        Converter.DecimalToReais(Convert.ToDecimal(custo.Valor)),
-                        Converter.DecimalToReais(Convert.ToDecimal(custo.Total))
+                        Converter.ToReais(custo.Valor),
+                        Converter.ToReais(custo.Total)
                     );
                 }
             }
@@ -115,8 +115,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                         Convert.ToInt32(abastecimento.Posto),
                         Convert.ToInt32(abastecimento.Combustivel),
                         abastecimento.Litros,
-                        Converter.DecimalToReais(Convert.ToDecimal(abastecimento.Valor)),
-                        Converter.DecimalToReais(Convert.ToDecimal(abastecimento.Total)),
+                        Converter.ToReais(abastecimento.Valor),
+                        Converter.ToReais(abastecimento.Total),
                         Convert.ToInt32(abastecimento.Status)
                     );
                 }
@@ -150,7 +150,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 textHodometroEntrega.Text = Convert.ToString(viagem.HodometroEntrega);
                 textHodometroChegada.Text = Convert.ToString(viagem.HodometroChegada);
                 textHodometroPercorrido.Text = Convert.ToString(viagem.HodometroPercorrido);
-                textValor.Text = Converter.DecimalToReais(Convert.ToDecimal(viagem.Valor));
+                textValor.Text = Converter.ToReais(viagem.Valor);
                 textInformacoesComplementares.Text = viagem.InformacoesComplementares;
 
                 PreencherGrids(Convert.ToString(viagem.Cargas), Convert.ToString(viagem.Custos), Convert.ToString(viagem.Abastecimentos));
@@ -267,7 +267,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                         textCargaNFE.Text,
                         textCargaDescricao.Text,
                         textCargaPeso.Text,
-                        Converter.DecimalToReais(Convert.ToDecimal(textCargaValor.Text))
+                        Converter.ToReais(textCargaValor.Text)
                     );
 
                     textCargaNFE.ResetText();
@@ -295,14 +295,14 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 Validate.Validation();
 
                 if (Validate.IsValid()) {
-                    decimal valorTotal = Converter.ReaisToDecimal(textCustoValor.Text) * Convert.ToDecimal(textCustoQTD.Text);
+                    decimal valorTotal = Converter.ToDecimal(textCustoValor.Text) * Convert.ToDecimal(textCustoQTD.Text);
 
                     gridCustos.Rows.Add(
                         timeCustoData.Text,
                         textCustoDescricao.Text,
                         textCustoQTD.Text,
-                        Converter.DecimalToReais(Convert.ToDecimal(textCustoValor.Text)),
-                        Converter.DecimalToReais(valorTotal)
+                        Converter.ToReais(textCustoValor.Text),
+                        Converter.ToReais(valorTotal)
                     );
 
                     timeCustoData.ResetText();
@@ -332,15 +332,15 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 Validate.Validation();
 
                 if (Validate.IsValid()) {
-                    decimal valorTotal = Converter.ReaisToDecimal(textAbastecimentoValor.Text) * Convert.ToDecimal(textAbastecimentoLitros.Text);
+                    decimal valorTotal = Converter.ToDecimal(textAbastecimentoValor.Text) * Convert.ToDecimal(textAbastecimentoLitros.Text);
                     Console.WriteLine(Convert.ToDecimal(valorTotal));
                     gridAbastecimentos.Rows.Add(
                         timeAbastecimentoData.Text,
                         combAbastecimentoPosto.SelectedValue,
                         combAbastecimentoCombustivel.SelectedValue,
                         textAbastecimentoLitros.Text,
-                        Converter.DecimalToReais(Convert.ToDecimal(textAbastecimentoValor.Text)),
-                        Converter.DecimalToReais(valorTotal),
+                        Converter.ToReais(textAbastecimentoValor.Text),
+                        Converter.ToReais(valorTotal),
                         combAbastecimentoStatus.SelectedValue);
 
                     timeAbastecimentoData.ResetText();
@@ -412,7 +412,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     viagens.HodometroEntrega = textHodometroEntrega.Text;
                     viagens.HodometroChegada = textHodometroChegada.Text;
                     viagens.HodometroPercorrido = textHodometroPercorrido.Text;
-                    viagens.Valor = Convert.ToString(Converter.ReaisToDecimal(textValor.Text));
+                    viagens.Valor = Convert.ToString(Converter.ToDecimal(textValor.Text));
                     viagens.InformacoesComplementares = textInformacoesComplementares.Text;
                     viagens.Cargas = jsonCargas;
                     viagens.TotalCargas = Convert.ToString(TotalCargas);

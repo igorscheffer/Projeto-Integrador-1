@@ -10,7 +10,7 @@ namespace Projeto_Integrador_1 {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPrincipal());
+            Application.Run(new TMSForms.Login());
         }
     }
 }

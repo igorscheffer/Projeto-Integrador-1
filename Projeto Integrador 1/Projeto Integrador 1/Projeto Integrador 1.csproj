@@ -111,6 +111,7 @@
     <Compile Include="Connection\Manutencoes.cs" />
     <Compile Include="Connection\Motoristas.cs" />
     <Compile Include="Connection\Multas.cs" />
+    <Compile Include="Connection\Usuario.cs" />
     <Compile Include="Connection\Veiculos.cs" />
     <Compile Include="Connection\Viagens.cs" />
     <Compile Include="FormPrincipal.cs">
@@ -179,6 +180,12 @@
     </Compile>
     <Compile Include="TMSForms\List\FormVeiculos.Designer.cs">
       <DependentUpon>FormVeiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TMSForms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TMSForms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="TMSForms\Register\FormAbastecimentos.cs">
       <SubType>Form</SubType>
@@ -290,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\List\FormVeiculos.resx">
       <DependentUpon>FormVeiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TMSForms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TMSForms\Register\FormAbastecimentos.resx">
       <DependentUpon>FormAbastecimentos.cs</DependentUpon>

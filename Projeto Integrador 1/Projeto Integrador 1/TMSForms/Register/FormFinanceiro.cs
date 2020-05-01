@@ -57,7 +57,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
                 combCentroCusto.SelectedValue = LancarFinanceiro.CentroCusto;
                 combCentroCusto.Enabled = false;
-                textValor.Text = Converter.DecimalToReais(Convert.ToDecimal(LancarFinanceiro.Valor));
+                textValor.Text = Converter.ToReais(Convert.ToDecimal(LancarFinanceiro.Valor));
 
                 Referencia = LancarFinanceiro.Id;
             }

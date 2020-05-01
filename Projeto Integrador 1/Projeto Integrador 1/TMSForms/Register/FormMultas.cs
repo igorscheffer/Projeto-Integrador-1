@@ -50,7 +50,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             timeDataOcorrencia.Text = multa.DataOcorrencia;
             timeDataNotificacao.Text = multa.DataNotificacao;
             timeDataVencimento.Text = multa.DataVencimento;
-            textValor.Text = Converter.DecimalToReais(Convert.ToDecimal(multa.Valor));
+            textValor.Text = Converter.ToReais(Convert.ToDecimal(multa.Valor));
             textDescricao.Text = multa.Descricao;
             textLocal.Text = multa.Local;
 
