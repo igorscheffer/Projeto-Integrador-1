@@ -118,11 +118,13 @@
             this.tabPanelCargas = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.gridCargas = new Guna.UI.WinForms.GunaDataGridView();
-            this.colNFE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.textCargaNFE = new System.Windows.Forms.MaskedTextBox();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.textCargaPeso = new System.Windows.Forms.MaskedTextBox();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.textCargaValor = new System.Windows.Forms.MaskedTextBox();
@@ -147,6 +149,9 @@
             this.textGridCustoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textGridCustoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.textCustoQTD = new System.Windows.Forms.MaskedTextBox();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.textCustoValor = new System.Windows.Forms.MaskedTextBox();
@@ -163,6 +168,9 @@
             this.textGridAbastecimentoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.combGridAbastecimentoStatus = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.textAbastecimentoLitros = new System.Windows.Forms.MaskedTextBox();
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
             this.textAbastecimentoValor = new System.Windows.Forms.MaskedTextBox();
@@ -182,18 +190,10 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.textAbastecimentoLitros = new System.Windows.Forms.MaskedTextBox();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.textCustoQTD = new System.Windows.Forms.MaskedTextBox();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.panel35 = new System.Windows.Forms.Panel();
-            this.textCargaPeso = new System.Windows.Forms.MaskedTextBox();
-            this.panel36 = new System.Windows.Forms.Panel();
-            this.panel37 = new System.Windows.Forms.Panel();
-            this.textCargaNFE = new System.Windows.Forms.MaskedTextBox();
+            this.colNFE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             this.tabViagem.SuspendLayout();
             this.tabPanelViagem.SuspendLayout();
@@ -212,6 +212,10 @@
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCargas)).BeginInit();
             this.panel8.SuspendLayout();
+            this.panel36.SuspendLayout();
+            this.panel37.SuspendLayout();
+            this.panel34.SuspendLayout();
+            this.panel35.SuspendLayout();
             this.panel24.SuspendLayout();
             this.panel25.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -221,6 +225,8 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustos)).BeginInit();
             this.panel6.SuspendLayout();
+            this.panel32.SuspendLayout();
+            this.panel33.SuspendLayout();
             this.panel26.SuspendLayout();
             this.panel27.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -228,17 +234,11 @@
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridAbastecimentos)).BeginInit();
             this.panel11.SuspendLayout();
+            this.panel30.SuspendLayout();
+            this.panel31.SuspendLayout();
             this.panel28.SuspendLayout();
             this.panel29.SuspendLayout();
             this.panel16.SuspendLayout();
-            this.panel30.SuspendLayout();
-            this.panel31.SuspendLayout();
-            this.panel32.SuspendLayout();
-            this.panel33.SuspendLayout();
-            this.panel34.SuspendLayout();
-            this.panel35.SuspendLayout();
-            this.panel36.SuspendLayout();
-            this.panel37.SuspendLayout();
             this.SuspendLayout();
             // 
             // textCodigoInterno
@@ -1645,26 +1645,6 @@
             this.gridCargas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridCargas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             // 
-            // colNFE
-            // 
-            this.colNFE.HeaderText = "NF-E";
-            this.colNFE.Name = "colNFE";
-            // 
-            // colDescricao
-            // 
-            this.colDescricao.HeaderText = "DESCRIÇÃO";
-            this.colDescricao.Name = "colDescricao";
-            // 
-            // colPeso
-            // 
-            this.colPeso.HeaderText = "PESO";
-            this.colPeso.Name = "colPeso";
-            // 
-            // colValor
-            // 
-            this.colValor.HeaderText = "VALOR";
-            this.colValor.Name = "colValor";
-            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.panel36);
@@ -1686,6 +1666,78 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1032, 111);
             this.panel8.TabIndex = 272;
+            // 
+            // panel36
+            // 
+            this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel36.Controls.Add(this.panel37);
+            this.panel36.Location = new System.Drawing.Point(20, 76);
+            this.panel36.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel36.Name = "panel36";
+            this.panel36.Padding = new System.Windows.Forms.Padding(1);
+            this.panel36.Size = new System.Drawing.Size(148, 35);
+            this.panel36.TabIndex = 317;
+            // 
+            // panel37
+            // 
+            this.panel37.BackColor = System.Drawing.Color.White;
+            this.panel37.Controls.Add(this.textCargaNFE);
+            this.panel37.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel37.Location = new System.Drawing.Point(1, 1);
+            this.panel37.Margin = new System.Windows.Forms.Padding(1);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(146, 33);
+            this.panel37.TabIndex = 0;
+            // 
+            // textCargaNFE
+            // 
+            this.textCargaNFE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textCargaNFE.BackColor = System.Drawing.Color.White;
+            this.textCargaNFE.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textCargaNFE.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textCargaNFE.Location = new System.Drawing.Point(8, 7);
+            this.textCargaNFE.Mask = "000.000.000";
+            this.textCargaNFE.Name = "textCargaNFE";
+            this.textCargaNFE.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textCargaNFE.Size = new System.Drawing.Size(131, 22);
+            this.textCargaNFE.TabIndex = 21;
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel34.Controls.Add(this.panel35);
+            this.panel34.Location = new System.Drawing.Point(678, 76);
+            this.panel34.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel34.Name = "panel34";
+            this.panel34.Padding = new System.Windows.Forms.Padding(1);
+            this.panel34.Size = new System.Drawing.Size(102, 35);
+            this.panel34.TabIndex = 316;
+            // 
+            // panel35
+            // 
+            this.panel35.BackColor = System.Drawing.Color.White;
+            this.panel35.Controls.Add(this.textCargaPeso);
+            this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel35.Location = new System.Drawing.Point(1, 1);
+            this.panel35.Margin = new System.Windows.Forms.Padding(1);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(100, 33);
+            this.panel35.TabIndex = 0;
+            // 
+            // textCargaPeso
+            // 
+            this.textCargaPeso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textCargaPeso.BackColor = System.Drawing.Color.White;
+            this.textCargaPeso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textCargaPeso.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textCargaPeso.Location = new System.Drawing.Point(8, 7);
+            this.textCargaPeso.Name = "textCargaPeso";
+            this.textCargaPeso.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textCargaPeso.Size = new System.Drawing.Size(85, 22);
+            this.textCargaPeso.TabIndex = 21;
+            this.textCargaPeso.TextChanged += new System.EventHandler(this.OnChangedTextPeso);
             // 
             // panel24
             // 
@@ -2033,6 +2085,42 @@
             this.panel6.Size = new System.Drawing.Size(1032, 112);
             this.panel6.TabIndex = 271;
             // 
+            // panel32
+            // 
+            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel32.Controls.Add(this.panel33);
+            this.panel32.Location = new System.Drawing.Point(703, 76);
+            this.panel32.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel32.Name = "panel32";
+            this.panel32.Padding = new System.Windows.Forms.Padding(1);
+            this.panel32.Size = new System.Drawing.Size(120, 35);
+            this.panel32.TabIndex = 318;
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.Color.White;
+            this.panel33.Controls.Add(this.textCustoQTD);
+            this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel33.Location = new System.Drawing.Point(1, 1);
+            this.panel33.Margin = new System.Windows.Forms.Padding(1);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(118, 33);
+            this.panel33.TabIndex = 0;
+            // 
+            // textCustoQTD
+            // 
+            this.textCustoQTD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textCustoQTD.BackColor = System.Drawing.Color.White;
+            this.textCustoQTD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textCustoQTD.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textCustoQTD.Location = new System.Drawing.Point(8, 7);
+            this.textCustoQTD.Name = "textCustoQTD";
+            this.textCustoQTD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textCustoQTD.Size = new System.Drawing.Size(103, 22);
+            this.textCustoQTD.TabIndex = 21;
+            this.textCustoQTD.TextChanged += new System.EventHandler(this.OnChangedTextQtd);
+            // 
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -2260,6 +2348,42 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1032, 112);
             this.panel11.TabIndex = 273;
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel30.Controls.Add(this.panel31);
+            this.panel30.Location = new System.Drawing.Point(605, 76);
+            this.panel30.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel30.Name = "panel30";
+            this.panel30.Padding = new System.Windows.Forms.Padding(1);
+            this.panel30.Size = new System.Drawing.Size(80, 35);
+            this.panel30.TabIndex = 317;
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.White;
+            this.panel31.Controls.Add(this.textAbastecimentoLitros);
+            this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel31.Location = new System.Drawing.Point(1, 1);
+            this.panel31.Margin = new System.Windows.Forms.Padding(1);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(78, 33);
+            this.panel31.TabIndex = 0;
+            // 
+            // textAbastecimentoLitros
+            // 
+            this.textAbastecimentoLitros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textAbastecimentoLitros.BackColor = System.Drawing.Color.White;
+            this.textAbastecimentoLitros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textAbastecimentoLitros.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textAbastecimentoLitros.Location = new System.Drawing.Point(8, 7);
+            this.textAbastecimentoLitros.Name = "textAbastecimentoLitros";
+            this.textAbastecimentoLitros.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textAbastecimentoLitros.Size = new System.Drawing.Size(63, 22);
+            this.textAbastecimentoLitros.TabIndex = 21;
+            this.textAbastecimentoLitros.TextChanged += new System.EventHandler(this.OnChangedTextQtd);
             // 
             // panel28
             // 
@@ -2552,149 +2676,27 @@
             this.label38.TabIndex = 262;
             this.label38.Text = "Data";
             // 
-            // panel30
+            // colNFE
             // 
-            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.panel30.Controls.Add(this.panel31);
-            this.panel30.Location = new System.Drawing.Point(605, 76);
-            this.panel30.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.panel30.Name = "panel30";
-            this.panel30.Padding = new System.Windows.Forms.Padding(1);
-            this.panel30.Size = new System.Drawing.Size(80, 35);
-            this.panel30.TabIndex = 317;
+            this.colNFE.HeaderText = "NF-E";
+            this.colNFE.Name = "colNFE";
             // 
-            // panel31
+            // colDescricao
             // 
-            this.panel31.BackColor = System.Drawing.Color.White;
-            this.panel31.Controls.Add(this.textAbastecimentoLitros);
-            this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel31.Location = new System.Drawing.Point(1, 1);
-            this.panel31.Margin = new System.Windows.Forms.Padding(1);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(78, 33);
-            this.panel31.TabIndex = 0;
+            this.colDescricao.HeaderText = "DESCRIÇÃO";
+            this.colDescricao.Name = "colDescricao";
             // 
-            // textAbastecimentoLitros
+            // colPeso
             // 
-            this.textAbastecimentoLitros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textAbastecimentoLitros.BackColor = System.Drawing.Color.White;
-            this.textAbastecimentoLitros.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textAbastecimentoLitros.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textAbastecimentoLitros.Location = new System.Drawing.Point(8, 7);
-            this.textAbastecimentoLitros.Name = "textAbastecimentoLitros";
-            this.textAbastecimentoLitros.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textAbastecimentoLitros.Size = new System.Drawing.Size(63, 22);
-            this.textAbastecimentoLitros.TabIndex = 21;
-            this.textAbastecimentoLitros.TextChanged += new System.EventHandler(this.OnChangedTextQtd);
+            this.colPeso.HeaderText = "PESO";
+            this.colPeso.Name = "colPeso";
+            this.colPeso.ReadOnly = true;
             // 
-            // panel32
+            // colValor
             // 
-            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.panel32.Controls.Add(this.panel33);
-            this.panel32.Location = new System.Drawing.Point(703, 76);
-            this.panel32.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.panel32.Name = "panel32";
-            this.panel32.Padding = new System.Windows.Forms.Padding(1);
-            this.panel32.Size = new System.Drawing.Size(120, 35);
-            this.panel32.TabIndex = 318;
-            // 
-            // panel33
-            // 
-            this.panel33.BackColor = System.Drawing.Color.White;
-            this.panel33.Controls.Add(this.textCustoQTD);
-            this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel33.Location = new System.Drawing.Point(1, 1);
-            this.panel33.Margin = new System.Windows.Forms.Padding(1);
-            this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(118, 33);
-            this.panel33.TabIndex = 0;
-            // 
-            // textCustoQTD
-            // 
-            this.textCustoQTD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textCustoQTD.BackColor = System.Drawing.Color.White;
-            this.textCustoQTD.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textCustoQTD.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCustoQTD.Location = new System.Drawing.Point(8, 7);
-            this.textCustoQTD.Name = "textCustoQTD";
-            this.textCustoQTD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textCustoQTD.Size = new System.Drawing.Size(103, 22);
-            this.textCustoQTD.TabIndex = 21;
-            this.textCustoQTD.TextChanged += new System.EventHandler(this.OnChangedTextQtd);
-            // 
-            // panel34
-            // 
-            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.panel34.Controls.Add(this.panel35);
-            this.panel34.Location = new System.Drawing.Point(678, 76);
-            this.panel34.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.panel34.Name = "panel34";
-            this.panel34.Padding = new System.Windows.Forms.Padding(1);
-            this.panel34.Size = new System.Drawing.Size(102, 35);
-            this.panel34.TabIndex = 316;
-            // 
-            // panel35
-            // 
-            this.panel35.BackColor = System.Drawing.Color.White;
-            this.panel35.Controls.Add(this.textCargaPeso);
-            this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel35.Location = new System.Drawing.Point(1, 1);
-            this.panel35.Margin = new System.Windows.Forms.Padding(1);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(100, 33);
-            this.panel35.TabIndex = 0;
-            // 
-            // textCargaPeso
-            // 
-            this.textCargaPeso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textCargaPeso.BackColor = System.Drawing.Color.White;
-            this.textCargaPeso.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textCargaPeso.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCargaPeso.Location = new System.Drawing.Point(8, 7);
-            this.textCargaPeso.Name = "textCargaPeso";
-            this.textCargaPeso.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textCargaPeso.Size = new System.Drawing.Size(85, 22);
-            this.textCargaPeso.TabIndex = 21;
-            this.textCargaPeso.TextChanged += new System.EventHandler(this.OnChangedTextPeso);
-            // 
-            // panel36
-            // 
-            this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.panel36.Controls.Add(this.panel37);
-            this.panel36.Location = new System.Drawing.Point(20, 76);
-            this.panel36.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.panel36.Name = "panel36";
-            this.panel36.Padding = new System.Windows.Forms.Padding(1);
-            this.panel36.Size = new System.Drawing.Size(148, 35);
-            this.panel36.TabIndex = 317;
-            // 
-            // panel37
-            // 
-            this.panel37.BackColor = System.Drawing.Color.White;
-            this.panel37.Controls.Add(this.textCargaNFE);
-            this.panel37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel37.Location = new System.Drawing.Point(1, 1);
-            this.panel37.Margin = new System.Windows.Forms.Padding(1);
-            this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(146, 33);
-            this.panel37.TabIndex = 0;
-            // 
-            // textCargaNFE
-            // 
-            this.textCargaNFE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textCargaNFE.BackColor = System.Drawing.Color.White;
-            this.textCargaNFE.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textCargaNFE.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCargaNFE.Location = new System.Drawing.Point(8, 7);
-            this.textCargaNFE.Mask = "000.000.000";
-            this.textCargaNFE.Name = "textCargaNFE";
-            this.textCargaNFE.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textCargaNFE.Size = new System.Drawing.Size(131, 22);
-            this.textCargaNFE.TabIndex = 21;
+            this.colValor.HeaderText = "VALOR";
+            this.colValor.Name = "colValor";
+            this.colValor.ReadOnly = true;
             // 
             // FormViagens
             // 
@@ -2732,6 +2734,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridCargas)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel36.ResumeLayout(false);
+            this.panel37.ResumeLayout(false);
+            this.panel37.PerformLayout();
+            this.panel34.ResumeLayout(false);
+            this.panel35.ResumeLayout(false);
+            this.panel35.PerformLayout();
             this.panel24.ResumeLayout(false);
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
@@ -2745,6 +2753,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridCustos)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel32.ResumeLayout(false);
+            this.panel33.ResumeLayout(false);
+            this.panel33.PerformLayout();
             this.panel26.ResumeLayout(false);
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
@@ -2755,23 +2766,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridAbastecimentos)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.panel30.ResumeLayout(false);
+            this.panel31.ResumeLayout(false);
+            this.panel31.PerformLayout();
             this.panel28.ResumeLayout(false);
             this.panel29.ResumeLayout(false);
             this.panel29.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            this.panel30.ResumeLayout(false);
-            this.panel31.ResumeLayout(false);
-            this.panel31.PerformLayout();
-            this.panel32.ResumeLayout(false);
-            this.panel33.ResumeLayout(false);
-            this.panel33.PerformLayout();
-            this.panel34.ResumeLayout(false);
-            this.panel35.ResumeLayout(false);
-            this.panel35.PerformLayout();
-            this.panel36.ResumeLayout(false);
-            this.panel37.ResumeLayout(false);
-            this.panel37.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2898,10 +2900,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Panel panel18;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNFE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDescricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPeso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colValor;
         private Guna.UI.WinForms.GunaComboBox combAbastecimentoStatus;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.DataGridViewTextBoxColumn textGridAbastecimentosData;
@@ -2935,5 +2933,9 @@
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.Panel panel37;
         private System.Windows.Forms.MaskedTextBox textCargaNFE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNFE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPeso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colValor;
     }
 }

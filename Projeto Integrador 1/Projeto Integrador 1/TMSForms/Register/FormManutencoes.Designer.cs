@@ -28,18 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPanelItens = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.gridItens = new Guna.UI.WinForms.GunaDataGridView();
-            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colQtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.textItemQtd = new System.Windows.Forms.MaskedTextBox();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.textItemValor = new System.Windows.Forms.MaskedTextBox();
@@ -115,13 +113,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabViagem = new System.Windows.Forms.TabControl();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.textItemQtd = new System.Windows.Forms.MaskedTextBox();
+            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPanelItens.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridItens)).BeginInit();
             this.panel8.SuspendLayout();
+            this.panel32.SuspendLayout();
+            this.panel33.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -144,8 +146,6 @@
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabViagem.SuspendLayout();
-            this.panel32.SuspendLayout();
-            this.panel33.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPanelItens
@@ -174,21 +174,21 @@
             // 
             this.gridItens.AllowUserToAddRows = false;
             this.gridItens.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.gridItens.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.gridItens.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridItens.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridItens.BackgroundColor = System.Drawing.Color.White;
             this.gridItens.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridItens.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridItens.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridItens.ColumnHeadersHeight = 35;
             this.gridItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridItens.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -197,15 +197,15 @@
             this.colQtd,
             this.colValor,
             this.colTotal});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridItens.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridItens.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridItens.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridItens.EnableHeadersVisualStyles = false;
             this.gridItens.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
@@ -243,32 +243,6 @@
             this.gridItens.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridItens.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             // 
-            // colCodigo
-            // 
-            this.colCodigo.HeaderText = "COD.";
-            this.colCodigo.Name = "colCodigo";
-            // 
-            // colDescricao
-            // 
-            this.colDescricao.HeaderText = "DESCRIÇÃO";
-            this.colDescricao.Name = "colDescricao";
-            // 
-            // colQtd
-            // 
-            this.colQtd.HeaderText = "QTD.";
-            this.colQtd.Name = "colQtd";
-            // 
-            // colValor
-            // 
-            this.colValor.HeaderText = "VALOR";
-            this.colValor.Name = "colValor";
-            // 
-            // colTotal
-            // 
-            this.colTotal.HeaderText = "TOTAL";
-            this.colTotal.Name = "colTotal";
-            this.colTotal.ReadOnly = true;
-            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.panel32);
@@ -289,6 +263,42 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1032, 111);
             this.panel8.TabIndex = 272;
+            // 
+            // panel32
+            // 
+            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel32.Controls.Add(this.panel33);
+            this.panel32.Location = new System.Drawing.Point(708, 76);
+            this.panel32.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel32.Name = "panel32";
+            this.panel32.Padding = new System.Windows.Forms.Padding(1);
+            this.panel32.Size = new System.Drawing.Size(116, 35);
+            this.panel32.TabIndex = 319;
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.Color.White;
+            this.panel33.Controls.Add(this.textItemQtd);
+            this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel33.Location = new System.Drawing.Point(1, 1);
+            this.panel33.Margin = new System.Windows.Forms.Padding(1);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(114, 33);
+            this.panel33.TabIndex = 0;
+            // 
+            // textItemQtd
+            // 
+            this.textItemQtd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textItemQtd.BackColor = System.Drawing.Color.White;
+            this.textItemQtd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textItemQtd.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textItemQtd.Location = new System.Drawing.Point(8, 7);
+            this.textItemQtd.Name = "textItemQtd";
+            this.textItemQtd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textItemQtd.Size = new System.Drawing.Size(99, 22);
+            this.textItemQtd.TabIndex = 21;
+            this.textItemQtd.TextChanged += new System.EventHandler(this.OnChangedTextQtd);
             // 
             // panel18
             // 
@@ -1428,41 +1438,33 @@
             this.tabViagem.Size = new System.Drawing.Size(1040, 637);
             this.tabViagem.TabIndex = 271;
             // 
-            // panel32
+            // colCodigo
             // 
-            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.panel32.Controls.Add(this.panel33);
-            this.panel32.Location = new System.Drawing.Point(708, 76);
-            this.panel32.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.panel32.Name = "panel32";
-            this.panel32.Padding = new System.Windows.Forms.Padding(1);
-            this.panel32.Size = new System.Drawing.Size(116, 35);
-            this.panel32.TabIndex = 319;
+            this.colCodigo.HeaderText = "COD.";
+            this.colCodigo.Name = "colCodigo";
             // 
-            // panel33
+            // colDescricao
             // 
-            this.panel33.BackColor = System.Drawing.Color.White;
-            this.panel33.Controls.Add(this.textItemQtd);
-            this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel33.Location = new System.Drawing.Point(1, 1);
-            this.panel33.Margin = new System.Windows.Forms.Padding(1);
-            this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(114, 33);
-            this.panel33.TabIndex = 0;
+            this.colDescricao.HeaderText = "DESCRIÇÃO";
+            this.colDescricao.Name = "colDescricao";
             // 
-            // textItemQtd
+            // colQtd
             // 
-            this.textItemQtd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textItemQtd.BackColor = System.Drawing.Color.White;
-            this.textItemQtd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textItemQtd.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textItemQtd.Location = new System.Drawing.Point(8, 7);
-            this.textItemQtd.Name = "textItemQtd";
-            this.textItemQtd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textItemQtd.Size = new System.Drawing.Size(99, 22);
-            this.textItemQtd.TabIndex = 21;
-            this.textItemQtd.TextChanged += new System.EventHandler(this.OnChangedTextQtd);
+            this.colQtd.HeaderText = "QTD.";
+            this.colQtd.Name = "colQtd";
+            this.colQtd.ReadOnly = true;
+            // 
+            // colValor
+            // 
+            this.colValor.HeaderText = "VALOR";
+            this.colValor.Name = "colValor";
+            this.colValor.ReadOnly = true;
+            // 
+            // colTotal
+            // 
+            this.colTotal.HeaderText = "TOTAL";
+            this.colTotal.Name = "colTotal";
+            this.colTotal.ReadOnly = true;
             // 
             // FormManutencoes
             // 
@@ -1477,6 +1479,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridItens)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel32.ResumeLayout(false);
+            this.panel33.ResumeLayout(false);
+            this.panel33.PerformLayout();
             this.panel18.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
@@ -1512,9 +1517,6 @@
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.tabViagem.ResumeLayout(false);
-            this.panel32.ResumeLayout(false);
-            this.panel33.ResumeLayout(false);
-            this.panel33.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1584,11 +1586,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Panel panel20;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDescricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colQtd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colValor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTotal;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.MaskedTextBox textItemValor;
@@ -1607,5 +1604,10 @@
         private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.Panel panel33;
         private System.Windows.Forms.MaskedTextBox textItemQtd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colQtd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTotal;
     }
 }
