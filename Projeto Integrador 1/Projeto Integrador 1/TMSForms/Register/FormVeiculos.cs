@@ -170,5 +170,15 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void OnChangedTextQtd(object sender, EventArgs e) {
+            MaskedTextBox Text = (MaskedTextBox)sender;
+            Converter.OnPressQtd(ref Text);
+        }
+
+        private void OnChangedTextPeso(object sender, EventArgs e) {
+            MaskedTextBox Text = (MaskedTextBox)sender;
+            Converter.OnPressPeso(ref Text);
+        }
     }
 }

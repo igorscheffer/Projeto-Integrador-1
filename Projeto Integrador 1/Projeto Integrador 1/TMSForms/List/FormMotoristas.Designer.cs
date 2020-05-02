@@ -38,6 +38,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMotoristas));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCadastrar = new FontAwesome.Sharp.IconButton();
             this.gridDados = new Guna.UI.WinForms.GunaDataGridView();
@@ -45,13 +46,13 @@
             this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MenuItens = new Guna.UI.WinForms.GunaContextMenuStrip();
             this.btnMenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMenuItemLancarConta = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMenuItemExcluir = new System.Windows.Forms.ToolStripMenuItem();
             this.colRg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCNH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnMenuItemLancarConta = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDados)).BeginInit();
             this.MenuItens.SuspendLayout();
@@ -209,23 +210,33 @@
             this.MenuItens.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.MenuItens.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
             this.MenuItens.ShowCheckMargin = true;
-            this.MenuItens.Size = new System.Drawing.Size(203, 128);
+            this.MenuItens.Size = new System.Drawing.Size(187, 106);
             // 
             // btnMenuItemEditar
             // 
             this.btnMenuItemEditar.ForeColor = System.Drawing.Color.White;
             this.btnMenuItemEditar.Name = "btnMenuItemEditar";
             this.btnMenuItemEditar.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
-            this.btnMenuItemEditar.Size = new System.Drawing.Size(202, 34);
+            this.btnMenuItemEditar.Size = new System.Drawing.Size(186, 34);
             this.btnMenuItemEditar.Text = "Editar";
             this.btnMenuItemEditar.Click += new System.EventHandler(this.OnSelectEditar);
+            // 
+            // btnMenuItemLancarConta
+            // 
+            this.btnMenuItemLancarConta.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemLancarConta.Name = "btnMenuItemLancarConta";
+            this.btnMenuItemLancarConta.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.btnMenuItemLancarConta.Size = new System.Drawing.Size(186, 34);
+            this.btnMenuItemLancarConta.Tag = "";
+            this.btnMenuItemLancarConta.Text = "Lançar Conta";
+            this.btnMenuItemLancarConta.Click += new System.EventHandler(this.OnClickLancarConta);
             // 
             // btnMenuItemExcluir
             // 
             this.btnMenuItemExcluir.ForeColor = System.Drawing.Color.White;
             this.btnMenuItemExcluir.Name = "btnMenuItemExcluir";
             this.btnMenuItemExcluir.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
-            this.btnMenuItemExcluir.Size = new System.Drawing.Size(202, 34);
+            this.btnMenuItemExcluir.Size = new System.Drawing.Size(186, 34);
             this.btnMenuItemExcluir.Text = "Excluir";
             this.btnMenuItemExcluir.Click += new System.EventHandler(this.OnSelectExcluir);
             // 
@@ -274,16 +285,6 @@
             this.colVencimento.Name = "colVencimento";
             this.colVencimento.ReadOnly = true;
             // 
-            // btnMenuItemLancarConta
-            // 
-            this.btnMenuItemLancarConta.ForeColor = System.Drawing.Color.White;
-            this.btnMenuItemLancarConta.Name = "btnMenuItemLancarConta";
-            this.btnMenuItemLancarConta.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
-            this.btnMenuItemLancarConta.Size = new System.Drawing.Size(202, 34);
-            this.btnMenuItemLancarConta.Tag = "";
-            this.btnMenuItemLancarConta.Text = "Lançar Conta";
-            this.btnMenuItemLancarConta.Click += new System.EventHandler(this.OnClickLancarConta);
-            // 
             // FormMotoristas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -291,6 +292,7 @@
             this.Controls.Add(this.gridDados);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMotoristas";
             this.Text = "Motoristas";
             this.panel1.ResumeLayout(false);

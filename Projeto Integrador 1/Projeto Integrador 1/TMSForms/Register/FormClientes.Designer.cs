@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.combTipoCadastro = new Guna.UI.WinForms.GunaComboBox();
@@ -892,7 +893,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(1);
             this.panel7.Size = new System.Drawing.Size(220, 35);
-            this.panel7.TabIndex = 193;
+            this.panel7.TabIndex = 3;
             // 
             // panel8
             // 
@@ -926,7 +927,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Padding = new System.Windows.Forms.Padding(1);
             this.panel9.Size = new System.Drawing.Size(141, 35);
-            this.panel9.TabIndex = 194;
+            this.panel9.TabIndex = 19;
             // 
             // panel10
             // 
@@ -962,7 +963,7 @@
             this.panel11.Name = "panel11";
             this.panel11.Padding = new System.Windows.Forms.Padding(1);
             this.panel11.Size = new System.Drawing.Size(141, 35);
-            this.panel11.TabIndex = 195;
+            this.panel11.TabIndex = 21;
             // 
             // panel12
             // 
@@ -998,7 +999,7 @@
             this.panel13.Name = "panel13";
             this.panel13.Padding = new System.Windows.Forms.Padding(1);
             this.panel13.Size = new System.Drawing.Size(95, 35);
-            this.panel13.TabIndex = 195;
+            this.panel13.TabIndex = 10;
             // 
             // panel14
             // 
@@ -1081,6 +1082,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormClientes";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Cadastrar Cliente";

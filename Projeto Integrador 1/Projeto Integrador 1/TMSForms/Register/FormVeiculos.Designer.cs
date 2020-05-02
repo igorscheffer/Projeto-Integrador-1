@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVeiculos));
             this.lblFrota = new System.Windows.Forms.Label();
             this.lblPlaca = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
@@ -48,10 +49,6 @@
             this.lblCapacidade = new System.Windows.Forms.Label();
             this.textFrota = new Guna.UI.WinForms.GunaTextBox();
             this.textModelo = new Guna.UI.WinForms.GunaTextBox();
-            this.textTara = new Guna.UI.WinForms.GunaTextBox();
-            this.textLotacao = new Guna.UI.WinForms.GunaTextBox();
-            this.textPesoBrutoTotal = new Guna.UI.WinForms.GunaTextBox();
-            this.textCapacidade = new Guna.UI.WinForms.GunaTextBox();
             this.textRenavam = new Guna.UI.WinForms.GunaTextBox();
             this.textChassi = new Guna.UI.WinForms.GunaTextBox();
             this.textMotorizacao = new Guna.UI.WinForms.GunaTextBox();
@@ -79,6 +76,18 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.textPlaca = new System.Windows.Forms.MaskedTextBox();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.textTara = new System.Windows.Forms.MaskedTextBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.textLotacao = new System.Windows.Forms.MaskedTextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.textPesoBrutoTotal = new System.Windows.Forms.MaskedTextBox();
+            this.textCapacidade = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.panel6.SuspendLayout();
@@ -89,6 +98,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.panel34.SuspendLayout();
+            this.panel35.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.textCapacidade.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFrota
@@ -348,90 +365,6 @@
             this.textModelo.PasswordChar = '\0';
             this.textModelo.Size = new System.Drawing.Size(289, 35);
             this.textModelo.TabIndex = 6;
-            // 
-            // textTara
-            // 
-            this.textTara.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textTara.BackColor = System.Drawing.Color.White;
-            this.textTara.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textTara.BaseColor = System.Drawing.Color.White;
-            this.textTara.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textTara.BorderSize = 1;
-            this.textTara.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textTara.FocusedBaseColor = System.Drawing.Color.White;
-            this.textTara.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textTara.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textTara.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textTara.Location = new System.Drawing.Point(20, 341);
-            this.textTara.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textTara.MaxLength = 20;
-            this.textTara.Name = "textTara";
-            this.textTara.PasswordChar = '\0';
-            this.textTara.Size = new System.Drawing.Size(205, 35);
-            this.textTara.TabIndex = 15;
-            // 
-            // textLotacao
-            // 
-            this.textLotacao.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textLotacao.BackColor = System.Drawing.Color.White;
-            this.textLotacao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textLotacao.BaseColor = System.Drawing.Color.White;
-            this.textLotacao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textLotacao.BorderSize = 1;
-            this.textLotacao.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textLotacao.FocusedBaseColor = System.Drawing.Color.White;
-            this.textLotacao.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textLotacao.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textLotacao.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textLotacao.Location = new System.Drawing.Point(280, 341);
-            this.textLotacao.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textLotacao.MaxLength = 20;
-            this.textLotacao.Name = "textLotacao";
-            this.textLotacao.PasswordChar = '\0';
-            this.textLotacao.Size = new System.Drawing.Size(205, 35);
-            this.textLotacao.TabIndex = 16;
-            // 
-            // textPesoBrutoTotal
-            // 
-            this.textPesoBrutoTotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textPesoBrutoTotal.BackColor = System.Drawing.Color.White;
-            this.textPesoBrutoTotal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textPesoBrutoTotal.BaseColor = System.Drawing.Color.White;
-            this.textPesoBrutoTotal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textPesoBrutoTotal.BorderSize = 1;
-            this.textPesoBrutoTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textPesoBrutoTotal.FocusedBaseColor = System.Drawing.Color.White;
-            this.textPesoBrutoTotal.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textPesoBrutoTotal.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textPesoBrutoTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textPesoBrutoTotal.Location = new System.Drawing.Point(540, 341);
-            this.textPesoBrutoTotal.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textPesoBrutoTotal.MaxLength = 20;
-            this.textPesoBrutoTotal.Name = "textPesoBrutoTotal";
-            this.textPesoBrutoTotal.PasswordChar = '\0';
-            this.textPesoBrutoTotal.Size = new System.Drawing.Size(205, 35);
-            this.textPesoBrutoTotal.TabIndex = 17;
-            // 
-            // textCapacidade
-            // 
-            this.textCapacidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textCapacidade.BackColor = System.Drawing.Color.White;
-            this.textCapacidade.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textCapacidade.BaseColor = System.Drawing.Color.White;
-            this.textCapacidade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textCapacidade.BorderSize = 1;
-            this.textCapacidade.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCapacidade.FocusedBaseColor = System.Drawing.Color.White;
-            this.textCapacidade.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textCapacidade.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textCapacidade.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCapacidade.Location = new System.Drawing.Point(800, 341);
-            this.textCapacidade.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textCapacidade.MaxLength = 20;
-            this.textCapacidade.Name = "textCapacidade";
-            this.textCapacidade.PasswordChar = '\0';
-            this.textCapacidade.Size = new System.Drawing.Size(185, 35);
-            this.textCapacidade.TabIndex = 18;
             // 
             // textRenavam
             // 
@@ -867,7 +800,7 @@
             this.panel13.Name = "panel13";
             this.panel13.Padding = new System.Windows.Forms.Padding(1);
             this.panel13.Size = new System.Drawing.Size(140, 35);
-            this.panel13.TabIndex = 196;
+            this.panel13.TabIndex = 2;
             // 
             // panel14
             // 
@@ -891,7 +824,151 @@
             this.textPlaca.Mask = "LLL-0A00";
             this.textPlaca.Name = "textPlaca";
             this.textPlaca.Size = new System.Drawing.Size(133, 22);
-            this.textPlaca.TabIndex = 10;
+            this.textPlaca.TabIndex = 2;
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel34.Controls.Add(this.panel35);
+            this.panel34.Location = new System.Drawing.Point(20, 341);
+            this.panel34.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel34.Name = "panel34";
+            this.panel34.Padding = new System.Windows.Forms.Padding(1);
+            this.panel34.Size = new System.Drawing.Size(205, 35);
+            this.panel34.TabIndex = 95;
+            // 
+            // panel35
+            // 
+            this.panel35.BackColor = System.Drawing.Color.White;
+            this.panel35.Controls.Add(this.textTara);
+            this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel35.Location = new System.Drawing.Point(1, 1);
+            this.panel35.Margin = new System.Windows.Forms.Padding(1);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(203, 33);
+            this.panel35.TabIndex = 0;
+            // 
+            // textTara
+            // 
+            this.textTara.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textTara.BackColor = System.Drawing.Color.White;
+            this.textTara.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textTara.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textTara.Location = new System.Drawing.Point(8, 7);
+            this.textTara.Name = "textTara";
+            this.textTara.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textTara.Size = new System.Drawing.Size(188, 22);
+            this.textTara.TabIndex = 3;
+            this.textTara.TextChanged += new System.EventHandler(this.OnChangedTextPeso);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Location = new System.Drawing.Point(280, 341);
+            this.panel7.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel7.Name = "panel7";
+            this.panel7.Padding = new System.Windows.Forms.Padding(1);
+            this.panel7.Size = new System.Drawing.Size(205, 35);
+            this.panel7.TabIndex = 96;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.textLotacao);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(1, 1);
+            this.panel8.Margin = new System.Windows.Forms.Padding(1);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(203, 33);
+            this.panel8.TabIndex = 0;
+            // 
+            // textLotacao
+            // 
+            this.textLotacao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textLotacao.BackColor = System.Drawing.Color.White;
+            this.textLotacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textLotacao.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textLotacao.Location = new System.Drawing.Point(8, 7);
+            this.textLotacao.Name = "textLotacao";
+            this.textLotacao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textLotacao.Size = new System.Drawing.Size(188, 22);
+            this.textLotacao.TabIndex = 3;
+            this.textLotacao.TextChanged += new System.EventHandler(this.OnChangedTextPeso);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Location = new System.Drawing.Point(540, 341);
+            this.panel9.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel9.Name = "panel9";
+            this.panel9.Padding = new System.Windows.Forms.Padding(1);
+            this.panel9.Size = new System.Drawing.Size(205, 35);
+            this.panel9.TabIndex = 97;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Controls.Add(this.textPesoBrutoTotal);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(1, 1);
+            this.panel10.Margin = new System.Windows.Forms.Padding(1);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(203, 33);
+            this.panel10.TabIndex = 0;
+            // 
+            // textPesoBrutoTotal
+            // 
+            this.textPesoBrutoTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textPesoBrutoTotal.BackColor = System.Drawing.Color.White;
+            this.textPesoBrutoTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textPesoBrutoTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textPesoBrutoTotal.Location = new System.Drawing.Point(8, 7);
+            this.textPesoBrutoTotal.Name = "textPesoBrutoTotal";
+            this.textPesoBrutoTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textPesoBrutoTotal.Size = new System.Drawing.Size(188, 22);
+            this.textPesoBrutoTotal.TabIndex = 3;
+            this.textPesoBrutoTotal.TextChanged += new System.EventHandler(this.OnChangedTextPeso);
+            // 
+            // textCapacidade
+            // 
+            this.textCapacidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textCapacidade.Controls.Add(this.panel12);
+            this.textCapacidade.Location = new System.Drawing.Point(800, 341);
+            this.textCapacidade.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textCapacidade.Name = "textCapacidade";
+            this.textCapacidade.Padding = new System.Windows.Forms.Padding(1);
+            this.textCapacidade.Size = new System.Drawing.Size(185, 35);
+            this.textCapacidade.TabIndex = 98;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Controls.Add(this.maskedTextBox3);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(1, 1);
+            this.panel12.Margin = new System.Windows.Forms.Padding(1);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(183, 33);
+            this.panel12.TabIndex = 0;
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.maskedTextBox3.BackColor = System.Drawing.Color.White;
+            this.maskedTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.maskedTextBox3.Location = new System.Drawing.Point(8, 7);
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.maskedTextBox3.Size = new System.Drawing.Size(168, 22);
+            this.maskedTextBox3.TabIndex = 3;
+            this.maskedTextBox3.TextChanged += new System.EventHandler(this.OnChangedTextQtd);
             // 
             // FormVeiculos
             // 
@@ -900,6 +977,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 505);
             this.ControlBox = false;
+            this.Controls.Add(this.textCapacidade);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel34);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -921,10 +1002,6 @@
             this.Controls.Add(this.textMotorizacao);
             this.Controls.Add(this.textChassi);
             this.Controls.Add(this.textRenavam);
-            this.Controls.Add(this.textCapacidade);
-            this.Controls.Add(this.textPesoBrutoTotal);
-            this.Controls.Add(this.textLotacao);
-            this.Controls.Add(this.textTara);
             this.Controls.Add(this.textModelo);
             this.Controls.Add(this.textFrota);
             this.Controls.Add(this.lblCapacidade);
@@ -946,6 +1023,7 @@
             this.Controls.Add(this.lblPlaca);
             this.Controls.Add(this.lblFrota);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormVeiculos";
             this.Text = "Cadastrar Veiculo";
             this.panel5.ResumeLayout(false);
@@ -963,6 +1041,18 @@
             this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            this.panel34.ResumeLayout(false);
+            this.panel35.ResumeLayout(false);
+            this.panel35.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.textCapacidade.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -989,10 +1079,6 @@
         private System.Windows.Forms.Label lblCapacidade;
         private Guna.UI.WinForms.GunaTextBox textFrota;
         private Guna.UI.WinForms.GunaTextBox textModelo;
-        private Guna.UI.WinForms.GunaTextBox textTara;
-        private Guna.UI.WinForms.GunaTextBox textLotacao;
-        private Guna.UI.WinForms.GunaTextBox textPesoBrutoTotal;
-        private Guna.UI.WinForms.GunaTextBox textCapacidade;
         private Guna.UI.WinForms.GunaTextBox textRenavam;
         private Guna.UI.WinForms.GunaTextBox textChassi;
         private Guna.UI.WinForms.GunaTextBox textMotorizacao;
@@ -1020,5 +1106,17 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.MaskedTextBox textPlaca;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.MaskedTextBox textTara;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.MaskedTextBox textLotacao;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.MaskedTextBox textPesoBrutoTotal;
+        private System.Windows.Forms.Panel textCapacidade;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
     }
 }

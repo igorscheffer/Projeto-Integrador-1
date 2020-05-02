@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAbastecimentos));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label40 = new System.Windows.Forms.Label();
-            this.textLitros = new Guna.UI.WinForms.GunaTextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -68,6 +68,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textTotal = new System.Windows.Forms.MaskedTextBox();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.textLitros = new System.Windows.Forms.MaskedTextBox();
             this.panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             this.panel13.SuspendLayout();
@@ -77,6 +80,8 @@
             this.panel25.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel30.SuspendLayout();
+            this.panel31.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -137,7 +142,7 @@
             this.timeData.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.timeData.OnPressedColor = System.Drawing.Color.Black;
             this.timeData.Size = new System.Drawing.Size(178, 35);
-            this.timeData.TabIndex = 240;
+            this.timeData.TabIndex = 1;
             this.timeData.Text = "22/04/2020 12:57";
             this.timeData.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
@@ -160,7 +165,7 @@
             this.textCupom.Name = "textCupom";
             this.textCupom.PasswordChar = '\0';
             this.textCupom.Size = new System.Drawing.Size(198, 35);
-            this.textCupom.TabIndex = 242;
+            this.textCupom.TabIndex = 2;
             // 
             // label1
             // 
@@ -207,7 +212,7 @@
             this.combPosto.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combPosto.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combPosto.Size = new System.Drawing.Size(370, 35);
-            this.combPosto.TabIndex = 260;
+            this.combPosto.TabIndex = 3;
             this.combPosto.Tag = "Tag";
             // 
             // iconButton3
@@ -226,7 +231,7 @@
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Rotation = 0D;
             this.iconButton3.Size = new System.Drawing.Size(35, 35);
-            this.iconButton3.TabIndex = 262;
+            this.iconButton3.TabIndex = 4;
             this.iconButton3.UseVisualStyleBackColor = false;
             this.iconButton3.Click += new System.EventHandler(this.onCadastrarCliente);
             // 
@@ -253,7 +258,7 @@
             this.combCombustivel.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combCombustivel.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combCombustivel.Size = new System.Drawing.Size(160, 35);
-            this.combCombustivel.TabIndex = 263;
+            this.combCombustivel.TabIndex = 5;
             // 
             // label2
             // 
@@ -300,7 +305,7 @@
             this.combVeiculo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combVeiculo.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combVeiculo.Size = new System.Drawing.Size(280, 35);
-            this.combVeiculo.TabIndex = 265;
+            this.combVeiculo.TabIndex = 6;
             this.combVeiculo.Tag = "Tag";
             // 
             // iconButton1
@@ -319,7 +324,7 @@
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Rotation = 0D;
             this.iconButton1.Size = new System.Drawing.Size(35, 35);
-            this.iconButton1.TabIndex = 267;
+            this.iconButton1.TabIndex = 7;
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.onCadastrarVeiculo);
             // 
@@ -356,7 +361,7 @@
             this.combMotorista.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combMotorista.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combMotorista.Size = new System.Drawing.Size(290, 35);
-            this.combMotorista.TabIndex = 268;
+            this.combMotorista.TabIndex = 8;
             this.combMotorista.Tag = "Tag";
             // 
             // iconButton2
@@ -375,7 +380,7 @@
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Rotation = 0D;
             this.iconButton2.Size = new System.Drawing.Size(35, 35);
-            this.iconButton2.TabIndex = 270;
+            this.iconButton2.TabIndex = 9;
             this.iconButton2.UseVisualStyleBackColor = false;
             this.iconButton2.Click += new System.EventHandler(this.onCadastrarMotorista);
             // 
@@ -402,7 +407,7 @@
             this.combStatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combStatus.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combStatus.Size = new System.Drawing.Size(150, 35);
-            this.combStatus.TabIndex = 273;
+            this.combStatus.TabIndex = 11;
             // 
             // label6
             // 
@@ -460,7 +465,7 @@
             this.textHodometro.Name = "textHodometro";
             this.textHodometro.PasswordChar = '\0';
             this.textHodometro.Size = new System.Drawing.Size(116, 35);
-            this.textHodometro.TabIndex = 275;
+            this.textHodometro.TabIndex = 10;
             // 
             // label5
             // 
@@ -496,28 +501,6 @@
             this.label40.Size = new System.Drawing.Size(16, 16);
             this.label40.TabIndex = 250;
             this.label40.Text = "L";
-            // 
-            // textLitros
-            // 
-            this.textLitros.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textLitros.BackColor = System.Drawing.Color.White;
-            this.textLitros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textLitros.BaseColor = System.Drawing.Color.White;
-            this.textLitros.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textLitros.BorderSize = 1;
-            this.textLitros.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textLitros.FocusedBaseColor = System.Drawing.Color.White;
-            this.textLitros.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textLitros.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textLitros.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textLitros.Location = new System.Drawing.Point(20, 230);
-            this.textLitros.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textLitros.MaxLength = 20;
-            this.textLitros.Name = "textLitros";
-            this.textLitros.PasswordChar = '\0';
-            this.textLitros.Size = new System.Drawing.Size(95, 35);
-            this.textLitros.TabIndex = 278;
-            this.textLitros.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalcularValorTotal);
             // 
             // label25
             // 
@@ -633,7 +616,7 @@
             this.panel24.Name = "panel24";
             this.panel24.Padding = new System.Windows.Forms.Padding(1);
             this.panel24.Size = new System.Drawing.Size(95, 35);
-            this.panel24.TabIndex = 316;
+            this.panel24.TabIndex = 13;
             // 
             // panel25
             // 
@@ -657,7 +640,9 @@
             this.textValor.Name = "textValor";
             this.textValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textValor.Size = new System.Drawing.Size(78, 22);
-            this.textValor.TabIndex = 21;
+            this.textValor.TabIndex = 13;
+            this.textValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
+            this.textValor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalcularValorTotal);
             // 
             // panel4
             // 
@@ -668,7 +653,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(1);
             this.panel4.Size = new System.Drawing.Size(95, 35);
-            this.panel4.TabIndex = 317;
+            this.panel4.TabIndex = 14;
             // 
             // panel5
             // 
@@ -693,13 +678,52 @@
             this.textTotal.Name = "textTotal";
             this.textTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textTotal.Size = new System.Drawing.Size(78, 22);
-            this.textTotal.TabIndex = 21;
+            this.textTotal.TabIndex = 14;
+            this.textTotal.TextChanged += new System.EventHandler(this.OnChangedTextValor);
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel30.Controls.Add(this.panel31);
+            this.panel30.Location = new System.Drawing.Point(20, 230);
+            this.panel30.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel30.Name = "panel30";
+            this.panel30.Padding = new System.Windows.Forms.Padding(1);
+            this.panel30.Size = new System.Drawing.Size(95, 35);
+            this.panel30.TabIndex = 12;
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.White;
+            this.panel31.Controls.Add(this.textLitros);
+            this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel31.Location = new System.Drawing.Point(1, 1);
+            this.panel31.Margin = new System.Windows.Forms.Padding(1);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(93, 33);
+            this.panel31.TabIndex = 0;
+            // 
+            // textLitros
+            // 
+            this.textLitros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textLitros.BackColor = System.Drawing.Color.White;
+            this.textLitros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textLitros.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textLitros.Location = new System.Drawing.Point(8, 7);
+            this.textLitros.Name = "textLitros";
+            this.textLitros.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textLitros.Size = new System.Drawing.Size(78, 22);
+            this.textLitros.TabIndex = 12;
+            this.textLitros.TextChanged += new System.EventHandler(this.OnChangedTextQtd);
+            this.textLitros.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalcularValorTotal);
             // 
             // FormAbastecimentos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 372);
+            this.Controls.Add(this.panel30);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel24);
             this.Controls.Add(this.btnEnviar);
@@ -708,7 +732,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.lab);
             this.Controls.Add(this.panel13);
-            this.Controls.Add(this.textLitros);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel18);
@@ -733,6 +756,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAbastecimentos";
             this.Text = "Cadastrar Abastecimento";
             this.panel18.ResumeLayout(false);
@@ -750,6 +774,9 @@
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel30.ResumeLayout(false);
+            this.panel31.ResumeLayout(false);
+            this.panel31.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -781,7 +808,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label40;
-        private Guna.UI.WinForms.GunaTextBox textLitros;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
@@ -796,5 +822,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.MaskedTextBox textTotal;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.MaskedTextBox textLitros;
     }
 }

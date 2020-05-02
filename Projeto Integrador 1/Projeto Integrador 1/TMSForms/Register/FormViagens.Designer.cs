@@ -37,6 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormViagens));
             this.textCodigoInterno = new Guna.UI.WinForms.GunaTextBox();
             this.lblCNPJ = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -118,6 +119,10 @@
             this.tabPanelCargas = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.gridCargas = new Guna.UI.WinForms.GunaDataGridView();
+            this.colNFE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel36 = new System.Windows.Forms.Panel();
             this.panel37 = new System.Windows.Forms.Panel();
@@ -190,10 +195,6 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.colNFE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             this.tabViagem.SuspendLayout();
             this.tabPanelViagem.SuspendLayout();
@@ -1147,7 +1148,7 @@
             this.textInformacoesComplementares.MaxLength = 1000;
             this.textInformacoesComplementares.Name = "textInformacoesComplementares";
             this.textInformacoesComplementares.Size = new System.Drawing.Size(402, 179);
-            this.textInformacoesComplementares.TabIndex = 22;
+            this.textInformacoesComplementares.TabIndex = 21;
             this.textInformacoesComplementares.Text = "";
             // 
             // label25
@@ -1209,7 +1210,7 @@
             this.timeCustoData.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.timeCustoData.OnPressedColor = System.Drawing.Color.Black;
             this.timeCustoData.Size = new System.Drawing.Size(140, 35);
-            this.timeCustoData.TabIndex = 261;
+            this.timeCustoData.TabIndex = 1;
             this.timeCustoData.Text = "22/04/2020";
             this.timeCustoData.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
@@ -1244,7 +1245,7 @@
             this.textCustoDescricao.Name = "textCustoDescricao";
             this.textCustoDescricao.PasswordChar = '\0';
             this.textCustoDescricao.Size = new System.Drawing.Size(510, 35);
-            this.textCustoDescricao.TabIndex = 263;
+            this.textCustoDescricao.TabIndex = 2;
             // 
             // label31
             // 
@@ -1274,7 +1275,7 @@
             this.btnAddCusto.Name = "btnAddCusto";
             this.btnAddCusto.Rotation = 0D;
             this.btnAddCusto.Size = new System.Drawing.Size(35, 35);
-            this.btnAddCusto.TabIndex = 269;
+            this.btnAddCusto.TabIndex = 5;
             this.btnAddCusto.UseVisualStyleBackColor = false;
             this.btnAddCusto.Click += new System.EventHandler(this.onAddCusto);
             // 
@@ -1322,13 +1323,13 @@
             // tabPanelViagem
             // 
             this.tabPanelViagem.BackColor = System.Drawing.Color.White;
+            this.tabPanelViagem.Controls.Add(this.btnEnviar);
             this.tabPanelViagem.Controls.Add(this.panel22);
             this.tabPanelViagem.Controls.Add(this.panel21);
             this.tabPanelViagem.Controls.Add(this.panel20);
             this.tabPanelViagem.Controls.Add(this.panel19);
             this.tabPanelViagem.Controls.Add(this.panel18);
             this.tabPanelViagem.Controls.Add(this.panel13);
-            this.tabPanelViagem.Controls.Add(this.btnEnviar);
             this.tabPanelViagem.Controls.Add(this.label10);
             this.tabPanelViagem.Controls.Add(this.lblCNPJ);
             this.tabPanelViagem.Controls.Add(this.textCodigoInterno);
@@ -1397,7 +1398,7 @@
             this.panel22.Name = "panel22";
             this.panel22.Padding = new System.Windows.Forms.Padding(1);
             this.panel22.Size = new System.Drawing.Size(140, 35);
-            this.panel22.TabIndex = 315;
+            this.panel22.TabIndex = 22;
             // 
             // panel23
             // 
@@ -1421,7 +1422,7 @@
             this.textValor.Name = "textValor";
             this.textValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textValor.Size = new System.Drawing.Size(123, 22);
-            this.textValor.TabIndex = 21;
+            this.textValor.TabIndex = 22;
             this.textValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             // 
             // panel21
@@ -1645,6 +1646,28 @@
             this.gridCargas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridCargas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             // 
+            // colNFE
+            // 
+            this.colNFE.HeaderText = "NF-E";
+            this.colNFE.Name = "colNFE";
+            // 
+            // colDescricao
+            // 
+            this.colDescricao.HeaderText = "DESCRIÇÃO";
+            this.colDescricao.Name = "colDescricao";
+            // 
+            // colPeso
+            // 
+            this.colPeso.HeaderText = "PESO";
+            this.colPeso.Name = "colPeso";
+            this.colPeso.ReadOnly = true;
+            // 
+            // colValor
+            // 
+            this.colValor.HeaderText = "VALOR";
+            this.colValor.Name = "colValor";
+            this.colValor.ReadOnly = true;
+            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.panel36);
@@ -1676,7 +1699,7 @@
             this.panel36.Name = "panel36";
             this.panel36.Padding = new System.Windows.Forms.Padding(1);
             this.panel36.Size = new System.Drawing.Size(148, 35);
-            this.panel36.TabIndex = 317;
+            this.panel36.TabIndex = 1;
             // 
             // panel37
             // 
@@ -1701,7 +1724,7 @@
             this.textCargaNFE.Name = "textCargaNFE";
             this.textCargaNFE.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textCargaNFE.Size = new System.Drawing.Size(131, 22);
-            this.textCargaNFE.TabIndex = 21;
+            this.textCargaNFE.TabIndex = 1;
             // 
             // panel34
             // 
@@ -1712,7 +1735,7 @@
             this.panel34.Name = "panel34";
             this.panel34.Padding = new System.Windows.Forms.Padding(1);
             this.panel34.Size = new System.Drawing.Size(102, 35);
-            this.panel34.TabIndex = 316;
+            this.panel34.TabIndex = 3;
             // 
             // panel35
             // 
@@ -1736,7 +1759,7 @@
             this.textCargaPeso.Name = "textCargaPeso";
             this.textCargaPeso.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textCargaPeso.Size = new System.Drawing.Size(85, 22);
-            this.textCargaPeso.TabIndex = 21;
+            this.textCargaPeso.TabIndex = 3;
             this.textCargaPeso.TextChanged += new System.EventHandler(this.OnChangedTextPeso);
             // 
             // panel24
@@ -1748,7 +1771,7 @@
             this.panel24.Name = "panel24";
             this.panel24.Padding = new System.Windows.Forms.Padding(1);
             this.panel24.Size = new System.Drawing.Size(95, 35);
-            this.panel24.TabIndex = 315;
+            this.panel24.TabIndex = 4;
             // 
             // panel25
             // 
@@ -1772,7 +1795,7 @@
             this.textCargaValor.Name = "textCargaValor";
             this.textCargaValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textCargaValor.Size = new System.Drawing.Size(78, 22);
-            this.textCargaValor.TabIndex = 21;
+            this.textCargaValor.TabIndex = 4;
             this.textCargaValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             // 
             // panel17
@@ -1853,7 +1876,7 @@
             this.btnAddCarga.Name = "btnAddCarga";
             this.btnAddCarga.Rotation = 0D;
             this.btnAddCarga.Size = new System.Drawing.Size(35, 35);
-            this.btnAddCarga.TabIndex = 257;
+            this.btnAddCarga.TabIndex = 5;
             this.btnAddCarga.UseVisualStyleBackColor = false;
             this.btnAddCarga.Click += new System.EventHandler(this.onAddCarga);
             // 
@@ -1936,7 +1959,7 @@
             this.textCargaDescricao.Name = "textCargaDescricao";
             this.textCargaDescricao.PasswordChar = '\0';
             this.textCargaDescricao.Size = new System.Drawing.Size(470, 35);
-            this.textCargaDescricao.TabIndex = 251;
+            this.textCargaDescricao.TabIndex = 2;
             // 
             // tabPanelCustos
             // 
@@ -2094,7 +2117,7 @@
             this.panel32.Name = "panel32";
             this.panel32.Padding = new System.Windows.Forms.Padding(1);
             this.panel32.Size = new System.Drawing.Size(120, 35);
-            this.panel32.TabIndex = 318;
+            this.panel32.TabIndex = 3;
             // 
             // panel33
             // 
@@ -2118,7 +2141,7 @@
             this.textCustoQTD.Name = "textCustoQTD";
             this.textCustoQTD.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textCustoQTD.Size = new System.Drawing.Size(103, 22);
-            this.textCustoQTD.TabIndex = 21;
+            this.textCustoQTD.TabIndex = 3;
             this.textCustoQTD.TextChanged += new System.EventHandler(this.OnChangedTextQtd);
             // 
             // panel26
@@ -2130,7 +2153,7 @@
             this.panel26.Name = "panel26";
             this.panel26.Padding = new System.Windows.Forms.Padding(1);
             this.panel26.Size = new System.Drawing.Size(87, 35);
-            this.panel26.TabIndex = 316;
+            this.panel26.TabIndex = 4;
             // 
             // panel27
             // 
@@ -2154,7 +2177,7 @@
             this.textCustoValor.Name = "textCustoValor";
             this.textCustoValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textCustoValor.Size = new System.Drawing.Size(70, 22);
-            this.textCustoValor.TabIndex = 21;
+            this.textCustoValor.TabIndex = 4;
             this.textCustoValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             // 
             // panel15
@@ -2358,7 +2381,7 @@
             this.panel30.Name = "panel30";
             this.panel30.Padding = new System.Windows.Forms.Padding(1);
             this.panel30.Size = new System.Drawing.Size(80, 35);
-            this.panel30.TabIndex = 317;
+            this.panel30.TabIndex = 5;
             // 
             // panel31
             // 
@@ -2382,7 +2405,7 @@
             this.textAbastecimentoLitros.Name = "textAbastecimentoLitros";
             this.textAbastecimentoLitros.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textAbastecimentoLitros.Size = new System.Drawing.Size(63, 22);
-            this.textAbastecimentoLitros.TabIndex = 21;
+            this.textAbastecimentoLitros.TabIndex = 5;
             this.textAbastecimentoLitros.TextChanged += new System.EventHandler(this.OnChangedTextQtd);
             // 
             // panel28
@@ -2394,7 +2417,7 @@
             this.panel28.Name = "panel28";
             this.panel28.Padding = new System.Windows.Forms.Padding(1);
             this.panel28.Size = new System.Drawing.Size(87, 35);
-            this.panel28.TabIndex = 316;
+            this.panel28.TabIndex = 6;
             // 
             // panel29
             // 
@@ -2418,7 +2441,7 @@
             this.textAbastecimentoValor.Name = "textAbastecimentoValor";
             this.textAbastecimentoValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textAbastecimentoValor.Size = new System.Drawing.Size(70, 22);
-            this.textAbastecimentoValor.TabIndex = 21;
+            this.textAbastecimentoValor.TabIndex = 6;
             this.textAbastecimentoValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             // 
             // combAbastecimentoStatus
@@ -2442,7 +2465,7 @@
             this.combAbastecimentoStatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combAbastecimentoStatus.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combAbastecimentoStatus.Size = new System.Drawing.Size(118, 35);
-            this.combAbastecimentoStatus.TabIndex = 275;
+            this.combAbastecimentoStatus.TabIndex = 7;
             // 
             // label44
             // 
@@ -2495,7 +2518,7 @@
             this.btnAddPosto.Name = "btnAddPosto";
             this.btnAddPosto.Rotation = 0D;
             this.btnAddPosto.Size = new System.Drawing.Size(35, 35);
-            this.btnAddPosto.TabIndex = 273;
+            this.btnAddPosto.TabIndex = 3;
             this.btnAddPosto.UseVisualStyleBackColor = false;
             this.btnAddPosto.Click += new System.EventHandler(this.onCadastrarCliente);
             // 
@@ -2520,7 +2543,7 @@
             this.combAbastecimentoPosto.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combAbastecimentoPosto.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combAbastecimentoPosto.Size = new System.Drawing.Size(220, 35);
-            this.combAbastecimentoPosto.TabIndex = 272;
+            this.combAbastecimentoPosto.TabIndex = 2;
             // 
             // combAbastecimentoCombustivel
             // 
@@ -2543,7 +2566,7 @@
             this.combAbastecimentoCombustivel.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combAbastecimentoCombustivel.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combAbastecimentoCombustivel.Size = new System.Drawing.Size(110, 35);
-            this.combAbastecimentoCombustivel.TabIndex = 250;
+            this.combAbastecimentoCombustivel.TabIndex = 4;
             // 
             // label39
             // 
@@ -2579,7 +2602,7 @@
             this.timeAbastecimentoData.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.timeAbastecimentoData.OnPressedColor = System.Drawing.Color.Black;
             this.timeAbastecimentoData.Size = new System.Drawing.Size(160, 35);
-            this.timeAbastecimentoData.TabIndex = 261;
+            this.timeAbastecimentoData.TabIndex = 1;
             this.timeAbastecimentoData.Text = "22/04/2020 12:57";
             this.timeAbastecimentoData.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
@@ -2624,7 +2647,7 @@
             this.btnAddAbastecimento.Name = "btnAddAbastecimento";
             this.btnAddAbastecimento.Rotation = 0D;
             this.btnAddAbastecimento.Size = new System.Drawing.Size(35, 35);
-            this.btnAddAbastecimento.TabIndex = 269;
+            this.btnAddAbastecimento.TabIndex = 8;
             this.btnAddAbastecimento.UseVisualStyleBackColor = false;
             this.btnAddAbastecimento.Click += new System.EventHandler(this.onAddAbastecimento);
             // 
@@ -2676,28 +2699,6 @@
             this.label38.TabIndex = 262;
             this.label38.Text = "Data";
             // 
-            // colNFE
-            // 
-            this.colNFE.HeaderText = "NF-E";
-            this.colNFE.Name = "colNFE";
-            // 
-            // colDescricao
-            // 
-            this.colDescricao.HeaderText = "DESCRIÇÃO";
-            this.colDescricao.Name = "colDescricao";
-            // 
-            // colPeso
-            // 
-            this.colPeso.HeaderText = "PESO";
-            this.colPeso.Name = "colPeso";
-            this.colPeso.ReadOnly = true;
-            // 
-            // colValor
-            // 
-            this.colValor.HeaderText = "VALOR";
-            this.colValor.Name = "colValor";
-            this.colValor.ReadOnly = true;
-            // 
             // FormViagens
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2706,6 +2707,7 @@
             this.ClientSize = new System.Drawing.Size(1040, 658);
             this.Controls.Add(this.tabViagem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormViagens";
             this.Text = "Cadastrar Viagem";
             this.panel3.ResumeLayout(false);

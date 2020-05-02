@@ -43,6 +43,7 @@
             this.colFrota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MenuItens = new Guna.UI.WinForms.GunaContextMenuStrip();
             this.btnMenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMenuItemLancarConta = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMenuItemExcluir = new System.Windows.Forms.ToolStripMenuItem();
             this.colPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVeiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +51,6 @@
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCadastrar = new FontAwesome.Sharp.IconButton();
-            this.btnMenuItemLancarConta = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridDados)).BeginInit();
             this.MenuItens.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -177,6 +177,15 @@
             resources.ApplyResources(this.btnMenuItemEditar, "btnMenuItemEditar");
             this.btnMenuItemEditar.Click += new System.EventHandler(this.OnSelectEditar);
             // 
+            // btnMenuItemLancarConta
+            // 
+            this.btnMenuItemLancarConta.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemLancarConta.Name = "btnMenuItemLancarConta";
+            this.btnMenuItemLancarConta.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            resources.ApplyResources(this.btnMenuItemLancarConta, "btnMenuItemLancarConta");
+            this.btnMenuItemLancarConta.Tag = "";
+            this.btnMenuItemLancarConta.Click += new System.EventHandler(this.OnClickLancarConta);
+            // 
             // btnMenuItemExcluir
             // 
             this.btnMenuItemExcluir.ForeColor = System.Drawing.Color.White;
@@ -246,15 +255,6 @@
             this.btnCadastrar.Rotation = 0D;
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.OnClickCadastrar);
-            // 
-            // btnMenuItemLancarConta
-            // 
-            this.btnMenuItemLancarConta.ForeColor = System.Drawing.Color.White;
-            this.btnMenuItemLancarConta.Name = "btnMenuItemLancarConta";
-            this.btnMenuItemLancarConta.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
-            resources.ApplyResources(this.btnMenuItemLancarConta, "btnMenuItemLancarConta");
-            this.btnMenuItemLancarConta.Tag = "";
-            this.btnMenuItemLancarConta.Click += new System.EventHandler(this.OnClickLancarConta);
             // 
             // FormVeiculos
             // 

@@ -23,9 +23,10 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFinanceiro));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.btnEnviar = new FontAwesome.Sharp.IconButton();
@@ -139,7 +140,7 @@
             this.textNome.Name = "textNome";
             this.textNome.PasswordChar = '\0';
             this.textNome.Size = new System.Drawing.Size(250, 35);
-            this.textNome.TabIndex = 287;
+            this.textNome.TabIndex = 1;
             // 
             // label1
             // 
@@ -174,7 +175,7 @@
             this.combTipo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combTipo.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combTipo.Size = new System.Drawing.Size(160, 35);
-            this.combTipo.TabIndex = 289;
+            this.combTipo.TabIndex = 2;
             // 
             // label2
             // 
@@ -209,7 +210,7 @@
             this.combCentroCusto.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combCentroCusto.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combCentroCusto.Size = new System.Drawing.Size(170, 35);
-            this.combCentroCusto.TabIndex = 291;
+            this.combCentroCusto.TabIndex = 3;
             // 
             // label3
             // 
@@ -244,7 +245,7 @@
             this.combFormaPagamento.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combFormaPagamento.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combFormaPagamento.Size = new System.Drawing.Size(190, 35);
-            this.combFormaPagamento.TabIndex = 293;
+            this.combFormaPagamento.TabIndex = 4;
             // 
             // label4
             // 
@@ -279,7 +280,7 @@
             this.combStatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combStatus.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combStatus.Size = new System.Drawing.Size(150, 35);
-            this.combStatus.TabIndex = 295;
+            this.combStatus.TabIndex = 5;
             // 
             // label5
             // 
@@ -327,7 +328,7 @@
             this.timeDataEmissao.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.timeDataEmissao.OnPressedColor = System.Drawing.Color.Black;
             this.timeDataEmissao.Size = new System.Drawing.Size(140, 35);
-            this.timeDataEmissao.TabIndex = 297;
+            this.timeDataEmissao.TabIndex = 6;
             this.timeDataEmissao.Text = "22/04/2020";
             this.timeDataEmissao.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
@@ -365,7 +366,7 @@
             this.timeDataVencimento.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.timeDataVencimento.OnPressedColor = System.Drawing.Color.Black;
             this.timeDataVencimento.Size = new System.Drawing.Size(140, 35);
-            this.timeDataVencimento.TabIndex = 299;
+            this.timeDataVencimento.TabIndex = 7;
             this.timeDataVencimento.Text = "22/04/2020";
             this.timeDataVencimento.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
@@ -423,7 +424,7 @@
             this.textDocumento.Name = "textDocumento";
             this.textDocumento.PasswordChar = '\0';
             this.textDocumento.Size = new System.Drawing.Size(200, 35);
-            this.textDocumento.TabIndex = 304;
+            this.textDocumento.TabIndex = 9;
             // 
             // label17
             // 
@@ -458,7 +459,7 @@
             this.combOcorrencia.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combOcorrencia.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combOcorrencia.Size = new System.Drawing.Size(130, 35);
-            this.combOcorrencia.TabIndex = 306;
+            this.combOcorrencia.TabIndex = 10;
             this.combOcorrencia.SelectedValueChanged += new System.EventHandler(this.OnSelectOcorrencia);
             // 
             // label18
@@ -489,7 +490,7 @@
             this.btnGerarParcelas.Name = "btnGerarParcelas";
             this.btnGerarParcelas.Rotation = 0D;
             this.btnGerarParcelas.Size = new System.Drawing.Size(35, 35);
-            this.btnGerarParcelas.TabIndex = 309;
+            this.btnGerarParcelas.TabIndex = 12;
             this.btnGerarParcelas.UseVisualStyleBackColor = false;
             this.btnGerarParcelas.Click += new System.EventHandler(this.OnClickGerarParcela);
             // 
@@ -512,7 +513,7 @@
             this.textQtdParcelas.Name = "textQtdParcelas";
             this.textQtdParcelas.PasswordChar = '\0';
             this.textQtdParcelas.Size = new System.Drawing.Size(95, 35);
-            this.textQtdParcelas.TabIndex = 308;
+            this.textQtdParcelas.TabIndex = 11;
             // 
             // lblQtdParcelas
             // 
@@ -555,8 +556,8 @@
             this.gridParcelas.AllowUserToAddRows = false;
             this.gridParcelas.AllowUserToDeleteRows = false;
             this.gridParcelas.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.gridParcelas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.gridParcelas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridParcelas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.gridParcelas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -564,14 +565,14 @@
             this.gridParcelas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridParcelas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridParcelas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridParcelas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridParcelas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridParcelas.ColumnHeadersHeight = 35;
             this.gridParcelas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridParcelas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -581,15 +582,15 @@
             this.colFormaPagamento,
             this.textGridCustoValor,
             this.textGridCustoTotal});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridParcelas.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridParcelas.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridParcelas.EnableHeadersVisualStyles = false;
             this.gridParcelas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridParcelas.Location = new System.Drawing.Point(20, 322);
@@ -673,7 +674,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(1);
             this.panel2.Size = new System.Drawing.Size(140, 35);
-            this.panel2.TabIndex = 314;
+            this.panel2.TabIndex = 8;
             // 
             // panel11
             // 
@@ -697,7 +698,7 @@
             this.textValor.Name = "textValor";
             this.textValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textValor.Size = new System.Drawing.Size(123, 22);
-            this.textValor.TabIndex = 21;
+            this.textValor.TabIndex = 8;
             this.textValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             // 
             // FormFinanceiro
@@ -736,6 +737,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormFinanceiro";
             this.Text = "Cadastrar Financeiro";
             this.panel3.ResumeLayout(false);

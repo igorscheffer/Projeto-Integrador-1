@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMotoristas));
             this.textNome = new Guna.UI.WinForms.GunaTextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCPF = new System.Windows.Forms.Label();
@@ -877,7 +878,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(1);
             this.panel7.Size = new System.Drawing.Size(250, 35);
-            this.panel7.TabIndex = 194;
+            this.panel7.TabIndex = 2;
             // 
             // panel8
             // 
@@ -888,7 +889,7 @@
             this.panel8.Margin = new System.Windows.Forms.Padding(1);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(248, 33);
-            this.panel8.TabIndex = 0;
+            this.panel8.TabIndex = 1;
             // 
             // textCPF
             // 
@@ -901,7 +902,7 @@
             this.textCPF.Mask = "000.000.000-00";
             this.textCPF.Name = "textCPF";
             this.textCPF.Size = new System.Drawing.Size(243, 22);
-            this.textCPF.TabIndex = 2;
+            this.textCPF.TabIndex = 1;
             // 
             // panel9
             // 
@@ -912,7 +913,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Padding = new System.Windows.Forms.Padding(1);
             this.panel9.Size = new System.Drawing.Size(140, 35);
-            this.panel9.TabIndex = 195;
+            this.panel9.TabIndex = 20;
             // 
             // panel10
             // 
@@ -948,7 +949,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(1);
             this.panel3.Size = new System.Drawing.Size(140, 35);
-            this.panel3.TabIndex = 196;
+            this.panel3.TabIndex = 21;
             // 
             // panel11
             // 
@@ -984,7 +985,7 @@
             this.panel13.Name = "panel13";
             this.panel13.Padding = new System.Windows.Forms.Padding(1);
             this.panel13.Size = new System.Drawing.Size(95, 35);
-            this.panel13.TabIndex = 197;
+            this.panel13.TabIndex = 10;
             // 
             // panel14
             // 
@@ -1065,6 +1066,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMotoristas";
             this.Text = "Cadastrar Motorista";
             this.panel4.ResumeLayout(false);

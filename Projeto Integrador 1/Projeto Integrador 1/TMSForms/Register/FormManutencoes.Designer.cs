@@ -31,9 +31,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManutencoes));
             this.tabPanelItens = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.gridItens = new Guna.UI.WinForms.GunaDataGridView();
+            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
@@ -113,11 +119,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabViagem = new System.Windows.Forms.TabControl();
-            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colQtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPanelItens.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridItens)).BeginInit();
@@ -243,6 +244,34 @@
             this.gridItens.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridItens.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             // 
+            // colCodigo
+            // 
+            this.colCodigo.HeaderText = "COD.";
+            this.colCodigo.Name = "colCodigo";
+            // 
+            // colDescricao
+            // 
+            this.colDescricao.HeaderText = "DESCRIÇÃO";
+            this.colDescricao.Name = "colDescricao";
+            // 
+            // colQtd
+            // 
+            this.colQtd.HeaderText = "QTD.";
+            this.colQtd.Name = "colQtd";
+            this.colQtd.ReadOnly = true;
+            // 
+            // colValor
+            // 
+            this.colValor.HeaderText = "VALOR";
+            this.colValor.Name = "colValor";
+            this.colValor.ReadOnly = true;
+            // 
+            // colTotal
+            // 
+            this.colTotal.HeaderText = "TOTAL";
+            this.colTotal.Name = "colTotal";
+            this.colTotal.ReadOnly = true;
+            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.panel32);
@@ -273,7 +302,7 @@
             this.panel32.Name = "panel32";
             this.panel32.Padding = new System.Windows.Forms.Padding(1);
             this.panel32.Size = new System.Drawing.Size(116, 35);
-            this.panel32.TabIndex = 319;
+            this.panel32.TabIndex = 3;
             // 
             // panel33
             // 
@@ -297,7 +326,7 @@
             this.textItemQtd.Name = "textItemQtd";
             this.textItemQtd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textItemQtd.Size = new System.Drawing.Size(99, 22);
-            this.textItemQtd.TabIndex = 21;
+            this.textItemQtd.TabIndex = 3;
             this.textItemQtd.TextChanged += new System.EventHandler(this.OnChangedTextQtd);
             // 
             // panel18
@@ -309,7 +338,7 @@
             this.panel18.Name = "panel18";
             this.panel18.Padding = new System.Windows.Forms.Padding(1);
             this.panel18.Size = new System.Drawing.Size(86, 35);
-            this.panel18.TabIndex = 317;
+            this.panel18.TabIndex = 4;
             // 
             // panel19
             // 
@@ -333,7 +362,7 @@
             this.textItemValor.Name = "textItemValor";
             this.textItemValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textItemValor.Size = new System.Drawing.Size(69, 22);
-            this.textItemValor.TabIndex = 21;
+            this.textItemValor.TabIndex = 4;
             this.textItemValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             // 
             // panel10
@@ -387,7 +416,7 @@
             this.btnAddCarga.Name = "btnAddCarga";
             this.btnAddCarga.Rotation = 0D;
             this.btnAddCarga.Size = new System.Drawing.Size(35, 35);
-            this.btnAddCarga.TabIndex = 257;
+            this.btnAddCarga.TabIndex = 5;
             this.btnAddCarga.UseVisualStyleBackColor = false;
             this.btnAddCarga.Click += new System.EventHandler(this.OnAddItem);
             // 
@@ -446,7 +475,7 @@
             this.textItemCodigo.Name = "textItemCodigo";
             this.textItemCodigo.PasswordChar = '\0';
             this.textItemCodigo.Size = new System.Drawing.Size(148, 35);
-            this.textItemCodigo.TabIndex = 249;
+            this.textItemCodigo.TabIndex = 1;
             // 
             // label26
             // 
@@ -491,7 +520,7 @@
             this.textItemDescricao.Name = "textItemDescricao";
             this.textItemDescricao.PasswordChar = '\0';
             this.textItemDescricao.Size = new System.Drawing.Size(500, 35);
-            this.textItemDescricao.TabIndex = 251;
+            this.textItemDescricao.TabIndex = 2;
             // 
             // tabPanelManutencao
             // 
@@ -556,7 +585,7 @@
             this.panel16.Name = "panel16";
             this.panel16.Padding = new System.Windows.Forms.Padding(1);
             this.panel16.Size = new System.Drawing.Size(87, 35);
-            this.panel16.TabIndex = 317;
+            this.panel16.TabIndex = 18;
             // 
             // panel17
             // 
@@ -581,7 +610,7 @@
             this.textValor.Name = "textValor";
             this.textValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textValor.Size = new System.Drawing.Size(70, 22);
-            this.textValor.TabIndex = 21;
+            this.textValor.TabIndex = 18;
             this.textValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             // 
             // panel14
@@ -593,7 +622,7 @@
             this.panel14.Name = "panel14";
             this.panel14.Padding = new System.Windows.Forms.Padding(1);
             this.panel14.Size = new System.Drawing.Size(70, 35);
-            this.panel14.TabIndex = 317;
+            this.panel14.TabIndex = 17;
             // 
             // panel15
             // 
@@ -617,7 +646,7 @@
             this.textAcrecimo.Name = "textAcrecimo";
             this.textAcrecimo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textAcrecimo.Size = new System.Drawing.Size(53, 22);
-            this.textAcrecimo.TabIndex = 21;
+            this.textAcrecimo.TabIndex = 17;
             this.textAcrecimo.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             this.textAcrecimo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnAtualizarTotal);
             // 
@@ -630,7 +659,7 @@
             this.panel12.Name = "panel12";
             this.panel12.Padding = new System.Windows.Forms.Padding(1);
             this.panel12.Size = new System.Drawing.Size(70, 35);
-            this.panel12.TabIndex = 317;
+            this.panel12.TabIndex = 16;
             // 
             // panel13
             // 
@@ -654,7 +683,7 @@
             this.textDesconto.Name = "textDesconto";
             this.textDesconto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textDesconto.Size = new System.Drawing.Size(53, 22);
-            this.textDesconto.TabIndex = 21;
+            this.textDesconto.TabIndex = 16;
             this.textDesconto.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             this.textDesconto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnAtualizarTotal);
             // 
@@ -667,7 +696,7 @@
             this.panel24.Name = "panel24";
             this.panel24.Padding = new System.Windows.Forms.Padding(1);
             this.panel24.Size = new System.Drawing.Size(73, 35);
-            this.panel24.TabIndex = 317;
+            this.panel24.TabIndex = 15;
             // 
             // panel25
             // 
@@ -691,7 +720,7 @@
             this.textMaoObra.Name = "textMaoObra";
             this.textMaoObra.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textMaoObra.Size = new System.Drawing.Size(56, 22);
-            this.textMaoObra.TabIndex = 21;
+            this.textMaoObra.TabIndex = 15;
             this.textMaoObra.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             this.textMaoObra.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnAtualizarTotal);
             // 
@@ -920,7 +949,7 @@
             this.combFornecedor.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combFornecedor.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combFornecedor.Size = new System.Drawing.Size(290, 35);
-            this.combFornecedor.TabIndex = 257;
+            this.combFornecedor.TabIndex = 13;
             this.combFornecedor.Tag = "Tag";
             // 
             // iconButton3
@@ -939,7 +968,7 @@
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Rotation = 0D;
             this.iconButton3.Size = new System.Drawing.Size(35, 35);
-            this.iconButton3.TabIndex = 259;
+            this.iconButton3.TabIndex = 14;
             this.iconButton3.UseVisualStyleBackColor = false;
             this.iconButton3.Click += new System.EventHandler(this.onCadastrarCliente);
             // 
@@ -962,7 +991,7 @@
             this.textOrdemServico.Name = "textOrdemServico";
             this.textOrdemServico.PasswordChar = '\0';
             this.textOrdemServico.Size = new System.Drawing.Size(135, 35);
-            this.textOrdemServico.TabIndex = 255;
+            this.textOrdemServico.TabIndex = 12;
             // 
             // label13
             // 
@@ -1032,7 +1061,7 @@
             this.textHodometroRealizado.Name = "textHodometroRealizado";
             this.textHodometroRealizado.PasswordChar = '\0';
             this.textHodometroRealizado.Size = new System.Drawing.Size(115, 35);
-            this.textHodometroRealizado.TabIndex = 251;
+            this.textHodometroRealizado.TabIndex = 11;
             // 
             // label12
             // 
@@ -1065,7 +1094,7 @@
             this.textHodometroAgendado.Name = "textHodometroAgendado";
             this.textHodometroAgendado.PasswordChar = '\0';
             this.textHodometroAgendado.Size = new System.Drawing.Size(115, 35);
-            this.textHodometroAgendado.TabIndex = 249;
+            this.textHodometroAgendado.TabIndex = 9;
             // 
             // label1
             // 
@@ -1113,7 +1142,7 @@
             this.timeDataRealizada.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.timeDataRealizada.OnPressedColor = System.Drawing.Color.Black;
             this.timeDataRealizada.Size = new System.Drawing.Size(160, 35);
-            this.timeDataRealizada.TabIndex = 245;
+            this.timeDataRealizada.TabIndex = 10;
             this.timeDataRealizada.Text = "22/04/2020 12:57";
             this.timeDataRealizada.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
@@ -1151,7 +1180,7 @@
             this.timeDataAgendada.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.timeDataAgendada.OnPressedColor = System.Drawing.Color.Black;
             this.timeDataAgendada.Size = new System.Drawing.Size(160, 35);
-            this.timeDataAgendada.TabIndex = 243;
+            this.timeDataAgendada.TabIndex = 8;
             this.timeDataAgendada.Text = "22/04/2020 12:57";
             this.timeDataAgendada.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
@@ -1188,7 +1217,7 @@
             this.combMotorista.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combMotorista.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combMotorista.Size = new System.Drawing.Size(295, 35);
-            this.combMotorista.TabIndex = 240;
+            this.combMotorista.TabIndex = 6;
             this.combMotorista.Tag = "Tag";
             // 
             // iconButton2
@@ -1207,7 +1236,7 @@
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Rotation = 0D;
             this.iconButton2.Size = new System.Drawing.Size(35, 35);
-            this.iconButton2.TabIndex = 242;
+            this.iconButton2.TabIndex = 7;
             this.iconButton2.UseVisualStyleBackColor = false;
             this.iconButton2.Click += new System.EventHandler(this.onCadastrarMotorista);
             // 
@@ -1232,7 +1261,7 @@
             this.combStatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combStatus.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combStatus.Size = new System.Drawing.Size(157, 35);
-            this.combStatus.TabIndex = 238;
+            this.combStatus.TabIndex = 5;
             // 
             // label7
             // 
@@ -1279,7 +1308,7 @@
             this.combVeiculo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combVeiculo.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combVeiculo.Size = new System.Drawing.Size(345, 35);
-            this.combVeiculo.TabIndex = 235;
+            this.combVeiculo.TabIndex = 3;
             this.combVeiculo.Tag = "Tag";
             // 
             // iconButton1
@@ -1298,7 +1327,7 @@
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Rotation = 0D;
             this.iconButton1.Size = new System.Drawing.Size(35, 35);
-            this.iconButton1.TabIndex = 237;
+            this.iconButton1.TabIndex = 4;
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.onCadastrarVeiculo);
             // 
@@ -1323,7 +1352,7 @@
             this.combTipoPreventiva.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combTipoPreventiva.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combTipoPreventiva.Size = new System.Drawing.Size(202, 35);
-            this.combTipoPreventiva.TabIndex = 233;
+            this.combTipoPreventiva.TabIndex = 2;
             // 
             // label4
             // 
@@ -1358,7 +1387,7 @@
             this.combTipoManutencao.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combTipoManutencao.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combTipoManutencao.Size = new System.Drawing.Size(202, 35);
-            this.combTipoManutencao.TabIndex = 231;
+            this.combTipoManutencao.TabIndex = 1;
             this.combTipoManutencao.SelectedValueChanged += new System.EventHandler(this.onSelectTipoManutencao);
             // 
             // label2
@@ -1438,40 +1467,13 @@
             this.tabViagem.Size = new System.Drawing.Size(1040, 637);
             this.tabViagem.TabIndex = 271;
             // 
-            // colCodigo
-            // 
-            this.colCodigo.HeaderText = "COD.";
-            this.colCodigo.Name = "colCodigo";
-            // 
-            // colDescricao
-            // 
-            this.colDescricao.HeaderText = "DESCRIÇÃO";
-            this.colDescricao.Name = "colDescricao";
-            // 
-            // colQtd
-            // 
-            this.colQtd.HeaderText = "QTD.";
-            this.colQtd.Name = "colQtd";
-            this.colQtd.ReadOnly = true;
-            // 
-            // colValor
-            // 
-            this.colValor.HeaderText = "VALOR";
-            this.colValor.Name = "colValor";
-            this.colValor.ReadOnly = true;
-            // 
-            // colTotal
-            // 
-            this.colTotal.HeaderText = "TOTAL";
-            this.colTotal.Name = "colTotal";
-            this.colTotal.ReadOnly = true;
-            // 
             // FormManutencoes
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1040, 637);
             this.Controls.Add(this.tabViagem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormManutencoes";
             this.Text = "Cadastrar Manutenção";
             this.tabPanelItens.ResumeLayout(false);

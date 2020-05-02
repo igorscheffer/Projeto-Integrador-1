@@ -42,13 +42,13 @@
             this.btnMenuItemEditar = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMenuItemExcluir = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItens = new Guna.UI.WinForms.GunaContextMenuStrip();
+            this.btnMenuItemLancarConta = new System.Windows.Forms.ToolStripMenuItem();
             this.gridDados = new Guna.UI.WinForms.GunaDataGridView();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTipoCadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTipoPessoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRazaoSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnMenuItemLancarConta = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.MenuItens.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDados)).BeginInit();
@@ -111,6 +111,15 @@
             this.MenuItens.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.MenuItens.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
             this.MenuItens.ShowCheckMargin = true;
+            // 
+            // btnMenuItemLancarConta
+            // 
+            this.btnMenuItemLancarConta.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemLancarConta.Name = "btnMenuItemLancarConta";
+            this.btnMenuItemLancarConta.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            resources.ApplyResources(this.btnMenuItemLancarConta, "btnMenuItemLancarConta");
+            this.btnMenuItemLancarConta.Tag = "";
+            this.btnMenuItemLancarConta.Click += new System.EventHandler(this.OnClickLancarConta);
             // 
             // gridDados
             // 
@@ -233,15 +242,6 @@
             resources.ApplyResources(this.colRazaoSocial, "colRazaoSocial");
             this.colRazaoSocial.Name = "colRazaoSocial";
             this.colRazaoSocial.ReadOnly = true;
-            // 
-            // btnMenuItemLancarConta
-            // 
-            this.btnMenuItemLancarConta.ForeColor = System.Drawing.Color.White;
-            this.btnMenuItemLancarConta.Name = "btnMenuItemLancarConta";
-            this.btnMenuItemLancarConta.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
-            resources.ApplyResources(this.btnMenuItemLancarConta, "btnMenuItemLancarConta");
-            this.btnMenuItemLancarConta.Tag = "";
-            this.btnMenuItemLancarConta.Click += new System.EventHandler(this.OnClickLancarConta);
             // 
             // FormClientes
             // 

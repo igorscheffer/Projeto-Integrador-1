@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMultas));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -118,7 +119,7 @@
             this.combVeiculo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combVeiculo.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combVeiculo.Size = new System.Drawing.Size(300, 35);
-            this.combVeiculo.TabIndex = 238;
+            this.combVeiculo.TabIndex = 1;
             this.combVeiculo.Tag = "Tag";
             // 
             // label1
@@ -154,7 +155,7 @@
             this.combMotorista.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combMotorista.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combMotorista.Size = new System.Drawing.Size(300, 35);
-            this.combMotorista.TabIndex = 241;
+            this.combMotorista.TabIndex = 3;
             this.combMotorista.Tag = "Tag";
             // 
             // combStatus
@@ -178,7 +179,7 @@
             this.combStatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combStatus.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combStatus.Size = new System.Drawing.Size(140, 35);
-            this.combStatus.TabIndex = 244;
+            this.combStatus.TabIndex = 6;
             // 
             // label2
             // 
@@ -213,7 +214,7 @@
             this.combGravidade.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.combGravidade.OnHoverItemForeColor = System.Drawing.Color.White;
             this.combGravidade.Size = new System.Drawing.Size(130, 35);
-            this.combGravidade.TabIndex = 246;
+            this.combGravidade.TabIndex = 5;
             // 
             // label3
             // 
@@ -261,7 +262,7 @@
             this.timeDataOcorrencia.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.timeDataOcorrencia.OnPressedColor = System.Drawing.Color.Black;
             this.timeDataOcorrencia.Size = new System.Drawing.Size(140, 35);
-            this.timeDataOcorrencia.TabIndex = 248;
+            this.timeDataOcorrencia.TabIndex = 7;
             this.timeDataOcorrencia.Text = "22/04/2020";
             this.timeDataOcorrencia.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
@@ -299,7 +300,7 @@
             this.timeDataNotificacao.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.timeDataNotificacao.OnPressedColor = System.Drawing.Color.Black;
             this.timeDataNotificacao.Size = new System.Drawing.Size(140, 35);
-            this.timeDataNotificacao.TabIndex = 250;
+            this.timeDataNotificacao.TabIndex = 8;
             this.timeDataNotificacao.Text = "22/04/2020";
             this.timeDataNotificacao.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
@@ -337,7 +338,7 @@
             this.timeDataVencimento.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.timeDataVencimento.OnPressedColor = System.Drawing.Color.Black;
             this.timeDataVencimento.Size = new System.Drawing.Size(140, 35);
-            this.timeDataVencimento.TabIndex = 252;
+            this.timeDataVencimento.TabIndex = 9;
             this.timeDataVencimento.Text = "22/04/2020";
             this.timeDataVencimento.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
@@ -398,7 +399,7 @@
             this.textDescricao.MaxLength = 1000;
             this.textDescricao.Name = "textDescricao";
             this.textDescricao.Size = new System.Drawing.Size(488, 128);
-            this.textDescricao.TabIndex = 22;
+            this.textDescricao.TabIndex = 11;
             this.textDescricao.Text = "";
             // 
             // panel3
@@ -441,7 +442,7 @@
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Rotation = 0D;
             this.iconButton2.Size = new System.Drawing.Size(35, 35);
-            this.iconButton2.TabIndex = 243;
+            this.iconButton2.TabIndex = 4;
             this.iconButton2.UseVisualStyleBackColor = false;
             // 
             // iconButton1
@@ -460,7 +461,7 @@
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Rotation = 0D;
             this.iconButton1.Size = new System.Drawing.Size(35, 35);
-            this.iconButton1.TabIndex = 240;
+            this.iconButton1.TabIndex = 2;
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // btnEnviar
@@ -498,7 +499,7 @@
             this.textLocal.MaxLength = 1000;
             this.textLocal.Name = "textLocal";
             this.textLocal.Size = new System.Drawing.Size(488, 128);
-            this.textLocal.TabIndex = 22;
+            this.textLocal.TabIndex = 11;
             this.textLocal.Text = "";
             // 
             // panel2
@@ -522,7 +523,7 @@
             this.panel18.Name = "panel18";
             this.panel18.Padding = new System.Windows.Forms.Padding(1);
             this.panel18.Size = new System.Drawing.Size(110, 35);
-            this.panel18.TabIndex = 318;
+            this.panel18.TabIndex = 10;
             // 
             // panel19
             // 
@@ -546,7 +547,7 @@
             this.textValor.Name = "textValor";
             this.textValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textValor.Size = new System.Drawing.Size(93, 22);
-            this.textValor.TabIndex = 21;
+            this.textValor.TabIndex = 10;
             this.textValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             // 
             // FormMultas
@@ -581,6 +582,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMultas";
             this.Text = "Cadastrar Multas";
             this.panel7.ResumeLayout(false);

@@ -65,28 +65,34 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             Clientes clientes = new Clientes();
             clientes.GetAll();
 
-            combPosto.DataSource = new List<dynamic>(clientes.Results);
-            combPosto.DisplayMember = "RazaoSocial";
-            combPosto.ValueMember = "Id";
-            combPosto.SelectedValue = -1;
+            if (clientes.Results.Count > 0) {
+                combPosto.DisplayMember = "RazaoSocial";
+                combPosto.ValueMember = "Id";
+                combPosto.DataSource = new List<dynamic>(clientes.Results);
+                combPosto.SelectedValue = -1;
+            }
         }
         private void LoadVeiculos() {
             Veiculos veiculos = new Veiculos();
             veiculos.GetAll();
 
-            combVeiculo.DataSource = new List<dynamic>(veiculos.Results);
-            combVeiculo.DisplayMember = "Veiculo";
-            combVeiculo.ValueMember = "Id";
-            combVeiculo.SelectedValue = -1;
+            if (veiculos.Results.Count > 0) {
+                combVeiculo.DisplayMember = "Veiculo";
+                combVeiculo.ValueMember = "Id";
+                combVeiculo.DataSource = new List<dynamic>(veiculos.Results);
+                combVeiculo.SelectedValue = -1;
+            }
         }
         private void LoadMotoristas() {
             Motoristas motoristas = new Motoristas();
             motoristas.GetAll();
 
-            combMotorista.DataSource = new List<dynamic>(motoristas.Results);
-            combMotorista.DisplayMember = "Nome";
-            combMotorista.ValueMember = "Id";
-            combMotorista.SelectedValue = -1;
+            if (motoristas.Results.Count > 0) {
+                combMotorista.DisplayMember = "Nome";
+                combMotorista.ValueMember = "Id";
+                combMotorista.DataSource = new List<dynamic>(motoristas.Results);
+                combMotorista.SelectedValue = -1;
+            }
         }
         private void onCadastrarCliente(object sender, EventArgs e) {
             Form formClientes = new TMSForms.Register.FormClientes();
@@ -214,6 +220,11 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         private void OnChangedTextValor(object sender, EventArgs e) {
             MaskedTextBox Text = (MaskedTextBox)sender;
             Converter.OnPressMoeda(ref Text);
+        }
+
+        private void OnChangedTextQtd(object sender, EventArgs e) {
+            MaskedTextBox Text = (MaskedTextBox)sender;
+            Converter.OnPressQtd(ref Text);
         }
     }
 }
