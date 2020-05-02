@@ -238,7 +238,8 @@ namespace Projeto_Integrador_1.Util {
             new { Value = 3, Text = "Viagem" },
             new { Value = 4, Text = "Manutenção" },
             new { Value = 5, Text = "Abastecimento" },
-            new { Value = 6, Text = "Multa" }
+            new { Value = 6, Text = "Multa" },
+            new { Value = 7, Text = "Cliente" }
         };
 
         public static List<dynamic> FinanceiroFormasPagamentos = new List<dynamic> {

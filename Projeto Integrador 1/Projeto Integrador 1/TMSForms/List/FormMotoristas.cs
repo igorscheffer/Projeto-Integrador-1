@@ -1,10 +1,14 @@
 ﻿using Projeto_Integrador_1.Connection;
+using Projeto_Integrador_1.Util;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Projeto_Integrador_1.TMSForms.List {
     public partial class FormMotoristas : Form {
         FormPrincipal fmPrincipal;
+
+        List<dynamic> ListaDados;
 
         private DataGridViewCellEventArgs mouseLocation;
 
@@ -19,10 +23,12 @@ namespace Projeto_Integrador_1.TMSForms.List {
                 Motoristas motoristas = new Motoristas();
                 motoristas.GetAll();
 
-                gridMotoristas.Rows.Clear();
+                ListaDados = motoristas.Results;
 
-                foreach (dynamic motorista in motoristas.Results) {
-                    gridMotoristas.Rows.Add(
+                gridDados.Rows.Clear();
+
+                foreach (dynamic motorista in ListaDados) {
+                    gridDados.Rows.Add(
                         motorista.Id,
                         motorista.Nome,
                         motorista.RG,
@@ -44,7 +50,7 @@ namespace Projeto_Integrador_1.TMSForms.List {
 
         private void OnSelectEditar(object sender, EventArgs e) {
             if (mouseLocation.RowIndex >= 0) {
-                int Id = Convert.ToInt32(gridMotoristas.Rows[mouseLocation.RowIndex].Cells[0].Value);
+                int Id = Convert.ToInt32(gridDados.Rows[mouseLocation.RowIndex].Cells[0].Value);
                 fmPrincipal.AtivarForm(new TMSForms.Register.FormMotoristas(fmPrincipal, Convert.ToInt32(Id)));
             }
         }
@@ -56,7 +62,7 @@ namespace Projeto_Integrador_1.TMSForms.List {
         private void OnSelectExcluir(object sender, EventArgs e) {
             try {
                 if (mouseLocation.RowIndex >= 0) {
-                    int Id = Convert.ToInt32(gridMotoristas.Rows[mouseLocation.RowIndex].Cells[0].Value);
+                    int Id = Convert.ToInt32(gridDados.Rows[mouseLocation.RowIndex].Cells[0].Value);
 
                     DialogResult Excluir = MessageBox.Show("Tem certeza que excluir este Motorista?", "Excluir Motorista", MessageBoxButtons.YesNo);
 
@@ -74,6 +80,22 @@ namespace Projeto_Integrador_1.TMSForms.List {
                         }
                     }
                 }
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void OnClickLancarConta(object sender, EventArgs e) {
+            try {
+                int Id = Convert.ToInt32(gridDados.Rows[mouseLocation.RowIndex].Cells[0].Value);
+                dynamic Data = ListaDados.Find(find => Convert.ToInt32(find.Id) == Id);
+
+                ToolStripMenuItem Button = (ToolStripMenuItem)sender;
+
+                List.FormFinanceiro ModalFinanceiro = new FormFinanceiro(null);
+
+                ModalFinanceiro.ModalLancarConta(Id, 1, 0, 0);
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);

@@ -89,27 +89,51 @@ namespace Projeto_Integrador_1.Util {
             }
         }
 
-        public static decimal ToDecimal(string ToDecimal) {
+        public static dynamic ToDecimal(string ToDecimal, bool ConvertToString = false) {
             string Decimal;
 
             if (!string.IsNullOrWhiteSpace(ToDecimal)) {
-                Decimal = String.Format("{0:#}", ToDecimal);
+                //Decimal = String.Format("{0:#}", ToDecimal);
+                Decimal = Convert.ToString(decimal.Parse(ToDecimal, NumberStyles.AllowCurrencySymbol | NumberStyles.Number));
             }
             else {
                 throw new Exception("Não foi possivel converter o valor.");
             }
 
-            return Convert.ToDecimal(Decimal);
+            if (ConvertToString == false) {
+                return Convert.ToDecimal(Decimal);
+            }
+            else {
+                return Decimal;
+            }
         }
 
         public static string ToReais(dynamic ToString) {
-            // pegar dinamico e gerencias a extensao
             try {
                 string Reais = "";
 
                 if (!string.IsNullOrWhiteSpace(Convert.ToString(ToString))) {
                     ToString = Convert.ToDecimal(ToString);
                     Reais = String.Format("{0:N}", ToString);
+                }
+                else {
+                    throw new Exception("Não foi Possivel converter Decimal para String.");
+                }
+
+                return Reais;
+            }
+            catch (Exception e) {
+                throw;
+            }
+        }
+
+        public static string ToQuantidade(dynamic ToString) {
+            try {
+                string Reais = "";
+
+                if (!string.IsNullOrWhiteSpace(Convert.ToString(ToString))) {
+                    ToString = Convert.ToDecimal(ToString);
+                    Reais = String.Format("{0:F}", ToString);
                 }
                 else {
                     throw new Exception("Não foi Possivel converter Decimal para String.");

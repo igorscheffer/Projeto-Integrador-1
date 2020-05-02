@@ -36,7 +36,7 @@ namespace Projeto_Integrador_1.Connection {
             string sql = "INSERT INTO `veiculos` (`frota`, `placa`, `categoria`, `marca`, `carroceria`, `modelo`, `cor`, `combustivel`, `motorizacao`, `renavam`, `chassi`, `ano_fabricacao`, `ano_modelo`, `status`, `tara`, `lotacao`, `peso_bruto_total`, `capacidade`) VALUES (@frota, @placa, @categoria, @marca, @carroceria, @modelo, @cor, @combustivel, @motorizacao, @renavam, @chassi, @ano_fabricacao, @ano_modelo, @status, @tara, @lotacao, @peso_bruto_total, @capacidade);";
 
             try {
-                Open();
+                OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
 
@@ -61,7 +61,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                Close();
+                CloseConnection();
 
                 Success = true;
                 Message = "Veiculo salvo com sucesso.";
@@ -76,7 +76,7 @@ namespace Projeto_Integrador_1.Connection {
             string sql = "UPDATE `veiculos` SET `frota` = @frota, `placa` = @placa, `categoria` = @categoria, `marca` = @marca, `carroceria` = @carroceria, `modelo` = @modelo, `cor` = @cor, `combustivel` = @combustivel, `motorizacao` = @motorizacao, `renavam` = @renavam, `chassi` = @chassi, `ano_fabricacao` = @ano_fabricacao, `ano_modelo` = @ano_modelo, `status` = @status, `tara` = @tara, `lotacao` = @lotacao, `peso_bruto_total` = @peso_bruto_total, `capacidade` = @capacidade WHERE `id` = @id LIMIT 1;";
 
             try {
-                Open();
+                OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
 
@@ -102,7 +102,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                Close();
+                CloseConnection();
 
                 Success = true;
                 Message = "Veiculo salvo com sucesso.";
@@ -117,7 +117,7 @@ namespace Projeto_Integrador_1.Connection {
             string sql = "SELECT * FROM `veiculos` WHERE `id` = @id LIMIT 1;";
 
             try {
-                Open();
+                OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@id", Id);
@@ -151,7 +151,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 data.Close();
 
-                Close();
+                CloseConnection();
 
                 Success = true;
             }
@@ -167,7 +167,7 @@ namespace Projeto_Integrador_1.Connection {
             List<dynamic> ListaMarca = Listas.VeiculosMarcas;
 
             try {
-                Open();
+                OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 MySqlDataReader data = query.ExecuteReader();
@@ -189,7 +189,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 data.Close();
 
-                Close();
+                CloseConnection();
 
                 Success = true;
             }
@@ -202,14 +202,14 @@ namespace Projeto_Integrador_1.Connection {
         public void Delete() {
             string sql = "DELETE FROM `veiculos` WHERE `id` = @id LIMIT 1;";
             try {
-                Open();
+                OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@id", Id);
 
                 query.ExecuteNonQuery();
 
-                Close();
+                CloseConnection();
 
                 Success = true;
                 Message = "Veiculo excluido com sucesso.";

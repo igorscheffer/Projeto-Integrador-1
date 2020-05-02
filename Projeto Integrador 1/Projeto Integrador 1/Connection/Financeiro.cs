@@ -34,7 +34,7 @@ namespace Projeto_Integrador_1.Connection {
             string sql = "INSERT INTO `financeiro` (`nome`, `tipo`, `referencia`, `centro_custo`, `forma_pagamento`, `status`, `data_emissao`, `data_vencimento`, `valor`, `documento`, `ocorrencia`, `qtd_parcelas`, `parcelas`, `observacoes`) VALUES (@nome, @tipo, @referencia, @centro_custo, @forma_pagamento, @status, @data_emissao, @data_vencimento, @valor, @documento, @ocorrencia, @qtd_parcelas, @parcelas, @observacoes);";
             
             try {
-                Open();
+                OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@nome", this.Nome);
@@ -54,7 +54,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                Close();
+                CloseConnection();
 
                 this.Success = true;
                 this.Message = "Financeiro salvo com sucesso.";
@@ -69,7 +69,7 @@ namespace Projeto_Integrador_1.Connection {
             string sql = "UPDATE `financeiro` SET `nome` = @nome, `tipo` = @tipo, `referencia` = @referencia, `centro_custo` = @centro_custo, `forma_pagamento` = @forma_pagamento, `status` = @status, `data_emissao` = @data_emissao, `data_vencimento` = @data_vencimento, `valor` = @valor, `documento` = @documento, `ocorrencia` = @ocorrencia, `qtd_parcelas` = @qtd_parcelas, `parcelas` = @parcelas, `observacoes` = @observacoes WHERE `id` = @id LIMIT 1;";
 
             try {
-                Open();
+                OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@nome", this.Nome);
@@ -90,7 +90,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                Close();
+                CloseConnection();
 
                 this.Success = true;
                 this.Message = "Financeiro salvo com sucesso.";
@@ -104,7 +104,7 @@ namespace Projeto_Integrador_1.Connection {
         public void Get() {
             string sql = "SELECT * FROM `financeiro` WHERE `id` = @id LIMIT 1;";
             try {
-                Open();
+                OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@id", this.Id);
@@ -141,7 +141,7 @@ namespace Projeto_Integrador_1.Connection {
         public void GetAll() {
             string sql = "SELECT * FROM `financeiro`;";
             try {
-                Open();
+                OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 
@@ -178,14 +178,14 @@ namespace Projeto_Integrador_1.Connection {
         public void Delete() {
             string sql = "DELETE FROM `financeiro` WHERE `id` = @id LIMIT 1;";
             try {
-                Open();
+                OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@id", Id);
 
                 query.ExecuteNonQuery();
 
-                Close();
+                CloseConnection();
 
                 Success = true;
                 Message = "Financeiro excluido com sucesso.";

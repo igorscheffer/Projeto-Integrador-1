@@ -47,7 +47,6 @@
             this.lblPesoBrutoTotal = new System.Windows.Forms.Label();
             this.lblCapacidade = new System.Windows.Forms.Label();
             this.textFrota = new Guna.UI.WinForms.GunaTextBox();
-            this.textPlaca = new Guna.UI.WinForms.GunaTextBox();
             this.textModelo = new Guna.UI.WinForms.GunaTextBox();
             this.textTara = new Guna.UI.WinForms.GunaTextBox();
             this.textLotacao = new Guna.UI.WinForms.GunaTextBox();
@@ -77,6 +76,9 @@
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.textPlaca = new System.Windows.Forms.MaskedTextBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.panel6.SuspendLayout();
@@ -85,6 +87,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFrota
@@ -323,27 +327,6 @@
             this.textFrota.PasswordChar = '\0';
             this.textFrota.Size = new System.Drawing.Size(140, 35);
             this.textFrota.TabIndex = 1;
-            // 
-            // textPlaca
-            // 
-            this.textPlaca.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textPlaca.BackColor = System.Drawing.Color.White;
-            this.textPlaca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textPlaca.BaseColor = System.Drawing.Color.White;
-            this.textPlaca.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textPlaca.BorderSize = 1;
-            this.textPlaca.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textPlaca.FocusedBaseColor = System.Drawing.Color.White;
-            this.textPlaca.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textPlaca.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textPlaca.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textPlaca.Location = new System.Drawing.Point(180, 76);
-            this.textPlaca.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textPlaca.MaxLength = 8;
-            this.textPlaca.Name = "textPlaca";
-            this.textPlaca.PasswordChar = '\0';
-            this.textPlaca.Size = new System.Drawing.Size(140, 35);
-            this.textPlaca.TabIndex = 2;
             // 
             // textModelo
             // 
@@ -875,6 +858,41 @@
             this.iconPictureBox2.TabIndex = 90;
             this.iconPictureBox2.TabStop = false;
             // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.panel13.Controls.Add(this.panel14);
+            this.panel13.Location = new System.Drawing.Point(180, 76);
+            this.panel13.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.panel13.Name = "panel13";
+            this.panel13.Padding = new System.Windows.Forms.Padding(1);
+            this.panel13.Size = new System.Drawing.Size(140, 35);
+            this.panel13.TabIndex = 196;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Controls.Add(this.textPlaca);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(1, 1);
+            this.panel14.Margin = new System.Windows.Forms.Padding(1);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(138, 33);
+            this.panel14.TabIndex = 0;
+            // 
+            // textPlaca
+            // 
+            this.textPlaca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textPlaca.BackColor = System.Drawing.Color.White;
+            this.textPlaca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textPlaca.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textPlaca.Location = new System.Drawing.Point(3, 7);
+            this.textPlaca.Mask = "LLL-0A00";
+            this.textPlaca.Name = "textPlaca";
+            this.textPlaca.Size = new System.Drawing.Size(133, 22);
+            this.textPlaca.TabIndex = 10;
+            // 
             // FormVeiculos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -882,6 +900,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 505);
             this.ControlBox = false;
+            this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel6);
@@ -907,7 +926,6 @@
             this.Controls.Add(this.textLotacao);
             this.Controls.Add(this.textTara);
             this.Controls.Add(this.textModelo);
-            this.Controls.Add(this.textPlaca);
             this.Controls.Add(this.textFrota);
             this.Controls.Add(this.lblCapacidade);
             this.Controls.Add(this.lblPesoBrutoTotal);
@@ -942,6 +960,9 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            this.panel13.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -967,7 +988,6 @@
         private System.Windows.Forms.Label lblPesoBrutoTotal;
         private System.Windows.Forms.Label lblCapacidade;
         private Guna.UI.WinForms.GunaTextBox textFrota;
-        private Guna.UI.WinForms.GunaTextBox textPlaca;
         private Guna.UI.WinForms.GunaTextBox textModelo;
         private Guna.UI.WinForms.GunaTextBox textTara;
         private Guna.UI.WinForms.GunaTextBox textLotacao;
@@ -997,5 +1017,8 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.MaskedTextBox textPlaca;
     }
 }

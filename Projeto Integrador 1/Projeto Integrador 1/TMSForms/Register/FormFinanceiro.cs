@@ -52,12 +52,21 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             }
 
             if (LancarFinanceiro != null) {
-                combTipo.SelectedValue = LancarFinanceiro.Tipo;
-                combTipo.Enabled = false;
+                if (LancarFinanceiro.Tipo == 1 || LancarFinanceiro.Tipo == 2) {
+                    combTipo.SelectedValue = LancarFinanceiro.Tipo;
+                    combTipo.Enabled = false;
+                }
+
+                if (LancarFinanceiro.Valor > 0) {
+                    textValor.Text = Converter.ToReais(Convert.ToDecimal(LancarFinanceiro.Valor));
+                    textValor.Enabled = false;
+                }
+                else {
+                    textValor.Text = "";
+                }
 
                 combCentroCusto.SelectedValue = LancarFinanceiro.CentroCusto;
                 combCentroCusto.Enabled = false;
-                textValor.Text = Converter.ToReais(Convert.ToDecimal(LancarFinanceiro.Valor));
 
                 Referencia = LancarFinanceiro.Id;
             }
@@ -71,7 +80,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     gridParcelas.Rows.Add(
                         parcela.Parcela,
                         parcela.Data,
-                        parcela.Valor,
+                        Converter.ToReais(parcela.Valor),
                         Convert.ToInt32(parcela.FormaPagamento),
                         parcela.Observacoes,
                         parcela.Pago
@@ -99,7 +108,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 combStatus.SelectedValue = Convert.ToInt32(fin.Status);
                 timeDataEmissao.Text = fin.DataEmissao;
                 timeDataVencimento.Text = fin.DataVencimento;
-                textValor.Text = Convert.ToString(fin.Valor);
+                textValor.Text = Converter.ToReais(fin.Valor);
                 textDocumento.Text = fin.Documento;
                 combOcorrencia.SelectedValue = Convert.ToInt32(fin.Ocorrencia);
                 textQtdParcelas.Text = Convert.ToString(fin.QtdParcelas);
@@ -150,7 +159,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             Validate.AddRule(combStatus, "Status", "required|numeric|exact:1");
             Validate.AddRule(timeDataEmissao, "Data Emissão", "required|data:dd/MM/yyyy");
             Validate.AddRule(timeDataVencimento, "Data Vencimento", "required|data:dd/MM/yyyy");
-            Validate.AddRule(textValor, "Valor", "required|real|max:11");
+            Validate.AddRule(textValor, "Valor", "required|reais|max:11");
             Validate.AddRule(textDocumento, "Nº Document", "max:30");
             Validate.AddRule(combOcorrencia, "Ocorrencia", "required|numeric|exact:1");
             Validate.AddRule(textQtdParcelas, "Qtd. Parcelas", "required_if:combOcorrencia,2|max:3");
@@ -169,7 +178,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 financeiro.Status = combStatus.SelectedValue.ToString();
                 financeiro.DataEmissao = timeDataEmissao.Text;
                 financeiro.DataVencimento = timeDataVencimento.Text;
-                financeiro.Valor = textValor.Text;
+                financeiro.Valor = Converter.ToDecimal(textValor.Text, true);
                 financeiro.Documento = textDocumento.Text;
                 financeiro.Ocorrencia = combOcorrencia.SelectedValue.ToString();
                 financeiro.QtdParcelas = textQtdParcelas.Text;
@@ -211,7 +220,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 Parcelas.Add(new {
                     Parcela         = parcela.Cells[0].Value,
                     Data            = parcela.Cells[1].Value,
-                    Valor           = parcela.Cells[2].Value,
+                    Valor           = Convert.ToDecimal(parcela.Cells[2].Value),
                     FormaPagamento  = parcela.Cells[3].Value,
                     Observacoes     = parcela.Cells[4].Value,
                     Pago            = parcela.Cells[5].Value
@@ -224,7 +233,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             try {
                 Validate Validate = new Validate(this, ErrorProvider);
 
-                Validate.AddRule(textValor, "Valor", "required|numeric");
+                Validate.AddRule(textValor, "Valor", "required|reais");
                 Validate.AddRule(textQtdParcelas, "Qtd. Parcelas", "required|numeric");
                 Validate.Validation();
 
@@ -234,7 +243,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     if (qtdParcelas > 0) {
                         var data = Convert.ToDateTime(timeDataEmissao.Text);
 
-                        decimal valorParcelas = Convert.ToInt32(textValor.Text) / Convert.ToDecimal(qtdParcelas);
+                        decimal valorParcelas = Convert.ToDecimal(textValor.Text) / Convert.ToInt32(qtdParcelas);
 
                         gridParcelas.Rows.Clear();
 

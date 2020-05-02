@@ -9,6 +9,8 @@ namespace Projeto_Integrador_1.TMSForms.List {
 
         FormPrincipal fmPrincipal;
 
+        List<dynamic> ListaDados;
+
         private DataGridViewCellEventArgs mouseLocation;
 
         public FormClientes(FormPrincipal Principal) {
@@ -26,12 +28,14 @@ namespace Projeto_Integrador_1.TMSForms.List {
                 Clientes clientes = new Clientes();
                 clientes.GetAll();
 
-                gridClientes.Rows.Clear();
+                ListaDados = clientes.Results;
 
-                foreach (dynamic cliente in clientes.Results) {
+                gridDados.Rows.Clear();
+
+                foreach (dynamic cliente in ListaDados) {
                     string tipoCadastro = ListaTipoCadastro.Find(find => Convert.ToString(find.Value) == Convert.ToString(cliente.TipoCadastro)).Text;
                     string tipoPessoa = ListaTipoPessoa.Find(find => Convert.ToString(find.Value) == Convert.ToString(cliente.TipoPessoa)).Text;
-                    gridClientes.Rows.Add(
+                    gridDados.Rows.Add(
                         cliente.Id,
                         tipoCadastro,
                         tipoPessoa,
@@ -51,7 +55,7 @@ namespace Projeto_Integrador_1.TMSForms.List {
 
         private void OnSelectEditar(object sender, EventArgs e) {
             if (mouseLocation.RowIndex >= 0) {
-                int Id = Convert.ToInt32(gridClientes.Rows[mouseLocation.RowIndex].Cells[0].Value);
+                int Id = Convert.ToInt32(gridDados.Rows[mouseLocation.RowIndex].Cells[0].Value);
                 fmPrincipal.AtivarForm(new TMSForms.Register.FormClientes(fmPrincipal, Convert.ToInt32(Id)));
             }
         }
@@ -63,7 +67,7 @@ namespace Projeto_Integrador_1.TMSForms.List {
         private void OnSelectExcluir(object sender, EventArgs e) {
             try {
                 if (mouseLocation.RowIndex >= 0) {
-                    int Id = Convert.ToInt32(gridClientes.Rows[mouseLocation.RowIndex].Cells[0].Value);
+                    int Id = Convert.ToInt32(gridDados.Rows[mouseLocation.RowIndex].Cells[0].Value);
 
                     DialogResult Excluir = MessageBox.Show("Tem certeza que excluir este Cliente?", "Excluir Cliente", MessageBoxButtons.YesNo);
 
@@ -81,6 +85,22 @@ namespace Projeto_Integrador_1.TMSForms.List {
                         }
                     }
                 }
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void OnClickLancarConta(object sender, EventArgs e) {
+            try {
+                int Id = Convert.ToInt32(gridDados.Rows[mouseLocation.RowIndex].Cells[0].Value);
+                dynamic Data = ListaDados.Find(find => Convert.ToInt32(find.Id) == Id);
+
+                ToolStripMenuItem Button = (ToolStripMenuItem)sender;
+
+                List.FormFinanceiro ModalFinanceiro = new FormFinanceiro(null);
+
+                ModalFinanceiro.ModalLancarConta(Id, 7, 0, 0);
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);

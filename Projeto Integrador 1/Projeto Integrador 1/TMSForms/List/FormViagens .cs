@@ -9,7 +9,7 @@ namespace Projeto_Integrador_1.TMSForms.List {
 
         FormPrincipal fmPrincipal;
 
-        List<dynamic> ListaViagens;
+        List<dynamic> ListaDados;
 
         private DataGridViewCellEventArgs mouseLocation;
 
@@ -27,13 +27,13 @@ namespace Projeto_Integrador_1.TMSForms.List {
                 Viagens viagens = new Viagens();
                 viagens.GetAll();
 
-                ListaViagens = viagens.Results;
+                ListaDados = viagens.Results;
 
-                gridViagens.Rows.Clear();
+                gridDados.Rows.Clear();
 
-                foreach (dynamic viagem in ListaViagens) {
+                foreach (dynamic viagem in ListaDados) {
                     string status = ListaStatus.Find(find => Convert.ToInt32(find.Value) == Convert.ToInt32(viagem.Status)).Text;
-                    gridViagens.Rows.Add(
+                    gridDados.Rows.Add(
                         viagem.Id,
                         viagem.CodigoInterno,
                         viagem.DataSaida,
@@ -55,7 +55,7 @@ namespace Projeto_Integrador_1.TMSForms.List {
         }
         private void OnSelectEditar(object sender, EventArgs e) {
             if (mouseLocation.RowIndex >= 0) {
-                int Id = Convert.ToInt32(gridViagens.Rows[mouseLocation.RowIndex].Cells[0].Value);
+                int Id = Convert.ToInt32(gridDados.Rows[mouseLocation.RowIndex].Cells[0].Value);
                 fmPrincipal.AtivarForm(new TMSForms.Register.FormViagens(fmPrincipal, Convert.ToInt32(Id)));
             }
         }
@@ -65,7 +65,7 @@ namespace Projeto_Integrador_1.TMSForms.List {
         private void OnSelectExcluir(object sender, EventArgs e) {
             try {
                 if (mouseLocation.RowIndex >= 0) {
-                    int Id = Convert.ToInt32(gridViagens.Rows[mouseLocation.RowIndex].Cells[0].Value);
+                    int Id = Convert.ToInt32(gridDados.Rows[mouseLocation.RowIndex].Cells[0].Value);
 
                     DialogResult Excluir = MessageBox.Show("Tem certeza que excluir esta Viagem?", "Excluir Viagem", MessageBoxButtons.YesNo);
 
@@ -88,50 +88,32 @@ namespace Projeto_Integrador_1.TMSForms.List {
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void OnClickLancarConta(object sender, EventArgs e) {
             try {
-                int Id = Convert.ToInt32(gridViagens.Rows[mouseLocation.RowIndex].Cells[0].Value);
-
-                dynamic Data = ListaViagens.Find(find => Convert.ToInt32(find.Id) == Id);
+                int Id = Convert.ToInt32(gridDados.Rows[mouseLocation.RowIndex].Cells[0].Value);
+                dynamic Data = ListaDados.Find(find => Convert.ToInt32(find.Id) == Id);
 
                 ToolStripMenuItem Button = (ToolStripMenuItem)sender;
 
-                Form formFinanceiro;
+                List.FormFinanceiro ModalFinanceiro = new FormFinanceiro(null);
 
-                if (Button.Tag == "conta_pagar") {
-                    object SendFinanceiro = new {
-                        CentroCusto = 3,
-                        Tipo = 1,
-                        Valor = Data.TotalCustos,
-                        Id = Id
-                    };
-                    formFinanceiro = new TMSForms.Register.FormFinanceiro(null, 0, SendFinanceiro);
-                }
-                else if (Button.Tag == "conta_receber") {
+                if (Button.Tag == "conta_receber") {
                     if (Data.Valor > 0) {
-                        object SendFinanceiro = new {
-                            CentroCusto = 3,
-                            Tipo = 1,
-                            Valor = Data.Valor,
-                            Id = Id
-                        };
-                        formFinanceiro = new TMSForms.Register.FormFinanceiro(null, 0, SendFinanceiro);
+                        ModalFinanceiro.ModalLancarConta(Id, 3, 1, Data.Valor);
                     }
                     else {
-                        throw new Exception("Não tem valor a ser recebido para lançar no Financeiro.");
+                        throw new Exception("Viagem deve ter um valor para ser lançada no financeiro.");
                     }
                 }
-                else {
-                    throw new Exception("Função não reconhecida.");
+                else if (Button.Tag == "conta_pagar") {
+                    if (Data.TotalCustos > 0) {
+                        ModalFinanceiro.ModalLancarConta(Id, 3, 2, Data.TotalCustos);
+                    }
+                    else {
+                        throw new Exception("Custos da Viagem deve ter um valor para ser lançada no financeiro.");
+                    }
                 }
-
-                formFinanceiro.StartPosition = FormStartPosition.CenterScreen;
-                formFinanceiro.FormBorderStyle = FormBorderStyle.FixedSingle;
-                formFinanceiro.ControlBox = true;
-                formFinanceiro.MaximizeBox = false;
-                formFinanceiro.MinimizeBox = false;
-
-                formFinanceiro.ShowDialog();
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);

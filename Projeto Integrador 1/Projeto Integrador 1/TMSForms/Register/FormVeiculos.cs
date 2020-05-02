@@ -110,10 +110,10 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 Validate.AddRule(combAnoFabricacao, "Ano Fabricação", "required|numeric|date:yyyy");
                 Validate.AddRule(combAnoModelo, "Ano Modelo", "required|numeric|date:yyyy");
                 Validate.AddRule(combStatus, "Status", "required|numeric|max:2");
-                Validate.AddRule(textTara, "Tara", "max:20");
-                Validate.AddRule(textLotacao, "Lotação", "max:20");
-                Validate.AddRule(textPesoBrutoTotal, "Peso Bruto Total", "max:20");
-                Validate.AddRule(textCapacidade, "Capacidade M³", "max:20");
+                Validate.AddRule(textTara, "Tara", "peso|max:20");
+                Validate.AddRule(textLotacao, "Lotação", "peso|max:20");
+                Validate.AddRule(textPesoBrutoTotal, "Peso Bruto Total", "peso|max:20");
+                Validate.AddRule(textCapacidade, "Capacidade M³", "quantidade|max:20");
 
                 Validate.Validation();
 

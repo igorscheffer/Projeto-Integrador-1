@@ -100,7 +100,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     gridCustos.Rows.Add(
                         custo.Data,
                         custo.Descricao,
-                        custo.QTD,
+                        Converter.ToQuantidade(custo.QTD),
                         Converter.ToReais(custo.Valor),
                         Converter.ToReais(custo.Total)
                     );
@@ -114,7 +114,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                         abastecimento.Data,
                         Convert.ToInt32(abastecimento.Posto),
                         Convert.ToInt32(abastecimento.Combustivel),
-                        abastecimento.Litros,
+                        Converter.ToQuantidade(abastecimento.Litros),
                         Converter.ToReais(abastecimento.Valor),
                         Converter.ToReais(abastecimento.Total),
                         Convert.ToInt32(abastecimento.Status)
@@ -165,47 +165,53 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
             ListaClientes = clientes.Results;
 
-            combRemetente.DisplayMember = "RazaoSocial";
-            combRemetente.ValueMember = "Id";
-            combRemetente.DataSource = new List<dynamic>(clientes.Results);
-            combRemetente.SelectedValue = -1;
+            if (ListaClientes.Count > 0) {
+                combRemetente.DisplayMember = "RazaoSocial";
+                combRemetente.ValueMember = "Id";
+                combRemetente.DataSource = new List<dynamic>(clientes.Results);
+                combRemetente.SelectedValue = -1;
 
-            combDestinatario.DisplayMember = "RazaoSocial";
-            combDestinatario.ValueMember = "Id";
-            combDestinatario.DataSource = new List<dynamic>(clientes.Results);
-            combDestinatario.SelectedValue = -1;
+                combDestinatario.DisplayMember = "RazaoSocial";
+                combDestinatario.ValueMember = "Id";
+                combDestinatario.DataSource = new List<dynamic>(clientes.Results);
+                combDestinatario.SelectedValue = -1;
 
-            combAbastecimentoPosto.DisplayMember = "RazaoSocial";
-            combAbastecimentoPosto.ValueMember = "Id";
-            combAbastecimentoPosto.DataSource = new List<dynamic>(clientes.Results);
-            combAbastecimentoPosto.SelectedValue = -1;
+                combAbastecimentoPosto.DisplayMember = "RazaoSocial";
+                combAbastecimentoPosto.ValueMember = "Id";
+                combAbastecimentoPosto.DataSource = new List<dynamic>(clientes.Results);
+                combAbastecimentoPosto.SelectedValue = -1;
 
-            combGridAbastecimentoPosto.DisplayMember = "RazaoSocial";
-            combGridAbastecimentoPosto.ValueMember = "Id";
-            combGridAbastecimentoPosto.DataSource = new List<dynamic>(clientes.Results);
+                combGridAbastecimentoPosto.DisplayMember = "RazaoSocial";
+                combGridAbastecimentoPosto.ValueMember = "Id";
+                combGridAbastecimentoPosto.DataSource = new List<dynamic>(clientes.Results);
+            }
         }
         private void LoadVeiculos() {
             Veiculos veiculos = new Veiculos();
             veiculos.GetAll();
 
-            combVeiculo.DisplayMember = "Veiculo";
-            combVeiculo.ValueMember = "Id";
-            combVeiculo.DataSource = new List<dynamic>(veiculos.Results);
-            combVeiculo.SelectedValue = -1;
+            if (veiculos.Results.Count > 0) {
+                combVeiculo.DisplayMember = "Veiculo";
+                combVeiculo.ValueMember = "Id";
+                combVeiculo.DataSource = new List<dynamic>(veiculos.Results);
+                combVeiculo.SelectedValue = -1;
 
-            combReboque.DisplayMember = "Veiculo";
-            combReboque.ValueMember = "Id";
-            combReboque.DataSource = new List<dynamic>(veiculos.Results);
-            combReboque.SelectedValue = -1;
+                combReboque.DisplayMember = "Veiculo";
+                combReboque.ValueMember = "Id";
+                combReboque.DataSource = new List<dynamic>(veiculos.Results);
+                combReboque.SelectedValue = -1;
+            }
         }
         private void LoadMotoristas() {
             Motoristas motoristas = new Motoristas();
             motoristas.GetAll();
 
-            combMotorista.DisplayMember = "Nome";
-            combMotorista.ValueMember = "Id";
-            combMotorista.DataSource = new List<dynamic>(motoristas.Results);
-            combMotorista.SelectedValue = -1;
+            if (motoristas.Results.Count > 0) {
+                combMotorista.DisplayMember = "Nome";
+                combMotorista.ValueMember = "Id";
+                combMotorista.DataSource = new List<dynamic>(motoristas.Results);
+                combMotorista.SelectedValue = -1;
+            }
         }
         private void onCadastrarCliente(object sender, EventArgs e) {
             Form formClientes = new TMSForms.Register.FormClientes();
@@ -412,7 +418,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     viagens.HodometroEntrega = textHodometroEntrega.Text;
                     viagens.HodometroChegada = textHodometroChegada.Text;
                     viagens.HodometroPercorrido = textHodometroPercorrido.Text;
-                    viagens.Valor = Convert.ToString(Converter.ToDecimal(textValor.Text));
+                    viagens.Valor = Converter.ToDecimal(textValor.Text, true);
                     viagens.InformacoesComplementares = textInformacoesComplementares.Text;
                     viagens.Cargas = jsonCargas;
                     viagens.TotalCargas = Convert.ToString(TotalCargas);
@@ -474,7 +480,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 Custos.Add(new {
                     Data = custos.Cells[0].Value,
                     Descricao = custos.Cells[1].Value,
-                    QTD = custos.Cells[2].Value,
+                    QTD = Convert.ToDecimal(custos.Cells[2].Value),
                     Valor = Convert.ToDecimal(custos.Cells[3].Value),
                     Total = Convert.ToDecimal(custos.Cells[4].Value)
                 });
@@ -487,7 +493,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     Data = abastecimentos.Cells[0].Value,
                     Posto = abastecimentos.Cells[1].Value,
                     Combustivel = abastecimentos.Cells[2].Value,
-                    Litros = abastecimentos.Cells[3].Value,
+                    Litros = Convert.ToDecimal(abastecimentos.Cells[3].Value),
                     Valor = Convert.ToDecimal(abastecimentos.Cells[4].Value),
                     Total = Convert.ToDecimal(abastecimentos.Cells[5].Value),
                     Status = abastecimentos.Cells[6].Value

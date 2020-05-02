@@ -60,8 +60,9 @@ namespace Projeto_Integrador_1.Connection {
 
         public void Logar() {
             string sql = "SELECT * FROM `usuarios` WHERE `login` = @login AND `senha` = @senha LIMIT 1;";
+            string sqlUltimoAcesso = "UPDATE `usuarios` SET `ultimo_acesso` = CURRENT_TIMESTAMP() WHERE `id` = @id LIMIT 1;";
             try {
-                Open();
+                OpenConnection();
 
                 string SenhaCriptografada = CriptografarSenha(Login, Senha);
 
@@ -71,8 +72,20 @@ namespace Projeto_Integrador_1.Connection {
                 query.ExecuteNonQuery();
 
                 MySqlDataReader data = query.ExecuteReader();
+                data.Read();
+                int Id = Convert.ToInt32(data["id"]);
+
+                CloseConnection();
                 
-                if (data.Read()) {
+                if (Id > 0) {
+                    OpenConnection();
+
+                    MySqlCommand queryUpdateUltimoAcesso = new MySqlCommand(sqlUltimoAcesso, Connection);
+                    queryUpdateUltimoAcesso.Parameters.AddWithValue("@id", Id);
+                    queryUpdateUltimoAcesso.ExecuteNonQuery();
+
+                    CloseConnection();
+
                     if (SalvarSenha) {
                         Properties.Settings.Default.login = Login;
                         Properties.Settings.Default.senha = Senha;
@@ -88,16 +101,17 @@ namespace Projeto_Integrador_1.Connection {
 
                     Success = true;
                     Message = "Login efetuado com sucesso.";
+
+                    Console.WriteLine("Login efetuado com sucesso.");
                 }
                 else {
                     throw new Exception("Usuario ou Senha invalido.");
                 }
-
-                Close();
             }
             catch (MySqlException e) {
                 Success = false;
                 Message = e.Message;
+                Console.WriteLine("Houve um erro ao efetuar o login (" + e.Message + ").");
             }
         }
     }

@@ -15,24 +15,13 @@ namespace Projeto_Integrador_1 {
 
         private Form currentForm;
 
-        private async void testeCep() {
-            HttpClient client = new HttpClient();
-
-            HttpResponseMessage response = await client.GetAsync("https://viacep.com.br/ws/14787022/json/");
-
-            response.EnsureSuccessStatusCode();
-            string responseBody = await response.Content.ReadAsStringAsync();
-
-            Console.WriteLine(responseBody);
-        }
-
         private void VerificarConexao() {
             try {
                 Config Connexao = new Config();
 
-                if (Connexao.Open()) {
+                if (Connexao.OpenConnection()) {
                     this.Enabled = true;
-                    Connexao.Close();
+                    Connexao.CloseConnection();
                 }
                 else {
                     this.Enabled = false;
@@ -118,7 +107,7 @@ namespace Projeto_Integrador_1 {
         }
 
         public void AtivarForm(Form formSender) {
-            Console.WriteLine(formSender);
+            Console.WriteLine("Entrou no Formulario: " + formSender.Text);
 
             if (currentForm != null) {
                 currentForm.Close();
@@ -140,6 +129,10 @@ namespace Projeto_Integrador_1 {
 
         private void OnClickHiddenMenu(object sender, EventArgs e) {
             HiddenMenu();
+        }
+
+        private void OnClickSair() {
+            Application.Exit();
         }
 
         private void OnClickMenu(object sender, EventArgs e) {
@@ -175,6 +168,23 @@ namespace Projeto_Integrador_1 {
                 case "financeiro":
                     AtivarForm(new TMSForms.List.FormFinanceiro(this));
                     break;
+                case "sair":
+                    OnClickSair();
+                    break;
+                    
+            }
+        }
+
+        private void OnFormClosing(object sender, FormClosingEventArgs e) {
+            try {
+                DialogResult Close = MessageBox.Show("Tem certeza que deseja fechar o aplicativo?", "Fechar", MessageBoxButtons.YesNo);
+
+                if (Close == DialogResult.No) {
+                    e.Cancel = true;
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
             }
         }
     }

@@ -105,12 +105,15 @@
             this.textSenha.Name = "textSenha";
             this.textSenha.PasswordChar = '*';
             this.textSenha.Size = new System.Drawing.Size(259, 35);
-            this.textSenha.TabIndex = 3;
+            this.textSenha.TabIndex = 2;
             // 
             // btnLogar
             // 
             this.btnLogar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.btnLogar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
+            this.btnLogar.FlatAppearance.BorderSize = 0;
+            this.btnLogar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(183)))), ((int)(((byte)(228)))));
+            this.btnLogar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
             this.btnLogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnLogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
@@ -119,12 +122,12 @@
             this.btnLogar.IconColor = System.Drawing.Color.White;
             this.btnLogar.IconSize = 26;
             this.btnLogar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogar.Location = new System.Drawing.Point(30, 417);
-            this.btnLogar.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.btnLogar.Location = new System.Drawing.Point(29, 443);
+            this.btnLogar.Margin = new System.Windows.Forms.Padding(20, 10, 20, 20);
             this.btnLogar.Name = "btnLogar";
             this.btnLogar.Rotation = 0D;
             this.btnLogar.Size = new System.Drawing.Size(300, 46);
-            this.btnLogar.TabIndex = 5;
+            this.btnLogar.TabIndex = 4;
             this.btnLogar.Text = "Log In";
             this.btnLogar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLogar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -134,14 +137,14 @@
             // checkSalvarDados
             // 
             this.checkSalvarDados.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
-            this.checkSalvarDados.CheckedOffColor = System.Drawing.Color.Gray;
+            this.checkSalvarDados.CheckedOffColor = System.Drawing.Color.White;
             this.checkSalvarDados.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
             this.checkSalvarDados.FillColor = System.Drawing.Color.White;
             this.checkSalvarDados.Location = new System.Drawing.Point(310, 384);
             this.checkSalvarDados.Margin = new System.Windows.Forms.Padding(3, 10, 20, 3);
             this.checkSalvarDados.Name = "checkSalvarDados";
             this.checkSalvarDados.Size = new System.Drawing.Size(20, 20);
-            this.checkSalvarDados.TabIndex = 6;
+            this.checkSalvarDados.TabIndex = 3;
             // 
             // lblSalvarDados
             // 

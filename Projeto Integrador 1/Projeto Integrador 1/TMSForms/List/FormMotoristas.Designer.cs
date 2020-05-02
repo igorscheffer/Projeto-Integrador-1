@@ -40,7 +40,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCadastrar = new FontAwesome.Sharp.IconButton();
-            this.gridMotoristas = new Guna.UI.WinForms.GunaDataGridView();
+            this.gridDados = new Guna.UI.WinForms.GunaDataGridView();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MenuItens = new Guna.UI.WinForms.GunaContextMenuStrip();
@@ -51,8 +51,9 @@
             this.colCNH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnMenuItemLancarConta = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridMotoristas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridDados)).BeginInit();
             this.MenuItens.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,18 +91,18 @@
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.OnClickCadastrar);
             // 
-            // gridMotoristas
+            // gridDados
             // 
-            this.gridMotoristas.AllowUserToAddRows = false;
-            this.gridMotoristas.AllowUserToDeleteRows = false;
-            this.gridMotoristas.AllowUserToResizeRows = false;
+            this.gridDados.AllowUserToAddRows = false;
+            this.gridDados.AllowUserToDeleteRows = false;
+            this.gridDados.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gridMotoristas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridMotoristas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridMotoristas.BackgroundColor = System.Drawing.Color.White;
-            this.gridMotoristas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridMotoristas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gridMotoristas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.gridDados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridDados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridDados.BackgroundColor = System.Drawing.Color.White;
+            this.gridDados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridDados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gridDados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -111,10 +112,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridMotoristas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gridMotoristas.ColumnHeadersHeight = 40;
-            this.gridMotoristas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.gridMotoristas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridDados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gridDados.ColumnHeadersHeight = 40;
+            this.gridDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.gridDados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
             this.colNome,
             this.colRg,
@@ -129,13 +130,13 @@
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridMotoristas.DefaultCellStyle = dataGridViewCellStyle9;
-            this.gridMotoristas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridMotoristas.EnableHeadersVisualStyles = false;
-            this.gridMotoristas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.gridMotoristas.Location = new System.Drawing.Point(0, 55);
-            this.gridMotoristas.Margin = new System.Windows.Forms.Padding(10);
-            this.gridMotoristas.Name = "gridMotoristas";
+            this.gridDados.DefaultCellStyle = dataGridViewCellStyle9;
+            this.gridDados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridDados.EnableHeadersVisualStyles = false;
+            this.gridDados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.gridDados.Location = new System.Drawing.Point(0, 55);
+            this.gridDados.Margin = new System.Windows.Forms.Padding(10);
+            this.gridDados.Name = "gridDados";
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -143,35 +144,35 @@
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridMotoristas.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.gridMotoristas.RowHeadersVisible = false;
-            this.gridMotoristas.RowTemplate.Height = 35;
-            this.gridMotoristas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridMotoristas.Size = new System.Drawing.Size(1040, 395);
-            this.gridMotoristas.TabIndex = 1;
-            this.gridMotoristas.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.gridMotoristas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gridMotoristas.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gridMotoristas.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gridMotoristas.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gridMotoristas.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gridMotoristas.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gridMotoristas.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.gridMotoristas.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
-            this.gridMotoristas.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.gridMotoristas.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gridMotoristas.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.gridMotoristas.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.gridMotoristas.ThemeStyle.HeaderStyle.Height = 40;
-            this.gridMotoristas.ThemeStyle.ReadOnly = false;
-            this.gridMotoristas.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gridMotoristas.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gridMotoristas.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gridMotoristas.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Gray;
-            this.gridMotoristas.ThemeStyle.RowsStyle.Height = 35;
-            this.gridMotoristas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.gridMotoristas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gridMotoristas.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnMouseEnterCell);
+            this.gridDados.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.gridDados.RowHeadersVisible = false;
+            this.gridDados.RowTemplate.Height = 35;
+            this.gridDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridDados.Size = new System.Drawing.Size(1040, 395);
+            this.gridDados.TabIndex = 1;
+            this.gridDados.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.gridDados.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.gridDados.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.gridDados.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.gridDados.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.gridDados.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.gridDados.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.gridDados.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.gridDados.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
+            this.gridDados.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.gridDados.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.gridDados.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.gridDados.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.gridDados.ThemeStyle.HeaderStyle.Height = 40;
+            this.gridDados.ThemeStyle.ReadOnly = false;
+            this.gridDados.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.gridDados.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gridDados.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.gridDados.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Gray;
+            this.gridDados.ThemeStyle.RowsStyle.Height = 35;
+            this.gridDados.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.gridDados.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridDados.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.OnMouseEnterCell);
             // 
             // colId
             // 
@@ -195,6 +196,7 @@
             this.MenuItens.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.MenuItens.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnMenuItemEditar,
+            this.btnMenuItemLancarConta,
             this.btnMenuItemExcluir});
             this.MenuItens.Name = "MenuItens";
             this.MenuItens.RenderStyle.ArrowColor = System.Drawing.Color.White;
@@ -207,7 +209,7 @@
             this.MenuItens.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.MenuItens.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
             this.MenuItens.ShowCheckMargin = true;
-            this.MenuItens.Size = new System.Drawing.Size(203, 94);
+            this.MenuItens.Size = new System.Drawing.Size(203, 128);
             // 
             // btnMenuItemEditar
             // 
@@ -272,17 +274,27 @@
             this.colVencimento.Name = "colVencimento";
             this.colVencimento.ReadOnly = true;
             // 
+            // btnMenuItemLancarConta
+            // 
+            this.btnMenuItemLancarConta.ForeColor = System.Drawing.Color.White;
+            this.btnMenuItemLancarConta.Name = "btnMenuItemLancarConta";
+            this.btnMenuItemLancarConta.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.btnMenuItemLancarConta.Size = new System.Drawing.Size(202, 34);
+            this.btnMenuItemLancarConta.Tag = "";
+            this.btnMenuItemLancarConta.Text = "Lançar Conta";
+            this.btnMenuItemLancarConta.Click += new System.EventHandler(this.OnClickLancarConta);
+            // 
             // FormMotoristas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1040, 450);
-            this.Controls.Add(this.gridMotoristas);
+            this.Controls.Add(this.gridDados);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMotoristas";
             this.Text = "Motoristas";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridMotoristas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridDados)).EndInit();
             this.MenuItens.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -292,7 +304,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnCadastrar;
-        private Guna.UI.WinForms.GunaDataGridView gridMotoristas;
+        private Guna.UI.WinForms.GunaDataGridView gridDados;
         private Guna.UI.WinForms.GunaContextMenuStrip MenuItens;
         private System.Windows.Forms.ToolStripMenuItem btnMenuItemEditar;
         private System.Windows.Forms.ToolStripMenuItem btnMenuItemExcluir;
@@ -303,5 +315,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCNH;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn colVencimento;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuItemLancarConta;
     }
 }

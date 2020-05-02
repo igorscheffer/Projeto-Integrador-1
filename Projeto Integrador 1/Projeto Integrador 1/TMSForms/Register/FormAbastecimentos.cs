@@ -52,9 +52,9 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 combMotorista.SelectedValue = abastecimento.Motorista;
                 textHodometro.Text = Convert.ToString(abastecimento.Hodometro);
                 combStatus.SelectedValue = abastecimento.Status;
-                textLitros.Text = Convert.ToString(abastecimento.Litros);
-                textValor.Text = Convert.ToString(abastecimento.Valor);
-                textTotal.Text = Convert.ToString(abastecimento.Total);
+                textLitros.Text = Converter.ToQuantidade(abastecimento.Litros);
+                textValor.Text = Converter.ToReais(abastecimento.Valor);
+                textTotal.Text = Converter.ToReais(abastecimento.Total);
             }
             catch (Exception e) {
                 MessageBox.Show("Houve um erro ao preencher os dados (" + e.Message + ").");
@@ -65,27 +65,27 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             Clientes clientes = new Clientes();
             clientes.GetAll();
 
+            combPosto.DataSource = new List<dynamic>(clientes.Results);
             combPosto.DisplayMember = "RazaoSocial";
             combPosto.ValueMember = "Id";
-            combPosto.DataSource = new List<dynamic>(clientes.Results);
             combPosto.SelectedValue = -1;
         }
         private void LoadVeiculos() {
             Veiculos veiculos = new Veiculos();
             veiculos.GetAll();
 
+            combVeiculo.DataSource = new List<dynamic>(veiculos.Results);
             combVeiculo.DisplayMember = "Veiculo";
             combVeiculo.ValueMember = "Id";
-            combVeiculo.DataSource = new List<dynamic>(veiculos.Results);
             combVeiculo.SelectedValue = -1;
         }
         private void LoadMotoristas() {
             Motoristas motoristas = new Motoristas();
             motoristas.GetAll();
 
+            combMotorista.DataSource = new List<dynamic>(motoristas.Results);
             combMotorista.DisplayMember = "Nome";
             combMotorista.ValueMember = "Id";
-            combMotorista.DataSource = new List<dynamic>(motoristas.Results);
             combMotorista.SelectedValue = -1;
         }
         private void onCadastrarCliente(object sender, EventArgs e) {
@@ -142,9 +142,9 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 Validate.AddRule(combMotorista, "Motorista", "numeric|max:11");
                 Validate.AddRule(textHodometro, "Hodômetro", "numeric|max:22");
                 Validate.AddRule(combStatus, "Status", "required|numeric|max:22");
-                Validate.AddRule(textLitros, "Litros", "required|numeric|max:11");
-                Validate.AddRule(textValor, "Valor", "required|numeric|max:11");
-                Validate.AddRule(textTotal, "Total", "required|numeric|max:11");
+                Validate.AddRule(textLitros, "Litros", "required|quantidade|max:11");
+                Validate.AddRule(textValor, "Valor", "required|reais|max:11");
+                Validate.AddRule(textTotal, "Total", "required|reais|max:11");
 
                 Validate.Validation();
 
@@ -161,9 +161,9 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     abastecimentos.Motorista = combMotorista.SelectedValue;
                     abastecimentos.Hodometro = textHodometro.Text;
                     abastecimentos.Status = combStatus.SelectedValue;
-                    abastecimentos.Litros = textLitros.Text;
-                    abastecimentos.Valor = textValor.Text;
-                    abastecimentos.Total = Convert.ToString(total);
+                    abastecimentos.Litros = Converter.ToDecimal(textLitros.Text, true);
+                    abastecimentos.Valor = Converter.ToDecimal(textValor.Text, true);
+                    abastecimentos.Total = Converter.ToDecimal(textTotal.Text, true);
 
                     if (Id > 0) {
                         abastecimentos.Id = Convert.ToInt32(Id);
@@ -199,12 +199,12 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
         private void CalcularValorTotal(object sender, KeyEventArgs e) {
             try {
-                int Valor = Int16.Parse(textValor.Text);
-                int Litros = Int16.Parse(textLitros.Text);
+                decimal Valor = Converter.ToDecimal(textValor.Text);
+                decimal Litros = Converter.ToDecimal(textLitros.Text);
 
-                int Total = (Valor * Litros);
+                decimal Total = (Valor * Litros);
 
-                textTotal.Text = Convert.ToString(Total);
+                textTotal.Text = Converter.ToReais(Total);
             }
             catch {
                 textTotal.Text = Convert.ToString(0);

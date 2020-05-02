@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gridFinanceiro.ColumnHeadersHeight" type="System.Int32, mscorlib">
+  <data name="gridDados.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
   <metadata name="colId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -201,28 +201,28 @@
     <value>Status</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gridFinanceiro.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="gridDados.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="gridFinanceiro.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="gridDados.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 55</value>
   </data>
-  <data name="gridFinanceiro.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="gridDados.Size" type="System.Drawing.Size, System.Drawing">
     <value>1040, 395</value>
   </data>
-  <data name="gridFinanceiro.TabIndex" type="System.Int32, mscorlib">
+  <data name="gridDados.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;gridFinanceiro.Name" xml:space="preserve">
-    <value>gridFinanceiro</value>
+  <data name="&gt;&gt;gridDados.Name" xml:space="preserve">
+    <value>gridDados</value>
   </data>
-  <data name="&gt;&gt;gridFinanceiro.Type" xml:space="preserve">
+  <data name="&gt;&gt;gridDados.Type" xml:space="preserve">
     <value>Guna.UI.WinForms.GunaDataGridView, Guna.UI, Version=1.9.0.0, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="&gt;&gt;gridFinanceiro.Parent" xml:space="preserve">
+  <data name="&gt;&gt;gridDados.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;gridFinanceiro.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;gridDados.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="btnCadastrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">

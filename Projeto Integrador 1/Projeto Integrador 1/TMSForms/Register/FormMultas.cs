@@ -50,7 +50,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             timeDataOcorrencia.Text = multa.DataOcorrencia;
             timeDataNotificacao.Text = multa.DataNotificacao;
             timeDataVencimento.Text = multa.DataVencimento;
-            textValor.Text = Converter.ToReais(Convert.ToDecimal(multa.Valor));
+            textValor.Text = Converter.ToReais(multa.Valor);
             textDescricao.Text = multa.Descricao;
             textLocal.Text = multa.Local;
 
@@ -60,19 +60,23 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             Veiculos veiculos = new Veiculos();
             veiculos.GetAll();
 
-            combVeiculo.DisplayMember = "Veiculo";
-            combVeiculo.ValueMember = "Id";
-            combVeiculo.DataSource = new List<dynamic>(veiculos.Results);
-            combVeiculo.SelectedValue = -1;
+            if (veiculos.Results.Count > 0) {
+                combVeiculo.DisplayMember = "Veiculo";
+                combVeiculo.ValueMember = "Id";
+                combVeiculo.DataSource = new List<dynamic>(veiculos.Results);
+                combVeiculo.SelectedValue = -1;
+            }
         }
         private void LoadMotoristas() {
             Motoristas motoristas = new Motoristas();
             motoristas.GetAll();
 
-            combMotorista.DisplayMember = "Nome";
-            combMotorista.ValueMember = "Id";
-            combMotorista.DataSource = new List<dynamic>(motoristas.Results);
-            combMotorista.SelectedValue = -1;
+            if (motoristas.Results.Count > 0) {
+                combMotorista.DisplayMember = "Nome";
+                combMotorista.ValueMember = "Id";
+                combMotorista.DataSource = new List<dynamic>(motoristas.Results);
+                combMotorista.SelectedValue = -1;
+            }
         }
 
         private void OnEnviar(object sender, EventArgs e) {
@@ -86,7 +90,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 Validate.AddRule(timeDataOcorrencia, "Data Ocorrencia", "required|date:dd/MM/yyyy");
                 Validate.AddRule(timeDataNotificacao, "Data Notificacao", "date:dd/MM/yyyy");
                 Validate.AddRule(timeDataVencimento, "Data Vencimento", "date:dd/MM/yyyy");
-                Validate.AddRule(textValor, "Valor", "numeric|max:11");
+                Validate.AddRule(textValor, "Valor", "reais|max:11");
                 Validate.AddRule(textDescricao, "Descrição da Infração", "max:500");
                 Validate.AddRule(textLocal, "Local da Infração", "max:500");
 
@@ -102,7 +106,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     multas.DataOcorrencia = timeDataOcorrencia.Text;
                     multas.DataNotificacao = timeDataNotificacao.Text;
                     multas.DataVencimento = timeDataVencimento.Text;
-                    multas.Valor = textValor.Text;
+                    multas.Valor = Converter.ToDecimal(textValor.Text, true);
                     multas.Descricao = textDescricao.Text;
                     multas.Local = textLocal.Text;
 

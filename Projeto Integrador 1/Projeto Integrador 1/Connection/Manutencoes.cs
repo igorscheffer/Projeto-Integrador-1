@@ -34,7 +34,7 @@ namespace Projeto_Integrador_1.Connection {
         public void Create() {
             string sql = "INSERT INTO `manutencoes`(`tipo`, `preventiva`, `veiculo`, `status`, `motorista`, `data_agendada`, `data_realizada`, `hodometro_agendado`, `hodometro_realizado`, `observacoes`, `ordem_servico`, `fornecedor`, `mao_obra`, `desconto`, `acrecimo`, `valor`, `itens`) VALUES (@tipo, @preventiva, @veiculo, @status, @motorista, @data_agendada, @data_realizada, @hodometro_agendado, @hodometro_realizado, @observacoes, @ordem_servico, @fornecedor, @mao_obra, @desconto, @acrecimo, @valor, @itens);";
             try {
-                Open();
+                OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
 
@@ -58,7 +58,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                Close();
+                CloseConnection();
 
                 Success = true;
                 Message = "Manutenção salva com sucesso.";
@@ -72,7 +72,7 @@ namespace Projeto_Integrador_1.Connection {
         public void Update() {
             string sql = "UPDATE `manutencoes` SET `tipo` = @tipo, `preventiva` = @preventiva, `veiculo` = @veiculo, `status` = @status, `motorista` = @motorista, `data_agendada` = @data_agendada, `data_realizada` = @data_realizada, `hodometro_agendado` = @hodometro_agendado, `hodometro_realizado` = @hodometro_realizado, `observacoes` = @observacoes, `ordem_servico` = @ordem_servico, `fornecedor` = @fornecedor, `mao_obra` = @mao_obra, `desconto` = @desconto, `acrecimo` = @acrecimo, `valor` = @valor, `itens` = @itens WHERE `id` = @id LIMIT 1;";
             try {
-                Open();
+                OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
 
@@ -97,7 +97,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.ExecuteNonQuery();
 
-                Close();
+                CloseConnection();
 
                 Success = true;
                 Message = "Manutenção salva com sucesso.";
@@ -112,7 +112,7 @@ namespace Projeto_Integrador_1.Connection {
             string sql = "SELECT `manutencoes`.*, `veiculos`.`placa` AS `veiculo_placa`, `veiculos`.`marca` AS `veiculo_marca`, `veiculos`.`modelo` AS `veiculo_modelo`, `motoristas`.`nome` AS `motorista_nome`, `clientes`.`razao_social` AS `fornecedor_nome` FROM `manutencoes` LEFT OUTER JOIN `veiculos` ON (`manutencoes`.`veiculo` = `veiculos`.`id`) LEFT OUTER JOIN `motoristas` ON (`manutencoes`.`motorista` = `motoristas`.`id`) LEFT OUTER JOIN `clientes` ON (`manutencoes`.`fornecedor` = `clientes`.`id`) WHERE `manutencoes`.`id` = @id LIMIT 1;";
 
             try {
-                Open();
+                OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@id", Id);
@@ -145,7 +145,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 data.Close();
 
-                Close();
+                CloseConnection();
 
                 Success = true;
             }
@@ -161,13 +161,17 @@ namespace Projeto_Integrador_1.Connection {
             List<dynamic> ListaMarcas = Listas.VeiculosMarcas;
 
             try {
-                Open();
+                OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 MySqlDataReader data = query.ExecuteReader();
 
                 while (data.Read()) {
-                    dynamic marca = ListaMarcas.Find(item => item.Value == Int16.Parse(data["veiculo_marca"].ToString()));
+                    string marca = string.Empty;
+
+                    if (!string.IsNullOrEmpty(Convert.ToString(data["veiculo_placa"]))) {
+                        marca = ListaMarcas.Find(item => item.Value == Int16.Parse(data["veiculo_marca"].ToString())).Text;
+                    }
 
                     Results.Add(
                         new {
@@ -176,7 +180,7 @@ namespace Projeto_Integrador_1.Connection {
                             DataRealizada = data["data_realizada"],
                             Tipo = data["tipo"],
                             Placa = data["veiculo_placa"],
-                            Veiculo = (data["veiculo_placa"] + " - " + data["veiculo_placa"] + " " + marca.Text + " " + data["veiculo_modelo"]).ToUpper(),
+                            Veiculo = (data["veiculo_placa"] + " - " + data["veiculo_placa"] + " " + marca + " " + data["veiculo_modelo"]).ToUpper(),
                             Fornecedor = data["fornecedor_nome"],
                             Valor = data["valor"],
                             Status = data["status"]
@@ -186,7 +190,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 data.Close();
 
-                Close();
+                CloseConnection();
 
                 Success = true;
             }
@@ -199,14 +203,14 @@ namespace Projeto_Integrador_1.Connection {
         public void Delete() {
             string sql = "DELETE FROM `manutencoes` WHERE `id` = @id LIMIT 1;";
             try {
-                Open();
+                OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
                 query.Parameters.AddWithValue("@id", Id);
 
                 query.ExecuteNonQuery();
 
-                Close();
+                CloseConnection();
 
                 Success = true;
                 Message = "Manutenção excluida com sucesso.";

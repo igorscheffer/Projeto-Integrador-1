@@ -49,8 +49,9 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     gridItens.Rows.Add(
                         item.Codigo,
                         item.Descricao,
-                        item.Qtd,
-                        item.Valor
+                        Converter.ToQuantidade(item.Qtd),
+                        Converter.ToReais(item.Valor),
+                        Converter.ToReais(item.Total)
                     );
                 }
             }
@@ -76,12 +77,12 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 textObservacoes.Text = manutencao.Observacoes;
                 textOrdemServico.Text = manutencao.OrdemServico;
                 combFornecedor.SelectedValue = manutencao.Fornecedor;
-                textMaoObra.Text = Converter.ToReais(Convert.ToDecimal(manutencao.MaoObra));
-                textDesconto.Text = Converter.ToReais(Convert.ToDecimal(manutencao.Desconto));
-                textAcrecimo.Text = Converter.ToReais(Convert.ToDecimal(manutencao.Acrecimos));
-                textValor.Text = Converter.ToReais(Convert.ToDecimal(manutencao.Valor));
+                textMaoObra.Text = Converter.ToReais(manutencao.MaoObra);
+                textDesconto.Text = Converter.ToReais(manutencao.Desconto);
+                textAcrecimo.Text = Converter.ToReais(manutencao.Acrecimo);
+                textValor.Text = Converter.ToReais(manutencao.Valor);
 
-                PreencherGrids(Convert.ToString(manutencoes.Itens));
+                PreencherGrids(Convert.ToString(manutencao.Itens));
             }
             catch (Exception e) {
                 MessageBox.Show("Houve um erro ao preencher os dados (" + e.Message + ").");
@@ -92,37 +93,54 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             Clientes clientes = new Clientes();
             clientes.GetAll();
 
-            combFornecedor.DisplayMember = "RazaoSocial";
-            combFornecedor.ValueMember = "Id";
-            combFornecedor.DataSource = new List<dynamic>(clientes.Results);
-            combFornecedor.SelectedValue = -1;
+            if (clientes.Results.Count > 0) {
+                combFornecedor.DisplayMember = "RazaoSocial";
+                combFornecedor.ValueMember = "Id";
+                combFornecedor.DataSource = new List<dynamic>(clientes.Results);
+                combFornecedor.SelectedValue = -1;
+            }
         }
         private void LoadVeiculos() {
             Veiculos veiculos = new Veiculos();
             veiculos.GetAll();
 
-            combVeiculo.DisplayMember = "Veiculo";
-            combVeiculo.ValueMember = "Id";
-            combVeiculo.DataSource = new List<dynamic>(veiculos.Results);
-            combVeiculo.SelectedValue = -1;
+            if (veiculos.Results.Count > 0) {
+                combVeiculo.DisplayMember = "Veiculo";
+                combVeiculo.ValueMember = "Id";
+                combVeiculo.DataSource = new List<dynamic>(veiculos.Results);
+                combVeiculo.SelectedValue = -1;
+            }
         }
         private void LoadMotoristas() {
             Motoristas motoristas = new Motoristas();
             motoristas.GetAll();
 
-            combMotorista.DisplayMember = "Nome";
-            combMotorista.ValueMember = "Id";
-            combMotorista.DataSource = new List<dynamic>(motoristas.Results);
-            combMotorista.SelectedValue = -1;
+            if (motoristas.Results.Count > 0) {
+                combMotorista.DisplayMember = "Nome";
+                combMotorista.ValueMember = "Id";
+                combMotorista.DataSource = new List<dynamic>(motoristas.Results);
+                combMotorista.SelectedValue = -1;
+            }
         }
 
         private void RefreshValorTotal() {
-            int ValorTotalItens = 0;
-            foreach (DataGridViewRow item in gridItens.Rows) {
-                ValorTotalItens += (Convert.ToInt32(item.Cells[3].Value) * Convert.ToInt32(item.Cells[2].Value));
-            }
+            try {
+                decimal ValorTotalItens = 0;
 
-            textValor.Text = Convert.ToString(ValorTotalItens);
+                foreach (DataGridViewRow item in gridItens.Rows) {
+                    ValorTotalItens += Convert.ToDecimal(item.Cells[4].Value);
+                }
+
+                ValorTotalItens += Converter.ToDecimal(textMaoObra.Text);
+                ValorTotalItens += Converter.ToDecimal(textAcrecimo.Text);
+                ValorTotalItens -= Converter.ToDecimal(textDesconto.Text);
+
+                textValor.Text = Convert.ToString(ValorTotalItens);
+            }
+            catch (Exception e) {
+                Console.WriteLine(e.Message);
+                textValor.Text = Convert.ToString(0);
+            }
         }
 
         private void onCadastrarCliente(object sender, EventArgs e) {
@@ -183,10 +201,10 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 Validate.AddRule(textObservacoes, "Motivo/Observações", "max:1000");
                 Validate.AddRule(textOrdemServico, "Ordem Servico", "max:20");
                 Validate.AddRule(combFornecedor, "Concessionaria/Fornecedor", "numeric|max:11");
-                Validate.AddRule(textMaoObra, "Mão de Obra", "numeric|max:20");
-                Validate.AddRule(textDesconto, "Desconto", "numeric|max:20");
-                Validate.AddRule(textAcrecimo, "Acrécimo", "numeric|max:20");
-                Validate.AddRule(textValor, "Valor Total", "numeric|max:20");
+                Validate.AddRule(textMaoObra, "Mão de Obra", "reais|max:20");
+                Validate.AddRule(textDesconto, "Desconto", "reais|max:20");
+                Validate.AddRule(textAcrecimo, "Acrécimo", "reais|max:20");
+                Validate.AddRule(textValor, "Valor Total", "reais|max:20");
 
                 Validate.Validation();
 
@@ -207,10 +225,10 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     manutencoes.Observacoes = textObservacoes.Text;
                     manutencoes.OrdemServico = textOrdemServico.Text;
                     manutencoes.Fornecedor = combFornecedor.SelectedValue;
-                    manutencoes.MaoObra = Convert.ToString(Converter.ToDecimal(textMaoObra.Text));
-                    manutencoes.Desconto = Convert.ToString(Converter.ToDecimal(textDesconto.Text));
-                    manutencoes.Acrecimo = Convert.ToString(Converter.ToDecimal(textAcrecimo.Text));
-                    manutencoes.Valor = Convert.ToString(Converter.ToDecimal(textValor.Text));
+                    manutencoes.MaoObra = Converter.ToDecimal(textMaoObra.Text, true);
+                    manutencoes.Desconto = Converter.ToDecimal(textDesconto.Text, true);
+                    manutencoes.Acrecimo = Converter.ToDecimal(textAcrecimo.Text, true);
+                    manutencoes.Valor = Converter.ToDecimal(textValor.Text, true);
                     manutencoes.Itens = jsonItens;
 
                     if (Id > 0) {
@@ -290,7 +308,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                         textItemCodigo.Text,
                         textItemDescricao.Text,
                         textItemQtd.Text,
-                        Converter.ToReais(Convert.ToDecimal(textItemValor.Text)),
+                        Converter.ToReais(textItemValor.Text),
                         Converter.ToReais(valorTotal)
                     );
 
@@ -313,6 +331,15 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         private void OnChangedTextValor(object sender, EventArgs e) {
             MaskedTextBox Text = (MaskedTextBox)sender;
             Converter.OnPressMoeda(ref Text);
+        }
+
+        private void OnChangedTextQtd(object sender, EventArgs e) {
+            MaskedTextBox Text = (MaskedTextBox)sender;
+            Converter.OnPressQtd(ref Text);
+        }
+
+        private void OnAtualizarTotal(object sender, KeyEventArgs e) {
+            RefreshValorTotal();
         }
     }
 }
