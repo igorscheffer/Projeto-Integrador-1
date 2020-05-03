@@ -4,22 +4,22 @@ using System;
 namespace Projeto_Integrador_1.Connection {
     class Config {
         public MySqlConnection Connection;
-        private string Host = "projet_001.mysql.dbaas.com.br";
-        private string User = "projet_001";
-        private string Pass = "ProjetSisu01I";
-        private string Base = "projet_001";
-        private bool ServerLocal = true;
+        private string Host = "localhost";
+        private string User = "root";
+        private string Pass = "";
+        private string Base = "projeto_integrador";
+        private bool ServerRemote = false;
 
         public Config() {
             Initialize();
         }
 
         public void Initialize() {
-            if (ServerLocal) {
-                Host = "localhost";
-                User = "root";
-                Pass = "";
-                Base = "projeto_integrador";
+            if (ServerRemote) {
+                Host = Properties.Settings.Default.RemoteHost;
+                User = Properties.Settings.Default.RemoteUser;
+                Pass = Properties.Settings.Default.RemotePass;
+                Base = Properties.Settings.Default.RemoteBase;
             }
 
             Connection = new MySqlConnection("SERVER=" + Host + ";DATABASE=" + Base + ";UID=" + User + ";PASSWORD=" + Pass + ";Convert Zero Datetime=True;");

@@ -58,5 +58,41 @@ namespace Projeto_Integrador_1.Properties {
                 this["salvarSenha"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("projet_001.mysql.dbaas.com.br")]
+        public string RemoteHost {
+            get {
+                return ((string)(this["RemoteHost"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("projet_001")]
+        public string RemoteUser {
+            get {
+                return ((string)(this["RemoteUser"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ProjetSisu01I")]
+        public string RemotePass {
+            get {
+                return ((string)(this["RemotePass"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("projet_001")]
+        public string RemoteBase {
+            get {
+                return ((string)(this["RemoteBase"]));
+            }
+        }
     }
 }
