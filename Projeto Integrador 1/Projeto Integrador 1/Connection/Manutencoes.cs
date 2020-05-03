@@ -39,17 +39,17 @@ namespace Projeto_Integrador_1.Connection {
                 MySqlCommand query = new MySqlCommand(sql, Connection);
 
                 query.Parameters.AddWithValue("@tipo", Tipo);
-                query.Parameters.AddWithValue("@preventiva", Preventiva);
+                query.Parameters.AddWithValue("@preventiva", Converter.ToIntDB(Preventiva, true));
                 query.Parameters.AddWithValue("@veiculo", Veiculo);
                 query.Parameters.AddWithValue("@status", Status);
-                query.Parameters.AddWithValue("@motorista", Motorista);
+                query.Parameters.AddWithValue("@motorista", Converter.ToIntDB(Motorista, true));
                 query.Parameters.AddWithValue("@data_agendada", DateTime.Parse(DataAgendada));
-                query.Parameters.AddWithValue("@data_realizada", DateTime.Parse(DataRealizada));
+                query.Parameters.AddWithValue("@data_realizada", (!string.IsNullOrWhiteSpace(DataRealizada) ? (object)DateTime.Parse(DataRealizada) : DBNull.Value));
                 query.Parameters.AddWithValue("@hodometro_agendado", HodometroAgendado);
-                query.Parameters.AddWithValue("@hodometro_realizado", HodometroRealizado);
+                query.Parameters.AddWithValue("@hodometro_realizado", Converter.ToIntDB(HodometroRealizado, true));
                 query.Parameters.AddWithValue("@observacoes", Observacoes);
                 query.Parameters.AddWithValue("@ordem_servico", OrdemServico);
-                query.Parameters.AddWithValue("@fornecedor", Fornecedor);
+                query.Parameters.AddWithValue("@fornecedor", Converter.ToIntDB(Fornecedor, true));
                 query.Parameters.AddWithValue("@mao_obra", MaoObra);
                 query.Parameters.AddWithValue("@desconto", Desconto);
                 query.Parameters.AddWithValue("@acrecimo", Acrecimo);
@@ -63,7 +63,7 @@ namespace Projeto_Integrador_1.Connection {
                 Success = true;
                 Message = "Manutenção salva com sucesso.";
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -77,17 +77,17 @@ namespace Projeto_Integrador_1.Connection {
                 MySqlCommand query = new MySqlCommand(sql, Connection);
 
                 query.Parameters.AddWithValue("@tipo", Tipo);
-                query.Parameters.AddWithValue("@preventiva", Preventiva);
+                query.Parameters.AddWithValue("@preventiva", Converter.ToIntDB(Preventiva, true));
                 query.Parameters.AddWithValue("@veiculo", Veiculo);
                 query.Parameters.AddWithValue("@status", Status);
                 query.Parameters.AddWithValue("@motorista", Motorista);
                 query.Parameters.AddWithValue("@data_agendada", DateTime.Parse(DataAgendada));
-                query.Parameters.AddWithValue("@data_realizada", DateTime.Parse(DataRealizada));
+                query.Parameters.AddWithValue("@data_realizada", (!string.IsNullOrWhiteSpace(DataRealizada) ? (object)DateTime.Parse(DataRealizada) : DBNull.Value));
                 query.Parameters.AddWithValue("@hodometro_agendado", HodometroAgendado);
-                query.Parameters.AddWithValue("@hodometro_realizado", HodometroRealizado);
+                query.Parameters.AddWithValue("@hodometro_realizado", Converter.ToIntDB(HodometroRealizado, true));
                 query.Parameters.AddWithValue("@observacoes", Observacoes);
                 query.Parameters.AddWithValue("@ordem_servico", OrdemServico);
-                query.Parameters.AddWithValue("@fornecedor", Fornecedor);
+                query.Parameters.AddWithValue("@fornecedor", Converter.ToIntDB(Fornecedor, true));
                 query.Parameters.AddWithValue("@mao_obra", MaoObra);
                 query.Parameters.AddWithValue("@desconto", Desconto);
                 query.Parameters.AddWithValue("@acrecimo", Acrecimo);
@@ -102,7 +102,7 @@ namespace Projeto_Integrador_1.Connection {
                 Success = true;
                 Message = "Manutenção salva com sucesso.";
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -128,8 +128,8 @@ namespace Projeto_Integrador_1.Connection {
                         Veiculo = data["veiculo"],
                         Status = data["status"],
                         Motorista = data["motorista"],
-                        DataAgendada = Convert.ToDateTime(data["data_agendada"]).ToString("dd/MM/yyyy HH:mm"),
-                        DataRealizada = Convert.ToDateTime(data["data_realizada"]).ToString("dd/MM/yyyy HH:mm"),
+                        DataAgendada = Converter.DateToString(data["data_agendada"], "dd/MM/yyyy HH:mm"),
+                        DataRealizada = Converter.DateToString(data["data_realizada"], "dd/MM/yyyy HH:mm"),
                         HodometroAgendado = data["hodometro_agendado"],
                         HodometroRealizado = data["hodometro_realizado"],
                         Observacoes = data["observacoes"],
@@ -149,7 +149,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 Success = true;
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -176,8 +176,8 @@ namespace Projeto_Integrador_1.Connection {
                     Results.Add(
                         new {
                             Id = data["id"],
-                            DataAgendada = data["data_agendada"],
-                            DataRealizada = data["data_realizada"],
+                            DataAgendada = Converter.DateToString(data["data_agendada"], "dd/MM/yyyy HH:mm"),
+                            DataRealizada = Converter.DateToString(data["data_realizada"], "dd/MM/yyyy HH:mm"),
                             Tipo = data["tipo"],
                             Placa = data["veiculo_placa"],
                             Veiculo = (data["veiculo_placa"] + " - " + data["veiculo_placa"] + " " + marca + " " + data["veiculo_modelo"]).ToUpper(),
@@ -194,7 +194,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 Success = true;
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -215,7 +215,7 @@ namespace Projeto_Integrador_1.Connection {
                 Success = true;
                 Message = "Manutenção excluida com sucesso.";
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }

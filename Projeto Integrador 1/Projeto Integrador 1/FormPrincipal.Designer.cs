@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.painelMenu = new System.Windows.Forms.Panel();
+            this.btnSair = new FontAwesome.Sharp.IconButton();
             this.btnFinanceiro = new FontAwesome.Sharp.IconButton();
             this.btnMultas = new FontAwesome.Sharp.IconButton();
             this.btnAbastecimentos = new FontAwesome.Sharp.IconButton();
@@ -48,7 +49,6 @@
             this.painelSeparador = new System.Windows.Forms.Panel();
             this.btnHiddenMenu = new FontAwesome.Sharp.IconButton();
             this.painelForm = new System.Windows.Forms.Panel();
-            this.btnSair = new FontAwesome.Sharp.IconButton();
             this.painelMenu.SuspendLayout();
             this.painelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -76,6 +76,34 @@
             this.painelMenu.Name = "painelMenu";
             this.painelMenu.Size = new System.Drawing.Size(220, 681);
             this.painelMenu.TabIndex = 0;
+            // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSair.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.Color.White;
+            this.btnSair.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            this.btnSair.IconColor = System.Drawing.Color.White;
+            this.btnSair.IconSize = 22;
+            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSair.Location = new System.Drawing.Point(0, 434);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(5);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnSair.Rotation = 0D;
+            this.btnSair.Size = new System.Drawing.Size(220, 40);
+            this.btnSair.TabIndex = 11;
+            this.btnSair.Tag = "sair";
+            this.btnSair.Text = "Sair";
+            this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.OnClickMenu);
             // 
             // btnFinanceiro
             // 
@@ -436,34 +464,6 @@
             this.painelForm.Name = "painelForm";
             this.painelForm.Size = new System.Drawing.Size(1040, 621);
             this.painelForm.TabIndex = 2;
-            // 
-            // btnSair
-            // 
-            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSair.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSair.FlatAppearance.BorderSize = 0;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            this.btnSair.IconColor = System.Drawing.Color.White;
-            this.btnSair.IconSize = 22;
-            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.Location = new System.Drawing.Point(0, 434);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(5);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnSair.Rotation = 0D;
-            this.btnSair.Size = new System.Drawing.Size(220, 40);
-            this.btnSair.TabIndex = 11;
-            this.btnSair.Tag = "sair";
-            this.btnSair.Text = "Sair";
-            this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Click += new System.EventHandler(this.OnClickMenu);
             // 
             // FormPrincipal
             // 

@@ -1,4 +1,6 @@
-﻿namespace Projeto_Integrador_1.TMSForms.Register
+﻿using Projeto_Integrador_1.Util;
+
+namespace Projeto_Integrador_1.TMSForms.Register
 {
     partial class FormMotoristas
     {
@@ -39,7 +41,6 @@
             this.textCNH = new Guna.UI.WinForms.GunaTextBox();
             this.lblCNH = new System.Windows.Forms.Label();
             this.lblVencimentoCNH = new System.Windows.Forms.Label();
-            this.timeVencimentoCNH = new Guna.UI.WinForms.GunaDateTimePicker();
             this.combCategoriaCNH = new Guna.UI.WinForms.GunaComboBox();
             this.lblCategoriaCNH = new System.Windows.Forms.Label();
             this.combSexo = new Guna.UI.WinForms.GunaComboBox();
@@ -89,6 +90,7 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.textCEP = new System.Windows.Forms.MaskedTextBox();
+            this.timeVencimentoCNH = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -262,32 +264,6 @@
             this.lblVencimentoCNH.Size = new System.Drawing.Size(123, 18);
             this.lblVencimentoCNH.TabIndex = 98;
             this.lblVencimentoCNH.Text = "Vencimento CNH";
-            // 
-            // timeVencimentoCNH
-            // 
-            this.timeVencimentoCNH.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.timeVencimentoCNH.BaseColor = System.Drawing.Color.White;
-            this.timeVencimentoCNH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.timeVencimentoCNH.BorderSize = 1;
-            this.timeVencimentoCNH.CustomFormat = "dd/MM/yyyy";
-            this.timeVencimentoCNH.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.timeVencimentoCNH.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeVencimentoCNH.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.timeVencimentoCNH.ForeColor = System.Drawing.Color.Black;
-            this.timeVencimentoCNH.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeVencimentoCNH.Location = new System.Drawing.Point(319, 144);
-            this.timeVencimentoCNH.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.timeVencimentoCNH.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.timeVencimentoCNH.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.timeVencimentoCNH.Name = "timeVencimentoCNH";
-            this.timeVencimentoCNH.OnHoverBaseColor = System.Drawing.Color.White;
-            this.timeVencimentoCNH.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeVencimentoCNH.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeVencimentoCNH.OnPressedColor = System.Drawing.Color.Black;
-            this.timeVencimentoCNH.Size = new System.Drawing.Size(207, 35);
-            this.timeVencimentoCNH.TabIndex = 6;
-            this.timeVencimentoCNH.Text = "21/04/2020";
-            this.timeVencimentoCNH.Value = new System.DateTime(2020, 4, 21, 0, 0, 0, 0);
             // 
             // combCategoriaCNH
             // 
@@ -1011,11 +987,35 @@
             this.textCEP.Size = new System.Drawing.Size(88, 22);
             this.textCEP.TabIndex = 10;
             // 
+            // timeVencimentoCNH
+            // 
+            this.timeVencimentoCNH.BackColor = System.Drawing.Color.Transparent;
+            this.timeVencimentoCNH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.timeVencimentoCNH.BorderThickness = 1;
+            this.timeVencimentoCNH.CheckedState.Parent = this.timeVencimentoCNH;
+            this.timeVencimentoCNH.CustomFormat = " ";
+            this.timeVencimentoCNH.FillColor = System.Drawing.Color.White;
+            this.timeVencimentoCNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.timeVencimentoCNH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.timeVencimentoCNH.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeVencimentoCNH.HoverState.Parent = this.timeVencimentoCNH;
+            this.timeVencimentoCNH.Location = new System.Drawing.Point(319, 144);
+            this.timeVencimentoCNH.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.timeVencimentoCNH.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.timeVencimentoCNH.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.timeVencimentoCNH.Name = "timeVencimentoCNH";
+            this.timeVencimentoCNH.ShadowDecoration.Parent = this.timeVencimentoCNH;
+            this.timeVencimentoCNH.Size = new System.Drawing.Size(207, 35);
+            this.timeVencimentoCNH.TabIndex = 277;
+            this.timeVencimentoCNH.UseTransparentBackground = true;
+            this.timeVencimentoCNH.Value = new System.DateTime(2020, 5, 3, 16, 47, 44, 411);
+            // 
             // FormMotoristas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 535);
+            this.Controls.Add(this.timeVencimentoCNH);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel9);
@@ -1052,7 +1052,6 @@
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.combCategoriaCNH);
             this.Controls.Add(this.lblCategoriaCNH);
-            this.Controls.Add(this.timeVencimentoCNH);
             this.Controls.Add(this.lblVencimentoCNH);
             this.Controls.Add(this.textCNH);
             this.Controls.Add(this.lblCNH);
@@ -1106,7 +1105,6 @@
         private Guna.UI.WinForms.GunaTextBox textCNH;
         private System.Windows.Forms.Label lblCNH;
         private System.Windows.Forms.Label lblVencimentoCNH;
-        private Guna.UI.WinForms.GunaDateTimePicker timeVencimentoCNH;
         private Guna.UI.WinForms.GunaComboBox combCategoriaCNH;
         private System.Windows.Forms.Label lblCategoriaCNH;
         private Guna.UI.WinForms.GunaComboBox combSexo;
@@ -1156,5 +1154,6 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.MaskedTextBox textCEP;
+        private Guna.UI2.WinForms.Guna2DateTimePicker timeVencimentoCNH;
     }
 }

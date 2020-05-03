@@ -1,13 +1,60 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Projeto_Integrador_1.Util {
     class Converter {
+        public static void DateReset(object sender, KeyPressEventArgs e) {
+            try {
+                Guna2DateTimePicker Date = (Guna2DateTimePicker)sender;
+                if (e.KeyChar == (char)Keys.Escape || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
+                    Date.CustomFormat = " ";
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Houve um erro ao resetar a data (" + ex.Message + ")");
+            }
+        }
+        public static void DateValueChanged(object sender, EventArgs e) {
+            try {
+                Guna2DateTimePicker Date = (Guna2DateTimePicker)sender;
+                if (Convert.ToString(Date.Value) != Convert.ToString(DateTime.Now)) {
+                    Date.CustomFormat = "dd/MM/yyyy";
+                }
+                else {
+                    Date.CustomFormat = " ";
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Houve um erro ao converter a data (" + ex.Message + ")");
+            }
+        }
+        public static void DateTimeValueChanged(object sender, EventArgs e) {
+            try {
+                Guna2DateTimePicker Date = (Guna2DateTimePicker)sender;
+                if (Convert.ToString(Date.Value) != Convert.ToString(DateTime.Now)) {
+                    Date.CustomFormat = "dd/MM/yyyy HH:mm";
+                }
+                else {
+                    Date.CustomFormat = " ";
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Houve um erro ao converter a data (" + ex.Message + ")");
+            }
+        }
+        public static string DateToString(dynamic Date, string Format) {
+            if (!string.IsNullOrWhiteSpace(Convert.ToString(Date))) {
+                return Convert.ToDateTime(Date).ToString(Format);
+            }
+            else {
+                return string.Empty;
+            }
+        }
+        public static void OnlyNumber(object sender, KeyPressEventArgs e) {
+            e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != (char)8;
+        }
         public static void OnPressMoeda(ref MaskedTextBox ToConvert) {
             string numero = string.Empty;
             double valor = 0;
@@ -34,7 +81,6 @@ namespace Projeto_Integrador_1.Util {
                 Console.WriteLine("Erro: " + e.Message);
             }
         }
-
         public static void OnPressQtd(ref MaskedTextBox ToConvert) {
             string numero = string.Empty;
             double valor = 0;
@@ -90,21 +136,31 @@ namespace Projeto_Integrador_1.Util {
         }
 
         public static dynamic ToDecimal(string ToDecimal, bool ConvertToString = false) {
-            string Decimal;
+            try {
+                string Decimal = "0";
 
-            if (!string.IsNullOrWhiteSpace(ToDecimal)) {
-                //Decimal = String.Format("{0:#}", ToDecimal);
-                Decimal = Convert.ToString(decimal.Parse(ToDecimal, NumberStyles.AllowCurrencySymbol | NumberStyles.Number));
-            }
-            else {
-                throw new Exception("Não foi possivel converter o valor.");
-            }
+                if (!string.IsNullOrWhiteSpace(ToDecimal)) {
+                    //Decimal = String.Format("{0:#}", ToDecimal);
+                    Decimal = Convert.ToString(decimal.Parse(ToDecimal, NumberStyles.AllowCurrencySymbol | NumberStyles.Number));
+                }
+                else {
+                    throw new Exception("Não foi possivel converter o valor.");
+                }
 
-            if (ConvertToString == false) {
-                return Convert.ToDecimal(Decimal);
+                if (ConvertToString == false) {
+                    return Convert.ToDecimal(Decimal);
+                }
+                else {
+                    return Decimal;
+                }
             }
-            else {
-                return Decimal;
+            catch (Exception e) {
+                if (ConvertToString == false) {
+                    return Convert.ToDecimal(0);
+                }
+                else {
+                    return string.Empty;
+                }
             }
         }
 
@@ -123,7 +179,8 @@ namespace Projeto_Integrador_1.Util {
                 return Reais;
             }
             catch (Exception e) {
-                throw;
+                Console.WriteLine(e.Message);
+                return string.Empty;
             }
         }
 
@@ -142,7 +199,31 @@ namespace Projeto_Integrador_1.Util {
                 return Reais;
             }
             catch (Exception e) {
-                throw;
+                Console.WriteLine(e.Message);
+                return string.Empty;
+            }
+        }
+        public static dynamic ToIntDB(dynamic input, bool RBDNull = false) {
+            if (!string.IsNullOrWhiteSpace(Convert.ToString(input))) {
+                if (Convert.ToInt32(input) > 0) {
+                    return Convert.ToInt32(input);
+                }
+                else {
+                    if (RBDNull) {
+                        return DBNull.Value;
+                    }
+                    else {
+                        return 0;
+                    }
+                }
+            }
+            else {
+                if (RBDNull) {
+                    return DBNull.Value;
+                }
+                else {
+                    return 0;
+                }
             }
         }
     }

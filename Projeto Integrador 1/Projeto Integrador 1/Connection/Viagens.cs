@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
 
@@ -41,7 +42,7 @@ namespace Projeto_Integrador_1.Connection {
         public string TotalAbastecimentos { get; set; }
 
         public void Create() {
-            string sql = "INSERT INTO `viagens` (`remetente`, `destinatario`, `tomador`, `codigo_interno`, `tipo_viagem`, `veiculo`, `reboque`, `motorista`, `saida_cidade`, `saida_uf`, `destino_cidade`, `destino_uf`, `status`, `data_saida`, `data_entrega`, `data_chegada`, `hodometro_saida`, `hodometro_entrega`, `hodometro_percorrido`, `valor`, `informacoes_complementares`, `cargas`, `valor_cargas`, `custos`, `valor_custos`, `abastecimentos`, `valor_abastecimentos`) VALUES (@remetente, @destinatario, @tomador, @codigo_interno, @tipo_viagem, @veiculo, @reboque, @motorista, @saida_cidade, @saida_uf, @destino_cidade, @destino_uf, @status, @data_saida, @data_entrega, @data_chegada, @hodometro_saida, @hodometro_entrega, @hodometro_percorrido, @valor, @informacoes_complementares, @cargas, @valor_cargas, @custos, @valor_custos, @abastecimentos, @valor_abastecimentos);";
+            string sql = "INSERT INTO `viagens` (`remetente`, `destinatario`, `tomador`, `codigo_interno`, `tipo_viagem`, `veiculo`, `reboque`, `motorista`, `saida_cidade`, `saida_uf`, `destino_cidade`, `destino_uf`, `status`, `data_saida`, `data_entrega`, `data_chegada`, `hodometro_saida`, `hodometro_entrega`, `hodometro_chegada`, `hodometro_percorrido`, `valor`, `informacoes_complementares`, `cargas`, `valor_cargas`, `custos`, `valor_custos`, `abastecimentos`, `valor_abastecimentos`) VALUES (@remetente, @destinatario, @tomador, @codigo_interno, @tipo_viagem, @veiculo, @reboque, @motorista, @saida_cidade, @saida_uf, @destino_cidade, @destino_uf, @status, @data_saida, @data_entrega, @data_chegada, @hodometro_saida, @hodometro_entrega, @hodometro_chegada, @hodometro_percorrido, @valor, @informacoes_complementares, @cargas, @valor_cargas, @custos, @valor_custos, @abastecimentos, @valor_abastecimentos);";
             try {
                 OpenConnection();
 
@@ -53,7 +54,7 @@ namespace Projeto_Integrador_1.Connection {
                 query.Parameters.AddWithValue("@codigo_interno", CodigoInterno);
                 query.Parameters.AddWithValue("@tipo_viagem", TipoViagem);
                 query.Parameters.AddWithValue("@veiculo", Veiculo);
-                query.Parameters.AddWithValue("@reboque", Reboque);
+                query.Parameters.AddWithValue("@reboque", Converter.ToIntDB(Reboque, true));
                 query.Parameters.AddWithValue("@motorista", Motorista);
                 query.Parameters.AddWithValue("@saida_cidade", SaidaCidade);
                 query.Parameters.AddWithValue("@saida_uf", SaidaUF);
@@ -61,11 +62,12 @@ namespace Projeto_Integrador_1.Connection {
                 query.Parameters.AddWithValue("@destino_uf", DestinoUF);
                 query.Parameters.AddWithValue("@status", Status);
                 query.Parameters.AddWithValue("@data_saida", DateTime.Parse(DataSaida));
-                query.Parameters.AddWithValue("@data_entrega", DateTime.Parse(DataEntrega));
-                query.Parameters.AddWithValue("@data_chegada", DateTime.Parse(DataChegada));
-                query.Parameters.AddWithValue("@hodometro_saida", HodometroSaida);
-                query.Parameters.AddWithValue("@hodometro_entrega", HodometroEntrega);
-                query.Parameters.AddWithValue("@hodometro_percorrido", HodometroPercorrido);
+                query.Parameters.AddWithValue("@data_entrega", (!string.IsNullOrWhiteSpace(DataEntrega) ? (object)DateTime.Parse(DataEntrega) : DBNull.Value));
+                query.Parameters.AddWithValue("@data_chegada", (!string.IsNullOrWhiteSpace(DataChegada) ? (object)DateTime.Parse(DataChegada) : DBNull.Value));
+                query.Parameters.AddWithValue("@hodometro_saida", Converter.ToIntDB(HodometroSaida, true));
+                query.Parameters.AddWithValue("@hodometro_entrega", Converter.ToIntDB(HodometroEntrega, true));
+                query.Parameters.AddWithValue("@hodometro_chegada", Converter.ToIntDB(HodometroChegada, true));
+                query.Parameters.AddWithValue("@hodometro_percorrido", Converter.ToIntDB(HodometroPercorrido, true));
                 query.Parameters.AddWithValue("@valor", Valor);
                 query.Parameters.AddWithValue("@informacoes_complementares", InformacoesComplementares);
                 query.Parameters.AddWithValue("@cargas", Cargas);
@@ -82,26 +84,26 @@ namespace Projeto_Integrador_1.Connection {
                 Success = true;
                 Message = "Viagem salva com sucesso.";
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
         }
 
         public void Update() {
-            string sql = "UPDATE `viagens` SET `remetente` = @remetente, `destinatario` = @destinatario, `tomador` = @tomador, `codigo_interno` = @codigo_interno, `tipo_viagem` = @tipo_viagem, `veiculo` = @veiculo, `reboque` = @reboque, `motorista` = @motorista, `saida_cidade` = @saida_cidade, `saida_uf` = @saida_uf, `destino_cidade` = @destino_cidade, `destino_uf` = @destino_uf, `status` = @status, `data_saida` = @data_saida, `data_entrega` = @data_entrega, `data_chegada` = @data_chegada, `hodometro_saida` = @hodometro_saida, `hodometro_entrega` = @hodometro_entrega, `hodometro_percorrido` = @hodometro_percorrido, `valor` = @valor, `informacoes_complementares` = @informacoes_complementares, `cargas` = @cargas, `valor_cargas` = @valor_cargas, `custos` = @custos, `valor_custos` = @valor_custos, `abastecimentos` = @abastecimentos, `valor_abastecimentos` = @valor_abastecimentos WHERE `id` = @id LIMIT 1;";
+            string sql = "UPDATE `viagens` SET `remetente` = @remetente, `destinatario` = @destinatario, `tomador` = @tomador, `codigo_interno` = @codigo_interno, `tipo_viagem` = @tipo_viagem, `veiculo` = @veiculo, `reboque` = @reboque, `motorista` = @motorista, `saida_cidade` = @saida_cidade, `saida_uf` = @saida_uf, `destino_cidade` = @destino_cidade, `destino_uf` = @destino_uf, `status` = @status, `data_saida` = @data_saida, `data_entrega` = @data_entrega, `data_chegada` = @data_chegada, `hodometro_saida` = @hodometro_saida, `hodometro_entrega` = @hodometro_entrega, `hodometro_chegada` = @hodometro_chegada, `hodometro_percorrido` = @hodometro_percorrido, `valor` = @valor, `informacoes_complementares` = @informacoes_complementares, `cargas` = @cargas, `valor_cargas` = @valor_cargas, `custos` = @custos, `valor_custos` = @valor_custos, `abastecimentos` = @abastecimentos, `valor_abastecimentos` = @valor_abastecimentos WHERE `id` = @id LIMIT 1;";
             try {
                 OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
-                Console.WriteLine(HodometroSaida);
+
                 query.Parameters.AddWithValue("@remetente", Remetente);
                 query.Parameters.AddWithValue("@destinatario", Destinatario);
                 query.Parameters.AddWithValue("@tomador", Tomador);
                 query.Parameters.AddWithValue("@codigo_interno", CodigoInterno);
                 query.Parameters.AddWithValue("@tipo_viagem", TipoViagem);
                 query.Parameters.AddWithValue("@veiculo", Veiculo);
-                query.Parameters.AddWithValue("@reboque", Reboque);
+                query.Parameters.AddWithValue("@reboque", Converter.ToIntDB(Reboque, true));
                 query.Parameters.AddWithValue("@motorista", Motorista);
                 query.Parameters.AddWithValue("@saida_cidade", SaidaCidade);
                 query.Parameters.AddWithValue("@saida_uf", SaidaUF);
@@ -109,11 +111,12 @@ namespace Projeto_Integrador_1.Connection {
                 query.Parameters.AddWithValue("@destino_uf", DestinoUF);
                 query.Parameters.AddWithValue("@status", Status);
                 query.Parameters.AddWithValue("@data_saida", DateTime.Parse(DataSaida));
-                query.Parameters.AddWithValue("@data_entrega", DateTime.Parse(DataEntrega));
-                query.Parameters.AddWithValue("@data_chegada", DateTime.Parse(DataChegada));
-                query.Parameters.AddWithValue("@hodometro_saida", HodometroSaida);
-                query.Parameters.AddWithValue("@hodometro_entrega", HodometroEntrega);
-                query.Parameters.AddWithValue("@hodometro_percorrido", HodometroPercorrido);
+                query.Parameters.AddWithValue("@data_entrega", (!string.IsNullOrWhiteSpace(DataEntrega) ? (object)DateTime.Parse(DataEntrega) : DBNull.Value));
+                query.Parameters.AddWithValue("@data_chegada", (!string.IsNullOrWhiteSpace(DataChegada) ? (object)DateTime.Parse(DataChegada) : DBNull.Value));
+                query.Parameters.AddWithValue("@hodometro_saida", Converter.ToIntDB(HodometroSaida, true));
+                query.Parameters.AddWithValue("@hodometro_entrega", Converter.ToIntDB(HodometroEntrega, true));
+                query.Parameters.AddWithValue("@hodometro_chegada", Converter.ToIntDB(HodometroChegada, true));
+                query.Parameters.AddWithValue("@hodometro_percorrido", Converter.ToIntDB(HodometroPercorrido, true));
                 query.Parameters.AddWithValue("@valor", Valor);
                 query.Parameters.AddWithValue("@informacoes_complementares", InformacoesComplementares);
                 query.Parameters.AddWithValue("@cargas", Cargas);
@@ -121,7 +124,7 @@ namespace Projeto_Integrador_1.Connection {
                 query.Parameters.AddWithValue("@custos", Custos);
                 query.Parameters.AddWithValue("@valor_custos", TotalCustos);
                 query.Parameters.AddWithValue("@abastecimentos", Abastecimentos);
-                query.Parameters.AddWithValue("@valor_abastecimentos", TotalAbastecimentos); ;
+                query.Parameters.AddWithValue("@valor_abastecimentos", TotalAbastecimentos);
                 query.Parameters.AddWithValue("@id", Id);
 
                 query.ExecuteNonQuery();
@@ -131,7 +134,7 @@ namespace Projeto_Integrador_1.Connection {
                 Success = true;
                 Message = "Viagem salva com sucesso.";
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -163,9 +166,9 @@ namespace Projeto_Integrador_1.Connection {
                     DestinoCidade = data["destino_cidade"],
                     DestinoUF = data["destino_uf"],
                     Status = data["status"],
-                    DataSaida = Convert.ToDateTime(data["data_saida"]).ToString("dd/MM/yyyy HH:mm"),
-                    DataEntrega = Convert.ToDateTime(data["data_entrega"]).ToString("dd/MM/yyyy HH:mm"),
-                    DataChegada = Convert.ToDateTime(data["data_chegada"]).ToString("dd/MM/yyyy HH:mm"),
+                    DataSaida = Converter.DateToString(data["data_saida"], "dd/MM/yyyy HH:mm"),
+                    DataEntrega = Converter.DateToString(data["data_entrega"], "dd/MM/yyyy HH:mm"),
+                    DataChegada = Converter.DateToString(data["data_chegada"], "dd/MM/yyyy HH:mm"),
                     HodometroSaida = data["hodometro_saida"],
                     HodometroEntrega = data["hodometro_entrega"],
                     HodometroChegada = data["hodometro_chegada"],
@@ -183,7 +186,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 Success = true;
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -224,7 +227,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 Success = true;
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -245,7 +248,7 @@ namespace Projeto_Integrador_1.Connection {
                 Success = true;
                 Message = "Viagem excluida com sucesso.";
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }

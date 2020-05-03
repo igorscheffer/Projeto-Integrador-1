@@ -155,7 +155,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 Success = true;
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -193,7 +193,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 Success = true;
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -214,7 +214,7 @@ namespace Projeto_Integrador_1.Connection {
                 Success = true;
                 Message = "Veiculo excluido com sucesso.";
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }

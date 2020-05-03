@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using Projeto_Integrador_1.Util.Validate;
 using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormFinanceiro : Form {
@@ -20,6 +19,14 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         public FormFinanceiro(FormPrincipal fmPrincipal = null, int Id = 0, dynamic LancarFinanceiro = null) {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
+
+            textValor.KeyPress += Converter.OnlyNumber;
+
+            timeDataEmissao.KeyPress += Converter.DateReset;
+            timeDataEmissao.ValueChanged += Converter.DateValueChanged;
+
+            timeDataVencimento.KeyPress += Converter.DateReset;
+            timeDataVencimento.ValueChanged += Converter.DateValueChanged;
 
             combTipo.DisplayMember = "Text";
             combTipo.ValueMember = "Value";
@@ -76,20 +83,23 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         private void PreencherGrids(string json) {
             if (!string.IsNullOrWhiteSpace(json)) {
                 List<dynamic> Parcelas = JsonConvert.DeserializeObject<List<dynamic>>(json);
-                foreach (var parcela in Parcelas) {
-                    gridParcelas.Rows.Add(
-                        parcela.Parcela,
-                        parcela.Data,
-                        Converter.ToReais(parcela.Valor),
-                        Convert.ToInt32(parcela.FormaPagamento),
-                        parcela.Observacoes,
-                        parcela.Pago
-                    );
-                }
 
-                lblInfoPagamento.Visible = true;
-                panelInfoPagamento.Visible = true;
-                gridParcelas.Visible = true;
+                if (Parcelas.Count > 0) {
+                    foreach (var parcela in Parcelas) {
+                        gridParcelas.Rows.Add(
+                            parcela.Parcela,
+                            parcela.Data,
+                            Converter.ToReais(parcela.Valor),
+                            Convert.ToInt32(parcela.FormaPagamento),
+                            parcela.Observacoes,
+                            parcela.Pago
+                        );
+                    }
+
+                    lblInfoPagamento.Visible = true;
+                    panelInfoPagamento.Visible = true;
+                    gridParcelas.Visible = true;
+                }
             }
         }
 
@@ -149,68 +159,71 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         }
 
         private void OnEnviar(object sender, EventArgs e) {
+            try {
+                Validate Validate = new Validate(this, ErrorProvider);
 
-            Validate Validate = new Validate(this, ErrorProvider);
+                Validate.AddRule(textNome, "Nome", "required|max:30");
+                Validate.AddRule(combTipo, "Tipo", "required|numeric|exact:1");
+                Validate.AddRule(combCentroCusto, "Centro de Custo", "required|max:2");
+                Validate.AddRule(combFormaPagamento, "Forma de Pagamento", "required|max:2");
+                Validate.AddRule(combStatus, "Status", "required|numeric|exact:1");
+                Validate.AddRule(timeDataEmissao, "Data Emissão", "required|data:dd/MM/yyyy");
+                Validate.AddRule(timeDataVencimento, "Data Vencimento", "required|data:dd/MM/yyyy");
+                Validate.AddRule(textValor, "Valor", "required|reais|max:11");
+                Validate.AddRule(textDocumento, "Nº Document", "max:30");
+                Validate.AddRule(combOcorrencia, "Ocorrencia", "required|numeric|exact:1");
+                Validate.AddRule(textQtdParcelas, "Qtd. Parcelas", "required_if:combOcorrencia,2|max:3");
+                Validate.Validation();
 
-            Validate.AddRule(textNome, "Nome", "required|max:30");
-            Validate.AddRule(combTipo, "Tipo", "required|numeric|exact:1");
-            Validate.AddRule(combCentroCusto, "Centro de Custo", "required|max:2");
-            Validate.AddRule(combFormaPagamento, "Forma de Pagamento", "required|max:2");
-            Validate.AddRule(combStatus, "Status", "required|numeric|exact:1");
-            Validate.AddRule(timeDataEmissao, "Data Emissão", "required|data:dd/MM/yyyy");
-            Validate.AddRule(timeDataVencimento, "Data Vencimento", "required|data:dd/MM/yyyy");
-            Validate.AddRule(textValor, "Valor", "required|reais|max:11");
-            Validate.AddRule(textDocumento, "Nº Document", "max:30");
-            Validate.AddRule(combOcorrencia, "Ocorrencia", "required|numeric|exact:1");
-            Validate.AddRule(textQtdParcelas, "Qtd. Parcelas", "required_if:combOcorrencia,2|max:3");
-            Validate.Validation();
+                if (Validate.IsValid()) {
+                    PreencherJson();
 
-            if (Validate.IsValid()) {
-                PreencherJson();
+                    Connection.Financeiro financeiro = new Connection.Financeiro();
 
-                Connection.Financeiro financeiro = new Connection.Financeiro();
+                    financeiro.Nome = textNome.Text;
+                    financeiro.Tipo = combTipo.SelectedValue.ToString();
+                    financeiro.Referencia = Referencia;
+                    financeiro.CentroCusto = combCentroCusto.SelectedValue.ToString();
+                    financeiro.FormaPagamento = combFormaPagamento.SelectedValue.ToString();
+                    financeiro.Status = combStatus.SelectedValue.ToString();
+                    financeiro.DataEmissao = timeDataEmissao.Text;
+                    financeiro.DataVencimento = timeDataVencimento.Text;
+                    financeiro.Valor = Converter.ToDecimal(textValor.Text, true);
+                    financeiro.Documento = textDocumento.Text;
+                    financeiro.Ocorrencia = combOcorrencia.SelectedValue.ToString();
+                    financeiro.QtdParcelas = textQtdParcelas.Text;
+                    financeiro.Parcelas = jsonParcelas;
 
-                financeiro.Nome = textNome.Text;
-                financeiro.Tipo = combTipo.SelectedValue.ToString();
-                financeiro.Referencia = this.Referencia;
-                financeiro.CentroCusto = combCentroCusto.SelectedValue.ToString();
-                financeiro.FormaPagamento = combFormaPagamento.SelectedValue.ToString();
-                financeiro.Status = combStatus.SelectedValue.ToString();
-                financeiro.DataEmissao = timeDataEmissao.Text;
-                financeiro.DataVencimento = timeDataVencimento.Text;
-                financeiro.Valor = Converter.ToDecimal(textValor.Text, true);
-                financeiro.Documento = textDocumento.Text;
-                financeiro.Ocorrencia = combOcorrencia.SelectedValue.ToString();
-                financeiro.QtdParcelas = textQtdParcelas.Text;
-                financeiro.Parcelas = jsonParcelas;
+                    if (Id > 0) {
+                        financeiro.Id = Convert.ToInt32(Id);
+                        financeiro.Update();
+                    }
+                    else {
+                        financeiro.Create();
+                    }
 
-                if (Id > 0) {
-                    financeiro.Id = Convert.ToInt32(Id);
-                    financeiro.Update();
-                }
-                else {
-                    financeiro.Create();
-                }
-
-                if (financeiro.Success) {
-                    DialogResult SuccessBox = MessageBox.Show(financeiro.Message, "CADASTRADO");
-                    if (SuccessBox == DialogResult.OK) {
-                        if (fmPrincipal != null) {
-                            fmPrincipal.AtivarForm(new TMSForms.List.FormFinanceiro(fmPrincipal));
+                    if (financeiro.Success) {
+                        DialogResult SuccessBox = MessageBox.Show(financeiro.Message, "CADASTRADO");
+                        if (SuccessBox == DialogResult.OK) {
+                            if (fmPrincipal != null) {
+                                fmPrincipal.AtivarForm(new TMSForms.List.FormFinanceiro(fmPrincipal));
+                            }
+                            else {
+                                Close();
+                            }
                         }
-                        else {
-                            this.Close();
-                        }
+                    }
+                    else {
+                        MessageBox.Show("Houve um erro ao salvar o financeiro (" + financeiro.Message + ")");
                     }
                 }
                 else {
-                    MessageBox.Show("Houve um erro ao salvar o financeiro (" + financeiro.Message + ")");
+                    Validate.ErrorProviderShow();
                 }
             }
-            else {
-                Validate.ErrorProviderShow();
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
             }
-
         }
 
         private void PreencherJson() {
@@ -218,12 +231,12 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
             foreach (DataGridViewRow parcela in gridParcelas.Rows) {
                 Parcelas.Add(new {
-                    Parcela         = parcela.Cells[0].Value,
-                    Data            = parcela.Cells[1].Value,
-                    Valor           = Convert.ToDecimal(parcela.Cells[2].Value),
-                    FormaPagamento  = parcela.Cells[3].Value,
-                    Observacoes     = parcela.Cells[4].Value,
-                    Pago            = parcela.Cells[5].Value
+                    Parcela = parcela.Cells[0].Value,
+                    Data = parcela.Cells[1].Value,
+                    Valor = Convert.ToDecimal(parcela.Cells[2].Value),
+                    FormaPagamento = parcela.Cells[3].Value,
+                    Observacoes = parcela.Cells[4].Value,
+                    Pago = parcela.Cells[5].Value
                 });
             }
             jsonParcelas = JsonConvert.SerializeObject(Parcelas);

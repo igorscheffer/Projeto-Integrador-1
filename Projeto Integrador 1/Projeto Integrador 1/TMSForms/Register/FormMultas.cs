@@ -17,6 +17,17 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
 
+            textValor.KeyPress += Converter.OnlyNumber;
+
+            timeDataOcorrencia.KeyPress += Converter.DateReset;
+            timeDataOcorrencia.ValueChanged += Converter.DateValueChanged;
+
+            timeDataNotificacao.KeyPress += Converter.DateReset;
+            timeDataNotificacao.ValueChanged += Converter.DateValueChanged;
+
+            timeDataVencimento.KeyPress += Converter.DateReset;
+            timeDataVencimento.ValueChanged += Converter.DateValueChanged;
+
             LoadVeiculos();
             LoadMotoristas();
 
@@ -36,24 +47,27 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         }
 
         private void PreencherDados() {
+            try {
+                Multas multas = new Multas();
+                multas.Id = Id;
+                multas.Get();
 
-            Multas multas = new Multas();
-            multas.Id = Id;
-            multas.Get();
+                dynamic multa = multas.Results[0];
 
-            dynamic multa = multas.Results[0];
-
-            combVeiculo.SelectedValue = Convert.ToInt32(multa.Veiculo);
-            combMotorista.SelectedValue = Convert.ToInt32(multa.Motorista);
-            combGravidade.SelectedValue = Convert.ToInt32(multa.Gravidade);
-            combStatus.SelectedValue = Convert.ToInt32(multa.Status);
-            timeDataOcorrencia.Text = multa.DataOcorrencia;
-            timeDataNotificacao.Text = multa.DataNotificacao;
-            timeDataVencimento.Text = multa.DataVencimento;
-            textValor.Text = Converter.ToReais(multa.Valor);
-            textDescricao.Text = multa.Descricao;
-            textLocal.Text = multa.Local;
-
+                combVeiculo.SelectedValue = Convert.ToInt32(multa.Veiculo);
+                combMotorista.SelectedValue = (Convert.ToString(multa.Motorista) != string.Empty ? Convert.ToInt32(multa.Motorista) : "");
+                combGravidade.SelectedValue = Convert.ToInt32(multa.Gravidade);
+                combStatus.SelectedValue = Convert.ToInt32(multa.Status);
+                timeDataOcorrencia.Text = multa.DataOcorrencia;
+                timeDataNotificacao.Text = multa.DataNotificacao;
+                timeDataVencimento.Text = multa.DataVencimento;
+                textValor.Text = Converter.ToReais(multa.Valor);
+                textDescricao.Text = multa.Descricao;
+                textLocal.Text = multa.Local;
+            }
+            catch (Exception e) {
+                MessageBox.Show("Não foi possivel Preencher os dados. (" + e.Message + ")");
+            }
         }
 
         private void LoadVeiculos() {

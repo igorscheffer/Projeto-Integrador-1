@@ -19,6 +19,9 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
 
+            textInscricaoEstadual.KeyPress += Converter.OnlyNumber;
+            textInscricaoMunicipal.KeyPress += Converter.OnlyNumber;
+
             combTipoCadastro.DisplayMember = "Text";
             combTipoCadastro.ValueMember = "Value";
             combTipoCadastro.DataSource = Listas.ClientesTipoCadastros;

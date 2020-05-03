@@ -18,6 +18,13 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
 
+            textRG.KeyPress += Converter.OnlyNumber;
+            textCNH.KeyPress += Converter.OnlyNumber;
+
+
+            timeVencimentoCNH.KeyPress += Converter.DateReset;
+            timeVencimentoCNH.ValueChanged += Converter.DateValueChanged;
+
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
             combStatus.DataSource = Listas.MotoristasStatus;
@@ -41,8 +48,6 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             combCargo.DisplayMember = "Text";
             combCargo.ValueMember = "Value";
             combCargo.DataSource = Listas.MotoristasCargos;
-
-            timeVencimentoCNH.ResetText();
 
             if (Id > 0) {
                 Text = "Editar Motorista";

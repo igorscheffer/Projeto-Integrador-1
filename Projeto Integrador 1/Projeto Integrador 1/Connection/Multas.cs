@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
 
@@ -43,12 +44,12 @@ namespace Projeto_Integrador_1.Connection {
                 MySqlCommand query = new MySqlCommand(sql, Connection);
 
                 query.Parameters.AddWithValue("@veiculo", Veiculo);
-                query.Parameters.AddWithValue("@motorista", Motorista);
+                query.Parameters.AddWithValue("@motorista", Converter.ToIntDB(Motorista, true));
                 query.Parameters.AddWithValue("@gravidade", Gravidade);
                 query.Parameters.AddWithValue("@status", Status);
                 query.Parameters.AddWithValue("@data_ocorrencia", DateTime.Parse(DataOcorrencia));
-                query.Parameters.AddWithValue("@data_notificacao", DateTime.Parse(DataNotificacao));
-                query.Parameters.AddWithValue("@data_vencimento", DateTime.Parse(DataVencimento));
+                query.Parameters.AddWithValue("@data_notificacao", (!string.IsNullOrWhiteSpace(DataNotificacao) ? (object)DateTime.Parse(DataNotificacao) : DBNull.Value));
+                query.Parameters.AddWithValue("@data_vencimento", (!string.IsNullOrWhiteSpace(DataVencimento) ? (object)DateTime.Parse(DataVencimento) : DBNull.Value));
                 query.Parameters.AddWithValue("@valor", Valor);
                 query.Parameters.AddWithValue("@descricao", Descricao);
                 query.Parameters.AddWithValue("@local", Local);
@@ -60,7 +61,7 @@ namespace Projeto_Integrador_1.Connection {
                 Success = true;
                 Message = "Multa salva com sucesso.";
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -74,12 +75,12 @@ namespace Projeto_Integrador_1.Connection {
                 MySqlCommand query = new MySqlCommand(sql, Connection);
 
                 query.Parameters.AddWithValue("@veiculo", Veiculo);
-                query.Parameters.AddWithValue("@motorista", Motorista);
+                query.Parameters.AddWithValue("@motorista", Converter.ToIntDB(Motorista, true));
                 query.Parameters.AddWithValue("@gravidade", Gravidade);
                 query.Parameters.AddWithValue("@status", Status);
                 query.Parameters.AddWithValue("@data_ocorrencia", DateTime.Parse(DataOcorrencia));
-                query.Parameters.AddWithValue("@data_notificacao", DateTime.Parse(DataNotificacao));
-                query.Parameters.AddWithValue("@data_vencimento", DateTime.Parse(DataVencimento));
+                query.Parameters.AddWithValue("@data_notificacao", (!string.IsNullOrWhiteSpace(DataNotificacao) ? (object)DateTime.Parse(DataNotificacao) : DBNull.Value));
+                query.Parameters.AddWithValue("@data_vencimento", (!string.IsNullOrWhiteSpace(DataVencimento) ? (object)DateTime.Parse(DataVencimento) : DBNull.Value));
                 query.Parameters.AddWithValue("@valor", Valor);
                 query.Parameters.AddWithValue("@descricao", Descricao);
                 query.Parameters.AddWithValue("@local", Local);
@@ -92,7 +93,7 @@ namespace Projeto_Integrador_1.Connection {
                 Success = true;
                 Message = "Multa salva com sucesso.";
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -116,9 +117,9 @@ namespace Projeto_Integrador_1.Connection {
                         Motorista = data["motorista"],
                         Gravidade = data["gravidade"],
                         Status = data["status"],
-                        DataOcorrencia = Convert.ToDateTime(data["data_ocorrencia"]).ToString("dd/MM/yyyy"),
-                        DataNotificacao = Convert.ToDateTime(data["data_notificacao"]).ToString("dd/MM/yyyy"),
-                        DataVencimento = Convert.ToDateTime(data["data_vencimento"]).ToString("dd/MM/yyyy"),
+                        DataOcorrencia = Converter.DateToString(data["data_ocorrencia"], "dd/MM/yyyy"),
+                        DataNotificacao = Converter.DateToString(data["data_notificacao"], "dd/MM/yyyy"),
+                        DataVencimento = Converter.DateToString(data["data_vencimento"], "dd/MM/yyyy"),
                         Valor = data["valor"],
                         Descricao = data["descricao"],
                         Local = data["local"]
@@ -131,7 +132,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 Success = true;
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -149,13 +150,13 @@ namespace Projeto_Integrador_1.Connection {
                     Results.Add(
                         new {
                             Id = data["id"],
-                            DataOcorrencia = Convert.ToDateTime(data["data_ocorrencia"]).ToString("dd/MM/yyyy"),
+                            DataOcorrencia = Converter.DateToString(data["data_ocorrencia"], "dd/MM/yyyy"),
                             Placa = data["veiculo_placa"],
                             Motorista = data["motorista_nome"],
                             Descricao = data["descricao"],
                             Gravidade = data["gravidade"],
                             Valor = data["valor"],
-                            DataVencimento = Convert.ToDateTime(data["data_vencimento"]).ToString("dd/MM/yyyy"),
+                            DataVencimento = Converter.DateToString(data["data_vencimento"], "dd/MM/yyyy"),
                             Status = data["status"]
                         }
                     );
@@ -167,7 +168,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 Success = true;
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -188,7 +189,7 @@ namespace Projeto_Integrador_1.Connection {
                 Success = true;
                 Message = "Multa excluida com sucesso.";
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }

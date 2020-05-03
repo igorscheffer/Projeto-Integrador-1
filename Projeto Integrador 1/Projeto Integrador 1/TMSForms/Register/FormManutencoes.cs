@@ -19,6 +19,12 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
 
+            timeDataAgendada.KeyPress += Converter.DateReset;
+            timeDataAgendada.ValueChanged += Converter.DateTimeValueChanged;
+
+            timeDataRealizada.KeyPress += Converter.DateReset;
+            timeDataRealizada.ValueChanged += Converter.DateTimeValueChanged;
+
             LoadVeiculos();
             LoadMotoristas();
             LoadClientes();

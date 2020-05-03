@@ -29,7 +29,16 @@ namespace Projeto_Integrador_1.Util.Validate {
                         return Component.Text;
                     }
                 }
+                else if (Component.GetType().Name == "DateTimePicker" || Component.GetType().Name == "Guna2DateTimePicker" || Component.GetType().BaseType.Name == "DateTimePicker") {
+                    if (string.IsNullOrWhiteSpace(Component.Text)) {
+                        return string.Empty;
+                    }
+                    else {
+                        return Component.Text;
+                    }
+                }
                 else {
+
                     return Component.Text;
                 }
             }

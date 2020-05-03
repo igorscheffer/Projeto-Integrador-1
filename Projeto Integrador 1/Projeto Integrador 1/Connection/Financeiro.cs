@@ -1,9 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
+using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projeto_Integrador_1.Connection {
     class Financeiro : Config {
@@ -32,36 +30,36 @@ namespace Projeto_Integrador_1.Connection {
 
         public void Create() {
             string sql = "INSERT INTO `financeiro` (`nome`, `tipo`, `referencia`, `centro_custo`, `forma_pagamento`, `status`, `data_emissao`, `data_vencimento`, `valor`, `documento`, `ocorrencia`, `qtd_parcelas`, `parcelas`, `observacoes`) VALUES (@nome, @tipo, @referencia, @centro_custo, @forma_pagamento, @status, @data_emissao, @data_vencimento, @valor, @documento, @ocorrencia, @qtd_parcelas, @parcelas, @observacoes);";
-            
+
             try {
                 OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
-                query.Parameters.AddWithValue("@nome", this.Nome);
-                query.Parameters.AddWithValue("@tipo", this.Tipo);
-                query.Parameters.AddWithValue("@referencia", this.Referencia);
-                query.Parameters.AddWithValue("@centro_custo", this.CentroCusto);
-                query.Parameters.AddWithValue("@forma_pagamento", this.FormaPagamento);
-                query.Parameters.AddWithValue("@status", this.Status);
-                query.Parameters.AddWithValue("@data_emissao", DateTime.Parse(this.DataEmissao));
-                query.Parameters.AddWithValue("@data_vencimento", DateTime.Parse(this.DataVencimento));
-                query.Parameters.AddWithValue("@valor", this.Valor);
-                query.Parameters.AddWithValue("@documento", this.Documento);
-                query.Parameters.AddWithValue("@ocorrencia", this.Ocorrencia);
-                query.Parameters.AddWithValue("@qtd_parcelas", this.QtdParcelas);
-                query.Parameters.AddWithValue("@parcelas", this.Parcelas);
-                query.Parameters.AddWithValue("@observacoes", this.Observacoes);
+                query.Parameters.AddWithValue("@nome", Nome);
+                query.Parameters.AddWithValue("@tipo", Tipo);
+                query.Parameters.AddWithValue("@referencia", Referencia);
+                query.Parameters.AddWithValue("@centro_custo", CentroCusto);
+                query.Parameters.AddWithValue("@forma_pagamento", FormaPagamento);
+                query.Parameters.AddWithValue("@status", Status);
+                query.Parameters.AddWithValue("@data_emissao", DateTime.Parse(DataEmissao));
+                query.Parameters.AddWithValue("@data_vencimento", DateTime.Parse(DataVencimento));
+                query.Parameters.AddWithValue("@valor", Valor);
+                query.Parameters.AddWithValue("@documento", Documento);
+                query.Parameters.AddWithValue("@ocorrencia", Ocorrencia);
+                query.Parameters.AddWithValue("@qtd_parcelas", Converter.ToIntDB(QtdParcelas, true));
+                query.Parameters.AddWithValue("@parcelas", Parcelas);
+                query.Parameters.AddWithValue("@observacoes", Observacoes);
 
                 query.ExecuteNonQuery();
 
                 CloseConnection();
 
-                this.Success = true;
-                this.Message = "Financeiro salvo com sucesso.";
+                Success = true;
+                Message = "Financeiro salvo com sucesso.";
             }
-            catch (MySqlException e) {
-                this.Success = false;
-                this.Message = e.Message;
+            catch (Exception e) {
+                Success = false;
+                Message = e.Message;
             }
         }
 
@@ -72,32 +70,32 @@ namespace Projeto_Integrador_1.Connection {
                 OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
-                query.Parameters.AddWithValue("@nome", this.Nome);
-                query.Parameters.AddWithValue("@tipo", this.Tipo);
-                query.Parameters.AddWithValue("@referencia", this.Referencia);
-                query.Parameters.AddWithValue("@centro_custo", this.CentroCusto);
-                query.Parameters.AddWithValue("@forma_pagamento", this.FormaPagamento);
-                query.Parameters.AddWithValue("@status", this.Status);
-                query.Parameters.AddWithValue("@data_emissao", DateTime.Parse(this.DataEmissao));
-                query.Parameters.AddWithValue("@data_vencimento", DateTime.Parse(this.DataVencimento));
-                query.Parameters.AddWithValue("@valor", this.Valor);
-                query.Parameters.AddWithValue("@documento", this.Documento);
-                query.Parameters.AddWithValue("@ocorrencia", this.Ocorrencia);
-                query.Parameters.AddWithValue("@qtd_parcelas", this.QtdParcelas);
-                query.Parameters.AddWithValue("@parcelas", this.Parcelas);
-                query.Parameters.AddWithValue("@observacoes", this.Observacoes);
-                query.Parameters.AddWithValue("@id", this.Id);
+                query.Parameters.AddWithValue("@nome", Nome);
+                query.Parameters.AddWithValue("@tipo", Tipo);
+                query.Parameters.AddWithValue("@referencia", Referencia);
+                query.Parameters.AddWithValue("@centro_custo", CentroCusto);
+                query.Parameters.AddWithValue("@forma_pagamento", FormaPagamento);
+                query.Parameters.AddWithValue("@status", Status);
+                query.Parameters.AddWithValue("@data_emissao", DateTime.Parse(DataEmissao));
+                query.Parameters.AddWithValue("@data_vencimento", DateTime.Parse(DataVencimento));
+                query.Parameters.AddWithValue("@valor", Valor);
+                query.Parameters.AddWithValue("@documento", Documento);
+                query.Parameters.AddWithValue("@ocorrencia", Ocorrencia);
+                query.Parameters.AddWithValue("@qtd_parcelas", Converter.ToIntDB(QtdParcelas, true));
+                query.Parameters.AddWithValue("@parcelas", Parcelas);
+                query.Parameters.AddWithValue("@observacoes", Observacoes);
+                query.Parameters.AddWithValue("@id", Id);
 
                 query.ExecuteNonQuery();
 
                 CloseConnection();
 
-                this.Success = true;
-                this.Message = "Financeiro salvo com sucesso.";
+                Success = true;
+                Message = "Financeiro salvo com sucesso.";
             }
-            catch (MySqlException e) {
-                this.Success = false;
-                this.Message = e.Message;
+            catch (Exception e) {
+                Success = false;
+                Message = e.Message;
             }
         }
 
@@ -107,12 +105,12 @@ namespace Projeto_Integrador_1.Connection {
                 OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
-                query.Parameters.AddWithValue("@id", this.Id);
+                query.Parameters.AddWithValue("@id", Id);
 
                 MySqlDataReader data = query.ExecuteReader();
                 data.Read();
 
-                this.Results.Add(new {
+                Results.Add(new {
                     Id = data["id"],
                     Nome = data["nome"],
                     Tipo = data["tipo"],
@@ -120,8 +118,8 @@ namespace Projeto_Integrador_1.Connection {
                     CentroCusto = data["centro_custo"],
                     FormaPagamento = data["forma_pagamento"],
                     Status = data["status"],
-                    DataEmissao = Convert.ToDateTime(data["data_emissao"]).ToString("dd/MM/yyyy"),
-                    DataVencimento = Convert.ToDateTime(data["data_vencimento"]).ToString("dd/MM/yyyy"),
+                    DataEmissao = Converter.DateToString(data["data_emissao"], "dd/MM/yyyy"),
+                    DataVencimento = Converter.DateToString(data["data_vencimento"], "dd/MM/yyyy"),
                     Valor = data["valor"],
                     Documento = data["documento"],
                     Ocorrencia = data["ocorrencia"],
@@ -130,11 +128,11 @@ namespace Projeto_Integrador_1.Connection {
                     Observacoes = data["observacoes"]
                 });
 
-                this.Success = true;
+                Success = true;
             }
-            catch(MySqlException e) {
-                this.Success = false;
-                this.Message = e.Message;
+            catch (Exception e) {
+                Success = false;
+                Message = e.Message;
             }
         }
 
@@ -144,11 +142,11 @@ namespace Projeto_Integrador_1.Connection {
                 OpenConnection();
 
                 MySqlCommand query = new MySqlCommand(sql, Connection);
-                
+
                 MySqlDataReader data = query.ExecuteReader();
 
                 while (data.Read()) {
-                    this.Results.Add(new {
+                    Results.Add(new {
                         Id = data["id"],
                         Nome = data["nome"],
                         Tipo = data["tipo"],
@@ -156,8 +154,8 @@ namespace Projeto_Integrador_1.Connection {
                         CentroCusto = data["centro_custo"],
                         FormaPagamento = data["forma_pagamento"],
                         Status = data["status"],
-                        DataEmissao = Convert.ToDateTime(data["data_emissao"]).ToString("dd/MM/yyyy"),
-                        DataVencimento = Convert.ToDateTime(data["data_vencimento"]).ToString("dd/MM/yyyy"),
+                        DataEmissao = Converter.DateToString(data["data_emissao"], "dd/MM/yyyy"),
+                        DataVencimento = Converter.DateToString(data["data_vencimento"], "dd/MM/yyyy"),
                         Valor = data["valor"],
                         Documento = data["documento"],
                         Ocorrencia = data["ocorrencia"],
@@ -167,11 +165,11 @@ namespace Projeto_Integrador_1.Connection {
                     });
                 }
 
-                this.Success = true;
+                Success = true;
             }
-            catch (MySqlException e) {
-                this.Success = false;
-                this.Message = e.Message;
+            catch (Exception e) {
+                Success = false;
+                Message = e.Message;
             }
         }
 
@@ -190,7 +188,7 @@ namespace Projeto_Integrador_1.Connection {
                 Success = true;
                 Message = "Financeiro excluido com sucesso.";
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }

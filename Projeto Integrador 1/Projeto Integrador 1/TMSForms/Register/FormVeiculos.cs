@@ -16,6 +16,12 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
 
+            textRenavam.KeyPress += Converter.OnlyNumber;
+            textTara.KeyPress += Converter.OnlyNumber;
+            textLotacao.KeyPress += Converter.OnlyNumber;
+            textPesoBrutoTotal.KeyPress += Converter.OnlyNumber;
+            textCapacidade.KeyPress += Converter.OnlyNumber;
+
             if (Id > 0) {
                 Text = "Editar Veiculo";
                 this.Id = Id;

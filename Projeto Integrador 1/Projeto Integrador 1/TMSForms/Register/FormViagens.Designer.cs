@@ -1,4 +1,6 @@
-﻿namespace Projeto_Integrador_1.TMSForms.Register
+﻿using Projeto_Integrador_1.Util;
+
+namespace Projeto_Integrador_1.TMSForms.Register
 {
     partial class FormViagens
     {
@@ -74,11 +76,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.combStatus = new Guna.UI.WinForms.GunaComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.timeDataSaida = new Guna.UI.WinForms.GunaDateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
-            this.timeDataEntrega = new Guna.UI.WinForms.GunaDateTimePicker();
             this.label18 = new System.Windows.Forms.Label();
-            this.timeDataChegada = new Guna.UI.WinForms.GunaDateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
             this.textHodometroSaida = new Guna.UI.WinForms.GunaTextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -94,7 +93,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
-            this.timeCustoData = new Guna.UI.WinForms.GunaDateTimePicker();
             this.label30 = new System.Windows.Forms.Label();
             this.textCustoDescricao = new Guna.UI.WinForms.GunaTextBox();
             this.label31 = new System.Windows.Forms.Label();
@@ -103,6 +101,9 @@
             this.label33 = new System.Windows.Forms.Label();
             this.tabViagem = new System.Windows.Forms.TabControl();
             this.tabPanelViagem = new System.Windows.Forms.TabPage();
+            this.timeDataChegada = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.timeDataEntrega = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.timeDataSaida = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.textValor = new System.Windows.Forms.MaskedTextBox();
@@ -154,6 +155,7 @@
             this.textGridCustoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textGridCustoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.timeCustoData = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panel32 = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
             this.textCustoQTD = new System.Windows.Forms.MaskedTextBox();
@@ -173,6 +175,7 @@
             this.textGridAbastecimentoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.combGridAbastecimentoStatus = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.timeAbastecimentoData = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel31 = new System.Windows.Forms.Panel();
             this.textAbastecimentoLitros = new System.Windows.Forms.MaskedTextBox();
@@ -187,7 +190,6 @@
             this.combAbastecimentoPosto = new Guna.UI.WinForms.GunaComboBox();
             this.combAbastecimentoCombustivel = new Guna.UI.WinForms.GunaComboBox();
             this.label39 = new System.Windows.Forms.Label();
-            this.timeAbastecimentoData = new Guna.UI.WinForms.GunaDateTimePicker();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.btnAddAbastecimento = new FontAwesome.Sharp.IconButton();
@@ -868,32 +870,6 @@
             this.label15.TabIndex = 224;
             this.label15.Text = "Status";
             // 
-            // timeDataSaida
-            // 
-            this.timeDataSaida.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.timeDataSaida.BaseColor = System.Drawing.Color.White;
-            this.timeDataSaida.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.timeDataSaida.BorderSize = 1;
-            this.timeDataSaida.CustomFormat = "dd/MM/yyyy HH:m";
-            this.timeDataSaida.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.timeDataSaida.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataSaida.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.timeDataSaida.ForeColor = System.Drawing.Color.Black;
-            this.timeDataSaida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeDataSaida.Location = new System.Drawing.Point(20, 335);
-            this.timeDataSaida.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.timeDataSaida.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.timeDataSaida.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.timeDataSaida.Name = "timeDataSaida";
-            this.timeDataSaida.OnHoverBaseColor = System.Drawing.Color.White;
-            this.timeDataSaida.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataSaida.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataSaida.OnPressedColor = System.Drawing.Color.Black;
-            this.timeDataSaida.Size = new System.Drawing.Size(178, 35);
-            this.timeDataSaida.TabIndex = 14;
-            this.timeDataSaida.Text = "22/04/2020 12:57";
-            this.timeDataSaida.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
-            // 
             // label16
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -906,32 +882,6 @@
             this.label16.TabIndex = 230;
             this.label16.Text = "Data Saida";
             // 
-            // timeDataEntrega
-            // 
-            this.timeDataEntrega.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.timeDataEntrega.BaseColor = System.Drawing.Color.White;
-            this.timeDataEntrega.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.timeDataEntrega.BorderSize = 1;
-            this.timeDataEntrega.CustomFormat = "dd/MM/yyyy HH:m";
-            this.timeDataEntrega.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.timeDataEntrega.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataEntrega.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.timeDataEntrega.ForeColor = System.Drawing.Color.Black;
-            this.timeDataEntrega.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeDataEntrega.Location = new System.Drawing.Point(218, 335);
-            this.timeDataEntrega.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.timeDataEntrega.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.timeDataEntrega.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.timeDataEntrega.Name = "timeDataEntrega";
-            this.timeDataEntrega.OnHoverBaseColor = System.Drawing.Color.White;
-            this.timeDataEntrega.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataEntrega.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataEntrega.OnPressedColor = System.Drawing.Color.Black;
-            this.timeDataEntrega.Size = new System.Drawing.Size(180, 35);
-            this.timeDataEntrega.TabIndex = 15;
-            this.timeDataEntrega.Text = "22/04/2020 12:57";
-            this.timeDataEntrega.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
-            // 
             // label18
             // 
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -943,32 +893,6 @@
             this.label18.Size = new System.Drawing.Size(94, 18);
             this.label18.TabIndex = 232;
             this.label18.Text = "Data Entrega";
-            // 
-            // timeDataChegada
-            // 
-            this.timeDataChegada.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.timeDataChegada.BaseColor = System.Drawing.Color.White;
-            this.timeDataChegada.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.timeDataChegada.BorderSize = 1;
-            this.timeDataChegada.CustomFormat = "dd/MM/yyyy HH:m";
-            this.timeDataChegada.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.timeDataChegada.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataChegada.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.timeDataChegada.ForeColor = System.Drawing.Color.Black;
-            this.timeDataChegada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeDataChegada.Location = new System.Drawing.Point(418, 335);
-            this.timeDataChegada.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.timeDataChegada.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.timeDataChegada.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.timeDataChegada.Name = "timeDataChegada";
-            this.timeDataChegada.OnHoverBaseColor = System.Drawing.Color.White;
-            this.timeDataChegada.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataChegada.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataChegada.OnPressedColor = System.Drawing.Color.Black;
-            this.timeDataChegada.Size = new System.Drawing.Size(178, 35);
-            this.timeDataChegada.TabIndex = 16;
-            this.timeDataChegada.Text = "22/04/2020 12:57";
-            this.timeDataChegada.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
             // label19
             // 
@@ -1002,6 +926,7 @@
             this.textHodometroSaida.PasswordChar = '\0';
             this.textHodometroSaida.Size = new System.Drawing.Size(95, 35);
             this.textHodometroSaida.TabIndex = 17;
+            this.textHodometroSaida.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalcularHodometroPercorrido);
             // 
             // label20
             // 
@@ -1035,6 +960,7 @@
             this.textHodometroEntrega.PasswordChar = '\0';
             this.textHodometroEntrega.Size = new System.Drawing.Size(95, 35);
             this.textHodometroEntrega.TabIndex = 18;
+            this.textHodometroEntrega.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalcularHodometroPercorrido);
             // 
             // label21
             // 
@@ -1068,6 +994,7 @@
             this.textHodometroChegada.PasswordChar = '\0';
             this.textHodometroChegada.Size = new System.Drawing.Size(95, 35);
             this.textHodometroChegada.TabIndex = 19;
+            this.textHodometroChegada.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalcularHodometroPercorrido);
             // 
             // label22
             // 
@@ -1090,6 +1017,7 @@
             this.textHodometroPercorrido.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textHodometroPercorrido.BorderSize = 1;
             this.textHodometroPercorrido.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textHodometroPercorrido.Enabled = false;
             this.textHodometroPercorrido.FocusedBaseColor = System.Drawing.Color.White;
             this.textHodometroPercorrido.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.textHodometroPercorrido.FocusedForeColor = System.Drawing.SystemColors.ControlText;
@@ -1187,32 +1115,6 @@
             this.label29.Size = new System.Drawing.Size(225, 20);
             this.label29.TabIndex = 259;
             this.label29.Text = "INFORMAÇÕES DE CUSTOS";
-            // 
-            // timeCustoData
-            // 
-            this.timeCustoData.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.timeCustoData.BaseColor = System.Drawing.Color.White;
-            this.timeCustoData.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.timeCustoData.BorderSize = 1;
-            this.timeCustoData.CustomFormat = "dd/MM/yyyy";
-            this.timeCustoData.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.timeCustoData.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeCustoData.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.timeCustoData.ForeColor = System.Drawing.Color.Black;
-            this.timeCustoData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeCustoData.Location = new System.Drawing.Point(20, 76);
-            this.timeCustoData.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.timeCustoData.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.timeCustoData.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.timeCustoData.Name = "timeCustoData";
-            this.timeCustoData.OnHoverBaseColor = System.Drawing.Color.White;
-            this.timeCustoData.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeCustoData.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeCustoData.OnPressedColor = System.Drawing.Color.Black;
-            this.timeCustoData.Size = new System.Drawing.Size(140, 35);
-            this.timeCustoData.TabIndex = 1;
-            this.timeCustoData.Text = "22/04/2020";
-            this.timeCustoData.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
             // label30
             // 
@@ -1323,6 +1225,9 @@
             // tabPanelViagem
             // 
             this.tabPanelViagem.BackColor = System.Drawing.Color.White;
+            this.tabPanelViagem.Controls.Add(this.timeDataChegada);
+            this.tabPanelViagem.Controls.Add(this.timeDataEntrega);
+            this.tabPanelViagem.Controls.Add(this.timeDataSaida);
             this.tabPanelViagem.Controls.Add(this.btnEnviar);
             this.tabPanelViagem.Controls.Add(this.panel22);
             this.tabPanelViagem.Controls.Add(this.panel21);
@@ -1377,17 +1282,83 @@
             this.tabPanelViagem.Controls.Add(this.textHodometroSaida);
             this.tabPanelViagem.Controls.Add(this.label16);
             this.tabPanelViagem.Controls.Add(this.label20);
-            this.tabPanelViagem.Controls.Add(this.timeDataSaida);
-            this.tabPanelViagem.Controls.Add(this.timeDataChegada);
             this.tabPanelViagem.Controls.Add(this.label18);
             this.tabPanelViagem.Controls.Add(this.label19);
-            this.tabPanelViagem.Controls.Add(this.timeDataEntrega);
             this.tabPanelViagem.Location = new System.Drawing.Point(4, 44);
             this.tabPanelViagem.Margin = new System.Windows.Forms.Padding(0);
             this.tabPanelViagem.Name = "tabPanelViagem";
             this.tabPanelViagem.Size = new System.Drawing.Size(1032, 610);
             this.tabPanelViagem.TabIndex = 0;
             this.tabPanelViagem.Text = "      VIAGEM      ";
+            // 
+            // timeDataChegada
+            // 
+            this.timeDataChegada.BackColor = System.Drawing.Color.Transparent;
+            this.timeDataChegada.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.timeDataChegada.BorderThickness = 1;
+            this.timeDataChegada.CheckedState.Parent = this.timeDataChegada;
+            this.timeDataChegada.CustomFormat = " ";
+            this.timeDataChegada.FillColor = System.Drawing.Color.White;
+            this.timeDataChegada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.timeDataChegada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.timeDataChegada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeDataChegada.HoverState.Parent = this.timeDataChegada;
+            this.timeDataChegada.Location = new System.Drawing.Point(418, 335);
+            this.timeDataChegada.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.timeDataChegada.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.timeDataChegada.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.timeDataChegada.Name = "timeDataChegada";
+            this.timeDataChegada.ShadowDecoration.Parent = this.timeDataChegada;
+            this.timeDataChegada.Size = new System.Drawing.Size(178, 35);
+            this.timeDataChegada.TabIndex = 278;
+            this.timeDataChegada.UseTransparentBackground = true;
+            this.timeDataChegada.Value = new System.DateTime(2020, 5, 3, 16, 47, 44, 411);
+            // 
+            // timeDataEntrega
+            // 
+            this.timeDataEntrega.BackColor = System.Drawing.Color.Transparent;
+            this.timeDataEntrega.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.timeDataEntrega.BorderThickness = 1;
+            this.timeDataEntrega.CheckedState.Parent = this.timeDataEntrega;
+            this.timeDataEntrega.CustomFormat = " ";
+            this.timeDataEntrega.FillColor = System.Drawing.Color.White;
+            this.timeDataEntrega.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.timeDataEntrega.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.timeDataEntrega.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeDataEntrega.HoverState.Parent = this.timeDataEntrega;
+            this.timeDataEntrega.Location = new System.Drawing.Point(218, 335);
+            this.timeDataEntrega.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.timeDataEntrega.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.timeDataEntrega.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.timeDataEntrega.Name = "timeDataEntrega";
+            this.timeDataEntrega.ShadowDecoration.Parent = this.timeDataEntrega;
+            this.timeDataEntrega.Size = new System.Drawing.Size(180, 35);
+            this.timeDataEntrega.TabIndex = 277;
+            this.timeDataEntrega.UseTransparentBackground = true;
+            this.timeDataEntrega.Value = new System.DateTime(2020, 5, 3, 16, 47, 44, 411);
+            // 
+            // timeDataSaida
+            // 
+            this.timeDataSaida.BackColor = System.Drawing.Color.Transparent;
+            this.timeDataSaida.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.timeDataSaida.BorderThickness = 1;
+            this.timeDataSaida.CheckedState.Parent = this.timeDataSaida;
+            this.timeDataSaida.CustomFormat = " ";
+            this.timeDataSaida.FillColor = System.Drawing.Color.White;
+            this.timeDataSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.timeDataSaida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.timeDataSaida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeDataSaida.HoverState.Parent = this.timeDataSaida;
+            this.timeDataSaida.Location = new System.Drawing.Point(20, 335);
+            this.timeDataSaida.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.timeDataSaida.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.timeDataSaida.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.timeDataSaida.Name = "timeDataSaida";
+            this.timeDataSaida.ShadowDecoration.Parent = this.timeDataSaida;
+            this.timeDataSaida.Size = new System.Drawing.Size(178, 35);
+            this.timeDataSaida.TabIndex = 276;
+            this.timeDataSaida.UseTransparentBackground = true;
+            this.timeDataSaida.Value = new System.DateTime(2020, 5, 3, 16, 47, 44, 411);
             // 
             // panel22
             // 
@@ -2089,10 +2060,10 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.timeCustoData);
             this.panel6.Controls.Add(this.panel32);
             this.panel6.Controls.Add(this.panel26);
             this.panel6.Controls.Add(this.panel15);
-            this.panel6.Controls.Add(this.timeCustoData);
             this.panel6.Controls.Add(this.textCustoDescricao);
             this.panel6.Controls.Add(this.label29);
             this.panel6.Controls.Add(this.label33);
@@ -2107,6 +2078,29 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1032, 112);
             this.panel6.TabIndex = 271;
+            // 
+            // timeCustoData
+            // 
+            this.timeCustoData.BackColor = System.Drawing.Color.Transparent;
+            this.timeCustoData.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.timeCustoData.BorderThickness = 1;
+            this.timeCustoData.CheckedState.Parent = this.timeCustoData;
+            this.timeCustoData.CustomFormat = " ";
+            this.timeCustoData.FillColor = System.Drawing.Color.White;
+            this.timeCustoData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.timeCustoData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.timeCustoData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeCustoData.HoverState.Parent = this.timeCustoData;
+            this.timeCustoData.Location = new System.Drawing.Point(20, 76);
+            this.timeCustoData.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.timeCustoData.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.timeCustoData.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.timeCustoData.Name = "timeCustoData";
+            this.timeCustoData.ShadowDecoration.Parent = this.timeCustoData;
+            this.timeCustoData.Size = new System.Drawing.Size(133, 35);
+            this.timeCustoData.TabIndex = 278;
+            this.timeCustoData.UseTransparentBackground = true;
+            this.timeCustoData.Value = new System.DateTime(2020, 5, 3, 16, 47, 44, 411);
             // 
             // panel32
             // 
@@ -2348,6 +2342,7 @@
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.timeAbastecimentoData);
             this.panel11.Controls.Add(this.panel30);
             this.panel11.Controls.Add(this.panel28);
             this.panel11.Controls.Add(this.combAbastecimentoStatus);
@@ -2357,7 +2352,6 @@
             this.panel11.Controls.Add(this.combAbastecimentoPosto);
             this.panel11.Controls.Add(this.combAbastecimentoCombustivel);
             this.panel11.Controls.Add(this.label39);
-            this.panel11.Controls.Add(this.timeAbastecimentoData);
             this.panel11.Controls.Add(this.label34);
             this.panel11.Controls.Add(this.label35);
             this.panel11.Controls.Add(this.btnAddAbastecimento);
@@ -2371,6 +2365,29 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1032, 112);
             this.panel11.TabIndex = 273;
+            // 
+            // timeAbastecimentoData
+            // 
+            this.timeAbastecimentoData.BackColor = System.Drawing.Color.Transparent;
+            this.timeAbastecimentoData.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.timeAbastecimentoData.BorderThickness = 1;
+            this.timeAbastecimentoData.CheckedState.Parent = this.timeAbastecimentoData;
+            this.timeAbastecimentoData.CustomFormat = " ";
+            this.timeAbastecimentoData.FillColor = System.Drawing.Color.White;
+            this.timeAbastecimentoData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.timeAbastecimentoData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.timeAbastecimentoData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeAbastecimentoData.HoverState.Parent = this.timeAbastecimentoData;
+            this.timeAbastecimentoData.Location = new System.Drawing.Point(20, 76);
+            this.timeAbastecimentoData.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.timeAbastecimentoData.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.timeAbastecimentoData.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.timeAbastecimentoData.Name = "timeAbastecimentoData";
+            this.timeAbastecimentoData.ShadowDecoration.Parent = this.timeAbastecimentoData;
+            this.timeAbastecimentoData.Size = new System.Drawing.Size(160, 35);
+            this.timeAbastecimentoData.TabIndex = 277;
+            this.timeAbastecimentoData.UseTransparentBackground = true;
+            this.timeAbastecimentoData.Value = new System.DateTime(2020, 5, 3, 16, 47, 44, 411);
             // 
             // panel30
             // 
@@ -2579,32 +2596,6 @@
             this.label39.Size = new System.Drawing.Size(90, 18);
             this.label39.TabIndex = 271;
             this.label39.Text = "Combustivel";
-            // 
-            // timeAbastecimentoData
-            // 
-            this.timeAbastecimentoData.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.timeAbastecimentoData.BaseColor = System.Drawing.Color.White;
-            this.timeAbastecimentoData.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.timeAbastecimentoData.BorderSize = 1;
-            this.timeAbastecimentoData.CustomFormat = "dd/MM/yyyy H:mm";
-            this.timeAbastecimentoData.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.timeAbastecimentoData.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeAbastecimentoData.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.timeAbastecimentoData.ForeColor = System.Drawing.Color.Black;
-            this.timeAbastecimentoData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeAbastecimentoData.Location = new System.Drawing.Point(20, 76);
-            this.timeAbastecimentoData.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.timeAbastecimentoData.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.timeAbastecimentoData.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.timeAbastecimentoData.Name = "timeAbastecimentoData";
-            this.timeAbastecimentoData.OnHoverBaseColor = System.Drawing.Color.White;
-            this.timeAbastecimentoData.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeAbastecimentoData.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeAbastecimentoData.OnPressedColor = System.Drawing.Color.Black;
-            this.timeAbastecimentoData.Size = new System.Drawing.Size(160, 35);
-            this.timeAbastecimentoData.TabIndex = 1;
-            this.timeAbastecimentoData.Text = "22/04/2020 12:57";
-            this.timeAbastecimentoData.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
             // label34
             // 
@@ -2818,11 +2809,8 @@
         private System.Windows.Forms.Label label14;
         private Guna.UI.WinForms.GunaComboBox combStatus;
         private System.Windows.Forms.Label label15;
-        private Guna.UI.WinForms.GunaDateTimePicker timeDataSaida;
         private System.Windows.Forms.Label label16;
-        private Guna.UI.WinForms.GunaDateTimePicker timeDataEntrega;
         private System.Windows.Forms.Label label18;
-        private Guna.UI.WinForms.GunaDateTimePicker timeDataChegada;
         private System.Windows.Forms.Label label19;
         private Guna.UI.WinForms.GunaTextBox textHodometroSaida;
         private System.Windows.Forms.Label label20;
@@ -2838,7 +2826,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label29;
-        private Guna.UI.WinForms.GunaDateTimePicker timeCustoData;
         private System.Windows.Forms.Label label30;
         private Guna.UI.WinForms.GunaTextBox textCustoDescricao;
         private System.Windows.Forms.Label label31;
@@ -2869,7 +2856,6 @@
         private System.Windows.Forms.Panel panel11;
         private Guna.UI.WinForms.GunaComboBox combAbastecimentoCombustivel;
         private System.Windows.Forms.Label label39;
-        private Guna.UI.WinForms.GunaDateTimePicker timeAbastecimentoData;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
         private FontAwesome.Sharp.IconButton btnAddAbastecimento;
@@ -2939,5 +2925,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPeso;
         private System.Windows.Forms.DataGridViewTextBoxColumn colValor;
+        private Guna.UI2.WinForms.Guna2DateTimePicker timeDataSaida;
+        private Guna.UI2.WinForms.Guna2DateTimePicker timeDataChegada;
+        private Guna.UI2.WinForms.Guna2DateTimePicker timeDataEntrega;
+        private Guna.UI2.WinForms.Guna2DateTimePicker timeAbastecimentoData;
+        private Guna.UI2.WinForms.Guna2DateTimePicker timeCustoData;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
 
@@ -32,12 +33,12 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.Parameters.AddWithValue("@viagem", Viagem);
                 query.Parameters.AddWithValue("@posto", Posto);
-                query.Parameters.AddWithValue("@veiculo", Veiculo);
-                query.Parameters.AddWithValue("@motorista", Motorista);
+                query.Parameters.AddWithValue("@veiculo", Converter.ToIntDB(Veiculo, true));
+                query.Parameters.AddWithValue("@motorista", Converter.ToIntDB(Motorista, true));
                 query.Parameters.AddWithValue("@data", DateTime.Parse(Data));
                 query.Parameters.AddWithValue("@cupom", Cupom);
                 query.Parameters.AddWithValue("@combustivel", Combustivel);
-                query.Parameters.AddWithValue("@hodometro", Hodometro);
+                query.Parameters.AddWithValue("@hodometro", Converter.ToIntDB(Hodometro, true));
                 query.Parameters.AddWithValue("@status", Status);
                 query.Parameters.AddWithValue("@litros", Litros);
                 query.Parameters.AddWithValue("@valor", Valor);
@@ -49,7 +50,7 @@ namespace Projeto_Integrador_1.Connection {
                 Message = "Abastecimento salvo com sucesso.";
 
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -64,12 +65,12 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.Parameters.AddWithValue("@viagem", Viagem);
                 query.Parameters.AddWithValue("@posto", Posto);
-                query.Parameters.AddWithValue("@veiculo", Veiculo);
-                query.Parameters.AddWithValue("@motorista", Motorista);
+                query.Parameters.AddWithValue("@veiculo", Converter.ToIntDB(Veiculo, true));
+                query.Parameters.AddWithValue("@motorista", Converter.ToIntDB(Motorista, true));
                 query.Parameters.AddWithValue("@data", DateTime.Parse(Data));
                 query.Parameters.AddWithValue("@cupom", Cupom);
                 query.Parameters.AddWithValue("@combustivel", Combustivel);
-                query.Parameters.AddWithValue("@hodometro", Hodometro);
+                query.Parameters.AddWithValue("@hodometro", Converter.ToIntDB(Hodometro, true));
                 query.Parameters.AddWithValue("@status", Status);
                 query.Parameters.AddWithValue("@litros", Litros);
                 query.Parameters.AddWithValue("@valor", Valor);
@@ -82,7 +83,7 @@ namespace Projeto_Integrador_1.Connection {
                 Message = "Abastecimento salvo com sucesso.";
 
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -106,7 +107,7 @@ namespace Projeto_Integrador_1.Connection {
                     Combustivel = data["combustivel"],
                     Veiculo = data["veiculo"],
                     Motorista = data["motorista"],
-                    Data = Convert.ToDateTime(data["data"]).ToString("dd/MM/yyyy HH:mm"),
+                    Data = Converter.DateToString(data["data"], "dd/MM/yyyy HH:mm"),
                     Cupom = data["cupom"],
                     Hodometro = data["hodometro"],
                     Status = data["status"],
@@ -121,7 +122,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 Success = true;
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -139,7 +140,7 @@ namespace Projeto_Integrador_1.Connection {
                 while (data.Read()) {
                     Results.Add(new {
                         Id = data["id"],
-                        Data = data["data"],
+                        Data = Converter.DateToString(data["data"], "dd/MM/yyyy HH:mm"),
                         Placa = data["veiculo_placa"],
                         Posto = data["posto_nome"],
                         Combustivel = data["combustivel"],
@@ -157,7 +158,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 Success = true;
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -178,7 +179,7 @@ namespace Projeto_Integrador_1.Connection {
                 Success = true;
                 Message = "Abastecimento excluido com sucesso.";
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }

@@ -44,7 +44,7 @@ namespace Projeto_Integrador_1.TMSForms.List {
                         fin.DataVencimento,
                         fin.Nome,
                         FormaPagamento,
-                        fin.Valor,
+                        "R$ " + Converter.ToReais(fin.Valor),
                         Status
                     );
                 }

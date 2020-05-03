@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.timeData = new Guna.UI.WinForms.GunaDateTimePicker();
             this.textCupom = new Guna.UI.WinForms.GunaTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -71,6 +70,7 @@
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel31 = new System.Windows.Forms.Panel();
             this.textLitros = new System.Windows.Forms.MaskedTextBox();
+            this.timeData = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             this.panel13.SuspendLayout();
@@ -119,32 +119,6 @@
             this.label16.Size = new System.Drawing.Size(39, 18);
             this.label16.TabIndex = 241;
             this.label16.Text = "Data";
-            // 
-            // timeData
-            // 
-            this.timeData.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.timeData.BaseColor = System.Drawing.Color.White;
-            this.timeData.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.timeData.BorderSize = 1;
-            this.timeData.CustomFormat = "dd/MM/yyyy HH:m";
-            this.timeData.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.timeData.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeData.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.timeData.ForeColor = System.Drawing.Color.Black;
-            this.timeData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeData.Location = new System.Drawing.Point(20, 76);
-            this.timeData.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.timeData.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.timeData.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.timeData.Name = "timeData";
-            this.timeData.OnHoverBaseColor = System.Drawing.Color.White;
-            this.timeData.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeData.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeData.OnPressedColor = System.Drawing.Color.Black;
-            this.timeData.Size = new System.Drawing.Size(178, 35);
-            this.timeData.TabIndex = 1;
-            this.timeData.Text = "22/04/2020 12:57";
-            this.timeData.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
             // textCupom
             // 
@@ -718,11 +692,35 @@
             this.textLitros.TextChanged += new System.EventHandler(this.OnChangedTextQtd);
             this.textLitros.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalcularValorTotal);
             // 
+            // timeData
+            // 
+            this.timeData.BackColor = System.Drawing.Color.Transparent;
+            this.timeData.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.timeData.BorderThickness = 1;
+            this.timeData.CheckedState.Parent = this.timeData;
+            this.timeData.CustomFormat = " ";
+            this.timeData.FillColor = System.Drawing.Color.White;
+            this.timeData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.timeData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.timeData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeData.HoverState.Parent = this.timeData;
+            this.timeData.Location = new System.Drawing.Point(21, 76);
+            this.timeData.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.timeData.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.timeData.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.timeData.Name = "timeData";
+            this.timeData.ShadowDecoration.Parent = this.timeData;
+            this.timeData.Size = new System.Drawing.Size(177, 35);
+            this.timeData.TabIndex = 288;
+            this.timeData.UseTransparentBackground = true;
+            this.timeData.Value = new System.DateTime(2020, 5, 3, 16, 47, 44, 411);
+            // 
             // FormAbastecimentos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 372);
+            this.Controls.Add(this.timeData);
             this.Controls.Add(this.panel30);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel24);
@@ -752,7 +750,6 @@
             this.Controls.Add(this.textCupom);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.timeData);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -786,7 +783,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label16;
-        private Guna.UI.WinForms.GunaDateTimePicker timeData;
         private Guna.UI.WinForms.GunaTextBox textCupom;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label14;
@@ -825,5 +821,6 @@
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.MaskedTextBox textLitros;
+        private Guna.UI2.WinForms.Guna2DateTimePicker timeData;
     }
 }

@@ -17,6 +17,12 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
 
+            textLitros.KeyPress += Converter.OnlyNumber;
+            textValor.KeyPress += Converter.OnlyNumber;
+
+            timeData.KeyPress += Converter.DateReset;
+            timeData.ValueChanged += Converter.DateTimeValueChanged;
+
             LoadClientes();
             LoadVeiculos();
             LoadMotoristas();

@@ -30,6 +30,35 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
 
+            textHodometroSaida.KeyPress += Converter.OnlyNumber;
+            textHodometroEntrega.KeyPress += Converter.OnlyNumber;
+            textHodometroChegada.KeyPress += Converter.OnlyNumber;
+            textValor.KeyPress += Converter.OnlyNumber;
+
+            textCargaPeso.KeyPress += Converter.OnlyNumber;
+            textCargaValor.KeyPress += Converter.OnlyNumber;
+
+            textCustoQTD.KeyPress += Converter.OnlyNumber;
+            textCustoValor.KeyPress += Converter.OnlyNumber;
+
+            textAbastecimentoLitros.KeyPress += Converter.OnlyNumber;
+            textAbastecimentoValor.KeyPress += Converter.OnlyNumber;
+
+            timeDataSaida.KeyPress += Converter.DateReset;
+            timeDataSaida.ValueChanged += Converter.DateTimeValueChanged;
+
+            timeDataEntrega.KeyPress += Converter.DateReset;
+            timeDataEntrega.ValueChanged += Converter.DateTimeValueChanged;
+
+            timeDataEntrega.KeyPress += Converter.DateReset;
+            timeDataEntrega.ValueChanged += Converter.DateTimeValueChanged;
+
+            timeCustoData.KeyPress += Converter.DateReset;
+            timeCustoData.ValueChanged += Converter.DateValueChanged;
+
+            timeAbastecimentoData.KeyPress += Converter.DateReset;
+            timeAbastecimentoData.ValueChanged += Converter.DateTimeValueChanged;
+
             LoadClientes();
             LoadVeiculos();
             LoadMotoristas();
@@ -44,11 +73,11 @@ namespace Projeto_Integrador_1.TMSForms.Register {
 
             combSaidaUF.DisplayMember = "Text";
             combSaidaUF.ValueMember = "Value";
-            combSaidaUF.DataSource = Listas.Estados;
+            combSaidaUF.DataSource = new List<dynamic>(Listas.Estados);
 
             combDestinoUF.DisplayMember = "Text";
             combDestinoUF.ValueMember = "Value";
-            combDestinoUF.DataSource = Listas.Estados;
+            combDestinoUF.DataSource = new List<dynamic>(Listas.Estados);
 
             combStatus.DisplayMember = "Text";
             combStatus.ValueMember = "Value";
@@ -143,9 +172,9 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 textDestinoCidade.Text = viagem.DestinoCidade;
                 combDestinoUF.SelectedValue = viagem.DestinoUF;
                 combStatus.SelectedValue = viagem.Status;
-                timeDataSaida.Text = viagem.DataSaida;
+                timeDataSaida.Value = DateTime.Parse(viagem.DataSaida);
                 timeDataEntrega.Text = viagem.DataEntrega;
-                timeDataChegada.Text = viagem.DataChegada;
+                timeDataEntrega.Text = viagem.DataChegada;
                 textHodometroSaida.Text = Convert.ToString(viagem.HodometroSaida);
                 textHodometroEntrega.Text = Convert.ToString(viagem.HodometroEntrega);
                 textHodometroChegada.Text = Convert.ToString(viagem.HodometroChegada);
@@ -328,7 +357,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             try {
                 Validate Validate = new Validate(this, ErrorProvider);
 
-                Validate.AddRule(timeAbastecimentoData, "Data", "required|date:dd/MM/yyyy H:mm");
+                Validate.AddRule(timeAbastecimentoData, "Data", "required|date:dd/MM/yyyy HH:mm");
                 Validate.AddRule(combAbastecimentoPosto, "Posto", "required|numeric");
                 Validate.AddRule(combAbastecimentoCombustivel, "Combustivel", "required|numeric");
                 Validate.AddRule(textAbastecimentoLitros, "Litros", "required|quantidade|max:20");
@@ -347,7 +376,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                         textAbastecimentoLitros.Text,
                         Converter.ToReais(textAbastecimentoValor.Text),
                         Converter.ToReais(valorTotal),
-                        combAbastecimentoStatus.SelectedValue);
+                        combAbastecimentoStatus.SelectedValue
+                    );
 
                     timeAbastecimentoData.ResetText();
                     combAbastecimentoPosto.SelectedValue = -1;
@@ -365,7 +395,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             }
         }
         private void OnSalvar(object sender, EventArgs e) {
-
+            try {
                 Validate Validate = new Validate(this, ErrorProvider);
 
                 Validate.AddRule(combRemetente, "Remetente", "required|numeric|max:11");
@@ -381,9 +411,9 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 Validate.AddRule(textDestinoCidade, "Cidade Destino", "required|max:100");
                 Validate.AddRule(combDestinoUF, "UF Destino", "required|exact:2");
                 Validate.AddRule(combStatus, "Status", "required|numeric|exact:1");
-                Validate.AddRule(timeDataSaida, "Data Saida", "date:dd/MM/yyyy HH:mm");
+                Validate.AddRule(timeDataSaida, "Data Saida", "required|date:dd/MM/yyyy HH:mm");
                 Validate.AddRule(timeDataEntrega, "Data Entrega", "date:dd/MM/yyyy HH:mm");
-                Validate.AddRule(timeDataChegada, "Data Chegada", "date:dd/MM/yyyy HH:mm");
+                Validate.AddRule(timeDataEntrega, "Data Chegada", "date:dd/MM/yyyy HH:mm");
                 Validate.AddRule(textHodometroSaida, "KM Saida", "numeric|max:20");
                 Validate.AddRule(textHodometroEntrega, "KM Entrega", "numeric|max:20");
                 Validate.AddRule(textHodometroChegada, "KM Chegada", "numeric|max:20");
@@ -412,8 +442,8 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                     viagens.DestinoUF = combDestinoUF.SelectedValue;
                     viagens.Status = combStatus.SelectedValue;
                     viagens.DataSaida = timeDataSaida.Text;
-                    viagens.DataEntrega = timeDataEntrega.Text;
-                    viagens.DataChegada = timeDataChegada.Text;
+                    viagens.DataEntrega = (timeDataEntrega.Checked ? timeDataEntrega.Text : string.Empty);
+                    viagens.DataChegada = (timeDataEntrega.Checked ? timeDataEntrega.Text : string.Empty);
                     viagens.HodometroSaida = textHodometroSaida.Text;
                     viagens.HodometroEntrega = textHodometroEntrega.Text;
                     viagens.HodometroChegada = textHodometroChegada.Text;
@@ -453,7 +483,10 @@ namespace Projeto_Integrador_1.TMSForms.Register {
                 else {
                     Validate.ErrorProviderShow();
                 }
-
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void PreencherJson() {
             TotalCargas = 0;
@@ -538,6 +571,31 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         private void OnChangedTextPeso(object sender, EventArgs e) {
             MaskedTextBox Text = (MaskedTextBox)sender;
             Converter.OnPressPeso(ref Text);
+        }
+
+        private void CalcularHodometroPercorrido(object sender, KeyEventArgs e) {
+            try {
+                int HodometroSaida = (!string.IsNullOrWhiteSpace(textHodometroSaida.Text) ? Convert.ToInt32(textHodometroSaida.Text) : 0);
+                int HodometroEntrega = (!string.IsNullOrWhiteSpace(textHodometroEntrega.Text) ? Convert.ToInt32(textHodometroEntrega.Text) : 0);
+                int HodometroChegada = (!string.IsNullOrWhiteSpace(textHodometroChegada.Text) ? Convert.ToInt32(textHodometroChegada.Text) : 0);
+                int Percorrido;
+
+                if (HodometroChegada > 0) {
+                    Percorrido = HodometroChegada - HodometroSaida;
+                }
+                else if (HodometroEntrega > 0 && HodometroChegada == 0) {
+                    Percorrido = HodometroEntrega - HodometroSaida;
+                }
+                else {
+                    Percorrido = 0;
+                }
+
+                textHodometroPercorrido.Text = Convert.ToString(Percorrido > 0 ? Percorrido : 0);
+            }
+            catch (Exception ex) {
+                Console.WriteLine(ex.Message);
+                textHodometroPercorrido.Text = Convert.ToString(0);
+            }
         }
     }
 }

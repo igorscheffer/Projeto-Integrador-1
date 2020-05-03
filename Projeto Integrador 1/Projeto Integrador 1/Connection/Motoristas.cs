@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Projeto_Integrador_1.Util;
 using System;
 using System.Collections.Generic;
 
@@ -10,7 +11,7 @@ namespace Projeto_Integrador_1.Connection {
         public bool Success;
         public string Message;
         public List<dynamic> Results = new List<dynamic>();
-        
+
         public int Id { get; set; }
         public string Nome { get; set; }
         public string CPF { get; set; }
@@ -43,10 +44,10 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.Parameters.AddWithValue("@nome", Nome);
                 query.Parameters.AddWithValue("@cpf", CNH);
-                query.Parameters.AddWithValue("@rg", RG);
+                query.Parameters.AddWithValue("@rg", Converter.ToIntDB(RG, true));
                 query.Parameters.AddWithValue("@status", Status);
-                query.Parameters.AddWithValue("@cnh", CNH);
-                query.Parameters.AddWithValue("@vencimento", DateTime.Parse(Vencimento));
+                query.Parameters.AddWithValue("@cnh", Converter.ToIntDB(CNH, true));
+                query.Parameters.AddWithValue("@vencimento", (!string.IsNullOrWhiteSpace(Vencimento) ? (object)DateTime.Parse(Vencimento) : DBNull.Value));
                 query.Parameters.AddWithValue("@categoria", Categoria);
                 query.Parameters.AddWithValue("@sexo", Sexo);
                 query.Parameters.AddWithValue("@estado_civil", EstadoCivil);
@@ -69,7 +70,7 @@ namespace Projeto_Integrador_1.Connection {
                 Success = true;
                 Message = "Motorista salvo com sucesso.";
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -85,10 +86,10 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.Parameters.AddWithValue("@nome", Nome);
                 query.Parameters.AddWithValue("@cpf", CPF);
-                query.Parameters.AddWithValue("@rg", RG);
+                query.Parameters.AddWithValue("@rg", Converter.ToIntDB(RG, true));
                 query.Parameters.AddWithValue("@status", Status);
-                query.Parameters.AddWithValue("@cnh", CNH);
-                query.Parameters.AddWithValue("@vencimento", DateTime.Parse(Vencimento));
+                query.Parameters.AddWithValue("@cnh", Converter.ToIntDB(CNH, true));
+                query.Parameters.AddWithValue("@vencimento", (!string.IsNullOrWhiteSpace(Vencimento) ? (object)DateTime.Parse(Vencimento) : DBNull.Value));
                 query.Parameters.AddWithValue("@categoria", Categoria);
                 query.Parameters.AddWithValue("@sexo", Sexo);
                 query.Parameters.AddWithValue("@estado_civil", EstadoCivil);
@@ -112,7 +113,7 @@ namespace Projeto_Integrador_1.Connection {
                 Success = true;
                 Message = "Motorista salvo com sucesso.";
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -138,7 +139,7 @@ namespace Projeto_Integrador_1.Connection {
                         RG = data["rg"],
                         Status = data["status"],
                         CNH = data["cnh"],
-                        Vencimento = Convert.ToDateTime(data["vencimento"]).ToString("dd/MM/yyyy"),
+                        Vencimento = Converter.DateToString(data["vencimento"], "dd/MM/yyyy"),
                         Categoria = data["categoria"],
                         Sexo = data["sexo"],
                         EstadoCivil = data["estado_civil"],
@@ -162,7 +163,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 Success = true;
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -186,7 +187,7 @@ namespace Projeto_Integrador_1.Connection {
                             CPF = data["CPF"],
                             CNH = data["cnh"],
                             Categoria = data["categoria"],
-                            Vencimento = Convert.ToDateTime(data["vencimento"]).ToString("dd/MM/yyyy")
+                            Vencimento = Converter.DateToString(data["vencimento"], "dd/MM/yyyy")
                         }
                     );
                 }
@@ -197,7 +198,7 @@ namespace Projeto_Integrador_1.Connection {
 
                 Success = true;
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }
@@ -218,7 +219,7 @@ namespace Projeto_Integrador_1.Connection {
                 Success = true;
                 Message = "Motorista excluido com sucesso.";
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
             }

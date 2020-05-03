@@ -1,6 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Windows.Forms;
 
 namespace Projeto_Integrador_1.Connection {
     class Config {
@@ -9,7 +8,7 @@ namespace Projeto_Integrador_1.Connection {
         private string User = "projet_001";
         private string Pass = "ProjetSisu01I";
         private string Base = "projet_001";
-        private bool ServerLocal = false;
+        private bool ServerLocal = true;
 
         public Config() {
             Initialize();

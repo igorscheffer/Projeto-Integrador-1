@@ -41,9 +41,7 @@
             this.combStatus = new Guna.UI.WinForms.GunaComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.timeDataEmissao = new Guna.UI.WinForms.GunaDateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.timeDataVencimento = new Guna.UI.WinForms.GunaDateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -66,6 +64,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.textValor = new System.Windows.Forms.MaskedTextBox();
+            this.timeDataEmissao = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.timeDataVencimento = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridParcelas)).BeginInit();
             this.panel2.SuspendLayout();
@@ -110,7 +110,7 @@
             this.btnEnviar.IconColor = System.Drawing.Color.White;
             this.btnEnviar.IconSize = 16;
             this.btnEnviar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEnviar.Location = new System.Drawing.Point(891, 527);
+            this.btnEnviar.Location = new System.Drawing.Point(891, 571);
             this.btnEnviar.Margin = new System.Windows.Forms.Padding(10);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Rotation = 0D;
@@ -306,32 +306,6 @@
             this.label6.TabIndex = 298;
             this.label6.Text = "Data Emissao";
             // 
-            // timeDataEmissao
-            // 
-            this.timeDataEmissao.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.timeDataEmissao.BaseColor = System.Drawing.Color.White;
-            this.timeDataEmissao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.timeDataEmissao.BorderSize = 1;
-            this.timeDataEmissao.CustomFormat = "dd/MM/yyyy";
-            this.timeDataEmissao.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.timeDataEmissao.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataEmissao.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.timeDataEmissao.ForeColor = System.Drawing.Color.Black;
-            this.timeDataEmissao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeDataEmissao.Location = new System.Drawing.Point(20, 151);
-            this.timeDataEmissao.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.timeDataEmissao.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.timeDataEmissao.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.timeDataEmissao.Name = "timeDataEmissao";
-            this.timeDataEmissao.OnHoverBaseColor = System.Drawing.Color.White;
-            this.timeDataEmissao.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataEmissao.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataEmissao.OnPressedColor = System.Drawing.Color.Black;
-            this.timeDataEmissao.Size = new System.Drawing.Size(140, 35);
-            this.timeDataEmissao.TabIndex = 6;
-            this.timeDataEmissao.Text = "22/04/2020";
-            this.timeDataEmissao.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
-            // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -343,32 +317,6 @@
             this.label9.Size = new System.Drawing.Size(121, 18);
             this.label9.TabIndex = 300;
             this.label9.Text = "Data Vencimento";
-            // 
-            // timeDataVencimento
-            // 
-            this.timeDataVencimento.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.timeDataVencimento.BaseColor = System.Drawing.Color.White;
-            this.timeDataVencimento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.timeDataVencimento.BorderSize = 1;
-            this.timeDataVencimento.CustomFormat = "dd/MM/yyyy";
-            this.timeDataVencimento.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.timeDataVencimento.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataVencimento.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.timeDataVencimento.ForeColor = System.Drawing.Color.Black;
-            this.timeDataVencimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeDataVencimento.Location = new System.Drawing.Point(180, 151);
-            this.timeDataVencimento.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.timeDataVencimento.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.timeDataVencimento.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.timeDataVencimento.Name = "timeDataVencimento";
-            this.timeDataVencimento.OnHoverBaseColor = System.Drawing.Color.White;
-            this.timeDataVencimento.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataVencimento.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataVencimento.OnPressedColor = System.Drawing.Color.Black;
-            this.timeDataVencimento.Size = new System.Drawing.Size(140, 35);
-            this.timeDataVencimento.TabIndex = 7;
-            this.timeDataVencimento.Text = "22/04/2020";
-            this.timeDataVencimento.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
             // panel3
             // 
@@ -538,6 +486,7 @@
             this.panelInfoPagamento.Name = "panelInfoPagamento";
             this.panelInfoPagamento.Size = new System.Drawing.Size(1000, 2);
             this.panelInfoPagamento.TabIndex = 312;
+            this.panelInfoPagamento.Visible = false;
             // 
             // lblInfoPagamento
             // 
@@ -550,6 +499,7 @@
             this.lblInfoPagamento.Size = new System.Drawing.Size(290, 20);
             this.lblInfoPagamento.TabIndex = 311;
             this.lblInfoPagamento.Text = "INFORMAÇÕES DE PARCELAMENTO";
+            this.lblInfoPagamento.Visible = false;
             // 
             // gridParcelas
             // 
@@ -602,7 +552,7 @@
             this.gridParcelas.RowTemplate.DividerHeight = 1;
             this.gridParcelas.RowTemplate.Height = 30;
             this.gridParcelas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridParcelas.Size = new System.Drawing.Size(1000, 302);
+            this.gridParcelas.Size = new System.Drawing.Size(1000, 284);
             this.gridParcelas.TabIndex = 313;
             this.gridParcelas.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.gridParcelas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -626,6 +576,7 @@
             this.gridParcelas.ThemeStyle.RowsStyle.Height = 30;
             this.gridParcelas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.gridParcelas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridParcelas.Visible = false;
             // 
             // colParcela
             // 
@@ -701,11 +652,59 @@
             this.textValor.TabIndex = 8;
             this.textValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             // 
+            // timeDataEmissao
+            // 
+            this.timeDataEmissao.BackColor = System.Drawing.Color.Transparent;
+            this.timeDataEmissao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.timeDataEmissao.BorderThickness = 1;
+            this.timeDataEmissao.CheckedState.Parent = this.timeDataEmissao;
+            this.timeDataEmissao.CustomFormat = " ";
+            this.timeDataEmissao.FillColor = System.Drawing.Color.White;
+            this.timeDataEmissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.timeDataEmissao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.timeDataEmissao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeDataEmissao.HoverState.Parent = this.timeDataEmissao;
+            this.timeDataEmissao.Location = new System.Drawing.Point(20, 151);
+            this.timeDataEmissao.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.timeDataEmissao.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.timeDataEmissao.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.timeDataEmissao.Name = "timeDataEmissao";
+            this.timeDataEmissao.ShadowDecoration.Parent = this.timeDataEmissao;
+            this.timeDataEmissao.Size = new System.Drawing.Size(143, 35);
+            this.timeDataEmissao.TabIndex = 314;
+            this.timeDataEmissao.UseTransparentBackground = true;
+            this.timeDataEmissao.Value = new System.DateTime(2020, 5, 3, 16, 47, 44, 411);
+            // 
+            // timeDataVencimento
+            // 
+            this.timeDataVencimento.BackColor = System.Drawing.Color.Transparent;
+            this.timeDataVencimento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.timeDataVencimento.BorderThickness = 1;
+            this.timeDataVencimento.CheckedState.Parent = this.timeDataVencimento;
+            this.timeDataVencimento.CustomFormat = " ";
+            this.timeDataVencimento.FillColor = System.Drawing.Color.White;
+            this.timeDataVencimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.timeDataVencimento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.timeDataVencimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeDataVencimento.HoverState.Parent = this.timeDataVencimento;
+            this.timeDataVencimento.Location = new System.Drawing.Point(183, 151);
+            this.timeDataVencimento.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.timeDataVencimento.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.timeDataVencimento.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.timeDataVencimento.Name = "timeDataVencimento";
+            this.timeDataVencimento.ShadowDecoration.Parent = this.timeDataVencimento;
+            this.timeDataVencimento.Size = new System.Drawing.Size(137, 35);
+            this.timeDataVencimento.TabIndex = 315;
+            this.timeDataVencimento.UseTransparentBackground = true;
+            this.timeDataVencimento.Value = new System.DateTime(2020, 5, 3, 16, 47, 44, 411);
+            // 
             // FormFinanceiro
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1040, 581);
+            this.ClientSize = new System.Drawing.Size(1040, 625);
+            this.Controls.Add(this.timeDataVencimento);
+            this.Controls.Add(this.timeDataEmissao);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.gridParcelas);
@@ -721,9 +720,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.timeDataVencimento);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.timeDataEmissao);
             this.Controls.Add(this.combStatus);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.combFormaPagamento);
@@ -767,9 +764,7 @@
         private Guna.UI.WinForms.GunaComboBox combStatus;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private Guna.UI.WinForms.GunaDateTimePicker timeDataEmissao;
         private System.Windows.Forms.Label label9;
-        private Guna.UI.WinForms.GunaDateTimePicker timeDataVencimento;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
@@ -792,5 +787,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.MaskedTextBox textValor;
+        private Guna.UI2.WinForms.Guna2DateTimePicker timeDataEmissao;
+        private Guna.UI2.WinForms.Guna2DateTimePicker timeDataVencimento;
     }
 }

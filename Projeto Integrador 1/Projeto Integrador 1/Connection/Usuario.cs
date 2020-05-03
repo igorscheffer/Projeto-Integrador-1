@@ -1,10 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Projeto_Integrador_1.Connection {
     class Usuario : Config {
@@ -17,7 +14,7 @@ namespace Projeto_Integrador_1.Connection {
         public string Senha { get; set; }
         public int Acesso { get; set; }
         public bool SalvarSenha { get; set; }
-        
+
         public Usuario() { }
 
         private string CriptografarSenha(string login, string senha) {
@@ -25,7 +22,7 @@ namespace Projeto_Integrador_1.Connection {
                 if (!string.IsNullOrWhiteSpace(login) && !string.IsNullOrWhiteSpace(senha)) {
                     MD5 md5hash = MD5.Create();
 
-                    byte[] data = md5hash.ComputeHash(Encoding.UTF8.GetBytes(login+senha));
+                    byte[] data = md5hash.ComputeHash(Encoding.UTF8.GetBytes(login + senha));
 
                     StringBuilder sBuilder = new StringBuilder();
 
@@ -76,7 +73,7 @@ namespace Projeto_Integrador_1.Connection {
                 int Id = Convert.ToInt32(data["id"]);
 
                 CloseConnection();
-                
+
                 if (Id > 0) {
                     OpenConnection();
 
@@ -108,7 +105,7 @@ namespace Projeto_Integrador_1.Connection {
                     throw new Exception("Usuario ou Senha invalido.");
                 }
             }
-            catch (MySqlException e) {
+            catch (Exception e) {
                 Success = false;
                 Message = e.Message;
                 Console.WriteLine("Houve um erro ao efetuar o login (" + e.Message + ").");

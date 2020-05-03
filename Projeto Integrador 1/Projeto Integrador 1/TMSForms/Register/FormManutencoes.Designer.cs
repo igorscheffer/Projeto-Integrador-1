@@ -100,9 +100,7 @@
             this.textHodometroAgendado = new Guna.UI.WinForms.GunaTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.timeDataRealizada = new Guna.UI.WinForms.GunaDateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.timeDataAgendada = new Guna.UI.WinForms.GunaDateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.combMotorista = new Guna.UI.WinForms.GunaComboBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
@@ -119,6 +117,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabViagem = new System.Windows.Forms.TabControl();
+            this.timeDataAgendada = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.timeDataRealizada = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.tabPanelItens.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridItens)).BeginInit();
@@ -525,6 +525,8 @@
             // tabPanelManutencao
             // 
             this.tabPanelManutencao.BackColor = System.Drawing.Color.White;
+            this.tabPanelManutencao.Controls.Add(this.timeDataRealizada);
+            this.tabPanelManutencao.Controls.Add(this.timeDataAgendada);
             this.tabPanelManutencao.Controls.Add(this.panel16);
             this.tabPanelManutencao.Controls.Add(this.panel14);
             this.tabPanelManutencao.Controls.Add(this.panel12);
@@ -551,9 +553,7 @@
             this.tabPanelManutencao.Controls.Add(this.textHodometroAgendado);
             this.tabPanelManutencao.Controls.Add(this.label1);
             this.tabPanelManutencao.Controls.Add(this.label11);
-            this.tabPanelManutencao.Controls.Add(this.timeDataRealizada);
             this.tabPanelManutencao.Controls.Add(this.label9);
-            this.tabPanelManutencao.Controls.Add(this.timeDataAgendada);
             this.tabPanelManutencao.Controls.Add(this.label8);
             this.tabPanelManutencao.Controls.Add(this.combMotorista);
             this.tabPanelManutencao.Controls.Add(this.iconButton2);
@@ -1120,32 +1120,6 @@
             this.label11.TabIndex = 246;
             this.label11.Text = "Data Realizada";
             // 
-            // timeDataRealizada
-            // 
-            this.timeDataRealizada.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.timeDataRealizada.BaseColor = System.Drawing.Color.White;
-            this.timeDataRealizada.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.timeDataRealizada.BorderSize = 1;
-            this.timeDataRealizada.CustomFormat = "dd/MM/yyyy HH:m";
-            this.timeDataRealizada.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.timeDataRealizada.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataRealizada.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.timeDataRealizada.ForeColor = System.Drawing.Color.Black;
-            this.timeDataRealizada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeDataRealizada.Location = new System.Drawing.Point(20, 307);
-            this.timeDataRealizada.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.timeDataRealizada.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.timeDataRealizada.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.timeDataRealizada.Name = "timeDataRealizada";
-            this.timeDataRealizada.OnHoverBaseColor = System.Drawing.Color.White;
-            this.timeDataRealizada.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataRealizada.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataRealizada.OnPressedColor = System.Drawing.Color.Black;
-            this.timeDataRealizada.Size = new System.Drawing.Size(160, 35);
-            this.timeDataRealizada.TabIndex = 10;
-            this.timeDataRealizada.Text = "22/04/2020 12:57";
-            this.timeDataRealizada.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
-            // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -1157,32 +1131,6 @@
             this.label9.Size = new System.Drawing.Size(108, 18);
             this.label9.TabIndex = 244;
             this.label9.Text = "Data Agendada";
-            // 
-            // timeDataAgendada
-            // 
-            this.timeDataAgendada.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.timeDataAgendada.BaseColor = System.Drawing.Color.White;
-            this.timeDataAgendada.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.timeDataAgendada.BorderSize = 1;
-            this.timeDataAgendada.CustomFormat = "dd/MM/yyyy HH:m";
-            this.timeDataAgendada.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.timeDataAgendada.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataAgendada.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.timeDataAgendada.ForeColor = System.Drawing.Color.Black;
-            this.timeDataAgendada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeDataAgendada.Location = new System.Drawing.Point(20, 231);
-            this.timeDataAgendada.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.timeDataAgendada.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.timeDataAgendada.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.timeDataAgendada.Name = "timeDataAgendada";
-            this.timeDataAgendada.OnHoverBaseColor = System.Drawing.Color.White;
-            this.timeDataAgendada.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataAgendada.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.timeDataAgendada.OnPressedColor = System.Drawing.Color.Black;
-            this.timeDataAgendada.Size = new System.Drawing.Size(160, 35);
-            this.timeDataAgendada.TabIndex = 8;
-            this.timeDataAgendada.Text = "22/04/2020 12:57";
-            this.timeDataAgendada.Value = new System.DateTime(2020, 4, 22, 12, 57, 26, 96);
             // 
             // label8
             // 
@@ -1467,6 +1415,52 @@
             this.tabViagem.Size = new System.Drawing.Size(1040, 637);
             this.tabViagem.TabIndex = 271;
             // 
+            // timeDataAgendada
+            // 
+            this.timeDataAgendada.BackColor = System.Drawing.Color.Transparent;
+            this.timeDataAgendada.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.timeDataAgendada.BorderThickness = 1;
+            this.timeDataAgendada.CheckedState.Parent = this.timeDataAgendada;
+            this.timeDataAgendada.CustomFormat = " ";
+            this.timeDataAgendada.FillColor = System.Drawing.Color.White;
+            this.timeDataAgendada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.timeDataAgendada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.timeDataAgendada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeDataAgendada.HoverState.Parent = this.timeDataAgendada;
+            this.timeDataAgendada.Location = new System.Drawing.Point(20, 231);
+            this.timeDataAgendada.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.timeDataAgendada.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.timeDataAgendada.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.timeDataAgendada.Name = "timeDataAgendada";
+            this.timeDataAgendada.ShadowDecoration.Parent = this.timeDataAgendada;
+            this.timeDataAgendada.Size = new System.Drawing.Size(160, 35);
+            this.timeDataAgendada.TabIndex = 278;
+            this.timeDataAgendada.UseTransparentBackground = true;
+            this.timeDataAgendada.Value = new System.DateTime(2020, 5, 3, 16, 47, 44, 411);
+            // 
+            // timeDataRealizada
+            // 
+            this.timeDataRealizada.BackColor = System.Drawing.Color.Transparent;
+            this.timeDataRealizada.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.timeDataRealizada.BorderThickness = 1;
+            this.timeDataRealizada.CheckedState.Parent = this.timeDataRealizada;
+            this.timeDataRealizada.CustomFormat = " ";
+            this.timeDataRealizada.FillColor = System.Drawing.Color.White;
+            this.timeDataRealizada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.timeDataRealizada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.timeDataRealizada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timeDataRealizada.HoverState.Parent = this.timeDataRealizada;
+            this.timeDataRealizada.Location = new System.Drawing.Point(20, 307);
+            this.timeDataRealizada.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.timeDataRealizada.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.timeDataRealizada.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.timeDataRealizada.Name = "timeDataRealizada";
+            this.timeDataRealizada.ShadowDecoration.Parent = this.timeDataRealizada;
+            this.timeDataRealizada.Size = new System.Drawing.Size(160, 35);
+            this.timeDataRealizada.TabIndex = 279;
+            this.timeDataRealizada.UseTransparentBackground = true;
+            this.timeDataRealizada.Value = new System.DateTime(2020, 5, 3, 16, 47, 44, 411);
+            // 
             // FormManutencoes
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1552,9 +1546,7 @@
         private Guna.UI.WinForms.GunaComboBox combTipoManutencao;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label11;
-        private Guna.UI.WinForms.GunaDateTimePicker timeDataRealizada;
         private System.Windows.Forms.Label label9;
-        private Guna.UI.WinForms.GunaDateTimePicker timeDataAgendada;
         private System.Windows.Forms.Label label8;
         private Guna.UI.WinForms.GunaComboBox combMotorista;
         private FontAwesome.Sharp.IconButton iconButton2;
@@ -1611,5 +1603,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colQtd;
         private System.Windows.Forms.DataGridViewTextBoxColumn colValor;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTotal;
+        private Guna.UI2.WinForms.Guna2DateTimePicker timeDataRealizada;
+        private Guna.UI2.WinForms.Guna2DateTimePicker timeDataAgendada;
     }
 }

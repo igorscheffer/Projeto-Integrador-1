@@ -1,12 +1,6 @@
 ﻿using FontAwesome.Sharp;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Projeto_Integrador_1.Util.Validate;
 using Projeto_Integrador_1.Connection;
@@ -59,10 +53,10 @@ namespace Projeto_Integrador_1.TMSForms {
 
                     if (login.Success) {
                         Form FormPrincipal = new FormPrincipal();
-                        
-                        this.Hide();
 
-                        FormPrincipal.Closed += (fSender, eSender) => this.Close();
+                        Hide();
+
+                        FormPrincipal.Closed += (fSender, eSender) => Close();
                         FormPrincipal.Show();
                     }
                     else {

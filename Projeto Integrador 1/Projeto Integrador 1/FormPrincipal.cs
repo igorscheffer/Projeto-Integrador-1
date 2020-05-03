@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Net.Http;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using Projeto_Integrador_1.Connection;
@@ -20,21 +18,21 @@ namespace Projeto_Integrador_1 {
                 Config Connexao = new Config();
 
                 if (Connexao.OpenConnection()) {
-                    this.Enabled = true;
+                    Enabled = true;
                     Connexao.CloseConnection();
                 }
                 else {
-                    this.Enabled = false;
+                    Enabled = false;
                     throw new Exception("Não foi possivel conectar com o banco de dados.");
                 }
             }
             catch (Exception e) {
-                this.Enabled = false;
+                Enabled = false;
 
                 DialogResult VerificarConexao = MessageBox.Show(e.Message, "Conexao Offline", MessageBoxButtons.RetryCancel);
 
                 if (VerificarConexao == DialogResult.Retry) {
-                     this.VerificarConexao();
+                    this.VerificarConexao();
                 }
                 else {
                     Application.Exit();
@@ -137,9 +135,9 @@ namespace Projeto_Integrador_1 {
 
         private void OnClickMenu(object sender, EventArgs e) {
             IconButton Button = (IconButton)sender;
-            
+
             AtivarBotao(sender);
-            
+
             switch (Button.Tag) {
                 case "home":
                     AtivarForm(new TMSForms.FormHome(this));
@@ -171,7 +169,7 @@ namespace Projeto_Integrador_1 {
                 case "sair":
                     OnClickSair();
                     break;
-                    
+
             }
         }
 
