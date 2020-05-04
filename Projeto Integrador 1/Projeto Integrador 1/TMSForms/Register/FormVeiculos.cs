@@ -3,6 +3,7 @@ using Projeto_Integrador_1.Util;
 using System;
 using System.Windows.Forms;
 using Projeto_Integrador_1.Util.Validate;
+using Guna.UI2.WinForms;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormVeiculos : Form {
@@ -178,12 +179,12 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         }
 
         private void OnChangedTextQtd(object sender, EventArgs e) {
-            MaskedTextBox Text = (MaskedTextBox)sender;
+            Guna2TextBox Text = (Guna2TextBox)sender;
             Converter.OnPressQtd(ref Text);
         }
 
         private void OnChangedTextPeso(object sender, EventArgs e) {
-            MaskedTextBox Text = (MaskedTextBox)sender;
+            Guna2TextBox Text = (Guna2TextBox)sender;
             Converter.OnPressPeso(ref Text);
         }
     }

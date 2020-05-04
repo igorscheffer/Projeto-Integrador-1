@@ -30,27 +30,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.btnEnviar = new FontAwesome.Sharp.IconButton();
-            this.textNome = new Guna.UI.WinForms.GunaTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.combTipo = new Guna.UI.WinForms.GunaComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.combCentroCusto = new Guna.UI.WinForms.GunaComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.combFormaPagamento = new Guna.UI.WinForms.GunaComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.combStatus = new Guna.UI.WinForms.GunaComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textDocumento = new Guna.UI.WinForms.GunaTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.combOcorrencia = new Guna.UI.WinForms.GunaComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.btnGerarParcelas = new FontAwesome.Sharp.IconButton();
-            this.textQtdParcelas = new Guna.UI.WinForms.GunaTextBox();
             this.lblQtdParcelas = new System.Windows.Forms.Label();
             this.panelInfoPagamento = new System.Windows.Forms.Panel();
             this.lblInfoPagamento = new System.Windows.Forms.Label();
@@ -61,15 +53,19 @@
             this.colFormaPagamento = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.textGridCustoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textGridCustoTotal = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.textValor = new System.Windows.Forms.MaskedTextBox();
+            this.combOcorrencia = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.textNome = new Guna.UI2.WinForms.Guna2TextBox();
+            this.combTipo = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.combCentroCusto = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.combFormaPagamento = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.combStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.timeDataEmissao = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.timeDataVencimento = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.textValor = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textDocumento = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textQtdParcelas = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridParcelas)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -121,27 +117,6 @@
             this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.OnEnviar);
             // 
-            // textNome
-            // 
-            this.textNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textNome.BackColor = System.Drawing.Color.White;
-            this.textNome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textNome.BaseColor = System.Drawing.Color.White;
-            this.textNome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textNome.BorderSize = 1;
-            this.textNome.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textNome.FocusedBaseColor = System.Drawing.Color.White;
-            this.textNome.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textNome.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textNome.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textNome.Location = new System.Drawing.Point(20, 75);
-            this.textNome.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textNome.MaxLength = 30;
-            this.textNome.Name = "textNome";
-            this.textNome.PasswordChar = '\0';
-            this.textNome.Size = new System.Drawing.Size(250, 35);
-            this.textNome.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -153,29 +128,6 @@
             this.label1.Size = new System.Drawing.Size(49, 18);
             this.label1.TabIndex = 288;
             this.label1.Text = "Nome";
-            // 
-            // combTipo
-            // 
-            this.combTipo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combTipo.BackColor = System.Drawing.Color.Transparent;
-            this.combTipo.BaseColor = System.Drawing.Color.White;
-            this.combTipo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combTipo.BorderSize = 1;
-            this.combTipo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combTipo.FocusedColor = System.Drawing.Color.Empty;
-            this.combTipo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combTipo.ForeColor = System.Drawing.Color.Black;
-            this.combTipo.FormattingEnabled = true;
-            this.combTipo.IntegralHeight = false;
-            this.combTipo.ItemHeight = 29;
-            this.combTipo.Location = new System.Drawing.Point(290, 75);
-            this.combTipo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combTipo.Name = "combTipo";
-            this.combTipo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combTipo.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combTipo.Size = new System.Drawing.Size(160, 35);
-            this.combTipo.TabIndex = 2;
             // 
             // label2
             // 
@@ -189,29 +141,6 @@
             this.label2.TabIndex = 290;
             this.label2.Text = "Tipo";
             // 
-            // combCentroCusto
-            // 
-            this.combCentroCusto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combCentroCusto.BackColor = System.Drawing.Color.Transparent;
-            this.combCentroCusto.BaseColor = System.Drawing.Color.White;
-            this.combCentroCusto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combCentroCusto.BorderSize = 1;
-            this.combCentroCusto.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combCentroCusto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combCentroCusto.FocusedColor = System.Drawing.Color.Empty;
-            this.combCentroCusto.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combCentroCusto.ForeColor = System.Drawing.Color.Black;
-            this.combCentroCusto.FormattingEnabled = true;
-            this.combCentroCusto.IntegralHeight = false;
-            this.combCentroCusto.ItemHeight = 29;
-            this.combCentroCusto.Location = new System.Drawing.Point(470, 75);
-            this.combCentroCusto.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combCentroCusto.Name = "combCentroCusto";
-            this.combCentroCusto.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combCentroCusto.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combCentroCusto.Size = new System.Drawing.Size(170, 35);
-            this.combCentroCusto.TabIndex = 3;
-            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -224,29 +153,6 @@
             this.label3.TabIndex = 292;
             this.label3.Text = "Centro de Custo";
             // 
-            // combFormaPagamento
-            // 
-            this.combFormaPagamento.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combFormaPagamento.BackColor = System.Drawing.Color.Transparent;
-            this.combFormaPagamento.BaseColor = System.Drawing.Color.White;
-            this.combFormaPagamento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combFormaPagamento.BorderSize = 1;
-            this.combFormaPagamento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combFormaPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combFormaPagamento.FocusedColor = System.Drawing.Color.Empty;
-            this.combFormaPagamento.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combFormaPagamento.ForeColor = System.Drawing.Color.Black;
-            this.combFormaPagamento.FormattingEnabled = true;
-            this.combFormaPagamento.IntegralHeight = false;
-            this.combFormaPagamento.ItemHeight = 29;
-            this.combFormaPagamento.Location = new System.Drawing.Point(660, 75);
-            this.combFormaPagamento.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combFormaPagamento.Name = "combFormaPagamento";
-            this.combFormaPagamento.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combFormaPagamento.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combFormaPagamento.Size = new System.Drawing.Size(190, 35);
-            this.combFormaPagamento.TabIndex = 4;
-            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -258,29 +164,6 @@
             this.label4.Size = new System.Drawing.Size(152, 18);
             this.label4.TabIndex = 294;
             this.label4.Text = "Forma de Pagamento";
-            // 
-            // combStatus
-            // 
-            this.combStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combStatus.BackColor = System.Drawing.Color.Transparent;
-            this.combStatus.BaseColor = System.Drawing.Color.White;
-            this.combStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combStatus.BorderSize = 1;
-            this.combStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combStatus.FocusedColor = System.Drawing.Color.Empty;
-            this.combStatus.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combStatus.ForeColor = System.Drawing.Color.Black;
-            this.combStatus.FormattingEnabled = true;
-            this.combStatus.IntegralHeight = false;
-            this.combStatus.ItemHeight = 29;
-            this.combStatus.Location = new System.Drawing.Point(870, 75);
-            this.combStatus.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combStatus.Name = "combStatus";
-            this.combStatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combStatus.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combStatus.Size = new System.Drawing.Size(150, 35);
-            this.combStatus.TabIndex = 5;
             // 
             // label5
             // 
@@ -353,27 +236,6 @@
             this.label16.TabIndex = 302;
             this.label16.Text = "Valor";
             // 
-            // textDocumento
-            // 
-            this.textDocumento.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textDocumento.BackColor = System.Drawing.Color.White;
-            this.textDocumento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textDocumento.BaseColor = System.Drawing.Color.White;
-            this.textDocumento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textDocumento.BorderSize = 1;
-            this.textDocumento.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textDocumento.FocusedBaseColor = System.Drawing.Color.White;
-            this.textDocumento.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textDocumento.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textDocumento.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textDocumento.Location = new System.Drawing.Point(20, 227);
-            this.textDocumento.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textDocumento.MaxLength = 30;
-            this.textDocumento.Name = "textDocumento";
-            this.textDocumento.PasswordChar = '\0';
-            this.textDocumento.Size = new System.Drawing.Size(200, 35);
-            this.textDocumento.TabIndex = 9;
-            // 
             // label17
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -385,30 +247,6 @@
             this.label17.Size = new System.Drawing.Size(106, 18);
             this.label17.TabIndex = 305;
             this.label17.Text = "Nº Documento";
-            // 
-            // combOcorrencia
-            // 
-            this.combOcorrencia.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combOcorrencia.BackColor = System.Drawing.Color.Transparent;
-            this.combOcorrencia.BaseColor = System.Drawing.Color.White;
-            this.combOcorrencia.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combOcorrencia.BorderSize = 1;
-            this.combOcorrencia.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combOcorrencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combOcorrencia.FocusedColor = System.Drawing.Color.Empty;
-            this.combOcorrencia.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combOcorrencia.ForeColor = System.Drawing.Color.Black;
-            this.combOcorrencia.FormattingEnabled = true;
-            this.combOcorrencia.IntegralHeight = false;
-            this.combOcorrencia.ItemHeight = 29;
-            this.combOcorrencia.Location = new System.Drawing.Point(240, 227);
-            this.combOcorrencia.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combOcorrencia.Name = "combOcorrencia";
-            this.combOcorrencia.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combOcorrencia.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combOcorrencia.Size = new System.Drawing.Size(130, 35);
-            this.combOcorrencia.TabIndex = 10;
-            this.combOcorrencia.SelectedValueChanged += new System.EventHandler(this.OnSelectOcorrencia);
             // 
             // label18
             // 
@@ -440,28 +278,8 @@
             this.btnGerarParcelas.Size = new System.Drawing.Size(35, 35);
             this.btnGerarParcelas.TabIndex = 12;
             this.btnGerarParcelas.UseVisualStyleBackColor = false;
+            this.btnGerarParcelas.Visible = false;
             this.btnGerarParcelas.Click += new System.EventHandler(this.OnClickGerarParcela);
-            // 
-            // textQtdParcelas
-            // 
-            this.textQtdParcelas.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textQtdParcelas.BackColor = System.Drawing.Color.White;
-            this.textQtdParcelas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textQtdParcelas.BaseColor = System.Drawing.Color.White;
-            this.textQtdParcelas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textQtdParcelas.BorderSize = 1;
-            this.textQtdParcelas.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textQtdParcelas.FocusedBaseColor = System.Drawing.Color.White;
-            this.textQtdParcelas.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textQtdParcelas.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textQtdParcelas.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textQtdParcelas.Location = new System.Drawing.Point(390, 227);
-            this.textQtdParcelas.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textQtdParcelas.MaxLength = 3;
-            this.textQtdParcelas.Name = "textQtdParcelas";
-            this.textQtdParcelas.PasswordChar = '\0';
-            this.textQtdParcelas.Size = new System.Drawing.Size(95, 35);
-            this.textQtdParcelas.TabIndex = 11;
             // 
             // lblQtdParcelas
             // 
@@ -474,6 +292,7 @@
             this.lblQtdParcelas.Size = new System.Drawing.Size(98, 18);
             this.lblQtdParcelas.TabIndex = 310;
             this.lblQtdParcelas.Text = "Qtd. Parcelas";
+            this.lblQtdParcelas.Visible = false;
             // 
             // panelInfoPagamento
             // 
@@ -616,41 +435,137 @@
             this.textGridCustoTotal.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.textGridCustoTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // panel2
+            // combOcorrencia
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.panel2.Controls.Add(this.panel11);
-            this.panel2.Location = new System.Drawing.Point(375, 151);
-            this.panel2.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(1);
-            this.panel2.Size = new System.Drawing.Size(140, 35);
-            this.panel2.TabIndex = 8;
+            this.combOcorrencia.BackColor = System.Drawing.Color.Transparent;
+            this.combOcorrencia.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combOcorrencia.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combOcorrencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combOcorrencia.FocusedColor = System.Drawing.Color.Empty;
+            this.combOcorrencia.FocusedState.Parent = this.combOcorrencia;
+            this.combOcorrencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combOcorrencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combOcorrencia.FormattingEnabled = true;
+            this.combOcorrencia.HoverState.Parent = this.combOcorrencia;
+            this.combOcorrencia.ItemHeight = 29;
+            this.combOcorrencia.ItemsAppearance.Parent = this.combOcorrencia;
+            this.combOcorrencia.Location = new System.Drawing.Point(240, 227);
+            this.combOcorrencia.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combOcorrencia.Name = "combOcorrencia";
+            this.combOcorrencia.ShadowDecoration.Parent = this.combOcorrencia;
+            this.combOcorrencia.Size = new System.Drawing.Size(130, 35);
+            this.combOcorrencia.TabIndex = 10;
+            this.combOcorrencia.SelectedValueChanged += new System.EventHandler(this.OnSelectOcorrencia);
             // 
-            // panel11
+            // textNome
             // 
-            this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Controls.Add(this.textValor);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(1, 1);
-            this.panel11.Margin = new System.Windows.Forms.Padding(1);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(138, 33);
-            this.panel11.TabIndex = 0;
+            this.textNome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textNome.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textNome.DefaultText = "";
+            this.textNome.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textNome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textNome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textNome.DisabledState.Parent = this.textNome;
+            this.textNome.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textNome.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textNome.FocusedState.Parent = this.textNome;
+            this.textNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textNome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textNome.HoverState.Parent = this.textNome;
+            this.textNome.Location = new System.Drawing.Point(20, 75);
+            this.textNome.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textNome.Name = "textNome";
+            this.textNome.PasswordChar = '\0';
+            this.textNome.PlaceholderText = "";
+            this.textNome.SelectedText = "";
+            this.textNome.ShadowDecoration.Parent = this.textNome;
+            this.textNome.Size = new System.Drawing.Size(250, 35);
+            this.textNome.TabIndex = 1;
             // 
-            // textValor
+            // combTipo
             // 
-            this.textValor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textValor.BackColor = System.Drawing.Color.White;
-            this.textValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textValor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textValor.Location = new System.Drawing.Point(8, 7);
-            this.textValor.Name = "textValor";
-            this.textValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textValor.Size = new System.Drawing.Size(123, 22);
-            this.textValor.TabIndex = 8;
-            this.textValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
+            this.combTipo.BackColor = System.Drawing.Color.Transparent;
+            this.combTipo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combTipo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combTipo.FocusedColor = System.Drawing.Color.Empty;
+            this.combTipo.FocusedState.Parent = this.combTipo;
+            this.combTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combTipo.FormattingEnabled = true;
+            this.combTipo.HoverState.Parent = this.combTipo;
+            this.combTipo.ItemHeight = 29;
+            this.combTipo.ItemsAppearance.Parent = this.combTipo;
+            this.combTipo.Location = new System.Drawing.Point(290, 75);
+            this.combTipo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combTipo.Name = "combTipo";
+            this.combTipo.ShadowDecoration.Parent = this.combTipo;
+            this.combTipo.Size = new System.Drawing.Size(160, 35);
+            this.combTipo.TabIndex = 2;
+            // 
+            // combCentroCusto
+            // 
+            this.combCentroCusto.BackColor = System.Drawing.Color.Transparent;
+            this.combCentroCusto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combCentroCusto.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combCentroCusto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combCentroCusto.FocusedColor = System.Drawing.Color.Empty;
+            this.combCentroCusto.FocusedState.Parent = this.combCentroCusto;
+            this.combCentroCusto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combCentroCusto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combCentroCusto.FormattingEnabled = true;
+            this.combCentroCusto.HoverState.Parent = this.combCentroCusto;
+            this.combCentroCusto.ItemHeight = 29;
+            this.combCentroCusto.ItemsAppearance.Parent = this.combCentroCusto;
+            this.combCentroCusto.Location = new System.Drawing.Point(470, 75);
+            this.combCentroCusto.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combCentroCusto.Name = "combCentroCusto";
+            this.combCentroCusto.ShadowDecoration.Parent = this.combCentroCusto;
+            this.combCentroCusto.Size = new System.Drawing.Size(170, 35);
+            this.combCentroCusto.TabIndex = 3;
+            // 
+            // combFormaPagamento
+            // 
+            this.combFormaPagamento.BackColor = System.Drawing.Color.Transparent;
+            this.combFormaPagamento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combFormaPagamento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combFormaPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combFormaPagamento.FocusedColor = System.Drawing.Color.Empty;
+            this.combFormaPagamento.FocusedState.Parent = this.combFormaPagamento;
+            this.combFormaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combFormaPagamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combFormaPagamento.FormattingEnabled = true;
+            this.combFormaPagamento.HoverState.Parent = this.combFormaPagamento;
+            this.combFormaPagamento.ItemHeight = 29;
+            this.combFormaPagamento.ItemsAppearance.Parent = this.combFormaPagamento;
+            this.combFormaPagamento.Location = new System.Drawing.Point(663, 75);
+            this.combFormaPagamento.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combFormaPagamento.Name = "combFormaPagamento";
+            this.combFormaPagamento.ShadowDecoration.Parent = this.combFormaPagamento;
+            this.combFormaPagamento.Size = new System.Drawing.Size(187, 35);
+            this.combFormaPagamento.TabIndex = 4;
+            // 
+            // combStatus
+            // 
+            this.combStatus.BackColor = System.Drawing.Color.Transparent;
+            this.combStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combStatus.FocusedColor = System.Drawing.Color.Empty;
+            this.combStatus.FocusedState.Parent = this.combStatus;
+            this.combStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combStatus.FormattingEnabled = true;
+            this.combStatus.HoverState.Parent = this.combStatus;
+            this.combStatus.ItemHeight = 29;
+            this.combStatus.ItemsAppearance.Parent = this.combStatus;
+            this.combStatus.Location = new System.Drawing.Point(870, 75);
+            this.combStatus.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combStatus.Name = "combStatus";
+            this.combStatus.ShadowDecoration.Parent = this.combStatus;
+            this.combStatus.Size = new System.Drawing.Size(150, 35);
+            this.combStatus.TabIndex = 5;
             // 
             // timeDataEmissao
             // 
@@ -660,7 +575,7 @@
             this.timeDataEmissao.CheckedState.Parent = this.timeDataEmissao;
             this.timeDataEmissao.CustomFormat = " ";
             this.timeDataEmissao.FillColor = System.Drawing.Color.White;
-            this.timeDataEmissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.timeDataEmissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.timeDataEmissao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.timeDataEmissao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.timeDataEmissao.HoverState.Parent = this.timeDataEmissao;
@@ -670,8 +585,8 @@
             this.timeDataEmissao.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.timeDataEmissao.Name = "timeDataEmissao";
             this.timeDataEmissao.ShadowDecoration.Parent = this.timeDataEmissao;
-            this.timeDataEmissao.Size = new System.Drawing.Size(143, 35);
-            this.timeDataEmissao.TabIndex = 314;
+            this.timeDataEmissao.Size = new System.Drawing.Size(144, 35);
+            this.timeDataEmissao.TabIndex = 6;
             this.timeDataEmissao.UseTransparentBackground = true;
             this.timeDataEmissao.Value = new System.DateTime(2020, 5, 3, 16, 47, 44, 411);
             // 
@@ -683,7 +598,7 @@
             this.timeDataVencimento.CheckedState.Parent = this.timeDataVencimento;
             this.timeDataVencimento.CustomFormat = " ";
             this.timeDataVencimento.FillColor = System.Drawing.Color.White;
-            this.timeDataVencimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.timeDataVencimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.timeDataVencimento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.timeDataVencimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.timeDataVencimento.HoverState.Parent = this.timeDataVencimento;
@@ -694,42 +609,122 @@
             this.timeDataVencimento.Name = "timeDataVencimento";
             this.timeDataVencimento.ShadowDecoration.Parent = this.timeDataVencimento;
             this.timeDataVencimento.Size = new System.Drawing.Size(137, 35);
-            this.timeDataVencimento.TabIndex = 315;
+            this.timeDataVencimento.TabIndex = 7;
             this.timeDataVencimento.UseTransparentBackground = true;
             this.timeDataVencimento.Value = new System.DateTime(2020, 5, 3, 16, 47, 44, 411);
+            // 
+            // textValor
+            // 
+            this.textValor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textValor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textValor.DefaultText = "";
+            this.textValor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textValor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textValor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textValor.DisabledState.Parent = this.textValor;
+            this.textValor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textValor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textValor.FocusedState.Parent = this.textValor;
+            this.textValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textValor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textValor.HoverState.Parent = this.textValor;
+            this.textValor.Location = new System.Drawing.Point(375, 151);
+            this.textValor.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textValor.Name = "textValor";
+            this.textValor.PasswordChar = '\0';
+            this.textValor.PlaceholderText = "";
+            this.textValor.SelectedText = "";
+            this.textValor.ShadowDecoration.Parent = this.textValor;
+            this.textValor.Size = new System.Drawing.Size(145, 35);
+            this.textValor.TabIndex = 8;
+            this.textValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
+            // 
+            // textDocumento
+            // 
+            this.textDocumento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textDocumento.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textDocumento.DefaultText = "";
+            this.textDocumento.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textDocumento.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textDocumento.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textDocumento.DisabledState.Parent = this.textDocumento;
+            this.textDocumento.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textDocumento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textDocumento.FocusedState.Parent = this.textDocumento;
+            this.textDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textDocumento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textDocumento.HoverState.Parent = this.textDocumento;
+            this.textDocumento.Location = new System.Drawing.Point(20, 227);
+            this.textDocumento.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textDocumento.Name = "textDocumento";
+            this.textDocumento.PasswordChar = '\0';
+            this.textDocumento.PlaceholderText = "";
+            this.textDocumento.SelectedText = "";
+            this.textDocumento.ShadowDecoration.Parent = this.textDocumento;
+            this.textDocumento.Size = new System.Drawing.Size(200, 35);
+            this.textDocumento.TabIndex = 9;
+            // 
+            // textQtdParcelas
+            // 
+            this.textQtdParcelas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textQtdParcelas.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textQtdParcelas.DefaultText = "";
+            this.textQtdParcelas.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textQtdParcelas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textQtdParcelas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textQtdParcelas.DisabledState.Parent = this.textQtdParcelas;
+            this.textQtdParcelas.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textQtdParcelas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textQtdParcelas.FocusedState.Parent = this.textQtdParcelas;
+            this.textQtdParcelas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textQtdParcelas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textQtdParcelas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textQtdParcelas.HoverState.Parent = this.textQtdParcelas;
+            this.textQtdParcelas.Location = new System.Drawing.Point(390, 227);
+            this.textQtdParcelas.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textQtdParcelas.Name = "textQtdParcelas";
+            this.textQtdParcelas.PasswordChar = '\0';
+            this.textQtdParcelas.PlaceholderText = "";
+            this.textQtdParcelas.SelectedText = "";
+            this.textQtdParcelas.ShadowDecoration.Parent = this.textQtdParcelas;
+            this.textQtdParcelas.Size = new System.Drawing.Size(95, 35);
+            this.textQtdParcelas.TabIndex = 11;
+            this.textQtdParcelas.Visible = false;
             // 
             // FormFinanceiro
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 625);
+            this.Controls.Add(this.textQtdParcelas);
+            this.Controls.Add(this.textDocumento);
+            this.Controls.Add(this.textValor);
             this.Controls.Add(this.timeDataVencimento);
             this.Controls.Add(this.timeDataEmissao);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.combStatus);
+            this.Controls.Add(this.combFormaPagamento);
+            this.Controls.Add(this.combCentroCusto);
+            this.Controls.Add(this.combTipo);
+            this.Controls.Add(this.textNome);
+            this.Controls.Add(this.combOcorrencia);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.gridParcelas);
             this.Controls.Add(this.panelInfoPagamento);
             this.Controls.Add(this.lblInfoPagamento);
             this.Controls.Add(this.btnGerarParcelas);
-            this.Controls.Add(this.textQtdParcelas);
             this.Controls.Add(this.lblQtdParcelas);
-            this.Controls.Add(this.combOcorrencia);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textDocumento);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.combStatus);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.combFormaPagamento);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.combCentroCusto);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.combTipo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textNome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
@@ -740,9 +735,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridParcelas)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -753,27 +745,19 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label10;
         private FontAwesome.Sharp.IconButton btnEnviar;
-        private Guna.UI.WinForms.GunaTextBox textNome;
         private System.Windows.Forms.Label label1;
-        private Guna.UI.WinForms.GunaComboBox combTipo;
         private System.Windows.Forms.Label label2;
-        private Guna.UI.WinForms.GunaComboBox combCentroCusto;
         private System.Windows.Forms.Label label3;
-        private Guna.UI.WinForms.GunaComboBox combFormaPagamento;
         private System.Windows.Forms.Label label4;
-        private Guna.UI.WinForms.GunaComboBox combStatus;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
-        private Guna.UI.WinForms.GunaTextBox textDocumento;
         private System.Windows.Forms.Label label17;
-        private Guna.UI.WinForms.GunaComboBox combOcorrencia;
         private System.Windows.Forms.Label label18;
         private FontAwesome.Sharp.IconButton btnGerarParcelas;
-        private Guna.UI.WinForms.GunaTextBox textQtdParcelas;
         private System.Windows.Forms.Label lblQtdParcelas;
         private System.Windows.Forms.Panel panelInfoPagamento;
         private System.Windows.Forms.Label lblInfoPagamento;
@@ -784,10 +768,16 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn colFormaPagamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn textGridCustoValor;
         private System.Windows.Forms.DataGridViewCheckBoxColumn textGridCustoTotal;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.MaskedTextBox textValor;
+        private Guna.UI2.WinForms.Guna2ComboBox combOcorrencia;
+        private Guna.UI2.WinForms.Guna2TextBox textNome;
+        private Guna.UI2.WinForms.Guna2ComboBox combTipo;
+        private Guna.UI2.WinForms.Guna2ComboBox combCentroCusto;
+        private Guna.UI2.WinForms.Guna2ComboBox combFormaPagamento;
+        private Guna.UI2.WinForms.Guna2ComboBox combStatus;
         private Guna.UI2.WinForms.Guna2DateTimePicker timeDataEmissao;
         private Guna.UI2.WinForms.Guna2DateTimePicker timeDataVencimento;
+        private Guna.UI2.WinForms.Guna2TextBox textValor;
+        private Guna.UI2.WinForms.Guna2TextBox textDocumento;
+        private Guna.UI2.WinForms.Guna2TextBox textQtdParcelas;
     }
 }

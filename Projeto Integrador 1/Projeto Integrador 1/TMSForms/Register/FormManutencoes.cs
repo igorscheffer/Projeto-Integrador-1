@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using Projeto_Integrador_1.Util;
 using Newtonsoft.Json;
 using Projeto_Integrador_1.Util.Validate;
+using Guna.UI2.WinForms;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormManutencoes : Form {
@@ -18,6 +19,12 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         public FormManutencoes(FormPrincipal fmPrincipal = null, int Id = 0) {
             InitializeComponent();
             this.fmPrincipal = fmPrincipal;
+
+            textMaoObra.KeyPress += Converter.OnlyNumber;
+            textDesconto.KeyPress += Converter.OnlyNumber;
+            textAcrecimo.KeyPress += Converter.OnlyNumber;
+            textItemQtd.KeyPress += Converter.OnlyNumber;
+            textItemValor.KeyPress += Converter.OnlyNumber;
 
             timeDataAgendada.KeyPress += Converter.DateReset;
             timeDataAgendada.ValueChanged += Converter.DateTimeValueChanged;
@@ -335,12 +342,12 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         }
 
         private void OnChangedTextValor(object sender, EventArgs e) {
-            MaskedTextBox Text = (MaskedTextBox)sender;
+            Guna2TextBox Text = (Guna2TextBox)sender;
             Converter.OnPressMoeda(ref Text);
         }
 
         private void OnChangedTextQtd(object sender, EventArgs e) {
-            MaskedTextBox Text = (MaskedTextBox)sender;
+            Guna2TextBox Text = (Guna2TextBox)sender;
             Converter.OnPressQtd(ref Text);
         }
 

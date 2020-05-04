@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Projeto_Integrador_1.Util.Validate;
+using Guna.UI2.WinForms;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormMultas : Form {
@@ -157,7 +158,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         }
 
         private void OnChangedTextValor(object sender, EventArgs e) {
-            MaskedTextBox Text = (MaskedTextBox)sender;
+            Guna2TextBox Text = (Guna2TextBox)sender;
             Converter.OnPressMoeda(ref Text);
         }
     }

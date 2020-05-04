@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Projeto_Integrador_1.Util.Validate;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using Guna.UI2.WinForms;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormFinanceiro : Form {
@@ -246,6 +247,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             try {
                 Validate Validate = new Validate(this, ErrorProvider);
 
+                Validate.AddRule(timeDataEmissao, "Data Emissão", "required|data:dd/MM/yyyy");
                 Validate.AddRule(textValor, "Valor", "required|reais");
                 Validate.AddRule(textQtdParcelas, "Qtd. Parcelas", "required|numeric");
                 Validate.Validation();
@@ -291,7 +293,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         }
 
         private void OnChangedTextValor(object sender, EventArgs e) {
-            MaskedTextBox Text = (MaskedTextBox)sender;
+            Guna2TextBox Text = (Guna2TextBox)sender;
             Converter.OnPressMoeda(ref Text);
         }
     }

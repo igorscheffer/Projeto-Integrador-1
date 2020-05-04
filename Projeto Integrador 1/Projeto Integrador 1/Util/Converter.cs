@@ -55,7 +55,7 @@ namespace Projeto_Integrador_1.Util {
         public static void OnlyNumber(object sender, KeyPressEventArgs e) {
             e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != (char)8;
         }
-        public static void OnPressMoeda(ref MaskedTextBox ToConvert) {
+        public static void OnPressMoeda(ref Guna2TextBox ToConvert) {
             string numero = string.Empty;
             double valor = 0;
 
@@ -81,7 +81,7 @@ namespace Projeto_Integrador_1.Util {
                 Console.WriteLine("Erro: " + e.Message);
             }
         }
-        public static void OnPressQtd(ref MaskedTextBox ToConvert) {
+        public static void OnPressQtd(ref Guna2TextBox ToConvert) {
             string numero = string.Empty;
             double valor = 0;
 
@@ -108,7 +108,7 @@ namespace Projeto_Integrador_1.Util {
             }
         }
 
-        public static void OnPressPeso(ref MaskedTextBox ToConvert) {
+        public static void OnPressPeso(ref Guna2TextBox ToConvert) {
             string numero = string.Empty;
             double valor = 0;
 

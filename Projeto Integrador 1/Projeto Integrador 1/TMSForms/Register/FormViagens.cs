@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using Guna.UI.WinForms;
 using Projeto_Integrador_1.Util.Validate;
+using Guna.UI2.WinForms;
 
 namespace Projeto_Integrador_1.TMSForms.Register {
     public partial class FormViagens : Form {
@@ -535,7 +536,7 @@ namespace Projeto_Integrador_1.TMSForms.Register {
             jsonAbastecimentos = JsonConvert.SerializeObject(Abastecimentos);
         }
         private void OnChangeCliente(object sender, EventArgs e) {
-            GunaComboBox comboBox = (GunaComboBox)sender;
+            Guna2ComboBox comboBox = (Guna2ComboBox)sender;
 
             if (comboBox.SelectedValue != null) {
                 dynamic Selected = ListaClientes.Find(find => (int)find.Id == (int)comboBox.SelectedValue);
@@ -559,17 +560,17 @@ namespace Projeto_Integrador_1.TMSForms.Register {
         }
 
         private void OnChangedTextValor(object sender, EventArgs e) {
-            MaskedTextBox Text = (MaskedTextBox)sender;
+            Guna2TextBox Text = (Guna2TextBox)sender;
             Converter.OnPressMoeda(ref Text);
         }
 
         private void OnChangedTextQtd(object sender, EventArgs e) {
-            MaskedTextBox Text = (MaskedTextBox)sender;
+            Guna2TextBox Text = (Guna2TextBox)sender;
             Converter.OnPressQtd(ref Text);
         }
 
         private void OnChangedTextPeso(object sender, EventArgs e) {
-            MaskedTextBox Text = (MaskedTextBox)sender;
+            Guna2TextBox Text = (Guna2TextBox)sender;
             Converter.OnPressPeso(ref Text);
         }
 

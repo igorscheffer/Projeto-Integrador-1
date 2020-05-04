@@ -31,44 +31,29 @@ namespace Projeto_Integrador_1.TMSForms.Register
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMotoristas));
-            this.textNome = new Guna.UI.WinForms.GunaTextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCPF = new System.Windows.Forms.Label();
-            this.textRG = new Guna.UI.WinForms.GunaTextBox();
             this.lblRG = new System.Windows.Forms.Label();
-            this.combStatus = new Guna.UI.WinForms.GunaComboBox();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.textCNH = new Guna.UI.WinForms.GunaTextBox();
             this.lblCNH = new System.Windows.Forms.Label();
             this.lblVencimentoCNH = new System.Windows.Forms.Label();
-            this.combCategoriaCNH = new Guna.UI.WinForms.GunaComboBox();
             this.lblCategoriaCNH = new System.Windows.Forms.Label();
-            this.combSexo = new Guna.UI.WinForms.GunaComboBox();
             this.lblSexo = new System.Windows.Forms.Label();
-            this.combEstadoCivil = new Guna.UI.WinForms.GunaComboBox();
             this.lblEstadoCivil = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.combEstado = new Guna.UI.WinForms.GunaComboBox();
-            this.textCidade = new Guna.UI.WinForms.GunaTextBox();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblCidade = new System.Windows.Forms.Label();
-            this.textComplemento = new Guna.UI.WinForms.GunaTextBox();
             this.lblComplemento = new System.Windows.Forms.Label();
-            this.textBairro = new Guna.UI.WinForms.GunaTextBox();
             this.lblBairro = new System.Windows.Forms.Label();
-            this.textN = new Guna.UI.WinForms.GunaTextBox();
             this.lblN = new System.Windows.Forms.Label();
-            this.textEndereco = new Guna.UI.WinForms.GunaTextBox();
             this.lblEndereco = new System.Windows.Forms.Label();
             this.lblCEP = new System.Windows.Forms.Label();
-            this.textEmail = new Guna.UI.WinForms.GunaTextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblCelular = new System.Windows.Forms.Label();
             this.lblTelefone = new System.Windows.Forms.Label();
-            this.combCargo = new Guna.UI.WinForms.GunaComboBox();
             this.lblCargo = new System.Windows.Forms.Label();
             this.buttonBuscarCEP = new FontAwesome.Sharp.IconButton();
             this.btnEnviar = new FontAwesome.Sharp.IconButton();
@@ -90,7 +75,22 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.textCEP = new System.Windows.Forms.MaskedTextBox();
+            this.textEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.combCargo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.timeVencimentoCNH = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.textNome = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textRG = new Guna.UI2.WinForms.Guna2TextBox();
+            this.combStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.textCNH = new Guna.UI2.WinForms.Guna2TextBox();
+            this.combCategoriaCNH = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.combSexo = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.combEstadoCivil = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.textEndereco = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textN = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBairro = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textComplemento = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textCidade = new Guna.UI2.WinForms.Guna2TextBox();
+            this.combEstado = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -106,27 +106,6 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textNome
-            // 
-            this.textNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textNome.BackColor = System.Drawing.Color.White;
-            this.textNome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textNome.BaseColor = System.Drawing.Color.White;
-            this.textNome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textNome.BorderSize = 1;
-            this.textNome.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textNome.FocusedBaseColor = System.Drawing.Color.White;
-            this.textNome.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textNome.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textNome.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textNome.Location = new System.Drawing.Point(20, 71);
-            this.textNome.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textNome.MaxLength = 100;
-            this.textNome.Name = "textNome";
-            this.textNome.PasswordChar = '\0';
-            this.textNome.Size = new System.Drawing.Size(299, 35);
-            this.textNome.TabIndex = 1;
             // 
             // lblNome
             // 
@@ -152,27 +131,6 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.lblCPF.TabIndex = 90;
             this.lblCPF.Text = "CPF";
             // 
-            // textRG
-            // 
-            this.textRG.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textRG.BackColor = System.Drawing.Color.White;
-            this.textRG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textRG.BaseColor = System.Drawing.Color.White;
-            this.textRG.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textRG.BorderSize = 1;
-            this.textRG.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textRG.FocusedBaseColor = System.Drawing.Color.White;
-            this.textRG.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textRG.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textRG.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textRG.Location = new System.Drawing.Point(609, 71);
-            this.textRG.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textRG.MaxLength = 12;
-            this.textRG.Name = "textRG";
-            this.textRG.PasswordChar = '\0';
-            this.textRG.Size = new System.Drawing.Size(250, 35);
-            this.textRG.TabIndex = 3;
-            // 
             // lblRG
             // 
             this.lblRG.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -185,29 +143,6 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.lblRG.TabIndex = 92;
             this.lblRG.Text = "RG";
             // 
-            // combStatus
-            // 
-            this.combStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combStatus.BackColor = System.Drawing.Color.Transparent;
-            this.combStatus.BaseColor = System.Drawing.Color.White;
-            this.combStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combStatus.BorderSize = 1;
-            this.combStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combStatus.FocusedColor = System.Drawing.Color.Empty;
-            this.combStatus.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.combStatus.FormattingEnabled = true;
-            this.combStatus.IntegralHeight = false;
-            this.combStatus.ItemHeight = 29;
-            this.combStatus.Location = new System.Drawing.Point(879, 71);
-            this.combStatus.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combStatus.Name = "combStatus";
-            this.combStatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combStatus.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combStatus.Size = new System.Drawing.Size(141, 35);
-            this.combStatus.TabIndex = 4;
-            // 
             // lblStatus
             // 
             this.lblStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -219,27 +154,6 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.lblStatus.Size = new System.Drawing.Size(50, 18);
             this.lblStatus.TabIndex = 94;
             this.lblStatus.Text = "Status";
-            // 
-            // textCNH
-            // 
-            this.textCNH.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textCNH.BackColor = System.Drawing.Color.White;
-            this.textCNH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textCNH.BaseColor = System.Drawing.Color.White;
-            this.textCNH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textCNH.BorderSize = 1;
-            this.textCNH.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCNH.FocusedBaseColor = System.Drawing.Color.White;
-            this.textCNH.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textCNH.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textCNH.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCNH.Location = new System.Drawing.Point(20, 144);
-            this.textCNH.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textCNH.MaxLength = 12;
-            this.textCNH.Name = "textCNH";
-            this.textCNH.PasswordChar = '\0';
-            this.textCNH.Size = new System.Drawing.Size(279, 35);
-            this.textCNH.TabIndex = 5;
             // 
             // lblCNH
             // 
@@ -265,29 +179,6 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.lblVencimentoCNH.TabIndex = 98;
             this.lblVencimentoCNH.Text = "Vencimento CNH";
             // 
-            // combCategoriaCNH
-            // 
-            this.combCategoriaCNH.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combCategoriaCNH.BackColor = System.Drawing.Color.Transparent;
-            this.combCategoriaCNH.BaseColor = System.Drawing.Color.White;
-            this.combCategoriaCNH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combCategoriaCNH.BorderSize = 1;
-            this.combCategoriaCNH.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combCategoriaCNH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combCategoriaCNH.FocusedColor = System.Drawing.Color.Empty;
-            this.combCategoriaCNH.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combCategoriaCNH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.combCategoriaCNH.FormattingEnabled = true;
-            this.combCategoriaCNH.IntegralHeight = false;
-            this.combCategoriaCNH.ItemHeight = 29;
-            this.combCategoriaCNH.Location = new System.Drawing.Point(546, 144);
-            this.combCategoriaCNH.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combCategoriaCNH.Name = "combCategoriaCNH";
-            this.combCategoriaCNH.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combCategoriaCNH.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combCategoriaCNH.Size = new System.Drawing.Size(130, 35);
-            this.combCategoriaCNH.TabIndex = 7;
-            // 
             // lblCategoriaCNH
             // 
             this.lblCategoriaCNH.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -300,29 +191,6 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.lblCategoriaCNH.TabIndex = 101;
             this.lblCategoriaCNH.Text = "Categoria";
             // 
-            // combSexo
-            // 
-            this.combSexo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combSexo.BackColor = System.Drawing.Color.Transparent;
-            this.combSexo.BaseColor = System.Drawing.Color.White;
-            this.combSexo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combSexo.BorderSize = 1;
-            this.combSexo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combSexo.FocusedColor = System.Drawing.Color.Empty;
-            this.combSexo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.combSexo.FormattingEnabled = true;
-            this.combSexo.IntegralHeight = false;
-            this.combSexo.ItemHeight = 29;
-            this.combSexo.Location = new System.Drawing.Point(696, 144);
-            this.combSexo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combSexo.Name = "combSexo";
-            this.combSexo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combSexo.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combSexo.Size = new System.Drawing.Size(130, 35);
-            this.combSexo.TabIndex = 8;
-            // 
             // lblSexo
             // 
             this.lblSexo.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -334,29 +202,6 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.lblSexo.Size = new System.Drawing.Size(42, 18);
             this.lblSexo.TabIndex = 103;
             this.lblSexo.Text = "Sexo";
-            // 
-            // combEstadoCivil
-            // 
-            this.combEstadoCivil.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combEstadoCivil.BackColor = System.Drawing.Color.Transparent;
-            this.combEstadoCivil.BaseColor = System.Drawing.Color.White;
-            this.combEstadoCivil.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combEstadoCivil.BorderSize = 1;
-            this.combEstadoCivil.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combEstadoCivil.FocusedColor = System.Drawing.Color.Empty;
-            this.combEstadoCivil.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combEstadoCivil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.combEstadoCivil.FormattingEnabled = true;
-            this.combEstadoCivil.IntegralHeight = false;
-            this.combEstadoCivil.ItemHeight = 29;
-            this.combEstadoCivil.Location = new System.Drawing.Point(846, 144);
-            this.combEstadoCivil.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combEstadoCivil.Name = "combEstadoCivil";
-            this.combEstadoCivil.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combEstadoCivil.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combEstadoCivil.Size = new System.Drawing.Size(174, 35);
-            this.combEstadoCivil.TabIndex = 9;
             // 
             // lblEstadoCivil
             // 
@@ -418,57 +263,13 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.label16.TabIndex = 106;
             this.label16.Text = "INFORMAÇÕES ADICIONAIS";
             // 
-            // combEstado
-            // 
-            this.combEstado.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combEstado.BackColor = System.Drawing.Color.Transparent;
-            this.combEstado.BaseColor = System.Drawing.Color.White;
-            this.combEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combEstado.BorderSize = 1;
-            this.combEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combEstado.FocusedColor = System.Drawing.Color.Empty;
-            this.combEstado.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combEstado.ForeColor = System.Drawing.Color.Black;
-            this.combEstado.FormattingEnabled = true;
-            this.combEstado.IntegralHeight = false;
-            this.combEstado.ItemHeight = 29;
-            this.combEstado.Location = new System.Drawing.Point(219, 330);
-            this.combEstado.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combEstado.Name = "combEstado";
-            this.combEstado.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combEstado.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combEstado.Size = new System.Drawing.Size(200, 35);
-            this.combEstado.TabIndex = 17;
-            // 
-            // textCidade
-            // 
-            this.textCidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textCidade.BackColor = System.Drawing.Color.White;
-            this.textCidade.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textCidade.BaseColor = System.Drawing.Color.White;
-            this.textCidade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textCidade.BorderSize = 1;
-            this.textCidade.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCidade.FocusedBaseColor = System.Drawing.Color.White;
-            this.textCidade.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textCidade.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textCidade.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCidade.Location = new System.Drawing.Point(20, 330);
-            this.textCidade.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textCidade.MaxLength = 100;
-            this.textCidade.Name = "textCidade";
-            this.textCidade.PasswordChar = '\0';
-            this.textCidade.Size = new System.Drawing.Size(179, 35);
-            this.textCidade.TabIndex = 16;
-            // 
             // lblEstado
             // 
             this.lblEstado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEstado.Location = new System.Drawing.Point(219, 307);
+            this.lblEstado.Location = new System.Drawing.Point(220, 307);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(55, 18);
             this.lblEstado.TabIndex = 168;
@@ -486,27 +287,6 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.lblCidade.TabIndex = 167;
             this.lblCidade.Text = "Cidade";
             // 
-            // textComplemento
-            // 
-            this.textComplemento.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textComplemento.BackColor = System.Drawing.Color.White;
-            this.textComplemento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textComplemento.BaseColor = System.Drawing.Color.White;
-            this.textComplemento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textComplemento.BorderSize = 1;
-            this.textComplemento.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textComplemento.FocusedBaseColor = System.Drawing.Color.White;
-            this.textComplemento.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textComplemento.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textComplemento.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textComplemento.Location = new System.Drawing.Point(789, 257);
-            this.textComplemento.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textComplemento.MaxLength = 100;
-            this.textComplemento.Name = "textComplemento";
-            this.textComplemento.PasswordChar = '\0';
-            this.textComplemento.Size = new System.Drawing.Size(231, 35);
-            this.textComplemento.TabIndex = 15;
-            // 
             // lblComplemento
             // 
             this.lblComplemento.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -518,27 +298,6 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.lblComplemento.Size = new System.Drawing.Size(102, 18);
             this.lblComplemento.TabIndex = 165;
             this.lblComplemento.Text = "Complemento";
-            // 
-            // textBairro
-            // 
-            this.textBairro.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBairro.BackColor = System.Drawing.Color.White;
-            this.textBairro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textBairro.BaseColor = System.Drawing.Color.White;
-            this.textBairro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textBairro.BorderSize = 1;
-            this.textBairro.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBairro.FocusedBaseColor = System.Drawing.Color.White;
-            this.textBairro.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textBairro.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textBairro.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textBairro.Location = new System.Drawing.Point(589, 257);
-            this.textBairro.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textBairro.MaxLength = 60;
-            this.textBairro.Name = "textBairro";
-            this.textBairro.PasswordChar = '\0';
-            this.textBairro.Size = new System.Drawing.Size(180, 35);
-            this.textBairro.TabIndex = 14;
             // 
             // lblBairro
             // 
@@ -552,27 +311,6 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.lblBairro.TabIndex = 163;
             this.lblBairro.Text = "Bairro";
             // 
-            // textN
-            // 
-            this.textN.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textN.BackColor = System.Drawing.Color.White;
-            this.textN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textN.BaseColor = System.Drawing.Color.White;
-            this.textN.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textN.BorderSize = 1;
-            this.textN.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textN.FocusedBaseColor = System.Drawing.Color.White;
-            this.textN.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textN.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textN.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textN.Location = new System.Drawing.Point(489, 257);
-            this.textN.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textN.MaxLength = 10;
-            this.textN.Name = "textN";
-            this.textN.PasswordChar = '\0';
-            this.textN.Size = new System.Drawing.Size(80, 35);
-            this.textN.TabIndex = 13;
-            // 
             // lblN
             // 
             this.lblN.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -584,27 +322,6 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.lblN.Size = new System.Drawing.Size(24, 18);
             this.lblN.TabIndex = 161;
             this.lblN.Text = "Nº";
-            // 
-            // textEndereco
-            // 
-            this.textEndereco.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textEndereco.BackColor = System.Drawing.Color.White;
-            this.textEndereco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textEndereco.BaseColor = System.Drawing.Color.White;
-            this.textEndereco.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textEndereco.BorderSize = 1;
-            this.textEndereco.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textEndereco.FocusedBaseColor = System.Drawing.Color.White;
-            this.textEndereco.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textEndereco.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textEndereco.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textEndereco.Location = new System.Drawing.Point(170, 257);
-            this.textEndereco.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textEndereco.MaxLength = 100;
-            this.textEndereco.Name = "textEndereco";
-            this.textEndereco.PasswordChar = '\0';
-            this.textEndereco.Size = new System.Drawing.Size(299, 35);
-            this.textEndereco.TabIndex = 12;
             // 
             // lblEndereco
             // 
@@ -629,27 +346,6 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.lblCEP.Size = new System.Drawing.Size(39, 18);
             this.lblCEP.TabIndex = 157;
             this.lblCEP.Text = "CEP";
-            // 
-            // textEmail
-            // 
-            this.textEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textEmail.BackColor = System.Drawing.Color.White;
-            this.textEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textEmail.BaseColor = System.Drawing.Color.White;
-            this.textEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textEmail.BorderSize = 1;
-            this.textEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textEmail.FocusedBaseColor = System.Drawing.Color.White;
-            this.textEmail.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textEmail.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textEmail.Location = new System.Drawing.Point(665, 403);
-            this.textEmail.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textEmail.MaxLength = 100;
-            this.textEmail.Name = "textEmail";
-            this.textEmail.PasswordChar = '\0';
-            this.textEmail.Size = new System.Drawing.Size(355, 35);
-            this.textEmail.TabIndex = 21;
             // 
             // lblEmail
             // 
@@ -686,29 +382,6 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.lblTelefone.Size = new System.Drawing.Size(65, 18);
             this.lblTelefone.TabIndex = 173;
             this.lblTelefone.Text = "Telefone";
-            // 
-            // combCargo
-            // 
-            this.combCargo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combCargo.BackColor = System.Drawing.Color.Transparent;
-            this.combCargo.BaseColor = System.Drawing.Color.White;
-            this.combCargo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combCargo.BorderSize = 1;
-            this.combCargo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combCargo.FocusedColor = System.Drawing.Color.Empty;
-            this.combCargo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combCargo.ForeColor = System.Drawing.Color.Black;
-            this.combCargo.FormattingEnabled = true;
-            this.combCargo.IntegralHeight = false;
-            this.combCargo.ItemHeight = 29;
-            this.combCargo.Location = new System.Drawing.Point(20, 403);
-            this.combCargo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combCargo.Name = "combCargo";
-            this.combCargo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combCargo.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combCargo.Size = new System.Drawing.Size(200, 35);
-            this.combCargo.TabIndex = 18;
             // 
             // lblCargo
             // 
@@ -987,6 +660,53 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.textCEP.Size = new System.Drawing.Size(88, 22);
             this.textCEP.TabIndex = 10;
             // 
+            // textEmail
+            // 
+            this.textEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textEmail.DefaultText = "";
+            this.textEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textEmail.DisabledState.Parent = this.textEmail;
+            this.textEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textEmail.FocusedState.Parent = this.textEmail;
+            this.textEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textEmail.HoverState.Parent = this.textEmail;
+            this.textEmail.Location = new System.Drawing.Point(665, 403);
+            this.textEmail.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.PasswordChar = '\0';
+            this.textEmail.PlaceholderText = "";
+            this.textEmail.SelectedText = "";
+            this.textEmail.ShadowDecoration.Parent = this.textEmail;
+            this.textEmail.Size = new System.Drawing.Size(355, 35);
+            this.textEmail.TabIndex = 22;
+            // 
+            // combCargo
+            // 
+            this.combCargo.BackColor = System.Drawing.Color.Transparent;
+            this.combCargo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combCargo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combCargo.FocusedColor = System.Drawing.Color.Empty;
+            this.combCargo.FocusedState.Parent = this.combCargo;
+            this.combCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combCargo.FormattingEnabled = true;
+            this.combCargo.HoverState.Parent = this.combCargo;
+            this.combCargo.ItemHeight = 29;
+            this.combCargo.ItemsAppearance.Parent = this.combCargo;
+            this.combCargo.Location = new System.Drawing.Point(21, 403);
+            this.combCargo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combCargo.Name = "combCargo";
+            this.combCargo.ShadowDecoration.Parent = this.combCargo;
+            this.combCargo.Size = new System.Drawing.Size(199, 35);
+            this.combCargo.TabIndex = 18;
+            // 
             // timeVencimentoCNH
             // 
             this.timeVencimentoCNH.BackColor = System.Drawing.Color.Transparent;
@@ -995,7 +715,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.timeVencimentoCNH.CheckedState.Parent = this.timeVencimentoCNH;
             this.timeVencimentoCNH.CustomFormat = " ";
             this.timeVencimentoCNH.FillColor = System.Drawing.Color.White;
-            this.timeVencimentoCNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.timeVencimentoCNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.timeVencimentoCNH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.timeVencimentoCNH.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.timeVencimentoCNH.HoverState.Parent = this.timeVencimentoCNH;
@@ -1006,15 +726,343 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.timeVencimentoCNH.Name = "timeVencimentoCNH";
             this.timeVencimentoCNH.ShadowDecoration.Parent = this.timeVencimentoCNH;
             this.timeVencimentoCNH.Size = new System.Drawing.Size(207, 35);
-            this.timeVencimentoCNH.TabIndex = 277;
+            this.timeVencimentoCNH.TabIndex = 6;
             this.timeVencimentoCNH.UseTransparentBackground = true;
             this.timeVencimentoCNH.Value = new System.DateTime(2020, 5, 3, 16, 47, 44, 411);
+            // 
+            // textNome
+            // 
+            this.textNome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textNome.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textNome.DefaultText = "";
+            this.textNome.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textNome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textNome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textNome.DisabledState.Parent = this.textNome;
+            this.textNome.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textNome.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textNome.FocusedState.Parent = this.textNome;
+            this.textNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textNome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textNome.HoverState.Parent = this.textNome;
+            this.textNome.Location = new System.Drawing.Point(21, 71);
+            this.textNome.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textNome.Name = "textNome";
+            this.textNome.PasswordChar = '\0';
+            this.textNome.PlaceholderText = "";
+            this.textNome.SelectedText = "";
+            this.textNome.ShadowDecoration.Parent = this.textNome;
+            this.textNome.Size = new System.Drawing.Size(298, 35);
+            this.textNome.TabIndex = 1;
+            // 
+            // textRG
+            // 
+            this.textRG.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textRG.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textRG.DefaultText = "";
+            this.textRG.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textRG.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textRG.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textRG.DisabledState.Parent = this.textRG;
+            this.textRG.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textRG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textRG.FocusedState.Parent = this.textRG;
+            this.textRG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textRG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textRG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textRG.HoverState.Parent = this.textRG;
+            this.textRG.Location = new System.Drawing.Point(609, 71);
+            this.textRG.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textRG.Name = "textRG";
+            this.textRG.PasswordChar = '\0';
+            this.textRG.PlaceholderText = "";
+            this.textRG.SelectedText = "";
+            this.textRG.ShadowDecoration.Parent = this.textRG;
+            this.textRG.Size = new System.Drawing.Size(250, 35);
+            this.textRG.TabIndex = 3;
+            // 
+            // combStatus
+            // 
+            this.combStatus.BackColor = System.Drawing.Color.Transparent;
+            this.combStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combStatus.FocusedColor = System.Drawing.Color.Empty;
+            this.combStatus.FocusedState.Parent = this.combStatus;
+            this.combStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combStatus.FormattingEnabled = true;
+            this.combStatus.HoverState.Parent = this.combStatus;
+            this.combStatus.ItemHeight = 29;
+            this.combStatus.ItemsAppearance.Parent = this.combStatus;
+            this.combStatus.Location = new System.Drawing.Point(879, 71);
+            this.combStatus.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combStatus.Name = "combStatus";
+            this.combStatus.ShadowDecoration.Parent = this.combStatus;
+            this.combStatus.Size = new System.Drawing.Size(141, 35);
+            this.combStatus.TabIndex = 4;
+            // 
+            // textCNH
+            // 
+            this.textCNH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textCNH.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textCNH.DefaultText = "";
+            this.textCNH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textCNH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textCNH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textCNH.DisabledState.Parent = this.textCNH;
+            this.textCNH.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textCNH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textCNH.FocusedState.Parent = this.textCNH;
+            this.textCNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textCNH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textCNH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textCNH.HoverState.Parent = this.textCNH;
+            this.textCNH.Location = new System.Drawing.Point(20, 144);
+            this.textCNH.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textCNH.Name = "textCNH";
+            this.textCNH.PasswordChar = '\0';
+            this.textCNH.PlaceholderText = "";
+            this.textCNH.SelectedText = "";
+            this.textCNH.ShadowDecoration.Parent = this.textCNH;
+            this.textCNH.Size = new System.Drawing.Size(279, 35);
+            this.textCNH.TabIndex = 5;
+            // 
+            // combCategoriaCNH
+            // 
+            this.combCategoriaCNH.BackColor = System.Drawing.Color.Transparent;
+            this.combCategoriaCNH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combCategoriaCNH.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combCategoriaCNH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combCategoriaCNH.FocusedColor = System.Drawing.Color.Empty;
+            this.combCategoriaCNH.FocusedState.Parent = this.combCategoriaCNH;
+            this.combCategoriaCNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combCategoriaCNH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combCategoriaCNH.FormattingEnabled = true;
+            this.combCategoriaCNH.HoverState.Parent = this.combCategoriaCNH;
+            this.combCategoriaCNH.ItemHeight = 29;
+            this.combCategoriaCNH.ItemsAppearance.Parent = this.combCategoriaCNH;
+            this.combCategoriaCNH.Location = new System.Drawing.Point(546, 144);
+            this.combCategoriaCNH.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combCategoriaCNH.Name = "combCategoriaCNH";
+            this.combCategoriaCNH.ShadowDecoration.Parent = this.combCategoriaCNH;
+            this.combCategoriaCNH.Size = new System.Drawing.Size(130, 35);
+            this.combCategoriaCNH.TabIndex = 7;
+            // 
+            // combSexo
+            // 
+            this.combSexo.BackColor = System.Drawing.Color.Transparent;
+            this.combSexo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combSexo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combSexo.FocusedColor = System.Drawing.Color.Empty;
+            this.combSexo.FocusedState.Parent = this.combSexo;
+            this.combSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combSexo.FormattingEnabled = true;
+            this.combSexo.HoverState.Parent = this.combSexo;
+            this.combSexo.ItemHeight = 29;
+            this.combSexo.ItemsAppearance.Parent = this.combSexo;
+            this.combSexo.Location = new System.Drawing.Point(696, 144);
+            this.combSexo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combSexo.Name = "combSexo";
+            this.combSexo.ShadowDecoration.Parent = this.combSexo;
+            this.combSexo.Size = new System.Drawing.Size(130, 35);
+            this.combSexo.TabIndex = 8;
+            // 
+            // combEstadoCivil
+            // 
+            this.combEstadoCivil.BackColor = System.Drawing.Color.Transparent;
+            this.combEstadoCivil.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combEstadoCivil.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combEstadoCivil.FocusedColor = System.Drawing.Color.Empty;
+            this.combEstadoCivil.FocusedState.Parent = this.combEstadoCivil;
+            this.combEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combEstadoCivil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combEstadoCivil.FormattingEnabled = true;
+            this.combEstadoCivil.HoverState.Parent = this.combEstadoCivil;
+            this.combEstadoCivil.ItemHeight = 29;
+            this.combEstadoCivil.ItemsAppearance.Parent = this.combEstadoCivil;
+            this.combEstadoCivil.Location = new System.Drawing.Point(846, 144);
+            this.combEstadoCivil.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combEstadoCivil.Name = "combEstadoCivil";
+            this.combEstadoCivil.ShadowDecoration.Parent = this.combEstadoCivil;
+            this.combEstadoCivil.Size = new System.Drawing.Size(174, 35);
+            this.combEstadoCivil.TabIndex = 9;
+            // 
+            // textEndereco
+            // 
+            this.textEndereco.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textEndereco.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textEndereco.DefaultText = "";
+            this.textEndereco.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textEndereco.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textEndereco.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textEndereco.DisabledState.Parent = this.textEndereco;
+            this.textEndereco.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textEndereco.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textEndereco.FocusedState.Parent = this.textEndereco;
+            this.textEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textEndereco.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textEndereco.HoverState.Parent = this.textEndereco;
+            this.textEndereco.Location = new System.Drawing.Point(170, 257);
+            this.textEndereco.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textEndereco.Name = "textEndereco";
+            this.textEndereco.PasswordChar = '\0';
+            this.textEndereco.PlaceholderText = "";
+            this.textEndereco.SelectedText = "";
+            this.textEndereco.ShadowDecoration.Parent = this.textEndereco;
+            this.textEndereco.Size = new System.Drawing.Size(299, 35);
+            this.textEndereco.TabIndex = 12;
+            // 
+            // textN
+            // 
+            this.textN.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textN.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textN.DefaultText = "";
+            this.textN.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textN.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textN.DisabledState.Parent = this.textN;
+            this.textN.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textN.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textN.FocusedState.Parent = this.textN;
+            this.textN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textN.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textN.HoverState.Parent = this.textN;
+            this.textN.Location = new System.Drawing.Point(489, 257);
+            this.textN.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textN.Name = "textN";
+            this.textN.PasswordChar = '\0';
+            this.textN.PlaceholderText = "";
+            this.textN.SelectedText = "";
+            this.textN.ShadowDecoration.Parent = this.textN;
+            this.textN.Size = new System.Drawing.Size(80, 35);
+            this.textN.TabIndex = 13;
+            // 
+            // textBairro
+            // 
+            this.textBairro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textBairro.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBairro.DefaultText = "";
+            this.textBairro.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBairro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBairro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBairro.DisabledState.Parent = this.textBairro;
+            this.textBairro.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBairro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBairro.FocusedState.Parent = this.textBairro;
+            this.textBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBairro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBairro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBairro.HoverState.Parent = this.textBairro;
+            this.textBairro.Location = new System.Drawing.Point(589, 258);
+            this.textBairro.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textBairro.Name = "textBairro";
+            this.textBairro.PasswordChar = '\0';
+            this.textBairro.PlaceholderText = "";
+            this.textBairro.SelectedText = "";
+            this.textBairro.ShadowDecoration.Parent = this.textBairro;
+            this.textBairro.Size = new System.Drawing.Size(180, 35);
+            this.textBairro.TabIndex = 14;
+            // 
+            // textComplemento
+            // 
+            this.textComplemento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textComplemento.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textComplemento.DefaultText = "";
+            this.textComplemento.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textComplemento.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textComplemento.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textComplemento.DisabledState.Parent = this.textComplemento;
+            this.textComplemento.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textComplemento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textComplemento.FocusedState.Parent = this.textComplemento;
+            this.textComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textComplemento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textComplemento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textComplemento.HoverState.Parent = this.textComplemento;
+            this.textComplemento.Location = new System.Drawing.Point(789, 258);
+            this.textComplemento.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textComplemento.Name = "textComplemento";
+            this.textComplemento.PasswordChar = '\0';
+            this.textComplemento.PlaceholderText = "";
+            this.textComplemento.SelectedText = "";
+            this.textComplemento.ShadowDecoration.Parent = this.textComplemento;
+            this.textComplemento.Size = new System.Drawing.Size(231, 35);
+            this.textComplemento.TabIndex = 15;
+            // 
+            // textCidade
+            // 
+            this.textCidade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textCidade.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textCidade.DefaultText = "";
+            this.textCidade.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textCidade.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textCidade.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textCidade.DisabledState.Parent = this.textCidade;
+            this.textCidade.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textCidade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textCidade.FocusedState.Parent = this.textCidade;
+            this.textCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textCidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textCidade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textCidade.HoverState.Parent = this.textCidade;
+            this.textCidade.Location = new System.Drawing.Point(20, 330);
+            this.textCidade.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textCidade.Name = "textCidade";
+            this.textCidade.PasswordChar = '\0';
+            this.textCidade.PlaceholderText = "";
+            this.textCidade.SelectedText = "";
+            this.textCidade.ShadowDecoration.Parent = this.textCidade;
+            this.textCidade.Size = new System.Drawing.Size(180, 35);
+            this.textCidade.TabIndex = 16;
+            // 
+            // combEstado
+            // 
+            this.combEstado.BackColor = System.Drawing.Color.Transparent;
+            this.combEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combEstado.FocusedColor = System.Drawing.Color.Empty;
+            this.combEstado.FocusedState.Parent = this.combEstado;
+            this.combEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combEstado.FormattingEnabled = true;
+            this.combEstado.HoverState.Parent = this.combEstado;
+            this.combEstado.ItemHeight = 29;
+            this.combEstado.ItemsAppearance.Parent = this.combEstado;
+            this.combEstado.Location = new System.Drawing.Point(220, 330);
+            this.combEstado.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combEstado.Name = "combEstado";
+            this.combEstado.ShadowDecoration.Parent = this.combEstado;
+            this.combEstado.Size = new System.Drawing.Size(160, 35);
+            this.combEstado.TabIndex = 17;
             // 
             // FormMotoristas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 535);
+            this.Controls.Add(this.combEstado);
+            this.Controls.Add(this.textCidade);
+            this.Controls.Add(this.textComplemento);
+            this.Controls.Add(this.textBairro);
+            this.Controls.Add(this.textN);
+            this.Controls.Add(this.textEndereco);
+            this.Controls.Add(this.combEstadoCivil);
+            this.Controls.Add(this.combSexo);
+            this.Controls.Add(this.combCategoriaCNH);
+            this.Controls.Add(this.textCNH);
+            this.Controls.Add(this.combStatus);
+            this.Controls.Add(this.textRG);
+            this.Controls.Add(this.textNome);
+            this.Controls.Add(this.textEmail);
+            this.Controls.Add(this.combCargo);
             this.Controls.Add(this.timeVencimentoCNH);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel3);
@@ -1025,42 +1073,27 @@ namespace Projeto_Integrador_1.TMSForms.Register
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.buttonBuscarCEP);
-            this.Controls.Add(this.combCargo);
             this.Controls.Add(this.lblCargo);
-            this.Controls.Add(this.textEmail);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblCelular);
             this.Controls.Add(this.lblTelefone);
-            this.Controls.Add(this.combEstado);
-            this.Controls.Add(this.textCidade);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblCidade);
-            this.Controls.Add(this.textComplemento);
             this.Controls.Add(this.lblComplemento);
-            this.Controls.Add(this.textBairro);
             this.Controls.Add(this.lblBairro);
-            this.Controls.Add(this.textN);
             this.Controls.Add(this.lblN);
-            this.Controls.Add(this.textEndereco);
             this.Controls.Add(this.lblEndereco);
             this.Controls.Add(this.lblCEP);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.combEstadoCivil);
             this.Controls.Add(this.lblEstadoCivil);
-            this.Controls.Add(this.combSexo);
             this.Controls.Add(this.lblSexo);
-            this.Controls.Add(this.combCategoriaCNH);
             this.Controls.Add(this.lblCategoriaCNH);
             this.Controls.Add(this.lblVencimentoCNH);
-            this.Controls.Add(this.textCNH);
             this.Controls.Add(this.lblCNH);
-            this.Controls.Add(this.combStatus);
             this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.textRG);
             this.Controls.Add(this.lblRG);
             this.Controls.Add(this.lblCPF);
-            this.Controls.Add(this.textNome);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
@@ -1095,44 +1128,29 @@ namespace Projeto_Integrador_1.TMSForms.Register
         }
 
         #endregion
-        private Guna.UI.WinForms.GunaTextBox textNome;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblCPF;
-        private Guna.UI.WinForms.GunaTextBox textRG;
         private System.Windows.Forms.Label lblRG;
-        private Guna.UI.WinForms.GunaComboBox combStatus;
         private System.Windows.Forms.Label lblStatus;
-        private Guna.UI.WinForms.GunaTextBox textCNH;
         private System.Windows.Forms.Label lblCNH;
         private System.Windows.Forms.Label lblVencimentoCNH;
-        private Guna.UI.WinForms.GunaComboBox combCategoriaCNH;
         private System.Windows.Forms.Label lblCategoriaCNH;
-        private Guna.UI.WinForms.GunaComboBox combSexo;
         private System.Windows.Forms.Label lblSexo;
-        private Guna.UI.WinForms.GunaComboBox combEstadoCivil;
         private System.Windows.Forms.Label lblEstadoCivil;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label16;
-        private Guna.UI.WinForms.GunaComboBox combEstado;
-        private Guna.UI.WinForms.GunaTextBox textCidade;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblCidade;
-        private Guna.UI.WinForms.GunaTextBox textComplemento;
         private System.Windows.Forms.Label lblComplemento;
-        private Guna.UI.WinForms.GunaTextBox textBairro;
         private System.Windows.Forms.Label lblBairro;
-        private Guna.UI.WinForms.GunaTextBox textN;
         private System.Windows.Forms.Label lblN;
-        private Guna.UI.WinForms.GunaTextBox textEndereco;
         private System.Windows.Forms.Label lblEndereco;
         private System.Windows.Forms.Label lblCEP;
-        private Guna.UI.WinForms.GunaTextBox textEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblCelular;
         private System.Windows.Forms.Label lblTelefone;
-        private Guna.UI.WinForms.GunaComboBox combCargo;
         private System.Windows.Forms.Label lblCargo;
         private FontAwesome.Sharp.IconButton buttonBuscarCEP;
         private FontAwesome.Sharp.IconButton btnEnviar;
@@ -1154,6 +1172,21 @@ namespace Projeto_Integrador_1.TMSForms.Register
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.MaskedTextBox textCEP;
+        private Guna.UI2.WinForms.Guna2TextBox textEmail;
+        private Guna.UI2.WinForms.Guna2ComboBox combCargo;
         private Guna.UI2.WinForms.Guna2DateTimePicker timeVencimentoCNH;
+        private Guna.UI2.WinForms.Guna2TextBox textNome;
+        private Guna.UI2.WinForms.Guna2TextBox textRG;
+        private Guna.UI2.WinForms.Guna2ComboBox combStatus;
+        private Guna.UI2.WinForms.Guna2TextBox textCNH;
+        private Guna.UI2.WinForms.Guna2ComboBox combCategoriaCNH;
+        private Guna.UI2.WinForms.Guna2ComboBox combSexo;
+        private Guna.UI2.WinForms.Guna2ComboBox combEstadoCivil;
+        private Guna.UI2.WinForms.Guna2TextBox textEndereco;
+        private Guna.UI2.WinForms.Guna2TextBox textN;
+        private Guna.UI2.WinForms.Guna2TextBox textBairro;
+        private Guna.UI2.WinForms.Guna2TextBox textComplemento;
+        private Guna.UI2.WinForms.Guna2TextBox textCidade;
+        private Guna.UI2.WinForms.Guna2ComboBox combEstado;
     }
 }

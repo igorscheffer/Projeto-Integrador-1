@@ -32,24 +32,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textCupom = new Guna.UI.WinForms.GunaTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.combPosto = new Guna.UI.WinForms.GunaComboBox();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.combCombustivel = new Guna.UI.WinForms.GunaComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.combVeiculo = new Guna.UI.WinForms.GunaComboBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.combMotorista = new Guna.UI.WinForms.GunaComboBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.combStatus = new Guna.UI.WinForms.GunaComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            this.textHodometro = new Guna.UI.WinForms.GunaTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label40 = new System.Windows.Forms.Label();
@@ -61,27 +54,22 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnEnviar = new FontAwesome.Sharp.IconButton();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.textValor = new System.Windows.Forms.MaskedTextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textTotal = new System.Windows.Forms.MaskedTextBox();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.textLitros = new System.Windows.Forms.MaskedTextBox();
+            this.textLitros = new Guna.UI2.WinForms.Guna2TextBox();
             this.timeData = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.textCupom = new Guna.UI2.WinForms.Guna2TextBox();
+            this.combPosto = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.combCombustivel = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.combVeiculo = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.combMotorista = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.textHodometro = new Guna.UI2.WinForms.Guna2TextBox();
+            this.combStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.textValor = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textTotal = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel24.SuspendLayout();
-            this.panel25.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel30.SuspendLayout();
-            this.panel31.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -120,27 +108,6 @@
             this.label16.TabIndex = 241;
             this.label16.Text = "Data";
             // 
-            // textCupom
-            // 
-            this.textCupom.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textCupom.BackColor = System.Drawing.Color.White;
-            this.textCupom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textCupom.BaseColor = System.Drawing.Color.White;
-            this.textCupom.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textCupom.BorderSize = 1;
-            this.textCupom.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textCupom.FocusedBaseColor = System.Drawing.Color.White;
-            this.textCupom.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textCupom.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textCupom.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textCupom.Location = new System.Drawing.Point(218, 76);
-            this.textCupom.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textCupom.MaxLength = 100;
-            this.textCupom.Name = "textCupom";
-            this.textCupom.PasswordChar = '\0';
-            this.textCupom.Size = new System.Drawing.Size(198, 35);
-            this.textCupom.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -165,30 +132,6 @@
             this.label14.TabIndex = 261;
             this.label14.Text = "Posto";
             // 
-            // combPosto
-            // 
-            this.combPosto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combPosto.BackColor = System.Drawing.Color.Transparent;
-            this.combPosto.BaseColor = System.Drawing.Color.White;
-            this.combPosto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combPosto.BorderSize = 1;
-            this.combPosto.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combPosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combPosto.FocusedColor = System.Drawing.Color.Empty;
-            this.combPosto.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combPosto.ForeColor = System.Drawing.Color.Black;
-            this.combPosto.FormattingEnabled = true;
-            this.combPosto.IntegralHeight = false;
-            this.combPosto.ItemHeight = 29;
-            this.combPosto.Location = new System.Drawing.Point(436, 76);
-            this.combPosto.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combPosto.Name = "combPosto";
-            this.combPosto.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combPosto.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combPosto.Size = new System.Drawing.Size(370, 35);
-            this.combPosto.TabIndex = 3;
-            this.combPosto.Tag = "Tag";
-            // 
             // iconButton3
             // 
             this.iconButton3.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -208,31 +151,6 @@
             this.iconButton3.TabIndex = 4;
             this.iconButton3.UseVisualStyleBackColor = false;
             this.iconButton3.Click += new System.EventHandler(this.onCadastrarCliente);
-            // 
-            // combCombustivel
-            // 
-            this.combCombustivel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combCombustivel.BackColor = System.Drawing.Color.Transparent;
-            this.combCombustivel.BaseColor = System.Drawing.Color.White;
-            this.combCombustivel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combCombustivel.BorderSize = 1;
-            this.combCombustivel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combCombustivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combCombustivel.FocusedColor = System.Drawing.Color.Empty;
-            this.combCombustivel.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combCombustivel.ForeColor = System.Drawing.Color.Black;
-            this.combCombustivel.FormattingEnabled = true;
-            this.combCombustivel.IntegralHeight = false;
-            this.combCombustivel.ItemHeight = 29;
-            this.combCombustivel.Items.AddRange(new object[] {
-            "Selecionar"});
-            this.combCombustivel.Location = new System.Drawing.Point(861, 76);
-            this.combCombustivel.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combCombustivel.Name = "combCombustivel";
-            this.combCombustivel.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combCombustivel.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combCombustivel.Size = new System.Drawing.Size(160, 35);
-            this.combCombustivel.TabIndex = 5;
             // 
             // label2
             // 
@@ -257,30 +175,6 @@
             this.label3.Size = new System.Drawing.Size(56, 18);
             this.label3.TabIndex = 266;
             this.label3.Text = "Veiculo";
-            // 
-            // combVeiculo
-            // 
-            this.combVeiculo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combVeiculo.BackColor = System.Drawing.Color.Transparent;
-            this.combVeiculo.BaseColor = System.Drawing.Color.White;
-            this.combVeiculo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combVeiculo.BorderSize = 1;
-            this.combVeiculo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combVeiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combVeiculo.FocusedColor = System.Drawing.Color.Empty;
-            this.combVeiculo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combVeiculo.ForeColor = System.Drawing.Color.Black;
-            this.combVeiculo.FormattingEnabled = true;
-            this.combVeiculo.IntegralHeight = false;
-            this.combVeiculo.ItemHeight = 29;
-            this.combVeiculo.Location = new System.Drawing.Point(20, 154);
-            this.combVeiculo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combVeiculo.Name = "combVeiculo";
-            this.combVeiculo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combVeiculo.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combVeiculo.Size = new System.Drawing.Size(280, 35);
-            this.combVeiculo.TabIndex = 6;
-            this.combVeiculo.Tag = "Tag";
             // 
             // iconButton1
             // 
@@ -314,30 +208,6 @@
             this.label4.TabIndex = 269;
             this.label4.Text = "Motorista";
             // 
-            // combMotorista
-            // 
-            this.combMotorista.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combMotorista.BackColor = System.Drawing.Color.Transparent;
-            this.combMotorista.BaseColor = System.Drawing.Color.White;
-            this.combMotorista.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combMotorista.BorderSize = 1;
-            this.combMotorista.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combMotorista.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combMotorista.FocusedColor = System.Drawing.Color.Empty;
-            this.combMotorista.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combMotorista.ForeColor = System.Drawing.Color.Black;
-            this.combMotorista.FormattingEnabled = true;
-            this.combMotorista.IntegralHeight = false;
-            this.combMotorista.ItemHeight = 29;
-            this.combMotorista.Location = new System.Drawing.Point(355, 154);
-            this.combMotorista.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combMotorista.Name = "combMotorista";
-            this.combMotorista.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combMotorista.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combMotorista.Size = new System.Drawing.Size(290, 35);
-            this.combMotorista.TabIndex = 8;
-            this.combMotorista.Tag = "Tag";
-            // 
             // iconButton2
             // 
             this.iconButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -357,31 +227,6 @@
             this.iconButton2.TabIndex = 9;
             this.iconButton2.UseVisualStyleBackColor = false;
             this.iconButton2.Click += new System.EventHandler(this.onCadastrarMotorista);
-            // 
-            // combStatus
-            // 
-            this.combStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combStatus.BackColor = System.Drawing.Color.Transparent;
-            this.combStatus.BaseColor = System.Drawing.Color.White;
-            this.combStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.combStatus.BorderSize = 1;
-            this.combStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combStatus.FocusedColor = System.Drawing.Color.Empty;
-            this.combStatus.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.combStatus.ForeColor = System.Drawing.Color.Black;
-            this.combStatus.FormattingEnabled = true;
-            this.combStatus.IntegralHeight = false;
-            this.combStatus.ItemHeight = 29;
-            this.combStatus.Items.AddRange(new object[] {
-            "Selecionar"});
-            this.combStatus.Location = new System.Drawing.Point(871, 154);
-            this.combStatus.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.combStatus.Name = "combStatus";
-            this.combStatus.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(178)))), ((int)(((byte)(220)))));
-            this.combStatus.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.combStatus.Size = new System.Drawing.Size(150, 35);
-            this.combStatus.TabIndex = 11;
             // 
             // label6
             // 
@@ -419,27 +264,6 @@
             this.iconPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.iconPictureBox4.TabIndex = 90;
             this.iconPictureBox4.TabStop = false;
-            // 
-            // textHodometro
-            // 
-            this.textHodometro.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textHodometro.BackColor = System.Drawing.Color.White;
-            this.textHodometro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textHodometro.BaseColor = System.Drawing.Color.White;
-            this.textHodometro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textHodometro.BorderSize = 1;
-            this.textHodometro.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textHodometro.FocusedBaseColor = System.Drawing.Color.White;
-            this.textHodometro.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textHodometro.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textHodometro.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textHodometro.Location = new System.Drawing.Point(700, 154);
-            this.textHodometro.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.textHodometro.MaxLength = 20;
-            this.textHodometro.Name = "textHodometro";
-            this.textHodometro.PasswordChar = '\0';
-            this.textHodometro.Size = new System.Drawing.Size(116, 35);
-            this.textHodometro.TabIndex = 10;
             // 
             // label5
             // 
@@ -581,113 +405,30 @@
             this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.OnEnviar);
             // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.panel24.Controls.Add(this.panel25);
-            this.panel24.Location = new System.Drawing.Point(205, 230);
-            this.panel24.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.panel24.Name = "panel24";
-            this.panel24.Padding = new System.Windows.Forms.Padding(1);
-            this.panel24.Size = new System.Drawing.Size(95, 35);
-            this.panel24.TabIndex = 13;
-            // 
-            // panel25
-            // 
-            this.panel25.BackColor = System.Drawing.Color.White;
-            this.panel25.Controls.Add(this.textValor);
-            this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel25.Location = new System.Drawing.Point(1, 1);
-            this.panel25.Margin = new System.Windows.Forms.Padding(1);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(93, 33);
-            this.panel25.TabIndex = 0;
-            // 
-            // textValor
-            // 
-            this.textValor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textValor.BackColor = System.Drawing.Color.White;
-            this.textValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textValor.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textValor.Location = new System.Drawing.Point(8, 7);
-            this.textValor.Name = "textValor";
-            this.textValor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textValor.Size = new System.Drawing.Size(78, 22);
-            this.textValor.TabIndex = 13;
-            this.textValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
-            this.textValor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalcularValorTotal);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Location = new System.Drawing.Point(355, 230);
-            this.panel4.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(1);
-            this.panel4.Size = new System.Drawing.Size(95, 35);
-            this.panel4.TabIndex = 14;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.textTotal);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(1, 1);
-            this.panel5.Margin = new System.Windows.Forms.Padding(1);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(93, 33);
-            this.panel5.TabIndex = 0;
-            // 
-            // textTotal
-            // 
-            this.textTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textTotal.BackColor = System.Drawing.Color.White;
-            this.textTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textTotal.Enabled = false;
-            this.textTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textTotal.Location = new System.Drawing.Point(8, 7);
-            this.textTotal.Name = "textTotal";
-            this.textTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textTotal.Size = new System.Drawing.Size(78, 22);
-            this.textTotal.TabIndex = 14;
-            this.textTotal.TextChanged += new System.EventHandler(this.OnChangedTextValor);
-            // 
-            // panel30
-            // 
-            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.panel30.Controls.Add(this.panel31);
-            this.panel30.Location = new System.Drawing.Point(20, 230);
-            this.panel30.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
-            this.panel30.Name = "panel30";
-            this.panel30.Padding = new System.Windows.Forms.Padding(1);
-            this.panel30.Size = new System.Drawing.Size(95, 35);
-            this.panel30.TabIndex = 12;
-            // 
-            // panel31
-            // 
-            this.panel31.BackColor = System.Drawing.Color.White;
-            this.panel31.Controls.Add(this.textLitros);
-            this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel31.Location = new System.Drawing.Point(1, 1);
-            this.panel31.Margin = new System.Windows.Forms.Padding(1);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(93, 33);
-            this.panel31.TabIndex = 0;
-            // 
             // textLitros
             // 
-            this.textLitros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textLitros.BackColor = System.Drawing.Color.White;
-            this.textLitros.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textLitros.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textLitros.Location = new System.Drawing.Point(8, 7);
+            this.textLitros.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textLitros.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textLitros.DefaultText = "";
+            this.textLitros.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textLitros.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textLitros.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textLitros.DisabledState.Parent = this.textLitros;
+            this.textLitros.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textLitros.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textLitros.FocusedState.Parent = this.textLitros;
+            this.textLitros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textLitros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textLitros.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textLitros.HoverState.Parent = this.textLitros;
+            this.textLitros.Location = new System.Drawing.Point(21, 230);
+            this.textLitros.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
             this.textLitros.Name = "textLitros";
-            this.textLitros.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textLitros.Size = new System.Drawing.Size(78, 22);
+            this.textLitros.PasswordChar = '\0';
+            this.textLitros.PlaceholderText = "";
+            this.textLitros.SelectedText = "";
+            this.textLitros.ShadowDecoration.Parent = this.textLitros;
+            this.textLitros.Size = new System.Drawing.Size(94, 35);
             this.textLitros.TabIndex = 12;
             this.textLitros.TextChanged += new System.EventHandler(this.OnChangedTextQtd);
             this.textLitros.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalcularValorTotal);
@@ -700,7 +441,7 @@
             this.timeData.CheckedState.Parent = this.timeData;
             this.timeData.CustomFormat = " ";
             this.timeData.FillColor = System.Drawing.Color.White;
-            this.timeData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.timeData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F);
             this.timeData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.timeData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.timeData.HoverState.Parent = this.timeData;
@@ -711,19 +452,239 @@
             this.timeData.Name = "timeData";
             this.timeData.ShadowDecoration.Parent = this.timeData;
             this.timeData.Size = new System.Drawing.Size(177, 35);
-            this.timeData.TabIndex = 288;
+            this.timeData.TabIndex = 1;
             this.timeData.UseTransparentBackground = true;
             this.timeData.Value = new System.DateTime(2020, 5, 3, 16, 47, 44, 411);
+            // 
+            // textCupom
+            // 
+            this.textCupom.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textCupom.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textCupom.DefaultText = "";
+            this.textCupom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textCupom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textCupom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textCupom.DisabledState.Parent = this.textCupom;
+            this.textCupom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textCupom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textCupom.FocusedState.Parent = this.textCupom;
+            this.textCupom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textCupom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textCupom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textCupom.HoverState.Parent = this.textCupom;
+            this.textCupom.Location = new System.Drawing.Point(218, 76);
+            this.textCupom.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textCupom.Name = "textCupom";
+            this.textCupom.PasswordChar = '\0';
+            this.textCupom.PlaceholderText = "";
+            this.textCupom.SelectedText = "";
+            this.textCupom.ShadowDecoration.Parent = this.textCupom;
+            this.textCupom.Size = new System.Drawing.Size(198, 35);
+            this.textCupom.TabIndex = 2;
+            // 
+            // combPosto
+            // 
+            this.combPosto.BackColor = System.Drawing.Color.Transparent;
+            this.combPosto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combPosto.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combPosto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combPosto.FocusedColor = System.Drawing.Color.Empty;
+            this.combPosto.FocusedState.Parent = this.combPosto;
+            this.combPosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combPosto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combPosto.FormattingEnabled = true;
+            this.combPosto.HoverState.Parent = this.combPosto;
+            this.combPosto.ItemHeight = 29;
+            this.combPosto.ItemsAppearance.Parent = this.combPosto;
+            this.combPosto.Location = new System.Drawing.Point(436, 76);
+            this.combPosto.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combPosto.Name = "combPosto";
+            this.combPosto.ShadowDecoration.Parent = this.combPosto;
+            this.combPosto.Size = new System.Drawing.Size(370, 35);
+            this.combPosto.TabIndex = 3;
+            // 
+            // combCombustivel
+            // 
+            this.combCombustivel.BackColor = System.Drawing.Color.Transparent;
+            this.combCombustivel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combCombustivel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combCombustivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combCombustivel.FocusedColor = System.Drawing.Color.Empty;
+            this.combCombustivel.FocusedState.Parent = this.combCombustivel;
+            this.combCombustivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combCombustivel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combCombustivel.FormattingEnabled = true;
+            this.combCombustivel.HoverState.Parent = this.combCombustivel;
+            this.combCombustivel.ItemHeight = 29;
+            this.combCombustivel.ItemsAppearance.Parent = this.combCombustivel;
+            this.combCombustivel.Location = new System.Drawing.Point(861, 76);
+            this.combCombustivel.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combCombustivel.Name = "combCombustivel";
+            this.combCombustivel.ShadowDecoration.Parent = this.combCombustivel;
+            this.combCombustivel.Size = new System.Drawing.Size(160, 35);
+            this.combCombustivel.TabIndex = 5;
+            // 
+            // combVeiculo
+            // 
+            this.combVeiculo.BackColor = System.Drawing.Color.Transparent;
+            this.combVeiculo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combVeiculo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combVeiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combVeiculo.FocusedColor = System.Drawing.Color.Empty;
+            this.combVeiculo.FocusedState.Parent = this.combVeiculo;
+            this.combVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combVeiculo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combVeiculo.FormattingEnabled = true;
+            this.combVeiculo.HoverState.Parent = this.combVeiculo;
+            this.combVeiculo.ItemHeight = 29;
+            this.combVeiculo.ItemsAppearance.Parent = this.combVeiculo;
+            this.combVeiculo.Location = new System.Drawing.Point(21, 154);
+            this.combVeiculo.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combVeiculo.Name = "combVeiculo";
+            this.combVeiculo.ShadowDecoration.Parent = this.combVeiculo;
+            this.combVeiculo.Size = new System.Drawing.Size(279, 35);
+            this.combVeiculo.TabIndex = 6;
+            // 
+            // combMotorista
+            // 
+            this.combMotorista.BackColor = System.Drawing.Color.Transparent;
+            this.combMotorista.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combMotorista.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combMotorista.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combMotorista.FocusedColor = System.Drawing.Color.Empty;
+            this.combMotorista.FocusedState.Parent = this.combMotorista;
+            this.combMotorista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combMotorista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combMotorista.FormattingEnabled = true;
+            this.combMotorista.HoverState.Parent = this.combMotorista;
+            this.combMotorista.ItemHeight = 29;
+            this.combMotorista.ItemsAppearance.Parent = this.combMotorista;
+            this.combMotorista.Location = new System.Drawing.Point(355, 154);
+            this.combMotorista.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combMotorista.Name = "combMotorista";
+            this.combMotorista.ShadowDecoration.Parent = this.combMotorista;
+            this.combMotorista.Size = new System.Drawing.Size(290, 35);
+            this.combMotorista.TabIndex = 8;
+            // 
+            // textHodometro
+            // 
+            this.textHodometro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textHodometro.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textHodometro.DefaultText = "";
+            this.textHodometro.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textHodometro.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textHodometro.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textHodometro.DisabledState.Parent = this.textHodometro;
+            this.textHodometro.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textHodometro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textHodometro.FocusedState.Parent = this.textHodometro;
+            this.textHodometro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textHodometro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textHodometro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textHodometro.HoverState.Parent = this.textHodometro;
+            this.textHodometro.Location = new System.Drawing.Point(700, 154);
+            this.textHodometro.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textHodometro.Name = "textHodometro";
+            this.textHodometro.PasswordChar = '\0';
+            this.textHodometro.PlaceholderText = "";
+            this.textHodometro.SelectedText = "";
+            this.textHodometro.ShadowDecoration.Parent = this.textHodometro;
+            this.textHodometro.Size = new System.Drawing.Size(116, 35);
+            this.textHodometro.TabIndex = 10;
+            // 
+            // combStatus
+            // 
+            this.combStatus.BackColor = System.Drawing.Color.Transparent;
+            this.combStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.combStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combStatus.FocusedColor = System.Drawing.Color.Empty;
+            this.combStatus.FocusedState.Parent = this.combStatus;
+            this.combStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.combStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.combStatus.FormattingEnabled = true;
+            this.combStatus.HoverState.Parent = this.combStatus;
+            this.combStatus.ItemHeight = 29;
+            this.combStatus.ItemsAppearance.Parent = this.combStatus;
+            this.combStatus.Location = new System.Drawing.Point(874, 154);
+            this.combStatus.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.combStatus.Name = "combStatus";
+            this.combStatus.ShadowDecoration.Parent = this.combStatus;
+            this.combStatus.Size = new System.Drawing.Size(147, 35);
+            this.combStatus.TabIndex = 11;
+            // 
+            // textValor
+            // 
+            this.textValor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textValor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textValor.DefaultText = "";
+            this.textValor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textValor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textValor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textValor.DisabledState.Parent = this.textValor;
+            this.textValor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textValor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textValor.FocusedState.Parent = this.textValor;
+            this.textValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textValor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textValor.HoverState.Parent = this.textValor;
+            this.textValor.Location = new System.Drawing.Point(205, 230);
+            this.textValor.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textValor.Name = "textValor";
+            this.textValor.PasswordChar = '\0';
+            this.textValor.PlaceholderText = "";
+            this.textValor.SelectedText = "";
+            this.textValor.ShadowDecoration.Parent = this.textValor;
+            this.textValor.Size = new System.Drawing.Size(95, 35);
+            this.textValor.TabIndex = 13;
+            this.textValor.TextChanged += new System.EventHandler(this.OnChangedTextValor);
+            this.textValor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalcularValorTotal);
+            // 
+            // textTotal
+            // 
+            this.textTotal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textTotal.DefaultText = "";
+            this.textTotal.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textTotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textTotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textTotal.DisabledState.Parent = this.textTotal;
+            this.textTotal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textTotal.Enabled = false;
+            this.textTotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textTotal.FocusedState.Parent = this.textTotal;
+            this.textTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textTotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textTotal.HoverState.Parent = this.textTotal;
+            this.textTotal.Location = new System.Drawing.Point(355, 230);
+            this.textTotal.Margin = new System.Windows.Forms.Padding(10, 5, 10, 15);
+            this.textTotal.Name = "textTotal";
+            this.textTotal.PasswordChar = '\0';
+            this.textTotal.PlaceholderText = "";
+            this.textTotal.SelectedText = "";
+            this.textTotal.ShadowDecoration.Parent = this.textTotal;
+            this.textTotal.Size = new System.Drawing.Size(120, 35);
+            this.textTotal.TabIndex = 14;
+            this.textTotal.TextChanged += new System.EventHandler(this.OnChangedTextValor);
             // 
             // FormAbastecimentos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 372);
+            this.Controls.Add(this.textTotal);
+            this.Controls.Add(this.textValor);
+            this.Controls.Add(this.combStatus);
+            this.Controls.Add(this.textHodometro);
+            this.Controls.Add(this.combMotorista);
+            this.Controls.Add(this.combVeiculo);
+            this.Controls.Add(this.combCombustivel);
+            this.Controls.Add(this.combPosto);
+            this.Controls.Add(this.textCupom);
             this.Controls.Add(this.timeData);
-            this.Controls.Add(this.panel30);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel24);
+            this.Controls.Add(this.textLitros);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -733,21 +694,14 @@
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel18);
-            this.Controls.Add(this.textHodometro);
-            this.Controls.Add(this.combStatus);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.combMotorista);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.combVeiculo);
             this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.combCombustivel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.combPosto);
             this.Controls.Add(this.iconButton3);
-            this.Controls.Add(this.textCupom);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.panel1);
@@ -765,15 +719,6 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel24.ResumeLayout(false);
-            this.panel25.ResumeLayout(false);
-            this.panel25.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel30.ResumeLayout(false);
-            this.panel31.ResumeLayout(false);
-            this.panel31.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -783,24 +728,17 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label16;
-        private Guna.UI.WinForms.GunaTextBox textCupom;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label14;
-        private Guna.UI.WinForms.GunaComboBox combPosto;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private Guna.UI.WinForms.GunaComboBox combCombustivel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private Guna.UI.WinForms.GunaComboBox combVeiculo;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Label label4;
-        private Guna.UI.WinForms.GunaComboBox combMotorista;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private Guna.UI.WinForms.GunaComboBox combStatus;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel18;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
-        private Guna.UI.WinForms.GunaTextBox textHodometro;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label40;
@@ -812,15 +750,16 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private FontAwesome.Sharp.IconButton btnEnviar;
-        private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.MaskedTextBox textValor;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.MaskedTextBox textTotal;
-        private System.Windows.Forms.Panel panel30;
-        private System.Windows.Forms.Panel panel31;
-        private System.Windows.Forms.MaskedTextBox textLitros;
+        private Guna.UI2.WinForms.Guna2TextBox textLitros;
         private Guna.UI2.WinForms.Guna2DateTimePicker timeData;
+        private Guna.UI2.WinForms.Guna2TextBox textCupom;
+        private Guna.UI2.WinForms.Guna2ComboBox combPosto;
+        private Guna.UI2.WinForms.Guna2ComboBox combCombustivel;
+        private Guna.UI2.WinForms.Guna2ComboBox combVeiculo;
+        private Guna.UI2.WinForms.Guna2ComboBox combMotorista;
+        private Guna.UI2.WinForms.Guna2TextBox textHodometro;
+        private Guna.UI2.WinForms.Guna2ComboBox combStatus;
+        private Guna.UI2.WinForms.Guna2TextBox textValor;
+        private Guna.UI2.WinForms.Guna2TextBox textTotal;
     }
 }
