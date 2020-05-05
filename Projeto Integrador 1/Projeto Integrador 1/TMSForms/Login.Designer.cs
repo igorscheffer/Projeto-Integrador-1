@@ -106,6 +106,7 @@
             this.textSenha.PasswordChar = '*';
             this.textSenha.Size = new System.Drawing.Size(259, 35);
             this.textSenha.TabIndex = 2;
+            this.textSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressEnter);
             // 
             // btnLogar
             // 
@@ -197,6 +198,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Activated += new System.EventHandler(this.OnActivateLogin);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconSenha)).EndInit();

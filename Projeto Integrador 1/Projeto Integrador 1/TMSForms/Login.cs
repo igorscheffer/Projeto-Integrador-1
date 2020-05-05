@@ -11,12 +11,6 @@ namespace Projeto_Integrador_1.TMSForms {
 
         public Login() {
             InitializeComponent();
-
-            if (Properties.Settings.Default.salvarSenha) {
-                textLogin.Text = Properties.Settings.Default.login;
-                textSenha.Text = Properties.Settings.Default.senha;
-                checkSalvarDados.Checked = Properties.Settings.Default.salvarSenha;
-            }
         }
 
         private void OnClickClose(object sender, EventArgs e) {
@@ -69,6 +63,22 @@ namespace Projeto_Integrador_1.TMSForms {
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void KeyPressEnter(object sender, KeyPressEventArgs e) {
+            if (e.KeyChar == (char)Keys.Enter) {
+                OnClickLogar(sender, e);
+            }
+        }
+
+        private void OnActivateLogin(object sender, EventArgs e) {
+            if (Properties.Settings.Default.salvarSenha) {
+                textLogin.Text = Properties.Settings.Default.login;
+                textSenha.Text = Properties.Settings.Default.senha;
+                checkSalvarDados.Checked = Properties.Settings.Default.salvarSenha;
+
+                textSenha.Focus();
             }
         }
     }
