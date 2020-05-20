@@ -860,6 +860,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // combStatus
             // 
+            this.combStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combStatus.BackColor = System.Drawing.Color.Transparent;
             this.combStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -881,6 +882,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textDestinoCidade
             // 
+            this.textDestinoCidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textDestinoCidade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textDestinoCidade.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textDestinoCidade.DefaultText = "";
@@ -907,6 +909,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textSaidaCidade
             // 
+            this.textSaidaCidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textSaidaCidade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textSaidaCidade.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textSaidaCidade.DefaultText = "";
@@ -933,6 +936,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // combDestinoUF
             // 
+            this.combDestinoUF.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combDestinoUF.BackColor = System.Drawing.Color.Transparent;
             this.combDestinoUF.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combDestinoUF.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -954,6 +958,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // combSaidaUF
             // 
+            this.combSaidaUF.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combSaidaUF.BackColor = System.Drawing.Color.Transparent;
             this.combSaidaUF.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combSaidaUF.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -975,6 +980,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // combMotorista
             // 
+            this.combMotorista.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combMotorista.BackColor = System.Drawing.Color.Transparent;
             this.combMotorista.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combMotorista.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -996,6 +1002,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textCodigoInterno
             // 
+            this.textCodigoInterno.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCodigoInterno.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textCodigoInterno.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textCodigoInterno.DefaultText = "";
@@ -1022,6 +1029,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // combReboque
             // 
+            this.combReboque.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combReboque.BackColor = System.Drawing.Color.Transparent;
             this.combReboque.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combReboque.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -1043,6 +1051,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // combVeiculo
             // 
+            this.combVeiculo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combVeiculo.BackColor = System.Drawing.Color.Transparent;
             this.combVeiculo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combVeiculo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -1064,6 +1073,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // combTipoViagem
             // 
+            this.combTipoViagem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combTipoViagem.BackColor = System.Drawing.Color.Transparent;
             this.combTipoViagem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combTipoViagem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -1085,6 +1095,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // combTomador
             // 
+            this.combTomador.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combTomador.BackColor = System.Drawing.Color.Transparent;
             this.combTomador.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combTomador.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -1106,6 +1117,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // combDestinatario
             // 
+            this.combDestinatario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combDestinatario.BackColor = System.Drawing.Color.Transparent;
             this.combDestinatario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combDestinatario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -1128,6 +1140,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // combRemetente
             // 
+            this.combRemetente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combRemetente.BackColor = System.Drawing.Color.Transparent;
             this.combRemetente.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combRemetente.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -1150,6 +1163,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textHodometroEntrega
             // 
+            this.textHodometroEntrega.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textHodometroEntrega.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textHodometroEntrega.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textHodometroEntrega.DefaultText = "";
@@ -1177,6 +1191,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textHodometroChegada
             // 
+            this.textHodometroChegada.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textHodometroChegada.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textHodometroChegada.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textHodometroChegada.DefaultText = "";
@@ -1204,6 +1219,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textHodometroPercorrido
             // 
+            this.textHodometroPercorrido.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textHodometroPercorrido.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textHodometroPercorrido.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textHodometroPercorrido.DefaultText = "";
@@ -1231,6 +1247,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textHodometroSaida
             // 
+            this.textHodometroSaida.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textHodometroSaida.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textHodometroSaida.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textHodometroSaida.DefaultText = "";
@@ -1258,6 +1275,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textValor
             // 
+            this.textValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textValor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textValor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textValor.DefaultText = "";
@@ -1285,6 +1303,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // timeDataChegada
             // 
+            this.timeDataChegada.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeDataChegada.BackColor = System.Drawing.Color.Transparent;
             this.timeDataChegada.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeDataChegada.BorderThickness = 1;
@@ -1308,6 +1327,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // timeDataEntrega
             // 
+            this.timeDataEntrega.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeDataEntrega.BackColor = System.Drawing.Color.Transparent;
             this.timeDataEntrega.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeDataEntrega.BorderThickness = 1;
@@ -1331,6 +1351,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // timeDataSaida
             // 
+            this.timeDataSaida.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeDataSaida.BackColor = System.Drawing.Color.Transparent;
             this.timeDataSaida.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeDataSaida.BorderThickness = 1;
@@ -1619,6 +1640,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textCargaValor
             // 
+            this.textCargaValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCargaValor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textCargaValor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textCargaValor.DefaultText = "";
@@ -1646,6 +1668,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textCargaPeso
             // 
+            this.textCargaPeso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCargaPeso.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textCargaPeso.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textCargaPeso.DefaultText = "";
@@ -1673,6 +1696,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textCargaDescricao
             // 
+            this.textCargaDescricao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCargaDescricao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textCargaDescricao.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textCargaDescricao.DefaultText = "";
@@ -1699,6 +1723,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // panel36
             // 
+            this.panel36.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.panel36.Controls.Add(this.panel37);
             this.panel36.Location = new System.Drawing.Point(20, 75);
@@ -1710,9 +1735,9 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // panel37
             // 
+            this.panel37.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel37.BackColor = System.Drawing.Color.White;
             this.panel37.Controls.Add(this.textCargaNFE);
-            this.panel37.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel37.Location = new System.Drawing.Point(1, 1);
             this.panel37.Margin = new System.Windows.Forms.Padding(1);
             this.panel37.Name = "panel37";
@@ -2024,6 +2049,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textCustoValor
             // 
+            this.textCustoValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCustoValor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textCustoValor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textCustoValor.DefaultText = "";
@@ -2051,6 +2077,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textCustoQTD
             // 
+            this.textCustoQTD.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCustoQTD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textCustoQTD.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textCustoQTD.DefaultText = "";
@@ -2078,6 +2105,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textCustoDescricao
             // 
+            this.textCustoDescricao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCustoDescricao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textCustoDescricao.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textCustoDescricao.DefaultText = "";
@@ -2104,6 +2132,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // timeCustoData
             // 
+            this.timeCustoData.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeCustoData.BackColor = System.Drawing.Color.Transparent;
             this.timeCustoData.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeCustoData.BorderThickness = 1;
@@ -2319,6 +2348,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // combAbastecimentoStatus
             // 
+            this.combAbastecimentoStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combAbastecimentoStatus.BackColor = System.Drawing.Color.Transparent;
             this.combAbastecimentoStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combAbastecimentoStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -2340,6 +2370,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textAbastecimentoValor
             // 
+            this.textAbastecimentoValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textAbastecimentoValor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textAbastecimentoValor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textAbastecimentoValor.DefaultText = "";
@@ -2367,6 +2398,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // textAbastecimentoLitros
             // 
+            this.textAbastecimentoLitros.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textAbastecimentoLitros.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textAbastecimentoLitros.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textAbastecimentoLitros.DefaultText = "";
@@ -2394,6 +2426,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // combAbastecimentoCombustivel
             // 
+            this.combAbastecimentoCombustivel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combAbastecimentoCombustivel.BackColor = System.Drawing.Color.Transparent;
             this.combAbastecimentoCombustivel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combAbastecimentoCombustivel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -2415,6 +2448,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // combAbastecimentoPosto
             // 
+            this.combAbastecimentoPosto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combAbastecimentoPosto.BackColor = System.Drawing.Color.Transparent;
             this.combAbastecimentoPosto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combAbastecimentoPosto.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -2436,6 +2470,7 @@ namespace Projeto_Integrador_1.TMSForms.Register
             // 
             // timeAbastecimentoData
             // 
+            this.timeAbastecimentoData.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeAbastecimentoData.BackColor = System.Drawing.Color.Transparent;
             this.timeAbastecimentoData.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeAbastecimentoData.BorderThickness = 1;

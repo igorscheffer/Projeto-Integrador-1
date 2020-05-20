@@ -340,6 +340,7 @@
             // 
             // textValor
             // 
+            this.textValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textValor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textValor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textValor.DefaultText = "";
@@ -367,6 +368,7 @@
             // 
             // combVeiculo
             // 
+            this.combVeiculo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combVeiculo.BackColor = System.Drawing.Color.Transparent;
             this.combVeiculo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combVeiculo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -388,6 +390,7 @@
             // 
             // timeDataOcorrencia
             // 
+            this.timeDataOcorrencia.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeDataOcorrencia.BackColor = System.Drawing.Color.Transparent;
             this.timeDataOcorrencia.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeDataOcorrencia.BorderThickness = 1;
@@ -411,6 +414,7 @@
             // 
             // timeDataNotificacao
             // 
+            this.timeDataNotificacao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeDataNotificacao.BackColor = System.Drawing.Color.Transparent;
             this.timeDataNotificacao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeDataNotificacao.BorderThickness = 1;
@@ -434,6 +438,7 @@
             // 
             // timeDataVencimento
             // 
+            this.timeDataVencimento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeDataVencimento.BackColor = System.Drawing.Color.Transparent;
             this.timeDataVencimento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeDataVencimento.BorderThickness = 1;
@@ -457,6 +462,7 @@
             // 
             // combMotorista
             // 
+            this.combMotorista.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combMotorista.BackColor = System.Drawing.Color.Transparent;
             this.combMotorista.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combMotorista.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -478,6 +484,7 @@
             // 
             // combGravidade
             // 
+            this.combGravidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combGravidade.BackColor = System.Drawing.Color.Transparent;
             this.combGravidade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combGravidade.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -499,6 +506,7 @@
             // 
             // combStatus
             // 
+            this.combStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combStatus.BackColor = System.Drawing.Color.Transparent;
             this.combStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;

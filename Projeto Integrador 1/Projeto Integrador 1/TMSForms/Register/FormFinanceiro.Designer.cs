@@ -437,6 +437,7 @@
             // 
             // combOcorrencia
             // 
+            this.combOcorrencia.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combOcorrencia.BackColor = System.Drawing.Color.Transparent;
             this.combOcorrencia.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combOcorrencia.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -459,6 +460,7 @@
             // 
             // textNome
             // 
+            this.textNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textNome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textNome.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textNome.DefaultText = "";
@@ -485,6 +487,7 @@
             // 
             // combTipo
             // 
+            this.combTipo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combTipo.BackColor = System.Drawing.Color.Transparent;
             this.combTipo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combTipo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -506,6 +509,7 @@
             // 
             // combCentroCusto
             // 
+            this.combCentroCusto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combCentroCusto.BackColor = System.Drawing.Color.Transparent;
             this.combCentroCusto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combCentroCusto.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -527,6 +531,7 @@
             // 
             // combFormaPagamento
             // 
+            this.combFormaPagamento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combFormaPagamento.BackColor = System.Drawing.Color.Transparent;
             this.combFormaPagamento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combFormaPagamento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -548,6 +553,7 @@
             // 
             // combStatus
             // 
+            this.combStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combStatus.BackColor = System.Drawing.Color.Transparent;
             this.combStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -569,6 +575,7 @@
             // 
             // timeDataEmissao
             // 
+            this.timeDataEmissao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeDataEmissao.BackColor = System.Drawing.Color.Transparent;
             this.timeDataEmissao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeDataEmissao.BorderThickness = 1;
@@ -592,6 +599,7 @@
             // 
             // timeDataVencimento
             // 
+            this.timeDataVencimento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeDataVencimento.BackColor = System.Drawing.Color.Transparent;
             this.timeDataVencimento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.timeDataVencimento.BorderThickness = 1;
@@ -615,6 +623,7 @@
             // 
             // textValor
             // 
+            this.textValor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textValor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textValor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textValor.DefaultText = "";
@@ -642,6 +651,7 @@
             // 
             // textDocumento
             // 
+            this.textDocumento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textDocumento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textDocumento.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textDocumento.DefaultText = "";
@@ -668,6 +678,7 @@
             // 
             // textQtdParcelas
             // 
+            this.textQtdParcelas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textQtdParcelas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textQtdParcelas.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textQtdParcelas.DefaultText = "";

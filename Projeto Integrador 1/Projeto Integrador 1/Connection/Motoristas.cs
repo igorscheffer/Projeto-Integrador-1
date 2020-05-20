@@ -44,9 +44,9 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.Parameters.AddWithValue("@nome", Nome);
                 query.Parameters.AddWithValue("@cpf", CNH);
-                query.Parameters.AddWithValue("@rg", Converter.ToIntDB(RG, true));
+                query.Parameters.AddWithValue("@rg", Converter.ToIntDB(RG, true, true));
                 query.Parameters.AddWithValue("@status", Status);
-                query.Parameters.AddWithValue("@cnh", Converter.ToIntDB(CNH, true));
+                query.Parameters.AddWithValue("@cnh", Converter.ToIntDB(CNH, true, true));
                 query.Parameters.AddWithValue("@vencimento", (!string.IsNullOrWhiteSpace(Vencimento) ? (object)DateTime.Parse(Vencimento) : DBNull.Value));
                 query.Parameters.AddWithValue("@categoria", Categoria);
                 query.Parameters.AddWithValue("@sexo", Sexo);
@@ -86,9 +86,9 @@ namespace Projeto_Integrador_1.Connection {
 
                 query.Parameters.AddWithValue("@nome", Nome);
                 query.Parameters.AddWithValue("@cpf", CPF);
-                query.Parameters.AddWithValue("@rg", Converter.ToIntDB(RG, true));
+                query.Parameters.AddWithValue("@rg", Converter.ToIntDB(RG, true, true));
                 query.Parameters.AddWithValue("@status", Status);
-                query.Parameters.AddWithValue("@cnh", Converter.ToIntDB(CNH, true));
+                query.Parameters.AddWithValue("@cnh", Converter.ToIntDB(CNH, true, true));
                 query.Parameters.AddWithValue("@vencimento", (!string.IsNullOrWhiteSpace(Vencimento) ? (object)DateTime.Parse(Vencimento) : DBNull.Value));
                 query.Parameters.AddWithValue("@categoria", Categoria);
                 query.Parameters.AddWithValue("@sexo", Sexo);

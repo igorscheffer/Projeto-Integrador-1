@@ -203,13 +203,16 @@ namespace Projeto_Integrador_1.Util {
                 return string.Empty;
             }
         }
-        public static dynamic ToIntDB(dynamic input, bool RBDNull = false) {
+        public static dynamic ToIntDB(dynamic input, bool RBDNull = false, bool acceptZero = false) {
             if (!string.IsNullOrWhiteSpace(Convert.ToString(input))) {
                 if (Convert.ToInt32(input) > 0) {
                     return Convert.ToInt32(input);
                 }
                 else {
                     if (RBDNull) {
+                        if (acceptZero) {
+                            return Convert.ToInt32(input);
+                        }
                         return DBNull.Value;
                     }
                     else {

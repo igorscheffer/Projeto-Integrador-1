@@ -8,7 +8,7 @@ namespace Projeto_Integrador_1.Connection {
         private string User = "root";
         private string Pass = "";
         private string Base = "projeto_integrador";
-        private bool ServerRemote = false;
+        private bool ServerRemote = true;
 
         public Config() {
             Initialize();

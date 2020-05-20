@@ -113,10 +113,8 @@ namespace Projeto_Integrador_1.Util {
 
         public static List<dynamic> VeiculosStatus = new List<dynamic> {
             new { Value = -1, Text = "---" },
-            new { Value = 1, Text = "Finalizada" },
-            new { Value = 2, Text = "Agendada" },
-            new { Value = 3, Text = "Em Andamento" },
-            new { Value = 0, Text = "Cancelada" }
+            new { Value = 1, Text = "Ativo" },
+            new { Value = 2, Text = "Inativo" }
         };
 
         public static List<dynamic> MotoristasStatus = new List<dynamic> {

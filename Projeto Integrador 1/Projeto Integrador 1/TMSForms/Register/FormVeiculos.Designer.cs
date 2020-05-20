@@ -487,6 +487,7 @@
             // 
             // panel13
             // 
+            this.panel13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Location = new System.Drawing.Point(180, 76);
@@ -498,9 +499,9 @@
             // 
             // panel14
             // 
+            this.panel14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel14.BackColor = System.Drawing.Color.White;
             this.panel14.Controls.Add(this.textPlaca);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel14.Location = new System.Drawing.Point(1, 1);
             this.panel14.Margin = new System.Windows.Forms.Padding(1);
             this.panel14.Name = "panel14";
@@ -522,6 +523,7 @@
             // 
             // textTara
             // 
+            this.textTara.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textTara.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textTara.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textTara.DefaultText = "";
@@ -549,6 +551,7 @@
             // 
             // textLotacao
             // 
+            this.textLotacao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textLotacao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textLotacao.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textLotacao.DefaultText = "";
@@ -576,6 +579,7 @@
             // 
             // textPesoBrutoTotal
             // 
+            this.textPesoBrutoTotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textPesoBrutoTotal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textPesoBrutoTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textPesoBrutoTotal.DefaultText = "";
@@ -603,6 +607,7 @@
             // 
             // textCapacidade
             // 
+            this.textCapacidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCapacidade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textCapacidade.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textCapacidade.DefaultText = "";
@@ -630,6 +635,7 @@
             // 
             // textRenavam
             // 
+            this.textRenavam.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textRenavam.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textRenavam.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textRenavam.DefaultText = "";
@@ -656,6 +662,7 @@
             // 
             // textChassi
             // 
+            this.textChassi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textChassi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textChassi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textChassi.DefaultText = "";
@@ -682,6 +689,7 @@
             // 
             // combAnoFabricacao
             // 
+            this.combAnoFabricacao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combAnoFabricacao.BackColor = System.Drawing.Color.Transparent;
             this.combAnoFabricacao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combAnoFabricacao.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -703,6 +711,7 @@
             // 
             // combAnoModelo
             // 
+            this.combAnoModelo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combAnoModelo.BackColor = System.Drawing.Color.Transparent;
             this.combAnoModelo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combAnoModelo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -724,6 +733,7 @@
             // 
             // combStatus
             // 
+            this.combStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combStatus.BackColor = System.Drawing.Color.Transparent;
             this.combStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -745,6 +755,7 @@
             // 
             // combCombustivel
             // 
+            this.combCombustivel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combCombustivel.BackColor = System.Drawing.Color.Transparent;
             this.combCombustivel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combCombustivel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -766,6 +777,7 @@
             // 
             // combCor
             // 
+            this.combCor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combCor.BackColor = System.Drawing.Color.Transparent;
             this.combCor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combCor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -787,6 +799,7 @@
             // 
             // combCategoria
             // 
+            this.combCategoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combCategoria.BackColor = System.Drawing.Color.Transparent;
             this.combCategoria.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combCategoria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -808,6 +821,7 @@
             // 
             // combMarca
             // 
+            this.combMarca.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combMarca.BackColor = System.Drawing.Color.Transparent;
             this.combMarca.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combMarca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -829,6 +843,7 @@
             // 
             // combCarroceria
             // 
+            this.combCarroceria.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combCarroceria.BackColor = System.Drawing.Color.Transparent;
             this.combCarroceria.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combCarroceria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -850,6 +865,7 @@
             // 
             // textFrota
             // 
+            this.textFrota.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textFrota.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textFrota.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textFrota.DefaultText = "";
@@ -876,6 +892,7 @@
             // 
             // textModelo
             // 
+            this.textModelo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textModelo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textModelo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textModelo.DefaultText = "";
@@ -902,6 +919,7 @@
             // 
             // textMotorizacao
             // 
+            this.textMotorizacao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textMotorizacao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textMotorizacao.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textMotorizacao.DefaultText = "";

@@ -105,8 +105,8 @@ namespace Projeto_Integrador_1.TMSForms.List {
                 List.FormFinanceiro ModalFinanceiro = new FormFinanceiro(null);
 
                 if (Button.Tag == "conta_pagar") {
-                    if (Data.valor > 0) {
-                        ModalFinanceiro.ModalLancarConta(Id, 5, 2, Data.Valor);
+                    if (Data.Total > 0) {
+                        ModalFinanceiro.ModalLancarConta(Id, 5, 2, Data.Total);
                     }
                     else {
                         throw new Exception("Abastecimento deve ter um valor para ser lançada no financeiro.");

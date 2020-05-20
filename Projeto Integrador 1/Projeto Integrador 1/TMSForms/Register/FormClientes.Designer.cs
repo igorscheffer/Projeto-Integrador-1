@@ -562,6 +562,7 @@
             // 
             // panel7
             // 
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Location = new System.Drawing.Point(368, 72);
@@ -573,9 +574,9 @@
             // 
             // panel8
             // 
+            this.panel8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.textCNPJ);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(1, 1);
             this.panel8.Margin = new System.Windows.Forms.Padding(1);
             this.panel8.Name = "panel8";
@@ -596,6 +597,7 @@
             // 
             // panel9
             // 
+            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Location = new System.Drawing.Point(316, 404);
@@ -607,9 +609,9 @@
             // 
             // panel10
             // 
+            this.panel10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.Controls.Add(this.textTelefone);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(1, 1);
             this.panel10.Margin = new System.Windows.Forms.Padding(1);
             this.panel10.Name = "panel10";
@@ -632,6 +634,7 @@
             // 
             // panel11
             // 
+            this.panel11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.panel11.Controls.Add(this.panel12);
             this.panel11.Location = new System.Drawing.Point(592, 404);
@@ -643,9 +646,9 @@
             // 
             // panel12
             // 
+            this.panel12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Controls.Add(this.textCelular);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(1, 1);
             this.panel12.Margin = new System.Windows.Forms.Padding(1);
             this.panel12.Name = "panel12";
@@ -668,6 +671,7 @@
             // 
             // panel13
             // 
+            this.panel13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Location = new System.Drawing.Point(20, 257);
@@ -679,9 +683,9 @@
             // 
             // panel14
             // 
+            this.panel14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel14.BackColor = System.Drawing.Color.White;
             this.panel14.Controls.Add(this.textCEP);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel14.Location = new System.Drawing.Point(1, 1);
             this.panel14.Margin = new System.Windows.Forms.Padding(1);
             this.panel14.Name = "panel14";
@@ -703,6 +707,7 @@
             // 
             // textEmail
             // 
+            this.textEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textEmail.DefaultText = "";
@@ -729,6 +734,7 @@
             // 
             // combTipoCadastro
             // 
+            this.combTipoCadastro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combTipoCadastro.BackColor = System.Drawing.Color.Transparent;
             this.combTipoCadastro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combTipoCadastro.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -750,6 +756,7 @@
             // 
             // combTipoPessoa
             // 
+            this.combTipoPessoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combTipoPessoa.BackColor = System.Drawing.Color.Transparent;
             this.combTipoPessoa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combTipoPessoa.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -772,6 +779,7 @@
             // 
             // textRazaoSocial
             // 
+            this.textRazaoSocial.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textRazaoSocial.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textRazaoSocial.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textRazaoSocial.DefaultText = "";
@@ -798,6 +806,7 @@
             // 
             // textNomeFantasia
             // 
+            this.textNomeFantasia.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textNomeFantasia.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textNomeFantasia.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textNomeFantasia.DefaultText = "";
@@ -824,6 +833,7 @@
             // 
             // textInscricaoMunicipal
             // 
+            this.textInscricaoMunicipal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textInscricaoMunicipal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textInscricaoMunicipal.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textInscricaoMunicipal.DefaultText = "";
@@ -850,6 +860,7 @@
             // 
             // textInscricaoEstadual
             // 
+            this.textInscricaoEstadual.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textInscricaoEstadual.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textInscricaoEstadual.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textInscricaoEstadual.DefaultText = "";
@@ -876,6 +887,7 @@
             // 
             // textEndereco
             // 
+            this.textEndereco.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textEndereco.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textEndereco.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textEndereco.DefaultText = "";
@@ -902,6 +914,7 @@
             // 
             // textN
             // 
+            this.textN.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textN.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textN.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textN.DefaultText = "";
@@ -928,6 +941,7 @@
             // 
             // textBairro
             // 
+            this.textBairro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBairro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textBairro.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBairro.DefaultText = "";
@@ -954,6 +968,7 @@
             // 
             // textComplemento
             // 
+            this.textComplemento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textComplemento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textComplemento.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textComplemento.DefaultText = "";
@@ -980,6 +995,7 @@
             // 
             // textCidade
             // 
+            this.textCidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textCidade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textCidade.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textCidade.DefaultText = "";
@@ -1006,6 +1022,7 @@
             // 
             // combEstado
             // 
+            this.combEstado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.combEstado.BackColor = System.Drawing.Color.Transparent;
             this.combEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.combEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -1027,6 +1044,7 @@
             // 
             // textNome
             // 
+            this.textNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textNome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textNome.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textNome.DefaultText = "";
@@ -1053,6 +1071,7 @@
             // 
             // textRamal
             // 
+            this.textRamal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textRamal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.textRamal.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textRamal.DefaultText = "";
